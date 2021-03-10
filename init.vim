@@ -1,4 +1,6 @@
+" ------------------------------------------------------------------------------
 " plugins 
+" ------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'jdhao/better-escape.vim'
 Plug 'cocopon/iceberg.vim'
@@ -21,21 +23,16 @@ Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
-" Default mapping
-let g:multi_cursor_start_word_key      = '<C-n>'
-let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+" ------------------------------------------------------------------------------
+" config 
+" ------------------------------------------------------------------------------
+
 " theme
 syntax on
 colo onedark
 set bg=dark
 set termguicolors
-set guifont=Roboto\ Mono:h13
+set guifont=Fira\ Code:h12
 let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
@@ -61,22 +58,43 @@ set tabstop=2 softtabstop=2
 set nowrap textwidth=0 wrapmargin=0
 set wildmenu
 
+" ------------------------------------------------------------------------------
+" mappings 
+" ------------------------------------------------------------------------------
+
+" leaderkey \ 
+let mapleader="\\"
+
 " scape 
 imap jj <esc>
 imap kj <esc>
 imap JJ <esc>
 imap KJ <esc>
 
+" enter
+nmap <cr> o<esc>
+nmap <m-cr> O<esc>
+
+" jumplines
+nmap <space>j 10j<space>
+nmap <space>k 10k<space>
+
 " toggle highlight search 
 map <f3> :set hlsearch!<cr>
 
-" reload vim
+" reload
+map <f5> <nop>
 map <f5> :w \| :source ~/.config/nvim/init.vim<cr>
 
-" save and quit
+" select all
+map <c-a> <esc>ggVG<cr>
+
+" save
 map <c-s> :w<cr>
+imap <c-s> <esc>:w<cr>
+
+" quit
 map <c-q> :q!<cr>
-map <leader>z :wq!<cr>
 
 " split
 nmap ss :sp<cr>
@@ -90,17 +108,17 @@ nmap L $
 nmap cL c$
 nmap dL d$
 
-" panels navigation
+" navigation panels
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
 " resizes
-nmap <up> :resize -2<cr>
-nmap <down> :resize +2<cr>
-nmap <left> :vertical resize +2<cr>
-nmap <right> :vertical resize -2<cr>
+"nmap <up> :resize -2<cr>
+"nmap <down> :resize +2<cr>
+nmap <left> :vertical resize -2<cr>
+nmap <right> :vertical resize +2<cr>
 
 " move line
 nmap <a-k> :m-2<cr>
@@ -114,6 +132,10 @@ nmap <s-j> :t.<cr>
 vmap <s-k> :copy -'><cr>
 vmap <s-j> :copy '><cr>
 
+" auto completion
+inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
+inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
+
 " buffer navigation
 nmap <a-l> :bn<cr>
 nmap <a-h> :bp<cr>
@@ -123,14 +145,9 @@ nmap <a-w> :bp \|bd #<cr>
 nmap <c-s-tab> gT
 nmap <s-tab> gt
 
+" ------------------------------------------------------------------------------
 " plugins
-let NERDTreeMinimalUI=1
-let g:better_escape_interval = 200
-let g:better_escape_shortcut = ['jj', 'kj', 'JJ', 'KJ']
-map <f10> :Goyo<cr>
-nmap <c-f> :Ag<cr>
-nmap <f2> :NERDTreeToggle<cr>
-nmap <c-p> :Files<cr>
+" ------------------------------------------------------------------------------
 
 " airline
 if !exists('g:airline_symbols')
@@ -142,29 +159,51 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#buffers_label = ''
 let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.maxlinenr = '㏑'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = 'Ɇ'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
 let g:airline_section_c = ''
 let g:airline_section_y = ''
 let g:airline_section_z = '%3l/%L'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+
+" better scape
+let g:better_escape_interval = 200
+let g:better_escape_shortcut = ['jj', 'kj', 'JJ', 'KJ']
+
+" coc
+":CocInstall coc-pairs
+":CocInstall coc-prettier
+":CocInstall coc-eslint
+":CocInstall coc-vetur
+":CocInstall coc-snippets
+"CocConfig
+
+" coc auto completion
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+nmap <leader>f  <Plug>(coc-format-selected)
+vmap <leader>f  <Plug>(coc-format-selected)
+
+" emmet
+let g:user_emmet_expandabbr_key='<tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" fuzzy search
+nmap <c-p> :Files<cr>
+
+" goyo
+map <f10> :Goyo<cr>
+
+" nerdtree
+let NERDTreeMinimalUI=1
+nmap <f2> :NERDTreeToggle<cr>
+nmap <c-s-e> :NERDTreeToggle<cr>
