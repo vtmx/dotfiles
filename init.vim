@@ -9,6 +9,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-slash'
 Plug 'mattn/emmet-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
@@ -63,7 +64,7 @@ set wildmenu
 " ------------------------------------------------------------------------------
 
 " leaderkey \ 
-let mapleader="\\"
+let mapleader="\<space>"
 
 " scape 
 imap jj <esc>
@@ -72,12 +73,12 @@ imap JJ <esc>
 imap KJ <esc>
 
 " enter
-nmap <cr> o<esc>
-nmap <m-cr> O<esc>
+nnoremap <cr> o<esc>
+nnoremap <m-cr> O<esc>
 
 " jumplines
-nmap <space>j 10j<space>
-nmap <space>k 10k<space>
+nnoremap <space>j 10j<space>
+nnoremap <space>k 10k<space>
 
 " toggle highlight search 
 map <f3> :set hlsearch!<cr>
@@ -87,48 +88,47 @@ map <f5> <nop>
 map <f5> :w \| :source ~/.config/nvim/init.vim<cr>
 
 " select all
-map <c-a> <esc>ggVG<cr>
+"map <c-a> <esc>ggVG<cr>
 
 " save
 map <c-s> :w<cr>
-imap <c-s> <esc>:w<cr>
+"imap <c-s> <esc>:w<cr>
 
 " quit
 map <c-q> :q!<cr>
 
+" qq to record Q to replay
+nnoremap Q @q
+
 " split
-nmap ss :sp<cr>
-nmap vv :vsp<cr>
+nnoremap ss :sp<cr>
+nnoremap vv :vsp<cr>
 
 " ^$ replace
-nmap H ^
-nmap cH c^
-nmap dH d^
-nmap L $
-nmap cL c$
-nmap dL d$
+nnoremap H ^
+nnoremap L $
 
 " navigation panels
-nmap <c-h> <c-w>h
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
+nnoremap <silent> <c-h> <c-w>h
+nnoremap <silent> <c-j> <c-w>j
+nnoremap <silent> <c-k> <c-w>k
+nnoremap <silent> <c-l> <c-w>l
 
 " resizes
-"nmap <up> :resize -2<cr>
-"nmap <down> :resize +2<cr>
-nmap <left> :vertical resize -2<cr>
-nmap <right> :vertical resize +2<cr>
+"nnoremap <up> :resize -2<cr>
+"nnoremap <down> :resize +2<cr>
+nnoremap <silent> <left> :vertical resize -2<cr>
+nnoremap <silent> <right> :vertical resize +2<cr>
 
 " move line
-nmap <a-k> :m-2<cr>
-nmap <a-j> :m+<cr> 
+nnoremap <a-k> :m-2<cr>
+nnoremap <a-j> :m+<cr> 
 vmap <a-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " clone line
-nmap <s-k> :t-<cr>
-nmap <s-j> :t.<cr>
+nnoremap <s-k> :t-<cr>
+nnoremap <s-j> :t.<cr>
 vmap <s-k> :copy -'><cr>
 vmap <s-j> :copy '><cr>
 
@@ -137,13 +137,13 @@ inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 
 " buffer navigation
-nmap <a-l> :bn<cr>
-nmap <a-h> :bp<cr>
-nmap <a-w> :bp \|bd #<cr>
+nnoremap <a-l> :bn<cr>
+nnoremap <a-h> :bp<cr>
+nnoremap <a-w> :bp \|bd #<cr>
 
 " tab navigation
-nmap <c-s-tab> gT
-nmap <s-tab> gt
+nnoremap <c-s-tab> gT
+nnoremap <s-tab> gt
 
 " ------------------------------------------------------------------------------
 " plugins
@@ -161,7 +161,7 @@ let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_c = ''
 let g:airline_section_y = ''
-let g:airline_section_z = '%3l/%L'
+let g:airline_section_z = '%l/%L'
 
 " better scape
 let g:better_escape_interval = 200
@@ -190,20 +190,21 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f  <Plug>(coc-format-selected)
 vmap <leader>f  <Plug>(coc-format-selected)
 
 " emmet
 let g:user_emmet_expandabbr_key='<tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-" fuzzy search
-nmap <c-p> :Files<cr>
+" fzf
+nnoremap <c-p> :Files<cr>
+" let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
 map <f10> :Goyo<cr>
 
 " nerdtree
 let NERDTreeMinimalUI=1
-nmap <f2> :NERDTreeToggle<cr>
-nmap <c-s-e> :NERDTreeToggle<cr>
+nnoremap <f2> :NERDTreeToggle<cr>
+nnoremap <c-n> :NERDTreeToggle<cr>
+nnoremap <c-s-e> :NERDTreeToggle<cr>
