@@ -20,7 +20,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -67,10 +67,10 @@ set wildmenu
 let mapleader="\<space>"
 
 " scape 
-imap jj <esc>
-imap kj <esc>
-imap JJ <esc>
-imap KJ <esc>
+inoremap jj <esc>
+inoremap kj <esc>
+inoremap JJ <esc>
+inoremap KJ <esc>
 
 " enter
 nnoremap <cr> o<esc>
@@ -81,21 +81,21 @@ nnoremap <space>j 10j<space>
 nnoremap <space>k 10k<space>
 
 " toggle highlight search 
-map <f3> :set hlsearch!<cr>
+nnoremap <f3> :set hlsearch!<cr>
 
 " reload
-map <f5> <nop>
-map <f5> :w \| :source ~/.config/nvim/init.vim<cr>
+noremap <f5> :w \| :source ~/.config/nvim/init.vim<cr>
 
 " select all
-"map <c-a> <esc>ggVG<cr>
+"nomap <c-a> <esc>ggVG<cr>
 
 " save
-map <c-s> :w<cr>
-"imap <c-s> <esc>:w<cr>
+nnoremap <c-s> :w<cr>
+inoremap <c-s> <esc>:w<cr>
+vnoremap <c-s> <esc>:w<cr>
 
 " quit
-map <c-q> :q!<cr>
+noremap <c-q> :q!<cr>
 
 " qq to record Q to replay
 nnoremap Q @q
@@ -123,18 +123,24 @@ nnoremap <silent> <right> :vertical resize +2<cr>
 " move line
 nnoremap <a-k> :m-2<cr>
 nnoremap <a-j> :m+<cr> 
-vmap <a-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
+vnoremap <a-j> :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " clone line
 nnoremap <s-k> :t-<cr>
 nnoremap <s-j> :t.<cr>
-vmap <s-k> :copy -'><cr>
-vmap <s-j> :copy '><cr>
+vnoremap <s-k> :copy -'><cr>
+vnoremap <s-j> :copy '><cr>
 
 " auto completion
 inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
+
+" indent
+nnoremap > >>
+nnoremap < <<
+vnoremap > >gv
+vnoremap < <gv
 
 " buffer navigation
 nnoremap <a-l> :bn<cr>
@@ -191,7 +197,7 @@ function! s:check_back_space() abort
 endfunction
 
 nnoremap <leader>f  <Plug>(coc-format-selected)
-vmap <leader>f  <Plug>(coc-format-selected)
+vnoremap <leader>f  <Plug>(coc-format-selected)
 
 " emmet
 let g:user_emmet_expandabbr_key='<tab>'
@@ -201,7 +207,7 @@ nnoremap <c-p> :Files<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
-map <f10> :Goyo<cr>
+nnoremap <f10> :Goyo<cr>
 
 " nerdtree
 let NERDTreeMinimalUI=1
