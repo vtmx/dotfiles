@@ -71,6 +71,7 @@ inoremap jj <esc>
 inoremap kj <esc>
 inoremap JJ <esc>
 inoremap KJ <esc>
+inoremap <c-d> <esc>ddi
 
 " enter
 nnoremap <cr> o<esc>
@@ -165,7 +166,9 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#buffers_label = ''
 let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#wordcount#enabled = 0
 let g:airline_section_c = ''
+let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = '%l/%L'
 
@@ -211,6 +214,6 @@ nnoremap <f10> :Goyo<cr>
 
 " nerdtree
 let NERDTreeMinimalUI=1
-nnoremap <f2> :NERDTreeToggle<cr>
-nnoremap <c-n> :NERDTreeToggle<cr>
-nnoremap <c-s-e> :NERDTreeToggle<cr>
+nnoremap <silent> <f2> :NERDTreeToggle<cr>
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+nnoremap <silent> <c-s-e> :NERDTreeToggle<cr>
