@@ -20,6 +20,7 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 # plugins
 plugins=(
 	git
+	ssh-agent
 	zsh-history-substring-search
 	zsh-syntax-highlighting
 	zsh-autosuggestions
@@ -27,6 +28,7 @@ plugins=(
 
 # alias
 alias c='clear'
+alias cls='clear'
 alias e='exit'
 alias v='nvim'
 alias tc='v ~/.tmux.conf'
@@ -36,6 +38,8 @@ alias zc='v ~/.zshrc'
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'
 alias ide='ide.sh'
+alias md='mkdir'
+alias rd='rmdir'
 
 source $ZSH/oh-my-zsh.sh
 
