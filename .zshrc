@@ -27,19 +27,31 @@ plugins=(
 )
 
 # alias
+# commands
+alias md='mkdir'
+alias rd='rmdir'
 alias c='clear'
 alias cls='clear'
 alias e='exit'
+alias f='ranger'
+
+# apps
 alias v='nvim'
-alias tc='v ~/.tmux.conf'
 alias t='tmux'
+
+# configs
+alias ac='v ~/.config/alacritty/alacritty.yml'
+alias tc='v ~/.tmux.conf'
 alias vc='v ~/.config/nvim/init.vim'
 alias zc='v ~/.zshrc'
+
+#paths
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'
+alias cdv='cd ~/Dev/projects/vitormelo'
+
+# custom sh
 alias ide='ide.sh'
-alias md='mkdir'
-alias rd='rmdir'
 
 source $ZSH/oh-my-zsh.sh
 

@@ -8,3 +8,6 @@ cp ~/.zshrc ~/Dev/dotfiles
 
 echo update .tmux.conf...
 cp ~/.tmux.conf ~/Dev/dotfiles
+
+echo update cofig...
+cp ~/.config/bat/config ~/Dev/dotfiles

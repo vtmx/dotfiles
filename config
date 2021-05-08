@@ -1,0 +1,11 @@
+# /home/vitor/.config/bat/config
+# Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
+# for a list of all available themes
+--theme="ansi"
+--style="numbers,changes,header"
+
+# Enable this to use italic text on the terminal. This is not supported on all
+# terminal emulators (like tmux, by default):
+--italic-text=always
+#--map-syntax "*.ino:C++"
+#--map-syntax ".ignore:Git Ignore"
