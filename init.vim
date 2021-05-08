@@ -1,27 +1,27 @@
 " ------------------------------------------------------------------------------
 " plugins 
 " ------------------------------------------------------------------------------
+
 call plug#begin('~/.vim/plugged')
 Plug 'jdhao/better-escape.vim'
-Plug 'cocopon/iceberg.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-slash'
+Plug 'lepture/vim-jinja'
 Plug 'mattn/emmet-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/tagbar'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 " ------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ colo onedark
 set bg=dark
 set termguicolors
 set guifont=Fira\ Code:h12
-let g:airline_theme='onedark'
+"let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
 
@@ -49,6 +49,7 @@ set clipboard=unnamedplus
 set cmdheight=1 showcmd
 set cursorline
 set enc=utf-8
+set exrc
 set hidden history=1000
 set hlsearch incsearch ignorecase smartcase
 set nobackup noswapfile
@@ -71,15 +72,14 @@ inoremap jj <esc>
 inoremap kj <esc>
 inoremap JJ <esc>
 inoremap KJ <esc>
-inoremap <c-d> <esc>ddi
 
 " enter
 nnoremap <cr> o<esc>
 nnoremap <m-cr> O<esc>
 
 " jumplines
-nnoremap <space>j 10j<space>
-nnoremap <space>k 10k<space>
+noremap <space>j 10j
+noremap <space>k 10k
 
 " toggle highlight search 
 nnoremap <f3> :set hlsearch!<cr>
@@ -91,7 +91,7 @@ noremap <f5> :w \| :source ~/.config/nvim/init.vim<cr>
 "nomap <c-a> <esc>ggVG<cr>
 
 " save
-nnoremap <c-s> :w<cr>
+nnoremap <c-s> :w!<cr>
 inoremap <c-s> <esc>:w<cr>
 vnoremap <c-s> <esc>:w<cr>
 
@@ -122,10 +122,13 @@ nnoremap <silent> <left> :vertical resize -2<cr>
 nnoremap <silent> <right> :vertical resize +2<cr>
 
 " move line
-nnoremap <a-k> :m-2<cr>
-nnoremap <a-j> :m+<cr> 
-vnoremap <a-j> :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nnoremap <silent> <a-k> :m-2<cr>
+nnoremap <silent> <a-j> :m+<cr> 
+vnoremap <silent> <a-j> :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+" delete insert
+inoremap <c-d> <esc>ddi
 
 " clone line
 nnoremap <s-k> :t-<cr>
@@ -144,22 +147,20 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
-nnoremap <a-l> :bn<cr>
-nnoremap <a-h> :bp<cr>
-nnoremap <a-w> :bp \|bd #<cr>
+nnoremap <silent> <a-l> :bn<cr>
+nnoremap <silent> <a-h> :bp<cr>
+nnoremap <a-q> <nop>
+nnoremap <silent> <a-q> :bp \|bd #<cr>
 
 " tab navigation
-nnoremap <c-s-tab> gT
-nnoremap <s-tab> gt
+nnoremap <silent> <c-s-tab> gT
+nnoremap <silent> <s-tab> gt
 
 " ------------------------------------------------------------------------------
 " plugins
 " ------------------------------------------------------------------------------
 
 " airline
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -176,12 +177,17 @@ let g:airline_section_z = '%l/%L'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = ['jj', 'kj', 'JJ', 'KJ']
 
+" closetag
+let g:closetag_filenames = '*.html,*.xml,*.css,*.js,*.ts,*.vue'
+
 " coc
-":CocInstall coc-pairs
-":CocInstall coc-prettier
+" coc plugins
 ":CocInstall coc-eslint
-":CocInstall coc-vetur
+":CocInstall coc-emmet
+":CocInstall coc-pairs
 ":CocInstall coc-snippets
+":CocInstall coc-prettier
+":CocInstall coc-vetur
 "CocConfig
 
 " coc auto completion
@@ -190,8 +196,8 @@ let g:coc_snippet_prev = '<c-k>'
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#expandableOrJumpable() ? "\<c-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<tab>" :
       \ coc#refresh()
 
 function! s:check_back_space() abort
@@ -199,14 +205,14 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nnoremap <leader>f  <Plug>(coc-format-selected)
-vnoremap <leader>f  <Plug>(coc-format-selected)
+nnoremap <leader>f <Plug>(coc-format-selected)
+vnoremap <leader>f <Plug>(coc-format-selected)
 
 " emmet
 let g:user_emmet_expandabbr_key='<tab>'
 
 " fzf
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GFiles<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
@@ -217,3 +223,11 @@ let NERDTreeMinimalUI=1
 nnoremap <silent> <f2> :NERDTreeToggle<cr>
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 nnoremap <silent> <c-s-e> :NERDTreeToggle<cr>
+
+" tagbar
+nmap <c-O> :TagbarToggle<cr>
+nmap <f3> :TagbarToggle<cr>
+
+" test ignore node_modules
+set path+=**                                                                    
+set wildignore+=**/node_modules/**
