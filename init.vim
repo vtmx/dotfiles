@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'jdhao/better-escape.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'joshdick/onedark.vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -34,7 +35,7 @@ colo onedark
 set bg=dark
 set termguicolors
 set guifont=Fira\ Code:h12
-"let g:airline_theme='onedark'
+let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
 
@@ -88,7 +89,7 @@ nnoremap <f3> :set hlsearch!<cr>
 noremap <f5> :w \| :source ~/.config/nvim/init.vim<cr>
 
 " select all
-"nomap <c-a> <esc>ggVG<cr>
+nmap <c-a> G<s-v>gg
 
 " save
 nnoremap <c-s> :w!<cr>
@@ -178,7 +179,7 @@ let g:better_escape_interval = 200
 let g:better_escape_shortcut = ['jj', 'kj', 'JJ', 'KJ']
 
 " closetag
-let g:closetag_filenames = '*.html,*.xml,*.css,*.js,*.ts,*.vue'
+let g:closetag_filenames = '*.html,*.css,*.scss,*.js,*.json,*.ts,*.vue'
 
 " coc
 " coc plugins
