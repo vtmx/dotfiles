@@ -1,3 +1,5 @@
+set fish_greeting
+
 # https://github.com/rkbk60/onedark-fish
 if status is-interactive
     set -l onedark_options '-b'
