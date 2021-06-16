@@ -17,3 +17,6 @@ cp ~/.config/bat/config $dist
 
 echo update fish...
 cp ~/.config/fish/config.fish $dist
+
+echo update alacritty...
+cp ~/.config/alacritty/alacritty.yml $dist

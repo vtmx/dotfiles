@@ -1,23 +1,11 @@
+# startup
+# fisher install danhper/fish-ssh-agent
+# use ssh-add
+
+# remove greeting
 set fish_greeting
 
-# https://github.com/rkbk60/onedark-fish
-if status is-interactive
-    set -l onedark_options '-b'
-
-    if set -q VIM
-        # Using from vim/neovim.
-        set onedark_options "-256"
-    else if string match -iq "eterm*" $TERM
-        # Using from emacs.
-        function fish_title; true; end
-        set onedark_options "-256"
-    end
-
-    set_onedark $onedark_options
-end
-
 # alias
-# commands
 alias md='mkdir'
 alias rd='rmdir'
 alias c='clear'
@@ -31,14 +19,28 @@ alias t='tmux'
 
 # configs
 alias ac='v ~/.config/alacritty/alacritty.yml'
+alias fc='v ~/.config/fish/config.fish'
 alias tc='v ~/.tmux.conf'
 alias vc='v ~/.config/nvim/init.vim'
 alias zc='v ~/.zshrc'
 
-#paths
+# paths
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'
 alias cdv='cd ~/Dev/projects/vitormelo'
 
+# git
+alias gaa='git add --all'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gl='git pull'
+alias gp='git push'
+alias gcmsg='git commit -m'
+
 # custom sh
 alias ide='ide.sh'
+
+# starship
+starship init fish | source
