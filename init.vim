@@ -34,7 +34,7 @@ syntax on
 colo onedark
 set bg=dark
 set termguicolors
-set guifont=Fira\ Code:h12
+set guifont=IBMPlexMono:h11
 let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
@@ -57,7 +57,7 @@ set nobackup noswapfile
 set noerrorbells visualbell
 set mouse=a
 set number relativenumber
-set tabstop=2 softtabstop=2 
+set tabstop=2 softtabstop=2 shiftwidth=2
 set nowrap textwidth=0 wrapmargin=0
 set wildmenu
 
@@ -79,11 +79,12 @@ nnoremap <cr> o<esc>
 nnoremap <m-cr> O<esc>
 
 " jumplines
-noremap <space>j 10j
-noremap <space>k 10k
+nmap <space>j 10j<space>
+nmap <space>k 10k<space>
+nmap <space><space> <nop>
 
-" toggle highlight search 
-nnoremap <f3> :set hlsearch!<cr>
+" remove highlight search
+nnoremap <silent> <f3> :let @/ = ""<cr>
 
 " reload
 noremap <f5> :w \| :source ~/.config/nvim/init.vim<cr>
@@ -97,7 +98,7 @@ inoremap <c-s> <esc>:w<cr>
 vnoremap <c-s> <esc>:w<cr>
 
 " quit
-noremap <c-q> :q!<cr>
+noremap <a-q> :q!<cr>
 
 " qq to record Q to replay
 nnoremap Q @q
@@ -213,11 +214,11 @@ vnoremap <leader>f <Plug>(coc-format-selected)
 let g:user_emmet_expandabbr_key='<tab>'
 
 " fzf
-nnoremap <c-p> :GFiles<cr>
+nnoremap <c-p> :GFiles .<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
-nnoremap <silent> <f10> :Goyo<cr>
+nnoremap <silent> <f11> :Goyo<cr>
 
 " nerdtree
 let NERDTreeMinimalUI=1
@@ -226,8 +227,7 @@ nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 nnoremap <silent> <c-s-e> :NERDTreeToggle<cr>
 
 " tagbar
-nmap <c-O> :TagbarToggle<cr>
-nmap <f3> :TagbarToggle<cr>
+nmap <c-s-o> :TagbarToggle<cr>
 
 " test ignore node_modules
 set path+=**                                                                    

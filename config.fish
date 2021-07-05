@@ -11,7 +11,7 @@ alias rd='rmdir'
 alias c='clear'
 alias cls='clear'
 alias e='exit'
-alias f='ranger'
+alias r='ranger'
 
 # apps
 alias v='nvim'
