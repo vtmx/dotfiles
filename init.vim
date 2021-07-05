@@ -34,7 +34,7 @@ syntax on
 colo onedark
 set bg=dark
 set termguicolors
-set guifont=IBMPlexMono:h11
+set guifont=IBMPlexMono\ Medium\ 11
 let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
