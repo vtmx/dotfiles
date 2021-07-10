@@ -2,7 +2,7 @@
 " plugins 
 " ------------------------------------------------------------------------------
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'jdhao/better-escape.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'joshdick/onedark.vim'
@@ -39,13 +39,16 @@ let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
 
+" make transparent bg
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
 " enable filetype
 filetype indent on
 filetype plugin on
 
 " sets
-set autoindent smartindent
-set autoread
+set autoindent smartindent autoread
 set clipboard=unnamedplus
 set cmdheight=1 showcmd
 set cursorline
@@ -56,10 +59,11 @@ set hlsearch incsearch ignorecase smartcase
 set nobackup noswapfile
 set noerrorbells visualbell
 set mouse=a
+set nowrap textwidth=0 wrapmargin=0
 set number relativenumber
 set tabstop=2 softtabstop=2 shiftwidth=2
-set nowrap textwidth=0 wrapmargin=0
-set wildmenu
+set splitbelow splitright
+set wildmenu wildmode=longest,list,full
 
 " ------------------------------------------------------------------------------
 " mappings 
@@ -69,10 +73,7 @@ set wildmenu
 let mapleader="\<space>"
 
 " scape 
-inoremap jj <esc>
 inoremap kj <esc>
-inoremap JJ <esc>
-inoremap KJ <esc>
 
 " enter
 nnoremap <cr> o<esc>
@@ -90,23 +91,22 @@ nnoremap <silent> <f3> :let @/ = ""<cr>
 noremap <f5> :w \| :source ~/.config/nvim/init.vim<cr>
 
 " select all
-nmap <c-a> G<s-v>gg
+nmap <leader>a G<s-v>gg
+
+" copy all
+nmap <leader>y G<s-v>gg y
 
 " save
 nnoremap <c-s> :w!<cr>
-inoremap <c-s> <esc>:w<cr>
-vnoremap <c-s> <esc>:w<cr>
+inoremap <c-s> <esc>:w!<cr>
+vnoremap <c-s> <esc>:w!<cr>
 
-" quit
-noremap <a-q> :q!<cr>
-
-" qq to record Q to replay
+" qq to record Q to replay last record
 nnoremap Q @q
 
 " split
 nnoremap ss :sp<cr>
 nnoremap vv :vsp<cr>
-
 " replace ^$
 nnoremap H ^
 nnoremap L $
@@ -118,8 +118,10 @@ nnoremap <silent> <c-k> <c-w>k
 nnoremap <silent> <c-l> <c-w>l
 
 " resizes
-"nnoremap <up> :resize -2<cr>
-"nnoremap <down> :resize +2<cr>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <silent> <up> :resize -2<cr>
+nnoremap <silent> <down> :resize +2<cr>
 nnoremap <silent> <left> :vertical resize -2<cr>
 nnoremap <silent> <right> :vertical resize +2<cr>
 
@@ -130,7 +132,7 @@ vnoremap <silent> <a-j> :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " delete insert
-inoremap <c-d> <esc>ddi
+" inoremap <c-d> <esc>ddi
 
 " clone line
 nnoremap <silent> <s-k> :t-<cr>
@@ -149,10 +151,13 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
+nnoremap <silent> <a-t> :new<cr>
 nnoremap <silent> <a-l> :bn<cr>
 nnoremap <silent> <a-h> :bp<cr>
-" nnoremap <a-q> <nop>
 nnoremap <silent> <a-w> :bp \|bd #<cr>
+
+" quit
+noremap <a-q> :q!<cr>
 
 " tab navigation
 nnoremap <silent> <c-s-tab> gT
@@ -196,10 +201,10 @@ let g:closetag_filenames = '*.html,*.css,*.scss,*.js,*.json,*.ts,*.vue'
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <tab>
       \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<c-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<tab>" :
+      \ coc#expandableOrJumpable() ? "\<c-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<cr>" :
+      \ <SID>check_back_space() ? "\<tab><esc>" :
       \ coc#refresh()
 
 function! s:check_back_space() abort
@@ -218,17 +223,14 @@ nnoremap <c-p> :GFiles .<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
-nnoremap <silent> <f11> :Goyo<cr>
+nnoremap <silent> <leader><cr> :Goyo<cr>
 
 " nerdtree
 let NERDTreeMinimalUI=1
 nnoremap <silent> <f2> :NERDTreeToggle<cr>
-nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+nnoremap <silent> <leader>e :NERDTreeToggle<cr>
 nnoremap <silent> <c-s-e> :NERDTreeToggle<cr>
 
 " tagbar
 nmap <c-s-o> :TagbarToggle<cr>
 
-" test ignore node_modules
-set path+=**                                                                    
-set wildignore+=**/node_modules/**
