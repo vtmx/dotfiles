@@ -42,14 +42,14 @@ cursor:
 colors:
   # Default colors
   primary:
-    background: '#282c34'
+    #background: '#282c34'
+    background: '#1e222a'
     foreground: '#abb2bf'
 
   # Normal colors
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black:   '#282c34'
+    # black:   '#282c34'
+    black:   '#1e222a'
     red:     '#e06c75'
     green:   '#98c379'
     yellow:  '#d19a66'
