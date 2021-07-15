@@ -21,6 +21,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'alvan/vim-closetag'
 call plug#end()
@@ -33,7 +35,7 @@ call plug#end()
 syntax on
 colo onedark
 set bg=dark
-set termguicolors
+set tgc
 set guifont=IBMPlexMono\ Medium\ 11
 let g:airline_theme='onedark'
 let g:indentLine_char = '│'
@@ -49,18 +51,18 @@ filetype plugin on
 
 " sets
 set autoindent smartindent autoread
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set cmdheight=1 showcmd
 set cursorline
 set enc=utf-8
 set exrc
 set hidden history=1000
-set hlsearch incsearch ignorecase smartcase
-set nobackup noswapfile
-set noerrorbells visualbell
+set hls is ignorecase smartcase
+set nobk noswapfile
+set noeb vb
 set mouse=a
 set nowrap textwidth=0 wrapmargin=0
-set number relativenumber
+set nu rnu
 set tabstop=2 softtabstop=2 shiftwidth=2
 set splitbelow splitright
 set wildmenu wildmode=longest,list,full
@@ -72,8 +74,15 @@ set wildmenu wildmode=longest,list,full
 " leaderkey \ 
 let mapleader="\<space>"
 
+" reload
+nnoremap <leader>r :w \| :so $MYVIMRC<cr> :echo 'Reload'<cr>
+
+" edit
+nnoremap <silent> <leader>ve :e $MYVIMRC<cr>
+
 " scape 
 inoremap kj <esc>
+vnoremap <leader>kj <esc>
 
 " enter
 nnoremap <cr> o<esc>
@@ -87,9 +96,6 @@ nmap <space><space> <nop>
 " remove highlight search
 nnoremap <silent> <f3> :let @/ = ""<cr>
 
-" reload
-noremap <f5> :w \| :source ~/.config/nvim/init.vim<cr>
-
 " select all
 nmap <leader>a G<s-v>gg
 
@@ -99,7 +105,6 @@ nmap <leader>y G<s-v>gg y
 " save
 nnoremap <c-s> :w!<cr>
 inoremap <c-s> <esc>:w!<cr>
-vnoremap <c-s> <esc>:w!<cr>
 
 " qq to record Q to replay last record
 nnoremap Q @q
@@ -107,9 +112,18 @@ nnoremap Q @q
 " split
 nnoremap ss :sp<cr>
 nnoremap vv :vsp<cr>
+
 " replace ^$
 nnoremap H ^
 nnoremap L $
+nnoremap cH c^
+nnoremap cL c$
+nnoremap dH d^
+nnoremap dL d$
+nnoremap yH y^
+nnoremap yL y$
+vnoremap H ^
+vnoremap L $
 
 " navigation panels
 nnoremap <silent> <c-h> <c-w>h
@@ -131,9 +145,6 @@ nnoremap <silent> <a-j> :m+<cr>
 vnoremap <silent> <a-j> :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-" delete insert
-" inoremap <c-d> <esc>ddi
-
 " clone line
 nnoremap <silent> <s-k> :t-<cr>
 nnoremap <silent> <s-j> :t.<cr>
@@ -151,21 +162,24 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
-nnoremap <silent> <a-t> :new<cr>
-nnoremap <silent> <a-l> :bn<cr>
-nnoremap <silent> <a-h> :bp<cr>
-nnoremap <silent> <a-w> :bp \|bd #<cr>
+nnoremap <silent> <leader>n :ene<cr>
+nnoremap <silent> <leader>l :bn<cr>
+nnoremap <silent> <leader>h :bp<cr>
+nnoremap <silent> <leader>w :bp \|bd #<cr>
 
 " quit
-noremap <a-q> :q!<cr>
-
-" tab navigation
-nnoremap <silent> <c-s-tab> gT
-nnoremap <silent> <s-tab> gt
+noremap <leader>q :q!<cr>
 
 " ------------------------------------------------------------------------------
 " plugins
 " ------------------------------------------------------------------------------
+
+" plug
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
+nnoremap <leader>ps :PlugStatus<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
+nnoremap <leader>pg :PlugUpgrade<cr>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -182,7 +196,7 @@ let g:airline_section_z = '%l/%L'
 
 " better scape
 let g:better_escape_interval = 200
-let g:better_escape_shortcut = ['jj', 'kj', 'JJ', 'KJ']
+let g:better_escape_shortcut = 'kj'
 
 " closetag
 let g:closetag_filenames = '*.html,*.css,*.scss,*.js,*.json,*.ts,*.vue'
@@ -204,7 +218,7 @@ let g:coc_snippet_prev = '<c-k>'
 inoremap <silent><expr> <tab>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<c-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<cr>" :
-      \ <SID>check_back_space() ? "\<tab><esc>" :
+      \ <sid>check_back_space() ? "\<tab><esc>" :
       \ coc#refresh()
 
 function! s:check_back_space() abort
@@ -214,6 +228,7 @@ endfunction
 
 nnoremap <leader>f <Plug>(coc-format-selected)
 vnoremap <leader>f <Plug>(coc-format-selected)
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " emmet
 let g:user_emmet_expandabbr_key='<tab>'
@@ -224,13 +239,16 @@ nnoremap <c-p> :GFiles .<cr>
 
 " goyo
 nnoremap <silent> <leader><cr> :Goyo<cr>
+function! s:goyo_leave()
+  hi Normal guibg=NONE ctermbg=NONE
+endfunction
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " nerdtree
 let NERDTreeMinimalUI=1
 nnoremap <silent> <f2> :NERDTreeToggle<cr>
 nnoremap <silent> <leader>e :NERDTreeToggle<cr>
-nnoremap <silent> <c-s-e> :NERDTreeToggle<cr>
 
 " tagbar
-nmap <c-s-o> :TagbarToggle<cr>
+nmap <silent> <leader>o :TagbarToggle<cr>
 
