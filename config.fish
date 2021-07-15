@@ -25,6 +25,7 @@ alias vc='v ~/.config/nvim/init.vim'
 alias zc='v ~/.zshrc'
 
 # paths
+alias cdd='cd ~/Dev/dotfiles'
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'
 alias cdv='cd ~/Dev/projects/vitormelo'

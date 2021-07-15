@@ -20,3 +20,9 @@ cp ~/.config/fish/config.fish $dist
 
 echo update alacritty...
 cp ~/.config/alacritty/alacritty.yml $dist
+
+echo update konsole
+cp ~/.local/share/konsole/konsole.colorscheme $dist
+
+echo update kde colors
+cp ~/.local/share/color-schemes/kde.colors $dist
