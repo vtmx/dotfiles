@@ -71,18 +71,15 @@ set wildmenu wildmode=longest,list,full
 " mappings 
 " ------------------------------------------------------------------------------
 
-" leaderkey \ 
-let mapleader="\<space>"
-
 " reload
-nnoremap <leader>r :w \| :so $MYVIMRC<cr> :echo 'Reload'<cr>
+nnoremap <space>r :w \| :so $MYVIMRC<cr> :echo 'Reload'<cr>
 
 " edit
-nnoremap <silent> <leader>ve :e $MYVIMRC<cr>
+nnoremap <silent> <space>ve :e $MYVIMRC<cr>
 
 " scape 
 inoremap kj <esc>
-vnoremap <leader>kj <esc>
+vnoremap <space>kj <esc>
 
 " enter
 nnoremap <cr> o<esc>
@@ -97,10 +94,10 @@ nmap <space><space> <nop>
 nnoremap <silent> <f3> :let @/ = ""<cr>
 
 " select all
-nmap <leader>a G<s-v>gg
+nmap <space>a G<s-v>gg
 
 " copy all
-nmap <leader>y G<s-v>gg y
+nmap <space>y G<s-v>gg y
 
 " save
 nnoremap <c-s> :w!<cr>
@@ -162,24 +159,26 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
-nnoremap <silent> <leader>n :ene<cr>
-nnoremap <silent> <leader>l :bn<cr>
-nnoremap <silent> <leader>h :bp<cr>
-nnoremap <silent> <leader>w :bp \|bd #<cr>
+nnoremap <silent> <space>n :ene<cr>
+nnoremap <silent> <space>l :bn<cr>
+nnoremap <silent> <space>h :bp<cr>
+nnoremap <silent> <a-l> :bn<cr>
+nnoremap <silent> <a-h> :bp<cr>
+nnoremap <silent> <space>w :bp \|bd #<cr>
 
 " quit
-noremap <leader>q :q!<cr>
+noremap <space>q :q!<cr>
 
 " ------------------------------------------------------------------------------
 " plugins
 " ------------------------------------------------------------------------------
 
 " plug
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap <leader>pc :PlugClean<cr>
-nnoremap <leader>ps :PlugStatus<cr>
-nnoremap <leader>pu :PlugUpdate<cr>
-nnoremap <leader>pg :PlugUpgrade<cr>
+nnoremap <space>pi :PlugInstall<cr>
+nnoremap <space>pc :PlugClean<cr>
+nnoremap <space>ps :PlugStatus<cr>
+nnoremap <space>pu :PlugUpdate<cr>
+nnoremap <space>pg :PlugUpgrade<cr>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -226,8 +225,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nnoremap <leader>f <Plug>(coc-format-selected)
-vnoremap <leader>f <Plug>(coc-format-selected)
+nnoremap <space>f <Plug>(coc-format-selected)
+vnoremap <space>f <Plug>(coc-format-selected)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " emmet
@@ -238,7 +237,7 @@ nnoremap <c-p> :GFiles .<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
-nnoremap <silent> <leader><cr> :Goyo<cr>
+nnoremap <silent> <space><cr> :Goyo<cr>
 function! s:goyo_leave()
   hi Normal guibg=NONE ctermbg=NONE
 endfunction
@@ -247,8 +246,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " nerdtree
 let NERDTreeMinimalUI=1
 nnoremap <silent> <f2> :NERDTreeToggle<cr>
-nnoremap <silent> <leader>e :NERDTreeToggle<cr>
+nnoremap <silent> <space>e :NERDTreeToggle<cr>
 
 " tagbar
-nmap <silent> <leader>o :TagbarToggle<cr>
+nmap <silent> <space>o :TagbarToggle<cr>
 
