@@ -82,7 +82,7 @@ inoremap kj <esc>
 vnoremap <space>kj <esc>
 
 " enter
-nnoremap <cr> o<esc>
+nnoremap <cr> o<esc>k
 nnoremap <m-cr> O<esc>
 
 " jumplines
@@ -162,12 +162,13 @@ vnoremap < <gv
 nnoremap <silent> <space>n :ene<cr>
 nnoremap <silent> <space>l :bn<cr>
 nnoremap <silent> <space>h :bp<cr>
+nnoremap <silent> <space>w :bp \|bd #<cr>
 nnoremap <silent> <a-l> :bn<cr>
 nnoremap <silent> <a-h> :bp<cr>
-nnoremap <silent> <space>w :bp \|bd #<cr>
+nnoremap <silent> <a-w> :bp \|bd #<cr>
 
 " quit
-noremap <space>q :q!<cr>
+noremap <silent> <a-q> :q!<cr>
 
 " ------------------------------------------------------------------------------
 " plugins
