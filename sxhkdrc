@@ -1,0 +1,5 @@
+super + f5
+	pkill -USR1 -x sxhkd
+	
+super + shift + g
+	chromium	

@@ -3,14 +3,8 @@
 # dist dir
 dist=~/Dev/dotfiles
 
-echo Update nvim...
-cp ~/.config/nvim/init.vim $dist
-
-echo Update zshrc...
-cp ~/.zshrc $dist
-
-echo update tmux...
-cp ~/.tmux.conf $dist
+echo update alacritty...
+cp ~/.config/alacritty/alacritty.yml $dist
 
 echo update batcat...
 cp ~/.config/bat/config $dist
@@ -18,11 +12,24 @@ cp ~/.config/bat/config $dist
 echo update fish...
 cp ~/.config/fish/config.fish $dist
 
-echo update alacritty...
-cp ~/.config/alacritty/alacritty.yml $dist
+echo Update nvim...
+cp ~/.config/nvim/init.vim $dist
 
-echo update konsole
+echo update rofi...
+cp ~/.config/rofi/config.rasi $dist
+
+echo update kde...
+cp ~/.config/kglobalshortcutsrc $dist
+cp ~/.config/khotkeysrc $dist
+cp ~/.config/kwinrc $dist
 cp ~/.local/share/konsole/konsole.colorscheme $dist
-
-echo update kde colors
 cp ~/.local/share/color-schemes/kde.colors $dist
+
+echo update sxhkd...
+cp ~/.config/sxhkd/sxhkdrc $dist
+
+echo update tmux...
+cp ~/.tmux.conf $dist
+
+echo Update zshrc...
+cp ~/.zshrc $dist

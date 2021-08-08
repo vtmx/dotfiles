@@ -3,31 +3,35 @@ env:
 
 window:
   dimensions:
-    columns: 110
-    lines: 28 
+    columns: 100 
+    lines: 22 
   padding:
     x: 8
     y: 8
+
 scrolling:
   history: 10000
   multiplier: 3
 
-  # background_opacity: 0.8
+background_opacity: 1.0
 
 font:
   normal:
-    family: IBMPlexMono
+    family: IBM Plex Mono
     style: Medium
   bold:
-    family: IBMPlexMono
+    family: IBM Plex Mono
     style: Medium
   italic:
-    family: IBMPlexMono
+    family: IBM Plex Mono
     style: Italic Medium
   bold_italic:
-    family: IBMPlexMono
+    family: IBM Plex Mono
     style: Bold Italic Medium
   size: 11.0
+  offset:
+    x: 0
+    y: 0 
   glyph_offset:
     x: 0
     y: 0
@@ -44,13 +48,11 @@ cursor:
 colors:
   # Default colors
   primary:
-    #background: '#282c34'
     background: '#1e222a'
     foreground: '#abb2bf'
 
   # Normal colors
   normal:
-    # black:   '#282c34'
     black:   '#1e222a'
     red:     '#e06c75'
     green:   '#98c379'
