@@ -21,10 +21,12 @@ alias t='tmux'
 alias ac='v ~/.config/alacritty/alacritty.yml'
 alias fc='v ~/.config/fish/config.fish'
 alias tc='v ~/.tmux.conf'
+alias rc='v ~/.config/rofi/config.rasi'
 alias vc='v ~/.config/nvim/init.vim'
 alias zc='v ~/.zshrc'
 
 # paths
+alias cdc='cd ~/.config'
 alias cdd='cd ~/Dev/dotfiles'
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'

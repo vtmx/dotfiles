@@ -248,6 +248,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 let NERDTreeMinimalUI=1
 nnoremap <silent> <f2> :NERDTreeToggle<cr>
 nnoremap <silent> <space>e :NERDTreeToggle<cr>
+nnoremap <silent> <c-e> :NERDTreeToggle<cr>
 
 " tagbar
 nmap <silent> <space>o :TagbarToggle<cr>
