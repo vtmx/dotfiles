@@ -1,9 +1,19 @@
-# startup
 # fisher install danhper/fish-ssh-agent
 # use ssh-add
 
 # remove greeting
 set fish_greeting
+
+# active default key
+# fish_default_key_bindings
+
+# active vim key
+# fish_vi_key_bindings 
+
+# kj to scape vim mode 
+# function fish_user_key_bindings
+#  bind -M insert -m default kj force-repaint
+# end
 
 # alias
 alias md='mkdir'
@@ -30,6 +40,7 @@ alias cdc='cd ~/.config'
 alias cdd='cd ~/Dev/dotfiles'
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'
+alias cdt='cd ~/Downloads/temp'
 alias cdv='cd ~/Dev/projects/vitormelo'
 
 # git
