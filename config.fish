@@ -27,6 +27,9 @@ alias r='ranger'
 alias v='nvim'
 alias t='tmux'
 
+# commands
+alias up='sudo pacman -Syu'
+
 # configs
 alias ac='v ~/.config/alacritty/alacritty.yml'
 alias fc='v ~/.config/fish/config.fish'

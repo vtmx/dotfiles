@@ -14,6 +14,8 @@ Plug 'junegunn/vim-slash'
 Plug 'lepture/vim-jinja'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
@@ -84,6 +86,9 @@ vnoremap <space>kj <esc>
 " enter
 nnoremap <cr> o<esc>k
 nnoremap <m-cr> O<esc>
+
+" copy
+nnoremap Y y$
 
 " jumplines
 nmap <space>j 10j<space>
@@ -159,16 +164,18 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
-nnoremap <silent> <space>n :ene<cr>
+nnoremap <silent> <space>t :ene<cr>
 nnoremap <silent> <space>l :bn<cr>
 nnoremap <silent> <space>h :bp<cr>
 nnoremap <silent> <space>w :bp \|bd #<cr>
+nnoremap <silent> <a-t> :ene<cr>
 nnoremap <silent> <a-l> :bn<cr>
 nnoremap <silent> <a-h> :bp<cr>
 nnoremap <silent> <a-w> :bp \|bd #<cr>
 
 " quit
 noremap <silent> <a-q> :q!<cr>
+noremap <silent> <space>q :q!<cr>
 
 " ------------------------------------------------------------------------------
 " plugins
@@ -235,6 +242,7 @@ let g:user_emmet_expandabbr_key='<tab>'
 
 " fzf
 nnoremap <c-p> :GFiles .<cr>
+"nnoremap <c-p> :Files .<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
@@ -252,4 +260,9 @@ nnoremap <silent> <c-e> :NERDTreeToggle<cr>
 
 " tagbar
 nmap <silent> <space>o :TagbarToggle<cr>
+
+" telescope
+" ~/.config/nvim/plugged/telescope.nvim/lua/telescope/mappings.lua
+nnoremap <c-p> <cmd>Telescope git_files<cr>
+"nnoremap <c-p> <cmd>Telescope find_files<cr>
 
