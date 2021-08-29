@@ -43,6 +43,7 @@ alias cdc='cd ~/.config'
 alias cdd='cd ~/Dev/dotfiles'
 alias cdp='cd ~/Dev/projects'
 alias cdf='cd ~/Dev/projects/fraseologia'
+alias cds='cd ~/Dev/shortcuts'
 alias cdt='cd ~/Downloads/temp'
 alias cdv='cd ~/Dev/projects/vitormelo'
 
