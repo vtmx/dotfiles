@@ -53,7 +53,7 @@ filetype plugin on
 
 " sets
 set autoindent smartindent autoread
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set cmdheight=1 showcmd
 set cursorline
 set enc=utf-8
@@ -65,7 +65,7 @@ set noeb vb
 set mouse=a
 set nowrap textwidth=0 wrapmargin=0
 set nu rnu
-set tabstop=2 softtabstop=2 shiftwidth=2
+set tabstop=2 softtabstop=2 shiftwidth=2 et
 set splitbelow splitright
 set wildmenu wildmode=longest,list,full
 
@@ -83,12 +83,13 @@ nnoremap <silent> <space>ve :e $MYVIMRC<cr>
 inoremap kj <esc>
 vnoremap <space>kj <esc>
 
+" ignore wordwrap jumpline
+nnoremap <silent> k gk
+nnoremap <silent> j gj
+
 " enter
 nnoremap <cr> o<esc>k
 nnoremap <m-cr> O<esc>
-
-" copy
-nnoremap Y y$
 
 " jumplines
 nmap <space>j 10j<space>
@@ -104,6 +105,9 @@ nmap <space>a G<s-v>gg
 " copy all
 nmap <space>y G<s-v>gg y
 
+" format
+nnoremap <space>f :retab<cr>
+
 " save
 nnoremap <c-s> :w!<cr>
 inoremap <c-s> <esc>:w!<cr>
@@ -114,6 +118,11 @@ nnoremap Q @q
 " split
 nnoremap ss :sp<cr>
 nnoremap vv :vsp<cr>
+
+" copy
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " replace ^$
 nnoremap H ^

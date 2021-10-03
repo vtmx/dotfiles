@@ -44,7 +44,7 @@ slideEnabled=false
 synchronizeskipswitcherEnabled=false
 videowallEnabled=false
 
-[SubSession: 0878b778-f79d-4190-999a-9f835a3ae1ec]
+[SubSession: aeaf42ea-2003-4f7d-932f-d90658302e19]
 active=-1
 count=0
 
@@ -54,7 +54,7 @@ count=0
 
 [TabBox]
 BorderActivate=9
-LayoutName=thumbnails
+LayoutName=thumbnail_grid
 TouchBorderActivate=9
 
 [Windows]

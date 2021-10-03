@@ -1,7 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-0878b778-f79d-4190-999a-9f835a3ae1ec=none,none,Switch to activity "Steam"
-switch-to-activity-d56a0b28-bf56-4801-a0bd-97668c96b47f=none,none,Switch to activity "Main"
+switch-to-activity-0eeff7d3-d8d6-4fec-9e9c-a676342ae53a=none,none,Switch to activity "One"
+switch-to-activity-dc10ea50-5766-403f-825b-8e0326aac23e=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to Portuguese (Brazil)=none,none,Switch keyboard layout to Portuguese (Brazil)
@@ -41,14 +41,12 @@ _k_friendly_name=Custom Shortcuts Service
 {0d49fc0d-917e-479c-a9da-8d50a7da6fce}=Meta+T,none,qBitTorrent
 {10c9bcc3-9b0d-4521-84ca-379dd92751b7}=Meta+B,none,Vivaldi
 {49e2694c-7563-4557-ba69-6f6e55f8e36f}=Meta+S,none,Steam
-{4e53404d-f41a-436d-8ed1-c9b60d6cf673}=Ctrl+Alt+T,none,Launch Konsole
 {5648e70b-6fe4-4a96-93f1-4a302c590945}=Meta+M,none,VLC
 {5be1b960-a4f5-4386-a18b-e5082191728f}=none,none,Blender
 {6362f0bd-d70e-4a33-9664-f5082b5cb972}=Meta+Space,none,Rofi
 {71139430-99b7-43ad-8884-aaf60d7ddbc1}=Meta+G,none,Chrome
 {7b1c160e-d384-4557-806c-818752ef2a42}=Meta+C,none,Code
 {9fa53dfb-82cc-4dc6-af23-9feeb42c4f78}=Meta+K,none,KColor
-{d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
 {dc54e4d5-2f6e-4874-be73-112615c07968}=Meta+Return,none,Terminal
 {f160f437-326f-497f-8e7c-31478806afc7}=Meta+O,none,Opera
 
@@ -75,6 +73,8 @@ Decrease Opacity=none,none,Decrease Opacity of Active Window by 5 %
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
 ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
+FlipSwitchAll=none,none,Toggle Flip Switch (All desktops)
+FlipSwitchCurrent=none,none,Toggle Flip Switch (Current desktop)
 Increase Opacity=none,none,Increase Opacity of Active Window by 5 %
 Invert Screen Colors=none,none,Invert Screen Colors
 Kill Window=Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window
@@ -86,7 +86,7 @@ MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
 Setup Window Shortcut=none,none,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Show Desktop
-ShowDesktopGrid=Meta+Tab\tCtrl+F8,Ctrl+F8,Show Desktop Grid
+ShowDesktopGrid=Meta+Tab,Ctrl+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=none,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=none,Meta+Ctrl+Up,Switch One Desktop Up
@@ -145,7 +145,7 @@ Walk Through Windows of Current Application Alternative=none,none,Walk Through W
 Walk Through Windows of Current Application Alternative (Reverse)=none,none,Walk Through Windows of Current Application Alternative (Reverse)
 Window Above Other Windows=none,none,Keep Window Above Others
 Window Below Other Windows=none,none,Keep Window Below Others
-Window Close=Alt+F4\tMeta+Q,Alt+F4,Close Window
+Window Close=Alt+F4\tMeta+Q\tCtrl+Q,Alt+F4,Close Window
 Window Fullscreen=none,none,Make Window Fullscreen
 Window Grow Horizontal=none,none,Pack Grow Window Horizontally
 Window Grow Vertical=none,none,Pack Grow Window Vertically
@@ -322,7 +322,7 @@ Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
 
 [plasmashell]
-_k_friendly_name=Activity switching
+_k_friendly_name=Plasma
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=Meta+0,Meta+0,Activate Task Manager Entry 10
 activate task manager entry 2=Meta+2,Meta+2,Activate Task Manager Entry 2
