@@ -17,3 +17,5 @@
 	pm = push -u origin master
 	pl = pull
 	s = git status -sb
+[init]
+	defaultBranch = main

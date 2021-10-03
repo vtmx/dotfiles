@@ -1,0 +1,171 @@
+{
+  // editor
+  "breadcrumbs.enabled": false,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoIndent": "full",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.colorDecorators": false,
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "'IBM Plex Mono Medium', monospace",
+  "editor.fontLigatures": "'zero'",
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.insertSpaces": true,
+  "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "none",
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  // explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // files
+  "files.autoSave": "off",
+  "files.defaultLanguage": "${activeEditorLanguage}",
+
+  // git
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // terminal
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.fontFamily": "'BlexMono Nerd Font Mono', monospace",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.profiles.linux": {
+    "fish": {
+      "path": "/usr/bin/fish"
+    }
+  },
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.editor.enablePreview": true,
+  "workbench.iconTheme": "quill-icons",
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true,
+
+  // plugins
+
+  // one dark pro
+  "oneDarkPro.italic": false,
+  "workbench.colorCustomizations": {
+    "tab.border": "#21252b",
+    "sideBar.background": "#1e222a",
+    "editor.background": "#1e222a",
+    "terminal.background": "#1e222a",
+    "statusBar.background": "#1e222a",
+    "statusBar.foreground": "#7d838e",
+    "statusBar.noFolderBackground": "#1e222a",
+    "statusBar.debuggingBackground": "#1e222a"
+  },
+
+  // code runner
+  "code-runner.runInTerminal": true,
+
+  // emmet
+  "emmet.includeLanguages": {
+    "njk": "html"
+  },
+
+  // live server
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+
+  // prettier
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 120,
+  "html.format.wrapLineLength": 0,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+
+  // Vetur
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier",
+
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "singleQuote": true,
+      "printWidth": 120
+    }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+
+  // vim
+  //"vim.statusBarColorControl": true,
+  //"vim.statusBarColors.normal": ["#98c379", "#1e222a"],
+  //"vim.statusBarColors.insert": "#57a5ed",
+  //"vim.statusBarColors.visual": "#bf6dd8",
+  //"vim.statusBarColors.visualline": "#bf6dd8",
+  //"vim.statusBarColors.visualblock": "#bf6dd8",
+  //"vim.statusBarColors.replace": "#dc6069",
+  //"vim.statusBarColors.commandlineinprogress": "#d7b06a",
+  //"vim.statusBarColors.searchinprogressmode": "#dc6069",
+  //"vim.statusBarColors.easymotionmode": "red",
+  //"vim.statusBarColors.easymotioninputmode": "red",
+  //"vim.statusBarColors.surroundinputmode": "red",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<space>", "k", "j"],
+      "after": ["<esc>"]
+    }
+  ]
+}
