@@ -1,0 +1,20 @@
+{
+	"auto_indent": true,
+	"animation_enabled": false,
+	"caret_style": "blink",
+	"color_scheme": "Packages/Theme - One/One Dark.sublime-color-scheme",
+	"detect_indentation": true,
+	"enable_tab_scrolling": false,
+	"font_face": "IBM Plex Mono Medium",
+	"font_size": 11,
+	"highlight_line": true,
+	"hot_exit": false,
+	"ignored_packages":	[
+	],
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"remember_open_files": false,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"update_check": false,
+}
