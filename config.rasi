@@ -1,0 +1,107 @@
+configuration {
+    display-drun:	"";
+    drun-display-format: "{name}";
+    disable-history: true;
+}
+
+* {
+    fg: #ddd;
+    bg: #1e222a;
+    hl: #282c34;
+
+    lines: 7;
+    width: 25%;
+    foreground: @fg;
+    background: @bg;
+    text-color: @fg;
+    separatorcolor: @hl;
+    font: "IBMPlexMono Medium 11";
+}
+
+window {
+    padding: 8;
+    border-color: @hl;
+    border: 1;
+}
+
+inputbar {
+    text-color:	@fg;
+    children: [prompt,textbox-prompt-colon,entry,case-indicator];
+}
+
+element.normal.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element.alternate.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element.selected.normal {
+    background-color: @hl;
+    text-color: @foreground;
+}
+
+element.normal.urgent {
+    background-color: @bg;
+    text-color: red;
+}
+
+element.normal.active {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element.selected.urgent {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element.selected.active {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+scrollbar {
+    width: 2px;
+    border: 0;
+    handle-color: @hl;
+    handle-width: 8px;
+    padding: 0;
+}
+
+button.selected {
+    background-color: @hl;
+    text-color: @fg;
+}
+
+inputbar {
+    text-color: @fg;
+    padding: 1px;
+}
+
+case-indicator {
+    spacing: 0;
+    text-color: @fg;
+}
+
+entry {
+    spacing: 0;
+    text-color: @fg;
+}
+
+prompt {
+    enabled: false; 
+    spacing: 0;
+    text-color: @fg;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+    text-color: @fg;
+}

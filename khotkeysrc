@@ -113,7 +113,7 @@ DataCount=2
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
 DataCount=2
-Enabled=true
+Enabled=false
 Name=KMenuEdit
 SystemGroup=1
 Type=ACTION_DATA_GROUP
@@ -124,7 +124,7 @@ ConditionsCount=0
 
 [Data_1_1]
 Comment=Comment
-Enabled=true
+Enabled=false
 Name=Search
 Type=SIMPLE_ACTION_DATA
 
@@ -150,7 +150,7 @@ Uuid={d03619b6-9b3c-48cc-9d9c-a2aadb485550}
 
 [Data_1_2]
 Comment=Global keyboard shortcut to launch Konsole
-Enabled=true
+Enabled=false
 Name=Launch Konsole
 Type=MENUENTRY_SHORTCUT_ACTION_DATA
 

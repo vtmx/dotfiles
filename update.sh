@@ -1,26 +1,29 @@
 #!/bin/sh
 
 # dist dir
-dist=~/Dev/dotfiles
+dist=$HOME/Dev/dotfiles
 
 echo update alacritty...
-cp ~/.config/alacritty/alacritty.yml $dist
+cp $HOME/.config/alacritty/alacritty.yml $dist
 
 echo update batcat...
-cp ~/.config/bat/config $dist
+cp $HOME/.config/bat/config $dist
 
 echo update fish...
-cp ~/.config/fish/config.fish $dist
+cp $HOME/.config/fish/config.fish $dist
 
 echo Update nvim...
-cp ~/.config/nvim/init.vim $dist
+cp $HOME/.config/nvim/init.vim $dist
 
 echo update kde...
-cp ~/.config/kglobalshortcutsrc $dist
-cp ~/.config/khotkeysrc $dist
-cp ~/.config/kwinrc $dist
-cp ~/.local/share/konsole/konsole.colorscheme $dist
-cp ~/.local/share/color-schemes/kde.colors $dist
+cp $HOME/.config/kglobalshortcutsrc $dist
+cp $HOME/.config/khotkeysrc $dist
+cp $HOME/.config/kwinrc $dist
+cp $HOME/.local/share/konsole/konsole.colorscheme $dist
+cp $HOME/.local/share/color-schemes/kde.colors $dist
 
 echo update tmux...
-cp ~/.tmux.conf $dist
+cp $HOME/.tmux.conf $dist
+
+echo update rofi...
+cp $HOME/.config/rofi/config.rasi $dist

@@ -1,0 +1,101 @@
+{
+  // Editor
+  "editor.autoClosingBrackets": "always",
+  "editor.autoIndent": "full",
+  "editor.detectIndentation": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "none",
+  "editor.tabSize": 2,
+  "breadcrumbs.enabled": false,
+
+  // Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // Files
+  "files.autoSave": "off",
+
+  // Git
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // Terminal
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+  // Window
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 0,
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.visible": false,
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true,
+  "workbench.iconTheme": "quill-icons",
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.editor.enablePreview": true,
+
+  // Update
+  "vsicons.dontShowNewVersionMessage": true,
+
+  // Plugins
+
+  // Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "njk": "html"
+  },
+
+  // Prettie
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 800,
+  "html.format.wrapLineLength": 0,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+
+  // Vetur
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier",
+
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "singleQuote": true,
+      "printWidth": 800
+    }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ]
+
+  // Code Runner
+  // "code-runner.runInTerminal": true
+}
