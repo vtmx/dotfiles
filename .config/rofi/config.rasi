@@ -1,107 +1,89 @@
 configuration {
-    display-drun:	"";
-    drun-display-format: "{name}";
-    disable-history: true;
+    lines: 5;
+    font: "IBM Plex Mono Medm 11";
+    terminal: "alacritty";
+    location: 0;
+    separator-style: "solid";
+    show-icons: false;
+    disable-history: false;
+    hide-scrollbar: true;
 }
 
-* {
-    fg: #ddd;
-    bg: #1e222a;
-    hl: #282c34;
+@theme "/dev/null"
 
-    lines: 7;
-    width: 25%;
-    foreground: @fg;
-    background: @bg;
-    text-color: @fg;
-    separatorcolor: @hl;
-    font: "IBMPlexMono Medium 11";
+* {
+    bg-col: #1e222a;
+    border-col: #282c34;
+    selected-col: #282c34;
+    blue: #98c379;
+    fg-col: #81a1c1;
+    fg-col2: #e06c75;
+    width: 600;
 }
 
 window {
-    padding: 8;
-    border-color: @hl;
-    border: 1;
+    padding: 18px;
+    height: 480px;
+    border: 4px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
+
+mainbox {
+    padding: 4px;
+    border-radius: 12px;
+    background-color: @bg-col;
 }
 
 inputbar {
-    text-color:	@fg;
-    children: [prompt,textbox-prompt-colon,entry,case-indicator];
-}
-
-element.normal.normal {
-    background-color: @bg;
-    text-color: @fg;
-}
-
-element.alternate.normal {
-    background-color: @bg;
-    text-color: @fg;
-}
-
-element.selected.normal {
-    background-color: @hl;
-    text-color: @foreground;
-}
-
-element.normal.urgent {
-    background-color: @bg;
-    text-color: red;
-}
-
-element.normal.active {
-    background-color: @bg;
-    text-color: @fg;
-}
-
-element.selected.urgent {
-    background-color: @bg;
-    text-color: @fg;
-}
-
-element.selected.active {
-    background-color: @bg;
-    text-color: @fg;
-}
-
-scrollbar {
-    width: 2px;
-    border: 0;
-    handle-color: @hl;
-    handle-width: 8px;
-    padding: 0;
-}
-
-button.selected {
-    background-color: @hl;
-    text-color: @fg;
-}
-
-inputbar {
-    text-color: @fg;
-    padding: 1px;
-}
-
-case-indicator {
-    spacing: 0;
-    text-color: @fg;
-}
-
-entry {
-    spacing: 0;
-    text-color: @fg;
+    children: [prompt, entry];
+    background-color: @bg-col;
+    border-radius: 4px;
+    padding: 2px;
 }
 
 prompt {
-    enabled: false; 
-    spacing: 0;
-    text-color: @fg;
+    background-color: @blue;
+    padding: 5px 5px 0px;
+    text-color: @bg-col;
+    border-radius: 4px;
 }
 
 textbox-prompt-colon {
-    enabled: false;
     expand: false;
     str: ":";
-    margin: 0px 0.3em 0em 0em;
-    text-color: @fg;
+}
+
+entry {
+    padding: 6px;
+    text-color: @fg-col2;
+    background-color: @bg-col;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    columns: 2;
+    background-color: @bg-col;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element {
+    padding: 8px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+    border-radius: 4px;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col2;
 }
