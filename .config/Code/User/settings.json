@@ -8,7 +8,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": false,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'IBM Plex Mono Medium', monospace",
+  "editor.fontFamily": "'IBM Plex Mono Medm', monospace",
   "editor.fontLigatures": "'zero'",
   "editor.fontSize": 14,
   "editor.formatOnPaste": false,
