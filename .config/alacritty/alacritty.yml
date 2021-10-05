@@ -1,6 +1,9 @@
 env:
   TERM: xterm-256color
 
+shell:
+  program: /usr/bin/fish
+
 window:
   dimensions:
     columns: 100 
@@ -18,7 +21,6 @@ background_opacity: 1.0
 font:
   normal:
     family: IBM Plex Mono
-    #family: JetBrains Mono
     style: Medium
   bold:
     family: IBM Plex Mono
@@ -32,27 +34,24 @@ font:
   size: 11.0
   offset:
     x: 0
-    y: 0 
+    y: -2 
   glyph_offset:
     x: 0
     y: 0
-
-shell:
-  program: /usr/bin/fish
 
 cursor:
   style: Block
   unfocused_hollow: true
 
-# Colors (One Dark)
+# theme: one dark
 # https://github.com/rajasegar/alacritty-themes/blob/master/themes/One-Dark.yml
 colors:
-  # Default colors
+  # default colors
   primary:
     background: '#1e222a'
     foreground: '#abb2bf'
 
-  # Normal colors
+  # normal colors
   normal:
     black:   '#1e222a'
     red:     '#e06c75'
@@ -63,13 +62,13 @@ colors:
     cyan:    '#56b6c2'
     white:   '#abb2bf'
 
-  # Bright colors
+  # bright colors
   bright:
-    black:   '#5c6370'
+    black:   '#1e222a'
     red:     '#e06c75'
     green:   '#98c379'
     yellow:  '#d19a66'
     blue:    '#61afef'
     magenta: '#c678dd'
     cyan:    '#56b6c2'
-    white:   '#ffffff'
+    white:   '#abb2bf'

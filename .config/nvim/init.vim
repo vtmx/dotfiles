@@ -97,6 +97,7 @@ nmap <space>k 10k<space>
 nmap <space><space> <nop>
 
 " remove highlight search
+nnoremap <silent> <esc> :let @/ = ""<cr>
 nnoremap <silent> <f3> :let @/ = ""<cr>
 
 " select all
