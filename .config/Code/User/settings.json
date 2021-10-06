@@ -1,5 +1,5 @@
 {
-  // editor
+  // Editor
   "breadcrumbs.enabled": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingDelete": "always",
@@ -8,13 +8,15 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": false,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'IBM Plex Mono Medm', monospace",
+  "editor.fontFamily": "'IBM Plex Mono', monospace",
   "editor.fontLigatures": "'zero'",
   "editor.fontSize": 14,
+  "editor.fontWeight": "500",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.insertSpaces": true,
+  "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
@@ -32,19 +34,19 @@
     ]
   },
 
-  // explorer
+  // Explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
 
-  // files
+  // Files
   "files.autoSave": "off",
   "files.defaultLanguage": "${activeEditorLanguage}",
 
-  // git
+  // Git
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
 
-  // terminal
+  // Terminal
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "'BlexMono Nerd Font Mono', monospace",
   "terminal.integrated.fontSize": 14,
@@ -68,9 +70,9 @@
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
 
-  // plugins
+  // Plugins
 
-  // one dark pro
+  // One Dark Pro
   "oneDarkPro.italic": false,
   "workbench.colorCustomizations": {
     "tab.border": "#21252b",
@@ -80,23 +82,30 @@
     "statusBar.background": "#1e222a",
     "statusBar.foreground": "#7d838e",
     "statusBar.noFolderBackground": "#1e222a",
-    "statusBar.debuggingBackground": "#1e222a"
+    "statusBar.debuggingBackground": "#1e222a",
+    "editorBracketHighlight.foreground1": "#e5c07b",
+    "editorBracketHighlight.foreground2": "#c678dd",
+    "editorBracketHighlight.foreground3": "#61afef",
+    "editorBracketHighlight.foreground4": "#56b6c2",
+    "editorBracketHighlight.foreground5": "#d19a66",
+    "editorBracketHighlight.foreground6": "#abb2bf",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75"
   },
 
-  // code runner
+  // Code Runner
   "code-runner.runInTerminal": true,
 
-  // emmet
+  // Emmet
   "emmet.includeLanguages": {
     "njk": "html"
   },
 
-  // live server
+  // Live Server
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
 
-  // prettier
+  // Prettier
   "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
@@ -133,7 +142,7 @@
     "editor.defaultFormatter": "octref.vetur"
   },
 
-  // vim
+  // Vim
   //"vim.statusBarColorControl": true,
   //"vim.statusBarColors.normal": ["#98c379", "#1e222a"],
   //"vim.statusBarColors.insert": "#57a5ed",
