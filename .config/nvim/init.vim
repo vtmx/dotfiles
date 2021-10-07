@@ -30,7 +30,7 @@ Plug 'alvan/vim-closetag'
 call plug#end()
 
 " ------------------------------------------------------------------------------
-" config 
+" style 
 " ------------------------------------------------------------------------------
 
 " theme
@@ -39,6 +39,11 @@ colo onedark
 set bg=dark
 set tgc
 set guifont=IBMPlexMono\ Medium\ 11
+
+" custom styles
+highlight comment gui=italic
+
+" plugins
 let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
@@ -73,41 +78,42 @@ set wildmenu wildmode=longest,list,full
 " mappings 
 " ------------------------------------------------------------------------------
 
+" leader
+let mapleader="\<space>"
+
 " reload
-nnoremap <space>r :w \| :so $MYVIMRC<cr> :echo 'Reload'<cr>
+nnoremap <silent> <leader>r :w \| :so $MYVIMRC<cr> :echo 'Reload'<cr>
 
 " edit
-nnoremap <silent> <space>ve :e $MYVIMRC<cr>
+nnoremap <silent> <leader>ve :e $MYVIMRC<cr>
 
 " scape 
 inoremap kj <esc>
-vnoremap <space>kj <esc>
+vnoremap <leader>kj <esc>
 
 " ignore wordwrap jumpline
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
+"delete dont copy
+noremap x "_x
+
 " enter
 nnoremap <cr> o<esc>k
 nnoremap <m-cr> O<esc>
 
-" jumplines
-nmap <space>j 10j<space>
-nmap <space>k 10k<space>
-nmap <space><space> <nop>
-
 " remove highlight search
-nnoremap <silent> <esc> :let @/ = ""<cr>
-nnoremap <silent> <f3> :let @/ = ""<cr>
+nnoremap <silent> <esc> :let @/ = ""<cr> :echo ''<cr>
+nnoremap <silent> <leader><leader> :let @/ = ""<cr> :echo ''<cr>
 
 " select all
-nmap <space>a G<s-v>gg
+nmap <leader>a G<s-v>gg
 
 " copy all
-nmap <space>y G<s-v>gg y
+nmap <leader>y G<s-v>gg y
 
 " format
-nnoremap <space>f :retab<cr>
+nnoremap <leader>f :retab<cr>
 
 " save
 nnoremap <c-s> :w!<cr>
@@ -174,10 +180,10 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
-nnoremap <silent> <space>t :ene<cr>
-nnoremap <silent> <space>l :bn<cr>
-nnoremap <silent> <space>h :bp<cr>
-nnoremap <silent> <space>w :bp \|bd #<cr>
+nnoremap <silent> <leader>t :ene<cr>
+nnoremap <silent> <leader>l :bn<cr>
+nnoremap <silent> <leader>h :bp<cr>
+nnoremap <silent> <leader>w :bp \|bd #<cr>
 nnoremap <silent> <a-t> :ene<cr>
 nnoremap <silent> <a-l> :bn<cr>
 nnoremap <silent> <a-h> :bp<cr>
@@ -185,18 +191,18 @@ nnoremap <silent> <a-w> :bp \|bd #<cr>
 
 " quit
 noremap <silent> <a-q> :q!<cr>
-noremap <silent> <space>q :q!<cr>
+noremap <silent> <leader>q :q!<cr>
 
 " ------------------------------------------------------------------------------
 " plugins
 " ------------------------------------------------------------------------------
 
 " plug
-nnoremap <space>pi :PlugInstall<cr>
-nnoremap <space>pc :PlugClean<cr>
-nnoremap <space>ps :PlugStatus<cr>
-nnoremap <space>pu :PlugUpdate<cr>
-nnoremap <space>pg :PlugUpgrade<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
+nnoremap <leader>ps :PlugStatus<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
+nnoremap <leader>pg :PlugUpgrade<cr>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -243,8 +249,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nnoremap <space>f <Plug>(coc-format-selected)
-vnoremap <space>f <Plug>(coc-format-selected)
+nnoremap <leader>f <Plug>(coc-format-selected)
+vnoremap <leader>f <Plug>(coc-format-selected)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " emmet
@@ -256,7 +262,7 @@ nnoremap <c-p> :GFiles .<cr>
 " let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
-nnoremap <silent> <space><cr> :Goyo<cr>
+nnoremap <silent> <leader><cr> :Goyo<cr>
 function! s:goyo_leave()
   hi Normal guibg=NONE ctermbg=NONE
 endfunction
@@ -265,11 +271,11 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " nerdtree
 let NERDTreeMinimalUI=1
 nnoremap <silent> <f2> :NERDTreeToggle<cr>
-nnoremap <silent> <space>e :NERDTreeToggle<cr>
+nnoremap <silent> <leader>e :NERDTreeToggle<cr>
 nnoremap <silent> <c-e> :NERDTreeToggle<cr>
 
 " tagbar
-nmap <silent> <space>o :TagbarToggle<cr>
+nmap <silent> <leader>o :TagbarToggle<cr>
 
 " telescope
 " ~/.config/nvim/plugged/telescope.nvim/lua/telescope/mappings.lua
