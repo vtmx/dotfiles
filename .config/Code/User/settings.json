@@ -59,9 +59,10 @@
   },
   "window.titleBarStyle": "custom",
   "window.menuBarVisibility": "toggle",
+  "window.restoreWindows": "none",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.enablePreview": true,
   "workbench.iconTheme": "quill-icons",
   "workbench.settings.editor": "json",
@@ -76,13 +77,13 @@
   "oneDarkPro.italic": false,
   "workbench.colorCustomizations": {
     "tab.border": "#21252b",
-    "sideBar.background": "#1e222a",
-    "editor.background": "#1e222a",
-    "terminal.background": "#1e222a",
-    "statusBar.background": "#1e222a",
+    "sideBar.background": "#23272e",
+    "editor.background": "#23272e",
+    "terminal.background": "#23272e",
+    "statusBar.background": "#23272e",
     "statusBar.foreground": "#7d838e",
-    "statusBar.noFolderBackground": "#1e222a",
-    "statusBar.debuggingBackground": "#1e222a",
+    "statusBar.noFolderBackground": "#23272e",
+    "statusBar.debuggingBackground": "#23272e",
     "editorBracketHighlight.foreground1": "#e5c07b",
     "editorBracketHighlight.foreground2": "#c678dd",
     "editorBracketHighlight.foreground3": "#61afef",
@@ -155,6 +156,8 @@
   //"vim.statusBarColors.easymotionmode": "red",
   //"vim.statusBarColors.easymotioninputmode": "red",
   //"vim.statusBarColors.surroundinputmode": "red",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 150,
   "vim.normalModeKeyBindings": [
     {
       "before": ["L"],
@@ -176,5 +179,6 @@
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
     }
-  ]
+  ],
+  "security.workspace.trust.untrustedFiles": "open"
 }
