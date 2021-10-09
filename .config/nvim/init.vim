@@ -1,10 +1,12 @@
 " ------------------------------------------------------------------------------
-" plugins 
+" Plugins 
 " ------------------------------------------------------------------------------
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'jdhao/better-escape.vim'
+Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
+Plug 'jdhao/better-escape.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -13,6 +15,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-slash'
 Plug 'lepture/vim-jinja'
 Plug 'mattn/emmet-vim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -21,16 +25,15 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
-Plug 'alvan/vim-closetag'
 call plug#end()
 
 " ------------------------------------------------------------------------------
-" style 
+" Style 
 " ------------------------------------------------------------------------------
 
 " theme
@@ -75,7 +78,7 @@ set splitbelow splitright
 set wildmenu wildmode=longest,list,full
 
 " ------------------------------------------------------------------------------
-" mappings 
+" Mappings 
 " ------------------------------------------------------------------------------
 
 " leader
@@ -95,10 +98,14 @@ vnoremap <leader>kj <esc>
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
-"delete dont copy
-noremap x "_x
+" delete dot copy
+nnoremap x "_x
+nnoremap <del> "_x
 
-" enter
+" keep cursor end select
+vnoremap y ygv<esc>
+
+" enter in normal mode
 nnoremap <cr> o<esc>k
 nnoremap <m-cr> O<esc>
 
@@ -113,7 +120,7 @@ nmap <leader>a G<s-v>gg
 nmap <leader>y G<s-v>gg y
 
 " format
-nnoremap <leader>f :retab<cr>
+nnoremap <silent> <leader>F :retab<cr>
 
 " save
 nnoremap <c-s> :w!<cr>
@@ -126,10 +133,8 @@ nnoremap Q @q
 nnoremap ss :sp<cr>
 nnoremap vv :vsp<cr>
 
-" copy
+" copy like C and D
 nnoremap Y y$
-nnoremap n nzzzv
-nnoremap N Nzzzv
 
 " replace ^$
 nnoremap H ^
@@ -194,7 +199,7 @@ noremap <silent> <a-q> :q!<cr>
 noremap <silent> <leader>q :q!<cr>
 
 " ------------------------------------------------------------------------------
-" plugins
+" Plugins
 " ------------------------------------------------------------------------------
 
 " plug
@@ -249,9 +254,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nnoremap <leader>f <Plug>(coc-format-selected)
-vnoremap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
 inoremap <silent><expr> <c-space> coc#refresh()
+
+" easymotion
+map <leader>/ <plug>(easymotion-bd-f)
 
 " emmet
 let g:user_emmet_expandabbr_key='<tab>'
@@ -259,7 +266,7 @@ let g:user_emmet_expandabbr_key='<tab>'
 " fzf
 nnoremap <c-p> :GFiles .<cr>
 "nnoremap <c-p> :Files .<cr>
-" let g:fzf_layout = { 'down': '~40%' }
+"let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
 nnoremap <silent> <leader><cr> :Goyo<cr>
@@ -267,6 +274,9 @@ function! s:goyo_leave()
   hi Normal guibg=NONE ctermbg=NONE
 endfunction
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" hightlightedyank
+let g:highlightedyank_highlight_duration = 100
 
 " nerdtree
 let NERDTreeMinimalUI=1
@@ -281,4 +291,3 @@ nmap <silent> <leader>o :TagbarToggle<cr>
 " ~/.config/nvim/plugged/telescope.nvim/lua/telescope/mappings.lua
 nnoremap <c-p> <cmd>Telescope git_files<cr>
 "nnoremap <c-p> <cmd>Telescope find_files<cr>
-

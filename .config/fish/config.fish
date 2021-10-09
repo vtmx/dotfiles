@@ -64,6 +64,7 @@ alias gcmsg='git commit -m'
 
 # variables
 export BROWSER=opera
+export CODE=code
 export EDITOR=nvim
 export VISUAL=subl
 
