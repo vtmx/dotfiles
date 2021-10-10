@@ -126,8 +126,12 @@ nnoremap <silent> <leader>F :retab<cr>
 nnoremap <c-s> :w!<cr>
 inoremap <c-s> <esc>:w!<cr>
 
-" qq to record Q to replay last record
+" qq to record in q, Q to play q
 nnoremap Q @q
+
+" mm to mark in m, M to jump m
+nnoremap M <nop>
+nnoremap M `m
 
 " split
 nnoremap ss :sp<cr>
