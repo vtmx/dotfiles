@@ -50,8 +50,8 @@
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "'BlexMono Nerd Font Mono', monospace",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeightBold": "500",
   "terminal.integrated.profiles.linux": {
     "fish": {
       "path": "/usr/bin/fish"
@@ -156,9 +156,43 @@
   //"vim.statusBarColors.easymotionmode": "red",
   //"vim.statusBarColors.easymotioninputmode": "red",
   //"vim.statusBarColors.surroundinputmode": "red",
+  "vim.easymotion": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 150,
-  "vim.normalModeKeyBindings": [
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<esc>"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "after": ["J"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<c-t>"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
     {
       "before": ["L"],
       "after": ["$"]
@@ -166,15 +200,31 @@
     {
       "before": ["H"],
       "after": ["^"]
+    },
+    {
+      "before": ["<c-h>"],
+      "after": ["<c-w>", "h"]
+    },
+    {
+      "before": ["<c-j>"],
+      "after": ["<c-w>", "j"]
+    },
+    {
+      "before": ["<c-k>"],
+      "after": ["<c-w>", "k"]
+    },
+    {
+      "before": ["<c-l>"],
+      "after": ["<c-w>", "l"]
     }
   ],
-  "vim.insertModeKeyBindings": [
+  "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["k", "j"],
       "after": ["<esc>"]
     }
   ],
-  "vim.visualModeKeyBindings": [
+  "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
