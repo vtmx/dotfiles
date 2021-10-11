@@ -98,6 +98,9 @@ vnoremap <leader>kj <esc>
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
+" join lines
+nnoremap <leader>j J
+
 " delete dot copy
 nnoremap x "_x
 nnoremap <del> "_x
@@ -120,7 +123,7 @@ nmap <leader>a G<s-v>gg
 nmap <leader>y G<s-v>gg y
 
 " format
-nnoremap <silent> <leader>F :retab<cr>
+nnoremap <leader>f :retab<cr>
 
 " save
 nnoremap <c-s> :w!<cr>
@@ -130,7 +133,6 @@ inoremap <c-s> <esc>:w!<cr>
 nnoremap Q @q
 
 " mm to mark in m, M to jump m
-nnoremap M <nop>
 nnoremap M `m
 
 " split
@@ -189,11 +191,11 @@ vnoremap > >gv
 vnoremap < <gv
 
 " buffer navigation
-nnoremap <silent> <leader>t :ene<cr>
+nnoremap <silent> <leader>n :ene<cr>
 nnoremap <silent> <leader>l :bn<cr>
 nnoremap <silent> <leader>h :bp<cr>
 nnoremap <silent> <leader>w :bp \|bd #<cr>
-nnoremap <silent> <a-t> :ene<cr>
+nnoremap <silent> <a-n> :ene<cr>
 nnoremap <silent> <a-l> :bn<cr>
 nnoremap <silent> <a-h> :bp<cr>
 nnoremap <silent> <a-w> :bp \|bd #<cr>
@@ -258,11 +260,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>F <Plug>(coc-format-selected)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " easymotion
-map <leader>/ <plug>(easymotion-bd-f)
+map <leader><leader>f <plug>(easymotion-bd-f)
 
 " emmet
 let g:user_emmet_expandabbr_key='<tab>'
@@ -280,7 +282,7 @@ endfunction
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " hightlightedyank
-let g:highlightedyank_highlight_duration = 100
+let g:highlightedyank_highlight_duration = 150
 
 " nerdtree
 let NERDTreeMinimalUI=1
@@ -294,4 +296,4 @@ nmap <silent> <leader>o :TagbarToggle<cr>
 " telescope
 " ~/.config/nvim/plugged/telescope.nvim/lua/telescope/mappings.lua
 nnoremap <c-p> <cmd>Telescope git_files<cr>
-"nnoremap <c-p> <cmd>Telescope find_files<cr>
+nnoremap <c-P> <cmd>Telescope find_files<cr>
