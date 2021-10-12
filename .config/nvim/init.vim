@@ -109,7 +109,7 @@ nnoremap <del> "_x
 vnoremap y ygv<esc>
 
 " enter in normal mode
-nnoremap <cr> o<esc>k
+nnoremap <c-cr> o<esc>k
 nnoremap <m-cr> O<esc>
 
 " remove highlight search
@@ -145,12 +145,6 @@ nnoremap Y y$
 " replace ^$
 nnoremap H ^
 nnoremap L $
-nnoremap cH c^
-nnoremap cL c$
-nnoremap dH d^
-nnoremap dL d$
-nnoremap yH y^
-nnoremap yL y$
 vnoremap H ^
 vnoremap L $
 
@@ -296,4 +290,4 @@ nmap <silent> <leader>o :TagbarToggle<cr>
 " telescope
 " ~/.config/nvim/plugged/telescope.nvim/lua/telescope/mappings.lua
 nnoremap <c-p> <cmd>Telescope git_files<cr>
-nnoremap <c-P> <cmd>Telescope find_files<cr>
+" nnoremap <c-P> <cmd>Telescope find_files<cr>

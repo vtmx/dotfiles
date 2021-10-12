@@ -39,10 +39,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+k e",
-    "command": "workbench.view.explorer"
-  },
-  {
     "key": "ctrl+shift+e",
     "command": "-workbench.view.explorer"
   },
@@ -78,11 +74,33 @@
     "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
   },
   {
+    "key": "ctrl+l",
+    "command": "workbench.action.clearTerminal",
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+k b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "ctrl+b",
     "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+k e",
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+k ctrl+s",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "ctrl+k ctrl+s",
+    "command": "-workbench.action.openGlobalKeybindings"
   }
 ]

@@ -66,15 +66,9 @@
   "workbench.editor.enablePreview": true,
   "workbench.iconTheme": "quill-icons",
   "workbench.settings.editor": "json",
-  "workbench.settings.useSplitJSON": true,
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
-
-  // Plugins
-
-  // One Dark Pro
-  "oneDarkPro.italic": false,
   "workbench.colorCustomizations": {
     "tab.border": "#21252b",
     "sideBar.background": "#23272e",
@@ -93,6 +87,8 @@
     "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75"
   },
 
+  // Plugins
+
   // Code Runner
   "code-runner.runInTerminal": true,
 
@@ -105,6 +101,9 @@
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
+
+  // One Dark Pro
+  "oneDarkPro.italic": false,
 
   // Prettier
   "javascript.preferences.quoteStyle": "single",
@@ -160,74 +159,111 @@
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 150,
   "vim.leader": "<space>",
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<esc>"],
-      "commands": [":noh"]
-    },
-    {
-      "before": ["<leader>", "j"],
-      "after": ["J"]
-    },
-    {
-      "before": ["<leader>", "n"],
-      "commands": ["workbench.action.files.newUntitledFile"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<c-t>"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    {
-      "before": ["L"],
-      "after": ["$"]
-    },
-    {
-      "before": ["H"],
-      "after": ["^"]
-    },
-    {
-      "before": ["<c-h>"],
-      "after": ["<c-w>", "h"]
-    },
-    {
-      "before": ["<c-j>"],
-      "after": ["<c-w>", "j"]
-    },
-    {
-      "before": ["<c-k>"],
-      "after": ["<c-w>", "k"]
-    },
-    {
-      "before": ["<c-l>"],
-      "after": ["<c-w>", "l"]
-    }
-  ],
+  "vim.handleKeys": {
+    "<c-h>": false,
+    "<c-l>": false
+  },
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["k", "j"],
       "after": ["<esc>"]
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "after": [">", ">"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "<"]
+    },
+    {
+      "before": ["s", "s"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["v", "v"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<esc>"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["Q"],
+      "after": ["@", "q"]
+    },
+    {
+      "before": ["M"],
+      "after": ["M", "`", "m"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
+      "before": ["c-h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["c-l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+      //"commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeAllGroups"]
+    }
+  ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
     }
   ],
   "security.workspace.trust.untrustedFiles": "open"
