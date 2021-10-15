@@ -14,7 +14,8 @@
   "editor.fontWeight": "500",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "editor.glyphMargin": false,
+  "editor.guides.bracketPairs": true,
+  // "editor.glyphMargin": false,
   "editor.insertSpaces": true,
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
@@ -47,6 +48,8 @@
   "git.enableSmartCommit": true,
 
   // Terminal
+  "terminal.integrated.automationShell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "'BlexMono Nerd Font Mono', monospace",
   "terminal.integrated.fontSize": 14,
@@ -71,11 +74,9 @@
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
     "tab.border": "#21252b",
-    "sideBar.background": "#23272e",
-    "editor.background": "#23272e",
-    "terminal.background": "#23272e",
-    "statusBar.background": "#23272e",
-    "statusBar.foreground": "#7d838e",
+    // "sideBar.background": "#23272e",
+    // "editor.background": "#23272e",
+    // "terminal.background": "#23272e",
     "statusBar.noFolderBackground": "#23272e",
     "statusBar.debuggingBackground": "#23272e",
     "editorBracketHighlight.foreground1": "#e5c07b",
@@ -92,15 +93,10 @@
   // Code Runner
   "code-runner.runInTerminal": true,
 
-  // Emmet
-  "emmet.includeLanguages": {
-    "njk": "html"
-  },
-
   // Live Server
-  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.CustomBrowser": "chrome",
 
   // One Dark Pro
   "oneDarkPro.italic": false,
@@ -131,6 +127,7 @@
   "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatter.scss": "prettier",
   "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier",
 
   "vetur.format.defaultFormatterOptions": {
     "prettier": {
@@ -158,7 +155,9 @@
   "vim.easymotion": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 150,
+  "vim.hlsearch": true,
   "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
   "vim.handleKeys": {
     "<c-h>": false,
     "<c-l>": false
@@ -254,6 +253,10 @@
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
+      "before": ["y"],
+      "after": ["y", "g", "v", "<esc>"]
+    },
+    {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
     },
@@ -266,5 +269,8 @@
       "after": ["<", "g", "v"]
     }
   ],
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
