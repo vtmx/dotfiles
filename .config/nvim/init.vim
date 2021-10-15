@@ -105,7 +105,7 @@ nnoremap <leader>j J
 nnoremap x "_x
 nnoremap <del> "_x
 
-" keep cursor end select
+" keep cursor end select when visual copy
 vnoremap y ygv<esc>
 
 " enter in normal mode
@@ -264,9 +264,9 @@ map <leader><leader>f <plug>(easymotion-bd-f)
 let g:user_emmet_expandabbr_key='<tab>'
 
 " fzf
-nnoremap <c-p> :GFiles .<cr>
-"nnoremap <c-p> :Files .<cr>
-"let g:fzf_layout = { 'down': '~40%' }
+" nnoremap <c-p> :GFiles .<cr>
+" nnoremap <c-p> :Files .<cr>
+" let g:fzf_layout = { 'down': '~40%' }
 
 " goyo
 nnoremap <silent> <leader><cr> :Goyo<cr>
@@ -280,8 +280,8 @@ let g:highlightedyank_highlight_duration = 150
 
 " nerdtree
 let NERDTreeMinimalUI=1
-nnoremap <silent> <f2> :NERDTreeToggle<cr>
 nnoremap <silent> <leader>e :NERDTreeToggle<cr>
+nnoremap <silent> <f2> :NERDTreeToggle<cr>
 nnoremap <silent> <c-e> :NERDTreeToggle<cr>
 
 " tagbar
@@ -290,4 +290,51 @@ nmap <silent> <leader>o :TagbarToggle<cr>
 " telescope
 " ~/.config/nvim/plugged/telescope.nvim/lua/telescope/mappings.lua
 nnoremap <c-p> <cmd>Telescope git_files<cr>
-" nnoremap <c-P> <cmd>Telescope find_files<cr>
+" nnoremap <c-p> <cmd>Telescope find_files<cr>
+
+" ------------------------------------------------------------------------------
+" Plugins
+" ------------------------------------------------------------------------------
+
+if has("win32")
+  " themes
+  set gfn=IBM_Plex_Mono_Medium:h10:cANSI
+  colo one
+
+  " remove gui
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
+
+  " netrw
+  let g:netrw_banner = 0
+  let g:netrw_liststyle = 3
+
+  " toggle vexplore
+  function! toggle_vexplore()
+    if exists("t:expl_buf_num")
+        let expl_win_num = bufwinnr(t:expl_buf_num)
+        if expl_win_num != -1
+            let cur_win_nr = winnr()
+            exec expl_win_num . 'wincmd w'
+            close
+            exec cur_win_nr . 'wincmd w'
+            unlet t:expl_buf_num
+        else
+            unlet t:expl_buf_num
+        endif
+    else
+        exec '1wincmd w'
+        Vexplore
+        let t:expl_buf_num = bufnr("%")
+    endif
+  endfunction
+
+  map <silent> <c-e> :call toggle_vexplore()<CR>
+  map <silent> <leader>e :Vex<cr>
+
+  " copy
+  vnoremap <space>y "+y
+  nnoremap <space>p "+p
+endif

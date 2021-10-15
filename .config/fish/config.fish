@@ -1,8 +1,54 @@
-# fisher install danhper/fish-ssh-agent
-# use ssh-add
-
 # remove greeting
 set fish_greeting
+
+# theme
+set shade0 '23272e'
+set shade1 '4b515c'
+set shade2 '4b515c'
+set shade3 '5c6370'
+set shade4 '636d83'
+set shade5 '828997'
+set shade6 '979eab'
+set shade7 'abb2bf'
+set accent1 'd19a66'
+set accent2 'e5c07b'
+set accent3 '98c379'
+set accent4 '56b6c2'
+set accent5 '61afef'
+set accent6 'c678dd'
+set accent7 'be5046'
+
+set fish_color_param $shade7
+set fish_color_search_match --background=$shade2
+set fish_color_valid_path normal
+set fish_pager_color_completion $shade7
+
+# set fish_color_cancel  
+# set fish_color_command 
+# set fish_color_comment 
+# set fish_color_cwd 
+# set fish_color_cwd_root 
+# set fish_color_end 
+# set fish_color_error 
+# set fish_color_escape 
+# set fish_color_history_current
+# set fish_color_host 
+# set fish_color_host_remote 
+# set fish_color_match
+# set fish_color_normal 
+# set fish_color_operator 
+# set fish_color_param 
+# set fish_color_quote 
+# set fish_color_redirection 
+# set fish_color_search_match
+# set fish_color_selection
+# set fish_color_status 
+# set fish_color_user 
+# set fish_color_valid_path 
+# set fish_pager_color_completion 
+# set fish_pager_color_description
+# set fish_pager_color_prefix
+# set fish_pager_color_progress
 
 # active default key
 # fish_default_key_bindings
@@ -15,6 +61,7 @@ set fish_greeting
 #  bind -M insert -m default kj force-repaint
 # end
 
+# alias
 # commands
 alias ...='cd ../..'
 alias c='clear'
