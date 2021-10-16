@@ -46,7 +46,7 @@ set guifont=IBMPlexMono\ Medium\ 11
 " custom styles
 highlight comment gui=italic
 
-" plugins
+" plugins styles
 let g:airline_theme='onedark'
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
@@ -68,6 +68,7 @@ set enc=utf-8
 set exrc
 set hidden history=1000
 set hls is ignorecase smartcase
+set lz
 set nobk noswapfile
 set noeb vb
 set mouse=a
@@ -75,7 +76,7 @@ set nowrap textwidth=0 wrapmargin=0
 set nu rnu
 set tabstop=2 softtabstop=2 shiftwidth=2 et
 set splitbelow splitright
-set wildmenu wildmode=longest,list,full
+set wildmenu
 
 " ------------------------------------------------------------------------------
 " Mappings 
@@ -88,7 +89,7 @@ let mapleader="\<space>"
 nnoremap <silent> <leader>r :w \| :so $MYVIMRC<cr> :echo 'Reload'<cr>
 
 " edit
-nnoremap <silent> <leader>ve :e $MYVIMRC<cr>
+nnoremap <silent> <leader>vc :e $MYVIMRC<cr>
 
 " scape 
 inoremap kj <esc>
@@ -113,8 +114,8 @@ nnoremap <c-cr> o<esc>k
 nnoremap <m-cr> O<esc>
 
 " remove highlight search
+nnoremap <silent> <f3> :let @/ = ""<cr> :echo ''<cr>
 nnoremap <silent> <esc> :let @/ = ""<cr> :echo ''<cr>
-nnoremap <silent> <leader><leader> :let @/ = ""<cr> :echo ''<cr>
 
 " select all
 nmap <leader>a G<s-v>gg
@@ -138,6 +139,10 @@ nnoremap M `m
 " split
 nnoremap ss :sp<cr>
 nnoremap vv :vsp<cr>
+
+" jump 5 lines
+nnoremap J 5j
+nnoremap K 5k
 
 " copy like C and D
 nnoremap Y y$
@@ -169,10 +174,10 @@ vnoremap <silent> <a-j> :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " clone line
-nnoremap <silent> <s-j> :t.<cr>
-nnoremap <silent> <s-k> :t-<cr>
-vnoremap <silent> <s-j> :copy '><cr>
-vnoremap <silent> <s-k> :copy -'><cr>
+" nnoremap <silent> <s-j> :t.<cr>
+" nnoremap <silent> <s-k> :t-<cr>
+" vnoremap <silent> <s-j> :copy '><cr>
+" vnoremap <silent> <s-k> :copy -'><cr>
 
 " auto completion
 inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
