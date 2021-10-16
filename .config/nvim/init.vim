@@ -163,16 +163,16 @@ nnoremap <silent> <left> :vertical resize -2<cr>
 nnoremap <silent> <right> :vertical resize +2<cr>
 
 " move line
-nnoremap <silent> <a-k> :m-2<cr>
 nnoremap <silent> <a-j> :m+<cr> 
+nnoremap <silent> <a-k> :m-2<cr>
 vnoremap <silent> <a-j> :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " clone line
-nnoremap <silent> <s-k> :t-<cr>
 nnoremap <silent> <s-j> :t.<cr>
-vnoremap <silent> <s-k> :copy -'><cr>
+nnoremap <silent> <s-k> :t-<cr>
 vnoremap <silent> <s-j> :copy '><cr>
+vnoremap <silent> <s-k> :copy -'><cr>
 
 " auto completion
 inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"

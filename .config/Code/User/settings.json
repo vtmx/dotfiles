@@ -178,16 +178,20 @@
       "after": ["<", "<"]
     },
     {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
       "before": ["s", "s"],
       "commands": ["workbench.action.splitEditorRight"]
     },
     {
       "before": ["v", "v"],
       "commands": ["workbench.action.splitEditorDown"]
-    },
-    {
-      "before": ["<esc>"],
-      "commands": [":noh"]
     },
     {
       "before": ["Q"],
@@ -210,6 +214,10 @@
       "after": ["y", "$"]
     },
     {
+      "before": ["<esc>"],
+      "commands": [":noh"]
+    },
+    {
       "before": ["c-h"],
       "commands": ["workbench.action.focusLeftGroup"]
     },
@@ -220,7 +228,6 @@
     {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
-      //"commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
       "before": ["<leader>", "f"],
