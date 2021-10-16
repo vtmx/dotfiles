@@ -6,7 +6,7 @@
   "editor.autoClosingOvertype": "always",
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
-  "editor.colorDecorators": false,
+  "editor.colorDecorators": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "'IBM Plex Mono', monospace",
   "editor.fontLigatures": "'zero'",
@@ -15,7 +15,6 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
-  // "editor.glyphMargin": false,
   "editor.insertSpaces": true,
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
@@ -60,23 +59,34 @@
       "path": "/usr/bin/fish"
     }
   },
+
+  // Window
   "window.titleBarStyle": "custom",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
   "window.zoomLevel": 0,
+
+  // Workbench
+  // https://code.visualstudio.com/api/references/theme-color
+  // https://themes.vscode.one/edit/local/
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.enablePreview": true,
   "workbench.iconTheme": "quill-icons",
   "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#1e2227",
     "tab.border": "#21252b",
     // "sideBar.background": "#23272e",
     // "editor.background": "#23272e",
-    // "terminal.background": "#23272e",
+    "panel.border": "#1e2227",
+    "panel.background": "#1e2227",
+    "terminal.background": "#1e2227",
+    "statusBar.background": "#1e2227",
     "statusBar.noFolderBackground": "#23272e",
     "statusBar.debuggingBackground": "#23272e",
     "editorBracketHighlight.foreground1": "#e5c07b",
@@ -178,20 +188,16 @@
       "after": ["<", "<"]
     },
     {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    {
       "before": ["J"],
       "after": ["5", "j"]
     },
     {
       "before": ["K"],
       "after": ["5", "k"]
-    },
-    {
-      "before": ["s", "s"],
-      "commands": ["workbench.action.splitEditorRight"]
-    },
-    {
-      "before": ["v", "v"],
-      "commands": ["workbench.action.splitEditorDown"]
     },
     {
       "before": ["Q"],
@@ -216,6 +222,14 @@
     {
       "before": ["<esc>"],
       "commands": [":noh"]
+    },
+    {
+      "before": ["s", "s"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["v", "v"],
+      "commands": ["workbench.action.splitEditorDown"]
     },
     {
       "before": ["c-h"],
