@@ -79,8 +79,8 @@ alias v='nvim'
 alias t='tmux'
 
 # pacman
-alias up='sudo pacman -Syu'
-alias pacs='sudo pacman -S'
+alias update='sudo pacman -Syu'
+alias install='sudo pacman -S'
 
 # configs
 alias ac='v $HOME/.config/alacritty/alacritty.yml'
@@ -88,6 +88,10 @@ alias fc='v $HOME/.config/fish/config.fish'
 alias tc='v $HOME/.tmux.conf'
 alias rc='v $HOME/.config/rofi/config.rasi'
 alias vc='v $HOME/.config/nvim/init.vim'
+alias vs='v $HOME/.config/nvim/settings.vim'
+alias vk='v $HOME/.config/nvim/keybindings.vim'
+alias vp='v $HOME/.config/nvim/plugins.vim'
+alias vs='v $HOME/.config/nvim/style.vim'
 alias zc='v $HOME/.zshrc'
 
 # paths
