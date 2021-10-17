@@ -99,6 +99,10 @@ vnoremap <leader>kj <esc>
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
+" enter normal mode
+nnoremap <cr> o<esc>
+nnoremap <leader>O O<esc>
+
 " join lines
 nnoremap <leader>j J
 
@@ -162,10 +166,12 @@ nnoremap <silent> <c-l> <c-w>l
 " resizes
 nnoremap <up> <nop>
 nnoremap <down> <nop>
-nnoremap <silent> <up> :resize -2<cr>
-nnoremap <silent> <down> :resize +2<cr>
-nnoremap <silent> <left> :vertical resize -2<cr>
-nnoremap <silent> <right> :vertical resize +2<cr>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <silent> <up> :resize +2<cr>
+nnoremap <silent> <down> :resize -2<cr>
+nnoremap <silent> <left> :vertical resize +2<cr>
+nnoremap <silent> <right> :vertical resize -2<cr>
 
 " move line
 nnoremap <silent> <a-j> :m+<cr> 
