@@ -1,0 +1,21 @@
+{
+  "coc.preferences.colorSupport": false,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "markdown",
+    "html",
+    "css",
+    "scss",
+    "js",
+    "json",
+    "ts",
+    "python",
+    "vim",
+    "vue"
+  ],
+  "prettier.singleQuote": true,
+  "snippets.ultisnips.usePythonx": false,
+  "vetur.format.defaultFormatterOptions": {
+    "singleQuote": true
+  }
+}
