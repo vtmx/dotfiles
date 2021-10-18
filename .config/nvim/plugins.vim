@@ -16,6 +16,7 @@ Plug 'junegunn/vim-slash'
 Plug 'lepture/vim-jinja'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-highlightedyank'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
