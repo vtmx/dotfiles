@@ -91,7 +91,7 @@ alias vc='v $HOME/.config/nvim/init.vim'
 alias vs='v $HOME/.config/nvim/settings.vim'
 alias vm='v $HOME/.config/nvim/mappings.vim'
 alias vp='v $HOME/.config/nvim/plugins.vim'
-alias vs='v $HOME/.config/nvim/style.vim'
+alias vt='v $HOME/.config/nvim/style.vim'
 alias zc='v $HOME/.zshrc'
 
 # paths
