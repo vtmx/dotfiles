@@ -74,6 +74,8 @@ nnoremap vv :vsp<cr>
 " jump 5 lines
 nnoremap J 5j
 nnoremap K 5k
+vnoremap J 5j
+vnoremap K 5k
 
 " copy like C and D
 nnoremap Y y$
@@ -89,6 +91,12 @@ nnoremap <silent> <c-h> <c-w>h
 nnoremap <silent> <c-j> <c-w>j
 nnoremap <silent> <c-k> <c-w>k
 nnoremap <silent> <c-l> <c-w>l
+
+" move panels
+nnoremap <silent> <c-w>h <c-w>H
+nnoremap <silent> <c-w>j <c-w>J
+nnoremap <silent> <c-w>k <c-w>K
+nnoremap <silent> <c-w>l <c-w>L
 
 " resizes
 nnoremap <up> <nop>

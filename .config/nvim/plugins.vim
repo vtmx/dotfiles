@@ -12,17 +12,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/vim-slash'
-Plug 'lepture/vim-jinja'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-highlightedyank'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
