@@ -23,33 +23,6 @@ set fish_color_search_match --background=$shade2
 set fish_color_valid_path normal
 set fish_pager_color_completion $shade7
 
-# set fish_color_cancel  
-# set fish_color_command 
-# set fish_color_comment 
-# set fish_color_cwd 
-# set fish_color_cwd_root 
-# set fish_color_end 
-# set fish_color_error 
-# set fish_color_escape 
-# set fish_color_history_current
-# set fish_color_host 
-# set fish_color_host_remote 
-# set fish_color_match
-# set fish_color_normal 
-# set fish_color_operator 
-# set fish_color_param 
-# set fish_color_quote 
-# set fish_color_redirection 
-# set fish_color_search_match
-# set fish_color_selection
-# set fish_color_status 
-# set fish_color_user 
-# set fish_color_valid_path 
-# set fish_pager_color_completion 
-# set fish_pager_color_description
-# set fish_pager_color_prefix
-# set fish_pager_color_progress
-
 # active default key
 # fish_default_key_bindings
 
