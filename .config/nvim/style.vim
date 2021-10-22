@@ -13,22 +13,28 @@ set guifont=IBMPlexMono\ Medium\ 11
 highlight comment gui=italic
 
 " make transparent bg
-hi! Normal ctermbg=NONE guibg=NONE 
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+hi! Normal ctermbg=none guibg=none 
+hi! NonText ctermbg=none guibg=none guifg=none ctermfg=none
+hi airline_tabfill ctermbg=none guibg=none
 
-" hightlightedyank
+" hightlighted yank
 let g:highlightedyank_highlight_duration = 150
-
-" nerdtree
-let NERDTreeMinimalUI=1
-
-" vexplore
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
 
 " indentline
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#3b4048'
+
+" nerdtree
+let NERDTreeMinimalUI=1
+
+" netrw
+let g:netrw_altv = 1
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_hide = 1
+let g:netrw_liststyle = 4
+let g:netrw_list_hide = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
+let g:netrw_winsize = 24
 
 " airline
 let g:airline_theme='onedark'
@@ -39,7 +45,6 @@ let g:airline#extensions#tabline#buffers_label = ''
 let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#wordcount#enabled = 0
-let g:airline_section_c = ''
 let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = '%l/%L'

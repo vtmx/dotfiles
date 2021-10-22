@@ -47,7 +47,7 @@ _k_friendly_name=Custom Shortcuts Service
 {6362f0bd-d70e-4a33-9664-f5082b5cb972}=Meta+Space,none,Rofi
 {71139430-99b7-43ad-8884-aaf60d7ddbc1}=Meta+G,none,Chrome
 {9fa53dfb-82cc-4dc6-af23-9feeb42c4f78}=Meta+K,none,KColor
-{b8eeb6be-9372-4089-a1ca-c6145aa5e453}=Meta+Shift+Return,none,Alacritty
+{b8eeb6be-9372-4089-a1ca-c6145aa5e453}=Meta+Ctrl+Return,none,Alacritty
 {dc54e4d5-2f6e-4874-be73-112615c07968}=Meta+Return,none,Konsole
 {f160f437-326f-497f-8e7c-31478806afc7}=Meta+O,none,Opera
 
