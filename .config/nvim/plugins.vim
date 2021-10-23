@@ -32,8 +32,7 @@ call plug#end()
 " closetag
 let g:closetag_filenames = '*.html,*.css,*.scss,*.js,*.json,*.ts,*.vue'
 
-" coc
-" coc plugins
+" coc commands
 ":CocInstall coc-eslint
 ":CocInstall coc-emmet
 ":CocInstall coc-pairs
