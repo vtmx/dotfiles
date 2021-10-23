@@ -15,7 +15,7 @@ highlight comment gui=italic
 " make transparent bg
 hi! Normal ctermbg=none guibg=none 
 hi! NonText ctermbg=none guibg=none guifg=none ctermfg=none
-hi airline_tabfill ctermbg=none guibg=none
+hi! airline_tabfill ctermbg=none guibg=none
 
 " hightlighted yank
 let g:highlightedyank_highlight_duration = 150

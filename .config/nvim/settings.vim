@@ -21,3 +21,8 @@ set number relativenumber
 set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 set splitbelow splitright
 set wildmenu
+
+lua << EOF
+  require('telescope').setup{ file_ignore_patterns = {"node%_modules/.*" } }
+EOF
+
