@@ -27,7 +27,7 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 
 " enter normal mode
-nnoremap <cr> o<esc>
+nnoremap <cr>o <esc>
 nnoremap <leader>O O<esc>
 
 " join lines
@@ -74,6 +74,8 @@ nnoremap vv :vsp<cr>
 " jump 5 lines
 nnoremap J 5j
 nnoremap K 5k
+vnoremap J 5j
+vnoremap K 5k
 
 " copy like C and D
 nnoremap Y y$
@@ -89,6 +91,12 @@ nnoremap <silent> <c-h> <c-w>h
 nnoremap <silent> <c-j> <c-w>j
 nnoremap <silent> <c-k> <c-w>k
 nnoremap <silent> <c-l> <c-w>l
+
+" move panels
+nnoremap <silent> <c-w>h <c-w>H
+nnoremap <silent> <c-w>j <c-w>J
+nnoremap <silent> <c-w>k <c-w>K
+nnoremap <silent> <c-w>l <c-w>L
 
 " resizes
 nnoremap <up> <nop>
@@ -116,11 +124,23 @@ vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 
+" commentary
+nnoremap <leader>; :Commentary<cr>
+vnoremap <leader>; :Commentary<cr>
+
 " indent
 nnoremap > >>
 nnoremap < <<
 vnoremap > >gv
 vnoremap < <gv
+
+" insert mode move
+inoremap <c-k> <up>
+inoremap <c-j> <down>
+inoremap <c-l> <right>
+inoremap <c-h> <left>
+inoremap <c-a> <home>
+inoremap <c-e> <end>
 
 " buffer navigation
 nnoremap <silent> <leader>n :ene<cr>
@@ -141,13 +161,14 @@ noremap <silent> <leader>q :q!<cr>
 " ------------------------------------------------------------------------------
 
 " plug
-nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pi :w \| :so $MYVIMRC<cr> :PlugInstall<cr> :echo 'Reload'<cr>
 nnoremap <leader>pc :PlugClean<cr>
 nnoremap <leader>ps :PlugStatus<cr>
 nnoremap <leader>pu :PlugUpdate<cr>
 nnoremap <leader>pg :PlugUpgrade<cr>
 
 " coc auto completion
+nnoremap <leader>cocc:CocConfig<cr>
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
@@ -182,6 +203,8 @@ function! s:goyo_leave()
 endfunction
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
+" multiple cursor
+let g:multi_cursor_select_all_word_key = '<c-L>'
 
 " nerdtree
 nnoremap <silent> <leader>e :NERDTreeToggle<cr>

@@ -29,7 +29,7 @@ cp $HOME/.local/share/konsole/konsole.profile $dist/kde
 cp $HOME/.local/share/color-schemes/kde.colors $dist/kde
 
 echo Update nvim...
-cp $HOME/.config/nvim/init.lua $dist/.config/nvim
+cp $HOME/.config/nvim/int.lua $dist/.config/nvim
 cp $HOME/.config/nvim/lua/*.lua $dist/.config/nvim/lua
 
 echo Update nvimscript...

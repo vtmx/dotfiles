@@ -220,7 +220,7 @@
       "after": ["y", "$"]
     },
     {
-      "before": ["<esc>"],
+      "before": ["<leader>", "<esc>"],
       "commands": [":noh"]
     },
     {
