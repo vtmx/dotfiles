@@ -29,8 +29,12 @@ cp $HOME/.local/share/konsole/konsole.profile $dist/kde
 cp $HOME/.local/share/color-schemes/kde.colors $dist/kde
 
 echo Update nvim...
-cp $HOME/.config/nvim/*.vim $dist/.config/nvim
-cp $HOME/.config/nvim/coc-settings.json $dist/.config/nvim
+cp $HOME/.config/nvim/init.lua $dist/.config/nvim
+cp $HOME/.config/nvim/lua/*.lua $dist/.config/nvim/lua
+
+echo Update nvimscript...
+cp $HOME/.config/nvimscript/*.vim $dist/.config/nvimscript
+cp $HOME/.config/nvimscript/coc-settings.json $dist/.config/nvimscript
 
 echo Update opera...
 cp $HOME/.config/opera/Bookmarks.bak $dist/.config/opera

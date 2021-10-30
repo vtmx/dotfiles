@@ -53,7 +53,7 @@ alias t='tmux'
 
 # pacman
 alias update='sudo pacman -Syu'
-alias install='sudo pacman -S'
+alias install='sudo pacman -Sy'
 
 # configs
 alias ac='v $HOME/.config/alacritty/alacritty.yml'
