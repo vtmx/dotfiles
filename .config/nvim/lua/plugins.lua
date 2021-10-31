@@ -1,5 +1,3 @@
-vim.cmd('packadd packer.nvim')
-
 return require('packer').startup (
 	function()
 		use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
@@ -7,10 +5,7 @@ return require('packer').startup (
 		use {
 			'kyazdani42/nvim-tree.lua',
 			requires = 'kyazdani42/nvim-web-devicons',
-			require'nvim-tree'.setup {
-				disable_netrw = false,
-				hijack_netrw = true
-			}
+			config = function() require'nvim-tree'.setup {} end
 		}
 
 		use 'nvim-lualine/lualine.nvim'
@@ -18,10 +13,11 @@ return require('packer').startup (
 		use {
 			'numToStr/Comment.nvim',
 			config = function()
-			require('Comment').setup()
-		end}
+				require('Comment').setup()
+			end
+		}
 
-		-- use 'nathom/tmux.nvim'
+		use 'nathom/tmux.nvim'
 		use {'neoclide/coc.nvim', branch = 'release'}
 		use 'nvim-lua/plenary.nvim'
 		use 'nvim-lua/telescope.nvim'
