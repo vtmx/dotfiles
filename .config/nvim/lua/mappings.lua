@@ -152,7 +152,7 @@ map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>p', '<cmd>Telescope git_files<cr>')
 
 -- tmux
-map('n', '<c-l>', [[<cmd>lua require('tmux').move_left()<cr>]])
-map('n', '<c-j>', [[<cmd>lua require('tmux').move_down()<cr>]])
 map('n', '<c-k>', [[<cmd>lua require('tmux').move_up()<cr>]])
-map('n', '<c-h>', [[<cmd>lua require('tmux').move_right()<cr>]])
+map('n', '<c-j>', [[<cmd>lua require('tmux').move_down()<cr>]])
+map('n', '<c-h>', [[<cmd>lua require('tmux').move_left()<cr>]])
+map('n', '<c-l>', [[<cmd>lua require('tmux').move_right()<cr>]])
