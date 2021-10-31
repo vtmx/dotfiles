@@ -1,20 +1,16 @@
 return require('packer').startup (
 	function()
-		use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
-
 		use {
 			'kyazdani42/nvim-tree.lua',
 			requires = 'kyazdani42/nvim-web-devicons',
-			config = function() require'nvim-tree'.setup {} end
+			config = function() require'nvim-tree'.setup() end
 		}
 
 		use 'nvim-lualine/lualine.nvim'
 
 		use {
 			'numToStr/Comment.nvim',
-			config = function()
-				require('Comment').setup()
-			end
+			config = function() require('Comment').setup() end
 		}
 
 		use 'nathom/tmux.nvim'
@@ -23,9 +19,7 @@ return require('packer').startup (
 		use 'nvim-lua/telescope.nvim'
 		use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 		use 'olimorris/onedarkpro.nvim'
-
 		use 'sunjon/shade.nvim'
-
 		use 'joshdick/onedark.vim'
 	end
 )
