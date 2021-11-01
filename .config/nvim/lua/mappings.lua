@@ -1,8 +1,6 @@
---------------------------------------------------------------------------------
+------------------------------------------------------------
 -- Mappings
---------------------------------------------------------------------------------
-
-nvim_tree_auto_open = true
+------------------------------------------------------------
 
 -- vars
 local cmd = vim.cmd
@@ -20,7 +18,7 @@ end
 vim.g.mapleader = ' '
 
 -- reload
-map('n', '<leader>r', '[[<cmd>echo Reload<cr>]]') 
+map('n', '<leader>r', ':so $MYVIMRC<cr>') 
 
 --! edit
 
@@ -47,7 +45,7 @@ map('n', '<del>', [["_x]])
 map('v', 'y', 'ygv<esc>')
 
 -- remove highlight
-map('n', '<esc>', '<cmd>noh<cr>')
+map('n', '<esc>', ':noh<cr>')
 
 -- keep search results centred
 map('n', 'n', 'nzzzv')
@@ -58,7 +56,7 @@ map('n', 'J', 'mzJ`z')
 map('n', '<leader>a', 'G<s-v>gg')
 
 -- format
-map('n', '<leader>f', '<cmd>retab<cr>')
+map('n', '<leader>f', ':retab<cr>')
 
 -- qq to record in q, Q to play
 map('n', 'Q', '@q')
@@ -67,8 +65,8 @@ map('n', 'Q', '@q')
 map('n', 'M', '`m')
 
 -- split
-map('n', 'ss', '<cmd>sp<cr>')
-map('n', 'vv', '<cmd>vsp<cr>')
+map('n', 'ss', ':sp<cr>')
+map('n', 'vv', ':vsp<cr>')
 
 -- jump varius lines
 map('n', 'J', '5j')
@@ -83,7 +81,7 @@ map('v', 'H', '^')
 map('v', 'L', 'g_')
 
 -- new file
-map('n', '<leader>n', '<cmd>enew<cr>')
+map('n', '<leader>n', ':enew<cr>')
 
 -- easy select all of file
 map('n', '<leader>a', 'ggVG<c-$>')
@@ -92,16 +90,26 @@ map('n', '<leader>a', 'ggVG<c-$>')
 map('v', 'y', 'ygv<esc>')
 
 -- indent
-map('n', '>', '>>')
-map('n', '<', '<<')
-map('v', '>', '>gv')
-map('v', '<', '<gv')
+-- map('n', '>', '>>')
+-- map('n', '<', '<<')
+-- map('v', '>', '>gv')
+-- map('v', '<', '<gv')
+cmd[[nnoremap > >>]]
+cmd[[nnoremap < <<]]
+cmd[[vnoremap > >gv]]
+cmd[[vnoremap < <gv]]
 
 -- navigation panels
 map('n', '<c-j>', '<c-w>j')
 map('n', '<c-k>', '<c-w>k')
 map('n', '<c-l>', '<c-w>l')
 map('n', '<c-h>', '<c-w>h')
+
+-- tmux
+map('n', '<c-k>', [[:lua require('tmux').move_up()<cr>]])
+map('n', '<c-j>', [[:lua require('tmux').move_down()<cr>]])
+map('n', '<c-h>', [[:lua require('tmux').move_left()<cr>]])
+map('n', '<c-l>', [[:lua require('tmux').move_right()<cr>]])
 
 -- move panels
 map('n', '<c-w>h', '<c-w>H')
@@ -110,49 +118,45 @@ map('n', '<c-w>j', '<c-w>J')
 map('n', '<c-w>l', '<c-w>L')
 
 -- resize
---map('n', '<up>', '<cmd>resize -2<cr>')
---map('n', '<down>', '<cmd>resize +2<cr>')
-map('n', '<left>', '<cmd>vertical resize +2<cr>')
-map('n', '<right>', '<cmd>vertical resize -2<cr>')
+map('n', '<left>', ':vertical resize +2<cr>')
+map('n', '<right>', ':vertical resize -2<cr>')
 
 -- buffer
-map('n', '<leader>n', '<cmd>ene<cr>')
-map('n', '<leader>h', '<cmd>bp<cr>')
-map('n', '<leader>l', '<cmd>bn<cr>')
-map('n', '<leader>w', '<cmd>bd #<cr>')
-map('n', '<a>h', '<cmd>bp<cr>')
-map('n', '<a>l', '<cmd>bn<cr>')
-map('n', '<a>w', '<cmd>bp \\|bd #<cr>')
+map('n', '<leader>n', ':ene<cr>')
+map('n', '<leader>h', ':bp<cr>')
+map('n', '<leader>l', ':bn<cr>')
+map('n', '<leader>w', ':bd #<cr>')
+cmd[[nnoremap <silent> <a-n> :ene<cr>]]
+cmd[[nnoremap <silent> <a-l> :bn<cr>]]
+cmd[[nnoremap <silent> <a-h> :bp<cr>]]
+cmd[[nnoremap <silent> <a-w> :bp \|bd #<cr>]]
 
 -- nav
-cmd[[inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
-cmd[[inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
+-- map('i', '<expr> <c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"')
+-- map('i', '<expr> <c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-j>"')
+cmd[[inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
+cmd[[inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
 
 -- save
-map('n', '<c-s>', '<cmd>w!<cr>')
-map('i', '<c-s>', '<cmd><esc>w!<cr>')
+map('n', '<c-s>', ':w!<cr>', { noremap = true, silent = false })
+map('i', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
 
 -- quit
-map('n', '<a-q>', '<cmd>q!<cr>')
+map('n', '<a-q>', ':q!<cr>')
 
---------------------------------------------------------------------------------
+------------------------------------------------------------
 -- Plugins
---------------------------------------------------------------------------------
+------------------------------------------------------------
 
 -- nvimtree
-map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
-map('n', '<c-e>', '<cmd>NvimTreeToggle<cr>')
+map('n', '<leader>e', ':NvimTreeToggle<cr>')
+map('n', '<c-e>', ':NvimTreeToggle<cr>')
 
 -- packer
-map('n', '<leader>pi', '<cmd>PackerInstall<cr>')
-map('n', '<leader>ps', '<cmd>PackerSync<cr>')
+map('n', '<leader>pi', ':PackerInstall<cr>')
+map('n', '<leader>ps', ':PackerSync<cr>')
 
 -- telescope
-map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
-map('n', '<leader>p', '<cmd>Telescope git_files<cr>')
+map('n', '<c-p>', ':Telescope find_files<cr>')
+map('n', '<leader>p', ':Telescope git_files<cr>')
 
--- tmux
-map('n', '<c-k>', [[<cmd>lua require('tmux').move_up()<cr>]])
-map('n', '<c-j>', [[<cmd>lua require('tmux').move_down()<cr>]])
-map('n', '<c-h>', [[<cmd>lua require('tmux').move_left()<cr>]])
-map('n', '<c-l>', [[<cmd>lua require('tmux').move_right()<cr>]])

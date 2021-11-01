@@ -1,7 +1,11 @@
+------------------------------------------------------------
+-- settings
+------------------------------------------------------------
+
 local cmd = vim.cmd
 
 local onedarkpro = require('onedarkpro')
-onedarkpro.setup({
+onedarkpro.setup {
   theme = 'onedark',
   colors = {
 	  bg = '#23272e',
@@ -15,54 +19,12 @@ onedarkpro.setup({
 	 	PmenuThumb = { bg = '#363b46' },
 	 	Visual = { bg = '#3d4556' }
 	 },
-   styles = {
-   },
 	 options = {
 		 highlight_cursorline = true
    }
-})
+}
 onedarkpro.load()
 
--- lualine
-require'lualine'.setup {
-  options = {
-    icons_enabled = false,
-    theme = 'auto',
-    component_separators = {},
-    section_separators = {},
-    disabled_filetypes = {},
-    always_divide_middle = true,
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', {'diagnostics', sources={'nvim_lsp', 'coc'}}},
-    lualine_c = {'filename'},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
-}
-
--- configure plugins
-require'shade'.setup{
-  overlay_opacity = 50,
-  opacity_step = 1,
-  keys = {
-    brightness_up    = '<c-up>',
-    brightness_down  = '<c-down>',
-		toggle           = '<c-left>'
-  }
-}
 
 -- Force Vim Styles
 -- :hi to see colors
@@ -91,10 +53,12 @@ require'shade'.setup{
 -- cmd [[hi! Normal ctermbg=none guibg=none]]
 -- cmd [[hi! NonText ctermbg=none guibg=none guifg=none ctermfg=none]]
 
--- cmd [[highlight IndentBlanklineIndent1 guifg=#e5c07b gui=nocombine]]
--- cmd [[highlight IndentBlanklineIndent2 guifg=#c678dd gui=nocombine]]
--- cmd [[highlight IndentBlanklineIndent3 guifg=#61afef gui=nocombine]]
--- cmd [[highlight IndentBlanklineIndent4 guifg=#56b6c2 gui=nocombine]]
--- cmd [[highlight IndentBlanklineIndent5 guifg=#d19a66 gui=nocombine]]
--- cmd [[highlight IndentBlanklineIndent6 guifg=#abb2bf gui=nocombine]]
+-- cmd [[hi IndentBlanklineIndent1 guifg=#e5c07b gui=nocombine]]
+-- cmd [[hi IndentBlanklineIndent2 guifg=#c678dd gui=nocombine]]
+-- cmd [[hi IndentBlanklineIndent3 guifg=#61afef gui=nocombine]]
+-- cmd [[hi IndentBlanklineIndent4 guifg=#56b6c2 gui=nocombine]]
+-- cmd [[hi IndentBlanklineIndent5 guifg=#d19a66 gui=nocombine]]
+-- cmd [[hi IndentBlanklineIndent6 guifg=#abb2bf gui=nocombine]]
 
+-- cmd[[ hi ActiveWindow guibg=#ff0000 ]]
+-- cmd[[ hi InactiveWindow guibg=#00ff00 ]]
