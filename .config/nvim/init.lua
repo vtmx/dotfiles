@@ -1,5 +1,9 @@
+------------------------------------------------------------
 -- init
+------------------------------------------------------------
+
 require('settings')
-require('plugins')
 require('mappings')
+require('plugins')
+require('config')
 require('theme')
