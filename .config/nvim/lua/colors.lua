@@ -2,7 +2,7 @@
 -- colors
 ------------------------------------------------------------
 
-local colors = {
+colors = {
 	shade0 = '#23272e', --background color (one dark darker)
 	shade1 = '#4b515c', --ui
 	shade2 = '#4b515c', --ui, text selection
