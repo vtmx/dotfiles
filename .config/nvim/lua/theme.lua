@@ -1,5 +1,5 @@
 ------------------------------------------------------------
--- settings
+-- theme
 ------------------------------------------------------------
 
 local cmd = vim.cmd
@@ -7,61 +7,62 @@ local cmd = vim.cmd
 local onedarkpro = require('onedarkpro')
 onedarkpro.setup {
   theme = 'onedark',
-  colors = {
-	  bg = '#23272e',
-	  cursorline = '#2c313c',
-  },
-	hlgroups = {
-		NvimTreeNormalNC = { bg = '${bg}' },
-		NvimTreeRootFolder = { fg = '#abb2bf' },
-		NvimTreeFolder = { fg = '#abb2bf' },
-		VertSplit = { fg = '#393e48' },
-		CursorLineNr = { fg = '#abb2bf' },
-	 	Pmenu = { bg = '#1e2227' },
-	 	PmenuSel = { bg = '#2c313a', fg = '#abb2bf' },
-	 	PmenuSbar = { bg = '#282c34' },
-	 	PmenuThumb = { bg = '#363b46' },
-	 	Visual = { bg = '#3d4556' }
-	 },
-	 options = {
-		 highlight_cursorline = true
-   }
+	colors = {
+	  bg = '#23272e'
+  }
 }
 onedarkpro.load()
 
--- Force Vim Styles
+-- nvim styles
 -- :hi to see colors
 
--- comments
--- cmd [[highlight comment gui=italic]]
-
--- menu
--- cmd [[hi Pmenu guibg=#1e2227]]
--- cmd [[hi PmenuSel guibg=#2c313a guifg=#abb2bf]]
-
--- nao sei
---cmd([[highlight WildMenu guibg=#1e2227]])
-
--- color line
--- cmd [[hi CursorLineNr guibg=#abb2bf]]
-
--- scroll
--- cmd [[hi PmenuSbar guibg=#282c34]]
--- cmd [[hi PmenuThumb guibg=#363b46]]
---
--- selection
---cmd([[hi Visual guibg=#3d4556]])
-
 -- make transparent bg
--- cmd [[hi! Normal ctermbg=none guibg=none]]
--- cmd [[hi! NonText ctermbg=none guibg=none guifg=none ctermfg=none]]
+-- cmd('hi! Normal ctermbg=none guibg=none')
+-- cmd('hi! NonText ctermbg=none guibg=none guifg=none ctermfg=none')
 
--- cmd [[hi IndentBlanklineIndent1 guifg=#e5c07b gui=nocombine]]
--- cmd [[hi IndentBlanklineIndent2 guifg=#c678dd gui=nocombine]]
--- cmd [[hi IndentBlanklineIndent3 guifg=#61afef gui=nocombine]]
--- cmd [[hi IndentBlanklineIndent4 guifg=#56b6c2 gui=nocombine]]
--- cmd [[hi IndentBlanklineIndent5 guifg=#d19a66 gui=nocombine]]
--- cmd [[hi IndentBlanklineIndent6 guifg=#abb2bf gui=nocombine]]
+-- bg
+cmd('hi Normal guibg=#23272e')
 
--- cmd[[ hi ActiveWindow guibg=#ff0000 ]]
--- cmd[[ hi InactiveWindow guibg=#00ff00 ]]
+-- cursor line
+cmd('hi CursorLine guibg=#2c313c')
+
+-- line column
+cmd('hi LineNR guibg=#23272e guifg=#5c6370')
+cmd('hi CursorLineNr guibg=#23272e guifg=#abb2bf')
+
+-- select text
+cmd('hi Visual guibg=#3d4556')
+
+-- menu pmenu
+cmd('hi Pmenu guibg=#1e2227')
+cmd('hi PmenuSbar guibg=#282c34')
+cmd('hi PmenuSel guibg=#2c313a guifg=#abb2bf')
+cmd('hi PmenuThumb guibg=#363b46')
+
+-- line vertical
+cmd('hi VertSplit guifg=#23272e guibg=#23272e')
+
+-- indent-line
+cmd('hi IndentBlanklineChar guifg=#393e48')
+cmd('hi IndentBlanklineSpaceChar guibg=none')
+
+-- nvim-tree
+cmd('hi NvimTreeFolder guifg=#abb2bf')
+cmd('hi NvimTreeFolderIcon guifg=#abb2bf')
+cmd('hi NvimTreeFolderName guifg=#abb2bf')
+cmd('hi NvimTreeEmptyFolderName guifg=#abb2bf')
+cmd('hi NvimTreeOpenedFolderName guifg=#abb2bf')
+cmd('hi NvimTreeNormal guibg=#1e2227')
+cmd('hi NvimTreeNormalNC guibg=#1e2227')
+cmd('hi NvimTreeRootFolder guifg=#abb2bf')
+cmd('hi NvimTreeOpenedFile guifg=#abb2bf')
+
+-- comments
+cmd('highlight comment gui=italic')
+
+-- cmd('hi IndentBlanklineIndent1 guifg=#e5c07b gui=nocombine')
+-- cmd('hi IndentBlanklineIndent2 guifg=#c678dd gui=nocombine')
+-- cmd('hi IndentBlanklineIndent3 guifg=#61afef gui=nocombine')
+-- cmd('hi IndentBlanklineIndent4 guifg=#56b6c2 gui=nocombine')
+-- cmd('hi IndentBlanklineIndent5 guifg=#d19a66 gui=nocombine')
+-- cmd('hi IndentBlanklineIndent6 guifg=#abb2bf gui=nocombine')

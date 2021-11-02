@@ -64,7 +64,6 @@
   "window.titleBarStyle": "custom",
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "window.zoomLevel": 0,
 
   // Workbench
   // https://code.visualstudio.com/api/references/theme-color
