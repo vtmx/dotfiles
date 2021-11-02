@@ -12,6 +12,10 @@ onedarkpro.setup {
 	  cursorline = '#2c313c',
   },
 	hlgroups = {
+		NvimTreeNormalNC = { bg = '${bg}' },
+		NvimTreeRootFolder = { fg = '#abb2bf' },
+		NvimTreeFolder = { fg = '#abb2bf' },
+		VertSplit = { fg = '#393e48' },
 		CursorLineNr = { fg = '#abb2bf' },
 	 	Pmenu = { bg = '#1e2227' },
 	 	PmenuSel = { bg = '#2c313a', fg = '#abb2bf' },
@@ -24,7 +28,6 @@ onedarkpro.setup {
    }
 }
 onedarkpro.load()
-
 
 -- Force Vim Styles
 -- :hi to see colors

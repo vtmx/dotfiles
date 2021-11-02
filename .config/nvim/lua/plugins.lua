@@ -2,6 +2,12 @@
 -- plugins
 ------------------------------------------------------------
 
+require('plugins.bufferline')
+require('plugins.indent-blankline')
+require('plugins.lualine')
+require('plugins.nvim-tree')
+require('plugins.telescope')
+
 return require('packer').startup(
 	function()
 		use {
