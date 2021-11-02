@@ -7,6 +7,7 @@ require('plugins.indent-blankline')
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.telescope')
+require('plugins.shade')
 
 return require('packer').startup(
 	function()
@@ -36,6 +37,7 @@ return require('packer').startup(
 		use 'nvim-lua/telescope.nvim'
 		use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 		use 'olimorris/onedarkpro.nvim'
+		use 'sunjon/shade.nvim'
 	end
 )
 

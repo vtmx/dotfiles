@@ -2,12 +2,12 @@
 -- colors
 ------------------------------------------------------------
 
-colors = {
+local c = {
 	shade0 = '#23272e', --background color (one dark darker)
-	shade1 = '#4b515c', --ui
-	shade2 = '#4b515c', --ui, text selection
+	shade1 = '#1e2227', --ui, darker
+	shade2 = '#3d4556', --ui, text selection
 	shade3 = '#5c6370', --ui, code comments
-	shade4 = '#636d83', --ui
+	shade4 = '#2c313c', --ui, line highlight
 	shade5 = '#828997', --ui
 	shade6 = '#979eab', --foreground text
 	shade7 = '#abb2bf', --foreground text
