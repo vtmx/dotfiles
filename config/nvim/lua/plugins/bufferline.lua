@@ -10,7 +10,7 @@ require('bufferline').setup({
   options = {
 		close_icon = ' ',
 		indicator_icon = ' ',
-		separator_style = 'thin',
+		separator_style = {'', ''},
 		show_close_icon = false,
 		show_buffer_icons = false,
 		tab_size = 30,
