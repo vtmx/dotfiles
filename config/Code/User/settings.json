@@ -84,17 +84,20 @@
     // "editor.background": "#23272e",
     "panel.border": "#1e2227",
     "panel.background": "#1e2227",
-    "terminal.background": "#1e2227",
-    "statusBar.background": "#1e2227",
-    "statusBar.noFolderBackground": "#23272e",
-    "statusBar.debuggingBackground": "#23272e",
+    "editor.selectionHighlightBorder": "#23272e00",
     "editorBracketHighlight.foreground1": "#e5c07b",
     "editorBracketHighlight.foreground2": "#c678dd",
     "editorBracketHighlight.foreground3": "#61afef",
     "editorBracketHighlight.foreground4": "#56b6c2",
     "editorBracketHighlight.foreground5": "#d19a66",
     "editorBracketHighlight.foreground6": "#abb2bf",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75"
+    "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75",
+    "editorCursor.foreground": "#abb2bf",
+    "terminal.background": "#1e2227",
+    "terminalCursor.background": "#abb2bf",
+    "statusBar.background": "#1e2227",
+    "statusBar.noFolderBackground": "#23272e",
+    "statusBar.debuggingBackground": "#23272e"
   },
 
   // Plugins

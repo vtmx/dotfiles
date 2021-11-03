@@ -129,6 +129,10 @@ _G.packer_plugins = {
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/home/vitor/.local/share/nvim/site/pack/packer/start/toggleterm.nvim"
+  },
+  ["vim-highlightedyank"] = {
+    loaded = true,
+    path = "/home/vitor/.local/share/nvim/site/pack/packer/start/vim-highlightedyank"
   }
 }
 

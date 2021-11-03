@@ -3,6 +3,7 @@
 ------------------------------------------------------------
 
 require('plugins.bufferline')
+require('plugins.highlightedyank')
 require('plugins.indent-blankline')
 require('plugins.lualine')
 require('plugins.nvim-tree')
@@ -19,6 +20,7 @@ return require('packer').startup(
 
 		use {'akinsho/toggleterm.nvim'}
 
+
 		use 'joshdick/onedark.vim'
 
 		use {
@@ -26,6 +28,7 @@ return require('packer').startup(
 			requires = 'kyazdani42/nvim-web-devicons'
 		}
 
+		use {'machakann/vim-highlightedyank'}
 		use 'nvim-lualine/lualine.nvim'
 
 		use {
