@@ -20,6 +20,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.lazyredraw = true
 opt.mouse = 'a'
+-- :set formatoptions-=cro
 
 -- notification
 opt.backup = false

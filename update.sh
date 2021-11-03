@@ -6,16 +6,16 @@ dist=$HOME/Dev/dotfiles
 echo '' 
 
 echo Update alacritty...
-cp $HOME/.config/alacritty/alacritty.yml $dist/.config/alacritty
+cp -rf $HOME/.config/alacritty $dist/config
 
 echo Update batcat...
-cp $HOME/.config/bat/config $dist/.config/bat
+cp -rf $HOME/.config/bat $dist/config
 
 echo Update fish...
-cp $HOME/.config/fish/config.fish $dist/.config/fish
+cp -rf $HOME/.config/fish $dist/config
 
 echo Update flameshot...
-cp $HOME/.config/flameshot/flameshot.ini $dist/.config/flameshot
+cp -rf $HOME/.config/flameshot $dist/config
 
 echo Update git...
 cp $HOME/.gitconfig $dist
@@ -29,32 +29,31 @@ cp $HOME/.local/share/konsole/konsole.profile $dist/kde
 cp $HOME/.local/share/color-schemes/kde.colors $dist/kde
 
 echo Update nvim...
-cp $HOME/.config/nvim/init.lua $dist/.config/nvim
-cp $HOME/.config/nvim/lua/*.lua $dist/.config/nvim/lua
+cp -rf $HOME/.config/nvim $dist/config
 
 echo Update nvimscript...
-cp $HOME/.config/nvimscript/*.vim $dist/.config/nvimscript
-cp $HOME/.config/nvimscript/coc-settings.json $dist/.config/nvimscript
+cp $HOME/.config/nvimscript/*.vim $dist/config/nvimscript
+cp $HOME/.config/nvimscript/*.json $dist/config/nvimscript
 
 echo Update opera...
-cp $HOME/.config/opera/Bookmarks.bak $dist/.config/opera
+cp $HOME/.config/opera/Bookmarks.bak $dist/config/opera
 
 echo Update rofi...
-cp $HOME/.config/rofi/config.rasi $dist/.config/rofi
+cp -rf $HOME/.config/rofi $dist/config
 
 echo Update sublime text...
-cp $HOME/.config/sublime-text-3/Packages/User/* $dist/.config/sublime-text-3/Packages/User
+cp $HOME/.config/sublime-text-3/Packages/User/* $dist/config/sublime-text-3/Packages/User
 
 echo Update sxhkd...
-cp $HOME/.config/sxhkd/sxhkdrc $dist/.config/sxhkdrc
+cp -rf $HOME/.config/sxhkd $dist/config
 
 echo Update tmux...
 cp $HOME/.tmux.conf $dist
 
 echo Update vscode...
-cp $HOME/.config/Code/User/keybindings.json $dist/.config/Code/User/
-cp $HOME/.config/Code/User/settings.json $dist/.config/Code/User/
-cp $HOME/.config/Code/User/syncLocalSettings.json $dist/.config/Code/User/
+cp $HOME/.config/Code/User/keybindings.json $dist/config/Code/User/
+cp $HOME/.config/Code/User/settings.json $dist/config/Code/User/
+cp $HOME/.config/Code/User/syncLocalSettings.json $dist/config/Code/User/
 
 echo Update zsh...
 cp $HOME/.zshrc $dist

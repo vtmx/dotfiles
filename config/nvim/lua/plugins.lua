@@ -7,6 +7,7 @@ require('plugins.indent-blankline')
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.telescope')
+require('plugins.toggleterm')
 require('plugins.shade')
 
 return require('packer').startup(
@@ -15,6 +16,8 @@ return require('packer').startup(
 			'akinsho/bufferline.nvim',
 			requires = 'kyazdani42/nvim-web-devicons'
 		}
+
+		use {'akinsho/toggleterm.nvim'}
 
 		use 'joshdick/onedark.vim'
 
