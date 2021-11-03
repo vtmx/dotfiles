@@ -9,15 +9,18 @@ local onedark = {
   },
 
   insert = {
-    a = { bg = '#61afef', fg = '#23272e' },
+    a = { bg = '#23272e', fg = '#abb2bf' },
+    c = { bg = '#23272e', fg = '#abb2bf' },
   },
 
   visual = {
-    a = { bg = '#c678dd', fg = '#23272e' },
+    a = { bg = '#23272e', fg = '#abb2bf' },
+    c = { bg = '#23272e', fg = '#abb2bf' },
   },
 
   replace = {
-    a = { bg = '#e06c75', fg = '#23272e' },
+    a = { bg = '#23272e', fg = '#abb2bf' },
+    c = { bg = '#23272e', fg = '#abb2bf' },
   },
 
   inactive = {
