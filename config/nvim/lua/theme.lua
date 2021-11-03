@@ -56,10 +56,16 @@ cmd('hi NvimTreeNormal guibg=#1e2227')
 cmd('hi NvimTreeNormalNC guibg=#1e2227')
 cmd('hi NvimTreeRootFolder guifg=#abb2bf')
 cmd('hi NvimTreeOpenedFile guifg=#abb2bf')
+cmd('hi NvimTreeWindowPicker guibg=#1e2227 guifg=#abb2bf')
 
--- comments
-cmd('highlight comment gui=italic')
+-- hi comments
+cmd('hi comment gui=italic')
 
+-- bufferline dosen't work
+-- cmd('hi BufferLineFill guibg=#ff0000')
+-- cmd('hi BufferLineBackground gui=none guibg=#00ff00')
+
+-- multiple indent line
 -- cmd('hi IndentBlanklineIndent1 guifg=#e5c07b gui=nocombine')
 -- cmd('hi IndentBlanklineIndent2 guifg=#c678dd gui=nocombine')
 -- cmd('hi IndentBlanklineIndent3 guifg=#61afef gui=nocombine')

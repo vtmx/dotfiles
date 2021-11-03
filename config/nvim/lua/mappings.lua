@@ -125,7 +125,7 @@ map('n', '<right>', ':vertical resize -2<cr>')
 map('n', '<leader>n', ':ene<cr>')
 map('n', '<leader>h', ':bp<cr>')
 map('n', '<leader>l', ':bn<cr>')
-map('n', '<leader>w', ':bd #<cr>')
+cmd[[nnoremap <silent> <leader>w :bp \|bd #<cr>]]
 cmd[[nnoremap <silent> <a-n> :ene<cr>]]
 cmd[[nnoremap <silent> <a-l> :bn<cr>]]
 cmd[[nnoremap <silent> <a-h> :bp<cr>]]
