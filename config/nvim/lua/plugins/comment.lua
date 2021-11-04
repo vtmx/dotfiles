@@ -1,5 +1,9 @@
 ------------------------------------------------------------
--- hightlightyank
+-- comment
 ------------------------------------------------------------
 
-vim.g.highlightedyank_highlight_duration = 150
+require('Comment').setup({
+	--toggler = {
+		--line = '<leader>;'
+	--}
+})

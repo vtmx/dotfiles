@@ -21,3 +21,5 @@ local c = {
 	accent6 = '#c678dd', --purple
 	accent7 = '#be5046', --magenta
 }
+
+return c

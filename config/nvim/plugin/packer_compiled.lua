@@ -70,9 +70,14 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
-    config = { "\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fComment\frequire\0" },
     loaded = true,
     path = "/home/vitor/.local/share/nvim/site/pack/packer/start/Comment.nvim"
+  },
+  ["better-escape.vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/vitor/.local/share/nvim/site/pack/packer/opt/better-escape.vim"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -81,6 +86,10 @@ _G.packer_plugins = {
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/vitor/.local/share/nvim/site/pack/packer/start/coc.nvim"
+  },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/vitor/.local/share/nvim/site/pack/packer/start/hop.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -137,10 +146,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'better-escape.vim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

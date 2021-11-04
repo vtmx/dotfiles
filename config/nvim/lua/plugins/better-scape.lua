@@ -1,5 +1,6 @@
 ------------------------------------------------------------
--- hightlightyank
+-- better-scape
 ------------------------------------------------------------
 
-vim.g.highlightedyank_highlight_duration = 150
+vim.g.better_escape_shortcut = 'kj' 
+vim.g.better_escape_interval = 200 

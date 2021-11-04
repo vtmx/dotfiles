@@ -1,5 +1,7 @@
 ------------------------------------------------------------
--- hightlightyank
+-- hop
 ------------------------------------------------------------
 
-vim.g.highlightedyank_highlight_duration = 150
+require'hop'.setup({
+	-- keys = 'etovxqpdygfblzhckisuran'
+})
