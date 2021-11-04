@@ -42,6 +42,13 @@ cmd('hi PmenuThumb guibg=#363b46')
 -- line vertical
 cmd('hi VertSplit guifg=#23272e guibg=#23272e')
 
+-- hi comments
+cmd('hi comment gui=italic guifg=#5c6370')
+
+-- hop
+cmd('hi HopNextKey guibg=none guifg=#e06c75')
+cmd('hi HopUnmatched guifg=#5c6370')
+
 -- indent-line
 cmd('hi IndentBlanklineChar guifg=#393e48')
 cmd('hi IndentBlanklineSpaceChar guibg=none')
@@ -57,9 +64,6 @@ cmd('hi NvimTreeNormalNC guibg=#1e2227')
 cmd('hi NvimTreeRootFolder guifg=#abb2bf')
 cmd('hi NvimTreeOpenedFile guifg=#abb2bf')
 cmd('hi NvimTreeWindowPicker guibg=#1e2227 guifg=#abb2bf')
-
--- hi comments
-cmd('hi comment gui=italic')
 
 -- bufferline dosen't work
 -- cmd('hi BufferLineFill guibg=#ff0000')

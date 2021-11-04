@@ -30,6 +30,9 @@ map('v', '<leader>kj', '<esc>')
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
 
+-- like C and D
+map('n', 'Y', 'y$')
+
 -- enter in normal mode
 map('n', '<leader>o', 'o<esc>')
 map('n', '<leader>O', 'O<esc>')
@@ -40,6 +43,18 @@ map('n', '<leader>j', 'J')
 -- delete not copy
 map('n', 'x', [["_x]])
 map('n', '<del>', [["_x]])
+
+-- move line
+map('n', '<a-j>', ':m+<cr>')
+map('n', '<a-k>', ':m-2<cr>')
+map('v', '<a-j>', [[:m'>+<cr>`<my`>mzgv`yo`z]])
+map('v', '<a-k>', [[:m'<-2<cr>`>my`<mzgv`yo`z]])
+
+-- clone line
+-- nnoremap <silent> <s-j> :t.<cr>
+-- nnoremap <silent> <s-k> :t-<cr>
+-- vnoremap <silent> <s-j> :copy '><cr>
+-- vnoremap <silent> <s-k> :copy -'><cr>
 
 -- keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
@@ -118,6 +133,8 @@ map('n', '<c-w>j', '<c-w>J')
 map('n', '<c-w>l', '<c-w>L')
 
 -- resize
+map('n', '<up>', ':resize +2<cr>')
+map('n', '<down>', ':resize -2<cr>')
 map('n', '<left>', ':vertical resize +2<cr>')
 map('n', '<right>', ':vertical resize -2<cr>')
 
@@ -147,6 +164,9 @@ map('n', '<a-q>', ':q!<cr>')
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------
+
+-- hop	
+map('n', '<leader><leader>f', ':HopChar1<cr>')
 
 -- nvimtree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
