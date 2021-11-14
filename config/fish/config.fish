@@ -90,7 +90,7 @@ alias gcmsg='git commit -m'
 export BROWSER=opera
 export CODE=code
 export EDITOR=nvim
-export VISUAL=subl
+export VISUAL=nvim
 
 # custom sh
 alias ide='ide.sh'

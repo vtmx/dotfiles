@@ -165,7 +165,7 @@ map('n', '<a-q>', ':q!<cr>')
 -- Plugins
 ------------------------------------------------------------
 
--- hop	
+-- hop
 map('n', '<leader><leader>f', ':HopChar1<cr>')
 
 -- nvimtree

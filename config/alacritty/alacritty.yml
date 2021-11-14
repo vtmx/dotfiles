@@ -16,6 +16,8 @@ scrolling:
   history: 10000
   multiplier: 3
 
+dynamic_title: false
+
 background_opacity: 1.0
 
 font:

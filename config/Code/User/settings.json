@@ -14,7 +14,7 @@
   "editor.fontWeight": "500",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairs": false,
   "editor.insertSpaces": true,
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
