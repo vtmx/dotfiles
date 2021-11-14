@@ -12,6 +12,7 @@ require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.telescope')
 require('plugins.toggleterm')
+require('plugins.treesitter')
 require('plugins.shade')
 
 return require('packer').startup(
@@ -45,3 +46,5 @@ return require('packer').startup(
 --:CocInstall coc-prettier
 --:CocInstall coc-vetur
 
+-- treesitter	
+-- :TSInstall vue javascript typescript html css scss

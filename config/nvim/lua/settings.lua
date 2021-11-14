@@ -9,7 +9,6 @@ local opt = vim.opt
 -- sets
 opt.termguicolors = true
 opt.autochdir = true
-opt.smartindent = true
 opt.autoread = true
 opt.clipboard = 'unnamed,unnamedplus'
 opt.cmdheight = 1
@@ -39,11 +38,13 @@ opt.relativenumber = true
 
 -- indent
 local indent = 2
+opt.autoindent = true
+opt.smartindent = true
 opt.shiftwidth = indent 
 opt.tabstop = indent 
 opt.softtabstop = indent 
 
--- interface
+-- split
 opt.splitbelow = true
 opt.splitright = true
 
@@ -54,3 +55,13 @@ opt.splitright = true
 --cmd [[netrw_altv = 1]]
 --cmd [[netrw_liststyle = 3]]
 --cmd [[netrw_winsize = 20]]
+
+-- indent-blanklinke
+-- fix indentline color
+hl_mode = 'combine'
+vim.wo.colorcolumn = '99999'
+
+-- enable enter icon
+-- opt.list = true
+-- opt.listchars:append('eol:↴')
+

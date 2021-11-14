@@ -1,21 +1,16 @@
 {
   "coc.preferences.colorSupport": false,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "markdown",
-    "html",
-    "css",
-    "scss",
-    "js",
-    "json",
-    "ts",
-    "python",
-    "vim",
-    "vue"
-  ],
   "prettier.singleQuote": true,
-  "snippets.ultisnips.usePythonx": false,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier",
   "vetur.format.defaultFormatterOptions": {
-    "singleQuote": true
+    "prettier": {
+      "singleQuote": true,
+      "printWidth": 120
+    }
   }
 }

@@ -18,11 +18,11 @@ UseCustomCursorColor=false
 DefaultEncoding=UTF-8
 
 [General]
-Command=/usr/bin/fish
+Command=/usr/bin/tmux
 DimWhenInactive=false
 Environment=TERM=xterm-256color,COLORTERM=truecolor
 Icon=utilities-terminal
-LocalTabTitleFormat=%d : %n
+LocalTabTitleFormat=%n
 Name=konsole
 Parent=FALLBACK/
 RemoteTabTitleFormat=(%u) %H
