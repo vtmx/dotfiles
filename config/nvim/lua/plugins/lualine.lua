@@ -2,30 +2,32 @@
 -- lualine
 ------------------------------------------------------------
 
+local c = require('colors')
+
 local onedark = {
   normal = {
-    a = { bg = '#23272e', fg = '#abb2bf' },
-    c = { bg = '#23272e', fg = '#abb2bf' },
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
   },
 
   insert = {
-    a = { bg = '#23272e', fg = '#abb2bf' },
-    c = { bg = '#23272e', fg = '#abb2bf' },
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
   },
 
   visual = {
-    a = { bg = '#23272e', fg = '#abb2bf' },
-    c = { bg = '#23272e', fg = '#abb2bf' },
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
   },
 
   replace = {
-    a = { bg = '#23272e', fg = '#abb2bf' },
-    c = { bg = '#23272e', fg = '#abb2bf' },
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
   },
 
   inactive = {
-    a = { bg = '#23272e', fg = '#23272e' },
-    c = { bg = '#23272e', fg = '#23272e' },
+    a = { bg = c.shade0, fg = c.shade0 },
+    c = { bg = c.shade0, fg = c.shade0 },
   },
 }
 
