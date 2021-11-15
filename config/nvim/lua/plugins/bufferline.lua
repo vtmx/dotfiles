@@ -3,12 +3,12 @@
 ------------------------------------------------------------
 
 -- :h bufferline-styling
-
-local bg = '#1e2227'
-local bg_selected = '#23272e'
+local c = require('colors')
+-- vim.api.nvim_echo({{c.shade0, 'None'}}, false, {})
 
 require('bufferline').setup({
   options = {
+		-- buffer_close_icon = ' ',
 		close_icon = ' ',
 		indicator_icon = ' ',
 		separator_style = {'', ''},
@@ -25,37 +25,37 @@ require('bufferline').setup({
 	},
 	highlights = {
 		fill = {
-			guibg = '#1e2227'
+			guibg = c.shade1
 		},
 		background = {
-			guibg = '#1e2227'
+			guibg = c.shade1
 		},
 		close_button = {
-			guibg = '#1e2227',
-			guifg = '#5c6370'
+			guibg = c.shade1,
+			guifg = c.shade3
 		},
 		close_button_selected = {
-			guibg = '#23272e',
-			guifg = '#abb2bf'
+			guibg = c.shade0,
+			guifg = c.shade7
 		},
 		buffer_visible = {
-			guibg = '#1e2227',
-			guifg = '#abb2bf'
+			guibg = c.shade1,
+			guifg = c.shade7
 		},
 		buffer_selected = {
-			guibg = '#23272e',
-			guifg = '#abb2bf',
+			guibg = c.shade0,
+			guifg = c.shade7,
 			gui = '' -- no italic
 		},
 		modified = {
-			guifg = '#5c6370'
+			guifg = c.shade3
 		},
 		modified_selected = {
-			guifg = '#abb2bf'
+			guifg = c.shade7
 		},
 		separator = {
-			guibg = '#1e2227',
-			guifg = '#1e2227'
+			guibg = c.shade1,
+			guifg = c.shade1
 		}
 	}
 })
