@@ -52,6 +52,7 @@ alias v='nvim'
 alias t='tmux'
 
 # pacman
+alias pacman='sudo pacman'
 alias update='sudo pacman -Syu'
 alias install='sudo pacman -Sy'
 

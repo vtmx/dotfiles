@@ -1,89 +1,102 @@
 configuration {
-    lines: 5;
-    font: "IBM Plex Mono Medm 11";
-    terminal: "alacritty";
-    location: 0;
-    separator-style: "solid";
-    show-icons: false;
-    disable-history: false;
-    hide-scrollbar: true;
+	display-drun: "App:";
+  display-window: "Windows:";
+	lines: 5;
+	font: "IBM Plex Mono Medm 11";
+	terminal: "alacritty";
+	location: 0;
+	separator-style: "solid";
+	show-icons: false;
+	disable-history: false;
+	hide-scrollbar: true;
 }
 
 @theme "/dev/null"
 
 * {
-    bg-col: #1e222a;
-    border-col: #282c34;
-    selected-col: #282c34;
-    blue: #98c379;
-    fg-col: #81a1c1;
-    fg-col2: #e06c75;
-    width: 600;
+	shade0: #23272e; /* background color (one dark darker) */
+	shade1: #1e2227; /* ui, darker */
+	shade2: #3d4556; /* ui, text selection */
+	shade3: #5c6370; /* ui, code comments */
+	shade4: #2c313c; /* ui, line highlight */
+	shade5: #828997; /* ui */
+	shade6: #979eab; /* foreground text */
+	shade7: #abb2bf; /* foreground text */
+
+	accent0: #e06c75; /* red */
+	accent1: #d19a66; /* orange */
+	accent2: #e5c07b; /* yellow */
+	accent3: #98c379; /* green */
+	accent4: #56b6c2; /* cyan */
+	accent5: #61afef; /* blue */
+	accent6: #c678dd; /* purple */
+	accent7: #be5046; /* magenta */
 }
 
 window {
-    padding: 18px;
-    height: 480px;
-    border: 4px;
-    border-color: @border-col;
-    background-color: @bg-col;
+	width: 600;
+	padding: 16px;
+	height: 480px;
+	border: 2px;
+	border-color: @shade2;
+	background-color: @shade1;
 }
 
 mainbox {
-    padding: 4px;
-    border-radius: 12px;
-    background-color: @bg-col;
+	padding: 4px;
+	border-radius: 12px;
+	background-color: @shade1;
 }
 
 inputbar {
-    children: [prompt, entry];
-    background-color: @bg-col;
-    border-radius: 4px;
-    padding: 2px;
+	children: [prompt, entry];
+	padding: 2px;
+	background-color: @shade1;
+	border-radius: 4px;
 }
 
 prompt {
-    background-color: @blue;
-    padding: 5px 5px 0px;
-    text-color: @bg-col;
-    border-radius: 4px;
+	padding: 5px 5px 0px;
+	background-color: @accent3;
+	border-radius: 4px;
+	text-color: @shade1;
 }
 
 textbox-prompt-colon {
-    expand: false;
-    str: ":";
+	expand: false;
+	str: ":";
 }
 
 entry {
-    padding: 6px;
-    text-color: @fg-col2;
-    background-color: @bg-col;
+	padding: 6px;
+	background-color: @shade1;
+	text-color: @shade7;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    columns: 2;
-    background-color: @bg-col;
+	columns: 2;
+	padding: 6px 0px 0px;
+	border: 0;
+	background-color: @shade1;
 }
 
 element-text, element-icon {
-    background-color: inherit;
-    text-color: inherit;
+	background-color: inherit;
+	text-color: inherit;
 }
 
 element {
-    padding: 8px;
-    background-color: @bg-col;
-    text-color: @fg-col;
-    border-radius: 4px;
+	padding: 8px;
+	background-color: @shade1;
+	text-color: @shade7;
+	border-radius: 4px;
 }
 
 element-icon {
-    size: 25px;
+	size: 25px;
 }
 
 element selected {
-    background-color: @selected-col;
-    text-color: @fg-col2;
+	background-color: @shade4;
+	text-color: @shade7;
 }

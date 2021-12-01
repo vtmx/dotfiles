@@ -165,6 +165,9 @@ map('n', '<a-q>', ':q!<cr>')
 -- Plugins
 ------------------------------------------------------------
 
+-- coc
+map('n', '<leader>f', ':CocCommand prettier.formatFile<cr>')
+
 -- hop
 map('n', '<leader><leader>f', ':HopChar1<cr>')
 
