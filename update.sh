@@ -20,9 +20,6 @@ cp -rf $HOME/.config/fish $dist/config
 echo Update flameshot...
 cp -rf $HOME/.config/flameshot $dist/config
 
-echo Update git...
-cp $HOME/.gitconfig $dist
-
 echo Update kde...
 cp $HOME/.config/kglobalshortcutsrc $dist/config/kde
 cp $HOME/.config/khotkeysrc $dist/config/kde
@@ -51,7 +48,7 @@ echo Update sxhkd...
 cp -rf $HOME/.config/sxhkd $dist/config
 
 echo Update tmux...
-cp $HOME/.tmux.conf $dist
+cp $HOME/.tmux.conf $dist/config
 
 echo Update vscode...
 cp $HOME/.config/Code/User/keybindings.json $dist/config/vscode
@@ -59,4 +56,4 @@ cp $HOME/.config/Code/User/settings.json $dist/config/vscode
 cp $HOME/.config/Code/User/syncLocalSettings.json $dist/config/vscode
 
 echo Update zsh...
-cp $HOME/.zshrc $dist
+cp $HOME/.zshrc $dist/config
