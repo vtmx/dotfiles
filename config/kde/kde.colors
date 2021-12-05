@@ -1,8 +1,3 @@
-[General]
-ColorScheme=kde
-Name=- One Dark -
-shadeSortColumn=true
-
 [ColorEffects:Disabled]
 Color=#383838
 ColorAmount=0
@@ -106,6 +101,11 @@ ForegroundNeutral=#d19a66
 ForegroundNormal=#abb2bf
 ForegroundPositive=#85b168
 ForegroundVisited=#5c6370
+
+[General]
+ColorScheme=kde
+Name=- One Dark -
+shadeSortColumn=true
 
 [KDE]
 contrast=4

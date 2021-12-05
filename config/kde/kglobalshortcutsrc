@@ -48,8 +48,8 @@ _k_friendly_name=Custom Shortcuts Service
 {71139430-99b7-43ad-8884-aaf60d7ddbc1}=Meta+G,none,Chrome
 {95051306-72da-45e1-b1c5-49efa10ca798}=F11,none,Polybar
 {9fa53dfb-82cc-4dc6-af23-9feeb42c4f78}=Meta+K,none,KColor
-{b8eeb6be-9372-4089-a1ca-c6145aa5e453}=none,none,Alacritty
-{dc54e4d5-2f6e-4874-be73-112615c07968}=Meta+Ctrl+Return,none,Konsole
+{b8eeb6be-9372-4089-a1ca-c6145aa5e453}=Meta+Ctrl+Return,none,Alacritty
+{dc54e4d5-2f6e-4874-be73-112615c07968}=Meta+Return,none,Konsole
 {f160f437-326f-497f-8e7c-31478806afc7}=Meta+O,none,Opera
 
 [kmix]
@@ -213,7 +213,14 @@ Window to Screen 4=none,none,Window to Screen 4
 Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
-_k_friendly_name=KWin
+_k_friendly_name=Plasma
+addDesktop=none,none,Virtual Desktop Bar - Add Desktop
+moveCurrentDesktopToLeft=none,none,Virtual Desktop Bar - Move Current Desktop to Left
+moveCurrentDesktopToRight=none,none,Virtual Desktop Bar - Move Current Desktop to Right
+removeCurrentDesktop=none,none,Virtual Desktop Bar - Remove Current Desktop
+removeLastDesktop=none,none,Virtual Desktop Bar - Remove Last Desktop
+renameCurrentDesktop=none,none,Virtual Desktop Bar - Rename Current Desktop
+switchToRecentDesktop=none,none,Virtual Desktop Bar - Switch to Recent Desktop
 view_actual_size=,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out

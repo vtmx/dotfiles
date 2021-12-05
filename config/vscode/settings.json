@@ -121,6 +121,10 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[markdown]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
