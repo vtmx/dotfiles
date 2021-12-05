@@ -39,7 +39,7 @@ cp $HOME/.config/nvimscript/*.vim $dist/config/nvimscript
 cp $HOME/.config/nvimscript/*.json $dist/config/nvimscript
 
 echo Update opera...
-cp $HOME/.config/opera/Bookmarks.bak $dist/config/opera
+cp $HOME/.config/opera/Bookmarks $dist/config/opera
 
 echo Update rofi...
 cp -rf $HOME/.config/rofi $dist/config
