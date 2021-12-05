@@ -2,7 +2,7 @@
 echo '' 
 
 # dist dir
-DIST=$HOME/Dev/dotfiles
+DIST=$HOME/Dev/dotfiles/config
 
 update_file() {
 	file_name=$1
@@ -12,15 +12,15 @@ update_file() {
 
 	if ! cmp -s $file_src $file_dist; then
 		echo "Update $file_name..."
-		cp -f "${file_src} ${path_dist}"
+		cp -f $file_src $path_dist
 	fi
 }
 
-# file_name="alacritty"
-# file_src="$HOME/.config/alacritty/alacritty.yml"
-# file_dist="$DIST/config/alacritty/alacritty.yml"
-# path_dist="$DIST/config/alacritty"
-# update_file $file_name $file_src $file_dist
+file_name="alacritty"
+file_src="$HOME/.config/alacritty/alacritty.yml"
+file_dist="$DIST/alacritty/alacritty.yml"
+path_dist="$DIST/alacritty"
+update_file $file_name $file_src $file_dist $path_dist
 #
 # file_name="batcat"
 # file_src="$HOME/.config/bat/config"
@@ -104,11 +104,11 @@ update_file() {
 # file_dist="$DIST/config/sublime-text/Preferences.sublime-settings"
 # update_file $file_name $file_src $file_dist
 #
-file_name="sublime_text_package control"
-file_src="$HOME/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
-file_dist="$DIST/config/sublime-text/Package Control.sublime-settings"
-path_dist="$DIST/config/sublime-text"
-update_file "${file_name}" ${file_src} ${file_dist} ${path_dist}
+# file_name="sublime_text_package control"
+# file_src="$HOME/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+# file_dist="$DIST/config/sublime-text/Package Control.sublime-settings"
+# path_dist="$DIST/config/sublime-text"
+# update_file "${file_name}" ${file_src} ${file_dist} ${path_dist}
 #
 # file_name="sxhkd"
 # file_src="$HOME/.config/sxhkd/sxhkdrc"
