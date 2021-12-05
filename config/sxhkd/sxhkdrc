@@ -1,8 +1,8 @@
 super + r
 	bspc wm -r; notify-send 'sxhkd' 'reload'
 
-super + Return
-	alacritty
+#super + Return
+	#alacritty
 
 super + +shift + Return
 	konsole

@@ -3,7 +3,7 @@ env:
 
 shell:
   program: /usr/bin/fish
-  #program: /usr/bin/tmux
+  #program: /usr/bin/tmux test
 
 window:
   dimensions:
