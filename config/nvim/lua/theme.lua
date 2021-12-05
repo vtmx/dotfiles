@@ -2,8 +2,6 @@
 -- theme
 ------------------------------------------------------------
 
--- :hi to see colors
-
 local cmd = vim.cmd
 local c = require('colors')
 
@@ -21,49 +19,58 @@ onedarkpro.load()
 -- cmd('hi! NonText guibg=none guifg=none ctermbg=none ctermfg=none')
 
 -- bg
-cmd('hi Normal guibg='..c.shade0)
+cmd('hi Normal guibg=' .. c.shade0)
 
 -- cursor line
-cmd('hi CursorLine guibg=#2c313c')
+cmd('hi CursorLine guibg=' .. c.shade4)
 
 -- line column
-cmd('hi LineNR guibg=#23272e guifg=#5c6370')
-cmd('hi CursorLineNr guibg=#23272e guifg=#abb2bf')
+cmd('hi LineNR guibg=' .. c.shade0)
+cmd('hi LineNR guifg=' .. c.shade3)
+cmd('hi CursorLineNr guibg=' .. c.shade0)
+cmd('hi CursorLineNr guifg=' .. c.shade7)
 
 -- select text
-cmd('hi Visual guibg=#3d4556')
+cmd('hi Visual guibg='..c.shade2)
 
 -- menu pmenu
-cmd('hi Pmenu guibg=#1e2227')
-cmd('hi PmenuSbar guibg=#282c34')
-cmd('hi PmenuSel guibg=#2c313a guifg=#abb2bf')
-cmd('hi PmenuThumb guibg=#363b46')
+cmd('hi Pmenu guibg=' .. c.shade1)
+cmd('hi PmenuSbar guibg=' .. c.shade1)
+cmd('hi PmenuSel guibg=' .. c.shade2)
+cmd('hi PmenuSel guifg=' .. c.shade7)
+cmd('hi PmenuThumb guibg=' .. c.shade2)
 
 -- line vertical
-cmd('hi VertSplit guibg=#23272e guifg=#23272e') -- line
--- cmd('hi VertSplit guibg=#393e48 guifg=#23272e') line
--- cmd('hi StatusLineNC guibg=#393e48 guifg=#23272e')
+cmd('hi VertSplit guibg=' .. c.shade0) -- line
+cmd('hi VertSplit guifg=' .. c.shade0) -- line
+-- cmd('hi VertSplit guibg=' .. c.shade2)
+-- cmd('hi VertSplit guifg=' .. c.shade0)
+-- cmd('hi StatusLineNC guibg=' .. c.shade2)
+-- cmd('hi StatusLineNC guifg=' .. c.shade0)
 
 -- hi comments
-cmd('hi comment gui=italic guifg=#5c6370')
+cmd('hi comment gui=italic guifg=' .. c.shade3)
 
 -- hop
-cmd('hi HopNextKey guibg=none guifg=#e06c75')
-cmd('hi HopUnmatched guifg=#5c6370')
+cmd('hi HopNextKey guibg=none guifg=' .. c.accent0)
+cmd('hi HopUnmatched guifg=' .. c.shade3)
 
 -- indent-line
-cmd('hi IndentBlanklineChar guifg=#393e48')
+cmd('hi IndentBlanklineChar guifg=' .. c.shade2)
 cmd('hi IndentBlanklineSpaceChar guibg=none')
 
 -- nvim-tree
-cmd('hi NvimTreeFolder guifg=#abb2bf')
-cmd('hi NvimTreeFolderIcon guifg=#abb2bf')
-cmd('hi NvimTreeFolderName guifg=#abb2bf')
-cmd('hi NvimTreeEmptyFolderName guifg=#abb2bf')
-cmd('hi NvimTreeOpenedFolderName guifg=#abb2bf')
-cmd('hi NvimTreeNormal guibg=#1e2227')
-cmd('hi NvimTreeNormalNC guibg=#1e2227')
-cmd('hi NvimTreeRootFolder guifg=#abb2bf')
-cmd('hi NvimTreeOpenedFile guifg=#abb2bf')
-cmd('hi NvimTreeWindowPicker guifg=#abb2bf')
--- cmd('hi NvimTreeVertSplit guibg=#1e2227 guifg=#1e2227') line
+cmd('hi NvimTreeFolder guifg=' .. c.shade7)
+cmd('hi NvimTreeFolderIcon guifg=' .. c.shade7)
+cmd('hi NvimTreeFolderName guifg=' .. c.shade7)
+cmd('hi NvimTreeEmptyFolderName guifg=' .. c.shade7)
+cmd('hi NvimTreeOpenedFolderName guifg=' .. c.shade7)
+cmd('hi NvimTreeNormal guibg=' .. c.shade2)
+cmd('hi NvimTreeNormalNC guibg=' .. c.shade2)
+cmd('hi NvimTreeRootFolder guifg=' .. c.shade7)
+cmd('hi NvimTreeOpenedFile guifg=' .. c.shade7)
+cmd('hi NvimTreeWindowPicker guifg=' .. c.shade7)
+-- cmd('hi NvimTreeVertSplit guibg=' .. c.shade1) line
+-- cmd('hi NvimTreeVertSplit guifg=' .. c.shade1) line
+
+-- :hi to see colors

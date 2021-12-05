@@ -18,9 +18,7 @@ end
 vim.g.mapleader = ' '
 
 -- reload
-map('n', '<leader>r', ':so $MYVIMRC<cr>') 
-
---! edit
+map('n', '<leader>r', ':luafile %<cr>') 
 
 -- scape
 map('i', 'kj', '<esc>')
