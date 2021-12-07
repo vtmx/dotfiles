@@ -14,6 +14,9 @@ cp -rf $HOME/.config/bat $dist/config
 echo Update bspwm...
 cp -rf $HOME/.config/bspwm $dist/config
 
+echo Update btop...
+cp -rf $HOME/.config/btop $dist/config
+
 echo Update fish...
 cp -rf $HOME/.config/fish $dist/config
 
