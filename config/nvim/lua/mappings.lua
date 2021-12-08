@@ -155,6 +155,7 @@ cmd[[inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
 -- save
 map('n', '<c-s>', ':w!<cr>', { noremap = true, silent = false })
 map('i', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
+map('v', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
 
 -- quit
 map('n', '<a-q>', ':q!<cr>')
