@@ -14,7 +14,7 @@
   "editor.fontWeight": "500",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "editor.guides.bracketPairs": false,
+  "editor.guides.bracketPairs": true,
   "editor.insertSpaces": true,
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
@@ -80,11 +80,18 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#1e2227",
     "tab.border": "#21252b",
-    // "sideBar.background": "#23272e",
-    // "editor.background": "#23272e",
+    "sideBar.background": "#1e2227",
+    "editor.background": "#23272e",
     "panel.border": "#1e2227",
     "panel.background": "#1e2227",
-    "editor.selectionHighlightBorder": "#23272e00",
+    "editor.selectionBackground": "#3d4556",
+    "editor.selectionHighlightBorder": "#00000000",
+    "editor.selectionHighlightBackground": "#00000000",
+    "editorCursor.foreground": "#abb2bf",
+    "editor.wordHighlightBackground": "#00000000",
+    "editor.wordHighlightBorder": "#00000000",
+    "editorBracketMatch.background": "#00000000",
+    "editorBracketMatch.border": "#00000000",
     "editorBracketHighlight.foreground1": "#e5c07b",
     "editorBracketHighlight.foreground2": "#c678dd",
     "editorBracketHighlight.foreground3": "#61afef",
@@ -92,7 +99,6 @@
     "editorBracketHighlight.foreground5": "#d19a66",
     "editorBracketHighlight.foreground6": "#abb2bf",
     "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75",
-    "editorCursor.foreground": "#abb2bf",
     "terminal.background": "#1e2227",
     "terminalCursor.background": "#abb2bf",
     "statusBar.background": "#1e2227",
@@ -134,25 +140,28 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
 
   // Vetur
-  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatter.scss": "prettier",
   "vetur.format.defaultFormatter.js": "prettier",
   "vetur.format.defaultFormatter.ts": "prettier",
 
   "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+    },
     "prettier": {
       "singleQuote": true,
       "printWidth": 120
     }
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
   },
 
   // Vim

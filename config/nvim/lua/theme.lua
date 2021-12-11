@@ -10,7 +10,10 @@ onedarkpro.setup {
   theme = 'onedark',
 	colors = {
 	  bg = c.shade0
-  }
+  },
+	options = {
+		italic = false,
+	}
 }
 onedarkpro.load()
 

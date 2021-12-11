@@ -65,3 +65,11 @@ vim.wo.colorcolumn = '99999'
 -- opt.list = true
 -- opt.listchars:append('eol:↴')
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+		-- Disable underline, it's very annoying
+		underline = false,
+		virtual_text = false,
+		signs = true,
+		update_in_insert = false
+})
