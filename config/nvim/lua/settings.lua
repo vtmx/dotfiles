@@ -49,12 +49,13 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- netrw
---cmd [[netrw_banner = 0]]
---cmd [[netrw_hide = 1]]
---cmd [[netrw_browse_split = 4]]
---cmd [[netrw_altv = 1]]
---cmd [[netrw_liststyle = 3]]
---cmd [[netrw_winsize = 20]]
+vim.g['netrw_altv'] = 1
+vim.g['netrw_banner'] = 0
+vim.g['netrw_browse_split'] = 4
+vim.g['netrw_hide'] = 1
+vim.g['netrw_liststyle'] = 4
+-- vim.g['netrw_list_hide'] = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
+vim.g['netrw_winsize'] = 25
 
 -- indent-blanklinke
 -- fix indentline color
@@ -65,7 +66,7 @@ vim.wo.colorcolumn = '99999'
 -- opt.list = true
 -- opt.listchars:append('eol:↴')
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
+vim.lsp.handlers['textDocument/publishDiagnostics'] =
 vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 		-- Disable underline, it's very annoying
 		underline = false,
