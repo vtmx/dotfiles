@@ -1,0 +1,110 @@
+DVI-I-1 HDMI-0 Height 1080=666
+DVI-I-1 HDMI-0 Width 1920=1280
+DVI-I-1 HDMI-0 XPosition=341
+DVI-I-1 HDMI-0 YPosition=290
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAEPAAACdPwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAmAAACdAAAAF0BAAADAAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAACgEAAAMAAAADAAAHgAAAAV/8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAHgAAAAAoBAAADAAAD8AAAAnQAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+
+[CompactMode]
+FontWeight=63
+
+[Desktop Entry]
+DefaultProfile=One Dark.profile
+
+[DetailsMode]
+FontFamily=Segoe UI
+FontWeight=63
+PreviewSize=22
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+CommandBarLastUsedActions=
+ConfirmClosingMultipleTabs=false
+ConfirmClosingTerminalRunningProgram=false
+RememberOpenedTabs=false
+ShowSelectionToggle=false
+ShowSpaceInfo=false
+ShowZoomSlider=false
+Version=201
+ViewPropsTimestamp=2020,12,19,20,13,3
+
+[IconsMode]
+FontWeight=63
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Dev/dotfiles/kde/dolphin.shortcuts,file:$HOME/Dev/dotfiles/kde/dolphin.shortcuts
+Recent URLs[$e]=file:$HOME/Dev/dotfiles/kde/
+iconViewIconSize=43
+
+[KPropertiesDialog]
+DVI-I-1 HDMI-0 Height 1080=467
+DVI-I-1 HDMI-0 Width 1920=368
+HDMI-0 Height 1080=631
+HDMI-0 Height 1920x1080=568
+HDMI-0 Width 1920=517
+HDMI-0 Width 1920x1080=455
+
+[MainWindow]
+DVI-I-1 HDMI-0 Height 1080=1009
+DVI-I-1 HDMI-0 Width 1920=1920
+DVI-I-1 HDMI-0 Window-Maximized 1080x1920=true
+DVI-I-1 HDMI-0 XPosition=0
+DVI-I-1 HDMI-0 YPosition=34
+HDMI-0 Height 1080=1006
+HDMI-0 Height 1280x720=641
+HDMI-0 Height 1920x1080=1014
+HDMI-0 Width 1280x720=1280
+HDMI-0 Width 1920=1920
+HDMI-0 Width 1920x1080=1920
+HDMI-0 Window-Maximized 1080x1920=true
+HDMI-0 Window-Maximized 1920x1080=true
+HDMI-0 XPosition=0
+HDMI-0 XPosition 1280x720=0
+HDMI-0 XPosition 1920x1080=0
+HDMI-0 YPosition=34
+HDMI-0 YPosition 1280x720=34
+HDMI-0 YPosition 1920x1080=34
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAADVAAAD9vwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAABABAAAJ+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAAAAAD9gAAAGMBAAAJAAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAEAEAAAkAAAADAAAFAAAAAN/8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFAAAAABABAAAJAAAGqgAAA/YAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[Notification Messages]
+ConfirmDelete=true
+ConfirmEmptyTrash=true
+ConfirmHide=true
+
+[Open-with settings]
+CompletionMode=1
+History=figm,kate,kat,neo,subl,opera,vlc,live,sub,SUB,kd,wine,subli,ink,bit
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[Search]
+What=Content
+
+[SettingsDialog]
+DVI-I-1 HDMI-0 Height 1080=451
+DVI-I-1 HDMI-0 Width 1920=576
+HDMI-0 Height 1080=541
+HDMI-0 Height 1920x1080=541
+HDMI-0 Width 1920=622
+HDMI-0 Width 1920x1080=622
+
+[Shortcut Schemes]
+Current Scheme=Default
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[ViewPropertiesDialog]
+DVI-I-1 HDMI-0 Height 1080=578
+DVI-I-1 HDMI-0 Width 1920=374
+
+[kuick-copy]
+Paths[$e]=/run/media/vitor/PENDRIVE SU,$HOME/Design/,$HOME/Pictures/

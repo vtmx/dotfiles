@@ -313,7 +313,3 @@ toggle do not disturb=none,none,Toggle do not disturb
 [systemsettings.desktop]
 _k_friendly_name=System Settings
 _launch=Tools\tMeta+I\tMeta+\\,,Tools,System Settings
-
-[yakuake]
-_k_friendly_name=Yakuake
-toggle-window-state=F12,F12,Open/Retract Yakuake

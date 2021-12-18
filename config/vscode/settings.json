@@ -1,5 +1,4 @@
 {
-  // Editor
   "breadcrumbs.enabled": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingDelete": "always",
@@ -14,6 +13,7 @@
   "editor.fontWeight": "500",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
+  "editor.glyphMargin": true,
   "editor.guides.bracketPairs": true,
   "editor.insertSpaces": true,
   "editor.lineHeight": 1.5,
@@ -47,16 +47,21 @@
   "git.enableSmartCommit": true,
 
   // Terminal
-  "terminal.integrated.automationShell.windows": "C:\\Windows\\System32\\cmd.exe",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.windows": "cmd",
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.fontFamily": "'BlexMono Nerd Font Mono', monospace",
+  "terminal.integrated.fontFamily": "'IBM Plex Mono', monospace",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontWeightBold": "500",
   "terminal.integrated.profiles.linux": {
     "fish": {
       "path": "/usr/bin/fish"
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "cmd": {
+      "path": "C:\\Windows\\System32\\cmd.exe"
     }
   },
 
@@ -81,13 +86,12 @@
     "titleBar.activeBackground": "#1e2227",
     "tab.border": "#21252b",
     "sideBar.background": "#1e2227",
-    "editor.background": "#23272e",
     "panel.border": "#1e2227",
     "panel.background": "#1e2227",
+    "editor.background": "#23272e",
     "editor.selectionBackground": "#3d4556",
     "editor.selectionHighlightBorder": "#00000000",
     "editor.selectionHighlightBackground": "#00000000",
-    "editorCursor.foreground": "#abb2bf",
     "editor.wordHighlightBackground": "#00000000",
     "editor.wordHighlightBorder": "#00000000",
     "editorBracketMatch.background": "#00000000",
@@ -99,12 +103,16 @@
     "editorBracketHighlight.foreground5": "#d19a66",
     "editorBracketHighlight.foreground6": "#abb2bf",
     "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75",
+    "editorCursor.foreground": "#abb2bf",
+    "editorGroup.border": "#323740",
+    "editorOverviewRuler.border": "#393e48",
     "terminal.background": "#1e2227",
     "terminalCursor.background": "#abb2bf",
     "statusBar.background": "#1e2227",
-    "statusBar.noFolderBackground": "#23272e",
-    "statusBar.debuggingBackground": "#23272e"
+    "statusBar.noFolderBackground": "#1e2227",
+    "statusBar.debuggingBackground": "#1e2227"
   },
+  "zenMode.hideLineNumbers": false,
 
   // Plugins
 
@@ -132,6 +140,9 @@
     "editor.formatOnSave": false
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
@@ -305,8 +316,5 @@
       "after": ["<", "g", "v"]
     }
   ],
-  "security.workspace.trust.untrustedFiles": "open",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "security.workspace.trust.untrustedFiles": "open"
 }
