@@ -29,7 +29,7 @@ cp $HOME/.config/khotkeysrc $dist/config/kde
 cp $HOME/.config/kwinrc $dist/config/kde
 cp $HOME/.local/share/konsole/konsole.colorscheme $dist/config/kde
 cp $HOME/.local/share/konsole/konsole.profile $dist/config/kde
-cp $HOME/.local/share/color-schemes/kde.colors $dist/config/kde
+cp $HOME/.local/share/color-schemes/* $dist/config/kde
 
 echo Update nvim...
 cp -rf $HOME/.config/nvim $dist/config

@@ -78,6 +78,7 @@ alias cdt='cd $HOME/Downloads/temp'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 
 # git
+alias g='git'
 alias gaa='git add --all'
 alias gco='git checkout'
 alias gcb='git checkout -b'

@@ -31,7 +31,7 @@ SilenceSeconds=10
 StartInCurrentSessionDir=true
 TerminalCenter=false
 TerminalColumns=100
-TerminalMargin=0
+TerminalMargin=8
 TerminalRows=22
 
 [Interaction Options]

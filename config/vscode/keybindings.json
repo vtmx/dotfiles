@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
   // Editor
   {
@@ -15,6 +14,33 @@
     "key": "shift+alt+up",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  // {
+  //   "key": "ctrl+k ctrl+l",
+  //   "command": "editor.toggleFold",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "key": "ctrl+k ctrl+j",
+  //   "command": "editor.unfoldAll",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+
+  // Format
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "editor.action.formatDocument"
+  },
+
+  // Markdown
+  {
+    "key": "ctrl+shift+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   },
 
   // Tab
@@ -35,23 +61,13 @@
     "command": "workbench.action.previousEditor"
   },
 
-  // Format
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument"
-  },
-  {
-    "key": "ctrl+k ctrl+f",
-    "command": "editor.action.formatDocument"
-  },
-
   // Sidebar
   {
     "key": "ctrl+k b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+shift b",
+    "key": "ctrl+shift+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
@@ -59,10 +75,59 @@
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
+
+  // Split
   {
-    "key": "ctrl+shift e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
+    "key": "ctrl+k v",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+k shift+v",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "ctrl+k s",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+k shift+s",
+    "command": "workbench.action.splitEditorUp"
+  },
+
+  // Focus
+  {
+    "key": "ctrl+k l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+k h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+k j",
+    "command": "workbench.action.focusDownGroup"
+  },
+  {
+    "key": "ctrl+k k",
+    "command": "workbench.action.focusUpGroup"
+  },
+
+  // Move
+  {
+    "key": "ctrl+k shift+l",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "ctrl+k shift+h",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "ctrl+k shift+j",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "ctrl+k shift+k",
+    "command": "workbench.action.moveActiveEditorGroupUp"
   },
 
   // Terminal
@@ -85,6 +150,11 @@
     "command": "workbench.action.terminal.focusFind",
     "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
   },
+  {
+    "key": "ctrl+k s",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
 
   // Settings
   {
@@ -92,7 +162,7 @@
     "command": "workbench.action.openSettings"
   },
   {
-    "key": "ctrl+k ,",
+    "key": "ctrl+shift+,",
     "command": "workbench.action.openSettings2"
   },
 
@@ -102,7 +172,13 @@
     "command": "workbench.action.openGlobalKeybindingsFile"
   },
   {
-    "key": "ctrl+k .",
+    "key": "ctrl+shift+.",
     "command": "workbench.action.openGlobalKeybindings"
+  },
+
+  // Quit
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.quit"
   }
 ]
