@@ -75,8 +75,8 @@
   // https://themes.vscode.one/edit/local/
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
-  "workbench.iconTheme": "quill-icons",
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
