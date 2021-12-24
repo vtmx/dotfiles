@@ -86,7 +86,7 @@
     "titleBar.activeBackground": "#1e2227",
     "tab.border": "#21252b",
     "sideBar.background": "#1e2227",
-    "panel.border": "#1e2227",
+    "panel.border": "#393e48",
     "panel.background": "#1e2227",
     "editor.background": "#23272e",
     "editor.selectionBackground": "#3d4556",
@@ -105,6 +105,7 @@
     "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75",
     "editorCursor.foreground": "#abb2bf",
     "editorGroup.border": "#323740",
+    "editorGroupHeader.tabsBackground": "#1e2227",
     "editorOverviewRuler.border": "#393e48",
     "terminal.background": "#1e2227",
     "terminalCursor.background": "#abb2bf",
@@ -112,6 +113,7 @@
     "statusBar.noFolderBackground": "#1e2227",
     "statusBar.debuggingBackground": "#1e2227"
   },
+  "security.workspace.trust.untrustedFiles": "open",
   "zenMode.hideLineNumbers": false,
 
   // Plugins
@@ -315,6 +317,5 @@
       "before": ["<"],
       "after": ["<", "g", "v"]
     }
-  ],
-  "security.workspace.trust.untrustedFiles": "open"
+  ]
 }
