@@ -54,9 +54,8 @@ echo Update tmux...
 cp $HOME/.tmux.conf $dist/config
 
 echo Update vscode...
-cp $HOME/.config/Code/User/keybindings.json $dist/config/vscode
-cp $HOME/.config/Code/User/settings.json $dist/config/vscode
-cp $HOME/.config/Code/User/syncLocalSettings.json $dist/config/vscode
+cp "$HOME/.config/Code - OSS/User/keybindings.json" "$dist/config/vscode"
+cp "$HOME/.config/Code - OSS/User/settings.json" "$dist/config/vscode"
 
 echo Update zsh...
 cp $HOME/.zshrc $dist/config
