@@ -1,4 +1,10 @@
 {
+  // Window
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.restoreWindows": "none",
+
+  // Editor
   "breadcrumbs.enabled": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingDelete": "always",
@@ -65,11 +71,6 @@
     }
   },
 
-  // Window
-  "window.titleBarStyle": "custom",
-  "window.menuBarVisibility": "toggle",
-  "window.restoreWindows": "none",
-
   // Workbench
   // https://code.visualstudio.com/api/references/theme-color
   // https://themes.vscode.one/edit/local/
@@ -125,9 +126,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.CustomBrowser": "chrome",
-
-  // One Dark Pro
-  "oneDarkPro.italic": false,
 
   // Prettier
   "javascript.preferences.quoteStyle": "single",
