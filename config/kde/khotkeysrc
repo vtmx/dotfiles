@@ -422,7 +422,7 @@ Uuid={5648e70b-6fe4-4a96-93f1-4a302c590945}
 
 [Data_2_5]
 Comment=Comment
-Enabled=false
+Enabled=true
 Name=Code
 Type=SIMPLE_ACTION_DATA
 
@@ -430,7 +430,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_2_5Actions0]
-CommandURL=/snap/code/current/usr/share/code/bin/code
+CommandURL=code
 Type=COMMAND_URL
 
 [Data_2_5Conditions]

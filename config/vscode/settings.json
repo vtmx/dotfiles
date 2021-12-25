@@ -1,10 +1,4 @@
 {
-  // Window
-  "window.titleBarStyle": "custom",
-  "window.menuBarVisibility": "toggle",
-  "window.restoreWindows": "none",
-
-  // Editor
   "breadcrumbs.enabled": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingDelete": "always",
@@ -39,6 +33,7 @@
       }
     ]
   },
+  "editor.wordWrap": "off",
 
   // Explorer
   "explorer.confirmDelete": false,
@@ -71,13 +66,18 @@
     }
   },
 
+  // Window
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.restoreWindows": "none",
+
   // Workbench
   // https://code.visualstudio.com/api/references/theme-color
   // https://themes.vscode.one/edit/local/
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
+  "workbench.iconTheme": "quill-icons",
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
@@ -126,6 +126,9 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.CustomBrowser": "chrome",
+
+  // One Dark Pro
+  "oneDarkPro.italic": false,
 
   // Prettier
   "javascript.preferences.quoteStyle": "single",

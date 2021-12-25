@@ -1,0 +1,21 @@
+[user]
+	name = vtmx
+	email = vtmx22@gmail.com
+
+[alias]
+	a = add -A
+	b = branch
+	bd = branch -d
+	c = commit -m
+	co = checkout
+	cb = checkout -b
+	cd = checkout dev
+	cm = checkout master
+	me = config user.name
+	p = push
+	pd = push -u origin dev
+	pm = push -u origin master
+	pl = pull
+	s = git status -sb
+[init]
+	defaultBranch = main
