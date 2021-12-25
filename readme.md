@@ -12,7 +12,7 @@
 - **Shell:** [Fish](https://fishshell.com) + [Starship](https://starship.rs)
 - **Terminal Font:** [IBM Plex Mono Medm 11](https://github.com/IBM/plex)
 - **System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
-- **Panel:** [Plasma Panel h32](https://userbase.kde.org/Plasma/Panels)
+- **Panel:** [Plasma Panel 32](https://userbase.kde.org/Plasma/Panels)
 - **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar) + [Better Inline Clock](https://store.kde.org/p/1245902) + [Shutdown or Switch (Default)](https://store.kde.org/p/1288430)
 
 ## Plasma Appearance
@@ -30,7 +30,7 @@
 - **File Manager:** [Dolphin](https://apps.kde.org/dolphin)
 - **File Syncronizer:** [FreeFileSync](https://freefilesync.org), [Krusader](https://krusader.org)
 - **Editor:** [VS Code](https://code.visualstudio.com), [Nvim](https://neovim.io)
-- **Browser:** [Opera](https://www.opera.com), [Vivaldi](https://vivaldi.com/pt-br) ([uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag))
+- **Browser:** [Opera](https://www.opera.com), [Vivaldi](https://vivaldi.com/pt-br) [[uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)]
 - **Music and Video Player:** [VLC](https://www.videolan.org/vlc)
 - **Screenshot:** [Flameshot](https://flameshot.org)
 - **Color Picker:** [KColorChooser](https://apps.kde.org/kcolorchooser)
