@@ -15,12 +15,9 @@
 - **Bar/Panel:** [Plasma Panel h32](https://userbase.kde.org/Plasma/Panels)
 - **Bar/Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar) + [Better Inline Clock](https://store.kde.org/p/1245902) + [Shutdown or Switch (Default)](https://store.kde.org/p/1288430)
 
-## Plasma Apparance
+## Plasma Appearance
 - **Application Style:** [Lightly](https://github.com/Luwx/Lightly)
 - **Plasma Style:** [Breeze AlphaBlack](https://store.kde.org/p/1084931)
-  - **Panel:** #1e2227
-  - **Text:** #abb2bf
-  - **Highlight:** #404859
 - **Colors:** [OneDarkV Custom](config/kde/kde.colors)
 - **Window Decorations:** [Lightly](https://github.com/Luwx/Lightly)
 - **Icons:** [Sensual-Breeze-Dark [Plasma]](https://store.kde.org/p/1373825), [Sensual-Breeze-Dark [GTK2/3]](https://www.gnome-look.org/p/1373825)
@@ -31,18 +28,15 @@
 
 ## Apps
 - **File Manager:** [Dolphin](https://apps.kde.org/dolphin)
-- **File Syncronizer:** [FreeFileSync](https://freefilesync.org)
-- **File Syncronizer:** [Krusader](https://krusader.org)
+- **File Syncronizer:** [FreeFileSync](https://freefilesync.org), [Krusader](https://krusader.org)
 - **Editor:** [VS Code](https://code.visualstudio.com), [Nvim](https://neovim.io)
-- **Browser:** [Opera](https://www.opera.com), [Vivaldi](https://vivaldi.com/pt-br) 
-  - [uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-  - [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)
+- **Browser:** [Opera](https://www.opera.com), [Vivaldi](https://vivaldi.com/pt-br) ([uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag))
 - **Music and Video Player:** [VLC](https://www.videolan.org/vlc)
 - **Screenshot:** [Flameshot](https://flameshot.org)
 - **Color Picker:** [KColorChooser](https://apps.kde.org/kcolorchooser)
 - **Torrent:** [qBitTorrent](https://www.qbittorrent.org)
 - **Password Manager:** [Bitwarden](https://bitwarden.com)
-- **Renamer:** [KRename](https://apps.kde.org/krename)
+- **Batch Rename:** [KRename](https://apps.kde.org/krename)
 - **Subtitle:** [Subtitle Composer](https://subtitlecomposer.kde.org)
 
 ## Terminal Apps
@@ -54,7 +48,8 @@
 ## Learning in Future
 - **Tiling:** [BSPWM](https://github.com/baskerville/bspwm)
 - **Bar:** [Polybar](https://github.com/polybar/polybar)
-- **Bar:** [Rofi](https://github.com/davatorium/rofi)
+- **Compositor:** [Picom](https://github.com/yshui/picom)
+- **Launcher:** [Rofi](https://github.com/davatorium/rofi)
 - **Notification:** [Dunst](https://github.com/dunst-project/dunst)
 
 
@@ -82,7 +77,7 @@ accent5: "#61afef" # blue
 accent6: "#c678dd" # purple
 accent7: "#be5046" # magenta
 
-# inspiration
+# inspirations
 onedark: https://github.com/Binaryify/OneDark-Pro
 base16: https://github.com/LalitMaganti/base16-onedark-scheme
 themer: https://themer.dev
