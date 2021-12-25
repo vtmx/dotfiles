@@ -99,13 +99,6 @@ dist="$DIST/kde/kwinrc"
 path="$DIST/kde"
 update_file "$name" "$src" "$dist" "$path"
 
-echo Update nvim...
-cp -rf $HOME/.config/nvim $DIST/nvim
-
-echo Update nvimscript...
-cp $HOME/.config/nvimscript/*.vim $DIST/nvimscript
-cp $HOME/.config/nvimscript/*.json $DIST/nvimscript
-
 name="opera"
 src="$HOME/.config/opera/Bookmarks"
 dist="$DIST/opera/Bookmarks"
@@ -159,3 +152,11 @@ src="$HOME/.zshrc"
 dist="$DIST/.zshrc"
 path="$DIST"
 update_file "$name" "$src" "$dist" "$path"
+
+echo Update nvim...
+cp -rf $HOME/.config/nvim $DIST
+
+echo Update nvimscript...
+cp $HOME/.config/nvimscript/*.vim $DIST/nvimscript
+cp $HOME/.config/nvimscript/*.json $DIST/nvimscript
+
