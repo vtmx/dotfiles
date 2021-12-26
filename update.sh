@@ -99,6 +99,18 @@ dist="$DIST/kde/kwinrc"
 path="$DIST/kde"
 update_file "$name" "$src" "$dist" "$path"
 
+name="neofetch"
+src="$HOME/.config/neofetch/config.conf"
+dist="$DIST/neofetch/config.conf"
+path="$DIST/neofetch"
+update_file "$name" "$src" "$dist" "$path"
+
+name="neofetch logo"
+src="$HOME/.config/neofetch/logo.txt"
+dist="$DIST/neofetch/logo.txt"
+path="$DIST/neofetch"
+update_file "$name" "$src" "$dist" "$path"
+
 name="opera"
 src="$HOME/.config/opera/Bookmarks"
 dist="$DIST/opera/Bookmarks"
