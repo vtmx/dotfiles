@@ -16,6 +16,7 @@ fish
 flameshot
 kcolorchooser
 lazygit
+mkvtoolnix-gui
 neovim
 nitroshare
 opera
