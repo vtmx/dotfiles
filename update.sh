@@ -148,13 +148,13 @@ path="$DIST"
 update_file $name $src $dist $path
 
 name="vscode keybinds"
-src="$HOME/.config/Code/User/keybindings.json"
+src="$HOME/.config/Code - OSS/User/keybindings.json"
 dist="$DIST/vscode/keybindings.json"
 path="$DIST/vscode"
 update_file "$name" "$src" "$dist" "$path"
 
 name="vscode settings"
-src="$HOME/.config/Code/User/settings.json"
+src="$HOME/.config/Code - OSS/User/settings.json"
 dist="$DIST/vscode/settings.json"
 path="$DIST/vscode"
 update_file "$name" "$src" "$dist" "$path"

@@ -1,4 +1,10 @@
 {
+  // Window
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.restoreWindows": "none",
+
+  // Editor
   "breadcrumbs.enabled": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingDelete": "always",
@@ -33,7 +39,7 @@
       }
     ]
   },
-  "editor.wordWrap": "off",
+  "zenMode.hideLineNumbers": false,
 
   // Explorer
   "explorer.confirmDelete": false,
@@ -66,18 +72,13 @@
     }
   },
 
-  // Window
-  "window.titleBarStyle": "custom",
-  "window.menuBarVisibility": "toggle",
-  "window.restoreWindows": "none",
-
   // Workbench
   // https://code.visualstudio.com/api/references/theme-color
   // https://themes.vscode.one/edit/local/
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
-  "workbench.iconTheme": "quill-icons",
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
@@ -92,7 +93,7 @@
     "editor.background": "#23272e",
     "editor.selectionBackground": "#3d4556",
     "editor.selectionHighlightBorder": "#00000000",
-    "editor.selectionHighlightBackground": "#00000000",
+    // "editor.selectionHighlightBackground": "#00000000",
     "editor.wordHighlightBackground": "#00000000",
     "editor.wordHighlightBorder": "#00000000",
     "editorBracketMatch.background": "#00000000",
@@ -114,8 +115,8 @@
     "statusBar.noFolderBackground": "#1e2227",
     "statusBar.debuggingBackground": "#1e2227"
   },
+  "oneDarkPro.italic": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "zenMode.hideLineNumbers": false,
 
   // Plugins
 
@@ -127,9 +128,6 @@
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.CustomBrowser": "chrome",
 
-  // One Dark Pro
-  "oneDarkPro.italic": false,
-
   // Prettier
   "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
@@ -140,7 +138,8 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": null,
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "off"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -165,8 +164,9 @@
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatter.scss": "prettier",
-  "vetur.format.defaultFormatter.js": "prettier",
+  // "vetur.format.defaultFormatter.js": "prettier",
   "vetur.format.defaultFormatter.ts": "prettier",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
 
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
