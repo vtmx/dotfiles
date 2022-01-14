@@ -18,8 +18,7 @@ end
 vim.g.mapleader = ' '
 
 -- reload
-map('n', '<leader>r', ':luafile %<cr>') 
-
+map('n', '<leader>r', [[luafile $HOME/.config/nvim/init.lua echo "Reload"]]) 
 -- scape
 map('i', 'kj', '<esc>')
 map('v', '<leader>kj', '<esc>')
