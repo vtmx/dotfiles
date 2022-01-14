@@ -12,7 +12,7 @@ require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.telescope')
 require('plugins.toggleterm')
-require('plugins.treesitter')
+-- require('plugins.treesitter')
 require('plugins.shade')
 
 return require('packer').startup(

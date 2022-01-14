@@ -54,8 +54,9 @@ vim.g['netrw_banner'] = 0
 vim.g['netrw_browse_split'] = 4
 vim.g['netrw_hide'] = 1
 vim.g['netrw_liststyle'] = 4
--- vim.g['netrw_list_hide'] = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
 vim.g['netrw_winsize'] = 25
+-- vim.g['netrw_list_hide'] = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
+
 
 -- indent-blanklinke
 -- fix indentline color
