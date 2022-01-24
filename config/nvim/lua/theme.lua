@@ -5,17 +5,8 @@
 local cmd = vim.cmd
 local c = require('colors')
 
-local onedarkpro = require('onedarkpro')
-onedarkpro.setup {
-  theme = 'onedark',
-	colors = {
-	  bg = c.shade0
-  },
-	options = {
-		italic = false,
-	}
-}
-onedarkpro.load()
+require('onedarkpro').load()
+--require('onedark').setup()
 
 -- make transparent bg
 -- cmd('hi! Normal guibg=none ctermbg=none')
@@ -23,6 +14,9 @@ onedarkpro.load()
 
 -- bg
 cmd('hi Normal guibg=' .. c.shade0)
+
+-- line tilde blank
+cmd('hi EndOfBuffer guifg=' .. c.shade0)
 
 -- cursor line
 cmd('hi CursorLine guibg=' .. c.shade4)
