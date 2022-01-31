@@ -79,7 +79,7 @@
   // Split
   {
     "key": "ctrl+k v",
-    "command": "workbench.action.splitEditorRight"
+    "command": "workbench.action.moveEditorToNextGroup"
   },
   {
     "key": "ctrl+k shift+v",
@@ -87,7 +87,7 @@
   },
   {
     "key": "ctrl+k s",
-    "command": "workbench.action.splitEditorDown"
+    "command": "workbench.action.moveEditorToBelowGroup"
   },
   {
     "key": "ctrl+k shift+s",
