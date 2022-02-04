@@ -43,6 +43,12 @@
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   },
 
+  // Create
+  {
+    "key": "ctrl+k n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+
   // Tab
   {
     "key": "ctrl+tab",
@@ -129,6 +135,11 @@
     "key": "ctrl+k shift+k",
     "command": "workbench.action.moveActiveEditorGroupUp"
   },
+  // Close
+  {
+    "key": "ctrl+k w",
+    "command": "workbench.action.closeActiveEditor"
+  },
 
   // Terminal
   {
@@ -138,7 +149,7 @@
   {
     "key": "ctrl+f",
     "command": "-workbench.action.terminal.focusFind",
-    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
     "key": "ctrl+l",
@@ -180,5 +191,9 @@
   {
     "key": "ctrl+q",
     "command": "workbench.action.quit"
-  }
+  },
+  {
+    "key": "ctrl+k w",
+    "command": "-workbench.action.closeEditorsInGroup"
+  },
 ]
