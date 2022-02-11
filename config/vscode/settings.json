@@ -265,12 +265,12 @@
       "commands": [":noh"]
     },
     {
-      "before": ["s", "s"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "before": ["v", "v"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
     },
     {
-      "before": ["v", "v"],
-      "commands": ["workbench.action.splitEditorRight"]
+      "before": ["s", "s"],
+      "commands": ["workbench.action.moveEditorToBelowGroup"]
     },
     {
       "before": ["c-h"],
