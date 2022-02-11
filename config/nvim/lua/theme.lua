@@ -5,15 +5,26 @@
 local cmd = vim.cmd
 local c = require('colors')
 
+local onedarkpro = require('onedarkpro')
+
+onedarkpro.setup {
+  theme = 'onedark',
+	colors = {
+	  bg = c.shade0
+  },
+	options = {
+		italic = false,
+	}
+}
+
 require('onedarkpro').load()
---require('onedark').setup()
 
 -- make transparent bg
 -- cmd('hi! Normal guibg=none ctermbg=none')
 -- cmd('hi! NonText guibg=none guifg=none ctermbg=none ctermfg=none')
 
 -- bg
-cmd('hi Normal guibg=' .. c.shade0)
+--cmd('hi Normal guibg=' .. c.shade0)
 
 -- line tilde blank
 cmd('hi EndOfBuffer guifg=' .. c.shade0)
@@ -42,8 +53,10 @@ cmd('hi VertSplit guibg=' .. c.shade0) -- line
 cmd('hi VertSplit guifg=' .. c.shade0) -- line
 -- cmd('hi VertSplit guibg=' .. c.shade2)
 -- cmd('hi VertSplit guifg=' .. c.shade0)
--- cmd('hi StatusLineNC guibg=' .. c.shade2)
--- cmd('hi StatusLineNC guifg=' .. c.shade0)
+cmd('hi StatusLine guibg=' .. c.shade0)
+cmd('hi StatusLine guifg=' .. c.shade7)
+cmd('hi StatusLineNC guibg=' .. c.shade0)
+cmd('hi StatusLineNC guifg=' .. c.shade7)
 
 -- hi comments
 cmd('hi comment gui=italic guifg=' .. c.shade3)
@@ -67,7 +80,5 @@ cmd('hi NvimTreeNormalNC guibg=' .. c.shade1)
 cmd('hi NvimTreeRootFolder guifg=' .. c.shade7)
 cmd('hi NvimTreeOpenedFile guifg=' .. c.shade7)
 cmd('hi NvimTreeWindowPicker guifg=' .. c.shade7)
--- cmd('hi NvimTreeVertSplit guibg=' .. c.shade1) line
--- cmd('hi NvimTreeVertSplit guifg=' .. c.shade1) line
 
 -- :hi to see colors

@@ -3,52 +3,64 @@
 ------------------------------------------------------------
 
 -- Auto install packer.nvim if not exists
+--local fn = vim.fn
+--local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+--if fn.empty(fn.glob(install_path)) > 0 then
+ -- packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+--end
+
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+	packer_bootstrap = fn.system ({
+		'git',
+		'clone',
+		'--depth',
+		'1',
+		'https://github.com/wbthomason/packer.nvim',
+		install_path
+	})
 end
 
--- Import plugins
-require 'plugins.better-scape'
-require 'plugins.bufferline'
-require 'plugins.comment'
-require 'plugins.highlightedyank'
-require 'plugins.hop'
-require 'plugins.indent-blankline'
-require 'plugins.lualine'
-require 'plugins.nvim-tree'
-require 'plugins.telescope'
-require 'plugins.toggleterm'
-require 'plugins.treesitter'
-require 'plugins.shade'
-
-return require('packer').startup(function(use)
-		use 'akinsho/bufferline.nvim'
-		use 'akinsho/toggleterm.nvim'
+return require('packer').startup(
+	function(use)
+		use {'akinsho/bufferline.nvim'}
+		use {'akinsho/toggleterm.nvim'}
 		use {'jdhao/better-escape.vim', event = 'InsertEnter'}
-		use 'joshdick/onedark.vim'
-		use 'kyazdani42/nvim-tree.lua'
-		use 'kyazdani42/nvim-web-devicons'
-		use 'lukas-reineke/indent-blankline.nvim'
-		use 'machakann/vim-highlightedyank'
-		use 'nvim-lualine/lualine.nvim'
-		use 'nathom/tmux.nvim'
-		use 'nvim-lua/plenary.nvim'
-		use 'nvim-lua/telescope.nvim'
-		use 'numToStr/Comment.nvim'
-		use 'olimorris/onedarkpro.nvim'
-		use 'phaazon/hop.nvim'
-		use 'sunjon/shade.nvim'
+		use {'kyazdani42/nvim-tree.lua'}
+		use {'kyazdani42/nvim-web-devicons'}
+		use {'lukas-reineke/indent-blankline.nvim'}
+		use {'machakann/vim-highlightedyank'}
+		use {'nvim-lualine/lualine.nvim'}
+		use {'nathom/tmux.nvim'}
+		use {'nvim-lua/plenary.nvim'}
+		use {'nvim-lua/telescope.nvim'}
+		use {'numToStr/Comment.nvim'}
+		use {'olimorris/onedarkpro.nvim'}
+		use {'phaazon/hop.nvim'}
 		use {'neoclide/coc.nvim', branch = 'release'}
 		use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+		-- config plugins
+		require 'plugins.better-scape'
+		require 'plugins.bufferline'
+		require 'plugins.comment'
+		require 'plugins.highlightedyank'
+		require 'plugins.hop'
+		require 'plugins.indent-blankline'
+		require 'plugins.lualine'
+		require 'plugins.nvim-tree'
+		require 'plugins.telescope'
+		require 'plugins.toggleterm'
+		require 'plugins.treesitter'
+
+		-- Automatically set up your configuration after cloning packer.nvim
+		-- Put this at the end after all plugins
+		if packer_bootstrap then
+			require('packer').sync()
+		end
+	end
+)
 
 -- coc
 --:CocInstall coc-eslint
