@@ -250,11 +250,15 @@
     },
     {
       "before": ["<leader>", "o"],
-      "after": ["o", "<esc>"]
+      "after": ["m", "`", "o", "<esc>", "`", "`"]
     },
     {
       "before": ["<leader>", "O"],
-      "after": ["O", "<esc>"]
+      "after": ["m", "`", "O", "<esc>", "`", "`"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.quit"]
     },
     {
       "before": ["<leader>", "<esc>"],
@@ -262,11 +266,11 @@
     },
     {
       "before": ["s", "s"],
-      "commands": ["workbench.action.splitEditorRight"]
+      "commands": ["workbench.action.splitEditorDown"]
     },
     {
       "before": ["v", "v"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "commands": ["workbench.action.splitEditorRight"]
     },
     {
       "before": ["c-h"],
