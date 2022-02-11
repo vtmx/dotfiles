@@ -31,8 +31,8 @@ map('n', 'k', 'gk')
 map('n', 'Y', 'y$')
 
 -- enter in normal mode
-map('n', '<leader>o', 'o<esc>')
-map('n', '<leader>O', 'O<esc>')
+map('n', '<leader>o', 'm`o<esc>``')
+map('n', '<leader>O', 'm`O<esc>``')
 
 -- join lines
 map('n', '<leader>j', 'J')

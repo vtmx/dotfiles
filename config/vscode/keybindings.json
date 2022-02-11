@@ -193,6 +193,10 @@
     "command": "workbench.action.quit"
   },
   {
+    "key": "ctrl+k q",
+    "command": "workbench.action.quit"
+  },
+  {
     "key": "ctrl+k w",
     "command": "-workbench.action.closeEditorsInGroup"
   },
