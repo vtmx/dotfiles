@@ -196,7 +196,7 @@
   "vim.highlightedyank.duration": 150,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
-  "vim.useSystemClipboard": true,
+  "vim.useSystemClipboard": false,
   "vim.handleKeys": {
     "<c-h>": false,
     "<c-l>": false
@@ -279,6 +279,10 @@
     {
       "before": ["c-l"],
       "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["c-o"],
+      "commands": ["workbench.action.files.openFile"]
     },
     {
       "before": ["<leader>", "e"],
