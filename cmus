@@ -1,0 +1,47 @@
+### colors
+### {{{
+
+# main
+set color_win_bg=default
+set color_win_fg=default
+
+# title
+set color_win_title_bg=default
+set color_win_title_fg=default
+
+# separator
+set color_separator=default
+
+# cur
+set color_win_cur=blue
+set color_win_cur_sel_bg=blue
+set color_win_cur_sel_fg=black
+
+# inactive cur
+set color_win_inactive_cur_sel_bg=default
+set color_win_inactive_cur_sel_fg=default
+
+# selection
+set color_win_sel_bg=blue
+set color_win_sel_fg=black
+
+# inactive selection
+set color_win_inactive_sel_bg=blue
+set color_win_inactive_sel_fg=black
+
+# info
+set color_titleline_bg=default
+set color_titleline_fg=default
+
+# status
+set color_statusline_bg=default
+set color_statusline_fg=default
+
+# cmdline
+set color_cmdline_bg=default
+set color_cmdline_fg=default
+
+# extras
+set color_error=red
+set color_info=yellow
+### }}}

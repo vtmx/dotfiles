@@ -1,4 +1,10 @@
-bspc monitor -d 1 2 3 4 5 6 7
+#!/bin/sh
+
+# init
+export SXHKD_SHELL="/usr/bin/bash"
+xsetroot -cursor_name left_ptr
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width 2
 bspc config window_gap 8
@@ -16,9 +22,12 @@ bspc config active_border_color "#be5046"
 bspc config presel_feedback_color "#98c379"
 
 # rules
-bspc rule -a firefox desktop='^2'
+bspc rule -a chromium desktop='^2'
 
 # autostart
-feh --no-fehbg --bg-scale ~/Pictures/wallpapers/wallhaven
 sxhkd &
-$HOME/.config/polybar/launch.sh &
+feh --no-fehbg --bg-scale ~/Pictures/wallhaven-l3r7yq.jpg &
+# picom &
+dunst &
+# $HOME/.config/polybar/launch.sh --blocks &
+
