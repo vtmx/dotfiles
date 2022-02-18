@@ -1,14 +1,39 @@
 #!/bin/sh
+# https://www.freecodecamp.org/news/build-your-own-dotfiles-manager-from-scratch/
 echo '' 
 
+# menu
+# manage() {
+# 	while :
+# 	do
+# 		echo -e "\n[1] Show diff"
+# 		echo -e "[2] Push changed dotfiles to remote"
+# 		echo -e "[3] Pull latest changes from remote"
+# 		echo -e "[4] List all dotfiles"
+# 		echo -e "[q/Q] Quit Session"
+# 		# Default choice is [1]
+# 		read -p "What do you want me to do ? [1]: " -n 1 -r USER_INPUT
+# 		# See Parameter Expansion
+# 		USER_INPUT=${USER_INPUT:-1}
+# 		case $USER_INPUT in
+# 			[1]* ) show_diff_check;;
+# 			[2]* ) dot_push;;
+# 			[3]* ) dot_pull;;
+# 			[4]* ) find_dotfiles;;
+# 			[q/Q]* ) exit;;
+# 			* )     printf "\n%s\n" "Invalid Input, Try Again";;
+# 		esac
+# 	done
+# }
+
 # dist dir
-DIST=$HOME/Dev/dotfiles/config
+DIST=$(cd $(dirname $0) && pwd)
 
 update_file() {
-	name=$1
-	src=$2
-	dist=$3
-	path=$4
+	local name=$1
+	local src=$2
+	local dist=$3
+	local path=$4
 
 	# get result of comparation
 	cmp -s "$src" "$dist"
@@ -97,6 +122,12 @@ name="kde kwinrc"
 src="$HOME/.config/kwinrc"
 dist="$DIST/kde/kwinrc"
 path="$DIST/kde"
+update_file "$name" "$src" "$dist" "$path"
+
+name="kitty"
+src="$HOME/.config/kitty/kitty.conf"
+dist="$DIST/kitty/kitty.conf"
+path="$DIST/kitty"
 update_file "$name" "$src" "$dist" "$path"
 
 name="neofetch"
