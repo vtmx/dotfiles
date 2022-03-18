@@ -1,0 +1,52 @@
+MenuBar=Disabled
+
+[CompactMode]
+FontWeight=63
+
+[ContextMenu]
+ShowCopyLocation=false
+
+[DetailsMode]
+FontFamily=Segoe
+FontWeight=63
+PreviewSize=16
+
+[General]
+ConfirmClosingMultipleTabs=false
+RememberOpenedTabs=false
+ShowSelectionToggle=false
+ShowSpaceInfo=false
+ShowZoomSlider=false
+Version=201
+ViewPropsTimestamp=2022,3,14,8,51,38.73
+
+[IconsMode]
+FontWeight=63
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/dolphin.shortcuts,file:$HOME/Dev/dotfiles/config/kde/shortcuts/dolphin.shortcuts
+Recent URLs[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/
+iconViewIconSize=64
+
+[KPropertiesDialog]
+HDMI-0 Height 1920x1080=458
+HDMI-0 Width 1920x1080=434
+
+[MainWindow]
+HDMI-0 Height 1920x1080=669
+HDMI-0 Width 1920x1080=1280
+HDMI-0 Window-Maximized 1920x1080=true
+HDMI-0 XPosition 1920x1080=452
+HDMI-0 YPosition 1920x1080=239
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+ConfirmDelete=true
+
+[Open-with settings]
+CompletionMode=1
+History=kate
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
