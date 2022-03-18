@@ -13,7 +13,7 @@
 - **Terminal Font:** [IBM Plex Mono Medm 11](https://github.com/IBM/plex)
 - **System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
 - **Panel:** [Plasma Panel 32](https://userbase.kde.org/Plasma/Panels)
-- **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar) + [Better Inline Clock](https://store.kde.org/p/1245902) + [Shutdown or Switch (Default)](https://store.kde.org/p/1288430)
+- **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar) + [Better Inline Clock](https://store.kde.org/p/1245902)
 
 ## Plasma Appearance
 - **Application Style:** [Lightly](https://github.com/Luwx/Lightly)
