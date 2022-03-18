@@ -18,7 +18,7 @@
 ## Plasma Appearance
 - **Application Style:** [Lightly](https://github.com/Luwx/Lightly)
 - **Plasma Style:** [Breeze AlphaBlack](https://store.kde.org/p/1084931)
-- **Colors:** [OneDarkV Custom](config/kde/kde.colors)
+- **Colors:** [OneDarkV](config/kde/kde.colors)
 - **Window Decorations:** [Lightly](https://github.com/Luwx/Lightly)
 - **Icons:** [Sensual-Breeze-Dark [Plasma]](https://store.kde.org/p/1373825), [Sensual-Breeze-Dark [GTK2/3]](https://www.gnome-look.org/p/1373825)
 - **Cursors:** [We10XOS Cursors](https://store.kde.org/p/1381208)
@@ -67,6 +67,7 @@ shade4: "#2c313c" # ui, line highlight
 shade5: "#828997" # ui
 shade6: "#979eab" # foreground text
 shade7: "#abb2bf" # foreground text
+
 accent0: "#e06c75" # red
 accent1: "#d19a66" # orange
 accent2: "#e5c07b" # yellow
