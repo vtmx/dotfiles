@@ -1,50 +1,28 @@
 # remove greeting
 set fish_greeting
 
-# theme
-set shade0 '23272e'
-set shade1 '1e2227'
-set shade2 '3d4556'
-set shade3 '5c6370'
-set shade4 '2c313c'
-set shade5 '828997'
-set shade6 '979eab'
-set shade7 'abb2bf'
+# var colors
+set -l shade0 23272e
+set -l shade1 4b515c
+set -l shade2 4b515c
+set -l shade3 5c6370
+set -l shade4 636d83
+set -l shade5 828997
+set -l shade6 979eab
+set -l shade7 abb2bf
+set -l accent1 d19a66
+set -l accent2 e5c07b
+set -l accent3 98c379
+set -l accent4 56b6c2
+set -l accent5 61afef
+set -l accent6 c678dd
+set -l accent7 be5046
 
-set accent1 'd19a66'
-set accent2 'e5c07b'
-set accent3 '98c379'
-set accent4 '56b6c2'
-set accent5 '61afef'
-set accent6 'c678dd'
-set accent7 'be5046'
-
-# syntax highlighting colors
-set -g fish_color_normal $shade7
-set -g fish_color_command $accent4
-set -g fish_color_keyword $accent7
-set -g fish_color_quote $accent2
-set -g fish_color_redirection $shade7
-set -g fish_color_end $accent1
-set -g fish_color_error $accent0
+# themes
 set -g fish_color_param $shade7
-set -g fish_color_comment $shade3
-set -g fish_color_selection --background=$shade4
-set -g fish_color_search_match --background=$shade4
-set -g fish_color_operator $accent3
-set -g fish_color_escape $accent7
-set -g fish_color_autosuggestion $shade3
-
-# completion pager colors
-set -g fish_pager_color_progress $shade3
-set -g fish_pager_color_prefix $accent4
+set -g fish_color_search_match --background=$shade2
+set -g fish_color_valid_path normal
 set -g fish_pager_color_completion $shade7
-set -g fish_pager_color_description $shade3
-
-# set fish_color_param $shade7
-# set fish_color_search_match --background=$shade2
-# set fish_color_valid_path normal
-# set fish_pager_color_completion $shade7
 
 # active default key
 # fish_default_key_bindings
@@ -75,9 +53,9 @@ alias v='nvim'
 alias t='tmux'
 
 # pacman
-alias pacman='sudo pacman'
-alias pu='sudo pacman -Syu'
-alias pi='sudo pacman -S'
+alias pac='sudo pacman'
+alias pacu='sudo pacman -Syu'
+alias paci='sudo pacman -S'
 
 # configs
 alias ac='v $HOME/.config/alacritty/alacritty.yml'
@@ -101,6 +79,7 @@ alias cdt='cd $HOME/Downloads/temp'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 
 # git
+alias g='git'
 alias gaa='git add --all'
 alias gco='git checkout'
 alias gcb='git checkout -b'
@@ -111,7 +90,7 @@ alias gp='git push'
 alias gcmsg='git commit -m'
 
 # variables
-export BROWSER=opera
+export BROWSER=vivaldi-stable
 export CODE=code
 export EDITOR=nvim
 export VISUAL=nvim

@@ -63,10 +63,20 @@ vim.g['netrw_winsize'] = 25
 hl_mode = 'combine'
 vim.wo.colorcolumn = '99999'
 
+-- plugins
+
+-- better-scape
+vim.g.better_escape_shortcut = 'kj' 
+vim.g.better_escape_interval = 200 
+
+-- highlightedyank
+vim.g.highlightedyank_highlight_duration = 150
+
 -- enable enter icon
 -- opt.list = true
 -- opt.listchars:append('eol:↴')
 
+-- lsp
 vim.lsp.handlers['textDocument/publishDiagnostics'] =
 vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 		-- Disable underline, it's very annoying
