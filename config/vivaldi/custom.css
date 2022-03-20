@@ -1,0 +1,8 @@
+body {
+  background-color: #1e2227 !important;
+}
+
+.SearchField, .UrlBar-AddressField {
+	background-color: var(--colorBg);
+	border: none;
+}

@@ -5,13 +5,12 @@
 - [x] Allow for using CSS modifications.
 - vivaldi://inspect/#apps
 
+## Import CSS
+- Settings > Custom IU Modifications
+
 ## Style location
 /opt/vivaldi/resources/vivaldi/browser.html
 /opt/vivaldi/resources/vivaldi/style/commons.css
-
-## Open Dev Tools in IU
-- Open vivaldi://inspect/#apps/ and click “inspect” beneath the first line (Vivaldi browser.html)
-- Open vivaldi://settings/, or vivaldi://experiments/, or vivaldi://mail/ and load DevTools with a keyboard shortcut
 
 ## One Dark
 - Background: #1e222a
@@ -29,26 +28,7 @@
 ## Shortcuts
 vivaldi-stable
 
-## CSS
-/opt/vivaldi/resources/vivaldi/style/
-
 F2, Ctrl+E
-
-```
-body {
-	font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-}
-
-.toolbar-mainbar {
-  --ToolbarItemGap: 0;
-  flex-shrink: 0;
-  color: var(--colorFg);
-  background-color: var(--colorBg);
-  position: relative;
-  z-index: 4;
-  height: 42px;
-}
-```
 
 ## Commands
 `sudo cp logo-vitormelo.svg /opt/vivaldi/resources/vivaldi/resources`
