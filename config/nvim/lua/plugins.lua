@@ -15,6 +15,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	})
 end
 
+-- telescope
+local actions = require('telescope.actions')
+
 return require('packer').startup(
 	function(use)
 
@@ -23,7 +26,7 @@ return require('packer').startup(
 		------------------------------------------------------------
 		use {
 			'jdhao/better-escape.vim',
-			event = 'InsertEnter',
+			event = 'InsertEnter'
 		}
 
 		------------------------------------------------------------
@@ -31,7 +34,7 @@ return require('packer').startup(
 		------------------------------------------------------------
 		use {
 			'akinsho/bufferline.nvim',
-			require 'plugins.bufferline'
+			require 'theme'
 		}
 
 		------------------------------------------------------------
@@ -88,7 +91,7 @@ return require('packer').startup(
 		------------------------------------------------------------
 		use {
 			'nvim-lualine/lualine.nvim',
-			require 'plugins.lualine'
+			require 'theme'
 		}
 
 		------------------------------------------------------------
@@ -124,7 +127,17 @@ return require('packer').startup(
 		------------------------------------------------------------
 		use {
 			'nvim-lua/telescope.nvim',
-			require 'plugins.telescope'
+			require('telescope').setup({
+				defaults = {
+					disable_devicons=true,
+					mappings = {
+						i = {
+							['<c-j>'] = actions.move_selection_next,
+							['<c-k>'] = actions.move_selection_previous
+						}
+					}
+				}
+			})
 		}
 
 		------------------------------------------------------------

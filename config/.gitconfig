@@ -1,5 +1,5 @@
 [user]
-	name = vtmx
+	name = Vitor Melo
 	email = vtmx22@gmail.com
 
 [alias]
@@ -17,5 +17,6 @@
 	pm = push -u origin master
 	pl = pull
 	s = git status -sb
+
 [init]
 	defaultBranch = main
