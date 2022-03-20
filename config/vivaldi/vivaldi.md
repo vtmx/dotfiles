@@ -1,8 +1,9 @@
 # Vivaldi
 
 ## Enable experiments
-vivaldi://experiments/
-[x] Allow for using CSS modifications.
+- vivaldi://experiments/
+- [x] Allow for using CSS modifications.
+- vivaldi://inspect/#apps
 
 ## Style location
 /opt/vivaldi/resources/vivaldi/browser.html
@@ -13,7 +14,6 @@ vivaldi://experiments/
 - Open vivaldi://settings/, or vivaldi://experiments/, or vivaldi://mail/ and load DevTools with a keyboard shortcut
 
 ## One Dark
-
 - Background: #1e222a
 - Foreground: #abb2bf
 - Hightlight: #abb2bf
@@ -21,18 +21,18 @@ vivaldi://experiments/
 - Background Custom Color: #1d2126
 
 ## Opera
-
 - Background: #191d21
 - Foreground: #fafafa
 - Hightlight: #45b0e6
 - Accent: #394551
 
 ## Shortcuts
-
 vivaldi-stable
 
 ## CSS
 /opt/vivaldi/resources/vivaldi/style/
+
+F2, Ctrl+E
 
 ```
 body {
@@ -50,9 +50,13 @@ body {
 }
 ```
 
-## Links
+## Commands
+`sudo cp logo-vitormelo.svg /opt/vivaldi/resources/vivaldi/resources`
 
-vivaldi://experiments/
-vivaldi://settings/appearance/
+
+## Links
+vivaldi://experiments
+vivaldi://settings/appearance
+https://gabevilela.vivaldi.net/2020/12/26/guide-customizing-vivaldis-ui-with-css-mods
 https://achekulaev.medium.com/darkopera-theme-for-vivaldi-browser-89f2998742e
 
