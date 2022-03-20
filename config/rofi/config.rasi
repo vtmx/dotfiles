@@ -74,7 +74,7 @@ entry {
 }
 
 listview {
-	columns: 2;
+	columns: 1;
 	padding: 6px 0px 0px;
 	border: 0;
 	background-color: @shade1;
