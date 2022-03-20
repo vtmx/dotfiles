@@ -187,7 +187,3 @@ update_file "$name" "$src" "$dist" "$path"
 echo Update nvim...
 cp -rf $HOME/.config/nvim $DIST
 
-echo Update nvimscript...
-cp $HOME/.config/nvimscript/*.vim $DIST/nvimscript
-cp $HOME/.config/nvimscript/*.json $DIST/nvimscript
-

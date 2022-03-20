@@ -82,3 +82,123 @@ cmd('hi NvimTreeOpenedFile guifg=' .. c.shade7)
 cmd('hi NvimTreeWindowPicker guifg=' .. c.shade7)
 
 -- :hi to see colors
+
+-- plugins
+
+------------------------------------------------------------
+-- bufferline
+------------------------------------------------------------
+require('bufferline').setup({
+  options = {
+		-- buffer_close_icon = ' ',
+		close_icon = ' ',
+		indicator_icon = ' ',
+		separator_style = {'', ''},
+		show_close_icon = false,
+		show_buffer_icons = false,
+		tab_size = 30,
+		offsets = {
+      {
+        filetype = 'NvimTree',
+        text = '',
+        text_align = "left"
+      },
+		}
+	},
+	highlights = {
+		fill = {
+			guibg = c.shade1
+		},
+		background = {
+			guibg = c.shade1
+		},
+		close_button = {
+			guibg = c.shade1,
+			guifg = c.shade3
+		},
+		close_button_selected = {
+			guibg = c.shade0,
+			guifg = c.shade7
+		},
+		buffer_visible = {
+			guibg = c.shade1,
+			guifg = c.shade7
+		},
+		buffer_selected = {
+			guibg = c.shade0,
+			guifg = c.shade7,
+			gui = '' -- no italic
+		},
+		modified = {
+			guifg = c.shade3
+		},
+		modified_selected = {
+			guifg = c.shade7
+		},
+		separator = {
+			guibg = c.shade1,
+			guifg = c.shade1
+		}
+	}
+})
+
+------------------------------------------------------------
+-- lualine
+------------------------------------------------------------
+local onedark = {
+  normal = {
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
+  },
+
+  insert = {
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
+  },
+
+  visual = {
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
+  },
+
+  replace = {
+    a = { bg = c.shade0, fg = c.shade7 },
+    c = { bg = c.shade0, fg = c.shade7 },
+  },
+
+  inactive = {
+    a = { bg = c.shade0, fg = c.shade0 },
+    c = { bg = c.shade0, fg = c.shade0 },
+  },
+}
+
+require('lualine').setup {
+  options = {
+		theme = onedark,
+    icons_enabled = true,
+    component_separators = {},
+    section_separators = {},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {},
+    -- lualine_b = {'branch', 'diff', {'diagnostics', sources={'nvim_lsp', 'coc'}}},
+    lualine_c = {},
+    -- lualine_c = {'filename'},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
