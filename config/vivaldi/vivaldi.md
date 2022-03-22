@@ -6,7 +6,7 @@
 - vivaldi://inspect/#apps
 
 ## Import CSS
-- Settings > Custom IU Modifications
+Settings > Custom IU Modifications
 
 ## Style location
 /opt/vivaldi/resources/vivaldi/browser.html
@@ -14,6 +14,9 @@
 
 ## Spell
 vivaldi://settings/languages
+
+## Reset buttons toolbar
+Aparearance > Window Appearance > Tollbar customization: Reset Navigation Toolbar
 
 ## One Dark
 - Background: #1e222a
