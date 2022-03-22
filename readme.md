@@ -5,32 +5,32 @@
 ## Configuration
 - **OS:** [Manjaro](https://manjaro.org/downloads/official/kde)
 - **DE:** [Plasma](https://kde.org/pt-br/plasma-desktop)
-- **WM:** [KWin](https://userbase.kde.org/KWin)
+- **WM:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
 - **WM Theme:** [Lightly](https://github.com/Luwx/Lightly)
-- **Theme:** [Breeze Dark [Plasma]](https://archlinux.org/packages/extra/x86_64/breeze), [Breeze [GTK2/3]](https://archlinux.org/packages/extra/any/breeze-gtk)
-- **Terminal:** [Konsole](https://konsole.kde.org), [Alacritty](https://github.com/alacritty/alacritty)
+- **Theme:** [Breeze Dark [Plasma]](https://archlinux.org/packages/extra/x86_64/breeze)
+- **Terminal:** [Alacritty](https://github.com/alacritty/alacritty), [Konsole](https://konsole.kde.org) 
 - **Shell:** [Fish](https://fishshell.com) + [Starship](https://starship.rs)
-- **Terminal Font:** [IBM Plex Mono Medm 11](https://github.com/IBM/plex)
+- **Terminal Font:** [BlexMono Nerd Font Medium 11](https://github.com/IBM/plex)
 - **System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
-- **Panel:** [Plasma Panel 32](https://userbase.kde.org/Plasma/Panels)
-- **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar) + [Better Inline Clock](https://store.kde.org/p/1245902)
+- **Panel:** [Plasma Panel 28](https://userbase.kde.org/Plasma/Panels)
+- **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar) + Task Manager + [Better Inline Clock](https://store.kde.org/p/1245902)
 
 ## Plasma Appearance
 - **Application Style:** [Lightly](https://github.com/Luwx/Lightly)
-- **Plasma Style:** [Breeze AlphaBlack](https://store.kde.org/p/1084931)
+- **Plasma Style:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
 - **Colors:** [One Dark V](config/kde/kde.colors)
-- **Window Decorations:** [Lightly](https://github.com/Luwx/Lightly)
-- **Icons:** [Sensual-Breeze-Dark [Plasma]](https://store.kde.org/p/1373825), [Sensual-Breeze-Dark [GTK2/3]](https://www.gnome-look.org/p/1373825)
+- **Window Decorations:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
+- **Icons:** [Sensual-Breeze-Dark [Plasma]](https://store.kde.org/p/1373825)
 - **Cursors:** [We10XOS Cursors](https://store.kde.org/p/1381208)
 - **Lauch Feedback:** Cursor Static
 - **Fonts Management:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
-- **Splash Screen:** [QuarksSplashDark Custom](config/kde/quarks-splash-darker)
+- **Splash Screen:** [QuarksSplashDark Custom](config/kde/splash-screen/onedarkv)
 
 ## Apps
 - **File Manager:** [Dolphin](https://apps.kde.org/dolphin)
 - **File Syncronizer:** [FreeFileSync](https://freefilesync.org), [Krusader](https://krusader.org)
 - **Editor:** [VS Code](https://code.visualstudio.com), [Nvim](https://neovim.io)
-- **Browser:** [Opera](https://www.opera.com), [Vivaldi](https://vivaldi.com/pt-br) [[uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)]
+- **Browser:** [Vivaldi](https://vivaldi.com/pt-br) [[uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)]
 - **Music and Video Player:** [VLC](https://www.videolan.org/vlc)
 - **Screenshot:** [Flameshot](https://flameshot.org)
 - **Color Picker:** [KColorChooser](https://apps.kde.org/kcolorchooser)
