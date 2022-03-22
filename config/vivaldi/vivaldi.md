@@ -12,6 +12,9 @@
 /opt/vivaldi/resources/vivaldi/browser.html
 /opt/vivaldi/resources/vivaldi/style/commons.css
 
+## Spell
+vivaldi://settings/languages
+
 ## One Dark
 - Background: #1e222a
 - Foreground: #abb2bf

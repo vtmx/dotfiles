@@ -20,17 +20,17 @@ scrolling:
 
 font:
   normal:
-    family: IBM Plex Mono
+    family: BlexMono Nerd Font
     style: Medium
   bold:
-    family: IBM Plex Mono
+    family: BlexMono Nerd Font
     style: Medium
   italic:
-    family: IBM Plex Mono
+    family: BlexMono Nerd Font
     style: Italic Medium
   bold_italic:
-    family: IBM Plex Mono
-    style: Bold Italic Medium
+    family: BlexMono Nerd Font
+    style: Italic Medium
   size: 11.0
   offset:
     x: 0

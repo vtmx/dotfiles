@@ -38,7 +38,7 @@
 
   // Markdown
   {
-    "key": "ctrl+shift+v",
+    "key": "ctrl+shift+m",
     "command": "markdown.showPreviewToSide",
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   },
@@ -199,5 +199,5 @@
   {
     "key": "ctrl+k w",
     "command": "-workbench.action.closeEditorsInGroup"
-  },
+  }
 ]
