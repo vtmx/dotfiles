@@ -49,7 +49,7 @@ return_menu() {
 
 copy_fonts() {
 	echo Copy fonts...
-	cp -R "$CURRENT_DIR/fonts/IBM Blex Mono" "$HOME/.fonts"
+	cp -R "$CURRENT_DIR/fonts/BlexMono Nerdfonts" "$HOME/.fonts"
 	cp -R "$CURRENT_DIR/fonts/IBM Plex Mono" "$HOME/.fonts"
 	cp -R "$CURRENT_DIR/fonts/Segoe UI" "$HOME/.fonts"
 	echo "Copied"

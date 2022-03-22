@@ -126,7 +126,7 @@
   // Live Server
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
-  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.CustomBrowser": "firefox",
 
   // Prettier
   "javascript.preferences.quoteStyle": "single",
