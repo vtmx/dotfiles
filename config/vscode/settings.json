@@ -79,6 +79,7 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
+  "workbench.experimental.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
@@ -192,6 +193,7 @@
   //"vim.statusBarColors.easymotioninputmode": "red",
   //"vim.statusBarColors.surroundinputmode": "red",
   "vim.easymotion": true,
+  "vim.easymotionMarkerForegroundColorOneChar": "#e06c75",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 150,
   "vim.hlsearch": true,
@@ -325,6 +327,14 @@
     {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
     },
     {
       "before": [">"],
