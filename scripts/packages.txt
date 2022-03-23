@@ -1,25 +1,5 @@
-alacritty
-bat
-bitwarden
-breeze
-breeze-gtk
-bspwm
-btop
-cmatrix-git
-code
-discord
-exa
-fish
-flameshot
-kcolorchooser
-lazygit
-neovim
-nitroshare
-polybar
-ranger
-rofi
-rsync
-sxhkd
-tmux
-vivaldi
-vlc
+export
+pacman -Qqe > installs.txt
+
+install
+yay -S --needed - < installs.txt

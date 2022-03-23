@@ -51,6 +51,7 @@ alias r='ranger'
 # apps
 alias v='nvim'
 alias t='tmux'
+alias matrix='cmatrix -C white'
 
 # pacman
 alias pac='sudo pacman'
