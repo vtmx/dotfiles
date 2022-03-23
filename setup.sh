@@ -153,8 +153,8 @@ create_links() {
 	# git
 	# ----------------------------------------------------------
 	name="git"
-	target="$SRC_DIR/.gitconfig"
-	link="$HOME_DIR"
+	target="$SRC_DIR/git/gitconfig"
+	link="$HOME_DIR/.gitconfig"
 	create_link "$name" "$target" "$link"
 
 	# ----------------------------------------------------------
@@ -236,8 +236,8 @@ create_links() {
 	# tmux
 	# ----------------------------------------------------------
 	name="tmux"
-	target="$SRC_DIR/.tmux.conf"
-	link="$HOME_DIR/"
+	target="$SRC_DIR/tmux/tmux.conf"
+	link="$HOME_DIR/.tmux.conf"
 	create_link "$name" "$target" "$link"
 
 	# ----------------------------------------------------------

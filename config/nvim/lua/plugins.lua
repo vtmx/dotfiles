@@ -186,6 +186,12 @@ return require('packer').startup(
 			'olimorris/onedarkpro.nvim',
 			require 'theme'
 		}
+		
+		------------------------------------------------------------
+		-- syntaxes
+		------------------------------------------------------------
+		use 'fladson/vim-kitty'
+		use 'kovetskiy/sxhkd-vim'
 
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
