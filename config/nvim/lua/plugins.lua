@@ -190,8 +190,8 @@ return require('packer').startup(
 		------------------------------------------------------------
 		-- syntaxes
 		------------------------------------------------------------
-		use 'fladson/vim-kitty'
-		use 'kovetskiy/sxhkd-vim'
+		-- use 'fladson/vim-kitty'
+		-- use 'waycrate/swhkd-vim'
 
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
