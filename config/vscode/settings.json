@@ -251,6 +251,10 @@
       "after": ["y", "$"]
     },
     {
+      "before": ["<leader>", "j"],
+      "after": ["J"]
+    },
+    {
       "before": ["<leader>", "o"],
       "after": ["m", "`", "o", "<esc>", "`", "`"]
     },

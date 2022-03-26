@@ -75,7 +75,7 @@ entry {
 
 listview {
 	columns: 1;
-	padding: 6px 0px 0px;
+	padding: 8px 0px 0px;
 	border: 0;
 	background-color: @shade1;
 }
@@ -93,7 +93,7 @@ element {
 }
 
 element-icon {
-	size: 25px;
+	size: 24px;
 }
 
 element selected {
