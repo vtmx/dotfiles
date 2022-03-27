@@ -49,10 +49,8 @@ cmd('hi PmenuSel guifg=' .. c.shade7)
 cmd('hi PmenuThumb guibg=' .. c.shade2)
 
 -- line vertical
-cmd('hi VertSplit guibg=' .. c.shade0) -- line
-cmd('hi VertSplit guifg=' .. c.shade0) -- line
--- cmd('hi VertSplit guibg=' .. c.shade2)
--- cmd('hi VertSplit guifg=' .. c.shade0)
+cmd('hi VertSplit guibg=' .. c.shade0)
+cmd('hi VertSplit guifg=' .. c.shade1)
 cmd('hi StatusLine guibg=' .. c.shade0)
 cmd('hi StatusLine guifg=' .. c.shade7)
 cmd('hi StatusLineNC guibg=' .. c.shade0)

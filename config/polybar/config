@@ -1,0 +1,77 @@
+; example
+; /usr/share/doc/polybar
+
+[colors]
+shade0 = #23272e
+shade1 = #1e2227
+shade2 = #3d4556
+shade3 = #5c6370
+shade4 = #2c313c
+shade5 = #828997
+shade6 = #979eab
+shade7 = #abb2bf
+accent0 = #e06c75
+accent1 = #d19a66
+accent2 = #e5c07b
+accent3 = #98c379
+accent4 = #56b6c2
+accent5 = #61afef
+accent6 = #c678dd
+accent7 = #be5046
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 8
+margin-bottom = 0
+
+[bar/kde]
+; bottom = true
+fixed-center = true
+width = 100%
+height = 28
+padding-left = 2
+padding-right = 2
+background = ${colors.shade1}
+foreground = ${colors.shade7}
+font-0 = Segoe Semibold:size=11;3
+modules-left =
+modules-center = 
+modules-right = pulseaudio wired-network date 
+module-margin-left = 1
+module-margin-right = 1
+cursor-click = pointer
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+label-volume = VOL %percentage%%
+label-muted = Muted
+
+[module/wired-network]
+type = internal/network
+interface = enp10s0
+interval = 3.0
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = 
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.shade7}
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.shade7}
+
+[module/date]
+type = internal/date
+interval = 60 
+time = %H:%M
+time-alt = %d/%m/%Y %H:%M
+label = %time%
+
