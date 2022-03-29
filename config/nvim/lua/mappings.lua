@@ -19,6 +19,7 @@ vim.g.mapleader = ' '
 
 -- reload
 map('n', '<leader>r', [[luafile $HOME/.config/nvim/init.lua echo "Reload"]]) 
+
 -- scape
 map('i', 'kj', '<esc>')
 map('v', '<leader>kj', '<esc>')
@@ -87,10 +88,10 @@ map('v', 'J', '5j')
 map('v', 'K', '5k')
 
 -- begin and end line
-map('n', 'H', '^')
 map('n', 'L', 'g_')
-map('v', 'H', '^')
+map('n', 'H', '^')
 map('v', 'L', 'g_')
+map('v', 'H', '^')
 
 -- new file
 map('n', '<leader>n', ':enew<cr>')
