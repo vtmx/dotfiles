@@ -13,7 +13,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'IBM Plex Mono', Consolas, monospace",
+  "editor.fontFamily": "'BlexMono Nerd Font', 'IBM Plex Mono', Consolas, monospace",
   "editor.fontLigatures": "'zero'",
   "editor.fontSize": 14,
   "editor.fontWeight": "500",
@@ -57,7 +57,7 @@
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.defaultProfile.windows": "cmd",
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.fontFamily": "'IBM Plex Mono', Consolas, monospace",
+  "terminal.integrated.fontFamily": "'BlexMono Nerd Font', 'IBM Plex Mono', Consolas, monospace",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontWeightBold": "500",
@@ -239,12 +239,12 @@
       "after": ["M", "`", "m"]
     },
     {
-      "before": ["H"],
-      "after": ["^"]
-    },
-    {
       "before": ["L"],
       "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["0"]
     },
     {
       "before": ["Y"],
@@ -331,6 +331,14 @@
     {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["0"]
     },
     {
       "before": ["J"],
