@@ -244,7 +244,7 @@
     },
     {
       "before": ["H"],
-      "after": ["0"]
+      "after": ["^"]
     },
     {
       "before": ["Y"],
@@ -334,11 +334,11 @@
     },
     {
       "before": ["L"],
-      "after": ["$"]
+      "after": ["$", "h"]
     },
     {
       "before": ["H"],
-      "after": ["0"]
+      "after": ["^"]
     },
     {
       "before": ["J"],
