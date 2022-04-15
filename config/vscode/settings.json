@@ -254,6 +254,26 @@
       "after": ["y", "$"]
     },
     {
+      "before": ["<leader>", "a"],
+      "after": ["g", "g", "V", "G"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["V", "\"", "+", "y"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "after": ["V", "\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["o", "<esc>", "\"", "+", "g", "p", "<esc>"]
+    },
+    {
+      "before": ["<leader>", "P"],
+      "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"]
+    },
+    {
       "before": ["<leader>", "j"],
       "after": ["J"]
     },
@@ -358,6 +378,14 @@
     {
       "before": ["<"],
       "after": ["<", "g", "v"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "after": ["\"", "+", "x"]
     }
   ]
 }
