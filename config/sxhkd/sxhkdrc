@@ -4,7 +4,7 @@ super + r
 #super + Return
 	#alacritty
 
-super + +shift + Return
+super + shift + Return
 	konsole
 
 super + f10
