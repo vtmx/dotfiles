@@ -31,9 +31,21 @@ map('n', 'k', 'gk')
 -- like C and D
 map('n', 'Y', 'y$')
 
--- enter in normal mode
+-- new line in normal mode
 map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
+
+-- copy
+map('n', '<leader>y', 'V"+y')
+map('v', '<leader>y', '"+y')
+
+-- cut
+map('n', '<leader>x', 'V"+x')
+map('v', '<leader>x', '"+x')
+
+-- paste
+map('n', '<leader>p', 'o<esc>"+gp<esc>')
+map('n', '<leader>P', 'O<esc>"+gp<esc>')
 
 -- join lines
 map('n', '<leader>j', 'J')
@@ -175,10 +187,10 @@ map('n', '<leader>e', ':NvimTreeToggle<cr>')
 map('n', '<c-e>', ':NvimTreeToggle<cr>')
 
 -- packer
-map('n', '<leader>pi', ':PackerInstall<cr>')
-map('n', '<leader>ps', ':PackerSync<cr>')
+-- map('n', '<leader>pi', ':PackerInstall<cr>')
+-- map('n', '<leader>ps', ':PackerSync<cr>')
 
 -- telescope
 map('n', '<c-p>', ':Telescope find_files<cr>')
-map('n', '<leader>p', ':Telescope git_files<cr>')
+map('n', '<leader>g', ':Telescope git_files<cr>')
 
