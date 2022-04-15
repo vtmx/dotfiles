@@ -52,6 +52,8 @@
   // Git
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.terminalAuthentication": false,
+  "github.gitAuthentication": false,
 
   // Terminal
   "terminal.integrated.defaultProfile.linux": "fish",
@@ -80,6 +82,7 @@
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
   "workbench.experimental.layoutControl.enabled": false,
+  // "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",

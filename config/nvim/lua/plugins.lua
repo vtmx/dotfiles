@@ -3,23 +3,15 @@
 ------------------------------------------------------------
 
 local fn = vim.fn
-local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-	packer_bootstrap = fn.system ({
-		'git',
-		'clone',
-		'--depth',
-		'1',
-		'https://github.com/wbthomason/packer.nvim',
-		install_path
-	})
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 -- telescope
 local actions = require('telescope.actions')
 
-return require('packer').startup(
-	function(use)
+return require('packer').startup(function(use)
 
 		------------------------------------------------------------
 		-- better-scape
@@ -64,18 +56,20 @@ return require('packer').startup(
 		------------------------------------------------------------
 		use {
 			'lukas-reineke/indent-blankline.nvim',
-			require('indent_blankline').setup {
-				filetype_exclude = {'dashboard', 'help', 'terminal'},
-				show_end_of_line = false,
-				-- char_highlight_list = {
-				-- 		'IndentBlanklineIndent1',
-				-- 		'IndentBlanklineIndent2',
-				-- 		'IndentBlanklineIndent3',
-				-- 		'IndentBlanklineIndent4',
-				-- 		'IndentBlanklineIndent5',
-				-- 		'IndentBlanklineIndent6',
-				-- },
-			}
+			config = function()
+				require('indent_blankline').setup {
+					filetype_exclude = {'dashboard', 'help', 'terminal'},
+					show_end_of_line = false,
+					-- char_highlight_list = {
+					-- 		'IndentBlanklineIndent1',
+					-- 		'IndentBlanklineIndent2',
+					-- 		'IndentBlanklineIndent3',
+					-- 		'IndentBlanklineIndent4',
+					-- 		'IndentBlanklineIndent5',
+					-- 		'IndentBlanklineIndent6',
+					-- },
+				}
+			end
 		}
 
 		------------------------------------------------------------
@@ -100,7 +94,6 @@ return require('packer').startup(
 		use {
 			'kyazdani42/nvim-tree.lua',
 			require('nvim-tree').setup({
-				auto_close = true,
 				disable_netrw = false,
 				hijack_netrw = false,
 				actions = {
@@ -122,11 +115,12 @@ return require('packer').startup(
 			'nvim-lua/plenary.nvim',
 		}
 
-		------------------------------------------------------------
-		-- telescope
-		------------------------------------------------------------
+		-- ------------------------------------------------------------
+		-- -- telescope
+		-- ------------------------------------------------------------
 		use {
 			'nvim-lua/telescope.nvim',
+
 			require('telescope').setup({
 				defaults = {
 					disable_devicons=true,
@@ -186,7 +180,7 @@ return require('packer').startup(
 			'olimorris/onedarkpro.nvim',
 			require 'theme'
 		}
-		
+
 		------------------------------------------------------------
 		-- syntaxes
 		------------------------------------------------------------
@@ -198,8 +192,7 @@ return require('packer').startup(
 		if packer_bootstrap then
 			require('packer').sync()
 		end
-	end
-)
+end)
 
 -- instructions
 
@@ -211,5 +204,5 @@ return require('packer').startup(
 --:CocInstall coc-prettier
 --:CocInstall coc-vetur
 
--- treesitter	
+-- treesitter
 -- :TSInstall vue javascript typescript html css scss

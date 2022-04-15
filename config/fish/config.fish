@@ -35,6 +35,9 @@ set -g fish_pager_color_completion $shade7
 #  bind -M insert -m default kj force-repaint
 # end
 
+# plugin ssh
+fish_ssh_agent
+
 # alias
 # commands
 alias ...='cd ../..'
@@ -61,17 +64,17 @@ alias yayi='sudo yay -S'
 alias yayr='sudo yay -R'
 
 # configs
-alias ac='v $HOME/.config/alacritty/alacritty.yml'
-alias fc='v $HOME/.config/fish/config.fish'
-alias kc='v $HOME/.config/kitty/kitty.conf'
-alias rc='v $HOME/.config/rofi/config.rasi'
-alias pc='v $HOME/.config/polybar/config'
-alias tc='v $HOME/.tmux.conf'
-alias vc='v $HOME/.config/nvim/init.lua'
-alias vs='v $HOME/.config/lua/settings.lua'
-alias vm='v $HOME/.config/nvim/lua/mappings.lua'
-alias vp='v $HOME/.config/nvim/lua/plugins.lua'
-alias vt='v $HOME/.config/nvim/lua/theme.lua'
+alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
+alias fc='nvim $HOME/.config/fish/config.fish'
+alias kc='nvim $HOME/.config/kitty/kitty.conf'
+alias rc='nvim $HOME/.config/rofi/config.rasi'
+alias pc='nvim $HOME/.config/polybar/config'
+alias tc='nvim $HOME/.tmux.conf'
+alias vc='nvim $HOME/.config/nvim/init.lua'
+alias vs='nvim $HOME/.config/lua/settings.lua'
+alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
+alias vp='nvim $HOME/.config/nvim/lua/plugins.lua'
+alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
 
 # paths
 alias cdc='cd $HOME/.config'
@@ -97,11 +100,15 @@ alias gcmsg='git commit -m'
 # variables
 export BROWSER=vivaldi-stable
 export CODE=code
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR='nvim
+export VISUAL='nvim
+export MICRO_TRUECOLOR=1
 
 # custom sh
 alias ide='ide.sh'
+
+# vlang
+alias vl='$HOME/.v/vl'
 
 # starship
 starship init fish | source
