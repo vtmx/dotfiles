@@ -12,6 +12,10 @@ end
 local actions = require('telescope.actions')
 
 return require('packer').startup(function(use)
+		------------------------------------------------------------
+		-- packer
+		------------------------------------------------------------
+		use 'wbthomason/packer.nvim'
 
 		------------------------------------------------------------
 		-- better-scape
