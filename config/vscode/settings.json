@@ -81,8 +81,7 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
-  "workbench.experimental.layoutControl.enabled": false,
-  // "workbench.layoutControl.enabled": false,
+  "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
@@ -267,11 +266,11 @@
     },
     {
       "before": ["<leader>", "p"],
-      "after": ["o", "<esc>", "\"", "+", "g", "p", "<esc>"]
+      "after": ["\"", "+", "g", "p", "<esc>"]
     },
     {
       "before": ["<leader>", "P"],
-      "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"]
+      "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
     },
     {
       "before": ["<leader>", "j"],
