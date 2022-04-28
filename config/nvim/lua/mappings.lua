@@ -44,8 +44,8 @@ map('n', '<leader>x', 'V"+x')
 map('v', '<leader>x', '"+x')
 
 -- paste
-map('n', '<leader>p', 'o<esc>"+gp<esc>')
-map('n', '<leader>P', 'O<esc>"+gp<esc>')
+map('n', '<leader>p', '"+gp<esc>')
+map('n', '<leader>P', 'o<esc>"+gp<esc>')
 
 -- join lines
 map('n', '<leader>j', 'J')
