@@ -1,100 +1,71 @@
 ------------------------------------------------------------
 -- plugins
+-- ~/.local/share/nvim/site/pack/packer/start/
 ------------------------------------------------------------
 
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 -- telescope
 local actions = require('telescope.actions')
 
 return require('packer').startup(function(use)
-		------------------------------------------------------------
 		-- packer
-		------------------------------------------------------------
 		use 'wbthomason/packer.nvim'
 
-		------------------------------------------------------------
+		-- requirements
+		use 'nvim-lua/plenary.nvim'
+		use 'kyazdani42/nvim-web-devicons'
+
+		-- plugins
+		use 'machakann/vim-highlightedyank'
+		use 'nathom/tmux.nvim'
+		use 'tpope/vim-surround'
+
+		-- syntaxes
+		use 'baskerville/vim-sxhkdrc'
+		use 'fladson/vim-kitty'
+		use 'khaveesh/vim-fish-syntax'
+
+		-- ui
+		use 'olimorris/onedarkpro.nvim' 
+		use 'nvim-lualine/lualine.nvim'
+		use 'akinsho/bufferline.nvim'
+
+		-- coc
+		-- use { 'neoclide/coc.nvim', branch = 'release' }
+
 		-- better-scape
-		------------------------------------------------------------
 		use {
 			'jdhao/better-escape.vim',
 			event = 'InsertEnter'
 		}
 
-		------------------------------------------------------------
-		-- bufferline
-		------------------------------------------------------------
-		use {
-			'akinsho/bufferline.nvim',
-			require 'theme'
-		}
-
-		------------------------------------------------------------
-		-- coc
-		------------------------------------------------------------
-		-- use {
-		-- 	'neoclide/coc.nvim', branch = 'release'
-		-- }
-
-		------------------------------------------------------------
 		-- comment
-		------------------------------------------------------------
 		use {
 			'numToStr/Comment.nvim',
 			require('Comment').setup()
 		}
 
-		------------------------------------------------------------
-		-- highlightedyank
-		------------------------------------------------------------
-		use {
-			'machakann/vim-highlightedyank'
-		}
-
-		------------------------------------------------------------
 		-- indent-blankline
-		------------------------------------------------------------
 		use {
 			'lukas-reineke/indent-blankline.nvim',
-			require('indent_blankline').setup {
-				filetype_exclude = {'dashboard', 'help', 'terminal'},
-				show_end_of_line = false,
-				-- char_highlight_list = {
-				-- 		'IndentBlanklineIndent1',
-				-- 		'IndentBlanklineIndent2',
-				-- 		'IndentBlanklineIndent3',
-				-- 		'IndentBlanklineIndent4',
-				-- 		'IndentBlanklineIndent5',
-				-- 		'IndentBlanklineIndent6',
-				-- },
-			}
+			require('indent_blankline').setup { filetype_exclude = {'dashboard', 'help', 'terminal'} }
 		}
 
-		------------------------------------------------------------
 		-- hop
-		------------------------------------------------------------
 		use {
 			'phaazon/hop.nvim',
 			require'hop'.setup()
 		}
 
-		------------------------------------------------------------
-		-- lualine
-		------------------------------------------------------------
-		use {
-			'nvim-lualine/lualine.nvim',
-			require 'theme'
-		}
-
-		------------------------------------------------------------
 		-- nvim-tree
-		------------------------------------------------------------
 		use {
 			'kyazdani42/nvim-tree.lua',
+
 			require('nvim-tree').setup({
 				disable_netrw = false,
 				hijack_netrw = false,
@@ -110,16 +81,7 @@ return require('packer').startup(function(use)
 			})
 		}
 
-		------------------------------------------------------------
-		-- plenary
-		------------------------------------------------------------
-		use {
-			'nvim-lua/plenary.nvim',
-		}
-
-		-- ------------------------------------------------------------
-		-- -- telescope
-		-- ------------------------------------------------------------
+		-- telescope
 		use {
 			'nvim-lua/telescope.nvim',
 
@@ -136,28 +98,10 @@ return require('packer').startup(function(use)
 			})
 		}
 
-		------------------------------------------------------------
-		-- toggleterm
-		------------------------------------------------------------
-		use {
-			'akinsho/toggleterm.nvim',
-			require('toggleterm').setup({
-				-- open_mapping = [[<leader>']]
-			})
-		}
-
-		------------------------------------------------------------
-		-- tmux
-		------------------------------------------------------------
-		use {
-			'nathom/tmux.nvim',
-		}
-
-		------------------------------------------------------------
 		-- treesitter
-		------------------------------------------------------------
 		use {
 			'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
+
 			require'nvim-treesitter.configs'.setup {
 				highlight = {
 					enable = true
@@ -168,37 +112,7 @@ return require('packer').startup(function(use)
 			}
 		}
 
-		------------------------------------------------------------
-		-- vim-surround
-		------------------------------------------------------------
-		use {
-			'tpope/vim-surround',
-		}
-
-		------------------------------------------------------------
-		-- web-devicons
-		------------------------------------------------------------
-		use {
-			'kyazdani42/nvim-web-devicons',
-		}
-
-		------------------------------------------------------------
-		-- onedark
-		------------------------------------------------------------
-		use {
-			'olimorris/onedarkpro.nvim',
-			require 'theme'
-		}
-
-		------------------------------------------------------------
-		-- syntaxes
-		------------------------------------------------------------
-		use 'fladson/vim-kitty'
-		use 'khaveesh/vim-fish-syntax'
-		use 'baskerville/vim-sxhkdrc'
-
-		-- Automatically set up your configuration after cloning packer.nvim
-		-- Put this at the end after all plugins
+		-- Automatically cloning packer.nvim
 		if packer_bootstrap then
 			require('packer').sync()
 		end

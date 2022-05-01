@@ -125,7 +125,7 @@ require('bufferline').setup({
 		buffer_selected = {
 			guibg = c.shade0,
 			guifg = c.shade7,
-			gui = '' -- no italic
+			-- gui = '' -- no italic
 		},
 		modified = {
 			guifg = c.shade3
