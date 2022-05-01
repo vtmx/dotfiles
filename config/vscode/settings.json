@@ -74,6 +74,14 @@
     }
   },
 
+  // Search
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+
   // Workbench
   // https://code.visualstudio.com/api/references/theme-color
   // https://themes.vscode.one/edit/local/
