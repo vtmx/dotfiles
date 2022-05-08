@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
 		use 'akinsho/bufferline.nvim'
 
 		-- coc
-		-- use { 'neoclide/coc.nvim', branch = 'release' }
+		use { 'neoclide/coc.nvim', branch = 'release' }
 
 		-- better-scape
 		use {
