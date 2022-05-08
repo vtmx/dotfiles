@@ -16,7 +16,7 @@ body {
 /* active tab */
 #browser .tab-position .tab.active {
 	background: var(--colorBgFaded) !important;
-	color: var(--colorAccent) !important;
+	color: var(--colorFgIntense) !important;
 }
 
 .SearchField, .UrlBar-AddressField {
