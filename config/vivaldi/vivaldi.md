@@ -1,7 +1,7 @@
 # Vivaldi
 
 ## Enable experiments
-- vivaldi://experiments/
+- vivaldi://experiments
 - [x] Allow for using CSS modifications.
 - vivaldi://inspect/#apps
 
@@ -18,12 +18,16 @@ vivaldi://settings/languages
 ## Reset buttons toolbar
 Aparearance > Window Appearance > Tollbar customization: Reset Navigation Toolbar
 
-## One Dark
-- Background: #1e222a
+## OneDarkV
+- Background: #1e2227
 - Foreground: #abb2bf
 - Hightlight: #abb2bf
-- Accent: #394551 > opera
-- Background Custom Color: #1d2126
+- Accent: #3d4556
+- Contrast: 0
+- Saturation: 100%
+- Transparency: 0
+- Blur: 0
+- Corner Rounding: 4
 
 ## Opera
 - Background: #191d21
@@ -45,4 +49,3 @@ vivaldi://experiments
 vivaldi://settings/appearance
 https://gabevilela.vivaldi.net/2020/12/26/guide-customizing-vivaldis-ui-with-css-mods
 https://achekulaev.medium.com/darkopera-theme-for-vivaldi-browser-89f2998742e
-

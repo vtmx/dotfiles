@@ -1,8 +1,36 @@
 body {
-  background-color: #1e2227 !important;
+	background: var(--colorBg) !important;
+}
+
+/* selection text */
+::selection {
+	background: var(--colorAccentBg) !important;
+}
+
+/* tool bar */
+.toolbar-mainbar, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions, .color-behind-tabs-off .toolbar-mainbar {
+	position: initial;
+	background: var(--colorBgFaded) !important;
+}
+
+/* active tab */
+#browser .tab-position .tab.active {
+	background: var(--colorBgFaded) !important;
+	color: var(--colorAccent) !important;
 }
 
 .SearchField, .UrlBar-AddressField {
-	background-color: var(--colorBg);
-	border: none;
+	background: var(--colorBg) !important;
+	border: none !important;
+}
+
+/* disable outline focus adressbar */
+.SearchField:focus-within, .UrlBar-AddressField:focus-within {
+	outline: none !important;
+}
+
+/* hover buttons toolbar */
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button:active, .color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button:active, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button:active, .color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active {
+	background: var(--colorHighlightBgAlpha) !important;
+	transition: .2s all;
 }
