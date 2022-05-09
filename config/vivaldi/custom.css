@@ -13,12 +13,6 @@ body {
 	background: var(--colorBgFaded) !important;
 }
 
-/* active tab */
-#browser .tab-position .tab.active {
-	background: var(--colorBgFaded) !important;
-	color: var(--colorFgIntense) !important;
-}
-
 .SearchField, .UrlBar-AddressField {
 	background: var(--colorBg) !important;
 	border: none !important;
@@ -27,6 +21,16 @@ body {
 /* disable outline focus adressbar */
 .SearchField:focus-within, .UrlBar-AddressField:focus-within {
 	outline: none !important;
+}
+
+.button-toolbar {
+	opacity: .8 !important;
+}
+
+/* active tab */
+#browser .tab-position .tab.active {
+	background: var(--colorBgFaded) !important;
+	color: var(--colorFgIntense) !important;
 }
 
 /* hover buttons toolbar */
