@@ -87,6 +87,10 @@ alias cds='cd $HOME/Dev/shortcuts'
 alias cdt='cd $HOME/Downloads/temp'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 
+# yarn
+alias yd='yarn dev'
+alias ydep='yarn deploy'
+
 # git
 alias g='git'
 alias gaa='git add --all'

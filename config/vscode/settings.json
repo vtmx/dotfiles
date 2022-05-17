@@ -21,6 +21,7 @@
   "editor.formatOnSave": true,
   "editor.glyphMargin": true,
   "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": false,
   "editor.insertSpaces": true,
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
