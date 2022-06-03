@@ -191,18 +191,6 @@
   },
 
   // Vim
-  //"vim.statusBarColorControl": true,
-  //"vim.statusBarColors.normal": ["#98c379", "#1e222a"],
-  //"vim.statusBarColors.insert": "#57a5ed",
-  //"vim.statusBarColors.visual": "#bf6dd8",
-  //"vim.statusBarColors.visualline": "#bf6dd8",
-  //"vim.statusBarColors.visualblock": "#bf6dd8",
-  //"vim.statusBarColors.replace": "#dc6069",
-  //"vim.statusBarColors.commandlineinprogress": "#d7b06a",
-  //"vim.statusBarColors.searchinprogressmode": "#dc6069",
-  //"vim.statusBarColors.easymotionmode": "red",
-  //"vim.statusBarColors.easymotioninputmode": "red",
-  //"vim.statusBarColors.surroundinputmode": "red",
   "vim.easymotion": true,
   "vim.easymotionMarkerForegroundColorOneChar": "#e06c75",
   "vim.highlightedyank.enable": true,
@@ -262,54 +250,6 @@
       "after": ["y", "$"]
     },
     {
-      "before": ["<leader>", "a"],
-      "after": ["g", "g", "V", "G"]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["actions.find"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": ["editor.action.startFindReplaceAction"]
-    },
-    {
-      "before": ["<leader>", "y"],
-      "after": ["V", "\"", "+", "y"]
-    },
-    {
-      "before": ["<leader>", "x"],
-      "after": ["V", "\"", "+", "x"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "g", "p", "<esc>"]
-    },
-    {
-      "before": ["<leader>", "P"],
-      "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
-    },
-    {
-      "before": ["<leader>", "j"],
-      "after": ["J"]
-    },
-    {
-      "before": ["<leader>", "o"],
-      "after": ["m", "`", "o", "<esc>", "`", "`"]
-    },
-    {
-      "before": ["<leader>", "O"],
-      "after": ["m", "`", "O", "<esc>", "`", "`"]
-    },
-    {
-      "before": ["<leader>", "q"],
-      "commands": ["workbench.action.quit"]
-    },
-    {
-      "before": ["<leader>", "<esc>"],
-      "commands": [":noh"]
-    },
-    {
       "before": ["v", "v"],
       "commands": ["workbench.action.moveEditorToNextGroup"]
     },
@@ -330,16 +270,52 @@
       "commands": ["workbench.action.files.openFile"]
     },
     {
+      "before": ["<leader>", "a"],
+      "after": ["g", "g", "V", "G"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["<leader>", "F"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
+      "before": ["<leader>", "H"],
+      "commands": ["workbench.action.replaceInFiles"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "after": ["J"]
     },
     {
       "before": ["<leader>", "n"],
       "commands": ["workbench.action.files.newUntitledFile"]
     },
     {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": ["<leader>", "o"],
+      "after": ["m", "`", "o", "<esc>", "`", "`"]
+    },
+    {
+      "before": ["<leader>", "O"],
+      "after": ["m", "`", "O", "<esc>", "`", "`"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "g", "p", "<esc>"]
+    },
+    {
+      "before": ["<leader>", "P"],
+      "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
     },
     {
       "before": ["<leader>", "t"],
@@ -348,6 +324,26 @@
     {
       "before": ["<leader>", "q"],
       "commands": ["workbench.action.closeAllGroups"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.quit"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["V", "\"", "+", "y"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "after": ["V", "\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "<esc>"],
+      "commands": [":noh"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
