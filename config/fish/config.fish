@@ -89,7 +89,7 @@ alias cdv='cd $HOME/Dev/projects/vitormelo'
 
 # yarn
 alias yd='yarn dev'
-alias ydep='yarn deploy'
+alias ydp='yarn deploy'
 
 # git
 alias g='git'

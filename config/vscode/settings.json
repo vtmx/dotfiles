@@ -266,6 +266,14 @@
       "after": ["g", "g", "V", "G"]
     },
     {
+      "before": ["<leader>", "f"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
       "before": ["<leader>", "y"],
       "after": ["V", "\"", "+", "y"]
     },
@@ -326,20 +334,8 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": ["<leader>", "f"],
-      "commands": ["editor.action.formatDocument"]
-    },
-    {
       "before": ["<leader>", "n"],
       "commands": ["workbench.action.files.newUntitledFile"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.action.nextEditor"]
     },
     {
       "before": ["<leader>", "w"],
