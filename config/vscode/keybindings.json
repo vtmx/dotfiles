@@ -164,7 +164,12 @@
     "key": "ctrl+k shift+k",
     "command": "workbench.action.moveActiveEditorGroupUp"
   },
+
   // Close
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
   {
     "key": "ctrl+k w",
     "command": "workbench.action.closeActiveEditor"
