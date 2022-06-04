@@ -184,7 +184,6 @@ map('n', '<leader><leader>f', ':HopChar1<cr>')
 
 -- nvimtree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
-map('n', '<c-e>', ':NvimTreeToggle<cr>')
 
 -- packer
 -- map('n', '<leader>pi', ':PackerInstall<cr>')
