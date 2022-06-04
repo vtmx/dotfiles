@@ -92,7 +92,7 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "alt+h",
+    "key": "alt+j",
     "command": "workbench.action.previousEditor"
   },
 

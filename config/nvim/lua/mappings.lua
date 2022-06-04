@@ -155,7 +155,9 @@ map('n', '<leader>l', ':bn<cr>')
 cmd[[nnoremap <silent> <leader>w :bp \|bd #<cr>]]
 cmd[[nnoremap <silent> <a-n> :ene<cr>]]
 cmd[[nnoremap <silent> <a-l> :bn<cr>]]
-cmd[[nnoremap <silent> <a-h> :bp<cr>]]
+cmd[[nnoremap <silent> <leader>l :bn<cr>]]
+cmd[[nnoremap <silent> <a-j> :bp<cr>]]
+cmd[[nnoremap <silent> <leader>h :bp<cr>]]
 cmd[[nnoremap <silent> <a-w> :bp \|bd #<cr>]]
 
 -- nav

@@ -323,10 +323,6 @@
     },
     {
       "before": ["<leader>", "q"],
-      "commands": ["workbench.action.closeAllGroups"]
-    },
-    {
-      "before": ["<leader>", "q"],
       "commands": ["workbench.action.quit"]
     },
     {
