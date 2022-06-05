@@ -8,9 +8,15 @@ local cmd = vim.cmd
 -- functions
 function map(mode, lhs, rhs, opts)
 	local options = { noremap = true, silent = true }
+
 	if opts then
 		options = vim.tbl_extend('force', options, opts)
 	end
+
+	-- new method - show command
+	-- vim.keymap.set(mode, lhs, rhs)
+
+	-- old method
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 

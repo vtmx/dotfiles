@@ -10,7 +10,6 @@ local opt = vim.opt
 opt.termguicolors = true
 opt.autochdir = true
 opt.autoread = true
---opt.clipboard = 'unnamed,unnamedplus'
 opt.cmdheight = 1
 opt.cursorline = true
 opt.exrc = true
@@ -19,7 +18,6 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.lazyredraw = true
 opt.mouse = 'a'
--- :set formatoptions-=cro
 
 -- notification
 opt.backup = false
@@ -45,6 +43,7 @@ opt.tabstop = indent
 opt.softtabstop = indent 
 
 -- split
+opt.laststatus = 3
 opt.splitbelow = true
 opt.splitright = true
 
@@ -55,7 +54,6 @@ vim.g['netrw_browse_split'] = 4
 vim.g['netrw_hide'] = 1
 vim.g['netrw_liststyle'] = 4
 vim.g['netrw_winsize'] = 25
--- vim.g['netrw_list_hide'] = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
 
 
 -- indent-blanklinke
@@ -71,10 +69,6 @@ vim.g.better_escape_interval = 200
 
 -- highlightedyank
 vim.g.highlightedyank_highlight_duration = 150
-
--- enable enter icon
--- opt.list = true
--- opt.listchars:append('eol:↴')
 
 -- lsp
 vim.lsp.handlers['textDocument/publishDiagnostics'] =

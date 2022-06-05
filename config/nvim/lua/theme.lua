@@ -4,14 +4,16 @@
 
 local cmd = vim.cmd
 local c = require('colors')
-
 local onedarkpro = require('onedarkpro')
 
 onedarkpro.setup {
   theme = 'onedark',
 	colors = {
-	  bg = c.shade0
+	  bg = c.shade0,
   },
+	hlgroups = {
+		VertSplit = { bg = c.shade0, fg = c.shade3 }
+	},
 	options = {
 		italic = false,
 	}
@@ -19,7 +21,7 @@ onedarkpro.setup {
 
 require('onedarkpro').load()
 
--- make transparent bg
+-- make bg transparent 
 -- cmd('hi! Normal guibg=none ctermbg=none')
 -- cmd('hi! NonText guibg=none guifg=none ctermbg=none ctermfg=none')
 
@@ -48,13 +50,17 @@ cmd('hi PmenuSel guibg=' .. c.shade2)
 cmd('hi PmenuSel guifg=' .. c.shade7)
 cmd('hi PmenuThumb guibg=' .. c.shade2)
 
--- line vertical
-cmd('hi VertSplit guibg=' .. c.shade1)
-cmd('hi VertSplit guifg=' .. c.shade1)
+-- line splits
+
+-- explorer
+cmd('hi VertSplit guibg=' .. c.shade0)
+cmd('hi VertSplit guifg=' .. c.shade0)
+
+-- status line
 cmd('hi StatusLine guibg=' .. c.shade0)
-cmd('hi StatusLine guifg=' .. c.shade7)
+cmd('hi StatusLine guifg=' .. c.shade3)
 cmd('hi StatusLineNC guibg=' .. c.shade0)
-cmd('hi StatusLineNC guifg=' .. c.shade7)
+cmd('hi StatusLineNC guifg=' .. c.shade3)
 
 -- hi comments
 cmd('hi comment gui=italic guifg=' .. c.shade3)
@@ -86,6 +92,7 @@ cmd('hi NvimTreeWindowPicker guifg=' .. c.shade7)
 ------------------------------------------------------------
 -- bufferline
 ------------------------------------------------------------
+
 require('bufferline').setup({
   options = {
 		-- buffer_close_icon = ' ',
@@ -143,6 +150,7 @@ require('bufferline').setup({
 ------------------------------------------------------------
 -- lualine
 ------------------------------------------------------------
+
 local onedark = {
   normal = {
     a = { bg = c.shade0, fg = c.shade7 },
@@ -182,9 +190,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {},
-    -- lualine_b = {'branch', 'diff', {'diagnostics', sources={'nvim_lsp', 'coc'}}},
     lualine_c = {},
-    -- lualine_c = {'filename'},
     lualine_x = {},
     lualine_y = {},
     lualine_z = {'location'}
