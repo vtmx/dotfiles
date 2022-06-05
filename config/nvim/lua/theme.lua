@@ -95,7 +95,7 @@ cmd('hi NvimTreeWindowPicker guifg=' .. c.shade7)
 
 require('bufferline').setup({
   options = {
-		-- buffer_close_icon = ' ',
+		buffer_close_icon = ' ',
 		close_icon = ' ',
 		indicator_icon = ' ',
 		separator_style = {'', ''},
