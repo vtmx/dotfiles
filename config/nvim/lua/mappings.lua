@@ -167,8 +167,6 @@ cmd[[nnoremap <silent> <leader>h :bp<cr>]]
 cmd[[nnoremap <silent> <a-w> :bp \|bd #<cr>]]
 
 -- nav
--- map('i', '<expr> <c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"')
--- map('i', '<expr> <c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-j>"')
 cmd[[inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
 cmd[[inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
 
@@ -178,7 +176,7 @@ map('i', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
 map('v', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
 
 -- quit
-map('n', '<a-q>', ':q!<cr>')
+map('n', '<leader>q', ':q!<cr>')
 
 ------------------------------------------------------------
 -- Plugins
