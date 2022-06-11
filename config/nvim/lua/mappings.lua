@@ -7,17 +7,8 @@ local cmd = vim.cmd
 
 -- functions
 function map(mode, lhs, rhs, opts)
-	local options = { noremap = true, silent = true }
-
-	if opts then
-		options = vim.tbl_extend('force', options, opts)
-	end
-
-	-- new method - show command
-	-- vim.keymap.set(mode, lhs, rhs)
-
-	-- old method
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	opts = opts or { silent = true }
+	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 -- leader
@@ -65,12 +56,6 @@ map('n', '<a-j>', ':m+<cr>')
 map('n', '<a-k>', ':m-2<cr>')
 map('v', '<a-j>', [[:m'>+<cr>`<my`>mzgv`yo`z]])
 map('v', '<a-k>', [[:m'<-2<cr>`>my`<mzgv`yo`z]])
-
--- clone line
--- nnoremap <silent> <s-j> :t.<cr>
--- nnoremap <silent> <s-k> :t-<cr>
--- vnoremap <silent> <s-j> :copy '><cr>
--- vnoremap <silent> <s-k> :copy -'><cr>
 
 -- keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
@@ -121,14 +106,14 @@ map('n', '<leader>a', 'ggVG<c-$>')
 map('v', 'y', 'ygv<esc>')
 
 -- indent
--- map('n', '>', '>>')
--- map('n', '<', '<<')
--- map('v', '>', '>gv')
--- map('v', '<', '<gv')
-cmd[[nnoremap > >>]]
-cmd[[nnoremap < <<]]
-cmd[[vnoremap > >gv]]
-cmd[[vnoremap < <gv]]
+map('n', '>', '>>')
+map('n', '<', '<<')
+map('v', '>', '>gv')
+map('v', '<', '<gv')
+-- cmd[[nnoremap > >>]]
+-- cmd[[nnoremap < <<]]
+-- cmd[[vnoremap > >gv]]
+-- cmd[[vnoremap < <gv]]
 
 -- navigation panels
 map('n', '<c-j>', '<c-w>j')
@@ -192,10 +177,9 @@ map('n', '<leader><leader>f', ':HopChar1<cr>')
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
 
 -- packer
--- map('n', '<leader>pi', ':PackerInstall<cr>')
--- map('n', '<leader>ps', ':PackerSync<cr>')
+map('n', '<leader>pi', ':PackerInstall<cr>')
+map('n', '<leader>ps', ':PackerSync<cr>')
 
 -- telescope
 map('n', '<c-p>', ':Telescope find_files<cr>')
 map('n', '<leader>g', ':Telescope git_files<cr>')
-

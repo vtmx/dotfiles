@@ -123,7 +123,6 @@ packer.startup(function(use)
 end)
 
 -- instructions
-
 -- coc
 --:CocInstall coc-eslint
 --:CocInstall coc-emmet
