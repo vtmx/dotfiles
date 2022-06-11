@@ -19,7 +19,7 @@ onedarkpro.setup {
 	}
 }
 
-require('onedarkpro').load()
+onedarkpro.load()
 
 -- make bg transparent 
 -- cmd('hi! Normal guibg=none ctermbg=none')
@@ -51,10 +51,8 @@ cmd('hi PmenuSel guifg=' .. c.shade7)
 cmd('hi PmenuThumb guibg=' .. c.shade2)
 
 -- line splits
-
--- explorer
 cmd('hi VertSplit guibg=' .. c.shade0)
-cmd('hi VertSplit guifg=' .. c.shade0)
+cmd('hi VertSplit guifg=' .. c.shade3)
 
 -- status line
 cmd('hi StatusLine guibg=' .. c.shade0)
@@ -74,6 +72,8 @@ cmd('hi IndentBlanklineChar guifg=' .. c.shade2)
 cmd('hi IndentBlanklineSpaceChar guibg=none')
 
 -- nvim-tree
+cmd('hi NvimTreeVertSplit guibg=' .. c.shade0)
+cmd('hi NvimTreeVertSplit guifg=' .. c.shade0)
 cmd('hi NvimTreeFolder guifg=' .. c.shade7)
 cmd('hi NvimTreeFolderIcon guifg=' .. c.shade7)
 cmd('hi NvimTreeFolderName guifg=' .. c.shade7)
