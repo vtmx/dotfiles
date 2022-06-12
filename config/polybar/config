@@ -35,7 +35,7 @@ padding-left = 2
 padding-right = 2
 background = ${colors.shade1}
 foreground = ${colors.shade7}
-font-0 = Segoe Semibold:size=11;3
+font-0 = Segoe Semibold:size=10;3
 modules-left =
 modules-center = 
 modules-right = pulseaudio wired-network date 
