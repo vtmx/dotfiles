@@ -99,6 +99,7 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#1e2227",
     "tab.border": "#21252b",
+    "tab.activeBorder": "#21252b",
     "sideBar.background": "#1e2227",
     "panel.border": "#393e48",
     "panel.background": "#1e2227",
