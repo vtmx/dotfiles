@@ -60,9 +60,9 @@ alias matrix='cmatrix -C white'
 # pacman
 alias pac='sudo pacman'
 alias pacu='sudo pacman -Syu'
-alias pacs='sudo pacman -S'
-alias pacc='sudo pacman -R'
-alias yays='sudo yay -S'
+alias paci='sudo pacman -S'
+alias pacr='sudo pacman -R'
+alias yayi='sudo yay -S'
 alias yayr='sudo yay -R'
 
 # configs
