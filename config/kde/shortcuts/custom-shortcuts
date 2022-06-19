@@ -3,7 +3,7 @@ DataCount=1
 
 [Data_1]
 Comment=Comment
-DataCount=16
+DataCount=17
 Enabled=true
 Name=VitorMelo
 SystemGroup=0
@@ -22,14 +22,14 @@ Type=SIMPLE_ACTION_DATA
 [Data_1_10]
 Comment=Comment
 Enabled=true
-Name=Polybar
+Name=KColor
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_10Actions]
 ActionsCount=1
 
 [Data_1_10Actions0]
-CommandURL=killall polybat & /home/vitor/.config/polybar/launch.sh
+CommandURL=kcolorchooser
 Type=COMMAND_URL
 
 [Data_1_10Conditions]
@@ -41,21 +41,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_10Triggers0]
-Key=F11
+Key=Meta+K
 Type=SHORTCUT
-Uuid={95051306-72da-45e1-b1c5-49efa10ca798}
+Uuid={9fa53dfb-82cc-4dc6-af23-9feeb42c4f78}
 
 [Data_1_11]
 Comment=Comment
 Enabled=true
-Name=qBitTorrent
+Name=Kitty
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_11Actions]
 ActionsCount=1
 
 [Data_1_11Actions0]
-CommandURL=qbittorrent
+CommandURL=kitty
 Type=COMMAND_URL
 
 [Data_1_11Conditions]
@@ -67,21 +67,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_11Triggers0]
-Key=Meta+T
+Key=Meta+Return
 Type=SHORTCUT
-Uuid={0d49fc0d-917e-479c-a9da-8d50a7da6fce}
+Uuid={b8eeb6be-9372-4089-a1ca-c6145aa5e453}
 
 [Data_1_12]
 Comment=Comment
 Enabled=true
-Name=Rofi
+Name=Polybar
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_12Actions]
 ActionsCount=1
 
 [Data_1_12Actions0]
-CommandURL=rofi -show drun -drun-display-format {name}
+CommandURL=killall polybat & /home/vitor/.config/polybar/launch.sh
 Type=COMMAND_URL
 
 [Data_1_12Conditions]
@@ -93,21 +93,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_12Triggers0]
-Key=Meta+Space
+Key=F11
 Type=SHORTCUT
-Uuid={6362f0bd-d70e-4a33-9664-f5082b5cb972}
+Uuid={95051306-72da-45e1-b1c5-49efa10ca798}
 
 [Data_1_13]
 Comment=Comment
 Enabled=true
-Name=Settings
+Name=qBitTorrent
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_13Actions]
 ActionsCount=1
 
 [Data_1_13Actions0]
-CommandURL=systemsettings
+CommandURL=qbittorrent
 Type=COMMAND_URL
 
 [Data_1_13Conditions]
@@ -119,21 +119,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_13Triggers0]
-Key=Meta+,
+Key=Meta+T
 Type=SHORTCUT
-Uuid={47c18075-af43-46bc-8961-8253910d4d4c}
+Uuid={0d49fc0d-917e-479c-a9da-8d50a7da6fce}
 
 [Data_1_14]
 Comment=Comment
 Enabled=true
-Name=Steam
+Name=Rofi
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_14Actions]
 ActionsCount=1
 
 [Data_1_14Actions0]
-CommandURL=steam
+CommandURL=rofi -show drun -drun-display-format {name}
 Type=COMMAND_URL
 
 [Data_1_14Conditions]
@@ -145,21 +145,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_14Triggers0]
-Key=Meta+S
+Key=Meta+Space
 Type=SHORTCUT
-Uuid={49e2694c-7563-4557-ba69-6f6e55f8e36f}
+Uuid={6362f0bd-d70e-4a33-9664-f5082b5cb972}
 
 [Data_1_15]
 Comment=Comment
 Enabled=true
-Name=Vivaldi
+Name=Steam
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_15Actions]
 ActionsCount=1
 
 [Data_1_15Actions0]
-CommandURL=vivaldi-stable
+CommandURL=steam
 Type=COMMAND_URL
 
 [Data_1_15Conditions]
@@ -171,21 +171,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_15Triggers0]
-Key=Meta+V
+Key=Meta+S
 Type=SHORTCUT
-Uuid={10c9bcc3-9b0d-4521-84ca-379dd92751b7}
+Uuid={49e2694c-7563-4557-ba69-6f6e55f8e36f}
 
 [Data_1_16]
 Comment=Comment
 Enabled=true
-Name=VLC
+Name=Vivaldi
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_16Actions]
 ActionsCount=1
 
 [Data_1_16Actions0]
-CommandURL=vlc
+CommandURL=vivaldi-stable
 Type=COMMAND_URL
 
 [Data_1_16Conditions]
@@ -197,6 +197,32 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_16Triggers0]
+Key=Meta+V
+Type=SHORTCUT
+Uuid={10c9bcc3-9b0d-4521-84ca-379dd92751b7}
+
+[Data_1_17]
+Comment=Comment
+Enabled=true
+Name=VLC
+Type=SIMPLE_ACTION_DATA
+
+[Data_1_17Actions]
+ActionsCount=1
+
+[Data_1_17Actions0]
+CommandURL=vlc
+Type=COMMAND_URL
+
+[Data_1_17Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_1_17Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_1_17Triggers0]
 Key=Meta+M
 Type=SHORTCUT
 Uuid={5648e70b-6fe4-4a96-93f1-4a302c590945}
@@ -224,14 +250,14 @@ Uuid={6683d2fb-4605-4f27-a024-9bd0dcf67a10}
 [Data_1_2]
 Comment=Comment
 Enabled=true
-Name=Conky
+Name=Blender
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_2Actions]
 ActionsCount=1
 
 [Data_1_2Actions0]
-CommandURL=/home/vitor/Dev/dotfiles/scripts/toggle-conky.sh
+CommandURL=
 Type=COMMAND_URL
 
 [Data_1_2Conditions]
@@ -243,21 +269,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=Meta+F1
+Key=
 Type=SHORTCUT
-Uuid={8fc7e5f7-8ccd-4f9d-afe4-ca72467449d3}
+Uuid={5be1b960-a4f5-4386-a18b-e5082191728f}
 
 [Data_1_3]
 Comment=Comment
 Enabled=true
-Name=Blender
+Name=BitWarden
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_3Actions]
 ActionsCount=1
 
 [Data_1_3Actions0]
-CommandURL=
+CommandURL=bitwarden-desktop
 Type=COMMAND_URL
 
 [Data_1_3Conditions]
@@ -269,21 +295,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_3Triggers0]
-Key=
+Key=Meta+B
 Type=SHORTCUT
-Uuid={5be1b960-a4f5-4386-a18b-e5082191728f}
+Uuid={451567a5-0106-4432-9e47-3574ab357941}
 
 [Data_1_4]
 Comment=Comment
 Enabled=true
-Name=BitWarden
+Name=Chrome
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_4Actions]
 ActionsCount=1
 
 [Data_1_4Actions0]
-CommandURL=bitwarden-desktop
+CommandURL=chromium
 Type=COMMAND_URL
 
 [Data_1_4Conditions]
@@ -295,21 +321,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_4Triggers0]
-Key=Meta+B
+Key=Meta+G
 Type=SHORTCUT
-Uuid={451567a5-0106-4432-9e47-3574ab357941}
+Uuid={71139430-99b7-43ad-8884-aaf60d7ddbc1}
 
 [Data_1_5]
 Comment=Comment
 Enabled=true
-Name=Chrome
+Name=Code
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_5Actions]
 ActionsCount=1
 
 [Data_1_5Actions0]
-CommandURL=chromium
+CommandURL=code
 Type=COMMAND_URL
 
 [Data_1_5Conditions]
@@ -321,21 +347,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_5Triggers0]
-Key=Meta+G
+Key=Meta+C
 Type=SHORTCUT
-Uuid={71139430-99b7-43ad-8884-aaf60d7ddbc1}
+Uuid={7b1c160e-d384-4557-806c-818752ef2a42}
 
 [Data_1_6]
 Comment=Comment
 Enabled=true
-Name=Code
+Name=Conky
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_6Actions]
 ActionsCount=1
 
 [Data_1_6Actions0]
-CommandURL=code
+CommandURL=/home/vitor/Dev/dotfiles/scripts/toggle-conky.sh
 Type=COMMAND_URL
 
 [Data_1_6Conditions]
@@ -347,9 +373,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_6Triggers0]
-Key=Meta+C
+Key=Meta+F1
 Type=SHORTCUT
-Uuid={7b1c160e-d384-4557-806c-818752ef2a42}
+Uuid={8fc7e5f7-8ccd-4f9d-afe4-ca72467449d3}
 
 [Data_1_7]
 Comment=Comment
@@ -373,21 +399,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_7Triggers0]
-Key=
+Key=Meta+Ctrl+Print
 Type=SHORTCUT
 Uuid={1a335688-a506-4256-9f49-ce930f66b214}
 
 [Data_1_8]
 Comment=Comment
 Enabled=true
-Name=KColor
+Name=KDE Settings
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_8Actions]
 ActionsCount=1
 
 [Data_1_8Actions0]
-CommandURL=kcolorchooser
+CommandURL=systemsettings
 Type=COMMAND_URL
 
 [Data_1_8Conditions]
@@ -399,21 +425,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_8Triggers0]
-Key=Meta+K
+Key=Meta+,
 Type=SHORTCUT
-Uuid={9fa53dfb-82cc-4dc6-af23-9feeb42c4f78}
+Uuid={47c18075-af43-46bc-8961-8253910d4d4c}
 
 [Data_1_9]
 Comment=Comment
 Enabled=true
-Name=Kitty
+Name=KDE Shortcuts
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_9Actions]
 ActionsCount=1
 
 [Data_1_9Actions0]
-CommandURL=kitty
+CommandURL=systemsettings5 kcm_keys
 Type=COMMAND_URL
 
 [Data_1_9Conditions]
@@ -425,9 +451,9 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_9Triggers0]
-Key=Meta+Return
+Key=Meta+.
 Type=SHORTCUT
-Uuid={b8eeb6be-9372-4089-a1ca-c6145aa5e453}
+Uuid={a9833ece-93d5-4f29-8b89-8e7931e80c4c}
 
 [Main]
 AllowMerge=false
