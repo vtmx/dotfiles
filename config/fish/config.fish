@@ -79,13 +79,19 @@ alias vp='nvim $HOME/.config/nvim/lua/plugins.lua'
 alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
 
 # paths
+alias cddesk='cd $HOME/Desktop'
+alias cddoc='cd $HOME/Documents'
+alias cddow='cd $HOME/Downloads'
+alias cdpic='cd $HOME/Pictures'
+alias cdmus='cd $HOME/Music'
+alias cdvid='cd $HOME/Videos'
 alias cdc='cd $HOME/.config'
 alias cdd='cd $HOME/Dev/dotfiles'
 alias cdp='cd $HOME/Dev/projects'
 alias cdf='cd $HOME/Dev/projects/fraseologia'
+alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cds='cd $HOME/Dev/shortcuts'
 alias cdt='cd $HOME/Downloads/temp'
-alias cdv='cd $HOME/Dev/projects/vitormelo'
 
 # yarn
 alias yd='yarn dev'
