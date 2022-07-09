@@ -107,7 +107,7 @@ alias gb='git branch'
 alias gbd='git branch -d'
 alias gl='git pull'
 alias gp='git push'
-alias gcmsg='git commit -m'
+alias gcm='git commit -m'
 
 # variables
 export BROWSER=vivaldi-stable

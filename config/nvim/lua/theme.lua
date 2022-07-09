@@ -10,7 +10,6 @@ onedarkpro.setup {
   theme = 'onedark',
 	colors = {
 	  bg = c.shade0,
-	  fg = '#dcd7ba', -- test kanagawa
   },
 	hlgroups = {
 		VertSplit = { bg = c.shade0, fg = c.shade3 }
