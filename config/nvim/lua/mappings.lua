@@ -78,7 +78,7 @@ map('n', '<leader>f', ':retab<cr>')
 map('n', 'Q', '@q')
 
 -- mm to mark in m, M to jump
-map('n', 'M', '`m')
+map('n', 'M', '`')
 
 -- split
 map('n', 'ss', ':sp<cr>')
