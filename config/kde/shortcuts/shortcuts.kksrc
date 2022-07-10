@@ -10,11 +10,11 @@ Switch to Next Keyboard Layout=Ctrl+Alt+K
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Next Tab=Ctrl+PgDown; Ctrl+]
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
-Back=Alt+Left; Back
+Back=Back; Alt+Left
 BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
@@ -23,8 +23,8 @@ Close=Ctrl+W; Ctrl+Esc
 ConfigureNotifications=
 ConfigureToolbars=
 Copy=Ctrl+Ins; Ctrl+C
-CreateFolder=F10; Ctrl+Shift+N
-Cut=Shift+Del; Ctrl+X
+CreateFolder=Ctrl+Shift+N; F10
+Cut=Ctrl+X; Shift+Del
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
 DeleteWordForward=Ctrl+Del
@@ -41,14 +41,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Forward; Alt+Right
+Forward=Alt+Right; Forward
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Alt+Home; Home Page
+Home=Home Page; Alt+Home
 KeyBindings=Ctrl+Alt+,
 Mail=
 MoveToTrash=Del
@@ -57,7 +57,7 @@ Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
 OpenRecent=
-Paste=Ctrl+V; Shift+Ins
+Paste=Shift+Ins; Ctrl+V
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+Shift+,
 PrevCompletion=Ctrl+Up
@@ -77,7 +77,7 @@ Save=Ctrl+S
 SaveAs=Ctrl+Shift+S
 SaveOptions=
 SelectAll=Ctrl+A
-ShowHideHiddenFiles=Ctrl+H; Alt+.
+ShowHideHiddenFiles=Alt+.; Ctrl+H
 ShowMenubar=Ctrl+M
 ShowStatusbar=
 ShowToolbar=
@@ -92,6 +92,43 @@ WhatsThis=Shift+F1
 Zoom=
 ZoomIn=Ctrl+=; Ctrl++
 ZoomOut=Ctrl+-
+
+[bismuth][Global Shortcuts]
+decrease_master_size=
+decrease_master_win_count=
+decrease_window_height=
+decrease_window_width=
+focus_bottom_window=
+focus_left_window=
+focus_next_window=
+focus_prev_window=
+focus_right_window=
+focus_upper_window=
+increase_master_size=
+increase_master_win_count=
+increase_window_height=
+increase_window_width=
+move_window_to_bottom_pos=
+move_window_to_left_pos=
+move_window_to_next_pos=
+move_window_to_prev_pos=
+move_window_to_right_pos=
+move_window_to_upper_pos=
+next_layout=
+prev_layout=
+push_window_to_master=
+rotate=
+rotate_part=
+rotate_reverse=
+toggle_float_layout=
+toggle_monocle_layout=
+toggle_quarter_layout=
+toggle_spiral_layout=
+toggle_spread_layout=
+toggle_stair_layout=
+toggle_three_column_layout=
+toggle_tile_layout=
+toggle_window_floating=
 
 [juk][Global Shortcuts]
 back=Ctrl+Alt+Left
@@ -120,7 +157,7 @@ display=Display; Meta+P
 [khotkeys][Global Shortcuts]
 {0d49fc0d-917e-479c-a9da-8d50a7da6fce}=Meta+T
 {10c9bcc3-9b0d-4521-84ca-379dd92751b7}=Meta+V
-{1a335688-a506-4256-9f49-ce930f66b214}=Meta+Ctrl+Print
+{1a335688-a506-4256-9f49-ce930f66b214}=Ctrl+Print
 {451567a5-0106-4432-9e47-3574ab357941}=Meta+B
 {47c18075-af43-46bc-8961-8253910d4d4c}=Meta+,
 {49e2694c-7563-4557-ba69-6f6e55f8e36f}=Meta+S
@@ -168,6 +205,7 @@ MoveZoomDown=
 MoveZoomLeft=
 MoveZoomRight=
 MoveZoomUp=
+Overview=Meta+W
 Setup Window Shortcut=
 Show Desktop=Meta+D
 ShowDesktopGrid=Meta+Tab
@@ -200,9 +238,9 @@ Switch to Desktop 6=
 Switch to Desktop 7=
 Switch to Desktop 8=
 Switch to Desktop 9=
-Switch to Next Desktop=Meta+Ctrl+Right; Meta+Ctrl+L
+Switch to Next Desktop=Meta+Ctrl+L; Meta+Ctrl+Right
 Switch to Next Screen=
-Switch to Previous Desktop=Meta+Ctrl+H; Meta+Ctrl+Left
+Switch to Previous Desktop=Meta+Ctrl+Left; Meta+Ctrl+H
 Switch to Previous Screen=
 Switch to Screen 0=
 Switch to Screen 1=
@@ -229,7 +267,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Q; Ctrl+Q
+Window Close=Ctrl+Q; Alt+F4; Meta+Q
 Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
@@ -284,7 +322,7 @@ Window to Desktop 6=
 Window to Desktop 7=
 Window to Desktop 8=
 Window to Desktop 9=
-Window to Next Desktop=Meta+Shift+L; Meta+Shift+Right
+Window to Next Desktop=Meta+Shift+Right; Meta+Shift+L
 Window to Next Screen=
 Window to Previous Desktop=Meta+Shift+Left; Meta+Shift+H
 Window to Previous Screen=
@@ -327,10 +365,13 @@ _launch=
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Search; Alt+F2; Alt+Space
+_launch=Alt+Space; Alt+F2; Search
 
 [org.kde.ksysguard.desktop][Global Shortcuts]
 _launch=Ctrl+Shift+Esc
+
+[org.kde.plasma.emojier.desktop][Global Shortcuts]
+_launch=
 
 [org.kde.spectacle.desktop][Global Shortcuts]
 ActiveWindowScreenShot=Meta+Print
@@ -391,7 +432,7 @@ switch to previous activity=
 toggle do not disturb=
 
 [systemsettings.desktop][Global Shortcuts]
-_launch=Meta+I; Tools
+_launch=Tools; Meta+I
 kcm-kscreen=
 kcm-lookandfeel=
 kcm-users=
