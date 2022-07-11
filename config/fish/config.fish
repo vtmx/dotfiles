@@ -100,7 +100,7 @@ alias ydp='yarn deploy'
 # git
 alias g='git'
 alias gaa='git add --all'
-alias gc='git commit -m'
+alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gcl='git clone'
