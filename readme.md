@@ -31,7 +31,7 @@
 - **File Manager:** [Dolphin](https://apps.kde.org/dolphin)
 - **File Syncronizer:** [FreeFileSync](https://freefilesync.org), [Krusader](https://krusader.org)
 - **Editor:** [VS Code](https://code.visualstudio.com), [Nvim](https://neovim.io)
-- **Browser:** [Vivaldi](https://vivaldi.com/pt-br), [uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)]
+- **Browser:** [Vivaldi](https://vivaldi.com/pt-br), [uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)
 - **Music and Video Player:** [VLC](https://www.videolan.org/vlc)
 - **Screenshot:** [Flameshot](https://flameshot.org)
 - **Color Picker:** [KColorChooser](https://apps.kde.org/kcolorchooser)
