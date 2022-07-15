@@ -14,7 +14,7 @@
 - **System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
 - **Panel:** [Plasma Panel 28](https://userbase.kde.org/Plasma/Panels)
 - **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar)
-- **Bismuth:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)
+- **TWM:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)
 
 ## Plasma Appearance
 - **Application Style:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
