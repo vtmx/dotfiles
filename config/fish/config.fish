@@ -66,11 +66,13 @@ alias matrix='cmatrix -C white'
 
 # configs
 alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
+alias bc='nvim $HOME/.config/bspwm/bspwmrc'
 alias fc='nvim $HOME/.config/fish/config.fish'
 alias kc='nvim $HOME/.config/kitty/kitty.conf'
 alias rc='nvim $HOME/.config/rofi/config.rasi'
 alias pc='nvim $HOME/.config/polybar/config'
 alias tc='nvim $HOME/.tmux.conf'
+alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
 alias vc='nvim $HOME/.config/nvim/init.lua'
 alias vs='nvim $HOME/.config/nvim/lua/settings.lua'
 alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
