@@ -11,8 +11,8 @@ super + shift + q
 	bspc quit
 
 # laucnher
-super + space
-	rofi -show drun -drun-display-format {name}
+super + @space
+	rofi -show drun -drun-display-format
 
 # terminal
 super + {_,ctrl + } Return
@@ -30,11 +30,15 @@ super + shift + b
 super + {_,shift + }f
 	bspc node -t "~"{fullscreen},{floating,tiled}
 
-# bspc node focused.tiled -t fullscreen || bspc node focused.fullscreen -t tiled
+#	bspc node focused.tiled -t fullscreen || bspc node focused.fullscreen -t tiled
+# bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 
 # focus and move window
-super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
-	bspc node -{f,s} {west,west,south,south,north,north,east,east}
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
 
 super + bracket{left,right}
 	bspc node -f {prev,next}
@@ -51,9 +55,14 @@ super {_,shift + }{1-9}
 super + alt + {h,j,k,l}
 	bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
 
-# move focused window to the next workspace and then switch to that workspace
-alt + shift + {h,l}
-	id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
+# return current desktop
+# bspc query -D -d --names
+# DESKTOP = ${bspc query -D -d --names}
+# bspc rule -a \* -o desktop="$DESKTOP && inkspace
+
+# exit commands
+# systemctl poweroff
+# systemctl reboot
 
 # change wallpaper:
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofi
@@ -64,3 +73,4 @@ alt + shift + {h,l}
 # open apps test
 # super + o ; {e,w,m}
 # 	{gvim,firefox,thunderbird}
+
