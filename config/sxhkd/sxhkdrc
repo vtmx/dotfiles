@@ -1,17 +1,60 @@
+# reload
 super + r
 	bspc wm -r; notify-send 'sxhkd' 'reload'
 
-#super + Return
-	#alacritty
+# close window
+super + c|q
+	bspc node -c
 
-super + shift + Return
-	konsole
+# quit
+super + shift + q
+	bspc quit
 
-super + f10
-	polybar -r bar
+# laucnher
+super + space
+	rofi -show drun
+	
+# terminal
+super + {_,shift+}return
+	{kitty,alacritty}
 
-super + f11
-	pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+# toggle polybar
+super + shift + b
+	polybar bspwm
 
-super + f12
-	bspc wm -r; notify-send 'sxhkd' 'reload'
+# toggle fullscreen
+super + {_, shift +} f
+	bspc node -t "~"{fullscreen},{floating,tiled}
+
+# focus and move window
+super + {_,shift+}{left|h,down|j,up|k,right|l}
+	bspc node -{f,s} {west, south, north, east}
+
+super + bracket{left|h,right|l}
+	bspc node -f {prev,next}
+
+# switch workspace or send window to other workspace
+super + ctrl + {_,shift + }{left|h,right|l}
+	bspc {desktop -f,node -d} {prev,next}.local
+
+# switch and send window to other workspace
+super {_shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# resize window
+super + alt + {left|h,down|j,up|k,right|l}
+	bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
+
+# move focused window to the next workspace and then switch to that workspace
+alt + shift + {left|h,right|l}
+	id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
+
+# change wallpaper:
+# https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofi
+# super + r ; c ; b
+# 	RAND=$(find "$WALLPAPERS" -xtype f | sort -R | head -1) \
+# 		xwallpaper --zoom "$WALLPAPERS/$RAND"
+#
+# open apps test
+# super + o ; {e,w,m}
+# 	{gvim,firefox,thunderbird}

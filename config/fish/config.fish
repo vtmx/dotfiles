@@ -38,6 +38,13 @@ set -g fish_pager_color_completion $shade7
 # plugin ssh
 fish_ssh_agent
 
+# variables
+export BROWSER=vivaldi-stable
+export CODE=code
+export EDITOR='nvim
+export VISUAL='nvim
+export MICRO_TRUECOLOR=1
+
 # alias
 # commands
 alias ...='cd ../..'
@@ -56,14 +63,6 @@ alias r='ranger'
 alias v='nvim'
 alias t='tmux'
 alias matrix='cmatrix -C white'
-
-# pacman
-alias pac='sudo pacman'
-alias pacu='sudo pacman -Syu'
-alias paci='sudo pacman -S'
-alias pacr='sudo pacman -R'
-alias yayi='sudo yay -S'
-alias yayr='sudo yay -R'
 
 # configs
 alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
@@ -93,9 +92,16 @@ alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cds='cd $HOME/Dev/shortcuts'
 alias cdt='cd $HOME/Downloads/temp'
 
-# yarn
-alias yd='yarn dev'
-alias ydp='yarn deploy'
+# pacman
+alias pac='sudo pacman'
+alias pacu='sudo pacman -Syu'
+alias paci='sudo pacman -S'
+alias pacr='sudo pacman -R'
+
+# yay
+alias yayi='sudo yay -S'
+alias yayr='sudo yay -R'
+alias yayu='sudo yay -Syu'
 
 # git
 alias g='git'
@@ -109,12 +115,9 @@ alias gbd='git branch -d'
 alias gl='git pull'
 alias gp='git push'
 
-# variables
-export BROWSER=vivaldi-stable
-export CODE=code
-export EDITOR='nvim
-export VISUAL='nvim
-export MICRO_TRUECOLOR=1
+# yarn
+alias yd='yarn dev'
+alias ydp='yarn deploy'
 
 # custom sh
 alias ide='ide.sh'

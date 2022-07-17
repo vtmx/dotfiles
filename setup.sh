@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Dir
 CURRENT_DIR=$(cd $(dirname $0) && pwd)
@@ -171,6 +171,19 @@ create_links() {
 	name="kitty"
 	target="$SRC_DIR/kitty/kitty.conf"
 	link="$CONFIG_DIR/kitty"
+	create_link "$name" "$target" "$link"
+
+	# ----------------------------------------------------------
+	# polybar
+	# ----------------------------------------------------------
+	name="polybar"
+	target="$SRC_DIR/polybar/config.ini"
+	link="$CONFIG_DIR/polybar"
+	create_link "$name" "$target" "$link"
+
+	name="polybar launch"
+	target="$SRC_DIR/polybar/launch.sh"
+	link="$CONFIG_DIR/polybar"
 	create_link "$name" "$target" "$link"
 
 	# ----------------------------------------------------------
