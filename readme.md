@@ -6,7 +6,7 @@
 - **OS:** [Manjaro](https://manjaro.org/downloads/official/kde)
 - **DE:** [Plasma](https://kde.org/pt-br/plasma-desktop)
 - **WM:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
-- **WM Theme:** [Breeze](https://github.com/KDE/breeze)
+- **WM Theme:** [ActiveAccentFrame](https://github.com/nclarius/Plasma-window-decorations)
 - **Theme:** [Breeze Dark [Plasma]](https://archlinux.org/packages/extra/x86_64/breeze)
 - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty)
 - **Shell:** [Fish](https://fishshell.com) + [Starship](https://starship.rs)
@@ -17,9 +17,9 @@
 - **TWM:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)
 
 ## Plasma Appearance
-- **Application Style:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
+- **Application Style:** [Lightly](https://github.com/Luwx/Lightly)
 - **Plasma Style:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
-- **Colors:** [One Dark V](config/kde/kde.colors)
+- **Colors:** [OneDarkV](config/kde/kde.colors)
 - **Window Decorations:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)
 - **Icons:** [Sensual-Breeze-Dark [Plasma]](https://store.kde.org/p/1373825)
 - **Cursors:** [We10XOS Cursors](https://store.kde.org/p/1381208)

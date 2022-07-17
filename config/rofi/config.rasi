@@ -13,24 +13,26 @@ configuration {
 
 @theme "/dev/null"
 
-* {
-	shade0: #23272e; /* background color (one dark darker) */
-	shade1: #1e2227; /* ui, darker */
-	shade2: #3d4556; /* ui, text selection */
-	shade3: #5c6370; /* ui, code comments */
-	shade4: #2c313c; /* ui, line highlight */
-	shade5: #828997; /* ui */
-	shade6: #979eab; /* foreground text */
-	shade7: #abb2bf; /* foreground text */
+/* colors */
 
-	accent0: #e06c75; /* red */
-	accent1: #d19a66; /* orange */
-	accent2: #e5c07b; /* yellow */
-	accent3: #98c379; /* green */
-	accent4: #56b6c2; /* cyan */
-	accent5: #61afef; /* blue */
-	accent6: #c678dd; /* purple */
-	accent7: #be5046; /* magenta */
+* {
+	shade0: #23272e;
+	shade1: #1e2227;
+	shade2: #3d4556;
+	shade3: #5c6370;
+	shade4: #2c313c;
+	shade5: #828997;
+	shade6: #979eab;
+	shade7: #abb2bf;
+
+	accent0: #e06c75;
+	accent1: #d19a66;
+	accent2: #e5c07b;
+	accent3: #98c379;
+	accent4: #56b6c2;
+	accent5: #61afef;
+	accent6: #c678dd;
+	accent7: #be5046;
 }
 
 window {
