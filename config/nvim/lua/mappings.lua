@@ -60,8 +60,8 @@ map('v', '<a-k>', [[:m'<-2<cr>`>my`<mzgv`yo`z]])
 -- clone line
 map('n', '<c-a-j>', 'yyp')
 map('n', '<c-a-k>', 'yyP')
-map('v', '<c-a-j>', 'yP')
-map('v', '<c-a-k>', 'yp')
+map('v', '<c-a-j>', [[:'<,'>copy '><cr>]])
+map('v', '<c-a-k>', 'ygvO<esc>P')
 
 -- keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
