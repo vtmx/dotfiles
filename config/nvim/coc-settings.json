@@ -1,13 +1,45 @@
 {
-  "coc.preferences.colorSupport": false,
-  "coc.preferences.formatOnType": true,
+  "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
-  "vetur.format.defaultFormatter.html": "prettier",
+  "prettier.printWidth": 720,
+  "html.format.wrapLineLength": 0,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "off"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatter.scss": "prettier",
-  "vetur.format.defaultFormatter.js": "prettier",
   "vetur.format.defaultFormatter.ts": "prettier",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+
   "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+    },
     "prettier": {
       "singleQuote": true,
       "printWidth": 120
