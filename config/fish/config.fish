@@ -48,6 +48,7 @@ export MICRO_TRUECOLOR=1
 # alias
 # commands
 alias ...='cd ../..'
+alias ....='cd ../../..'
 alias c='clear'
 alias cat='bat'
 alias cls='clear'

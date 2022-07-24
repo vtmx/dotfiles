@@ -1,0 +1,76 @@
+:host, :root {
+  --shade0: #23272e;
+  --shade1: #1e2227;
+  --shade2: #3d4556;
+  --shade3: #5c6370;
+  --shade4: #2c313c;
+  --shade5: #828997;
+  --shade6: #979eab;
+  --shade7: #abb2bf;
+  --accent0: #e06c75;
+  --accent1: #d19a66;
+  --accent2: #e5c07b;
+  --accent3: #98c379;
+  --accent4: #56b6c2;
+  --accent5: #61afef;
+  --accent6: #c678dd;
+  --accent7: #be5046;
+}
+
+#navigator-toolbox-background {
+  background: var(--shade1) !important;
+}
+
+#titlebar, #nav-bar, #PersonalToolbar {
+  background: var(--shade1) !important;
+}
+
+#navigator-toolbox {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+}
+
+#nav-bar {
+  box-shadow: none !important;
+}
+
+/* tab */
+.tabbrowser-tab .tab-content {
+  color: var(--shade3) !important;
+}
+
+/* tab active background */
+.tabbrowser-tab[visuallyselected="true"] .tab-background {
+  background: var(--shade4) !important;
+} 
+
+/* tab active color */
+.tabbrowser-tab[visuallyselected="true"] .tab-content {
+  color: var(--shade7) !important;
+}
+
+/* urlbar */
+#urlbar {
+  padding-left: 8px !important;
+}
+
+/* remove icon search */
+#identity-box {
+  display: none !important;
+}
+
+/* remove shadow */
+#urlbar-container {
+  box-shadow: none !important;
+}
+
+/* url background */
+#urlbar-background {
+  background-color: var(--shade0) !important;
+  border: none !important;
+}
+
+/* bookmarks */
+#personal-toolbar-empty-description, #PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
+  margin: 2px 4px 4px 4px !important;
+  padding: 4px 8px !important;
+}
