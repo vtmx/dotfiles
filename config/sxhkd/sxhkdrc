@@ -2,9 +2,9 @@
 super + r
 	bspc wm -r; notify-send 'sxhkd' 'reload'
 
-# close window
-super + {c,q}
-	bspc node -c
+# close and kill window
+super + {_,shift + }c
+	bspc node -{c,k}
 
 # quit
 super + shift + q
@@ -15,7 +15,7 @@ super + @space
 	rofi -show drun -drun-display-format
 
 # terminal
-super + {_,ctrl + } Return
+super + {_,ctrl + }Return
 	{kitty,alacritty}
 
 # browser
@@ -34,11 +34,11 @@ super + {_,shift + }f
 # bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
 
 # focus and move window
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
+	bspc node -{f,s} {west,west,south,south,north,north,east,east}
 
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
+# super + {_,shift + }{Left,Down,Up,Right}
+# 	bspc node -{f,s} {west,south,north,east}
 
 super + bracket{left,right}
 	bspc node -f {prev,next}
