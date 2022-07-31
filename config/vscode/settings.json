@@ -87,7 +87,6 @@
   // https://code.visualstudio.com/api/references/theme-color
   // https://themes.vscode.one/edit/local/
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
   "workbench.layoutControl.enabled": false,
@@ -384,5 +383,6 @@
       "before": ["<leader>", "x"],
       "after": ["\"", "+", "x"]
     }
-  ]
+  ],
+  "workbench.colorTheme": "One Dark Pro Darker"
 }
