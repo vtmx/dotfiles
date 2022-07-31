@@ -24,16 +24,27 @@ set -g fish_color_search_match --background=$shade2
 set -g fish_color_valid_path normal
 set -g fish_pager_color_completion $shade7
 
-# active default key
-# fish_default_key_bindings
+# active vim mode
+fish_vi_key_bindings
 
-# active vim key
-# fish_vi_key_bindings 
+# emulates vim's cursor shape behavior
+# set the normal and visual mode cursors to a block
+set fish_cursor_default block
 
-# kj to scape vim mode 
-# function fish_user_key_bindings
-#  bind -M insert -m default kj force-repaint
-# end
+# set the insert mode cursor to a line
+set fish_cursor_insert line
+
+# set the replace mode cursor to an underscore
+set fish_cursor_replace_one underscore
+
+# the following variable can be used to configure cursor shape in
+# visual mode, but due to fish_cursor_default, is redundant here
+set fish_cursor_visual block
+
+# kj to scape vim mode
+function fish_user_key_bindings
+ bind -M insert -m default kj force-repaint
+end
 
 # plugin ssh
 fish_ssh_agent
