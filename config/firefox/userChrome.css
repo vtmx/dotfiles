@@ -17,6 +17,10 @@
   --accent7: #be5046;
 }
 
+.titlebar-spacer {
+	display: none;
+}
+
 #navigator-toolbox-background {
   background: var(--shade1) !important;
 }
@@ -38,6 +42,11 @@
   color: var(--shade3) !important;
 }
 
+/* tab hover */
+#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {
+  color: var(--shade3) !important;
+}
+
 /* tab active background */
 .tabbrowser-tab[visuallyselected="true"] .tab-background {
   background: var(--shade4) !important;
@@ -46,6 +55,10 @@
 /* tab active color */
 .tabbrowser-tab[visuallyselected="true"] .tab-content {
   color: var(--shade7) !important;
+}
+
+#tabs-newtab-button:hover {
+  color: var(--shade3) !important;
 }
 
 /* urlbar */

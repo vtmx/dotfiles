@@ -49,9 +49,9 @@
 }
 
 /* background first page */
-body{
-	background: var(--shade0) !important;
-}
+/* body{ */
+/* 	background: var(--shade0) !important; */
+/* } */
 
 /* search bar in settings */
 .sticky-container {
