@@ -24,8 +24,16 @@ set -g fish_color_search_match --background=$shade2
 set -g fish_color_valid_path normal
 set -g fish_pager_color_completion $shade7
 
-# active vim mode
-fish_vi_key_bindings
+# keybinds
+function fish_user_key_bindings
+	# enable vi mode
+	fish_vi_key_bindings
+
+	# mappings
+	bind -M insert -m default kj backward-char force-repaint
+	bind -m default L end-of-line
+	bind -m default H beginning-of-line
+end
 
 # emulates vim's cursor shape behavior
 # set the normal and visual mode cursors to a block
@@ -41,13 +49,8 @@ set fish_cursor_replace_one underscore
 # visual mode, but due to fish_cursor_default, is redundant here
 set fish_cursor_visual block
 
-# kj to scape vim mode
-function fish_user_key_bindings
- bind -M insert -m default kj force-repaint
-end
-
 # plugin ssh
-fish_ssh_agent
+# fish_ssh_agent
 
 # variables
 export BROWSER=vivaldi-stable
@@ -119,7 +122,7 @@ alias yayu='sudo yay -Syu'
 
 # git
 alias g='git'
-alias ga='git add --all'
+alias gaa='git add --all'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcb='git checkout -b'
