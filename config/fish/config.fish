@@ -33,6 +33,9 @@ function fish_user_key_bindings
 	bind -M insert -m default kj backward-char force-repaint
 	bind -m default L end-of-line
 	bind -m default H beginning-of-line
+
+	# fish auto-complete
+	bind -M insert \cf accept-autosuggestion
 end
 
 # emulates vim's cursor shape behavior
