@@ -18,9 +18,9 @@ super + @space
 super + {_,ctrl + }Return
 	{kitty,alacritty}
 
-# browser
-super + b
-	vivaldi-stable
+# apps
+super + {a,b,g,m,p,t,s,v}
+	{pamac-manager,vivaldi-stable,steam,vlc,color-picker,qbittorrent,flameshot gui,code}
 
 # toggle polybar
 super + shift + b
