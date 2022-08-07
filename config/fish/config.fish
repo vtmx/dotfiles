@@ -56,11 +56,10 @@ end
 # fish_ssh_agent
 
 # variables
-export BROWSER=vivaldi-stable
-export CODE=code
-export EDITOR=nvim
-export VISUAL=nvim
-export MICRO_TRUECOLOR=1
+export BROWSER='vivaldi-stable'
+export CODE='code'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # alias
 # commands
