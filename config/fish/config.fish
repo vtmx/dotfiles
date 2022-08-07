@@ -58,8 +58,8 @@ end
 # variables
 export BROWSER=vivaldi-stable
 export CODE=code
-export EDITOR='nvim
-export VISUAL='nvim
+export EDITOR=nvim
+export VISUAL=nvim
 export MICRO_TRUECOLOR=1
 
 # alias
