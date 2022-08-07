@@ -41,6 +41,7 @@
     ]
   },
   "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
 
   // Explorer
   "explorer.confirmDelete": false,
@@ -167,9 +168,6 @@
   },
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
   },
 
   // Vetur
