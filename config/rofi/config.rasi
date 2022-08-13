@@ -1,17 +1,18 @@
 configuration {
-	display-drun: "App:";
-  display-window: "Windows:";
+	modi: "drun,window,filebrowser";
+	display-drun: "";
+	display-run: "";
+  display-window: "";
+  display-filebrowser: "";
 	lines: 5;
 	font: "IBM Plex Mono Medm 11";
-	terminal: "alacritty";
+	terminal: "kitty";
 	location: 0;
 	separator-style: "solid";
 	show-icons: false;
 	disable-history: false;
 	hide-scrollbar: true;
 }
-
-@theme "/dev/null"
 
 /* colors */
 
@@ -24,7 +25,6 @@ configuration {
 	shade5: #828997;
 	shade6: #979eab;
 	shade7: #abb2bf;
-
 	accent0: #e06c75;
 	accent1: #d19a66;
 	accent2: #e5c07b;
@@ -33,6 +33,30 @@ configuration {
 	accent5: #61afef;
 	accent6: #c678dd;
 	accent7: #be5046;
+
+	border-colour: @shade2;
+	handle-colour: @shade1;
+	background-colour: @shade1;
+	foreground-colour: @shade7;
+	alternate-background: @shade4;
+	normal-background: @shade1;
+	normal-foreground: @shade7;
+	urgent-background: @shade1;
+	urgent-foreground: @accent0;
+	active-background: @shade4;
+	active-foreground: @shade7;
+	selected-normal-background: @shade4;
+	selected-normal-foreground: @shade7;
+	selected-urgent-background: @shade4;
+	selected-urgent-foreground: @shade7;
+	selected-active-background: @shade4;
+	selected-active-foreground: @shade7;
+	alternate-normal-background: @shade1;
+	alternate-normal-foreground: @shade7;
+	alternate-urgent-background: @shade1;
+	alternate-urgent-foreground: @shade7;
+	alternate-active-background: @shade4;
+	alternate-active-foreground: @shade7;
 }
 
 window {
@@ -57,19 +81,8 @@ inputbar {
 	border-radius: 4px;
 }
 
-prompt {
-	padding: 5px 5px 0px;
-	background-color: @accent3;
-	border-radius: 4px;
-	text-color: @shade1;
-}
-
-textbox-prompt-colon {
-	expand: false;
-	str: ":";
-}
-
 entry {
+	placeholder: "";
 	padding: 6px;
 	background-color: @shade1;
 	text-color: @shade7;
@@ -80,11 +93,7 @@ listview {
 	padding: 8px 0px 0px;
 	border: 0;
 	background-color: @shade1;
-}
-
-element-text, element-icon {
-	background-color: inherit;
-	text-color: inherit;
+	scrollbar: false;
 }
 
 element {
@@ -94,11 +103,35 @@ element {
 	border-radius: 4px;
 }
 
-element-icon {
-	size: 24px;
+element normal.normal {
+	background-color: inherit;
+	text-color: @shade7;
 }
 
-element selected {
+element alternate.normal {
+	background-color: inherit;
+	text-color: @shade7;
+}
+
+element selected.normal {
 	background-color: @shade4;
+	text-color: @shade7;
+}
+
+element normal.active {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+message {
+	border: 0;
+}
+
+textbox {
 	text-color: @shade7;
 }
