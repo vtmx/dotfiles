@@ -22,23 +22,13 @@ onedarkpro.setup {
 onedarkpro.load()
 
 function hi(group, bg, fg, gui)
-	if bg then
-		bg = 'guibg=' .. bg
-	else
-		bg = 'guibg=NONE'
-	end
+	bg = bg or 'NONE'
+	fg = fg or 'NONE'
+	gui = gui or 'NONE'
 
-	if fg then
-		fg = 'guifg=' .. fg
-	else
-		fg = 'guifg=NONE'
-	end
-
-	if gui then
-		gui = 'gui=' .. gui
-	else
-		gui = 'gui=NONE'
-	end
+	bg = 'guibg=' .. bg
+	fg = 'guifg=' .. fg
+	gui = 'gui=' .. gui
 
 	cmd('hi ' .. group .. ' ' .. bg .. ' ' .. fg .. ' ' .. gui)
 end
