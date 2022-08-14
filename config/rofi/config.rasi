@@ -17,7 +17,7 @@ configuration {
 	kb-remove-char-back: "BackSpace";
 	kb-remove-word-forward: "Control+Delete";
 
-	kb-accept-entry: "";
+	kb-accept-entry: "Return";
 	kb-row-down: "Control+j,Down";
 
 	kb-remove-to-eol: "";
