@@ -116,27 +116,23 @@ map('n', '>', '>>')
 map('n', '<', '<<')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
--- cmd[[nnoremap > >>]]
--- cmd[[nnoremap < <<]]
--- cmd[[vnoremap > >gv]]
--- cmd[[vnoremap < <gv]]
 
 -- navigation panels
+map('n', '<c-h>', '<c-w>h')
 map('n', '<c-j>', '<c-w>j')
 map('n', '<c-k>', '<c-w>k')
 map('n', '<c-l>', '<c-w>l')
-map('n', '<c-h>', '<c-w>h')
 
 -- tmux
-map('n', '<c-k>', [[:lua require('tmux').move_up()<cr>]])
-map('n', '<c-j>', [[:lua require('tmux').move_down()<cr>]])
 map('n', '<c-h>', [[:lua require('tmux').move_left()<cr>]])
+map('n', '<c-j>', [[:lua require('tmux').move_down()<cr>]])
+map('n', '<c-k>', [[:lua require('tmux').move_up()<cr>]])
 map('n', '<c-l>', [[:lua require('tmux').move_right()<cr>]])
 
 -- move panels
 map('n', '<c-w>h', '<c-w>H')
-map('n', '<c-w>k', '<c-w>K')
 map('n', '<c-w>j', '<c-w>J')
+map('n', '<c-w>k', '<c-w>K')
 map('n', '<c-w>l', '<c-w>L')
 
 -- resize
@@ -181,6 +177,7 @@ map('n', '<leader><leader>f', ':HopChar1<cr>')
 
 -- nvimtree
 map('n', '<leader>e', ':NvimTreeToggle<cr>')
+-- map('n', '<leader>e', ':Vex<cr>')
 
 -- packer
 map('n', '<leader>pi', ':PackerInstall<cr>')
