@@ -1,1 +1,155 @@
+configuration {
+	modi: "drun,run,window,filebrowser,keys";
 
+	display-drun: " ";
+	display-run: " ";
+  display-window: " ";
+  display-filebrowser: " ";
+  display-keys: " ";
+
+	terminal: "kitty";
+	show-icons: false;
+	disable-history: false;
+	max-history-size: 25;
+
+	/* keybindis */
+
+	kb-remove-char-back: "BackSpace";
+	kb-remove-word-forward: "Control+Delete";
+
+	kb-accept-entry: "";
+	kb-row-down: "Control+j,Down";
+
+	kb-remove-to-eol: "";
+	kb-row-up: "Control+k,Up";
+
+	kb-mode-complete: "";
+	kb-mode-next: "Control+l";
+
+	kb-mode-previous: "Control+h";
+}
+
+/* colors */
+
+* {
+	shade0: #23272e;
+	shade1: #1e2227;
+	shade2: #3d4556;
+	shade3: #5c6370;
+	shade4: #2c313c;
+	shade5: #828997;
+	shade6: #979eab;
+	shade7: #abb2bf;
+	accent0: #e06c75;
+	accent1: #d19a66;
+	accent2: #e5c07b;
+	accent3: #98c379;
+	accent4: #56b6c2;
+	accent5: #61afef;
+	accent6: #c678dd;
+	accent7: #be5046;
+
+	font: "IBM Plex Mono Medm 11";
+
+	border-colour: @shade2;
+	handle-colour: @shade1;
+	background-colour: @shade1;
+	foreground-colour: @shade7;
+	alternate-background: @shade4;
+	normal-background: @shade1;
+	normal-foreground: @shade7;
+	urgent-background: @shade1;
+	urgent-foreground: @accent0;
+	active-background: @shade4;
+	active-foreground: @shade7;
+	selected-normal-background: @shade4;
+	selected-normal-foreground: @shade7;
+	selected-urgent-background: @shade4;
+	selected-urgent-foreground: @shade7;
+	selected-active-background: @shade4;
+	selected-active-foreground: @shade7;
+	alternate-normal-background: @shade1;
+	alternate-normal-foreground: @shade7;
+	alternate-urgent-background: @shade1;
+	alternate-urgent-foreground: @shade7;
+	alternate-active-background: @shade4;
+	alternate-active-foreground: @shade7;
+}
+
+window {
+	width: 600;
+	padding: 0;
+	background-color: @shade1;
+	border: 2px;
+	border-color: @shade2;
+}
+
+mainbox {
+	background-color: @shade0;
+}
+
+inputbar {
+	children: [prompt, entry];
+	padding: 16px;
+}
+ 
+prompt {
+	text-color: @shade7;
+}
+
+entry {
+	background-color: transparent;
+	placeholder: "";
+	text-color: @shade7;
+}
+
+listview {
+	columns: 1;
+	lines: 8;
+	margin: 0;
+	padding: 0;
+	background-color: @shade1;
+	border: 0;
+	scrollbar: false;
+}
+
+element {
+	padding: 8px 16px;
+	background-color: @shade1;
+	text-color: @shade7;
+}
+
+element normal.normal {
+	background-color: inherit;
+	text-color: @shade7;
+}
+
+element alternate.normal {
+	background-color: inherit;
+	text-color: @shade7;
+}
+
+element selected.normal {
+	background-color: @shade4;
+	text-color: @shade7;
+}
+
+element normal.active {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+message {
+	padding: 8px 16px;
+	background-color: @shade1;
+	border: 0;
+}
+
+textbox {
+	text-color: @shade7;
+}
