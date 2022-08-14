@@ -17,7 +17,6 @@ configuration {
 	kb-remove-char-back: "BackSpace";
 	kb-remove-word-forward: "Control+Delete";
 
-	kb-accept-entry: "Return";
 	kb-row-down: "Control+j,Down";
 
 	kb-remove-to-eol: "";
@@ -27,6 +26,9 @@ configuration {
 	kb-mode-next: "Control+l";
 
 	kb-mode-previous: "Control+h";
+
+	kb-accept-entry: "Return";
+	kb-cancel: "Escape,Control+c";
 }
 
 /* colors */

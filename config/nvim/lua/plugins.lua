@@ -33,7 +33,6 @@ packer.startup(function(use)
 		use 'baskerville/vim-sxhkdrc'
 		use 'fladson/vim-kitty'
 		use 'khaveesh/vim-fish-syntax'
-		use { 'Fymyte/rasi.vim', ft = 'rasi' }
 
 		-- ui
 		use 'olimorris/onedarkpro.nvim' 
