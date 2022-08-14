@@ -34,8 +34,10 @@ function fish_user_key_bindings
 	bind -m default L end-of-line
 	bind -m default H beginning-of-line
 
-	# fish auto-complete
+	# fish shortcuts
 	bind -M insert \cf accept-autosuggestion
+	bind -M insert \cp history-search-backward
+	bind -M insert \cn history-search-forward
 end
 
 # emulates vim's cursor shape behavior
