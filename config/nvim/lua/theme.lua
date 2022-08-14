@@ -75,14 +75,15 @@ hi('IndentBlanklineChar', 'NONE', c.shade2)
 hi('IndentBlanklineSpaceChar')
 
 -- nvim-tree
-hi('NvimTreeVertSplit', c.shade0, c.shade0)
+hi('NvimTreeCursorLine', c.shade4)
+hi('NvimTreeVertSplit', c.shade0, c.shade3)
 hi('NvimTreeFolder', 'NONE', c.shade7)
 hi('NvimTreeFolderIcon', 'NONE', c.shade7)
 hi('NvimTreeFolderName', 'NONE', c.shade7)
 hi('NvimTreeEmptyFolderName', 'NONE', c.shade7)
 hi('NvimTreeOpenedFolderName', 'NONE', c.shade7)
-hi('NvimTreeNormal', c.shade1)
-hi('NvimTreeNormalNC', c.shade1)
+hi('NvimTreeNormal', c.shade0)
+hi('NvimTreeNormalNC', c.shade0)
 hi('NvimTreeRootFolder', 'NONE', c.shade7)
 hi('NvimTreeOpenedFile', 'NONE', c.shade7)
 hi('NvimTreeWindowPicker', 'NONE', c.shade7)
@@ -97,9 +98,10 @@ hi('NvimTreeWindowPicker', 'NONE', c.shade7)
 
 require('bufferline').setup({
   options = {
-		buffer_close_icon = ' ',
-		close_icon = ' ',
-		indicator_icon = ' ',
+		buffer_close_icon = '',
+		modified_icon = '',
+		close_icon = '',
+		indicator_icon = '',
 		separator_style = {'', ''},
 		show_close_icon = false,
 		show_buffer_icons = false,
@@ -114,27 +116,32 @@ require('bufferline').setup({
 	},
 	highlights = {
 		fill = {
-			guibg = c.shade1
+			guibg = c.shade0
 		},
 		background = {
-			guibg = c.shade1
+			guibg = c.shade0
 		},
 		close_button = {
-			guibg = c.shade1,
+			guibg = c.shade0,
 			guifg = c.shade3
 		},
 		close_button_selected = {
 			guibg = c.shade0,
 			guifg = c.shade7
 		},
+		buffer = {
+			guibg = c.shade0,
+			guifg = c.shade7
+		},
 		buffer_visible = {
-			guibg = c.shade1,
+			guibg = c.shade0,
 			guifg = c.shade7
 		},
 		buffer_selected = {
 			guibg = c.shade0,
 			guifg = c.shade7,
-			-- gui = '' -- no italic
+			bold = false,
+      italic = false
 		},
 		modified = {
 			guifg = c.shade3
@@ -143,8 +150,8 @@ require('bufferline').setup({
 			guifg = c.shade7
 		},
 		separator = {
-			guibg = c.shade1,
-			guifg = c.shade1
+			guibg = c.shade0,
+			guifg = c.shade0
 		}
 	}
 })
