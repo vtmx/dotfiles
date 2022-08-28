@@ -3,7 +3,7 @@ DataCount=1
 
 [Data_1]
 Comment=Comment
-DataCount=18
+DataCount=19
 Enabled=true
 Name=VitorMelo
 SystemGroup=0
@@ -74,14 +74,14 @@ Uuid={b8eeb6be-9372-4089-a1ca-c6145aa5e453}
 [Data_1_12]
 Comment=Comment
 Enabled=true
-Name=Pamac
+Name=Lutris
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_12Actions]
 ActionsCount=1
 
 [Data_1_12Actions0]
-CommandURL=pamac-manager
+CommandURL=lutris
 Type=COMMAND_URL
 
 [Data_1_12Conditions]
@@ -93,21 +93,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_12Triggers0]
-Key=Meta+A
+Key=Meta+Shift+G
 Type=SHORTCUT
-Uuid={e46c203e-c9bc-4c90-8806-7c1167e45c2d}
+Uuid={91bc8599-b17c-452b-ade7-2049a29c83ca}
 
 [Data_1_13]
 Comment=Comment
 Enabled=true
-Name=Polybar
+Name=Pamac
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_13Actions]
 ActionsCount=1
 
 [Data_1_13Actions0]
-CommandURL=killall polybat & /home/vitor/.config/polybar/launch.sh
+CommandURL=pamac-manager
 Type=COMMAND_URL
 
 [Data_1_13Conditions]
@@ -119,21 +119,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_13Triggers0]
-Key=F11
+Key=Meta+A
 Type=SHORTCUT
-Uuid={95051306-72da-45e1-b1c5-49efa10ca798}
+Uuid={e46c203e-c9bc-4c90-8806-7c1167e45c2d}
 
 [Data_1_14]
 Comment=Comment
 Enabled=true
-Name=qBitTorrent
+Name=Polybar
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_14Actions]
 ActionsCount=1
 
 [Data_1_14Actions0]
-CommandURL=qbittorrent
+CommandURL=killall polybat & /home/vitor/.config/polybar/launch.sh
 Type=COMMAND_URL
 
 [Data_1_14Conditions]
@@ -145,21 +145,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_14Triggers0]
-Key=Meta+T
+Key=F11
 Type=SHORTCUT
-Uuid={0d49fc0d-917e-479c-a9da-8d50a7da6fce}
+Uuid={95051306-72da-45e1-b1c5-49efa10ca798}
 
 [Data_1_15]
 Comment=Comment
 Enabled=true
-Name=Rofi
+Name=qBitTorrent
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_15Actions]
 ActionsCount=1
 
 [Data_1_15Actions0]
-CommandURL=rofi -show drun -drun-display-format {name}
+CommandURL=qbittorrent
 Type=COMMAND_URL
 
 [Data_1_15Conditions]
@@ -171,21 +171,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_15Triggers0]
-Key=Meta+Space
+Key=Meta+T
 Type=SHORTCUT
-Uuid={6362f0bd-d70e-4a33-9664-f5082b5cb972}
+Uuid={0d49fc0d-917e-479c-a9da-8d50a7da6fce}
 
 [Data_1_16]
 Comment=Comment
 Enabled=true
-Name=Steam
+Name=Rofi
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_16Actions]
 ActionsCount=1
 
 [Data_1_16Actions0]
-CommandURL=steam
+CommandURL=rofi -show drun -drun-display-format {name}
 Type=COMMAND_URL
 
 [Data_1_16Conditions]
@@ -197,21 +197,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_16Triggers0]
-Key=Meta+G
+Key=Meta+Space
 Type=SHORTCUT
-Uuid={49e2694c-7563-4557-ba69-6f6e55f8e36f}
+Uuid={6362f0bd-d70e-4a33-9664-f5082b5cb972}
 
 [Data_1_17]
 Comment=Comment
 Enabled=true
-Name=Vivaldi
+Name=Steam
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_17Actions]
 ActionsCount=1
 
 [Data_1_17Actions0]
-CommandURL=vivaldi-stable
+CommandURL=steam
 Type=COMMAND_URL
 
 [Data_1_17Conditions]
@@ -223,21 +223,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_17Triggers0]
-Key=Meta+B
+Key=Meta+G
 Type=SHORTCUT
-Uuid={10c9bcc3-9b0d-4521-84ca-379dd92751b7}
+Uuid={49e2694c-7563-4557-ba69-6f6e55f8e36f}
 
 [Data_1_18]
 Comment=Comment
 Enabled=true
-Name=VLC
+Name=Vivaldi
 Type=SIMPLE_ACTION_DATA
 
 [Data_1_18Actions]
 ActionsCount=1
 
 [Data_1_18Actions0]
-CommandURL=vlc
+CommandURL=vivaldi-stable
 Type=COMMAND_URL
 
 [Data_1_18Conditions]
@@ -249,6 +249,32 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_18Triggers0]
+Key=Meta+B
+Type=SHORTCUT
+Uuid={10c9bcc3-9b0d-4521-84ca-379dd92751b7}
+
+[Data_1_19]
+Comment=Comment
+Enabled=true
+Name=VLC
+Type=SIMPLE_ACTION_DATA
+
+[Data_1_19Actions]
+ActionsCount=1
+
+[Data_1_19Actions0]
+CommandURL=vlc
+Type=COMMAND_URL
+
+[Data_1_19Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_1_19Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_1_19Triggers0]
 Key=Meta+M
 Type=SHORTCUT
 Uuid={5648e70b-6fe4-4a96-93f1-4a302c590945}
@@ -295,7 +321,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=Meta+Shift+W
+Key=Meta+W
 Type=SHORTCUT
 Uuid={451567a5-0106-4432-9e47-3574ab357941}
 
@@ -373,7 +399,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_5Triggers0]
-Key=Meta+F5
+Key=Meta+Shift+B
 Type=SHORTCUT
 Uuid={761900a0-a7b8-41fc-a251-c898a66353cb}
 
@@ -399,7 +425,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_6Triggers0]
-Key=Meta+S
+Key=Print
 Type=SHORTCUT
 Uuid={1a335688-a506-4256-9f49-ce930f66b214}
 
@@ -425,7 +451,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_7Triggers0]
-Key=Meta+Shift+B
+Key=Meta+Ctrl+Shift+B
 Type=SHORTCUT
 Uuid={5662454d-1fc6-494f-a873-7cb653af9448}
 
