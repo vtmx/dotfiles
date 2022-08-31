@@ -22,8 +22,11 @@ super + {_,ctrl + }Return
 super + {a,b,g,m,p,t,s,v}
 	{pamac-manager,vivaldi-stable,steam,vlc,color-picker,qbittorrent,flameshot gui,code}
 
+super + shift + {b,g}
+	{firefox,lutris}
+
 # toggle polybar
-super + shift + b
+super + ctrl + shift + b
 	polybar bspwm
 
 # toggle fullscreen
