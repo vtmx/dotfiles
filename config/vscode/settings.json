@@ -204,6 +204,22 @@
     {
       "before": ["k", "j"],
       "after": ["<esc>"]
+    },
+    {
+      "before": ["<c-h>"],
+      "after": ["left"]
+    },
+    {
+      "before": ["<c-j>"],
+      "after": ["down"]
+    },
+    {
+      "before": ["<c-k>"],
+      "after": ["up"]
+    },
+    {
+      "before": ["<c-l>"],
+      "after": ["right"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
