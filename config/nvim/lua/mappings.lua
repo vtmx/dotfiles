@@ -21,6 +21,10 @@ map('n', '<leader>r', [[luafile $HOME/.config/nvim/init.lua echo "Reload"]])
 map('i', 'kj', '<esc>')
 map('v', '<leader>kj', '<esc>')
 
+-- navigate in insertmode
+map('i', '<c-h>', '<left>')
+map('i', '<c-l>', '<right>')
+
 -- ignore wordwrap jumpline
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
@@ -154,8 +158,10 @@ cmd[[nnoremap <silent> <leader>h :bp<cr>]]
 cmd[[nnoremap <silent> <a-w> :bp \|bd #<cr>]]
 
 -- nav
+map('i', '<c-space>', '<c-n>')
 cmd[[inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
 cmd[[inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
+cmd[[inoremap <expr><c-c> pumvisible() ? "\<c-e>" : "\<c-c>"]]
 
 -- save
 map('n', '<c-s>', ':w!<cr>', { noremap = true, silent = false })
