@@ -157,11 +157,14 @@ cmd[[nnoremap <silent> <a-h> :bp<cr>]]
 cmd[[nnoremap <silent> <leader>h :bp<cr>]]
 cmd[[nnoremap <silent> <a-w> :bp \|bd #<cr>]]
 
--- nav
+-- menu
 map('i', '<c-space>', '<c-n>')
 cmd[[inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
 cmd[[inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
 cmd[[inoremap <expr><c-c> pumvisible() ? "\<c-e>" : "\<c-c>"]]
+cmd[[cnoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
+cmd[[cnoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
+cmd[[cnoremap <expr><c-c> pumvisible() ? "\<c-e>" : "\<c-c>"]]
 
 -- save
 map('n', '<c-s>', ':w!<cr>', { noremap = true, silent = false })
