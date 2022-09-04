@@ -92,10 +92,20 @@ packer.startup(function(use)
 			require('telescope').setup({
 				defaults = {
 					disable_devicons=true,
+					sorting_strategy = 'ascending',
+					layout_config = {
+						horizontal = {
+							prompt_position = 'top',
+						},
+					},
 					mappings = {
+						n = {
+							['<c-c>'] = actions.close
+						},
 						i = {
 							['<c-j>'] = actions.move_selection_next,
-							['<c-k>'] = actions.move_selection_previous
+							['<c-k>'] = actions.move_selection_previous,
+							['<c-c>'] = actions.close
 						}
 					}
 				}
