@@ -7,7 +7,7 @@ local cmd = vim.cmd
 
 -- functions
 function map(mode, lhs, rhs, opts)
-	opts = opts or { silent = true }
+	local opts = opts or { silent = true }
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
