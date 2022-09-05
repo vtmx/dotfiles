@@ -11,7 +11,7 @@ onedarkpro.setup {
 	colors = {
 	  bg = c.shade0,
   },
-	hlgroups = {
+	highlights = {
 		VertSplit = { bg = c.shade0, fg = c.shade3 }
 	},
 	options = {
@@ -21,6 +21,7 @@ onedarkpro.setup {
 
 onedarkpro.load()
 
+-- :hi to see colors
 function hi(group, bg, fg, gui)
 	bg = bg or 'NONE'
 	fg = fg or 'NONE'
@@ -88,8 +89,6 @@ hi('NvimTreeRootFolder', 'NONE', c.shade7)
 hi('NvimTreeOpenedFile', 'NONE', c.shade7)
 hi('NvimTreeWindowPicker', 'NONE', c.shade7)
 
--- :hi to see colors
-
 -- plugins
 
 ------------------------------------------------------------
@@ -101,7 +100,7 @@ require('bufferline').setup({
 		buffer_close_icon = '',
 		modified_icon = '',
 		close_icon = '',
-		indicator_icon = '',
+		indicator = {icon = '', style = 'none'},
 		separator_style = {'', ''},
 		show_close_icon = false,
 		show_buffer_icons = false,
@@ -116,42 +115,42 @@ require('bufferline').setup({
 	},
 	highlights = {
 		fill = {
-			guibg = c.shade0
+			bg = c.shade0
 		},
 		background = {
-			guibg = c.shade0
+			bg = c.shade0
 		},
 		close_button = {
-			guibg = c.shade0,
-			guifg = c.shade3
+			bg = c.shade0,
+			fg = c.shade3
 		},
 		close_button_selected = {
-			guibg = c.shade0,
-			guifg = c.shade7
+			bg = c.shade0,
+			fg = c.shade7
 		},
 		buffer = {
-			guibg = c.shade0,
-			guifg = c.shade7
+			bg = c.shade0,
+			fg = c.shade7
 		},
 		buffer_visible = {
-			guibg = c.shade0,
-			guifg = c.shade7
+			bg = c.shade0,
+			fg = c.shade7
 		},
 		buffer_selected = {
-			guibg = c.shade0,
-			guifg = c.shade7,
+			bg = c.shade0,
+			fg = c.shade7,
 			bold = false,
       italic = false
 		},
 		modified = {
-			guifg = c.shade3
+			fg = c.shade3
 		},
 		modified_selected = {
-			guifg = c.shade7
+			fg = c.shade7
 		},
 		separator = {
-			guibg = c.shade0,
-			guifg = c.shade0
+			bg = c.shade0,
+			fg = c.shade0
 		}
 	}
 })
