@@ -7,8 +7,8 @@ local cmd = vim.cmd
 
 -- functions
 function map(mode, lhs, rhs, opts)
-	local opts = opts or { silent = true }
-	vim.keymap.set(mode, lhs, rhs, opts)
+  local opts = opts or { silent = true }
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 -- leader
@@ -196,3 +196,4 @@ map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
+-- https://www.lunarvim.org/configuration/01-settings.html#example-options

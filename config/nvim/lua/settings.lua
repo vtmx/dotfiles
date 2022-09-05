@@ -3,17 +3,15 @@
 ------------------------------------------------------------
 
 -- vars
-local cmd = vim.cmd
 local opt = vim.opt
 
 -- sets
 opt.termguicolors = true
+opt.title = true
 opt.autochdir = true
-opt.autoread = true
-opt.cmdheight = 1
 opt.cursorline = true
+opt.cmdheight = 1
 opt.exrc = true
-opt.hidden = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.lazyredraw = true
@@ -22,8 +20,6 @@ opt.mouse = 'a'
 -- notification
 opt.backup = false
 opt.swapfile = false
-opt.errorbells = false
-opt.visualbell = false
 
 -- wrap
 opt.wrap = false
@@ -36,7 +32,7 @@ opt.relativenumber = true
 
 -- indent
 local indent = 2
-opt.autoindent = true
+opt.expandtab = true
 opt.smartindent = true
 opt.shiftwidth = indent 
 opt.tabstop = indent 
@@ -73,9 +69,9 @@ vim.g.highlightedyank_highlight_duration = 150
 -- lsp
 vim.lsp.handlers['textDocument/publishDiagnostics'] =
 vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-		-- Disable underline, it's very annoying
-		underline = false,
-		virtual_text = false,
-		signs = true,
-		update_in_insert = false
+  -- Disable underline, it's very annoying
+  underline = false,
+  virtual_text = false,
+  signs = true,
+  update_in_insert = false
 })
