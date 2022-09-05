@@ -24,11 +24,14 @@ set -g fish_color_search_match --background=$shade2
 set -g fish_color_valid_path normal
 set -g fish_pager_color_completion $shade7
 
+# enable vi mode
+# fish_vi_key_bindings
+
+# to go back to default mode
+# fish_default_key_bindings
+
 # active keybinds vim
 function fish_user_key_bindings
-	# enable vi mode
-	fish_vi_key_bindings
-
 	# mappings
 	# bind -M insert -m default kj backward-char force-repaint
 	bind -m default L end-of-line
