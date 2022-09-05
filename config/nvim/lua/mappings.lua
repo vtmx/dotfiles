@@ -189,8 +189,17 @@ map('n', '<leader>e', ':NvimTreeToggle<cr>')
 -- map('n', '<leader>e', ':Vex<cr>')
 
 -- packer
-map('n', '<leader>pi', ':PackerInstall<cr>')
-map('n', '<leader>ps', ':PackerSync<cr>')
+map('n', '<leader>pc', '<cmd>PackerCompile<cr>')
+map('n', '<leader>pi', '<cmd>PackerInstall<cr>')
+map('n', '<leader>ps', '<cmd>PackerSync<cr>')
+map('n', '<leader>pS', '<cmd>PackerStatus<cr>')
+map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
+
+-- maps.n["<leader>pc"] = { "<cmd>PackerCompile<cr>", desc = "Packer Compile" }
+-- maps.n["<leader>pi"] = { "<cmd>PackerInstall<cr>", desc = "Packer Install" }
+-- maps.n["<leader>ps"] = { "<cmd>PackerSync<cr>", desc = "Packer Sync" }
+-- maps.n["<leader>pS"] = { "<cmd>PackerStatus<cr>", desc = "Packer Status" }
+-- maps.n["<leader>pu"] = { "<cmd>PackerUpdate<cr>", desc = "Packer Update" }
 
 -- telescope
 map('n', '<c-p>', ':Telescope find_files<cr>')
