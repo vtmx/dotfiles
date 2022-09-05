@@ -56,8 +56,8 @@ map('n', 'x', [["_x]])
 map('n', '<del>', [["_x]])
 
 -- move line
-map('n', '<a-j>', ':m+<cr>')
-map('n', '<a-k>', ':m-2<cr>')
+map('n', '<a-j>', '<cmd>m+<cr>')
+map('n', '<a-k>', '<cmd>m-2<cr>')
 map('v', '<a-j>', [[:m'>+<cr>`<my`>mzgv`yo`z]])
 map('v', '<a-k>', [[:m'<-2<cr>`>my`<mzgv`yo`z]])
 
@@ -71,7 +71,7 @@ map('v', '<c-a-k>', 'ygvO<esc>P')
 map('v', 'y', 'ygv<esc>')
 
 -- remove highlight
-map('n', '<esc>', ':noh<cr>')
+map('n', '<esc>', '<cmd>noh<cr>')
 
 -- keep search results centred
 map('n', 'n', 'nzzzv')
@@ -82,7 +82,7 @@ map('n', 'J', 'mzJ`z')
 map('n', '<leader>a', 'G<s-v>gg')
 
 -- format
-map('n', '<leader>f', ':retab<cr>')
+map('n', '<leader>f', '<cmd>retab<cr>')
 
 -- qq to record in q, Q to play
 map('n', 'Q', '@q')
@@ -91,8 +91,8 @@ map('n', 'Q', '@q')
 map('n', 'M', '`')
 
 -- split
-map('n', 'ss', ':sp<cr>')
-map('n', 'vv', ':vsp<cr>')
+map('n', 'ss', '<cmd>sp<cr>')
+map('n', 'vv', '<cmd>vsp<cr>')
 
 -- jump varius lines
 map('n', 'J', '5j')
@@ -107,7 +107,7 @@ map('v', 'L', 'g_')
 map('v', 'H', '^')
 
 -- new file
-map('n', '<leader>n', ':enew<cr>')
+map('n', '<leader>n', '<cmd>enew<cr>')
 
 -- easy select all of file
 map('n', '<leader>a', 'ggVG<c-$>')
@@ -140,22 +140,20 @@ map('n', '<c-w>k', '<c-w>K')
 map('n', '<c-w>l', '<c-w>L')
 
 -- resize
-map('n', '<up>', ':resize +2<cr>')
-map('n', '<down>', ':resize -2<cr>')
-map('n', '<left>', ':vertical resize +2<cr>')
-map('n', '<right>', ':vertical resize -2<cr>')
+map('n', '<up>', '<cmd>resize +2<cr>')
+map('n', '<down>', '<cmd>resize -2<cr>')
+map('n', '<left>', '<cmd>vertical resize +2<cr>')
+map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- buffer
-map('n', '<leader>n', ':ene<cr>')
-map('n', '<leader>h', ':bp<cr>')
-map('n', '<leader>l', ':bn<cr>')
-cmd[[nnoremap <silent> <leader>w :bp \|bd #<cr>]]
-cmd[[nnoremap <silent> <a-n> :ene<cr>]]
-cmd[[nnoremap <silent> <a-l> :bn<cr>]]
-cmd[[nnoremap <silent> <leader>l :bn<cr>]]
-cmd[[nnoremap <silent> <a-h> :bp<cr>]]
-cmd[[nnoremap <silent> <leader>h :bp<cr>]]
-cmd[[nnoremap <silent> <a-w> :bp \|bd #<cr>]]
+map('n', '<leader>n', '<cmd>ene<cr>')
+map('n', '<leader>l', '<cmd>bn<cr>')
+map('n', '<leader>h', '<cmd>bp<cr>')
+map('n', '<leader>w', '<cmd>bd<cr>')
+map('n', '<a-n>', '<cmd>ene<cr>')
+map('n', '<a-l>', '<cmd>bn<cr>')
+map('n', '<a-h>', '<cmd>bp<cr>')
+map('n', '<a-w>', '<cmd>bd<cr>')
 
 -- menu
 map('i', '<c-space>', '<c-n>')
@@ -167,26 +165,26 @@ cmd[[cnoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
 cmd[[cnoremap <expr><c-c> pumvisible() ? "\<c-e>" : "\<c-c>"]]
 
 -- save
-map('n', '<c-s>', ':w!<cr>', { noremap = true, silent = false })
-map('i', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
-map('v', '<c-s>', '<esc>:w!<cr>', { noremap = true, silent = false })
+map('n', '<c-s>', '<cmd>w!<cr>', { silent = false })
+map('i', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
+map('v', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
 
 -- quit
-map('n', '<leader>q', ':q!<cr>')
+map('n', '<leader>q', '<cmd>q!<cr>')
 
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------
 
 -- coc
-map('n', '<leader>f', ':CocCommand prettier.formatFile<cr>')
+map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
 
 -- hop
-map('n', '<leader><leader>f', ':HopChar1<cr>')
+map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
 
 -- nvimtree
-map('n', '<leader>e', ':NvimTreeToggle<cr>')
--- map('n', '<leader>e', ':Vex<cr>')
+map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+-- map('n', '<leader>e', '<cmd>Vex<cr>')
 
 -- packer
 map('n', '<leader>pc', '<cmd>PackerCompile<cr>')
@@ -195,12 +193,6 @@ map('n', '<leader>ps', '<cmd>PackerSync<cr>')
 map('n', '<leader>pS', '<cmd>PackerStatus<cr>')
 map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 
--- maps.n["<leader>pc"] = { "<cmd>PackerCompile<cr>", desc = "Packer Compile" }
--- maps.n["<leader>pi"] = { "<cmd>PackerInstall<cr>", desc = "Packer Install" }
--- maps.n["<leader>ps"] = { "<cmd>PackerSync<cr>", desc = "Packer Sync" }
--- maps.n["<leader>pS"] = { "<cmd>PackerStatus<cr>", desc = "Packer Status" }
--- maps.n["<leader>pu"] = { "<cmd>PackerUpdate<cr>", desc = "Packer Update" }
-
 -- telescope
-map('n', '<c-p>', ':Telescope find_files<cr>')
-map('n', '<leader>g', ':Telescope git_files<cr>')
+map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
