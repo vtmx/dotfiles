@@ -23,9 +23,9 @@ onedarkpro.load()
 
 -- :hi to see colors
 function hi(group, bg, fg, gui)
-	bg = bg or 'NONE'
-	fg = fg or 'NONE'
-	gui = gui or 'NONE'
+	local bg = bg or 'NONE'
+	local fg = fg or 'NONE'
+	local gui = gui or 'NONE'
 
 	bg = 'guibg=' .. bg
 	fg = 'guifg=' .. fg
