@@ -71,6 +71,7 @@ map('v', 'y', 'ygv<esc>')
 
 -- remove highlight
 map('n', '<esc>', '<cmd>noh<cr>')
+map('n', '<leader>h', '<cmd>noh<cr>')
 
 -- keep search results centred
 map('n', 'n', 'nzzzv')
@@ -143,8 +144,6 @@ map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- buffer
 map('n', '<leader>n', '<cmd>ene<cr>')
-map('n', '<leader>l', '<cmd>bn<cr>')
-map('n', '<leader>h', '<cmd>bp<cr>')
 map('n', '<leader>w', '<cmd>bd<cr>')
 map('n', '<a-n>', '<cmd>ene<cr>')
 map('n', '<a-l>', '<cmd>bn<cr>')
