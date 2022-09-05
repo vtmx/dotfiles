@@ -14,9 +14,6 @@ end
 -- leader
 vim.g.mapleader = ' '
 
--- reload
-map('n', '<leader>r', [[luafile $HOME/.config/nvim/init.lua echo "Reload"]]) 
-
 -- scape
 map('i', 'kj', '<esc>')
 map('v', '<leader>kj', '<esc>')
@@ -52,19 +49,21 @@ map('n', '<leader>P', 'o<esc>"+gp<esc>')
 map('n', '<leader>j', 'J')
 
 -- delete not copy
-map('n', 'x', [["_x]])
-map('n', '<del>', [["_x]])
+map('n', 'x', '"_x')
+map('n', '<del>', '"_x')
 
--- move line
+-- move line like vscode
+map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
+map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
 map('n', '<a-j>', '<cmd>m+<cr>')
 map('n', '<a-k>', '<cmd>m-2<cr>')
-map('v', '<a-j>', [[:m'>+<cr>`<my`>mzgv`yo`z]])
-map('v', '<a-k>', [[:m'<-2<cr>`>my`<mzgv`yo`z]])
+map('v', '<a-j>', "<cmd>m '>+1<cr>gv-gv")
+map('v', '<a-k>', "<cmd>m '<-2<cr>gv-gv")
 
 -- clone line
 map('n', '<c-a-j>', 'yyp')
 map('n', '<c-a-k>', 'yyP')
-map('v', '<c-a-j>', [[:'<,'>copy '><cr>]])
+map('v', '<c-a-j>', ":'<,'>copy '><cr>")
 map('v', '<c-a-k>', 'ygvO<esc>P')
 
 -- keep cursor end select when visual copy
@@ -106,9 +105,6 @@ map('n', 'H', '^')
 map('v', 'L', 'g_')
 map('v', 'H', '^')
 
--- new file
-map('n', '<leader>n', '<cmd>enew<cr>')
-
 -- easy select all of file
 map('n', '<leader>a', 'ggVG<c-$>')
 
@@ -128,10 +124,10 @@ map('n', '<c-k>', '<c-w>k')
 map('n', '<c-l>', '<c-w>l')
 
 -- tmux
-map('n', '<c-h>', [[:lua require('tmux').move_left()<cr>]])
-map('n', '<c-j>', [[:lua require('tmux').move_down()<cr>]])
-map('n', '<c-k>', [[:lua require('tmux').move_up()<cr>]])
-map('n', '<c-l>', [[:lua require('tmux').move_right()<cr>]])
+map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
+map('n', '<c-j>', '<cmd>:lua require("tmux").move_down()<cr>')
+map('n', '<c-k>', '<cmd>:lua require("tmux").move_up()<cr>')
+map('n', '<c-l>', '<cmd>:lua require("tmux").move_right()<cr>')
 
 -- move panels
 map('n', '<c-w>h', '<c-w>H')
@@ -157,12 +153,12 @@ map('n', '<a-w>', '<cmd>bd<cr>')
 
 -- menu
 map('i', '<c-space>', '<c-n>')
-cmd[[inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
-cmd[[inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
-cmd[[inoremap <expr><c-c> pumvisible() ? "\<c-e>" : "\<c-c>"]]
-cmd[[cnoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"]]
-cmd[[cnoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"]]
-cmd[[cnoremap <expr><c-c> pumvisible() ? "\<c-e>" : "\<c-c>"]]
+map('i', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr=true })
+map('i', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr=true })
+map('i', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr=true })
+map('c', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr=true })
+map('c', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr=true })
+map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr=true })
 
 -- save
 map('n', '<c-s>', '<cmd>w!<cr>', { silent = false })
@@ -196,3 +192,8 @@ map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 -- telescope
 map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
+
+-- references
+-- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
+-- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
+-- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
