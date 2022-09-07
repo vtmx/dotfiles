@@ -29,19 +29,34 @@ map('n', 'k', 'gk')
 -- like C and D
 map('n', 'Y', 'y$')
 
+-- jump varius lines
+map('n', 'J', '5j')
+map('n', 'K', '5k')
+map('v', 'J', '5j')
+map('v', 'K', '5k')
+
+-- begin and end line
+map('n', 'L', 'g_')
+map('n', 'H', '^')
+map('v', 'L', 'g_')
+map('v', 'H', '^')
+
 -- new line in normal mode
 map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
 
--- copy
+-- select all
+map('n', '<leader>a', 'G<s-v>gg')
+
+-- copy to clipboard
 map('n', '<leader>y', 'V"+y')
 map('v', '<leader>y', '"+y')
 
--- cut
-map('n', '<leader>x', 'V"+x')
-map('v', '<leader>x', '"+x')
+-- cut to clipboard
+map('n', '<leader>d', '^vg_"+x')
+map('v', '<leader>d', '"+x')
 
--- paste
+-- paste to clipboard
 map('n', '<leader>p', '"+gp<esc>')
 map('n', '<leader>P', 'o<esc>"+gp<esc>')
 
@@ -78,9 +93,6 @@ map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 map('n', 'J', 'mzJ`z')
 
--- select all
-map('n', '<leader>a', 'G<s-v>gg')
-
 -- format
 map('n', '<leader>f', '<cmd>retab<cr>')
 
@@ -93,18 +105,6 @@ map('n', 'M', '`')
 -- split
 map('n', 'ss', '<cmd>sp<cr>')
 map('n', 'vv', '<cmd>vsp<cr>')
-
--- jump varius lines
-map('n', 'J', '5j')
-map('n', 'K', '5k')
-map('v', 'J', '5j')
-map('v', 'K', '5k')
-
--- begin and end line
-map('n', 'L', 'g_')
-map('n', 'H', '^')
-map('v', 'L', 'g_')
-map('v', 'H', '^')
 
 -- easy select all of file
 map('n', '<leader>a', 'ggVG<c-$>')
@@ -126,9 +126,9 @@ map('n', '<c-l>', '<c-w>l')
 
 -- tmux
 map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
-map('n', '<c-j>', '<cmd>:lua require("tmux").move_down()<cr>')
-map('n', '<c-k>', '<cmd>:lua require("tmux").move_up()<cr>')
-map('n', '<c-l>', '<cmd>:lua require("tmux").move_right()<cr>')
+map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
+map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
+map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- move panels
 map('n', '<c-w>h', '<c-w>H')
@@ -173,6 +173,9 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 
 -- coc
 map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
+map('i', '<c-space>', '<cmd>coc#refresh()<cr>', { expr = true })
+map('i', '<c-j>', '<cmd>CocNext<cr>', { expr = true })
+map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
 
 -- hop
 map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
@@ -196,4 +199,3 @@ map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
--- https://www.lunarvim.org/configuration/01-settings.html#example-options
