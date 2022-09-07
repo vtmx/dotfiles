@@ -152,12 +152,12 @@ map('n', '<a-w>', '<cmd>bd<cr>')
 
 -- menu
 map('i', '<c-space>', '<c-n>')
-map('i', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr=true })
-map('i', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr=true })
-map('i', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr=true })
-map('c', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr=true })
-map('c', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr=true })
-map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr=true })
+map('i', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
+map('i', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
+map('i', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
+map('c', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
+map('c', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
+map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 
 -- save
 map('n', '<c-s>', '<cmd>w!<cr>', { silent = false })

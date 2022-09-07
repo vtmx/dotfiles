@@ -40,7 +40,9 @@ function fish_user_key_bindings
 	# fish shortcuts
 	bind -M insert \cf accept-autosuggestion
 	bind -M insert \cj history-search-backward
+	bind -M insert \cn history-search-backward
 	bind -M insert \ck history-search-forward
+	bind -M insert \cp history-search-forward
 end
 
 # emulates vim's cursor shape behavior
