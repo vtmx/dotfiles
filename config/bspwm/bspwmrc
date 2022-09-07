@@ -1,53 +1,57 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # init
 export SXHKD_SHELL="/usr/bin/bash"
 
+# commands
+bm="bspc monitor -d"
+bc="bspc config"
+br="bspc rule -a"
+
+# workspaces
+$bm 1 2 3 4 5 6 7 8 9 0
+
 # config
-bspc monitor -d 1 2 3 4 5 6 7 8 9 0
-bspc config border_width 3
-bspc config window_gap 16
-bspc config split_ratio 0.50
-bspc config borderless_monocle true
-bspc config gapless_monocle true
-bspc config paddingless_monocle true
-bspc config single_monocle false
-bspc config focus_follows_pointer true
+$bc border_width 3
+$bc window_gap 16
+$bc top_padding 24
+$bc bottom_padding 0
+$bc left_padding 0
+$bc right_padding 0
+$bc split_ratio 0.50
+$bc borderless_monocle true
+$bc gapless_monocle true
+$bc paddingless_monocle true
+$bc single_monocle false
+$bc focus_follows_pointer true
 
 # theme
-bspc config focused_border_color "#5c6370"  
-bspc config normal_border_color "#23272e"
-bspc config active_border_color "#be5046"
-bspc config presel_feedback_color "#98c379"
+$bc focused_border_color "#5c6370"  
+$bc normal_border_color "#23272e"
+$bc active_border_color "#be5046"
+$bc presel_feedback_color "#98c379"
 
 # rules
 
 # web
-bspc rule -a brave desktop='^1', follow=on focus=on
-bspc rule -a chromium desktop='^1', follow=on focus=on
-bspc rule -a firefox desktop='^1' follow=on focus=on
-bspc rule -a vivaldi-stable desktop='^1' follow=on focus=on
+$br brave desktop='^1', follow=on focus=on
+$br chromium desktop='^1', follow=on focus=on
+$br firefox desktop='^1' follow=on focus=on
+$br vivaldi-stable desktop='^1' follow=on focus=on
 
 # code
-bspc rule -a alacritty desktop='^2' follow=on focus=on
-bspc rule -a code desktop='^2' follow=on focus=on
-bspc rule -a kitty desktop='^2' follow=on focus=on
+$br alacritty desktop='^2' follow=on focus=on
+$br code desktop='^2' follow=on focus=on
+$br kitty desktop='^2' follow=on focus=on
 
 # file
-bspc rule -a dolphin desktop='^3' follow=on focus=on
-bspc rule -a nemo desktop='^3' follow=on focus=on
-bspc rule -a thunar desktop='^3' follow=on focus=on
+$br dolphin desktop='^3' follow=on focus=on
+$br nemo desktop='^3' follow=on focus=on
+$br thunar desktop='^3' follow=on focus=on
 
 # media
-bspc rule -a mpv desktop='^4' follow=on focus=on state=floating
-bspc rule -a vlc desktop='^4' follow=on focus=on
+$br mpv desktop='^4' follow=on focus=on state=floating
+$br vlc desktop='^4' follow=on focus=on
 
 # autostart
-xsetroot -cursor_name left_ptr
-pkill -USR1 sxhkd &
-sxhkd &
-feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/valorant/* &
-# picom &
-# dunst &
-# pkill -USR1 polybar &
-$HOME/.config/polybar/launch.sh &
+$HOME/.config/bspwm/autostart.sh

@@ -1,11 +1,11 @@
 configuration {
 	modi: "drun,run,window,filebrowser,keys";
 
-	display-drun: " ";
-	display-run: " ";
-  display-window: " ";
-  display-filebrowser: " ";
-  display-keys: " ";
+	display-drun: "";
+	display-run: "";
+  display-window: "";
+  display-filebrowser: "";
+  display-keys: "";
 
 	terminal: "kitty";
 	show-icons: false;
@@ -97,6 +97,7 @@ inputbar {
  
 prompt {
 	text-color: @shade7;
+  margin: 0 16px 0 0;
 }
 
 entry {
