@@ -14,15 +14,11 @@ $bm 1 2 3 4 5 6 7 8 9 0
 # config
 $bc border_width 3
 $bc window_gap 16
-$bc top_padding 24
-$bc bottom_padding 0
-$bc left_padding 0
-$bc right_padding 0
 $bc split_ratio 0.50
+$bc single_monocle true
 $bc borderless_monocle true
 $bc gapless_monocle true
 $bc paddingless_monocle true
-$bc single_monocle false
 $bc focus_follows_pointer true
 
 # theme
@@ -54,4 +50,11 @@ $br mpv desktop='^4' follow=on focus=on state=floating
 $br vlc desktop='^4' follow=on focus=on
 
 # autostart
-$HOME/.config/bspwm/autostart.sh
+xsetroot -cursor_name left_ptr &
+pkill -USR1 sxhkd &
+sxhkd &
+feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/valorant/* &
+# picom &
+# dunst &
+$HOME/.config/polybar/launch.sh &
+

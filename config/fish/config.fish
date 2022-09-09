@@ -125,9 +125,9 @@ alias paci='sudo pacman -S'
 alias pacr='sudo pacman -R'
 
 # yay
-alias yayi='sudo yay -S'
-alias yayr='sudo yay -R'
-alias yayu='sudo yay -Syu'
+alias yayi='yay -S'
+alias yayr='yay -R'
+alias yayu='yay -Syu'
 
 # git
 alias g='git'

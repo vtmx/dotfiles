@@ -29,17 +29,17 @@ map('n', 'k', 'gk')
 -- like C and D
 map('n', 'Y', 'y$')
 
--- jump varius lines
-map('n', 'J', '5j')
-map('n', 'K', '5k')
-map('v', 'J', '5j')
-map('v', 'K', '5k')
-
 -- begin and end line
 map('n', 'L', 'g_')
 map('n', 'H', '^')
 map('v', 'L', 'g_')
 map('v', 'H', '^')
+
+-- jump varius lines
+map('n', 'J', '5j')
+map('n', 'K', '5k')
+map('v', 'J', '5j')
+map('v', 'K', '5k')
 
 -- new line in normal mode
 map('n', '<leader>o', 'm`o<esc>``')
