@@ -91,7 +91,6 @@ map('n', '<leader>h', '<cmd>noh<cr>')
 -- keep search results centred
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
-map('n', 'J', 'mzJ`z')
 
 -- format
 map('n', '<leader>f', '<cmd>retab<cr>')
@@ -105,9 +104,6 @@ map('n', 'M', '`')
 -- split
 map('n', 'ss', '<cmd>sp<cr>')
 map('n', 'vv', '<cmd>vsp<cr>')
-
--- easy select all of file
-map('n', '<leader>a', 'ggVG<c-$>')
 
 -- stop copy in last char
 map('v', 'y', 'ygv<esc>')

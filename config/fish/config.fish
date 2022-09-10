@@ -77,11 +77,15 @@ alias cat='bat'
 alias cls='clear'
 alias cpv='rsync -ah --info=progress2'
 alias e='exit'
-alias ls='exa --color=always --group-directories-first'
-alias tree='exa -T'
 alias md='mkdir'
 alias rd='rmdir'
 alias r='ranger'
+
+# exa
+if type -q exa
+  alias ls='exa --color=always --group-directories-first'
+  alias tree='exa -T'
+end
 
 # apps
 alias v='nvim'
@@ -151,5 +155,19 @@ alias ide='ide.sh'
 # vlang
 alias vl='$HOME/.v/vl'
 
-# starship
-starship init fish | source
+# default prompt
+function fish_prompt
+  echo ''
+  set_color cyan; echo (pwd) 
+  set_color green; echo '❯ '
+end
+
+# starship prompt
+if type -q starship
+  starship init fish | source
+else
+  fish_prompt
+end
+
+# links
+# https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
