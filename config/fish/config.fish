@@ -32,17 +32,17 @@ set -g fish_pager_color_completion $shade7
 
 # active keybinds vim
 function fish_user_key_bindings
-	# mappings
-	# bind -M insert -m default kj backward-char force-repaint
-	bind -m default L end-of-line
-	bind -m default H beginning-of-line
+  # mappings
+  # bind -M insert -m default kj backward-char force-repaint
+  bind -m default L end-of-line
+  bind -m default H beginning-of-line
 
-	# fish shortcuts
-	bind -M insert \cf accept-autosuggestion
-	bind -M insert \cj history-search-backward
-	bind -M insert \cn history-search-backward
-	bind -M insert \ck history-search-forward
-	bind -M insert \cp history-search-forward
+  # fish shortcuts
+  bind -M insert \cf accept-autosuggestion
+  bind -M insert \cj history-search-backward
+  bind -M insert \cn history-search-backward
+  bind -M insert \ck history-search-forward
+  bind -M insert \cp history-search-forward
 end
 
 # emulates vim's cursor shape behavior
@@ -165,8 +165,6 @@ end
 # starship prompt
 if type -q starship
   starship init fish | source
-else
-  fish_prompt
 end
 
 # links
