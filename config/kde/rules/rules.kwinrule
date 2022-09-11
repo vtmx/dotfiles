@@ -10,7 +10,6 @@ wmclassmatch=3
 Description=2-terminals-code
 desktops=93850716-3584-4f37-9801-d6a0a0e582f7
 desktopsrule=3
-fsplevelrule=2
 wmclass=code|kitty|alacritty
 wmclassmatch=3
 
@@ -18,7 +17,6 @@ wmclassmatch=3
 Description=3-file-managers
 desktops=7b1c9f40-6352-491f-9308-21b52c0899e1
 desktopsrule=3
-fpplevelrule=2
 wmclass=dolphin|thunar
 wmclassmatch=3
 

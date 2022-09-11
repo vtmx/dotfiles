@@ -7,6 +7,7 @@ HOME_DIR="$HOME"
 CONFIG_DIR="$HOME/.config"
 
 menu(){
+  clear
 	echo ""
 	echo "---------------------------------------------------------------------------------"
 	echo " Dotfiles - Vitor Melo"
