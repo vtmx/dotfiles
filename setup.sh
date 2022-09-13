@@ -175,19 +175,6 @@ create_links() {
 	create_link "$name" "$target" "$link"
 
 	# ----------------------------------------------------------
-	# polybar
-	# ----------------------------------------------------------
-	name="polybar"
-	target="$SRC_DIR/polybar/config.ini"
-	link="$CONFIG_DIR/polybar"
-	create_link "$name" "$target" "$link"
-
-	name="polybar launch"
-	target="$SRC_DIR/polybar/launch.sh"
-	link="$CONFIG_DIR/polybar"
-	create_link "$name" "$target" "$link"
-
-	# ----------------------------------------------------------
 	# neofetch
 	# ----------------------------------------------------------
 	name="neofetch"
@@ -236,6 +223,27 @@ create_links() {
 	name=""
 	target="$SRC_DIR/nvim/lua/theme.lua"
 	link="$CONFIG_DIR/nvim/lua"
+	create_link "$name" "$target" "$link"
+
+	# ----------------------------------------------------------
+	# polybar
+	# ----------------------------------------------------------
+	name="polybar"
+	target="$SRC_DIR/polybar/config.ini"
+	link="$CONFIG_DIR/polybar"
+	create_link "$name" "$target" "$link"
+
+	name="polybar launch"
+	target="$SRC_DIR/polybar/launch.sh"
+	link="$CONFIG_DIR/polybar"
+	create_link "$name" "$target" "$link"
+
+	# ----------------------------------------------------------
+	# ranger
+	# ----------------------------------------------------------
+	name="ranger"
+	target="$SRC_DIR/ranger/rc.conf"
+	link="$CONFIG_DIR/ranger"
 	create_link "$name" "$target" "$link"
 
 	# ----------------------------------------------------------
