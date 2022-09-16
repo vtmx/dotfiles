@@ -6,7 +6,7 @@ SRC_DIR="$CURRENT_DIR/config"
 HOME_DIR="$HOME"
 CONFIG_DIR="$HOME/.config"
 
-menu(){
+menu() {
   clear
 	echo ""
 	echo "---------------------------------------------------------------------------------"
@@ -284,7 +284,7 @@ create_links() {
 	create_link "$name" "$target" "$link"
 
 	echo "Links created"
-	menu
-}
+  read -p "Press any key to continue..."
 
-menu
+	return_menu
+}
