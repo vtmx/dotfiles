@@ -8,44 +8,40 @@ CONFIG_DIR="$HOME/.config"
 
 menu() {
   clear
-	echo ""
+	echo
 	echo "---------------------------------------------------------------------------------"
 	echo " Dotfiles - Vitor Melo"
 	echo "---------------------------------------------------------------------------------"
-	echo ""
+	echo
 	echo "f. Fonts copy"
 	echo "i. Install packages"
 	echo "l. Links create"
 	echo "e. Exit"
-	echo ""
-	echo -en "Option: "
-	read -n 1 option
-	echo ""
-	echo ""
+	echo
+	read -p "Option: " option
+	echo
 
-	case $option in
+	case "${option}" in
 		f)
 			copy_fonts
-		;;
+      ;;
 
 		i)
 			install_packages
-		;;
+      ;;
 
 		l)
 			create_links
-		;;
+      ;;
 
 		e)
-			break
-		;;
+			exit 0
+      ;;
+    *)
+      read -p "Opção inválida. Pressione qualquer tecla para retornar ao menu."
+      menu
+      ;;
 	esac
-}
-
-return_menu() {
-	echo ""
-	read
-	menu
 }
 
 copy_fonts() {
@@ -53,14 +49,14 @@ copy_fonts() {
 	cp -R "$CURRENT_DIR/fonts/BlexMono Nerdfonts" "$HOME/.fonts"
 	cp -R "$CURRENT_DIR/fonts/IBM Plex Mono" "$HOME/.fonts"
 	cp -R "$CURRENT_DIR/fonts/Segoe UI" "$HOME/.fonts"
-	echo "Copied"
-	return_menu
+  read -p "Copied"
+	menu
 }
 
 install_packages() {
 	echo "Install packages..."
-	echo "Installed"
-	return_menu
+  read -p "Installed"
+	menu
 }
 
 create_link() {
@@ -286,5 +282,5 @@ create_links() {
 	echo "Links created"
   read -p "Press any key to continue..."
 
-	return_menu
+	menu
 }
