@@ -26,44 +26,6 @@ set -g fish_color_search_match --background=$shade2
 set -g fish_pager_color_completion $shade7
 set -g fish_pager_color_progress $shade3
 
-# enable vi mode
-# fish_vi_key_bindings
-
-# to go back to default mode
-# fish_default_key_bindings
-
-# active keybinds vim
-function fish_user_key_bindings
-  # mappings
-  # bind -M insert -m default kj backward-char force-repaint
-  bind -m default L end-of-line
-  bind -m default H beginning-of-line
-
-  # fish shortcuts
-  bind -M insert \cf accept-autosuggestion
-  bind -M insert \cj history-search-backward
-  bind -M insert \cn history-search-backward
-  bind -M insert \ck history-search-forward
-  bind -M insert \cp history-search-forward
-end
-
-# emulates vim's cursor shape behavior
-# set the normal and visual mode cursors to a block
-# set fish_cursor_default block
-
-# set the insert mode cursor to a line
-# set fish_cursor_insert line
-
-# set the replace mode cursor to an underscore
-# set fish_cursor_replace_one underscore
-
-# the following variable can be used to configure cursor shape in
-# visual mode, but due to fish_cursor_default, is redundant here
-# set fish_cursor_visual block
-
-# plugin ssh
-# fish_ssh_agent
-
 # variables
 export BROWSER='vivaldi-stable'
 export CODE='code'
@@ -75,18 +37,27 @@ export VISUAL='nvim'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c='clear'
-alias cat='bat'
 alias cls='clear'
 alias cpv='rsync -ah --info=progress2'
 alias e='exit'
 alias md='mkdir'
 alias rd='rmdir'
-alias r='ranger'
+
+
+# bat
+if type -q bat
+  alias cat='bat'
+end
 
 # exa
 if type -q exa
   alias ls='exa --color=always --group-directories-first'
   alias tree='exa -T'
+end
+
+# ranger
+if type -q ranger
+  alias r='ranger'
 end
 
 # apps
@@ -168,6 +139,44 @@ end
 if type -q starship
   starship init fish | source
 end
+
+# enable vi mode
+# fish_vi_key_bindings
+
+# to go back to default mode
+# fish_default_key_bindings
+
+# active keybinds vim
+# function fish_user_key_bindings
+#   # mappings
+#   # bind -M insert -m default kj backward-char force-repaint
+#   bind -m default L end-of-line
+#   bind -m default H beginning-of-line
+#
+#   # fish shortcuts
+#   bind -M insert \cf accept-autosuggestion
+#   bind -M insert \cj history-search-backward
+#   bind -M insert \cn history-search-backward
+#   bind -M insert \ck history-search-forward
+#   bind -M insert \cp history-search-forward
+# end
+
+# emulates vim's cursor shape behavior
+# set the normal and visual mode cursors to a block
+# set fish_cursor_default block
+
+# set the insert mode cursor to a line
+# set fish_cursor_insert line
+
+# set the replace mode cursor to an underscore
+# set fish_cursor_replace_one underscore
+
+# the following variable can be used to configure cursor shape in
+# visual mode, but due to fish_cursor_default, is redundant here
+# set fish_cursor_visual block
+
+# plugin ssh
+# fish_ssh_agent
 
 # links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell

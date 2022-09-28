@@ -121,10 +121,10 @@ map('n', '<c-k>', '<c-w>k')
 map('n', '<c-l>', '<c-w>l')
 
 -- tmux
-map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
-map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
-map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
-map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
+-- map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
+-- map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
+-- map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
+-- map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- move panels
 map('n', '<c-w>h', '<c-w>H')
