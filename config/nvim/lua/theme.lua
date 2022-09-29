@@ -12,7 +12,7 @@ onedarkpro.setup {
 	  bg = c.shade0,
   },
 	highlights = {
-		VertSplit = { bg = c.shade0, fg = c.shade3 }
+		VertSplit = { bg = c.shade0, fg = c.shade2 }
 	},
 	options = {
 		italic = false,
@@ -58,7 +58,7 @@ hi('PmenuSel', 'NONE', c.shade7)
 hi('PmenuThumb', c.shade2)
 
 -- line splits
-hi('VertSplit', c.shade0, c.shade3)
+hi('VertSplit', c.shade0, c.shade2)
 
 -- status line
 hi('StatusLine', c.shade0, c.shade3)

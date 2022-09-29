@@ -284,3 +284,5 @@ create_links() {
 
 	menu
 }
+
+menu

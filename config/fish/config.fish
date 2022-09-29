@@ -2,29 +2,56 @@
 set fish_greeting
 
 # var colors
-set -l shade0 23272e
-set -l shade1 4b515c
-set -l shade2 4b515c
-set -l shade3 5c6370
-set -l shade4 636d83
-set -l shade5 828997
-set -l shade6 979eab
-set -l shade7 abb2bf
-set -l accent1 d19a66
-set -l accent2 e5c07b
-set -l accent3 98c379
-set -l accent4 56b6c2
-set -l accent5 61afef
-set -l accent6 c678dd
-set -l accent7 be5046
+set -l shade0 23272e # background color
+set -l shade1 4b515c # ui, darker
+set -l shade2 4b515c # ui, text selection
+set -l shade3 5c6370 # ui, code comments
+set -l shade4 636d83 # iu, line highlight
+set -l shade5 828997 # iu
+set -l shade6 979eab # foreground text
+set -l shade7 abb2bf # foreground text
 
-# syntax highlighting
+set -l accent0 e06c75 # red
+set -l accent1 d19a66 # orange
+set -l accent2 e5c07b # yellow
+set -l accent3 98c379 # green
+set -l accent4 56b6c2 # cyan
+set -l accent5 61afef # blue
+set -l accent6 c678dd # purple
+set -l accent7 be5046 # magenta
+
+# syntax colors
+set -g fish_color_autosuggestion $shade3
+set -g fish_color_cancel $accent0
+set -g fish_color_command $shade7
+set -g fish_color_comment $shade3
+set -g fish_color_cwd $accent2
+set -g fish_color_cwd_root $accent0
+set -g fish_color_end $accent1
+set -g fish_color_error $accent0
+set -g fish_color_escape $accent7
+set -g fish_color_history_current $shade3
+set -g fish_color_host $accent5
+set -g fish_color_host_remote $accent5
+set -g fish_color_keyword $shade7
+set -g fish_color_match --background=$accent5
+set -g fish_color_normal $shade7
+set -g fish_color_operator $accent7
+set -g fish_color_option $accent4
 set -g fish_color_param $shade7
+set -g fish_color_quote $shade3
+set -g fish_color_redirection $accent7
+set -g fish_color_status $shade7
 set -g fish_color_search_match --background=$shade2
+set -g fish_color_selection --background=$accent5
+set -g fish_color_user $accent4
+set -g fish_color_valid_path $accent3
 
-# completion pager colors
-set -g fish_pager_color_completion $shade7
+# pager colors
 set -g fish_pager_color_progress $shade3
+set -g fish_pager_color_prefix $accent4
+set -g fish_pager_color_completion $shade7
+set -g fish_pager_color_description $shade3
 
 # variables
 export BROWSER='vivaldi-stable'
@@ -177,6 +204,10 @@ end
 
 # plugin ssh
 # fish_ssh_agent
+
+# colors
+# https://fishshell.com/docs/current/interactive.html#variables-color
+# defaults: black, red, green, yellow, blue, magenta, cyan, white
 
 # links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
