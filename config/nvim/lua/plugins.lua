@@ -7,130 +7,126 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#23272e" })
+  print 'Cloning packer...'
+  fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  vim.cmd 'packadd packer.nvim'
+  vim.cmd 'PackerSync'
+
+  return true
 end
 
--- telescope
-local actions = require('telescope.actions')
+require('packer').startup(function(use)
+  -- packer
+  use 'wbthomason/packer.nvim'
 
--- packer
-local packer = require('packer')
+  -- requirements
+  use 'nvim-lua/plenary.nvim'
+  use 'kyazdani42/nvim-web-devicons'
 
-packer.startup(function(use)
-		-- packer
-		use 'wbthomason/packer.nvim'
+  -- plugins
+  use 'machakann/vim-highlightedyank'
+  use 'nathom/tmux.nvim'
+  use 'tpope/vim-surround'
 
-		-- requirements
-		use 'nvim-lua/plenary.nvim'
-		use 'kyazdani42/nvim-web-devicons'
+  -- syntaxes
+  use 'baskerville/vim-sxhkdrc'
+  use 'fladson/vim-kitty'
+  use 'khaveesh/vim-fish-syntax'
 
-		-- plugins
-		use 'machakann/vim-highlightedyank'
-		use 'nathom/tmux.nvim'
-		use 'tpope/vim-surround'
+  -- ui
+  use 'olimorris/onedarkpro.nvim' 
+  use 'nvim-lualine/lualine.nvim'
+  use 'akinsho/bufferline.nvim'
 
-		-- syntaxes
-		use 'baskerville/vim-sxhkdrc'
-		use 'fladson/vim-kitty'
-		use 'khaveesh/vim-fish-syntax'
+  -- coc
+  use { 'neoclide/coc.nvim', branch = 'release' }
 
-		-- ui
-		use 'olimorris/onedarkpro.nvim' 
-		use 'nvim-lualine/lualine.nvim'
-		use 'akinsho/bufferline.nvim'
+  -- better-scape
+  use {
+    'jdhao/better-escape.vim',
+    event = 'InsertEnter'
+  }
 
-		-- coc
-		use { 'neoclide/coc.nvim', branch = 'release' }
+  -- comment
+  use {
+    'numToStr/Comment.nvim',
+    require('Comment').setup()
+  }
 
-		-- better-scape
-		use {
-			'jdhao/better-escape.vim',
-			event = 'InsertEnter'
-		}
+  -- indent-blankline
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    require('indent_blankline').setup { filetype_exclude = {'dashboard', 'help', 'terminal'} }
+  }
 
-		-- comment
-		use {
-			'numToStr/Comment.nvim',
-			require('Comment').setup()
-		}
+  -- hop
+  use {
+    'phaazon/hop.nvim',
+    require'hop'.setup()
+  }
 
-		-- indent-blankline
-		use {
-			'lukas-reineke/indent-blankline.nvim',
-			require('indent_blankline').setup { filetype_exclude = {'dashboard', 'help', 'terminal'} }
-		}
+  -- nvim-tree
+  use {
+    'kyazdani42/nvim-tree.lua',
 
-		-- hop
-		use {
-			'phaazon/hop.nvim',
-			require'hop'.setup()
-		}
+    require('nvim-tree').setup({
+      disable_netrw = false,
+      hijack_netrw = false,
+      actions = {
+        open_file = {
+          quit_on_open = true,
+        }
+      },
+      view = {
+        width = 30,
+        hide_root_folder = true,
+      }
+    })
+  } -- end-use
 
-		-- nvim-tree
-		use {
-			'kyazdani42/nvim-tree.lua',
+  -- telescope
+  local actions = require('telescope.actions')
+  use {
+    'nvim-lua/telescope.nvim',
 
-			require('nvim-tree').setup({
-				disable_netrw = false,
-				hijack_netrw = false,
-				actions = {
-					open_file = {
-						quit_on_open = true,
-					}
-				},
-				view = {
-					width = 30,
-					hide_root_folder = true,
-				}
-			})
-		}
+    require('telescope').setup({
+      defaults = {
+        disable_devicons=true,
+        sorting_strategy = 'ascending',
+        layout_config = {
+          horizontal = {
+            prompt_position = 'top',
+          },
+        },
+        mappings = {
+          n = {
+            ['<c-c>'] = actions.close
+          },
+          i = {
+            ['<c-j>'] = actions.move_selection_next,
+            ['<c-k>'] = actions.move_selection_previous,
+            ['<c-c>'] = actions.close
+          }
+        }
+      }
+    })
+  } -- end-use
 
-		-- telescope
-		use {
-			'nvim-lua/telescope.nvim',
+  -- treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
 
-			require('telescope').setup({
-				defaults = {
-					disable_devicons=true,
-					sorting_strategy = 'ascending',
-					layout_config = {
-						horizontal = {
-							prompt_position = 'top',
-						},
-					},
-					mappings = {
-						n = {
-							['<c-c>'] = actions.close
-						},
-						i = {
-							['<c-j>'] = actions.move_selection_next,
-							['<c-k>'] = actions.move_selection_previous,
-							['<c-c>'] = actions.close
-						}
-					}
-				}
-			})
-		}
-
-		-- treesitter
-		use {
-			'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
-
-			require'nvim-treesitter.configs'.setup {
-				highlight = {
-					enable = true
-				},
-				indent = {
-					enable = true
-				}
-			}
-		}
-
-		-- Automatically cloning packer.nvim
-		if packer_bootstrap then
-			require('packer').sync()
-		end
-end)
+    require'nvim-treesitter.configs'.setup {
+      highlight = {
+        enable = true
+      },
+      indent = {
+        enable = true
+      }
+    }
+  } -- end-use
+end) -- end-packer
 
 -- instructions
 -- coc
