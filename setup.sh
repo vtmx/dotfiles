@@ -207,13 +207,18 @@ create_links() {
 	create_link "$name" "$target" "$link"
 
 	name=""
-	target="$SRC_DIR/nvim/lua/settings.lua"
+	target="$SRC_DIR/nvim/lua/options.lua"
 	link="$CONFIG_DIR/nvim/lua"
 	create_link "$name" "$target" "$link"
 
 	name=""
-	target="$SRC_DIR/nvim/lua/plugins.lua"
-	link="$CONFIG_DIR/nvim/lua"
+	target="$SRC_DIR/nvim/lua/plugins/init.lua"
+	link="$CONFIG_DIR/nvim/lua/plugins"
+	create_link "$name" "$target" "$link"
+
+	name=""
+	target="$SRC_DIR/nvim/lua/plugins/config.lua"
+	link="$CONFIG_DIR/nvim/lua/plugins"
 	create_link "$name" "$target" "$link"
 
 	name=""

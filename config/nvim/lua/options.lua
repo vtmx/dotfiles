@@ -59,10 +59,6 @@ vim.wo.colorcolumn = '99999'
 
 -- plugins
 
--- better-scape
-vim.g.better_escape_shortcut = 'kj' 
-vim.g.better_escape_interval = 200 
-
 -- highlightedyank
 vim.g.highlightedyank_highlight_duration = 150
 
