@@ -46,7 +46,6 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
 
   -- utils
-  use 'machakann/vim-highlightedyank'
   use 'nathom/tmux.nvim'
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
