@@ -1,5 +1,6 @@
 ------------------------------------------------------------
 -- settings
+-- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
 ------------------------------------------------------------
 
 -- vars
@@ -44,30 +45,21 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- netrw
-vim.g['netrw_altv'] = 1
-vim.g['netrw_banner'] = 0
-vim.g['netrw_browse_split'] = 4
-vim.g['netrw_hide'] = 1
-vim.g['netrw_liststyle'] = 4
-vim.g['netrw_winsize'] = 25
-
+vim.g.netrw_altv = 1
+vim.g.netrw_banner = 0
+vim.g.netrw_browse_split = 4
+vim.g.netrw_hide = 1
+vim.g.netrw_liststyle = 4
+vim.g.netrw_winsize = 25
 
 -- indent-blanklinke
 -- fix indentline color
 hl_mode = 'combine'
 vim.wo.colorcolumn = '99999'
 
--- plugins
-
--- highlightedyank
-vim.g.highlightedyank_highlight_duration = 150
-
--- lsp
-vim.lsp.handlers['textDocument/publishDiagnostics'] =
-vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  -- Disable underline, it's very annoying
-  underline = false,
-  virtual_text = false,
-  signs = true,
-  update_in_insert = false
+-- highlight yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function(event)
+    vim.highlight.on_yank({timeout = 50})
+  end
 })
