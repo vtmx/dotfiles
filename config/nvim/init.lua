@@ -2,7 +2,7 @@
 -- init
 ------------------------------------------------------------
 
-require('settings')
+require('options')
 require('mappings')
 require('plugins')
 require('theme')

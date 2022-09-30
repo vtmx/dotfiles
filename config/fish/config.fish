@@ -36,10 +36,10 @@ set -g fish_color_host_remote $accent5
 set -g fish_color_keyword $shade7
 set -g fish_color_match --background=$accent5
 set -g fish_color_normal $shade7
-set -g fish_color_operator $accent7
-set -g fish_color_option $accent4
+set -g fish_color_operator $accent4
+set -g fish_color_option $shade7
 set -g fish_color_param $shade7
-set -g fish_color_quote $shade3
+set -g fish_color_quote $accent3
 set -g fish_color_redirection $accent7
 set -g fish_color_status $shade7
 set -g fish_color_search_match --background=$shade2
@@ -95,6 +95,7 @@ alias matrix='cmatrix -C white'
 # configs
 alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
 alias bc='nvim $HOME/.config/bspwm/bspwmrc'
+alias df='nvim $HOME/Dev/dotfiles/setup.sh'
 alias fc='nvim $HOME/.config/fish/config.fish'
 alias kc='nvim $HOME/.config/kitty/kitty.conf'
 alias rc='nvim $HOME/.config/rofi/config.rasi'
@@ -102,9 +103,10 @@ alias pc='nvim $HOME/.config/polybar/config.ini'
 alias tc='nvim $HOME/.tmux.conf'
 alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
 alias vc='nvim $HOME/.config/nvim/init.lua'
-alias vs='nvim $HOME/.config/nvim/lua/settings.lua'
+alias vo='nvim $HOME/.config/nvim/lua/options.lua'
 alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
-alias vp='nvim $HOME/.config/nvim/lua/plugins.lua'
+alias vp='nvim $HOME/.config/nvim/lua/plugins/init.lua'
+alias vpc='nvim $HOME/.config/nvim/lua/plugins/config.lua'
 alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
 
 # paths
