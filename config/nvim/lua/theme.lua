@@ -27,14 +27,13 @@ hi('EndOfBuffer', c.shade3)
 hi('TermCursor', c.shade7)
 hi('NonText', c.shade3)
 hi('Directory', c.accent5)
-hi('ErrorMsg', c.accent0)
 
 -- search
 hi('IncSearch', c.shade1, c.accent2)
 hi('Search', c.shade1, c.accent2)
 
 -- messages
-hi('MoreMsg', c.shade7)
+hi('ErrorMsg', c.accent0)
 hi('ModeMsg', c.shade7)
 hi('Question', c.accent3)
 hi('WinSeparator', c.shade3)
@@ -103,8 +102,11 @@ hi('VertSplit', c.shade2)
 hi('StatusLine', c.shade3)
 hi('StatusLineNC', c.shade3)
 
--- hi comments
-hi('Comment', c.shade3, '', 'italic')
+-- comments
+hi('Comment', c.shade3, c.shade0, 'italic')
+
+-- packker
+hi('packerStatusSuccess', c.accent3)
 
 -- hop
 hi('HopNextKey', c.accent0)
