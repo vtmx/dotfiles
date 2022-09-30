@@ -37,7 +37,7 @@ set -g fish_color_keyword $shade7
 set -g fish_color_match --background=$accent5
 set -g fish_color_normal $shade7
 set -g fish_color_operator $shade7
-set -g fish_color_option $accent6
+set -g fish_color_option $shade7
 set -g fish_color_param $shade7
 set -g fish_color_quote $accent3
 set -g fish_color_redirection $accent7

@@ -19,7 +19,10 @@ function hi(group, fg, bg, gui)
 end
 
 -- default
-hi('Normal', c.shade7, 'NONE')
+hi('Normal', c.shade7)
+
+-- comments
+hi('Comment', c.shade3, 'NONE', 'italic')
 
 -- extras
 hi('SpecialKey', c.accent4)
@@ -67,9 +70,6 @@ hi('Typedef', c.accent6)
 -- line tilde blank
 hi('EndOfBuffer', c.shade0)
 
--- cursor line
-hi('CursorLine', '', c.shade4)
-
 -- line column
 hi('LineNr', c.shade2)
 hi('LineNrAbove', c.shade3)
@@ -77,6 +77,9 @@ hi('LineNrBelow', c.shade3)
 hi('CursorLineNr', c.shade7)
 hi('CursorLineSign', c.shade7)
 hi('CursorLineFold', c.shade7)
+
+-- line highlight
+hi('CursorLine', '', c.shade4)
 
 -- select text
 hi('Visual', '', c.shade2)
@@ -101,9 +104,6 @@ hi('VertSplit', c.shade2)
 -- status line
 hi('StatusLine', c.shade3)
 hi('StatusLineNC', c.shade3)
-
--- comments
-hi('Comment', c.shade3, c.shade0, 'italic')
 
 -- packker
 hi('packerStatusSuccess', c.accent3)
