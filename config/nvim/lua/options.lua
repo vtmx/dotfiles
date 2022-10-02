@@ -5,6 +5,7 @@
 
 -- vars
 local opt = vim.opt
+local o   = vim.o
 
 -- sets
 opt.termguicolors = true
@@ -53,14 +54,17 @@ vim.g.netrw_hide = 1
 vim.g.netrw_liststyle = 4
 vim.g.netrw_winsize = 25
 
--- indent-blanklinke
--- fix indentline color
-hl_mode = 'combine'
-vim.wo.colorcolumn = '99999'
-
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function(event)
-    vim.highlight.on_yank({timeout = 50})
+  callback = function()
+    vim.highlight.on_yank({timeout = 150})
+  end
+})
+
+-- disable auto comments
+-- vim.cmd[[autocmd FileType * setlocal formatoptions-=cro]]
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function()
+    vim.opt.formatoptions = vim.opt.formatoptions - { 'c', 'r', 'o' }
   end
 })
