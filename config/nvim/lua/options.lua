@@ -12,6 +12,7 @@ opt.title = true
 opt.autochdir = true
 opt.cursorline = true
 opt.cmdheight = 1
+opt.shell = 'fish'
 opt.exrc = true
 opt.ignorecase = true
 opt.smartcase = true
@@ -22,14 +23,14 @@ opt.mouse = 'a'
 opt.backup = false
 opt.swapfile = false
 
+-- number
+opt.number = true
+opt.relativenumber = true
+
 -- wrap
 opt.wrap = false
 opt.textwidth = 0
 opt.wrapmargin = 0
-
--- number
-opt.number = true
-opt.relativenumber = true
 
 -- indent
 local indent = 2
