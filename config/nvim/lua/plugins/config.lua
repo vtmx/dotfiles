@@ -205,6 +205,9 @@ require('telescope').setup({
   }
 })
 
+-- treesitter
+require('nvim-treesitter.install').update({ with_sync = true })
+
 -- instructions
 -- coc
 --:CocInstall coc-eslint

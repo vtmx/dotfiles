@@ -39,7 +39,6 @@ hi('Search', c.shade1, c.accent2)
 hi('ErrorMsg', c.accent0)
 hi('ModeMsg', c.shade7)
 hi('Question', c.accent3)
-hi('WinSeparator', c.shade3)
 
 -- sintaxy
 hi('Error', c.accent0)
@@ -98,12 +97,8 @@ hi('CocFloatThumb', '', c.shade4)
 hi('CocSearch', c.accent5)
 hi('CocPumShortcut') -- remove italic
 
--- line splits
-hi('VertSplit', c.shade2)
-
--- status line
-hi('StatusLine', c.shade3)
-hi('StatusLineNC', c.shade3)
+-- line win separator
+hi('WinSeparator', c.shade2)
 
 -- packker
 hi('packerStatusSuccess', c.accent3)
@@ -119,10 +114,10 @@ hi('IndentBlanklineSpaceChar')
 -- bufferline
 hi('BufferLineIndicatorVisible', '', c.shade0)
 hi('BufferLineCloseButtonVisible', '', c.shade0)
+hi('BufferLineModified', '', c.shade0)
 
 -- nvim-tree
 hi('NvimTreeCursorLine', '', c.shade4)
-hi('NvimTreeVertSplit', c.shade2)
 hi('NvimTreeFolder', c.shade7)
 hi('NvimTreeFolderIcon', c.shade7)
 hi('NvimTreeFolderName', c.shade7)

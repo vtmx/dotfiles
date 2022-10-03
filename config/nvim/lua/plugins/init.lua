@@ -59,11 +59,8 @@ return packer.startup(function(use)
   use 'khaveesh/vim-fish-syntax'
 
   -- autocomplete
+  use 'nvim-treesitter/nvim-treesitter'
   use { 'neoclide/coc.nvim', branch = 'release' }
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end
-  }
 
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -72,15 +69,3 @@ return packer.startup(function(use)
     require('plugins.config')
   end
 end)
-
--- instructions
--- coc
---:CocInstall coc-eslint
---:CocInstall coc-emmet
---:CocInstall coc-pairs
---:CocInstall coc-snippets
---:CocInstall coc-prettier
---:CocInstall coc-vetur
-
--- treesitter
--- :TSInstall vue javascript typescript html css scss
