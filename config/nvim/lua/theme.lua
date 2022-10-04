@@ -2,129 +2,118 @@
 -- theme
 ------------------------------------------------------------
 
-local cmd = vim.cmd
 local c = require('colors')
 
--- :hi to see colors
-function hi(group, fg, bg, gui)
-	local fg  = fg or 'NONE'
-	local bg  = bg or 'NONE'
-	local gui = gui or 'NONE'
+local highlights = {
+  Normal = { fg = c.shade7 },
+  Comment = { fg = c.shade3, italic = true },
 
-	bg  = 'guibg=' .. bg
-	fg  = 'guifg=' .. fg
-	gui = 'gui=' .. gui
+  -- extras
+  SpecialKey = { fg = c.accent4 },
+  EndOfBuffer = { fg = c.shade3 },
+  TermCursor = { fg = c.shade7 },
+  NonText = { fg = c.shade3 },
+  Directory = { fg = c.accent5 },
 
-	cmd('hi ' .. group .. ' ' .. bg .. ' ' .. fg .. ' ' .. gui)
+  -- search
+  IncSearch = { fg = c.shade1, bg = c.accent2 },
+  Search = { fg = c.shade1, bg = c.accent2 },
+
+  -- messages
+  ErrorMsg = { fg = c.accent0 },
+  ModeMsg = { fg = c.shade7 },
+  Question = { fg = c.accent3 },
+
+  -- sintaxy
+  Error = { fg = c.accent0 },
+  Todo = { fg = c.accent6 },
+  String = { fg = c.accent3 },
+  Constant = { fg = c.accent1 },
+  Character = { fg = c.accent3 },
+  Number = { fg = c.accent1 },
+  Boolean = { fg = c.accent1 },
+  Float = { fg = c.accent1 },
+  Function = { fg = c.accent5 },
+  Identifier = { fg = c.accent0 },
+  Conditional = { fg = c.accent6 },
+  Statement = { fg = c.accent6 },
+  Repeat = { fg = c.accent6 },
+  Label = { fg = c.accent0 },
+  Operator = { fg = c.accent4 },
+  Keyword = { fg = c.accent6 },
+  Exception = { fg = c.accent6 },
+  Include = { fg = c.accent6 },
+
+  -- keys [] {} ()
+  StorageClass = { fg = c.accent6 },
+  Type = { fg = c.accent6 },
+  Structure = { fg = c.accent6 },
+  Typedef = { fg = c.accent6 },
+
+  -- line tilde blank
+  EndOfBuffer = { fg = c.shade0 },
+
+  -- line column
+  LineNr = { fg = c.shade2 },
+  LineNrAbove = { fg = c.shade3 },
+  LineNrBelow = { fg = c.shade3 },
+  CursorLineNr = { fg = c.shade7 },
+  CursorLineSign = { fg = c.shade7 },
+  CursorLineFold = { fg = c.shade7 },
+
+  -- line highlight
+  CursorLine = { bg = c.shade4 },
+
+  -- select text
+  Visual = { bg = c.shade2 },
+
+  -- pmenu
+  Pmenu = { bg = c.shade1 },
+  PmenuSel = { bg = c.shade4 },
+  PmenuSbar = { bg = c.shade1 },
+  PmenuThumb = { bg = c.shade4 },
+
+  -- cock menu
+  CocPumMenu = { bg = c.shade1 },
+  CocMenuSel = { bg = c.shade4 },
+  CocFloatSbar = { bg = c.shade1 },
+  CocFloatThumb = { bg = c.shade4 },
+  CocSearch = { fg = c.accent5 },
+  CocPumShortcut = { italic = false },
+
+  -- line win separator
+  WinSeparator = { fg = c.shade2 },
+
+  -- packker
+  packerStatusSuccess = { fg = c.accent3 },
+
+  -- hop
+  HopNextKey = { fg = c.accent0 },
+  HopUnmatched = { fg = c.shade3 },
+
+  -- indent-line
+  IndentBlanklineChar = { fg = c.shade2 },
+
+  -- bufferline
+  BufferLineIndicatorVisible = { bg = c.shade0 },
+  BufferLineCloseButtonVisible = { bg = c.shade0 },
+  BufferLineModified = { bg = c.shade0 },
+
+  -- nvim-tree
+  NvimTreeCursorLine = { bg = c.shade4 },
+  NvimTreeFolder = { fg = c.shade7 },
+  NvimTreeFolderIcon = { fg = c.shade7 },
+  NvimTreeFolderName = { fg = c.shade7 },
+  NvimTreeEmptyFolderName = { fg = c.shade7 },
+  NvimTreeOpenedFolderName = { fg = c.shade7 },
+  NvimTreeNormal = { bg = c.shade0 },
+  NvimTreeNormalNC = { bg = c.shade0 },
+  NvimTreeRootFolder = { fg = c.shade7 },
+  NvimTreeOpenedFile = { fg = c.shade7 },
+  NvimTreeWindowPicker = { fg = c.shade7 },
+}
+
+-- expand highlights
+for name, val in pairs(highlights) do
+  vim.api.nvim_set_hl(0, name, val)
 end
-
--- default
-hi('Normal', c.shade7)
-
--- comments
-hi('Comment', c.shade3, 'NONE', 'italic')
-
--- extras
-hi('SpecialKey', c.accent4)
-hi('EndOfBuffer', c.shade3)
-hi('TermCursor', c.shade7)
-hi('NonText', c.shade3)
-hi('Directory', c.accent5)
-
--- search
-hi('IncSearch', c.shade1, c.accent2)
-hi('Search', c.shade1, c.accent2)
-
--- messages
-hi('ErrorMsg', c.accent0)
-hi('ModeMsg', c.shade7)
-hi('Question', c.accent3)
-
--- sintaxy
-hi('Error', c.accent0)
-hi('Todo', c.accent6)
-hi('String', c.accent3)
-hi('Constant', c.accent1)
-hi('Character', c.accent3)
-hi('Number', c.accent1)
-hi('Boolean', c.accent1)
-hi('Float', c.accent1)
-hi('Function', c.accent5)
-hi('Identifier', c.accent0)
-hi('Conditional', c.accent6)
-hi('Statement', c.accent6)
-hi('Repeat', c.accent6)
-hi('Label', c.accent0)
-hi('Operator', c.accent4)
-hi('Keyword', c.accent6)
-hi('Exception', c.accent6)
-hi('Include', c.accent6)
-
--- keys [] {} ()
-hi('StorageClass', c.accent6)
-hi('Type', c.accent6)
-hi('Structure', c.accent6)
-hi('Typedef', c.accent6)
-
--- line tilde blank
-hi('EndOfBuffer', c.shade0)
-
--- line column
-hi('LineNr', c.shade2)
-hi('LineNrAbove', c.shade3)
-hi('LineNrBelow', c.shade3)
-hi('CursorLineNr', c.shade7)
-hi('CursorLineSign', c.shade7)
-hi('CursorLineFold', c.shade7)
-
--- line highlight
-hi('CursorLine', '', c.shade4)
-
--- select text
-hi('Visual', '', c.shade2)
-
--- pmenu
-hi('Pmenu', '', c.shade1)
-hi('PmenuSel', '', c.shade4)
-hi('PmenuSbar', '', c.shade1)
-hi('PmenuThumb', '', c.shade4)
-
--- cock menu
-hi('CocPumMenu', '', c.shade1)
-hi('CocMenuSel', '', c.shade4)
-hi('CocFloatSbar', '', c.shade1)
-hi('CocFloatThumb', '', c.shade4)
-hi('CocSearch', c.accent5)
-hi('CocPumShortcut') -- remove italic
-
--- line win separator
-hi('WinSeparator', c.shade2)
-
--- packker
-hi('packerStatusSuccess', c.accent3)
-
--- hop
-hi('HopNextKey', c.accent0)
-hi('HopUnmatched', c.shade3)
-
--- indent-line
-hi('IndentBlanklineChar', c.shade2)
-hi('IndentBlanklineSpaceChar')
-
--- bufferline
-hi('BufferLineIndicatorVisible', '', c.shade0)
-hi('BufferLineCloseButtonVisible', '', c.shade0)
-hi('BufferLineModified', '', c.shade0)
-
--- nvim-tree
-hi('NvimTreeCursorLine', '', c.shade4)
-hi('NvimTreeFolder', c.shade7)
-hi('NvimTreeFolderIcon', c.shade7)
-hi('NvimTreeFolderName', c.shade7)
-hi('NvimTreeEmptyFolderName', c.shade7)
-hi('NvimTreeOpenedFolderName', c.shade7)
-hi('NvimTreeNormal', '', c.shade0)
-hi('NvimTreeNormalNC', '', c.shade0)
-hi('NvimTreeRootFolder', c.shade7)
-hi('NvimTreeOpenedFile', c.shade7)
-hi('NvimTreeWindowPicker', c.shade7)

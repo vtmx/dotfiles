@@ -3,10 +3,10 @@ set fish_greeting
 
 # var colors
 set -l shade0 23272e # background color
-set -l shade1 4b515c # ui, darker
-set -l shade2 4b515c # ui, text selection
+set -l shade1 1e2227 # ui, darker
+set -l shade2 3d4556 # ui, text selection
 set -l shade3 5c6370 # ui, code comments
-set -l shade4 636d83 # iu, line highlight
+set -l shade4 2c313c # iu, line highlight
 set -l shade5 828997 # iu
 set -l shade6 979eab # foreground text
 set -l shade7 abb2bf # foreground text
@@ -62,8 +62,9 @@ export VISUAL='nvim'
 # fzf
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS '
+  --height 40% --reverse
   --color=fg:#abb2bf,bg:#23272e,hl:#61afef
-  --color=fg+:#abb2bf,bg+:#2c313c,hl+:#61afef,gutter:#23272e
+  --color=fg+:#abb2bf,bg+:#3d4556,hl+:#61afef,gutter:#23272e
   --color=info:#5c6370,prompt:#98c379,pointer:#abb2bf
   --color=marker:#abb2bf,spinner:#abb2bf,header:#abb2bf'
 end

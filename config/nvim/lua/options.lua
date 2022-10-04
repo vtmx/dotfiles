@@ -5,7 +5,6 @@
 
 -- vars
 local opt = vim.opt
-local o   = vim.o
 
 -- sets
 opt.termguicolors = true
@@ -19,6 +18,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.lazyredraw = true
 opt.mouse = 'a'
+opt.clipboard:append{ 'unnamedplus' }
 
 -- notification
 opt.backup = false
@@ -57,7 +57,7 @@ vim.g.netrw_winsize = 25
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
-    vim.highlight.on_yank({timeout = 150})
+    vim.highlight.on_yank({ timeout = 150 })
   end
 })
 

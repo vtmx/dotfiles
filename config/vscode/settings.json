@@ -228,6 +228,14 @@
       "after": ["<", "<"]
     },
     {
+      "before": ["+"],
+      "after": ["<c-a>"]
+    },
+    {
+      "before": ["-"],
+      "after": ["<c-x>"]
+    },
+    {
       "before": ["x"],
       "after": ["\"", "_", "x"]
     },
@@ -281,7 +289,7 @@
     },
     {
       "before": ["<leader>", "a"],
-      "after": ["g", "g", "V", "G"]
+      "after": ["G", "V", "g", "g"]
     },
     {
       "before": ["<leader>", "e"],
