@@ -29,6 +29,10 @@ map('n', 'k', 'gk')
 -- like C and D
 map('n', 'Y', 'y$')
 
+-- increment/decrement
+map('n', '+', '<c-a>')
+map('n', '-', '<c-x>')
+
 -- begin and end line
 map('n', 'L', 'g_')
 map('n', 'H', '^')
@@ -46,7 +50,7 @@ map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
 
 -- select all
-map('n', '<leader>a', 'G<s-v>gg')
+map('n', '<c-a>', 'G<s-v>gg')
 
 -- copy to clipboard
 map('n', '<leader>y', 'V"+y')
