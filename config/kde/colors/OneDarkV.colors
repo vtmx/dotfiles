@@ -116,8 +116,8 @@ ForegroundVisited=#c678dd
 [Colors:Window]
 BackgroundAlternate=#1e2227
 BackgroundNormal=#1e2227
-DecorationFocus=86,182,194
-DecorationHover=86,182,194
+DecorationFocus=#3d4556
+DecorationHover=#3d4556
 ForegroundActive=#abb2bf
 ForegroundInactive=#5c6370
 ForegroundLink=#61afef
