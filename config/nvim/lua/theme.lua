@@ -1,4 +1,4 @@
------------------------------------------------------------
+------------------------------------------------------------
 -- theme
 ------------------------------------------------------------
 
@@ -83,6 +83,8 @@ local highlights = {
 
   -- line win separator
   WinSeparator = { fg = c.shade2 },
+  StatusLine = { fg = c.shade7 },
+  StatusLineNC = { fg = c.shade7 },
 
   -- packker
   packerStatusSuccess = { fg = c.accent3 },
