@@ -18,7 +18,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.lazyredraw = true
 opt.mouse = 'a'
-opt.clipboard:append{ 'unnamedplus' }
+-- opt.clipboard:append { 'unnamedplus' }
 
 -- notification
 opt.backup = false
@@ -40,6 +40,7 @@ opt.smartindent = true
 opt.shiftwidth = indent 
 opt.tabstop = indent 
 opt.softtabstop = indent 
+opt.wildignore:append { '*/node_modules/*' }
 
 -- split
 opt.laststatus = 3
@@ -62,7 +63,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- disable auto comments
--- vim.cmd[[autocmd FileType * setlocal formatoptions-=cro]]
 vim.api.nvim_create_autocmd('FileType', {
   callback = function()
     vim.opt.formatoptions = vim.opt.formatoptions - { 'c', 'r', 'o' }

@@ -49,6 +49,8 @@ return packer.startup(function(use)
   use 'nathom/tmux.nvim'
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'phaazon/hop.nvim'
   use 'nvim-lua/telescope.nvim'
