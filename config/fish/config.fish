@@ -105,7 +105,7 @@ alias matrix='cmatrix -C white'
 # configs
 alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
 alias bc='nvim $HOME/.config/bspwm/bspwmrc'
-alias df='nvim $HOME/Dev/dotfiles/setup.sh'
+alias dfc='nvim $HOME/Dev/dotfiles/setup.sh'
 alias fc='nvim $HOME/.config/fish/config.fish'
 alias kc='nvim $HOME/.config/kitty/kitty.conf'
 alias rc='nvim $HOME/.config/rofi/config.rasi'

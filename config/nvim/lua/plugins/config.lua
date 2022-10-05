@@ -1,24 +1,15 @@
 ------------------------------------------------------------
--- onedark
+-- config
 ------------------------------------------------------------
 
 local c = require('colors')
-local onedarkpro = require('onedarkpro')
 
-onedarkpro.setup {
-  theme = 'onedark',
-  colors = {
-    bg = c.shade0,
-  },
-  highlights = {
-    VertSplit = { bg = c.shade0, fg = c.shade2 }
-  },
-  options = {
-    italic = false,
-  }
-}
+------------------------------------------------------------
+-- onedark
+------------------------------------------------------------
 
-onedarkpro.load()
+-- require('onedarkpro').load()
+require('onedark').load()
 
 ------------------------------------------------------------
 -- bufferline
@@ -115,7 +106,7 @@ local onedarkv = {
   },
 }
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     theme = onedarkv,
     icons_enabled = true,
@@ -142,15 +133,15 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {}
-}
+})
 
 -- comment
 require('Comment').setup()
 
 -- indent-blankline
-require('indent_blankline').setup { 
+require('indent_blankline').setup({ 
   filetype_exclude = {'dashboard', 'help', 'terminal'}
-}
+})
 
 -- hop
 require('hop').setup()
@@ -171,14 +162,14 @@ require('nvim-tree').setup({
 })
 
 -- treesitter
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter.configs').setup({
   highlight = {
     enable = true
   },
   indent = {
     enable = true
   }
-}
+})
 
 -- telescope
 local telescope_actions = require('telescope.actions')
@@ -210,7 +201,6 @@ require('nvim-treesitter.install').update({ with_sync = true })
 
 -- autopairs and autotag
 require('nvim-autopairs').setup()
-require('nvim-ts-autotag').setup()
 
 -- instructions
 -- coc
@@ -223,3 +213,4 @@ require('nvim-ts-autotag').setup()
 
 -- treesitter
 -- :TSInstall vue javascript typescript html css scss
+

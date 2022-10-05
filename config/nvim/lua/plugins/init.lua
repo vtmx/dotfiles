@@ -40,6 +40,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   -- ui
+  use 'navarasu/onedark.nvim'
   use 'olimorris/onedarkpro.nvim' 
   use 'kyazdani42/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
@@ -50,7 +51,6 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
   use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'phaazon/hop.nvim'
   use 'nvim-lua/telescope.nvim'
