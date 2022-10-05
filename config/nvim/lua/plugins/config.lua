@@ -208,6 +208,10 @@ require('telescope').setup({
 -- treesitter
 require('nvim-treesitter.install').update({ with_sync = true })
 
+-- autopairs and autotag
+require('nvim-autopairs').setup()
+require('nvim-ts-autotag').setup()
+
 -- instructions
 -- coc
 --:CocInstall coc-eslint
