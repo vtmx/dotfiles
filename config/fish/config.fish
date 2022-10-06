@@ -29,7 +29,7 @@ set -g fish_color_cwd $accent2
 set -g fish_color_cwd_root $accent0
 set -g fish_color_end $accent1
 set -g fish_color_error $accent0
-set -g fish_color_escape $accent7
+set -g fish_color_escape $shade7
 set -g fish_color_history_current $shade3
 set -g fish_color_host $accent5
 set -g fish_color_host_remote $accent5

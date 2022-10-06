@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
   use 'windwp/nvim-autopairs'
+
   use 'lukas-reineke/indent-blankline.nvim'
   use 'phaazon/hop.nvim'
   use 'nvim-lua/telescope.nvim'
@@ -62,7 +63,7 @@ return packer.startup(function(use)
 
   -- autocomplete
   use 'nvim-treesitter/nvim-treesitter'
-  use { 'neoclide/coc.nvim', branch = 'release' }
+  --use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Put this at the end after all plugins
   if packer_bootstrap then
