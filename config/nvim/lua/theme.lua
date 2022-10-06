@@ -25,30 +25,46 @@ local highlights = {
   Question = { fg = c.accent3 },
 
   -- sintaxy
-  Error = { fg = c.accent0 },
-  Todo = { fg = c.accent6 },
-  String = { fg = c.accent3 },
   Constant = { fg = c.accent1 },
+  String = { fg = c.accent3 },
   Character = { fg = c.accent3 },
   Number = { fg = c.accent1 },
   Boolean = { fg = c.accent1 },
   Float = { fg = c.accent1 },
-  Function = { fg = c.accent5 },
+
   Identifier = { fg = c.accent0 },
-  Conditional = { fg = c.accent6 },
+  Function = { fg = c.accent5 },
+
   Statement = { fg = c.accent6 },
+  Conditional = { fg = c.accent6 },
   Repeat = { fg = c.accent6 },
   Label = { fg = c.accent0 },
   Operator = { fg = c.accent4 },
   Keyword = { fg = c.accent6 },
   Exception = { fg = c.accent6 },
+
+  PreProc	= { fg = c.accent6 },
   Include = { fg = c.accent6 },
+  Define = { fg = c.accent6 },
+  Macro	= { fg = c.accent0 },
+  PreCondit	= { fg = c.accent6 },
 
   -- keys [] {} ()
-  StorageClass = { fg = c.accent6 },
   Type = { fg = c.accent6 },
+  StorageClass = { fg = c.accent6 },
   Structure = { fg = c.accent6 },
   Typedef = { fg = c.accent6 },
+
+  Special	= { fg = c.accent2 },
+  SpecialChar	= { fg = c.accent2 },
+  Tag	= { fg = c.accent3 },
+  Delimiter	= { fg = c.accent7 },
+  SpecialComment	= { fg = c.shade3 },
+  Debug	= { fg = c.accent2 },
+
+  Ignore = { fg = c.shade7 },
+  Error = { fg = c.accent0 },
+  Todo = { fg = c.accent6 },
 
   -- line tilde blank
   EndOfBuffer = { fg = c.shade0 },
@@ -83,8 +99,10 @@ local highlights = {
 
   -- line win separator
   WinSeparator = { fg = c.shade2 },
-  StatusLine = { fg = c.shade7 },
+  StatusLine = { bg = 'NONE' },
   StatusLineNC = { fg = c.shade7 },
+
+  -- Plugins
 
   -- packker
   packerStatusSuccess = { fg = c.accent3 },
@@ -113,6 +131,32 @@ local highlights = {
   NvimTreeRootFolder = { fg = c.shade7 },
   NvimTreeOpenedFile = { fg = c.shade7 },
   NvimTreeWindowPicker = { fg = c.shade7 },
+
+  -- telescope
+  TelescopeSelection = { bg = c.shade4 },
+  TelescopeSelectionCaret = { fg = c.shade7 },
+  TelescopeMultiSelection = { fg = c.shade7 },
+  TelescopeMultiIcon = { fg = c.shade7 },
+
+  TelescopeNormal = { fg = c.shade7 },
+  TelescopePreviewNormal = { fg = c.shade7 },
+  TelescopePromptNormal = { fg = c.shade7 },
+  TelescopeResultsNormal = { fg = c.shade7 },
+
+  TelescopePromptBorder = { fg = c.shade3 },
+  TelescopeResultsBorder = { fg = c.shade3 },
+  TelescopePreviewBorder = { fg = c.shade3 },
+
+  TelescopeTitle = { fg = c.shade7 },
+  TelescopePromptTitle = { fg = c.shade7 },
+  TelescopeResultsTitle = { fg = c.shade7 },
+  TelescopePreviewTitle = { fg = c.shade7 },
+
+  TelescopePromptCounter = { fg = c.shade3 },
+
+  TelescopeMatching = { fg = c.accent5 },
+
+  TelescopePromptPrefix = { fg = c.shade7 },
 }
 
 -- expand highlights
