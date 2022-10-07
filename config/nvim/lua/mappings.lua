@@ -195,7 +195,35 @@ map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
 
+-- future mappings
+
+local map_table = {
+  n = {
+    ['<leader>ç'] = { '<cmd>enew<cr>' }
+  }
+}
+
+-- iterate over the first keys for each mode
+for mode, maps in pairs(map_table) do
+  -- iterate over each keybinding set in the current mode
+  for keymap, options in pairs(maps) do
+    -- build the options for the command accordingly
+    if options then
+      local cmd = options
+      local keymap_opts = keymap_opts or {}
+      if type(options) == "table" then
+        cmd = options[1]
+        keymap_opts = vim.tbl_deep_extend("force", options, keymap_opts)
+        keymap_opts[1] = nil
+      end
+      -- extend the keybinding options with the base provided and set the mapping
+      map(mode, keymap, cmd, keymap_opts)
+    end
+  end
+end
+
 -- references
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
+-- https://github.com/AstroNvim/AstroNvim/blob/53d210d3905f65b9e8f0bdb0c8a307440ebfc3f8/lua/core/utils/init.lua
