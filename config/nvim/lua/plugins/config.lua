@@ -17,6 +17,182 @@ if not status_ok then return end
 onedark.load()
 
 ------------------------------------------------------------
+-- lualine
+------------------------------------------------------------
+
+local onedarkv = {
+  normal = {
+    a = { fg = c.shade7 },
+    b = { fg = c.shade3 },
+    z = { fg = c.shade3 },
+  },
+
+  insert = {
+    a = { bg = 'NONE', fg = c.shade7 },
+  },
+
+  visual = {
+    a = { bg = 'NONE', fg = c.shade7 },
+  },
+
+  replace = {
+    a = { bg = 'NONE', fg = c.shade7 },
+  },
+
+  inactive = {
+    a = { bg = 'NONE', fg = c.shade3 },
+  },
+}
+
+local status_ok, lualine = pcall(require, 'lualine')
+if not status_ok then return end
+
+lualine.setup({
+  options = {
+    theme = onedarkv,
+    icons_enabled = true,
+    component_separators = {},
+    section_separators = {},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = { 'location' }
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+})
+
+------------------------------------------------------------
+-- comment
+------------------------------------------------------------
+
+local status_ok, comment = pcall(require, 'Comment')
+if not status_ok then return end
+comment.setup()
+
+------------------------------------------------------------
+-- indent-blankline
+------------------------------------------------------------
+
+local status_ok, indent_blankline = pcall(require, 'indent_blankline')
+if not status_ok then return end
+
+indent_blankline.setup({ 
+  filetype_exclude = {'dashboard', 'help', 'terminal'}
+})
+
+------------------------------------------------------------
+-- hop
+------------------------------------------------------------
+
+local status_ok, hop = pcall(require, 'hop')
+if not status_ok then return end
+
+hop.setup()
+
+------------------------------------------------------------
+-- nvim-tree
+------------------------------------------------------------
+
+local status_ok, nvim_tree = pcall(require, 'nvim-tree')
+if not status_ok then return end
+
+nvim_tree.setup({
+  disable_netrw = false,
+  hijack_netrw = false,
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
+  },
+  view = {
+    width = 30,
+    hide_root_folder = true,
+  }
+})
+
+------------------------------------------------------------
+-- telescope
+------------------------------------------------------------
+
+local status_ok, telescope = pcall(require, 'telescope')
+
+if not status_ok then
+  return
+else
+  telescope_actions = require('telescope.actions')
+end
+
+telescope.setup({
+  defaults = {
+    disable_devicons=true,
+    sorting_strategy = 'ascending',
+    layout_config = {
+      horizontal = {
+        prompt_position = 'top',
+      },
+    },
+    mappings = {
+      n = {
+        ['<c-c>'] = telescope_actions.close
+      },
+      i = {
+        ['<c-j>'] = telescope_actions.move_selection_next,
+        ['<c-k>'] = telescope_actions.move_selection_previous,
+        ['<c-c>'] = telescope_actions.close
+      }
+    }
+  }
+})
+
+------------------------------------------------------------
+-- treesitter
+------------------------------------------------------------
+
+local status_ok, treesitter_config = pcall(require, 'nvim-treesitter.configs')
+if not status_ok then return end
+
+treesitter_config.setup({
+  autotag = {
+    enable = true
+  },
+  highlight = {
+    enable = true
+  },
+  indent = {
+    enable = true
+  }
+})
+
+local status_ok, treesitter_install = pcall(require, 'nvim-treesitter.install')
+if not status_ok then return end
+
+treesitter_install.update({ with_sync = true })
+
+------------------------------------------------------------
+-- autopairs and autotag
+------------------------------------------------------------
+
+local status_ok, autopairs = pcall(require, 'nvim-autopairs')
+if not status_ok then return end
+
+autopairs.setup()
+
+------------------------------------------------------------
 -- bufferline
 ------------------------------------------------------------
 
@@ -117,187 +293,6 @@ bufferline.setup({
     },
   }
 })
-
-------------------------------------------------------------
--- lualine
-------------------------------------------------------------
-
-local onedarkv = {
-  normal = {
-    a = { bg = 'NONE', fg = c.shade7 },
-    c = { bg = 'NONE', fg = c.shade7 },
-  },
-
-  insert = {
-    a = { bg = 'NONE', fg = c.shade7 },
-    c = { bg = 'NONE', fg = c.shade7 },
-  },
-
-  visual = {
-    a = { bg = 'NONE', fg = c.shade7 },
-    c = { bg = 'NONE', fg = c.shade7 },
-  },
-
-  replace = {
-    a = { bg = 'NONE', fg = c.shade7 },
-    c = { bg = 'NONE', fg = c.shade7 },
-  },
-
-  inactive = {
-    a = { bg = 'NONE', fg = c.shade0 },
-    c = { bg = 'NONE', fg = c.shade0 },
-  },
-}
-
-local status_ok, lualine = pcall(require, 'lualine')
-if not status_ok then return end
-
-lualine.setup({
-  options = {
-    theme = onedarkv,
-    icons_enabled = true,
-    component_separators = {},
-    section_separators = {},
-    disabled_filetypes = {},
-    always_divide_middle = true,
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
-})
-
-------------------------------------------------------------
--- comment
-------------------------------------------------------------
-
-local status_ok, comment = pcall(require, 'Comment')
-if not status_ok then return end
-comment.setup()
-
-------------------------------------------------------------
--- indent-blankline
-------------------------------------------------------------
-
-local status_ok, indent_blankline = pcall(require, 'indent_blankline')
-if not status_ok then return end
-
-indent_blankline.setup({ 
-  filetype_exclude = {'dashboard', 'help', 'terminal'}
-})
-
-------------------------------------------------------------
--- hop
-------------------------------------------------------------
-
-local status_ok, hop = pcall(require, 'hop')
-if not status_ok then return end
-
-hop.setup()
-
-------------------------------------------------------------
--- nvim-tree
-------------------------------------------------------------
-
-local status_ok, nvim_tree = pcall(require, 'nvim-tree')
-if not status_ok then return end
-
-nvim_tree.setup({
-  disable_netrw = false,
-  hijack_netrw = false,
-  actions = {
-    open_file = {
-      quit_on_open = true,
-    }
-  },
-  view = {
-    width = 30,
-    hide_root_folder = true,
-  }
-})
-
-------------------------------------------------------------
--- telescope
-------------------------------------------------------------
-
-local status_ok, telescope = pcall(require, 'telescope')
-
-if not status_ok then
-  return
-else
-  telescope_actions = require('telescope.actions')
-end
-
-
-telescope.setup({
-  defaults = {
-    disable_devicons=true,
-    sorting_strategy = 'ascending',
-    layout_config = {
-      horizontal = {
-        prompt_position = 'top',
-      },
-    },
-    mappings = {
-      n = {
-        ['<c-c>'] = telescope_actions.close
-      },
-      i = {
-        ['<c-j>'] = telescope_actions.move_selection_next,
-        ['<c-k>'] = telescope_actions.move_selection_previous,
-        ['<c-c>'] = telescope_actions.close
-      }
-    }
-  }
-})
-
-------------------------------------------------------------
--- treesitter
-------------------------------------------------------------
-
-local status_ok, treesitter_config = pcall(require, 'nvim-treesitter.configs')
-if not status_ok then return end
-
-treesitter_config.setup({
-  autotag = {
-    enable = true
-  },
-  highlight = {
-    enable = true
-  },
-  indent = {
-    enable = true
-  }
-})
-
-
-local status_ok, treesitter_install = pcall(require, 'nvim-treesitter.install')
-if not status_ok then return end
-
-treesitter_install.update({ with_sync = true })
-
-------------------------------------------------------------
--- autopairs and autotag
-------------------------------------------------------------
-
-local status_ok, autopairs = pcall(require, 'nvim-autopairs')
-if not status_ok then return end
-
-autopairs.setup()
 
 ------------------------------------------------------------
 -- instructions
