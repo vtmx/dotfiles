@@ -21,7 +21,8 @@ local highlights = {
 
   -- messages
   ErrorMsg = { fg = c.accent0 },
-  ModeMsg = { fg = c.shade7 },
+  ModeMsg = { fg = c.shade3 },
+  MoreMsg = { fg = c.shade3 },
   Question = { fg = c.accent3 },
 
   -- sintaxy
@@ -58,9 +59,10 @@ local highlights = {
   Special	= { fg = c.accent2 },
   SpecialChar	= { fg = c.accent2 },
   Tag	= { fg = c.accent3 },
-  Delimiter	= { fg = c.accent7 },
+  Delimiter	= { fg = c.accent6 },
   SpecialComment	= { fg = c.shade3 },
   Debug	= { fg = c.accent2 },
+  MatchParen = { fg = c.accent2 },
 
   Ignore = { fg = c.shade7 },
   Error = { fg = c.accent0 },
@@ -115,9 +117,9 @@ local highlights = {
   IndentBlanklineChar = { fg = c.shade2 },
 
   -- bufferline
-  BufferLineIndicatorVisible = { bg = c.shade0 },
-  BufferLineCloseButtonVisible = { bg = c.shade0 },
-  BufferLineModified = { bg = c.shade0 },
+  BufferLineIndicatorVisible = { bg = 'NONE' },
+  BufferLineCloseButtonVisible = { bg = 'NONE' },
+  BufferLineModified = { bg = 'NONE' },
 
   -- nvim-tree
   NvimTreeCursorLine = { bg = c.shade4 },

@@ -8,14 +8,22 @@ local c = require('colors')
 -- onedark
 ------------------------------------------------------------
 
--- require('onedarkpro').load()
-require('onedark').load()
+-- local status_ok, onedarkpro = pcall(require, 'onedarkpro')
+-- if not status_ok then return end
+-- onedarkpro('onedarkpro').load()
+
+local status_ok, onedark = pcall(require, 'onedark')
+if not status_ok then return end
+onedark.load()
 
 ------------------------------------------------------------
 -- bufferline
 ------------------------------------------------------------
 
-require('bufferline').setup({
+local status_ok, bufferline = pcall(require, 'bufferline')
+if not status_ok then return end
+
+bufferline.setup({
   options = {
     buffer_close_icon = '',
     modified_icon = '',
@@ -35,43 +43,78 @@ require('bufferline').setup({
   },
   highlights = {
     fill = {
-      bg = c.shade0
+      bg = 'NONE'
     },
-    background = {
-      bg = c.shade0
+    group_separator = {
+      bg = 'NONE'
+    },
+    group_label = {
+      bg = 'NONE'
+    },
+    tab = {
+      bg = 'NONE'
+    },
+    tab_selected = {
+      bg = 'NONE'
     },
     close_button = {
-      bg = c.shade0,
-      fg = c.shade3
+      bg = 'NONE',
+      fg = 'NONE'
+    },
+    close_button_visible = {
+      bg = 'NONE',
+      fg = 'NONE'
     },
     close_button_selected = {
-      bg = c.shade0,
-      fg = c.shade7
+      bg = 'NONE',
+      bg = 'NONE',
+    },
+    background = {
+      bg = 'NONE',
+      fg = c.shade3
     },
     buffer = {
-      bg = c.shade0,
-      fg = c.shade7
+      bg = 'NONE',
+      fg = c.shade3
     },
     buffer_visible = {
-      bg = c.shade0,
-      fg = c.shade7
+      bg = 'NONE',
+      fg = c.shade3
     },
     buffer_selected = {
-      bg = c.shade0,
+      bg = 'NONE',
       fg = c.shade7,
       bold = false,
       italic = false
     },
     modified = {
+      bg = 'NONE',
       fg = c.shade3
     },
     modified_selected = {
+      bg = 'NONE',
       fg = c.shade7
     },
     separator = {
-      bg = c.shade0,
-      fg = c.shade0
-    }
+      bg = 'NONE',
+      fg = 'NONE'
+    },
+    separator_selected = {
+      bg = 'NONE',
+      fg = 'NONE'
+    },
+    separator_visible = {
+      bg = 'NONE',
+      fg = 'NONE'
+    },
+    indicator_selected = {
+      bg = 'NONE',
+      fg = 'NONE'
+    },
+    indicator_visible = {
+      bg = 'NONE',
+      fg = 'NONE'
+    },
   }
 })
 
@@ -106,7 +149,10 @@ local onedarkv = {
   },
 }
 
-require('lualine').setup({
+local status_ok, lualine = pcall(require, 'lualine')
+if not status_ok then return end
+
+lualine.setup({
   options = {
     theme = onedarkv,
     icons_enabled = true,
@@ -135,19 +181,42 @@ require('lualine').setup({
   extensions = {}
 })
 
+------------------------------------------------------------
 -- comment
-require('Comment').setup()
+------------------------------------------------------------
 
+local status_ok, comment = pcall(require, 'Comment')
+if not status_ok then return end
+comment.setup()
+
+------------------------------------------------------------
 -- indent-blankline
-require('indent_blankline').setup({ 
+------------------------------------------------------------
+
+local status_ok, indent_blankline = pcall(require, 'indent_blankline')
+if not status_ok then return end
+
+indent_blankline.setup({ 
   filetype_exclude = {'dashboard', 'help', 'terminal'}
 })
 
+------------------------------------------------------------
 -- hop
-require('hop').setup()
+------------------------------------------------------------
 
+local status_ok, hop = pcall(require, 'hop')
+if not status_ok then return end
+
+hop.setup()
+
+------------------------------------------------------------
 -- nvim-tree
-require('nvim-tree').setup({
+------------------------------------------------------------
+
+local status_ok, nvim_tree = pcall(require, 'nvim-tree')
+if not status_ok then return end
+
+nvim_tree.setup({
   disable_netrw = false,
   hijack_netrw = false,
   actions = {
@@ -161,20 +230,20 @@ require('nvim-tree').setup({
   }
 })
 
--- treesitter
-require('nvim-treesitter.configs').setup({
-  highlight = {
-    enable = true
-  },
-  indent = {
-    enable = true
-  }
-})
-
+------------------------------------------------------------
 -- telescope
-local telescope_actions = require('telescope.actions')
+------------------------------------------------------------
 
-require('telescope').setup({
+local status_ok, telescope = pcall(require, 'telescope')
+
+if not status_ok then
+  return
+else
+  telescope_actions = require('telescope.actions')
+end
+
+
+telescope.setup({
   defaults = {
     disable_devicons=true,
     sorting_strategy = 'ascending',
@@ -196,13 +265,44 @@ require('telescope').setup({
   }
 })
 
+------------------------------------------------------------
 -- treesitter
-require('nvim-treesitter.install').update({ with_sync = true })
+------------------------------------------------------------
 
+local status_ok, treesitter_config = pcall(require, 'nvim-treesitter.configs')
+if not status_ok then return end
+
+treesitter_config.setup({
+  autotag = {
+    enable = true
+  },
+  highlight = {
+    enable = true
+  },
+  indent = {
+    enable = true
+  }
+})
+
+
+local status_ok, treesitter_install = pcall(require, 'nvim-treesitter.install')
+if not status_ok then return end
+
+treesitter_install.update({ with_sync = true })
+
+------------------------------------------------------------
 -- autopairs and autotag
-require('nvim-autopairs').setup()
+------------------------------------------------------------
 
+local status_ok, autopairs = pcall(require, 'nvim-autopairs')
+if not status_ok then return end
+
+autopairs.setup()
+
+------------------------------------------------------------
 -- instructions
+------------------------------------------------------------
+
 -- coc
 --:CocInstall coc-eslint
 --:CocInstall coc-emmet
