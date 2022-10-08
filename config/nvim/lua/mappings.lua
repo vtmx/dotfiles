@@ -195,8 +195,11 @@ map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
 
--- future mappings
+-- toggleterm
+-- map('n', '<a-h>', '<cmd>ToggleTerm size=10<cr>')
+-- map('n', '<a-v>', '<cmd>ToggleTerm size=80 direction=vertical<cr>')
 
+-- future mappings
 local map_table = {
   n = {
     ['<leader>ç'] = { '<cmd>enew<cr>' }

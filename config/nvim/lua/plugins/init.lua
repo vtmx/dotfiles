@@ -51,8 +51,6 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
   use 'windwp/nvim-autopairs'
-  use 'akinsho/toggleterm.nvim'
-  use 'mg979/vim-visual-multi'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'phaazon/hop.nvim'
   use 'nvim-lua/telescope.nvim'
