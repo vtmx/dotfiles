@@ -7,6 +7,7 @@ local c = require('colors')
 local highlights = {
   Normal = { fg = c.shade7 },
   Comment = { fg = c.shade3, italic = true },
+  WinbarNC = { fg = c.shade3 },
 
   -- extras
   SpecialKey = { fg = c.accent4 },
@@ -23,7 +24,7 @@ local highlights = {
   ErrorMsg = { fg = c.accent0 },
   ModeMsg = { fg = c.shade3 },
   MoreMsg = { fg = c.shade3 },
-  Question = { fg = c.accent3 },
+  Question = { fg = c.shade7 },
 
   -- sintaxy
   Constant = { fg = c.accent1 },
@@ -111,6 +112,9 @@ local highlights = {
 
   -- hop
   HopNextKey = { fg = c.accent0 },
+  HopNextKey1 = { fg = c.accent5 },
+  HopNextKey2 = { fg = c.accent1 },
+  HopNextKey3 = { fg = c.accent6 },
   HopUnmatched = { fg = c.shade3 },
 
   -- indent-line
