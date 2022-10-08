@@ -9,7 +9,7 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#1e2227' })
+  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#23272e' })
   print('Cloning packer...')
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   vim.cmd "packadd packer.nvim"
@@ -51,7 +51,8 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
   use 'windwp/nvim-autopairs'
-
+  use 'akinsho/toggleterm.nvim'
+  use 'mg979/vim-visual-multi'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'phaazon/hop.nvim'
   use 'nvim-lua/telescope.nvim'
