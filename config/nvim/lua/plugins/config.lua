@@ -22,25 +22,33 @@ onedark.load()
 
 local onedarkv = {
   normal = {
-    a = { fg = c.shade7 },
+    a = { fg = c.shade7, bg = 'NONE' },
     b = { fg = c.shade3 },
     z = { fg = c.shade3 },
   },
 
   insert = {
-    a = { bg = 'NONE', fg = c.shade7 },
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 },
+    z = { fg = c.shade3 },
   },
 
   visual = {
-    a = { bg = 'NONE', fg = c.shade7 },
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 },
+    z = { fg = c.shade3 },
   },
 
   replace = {
-    a = { bg = 'NONE', fg = c.shade7 },
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 },
+    z = { fg = c.shade3 },
   },
 
   inactive = {
-    a = { bg = 'NONE', fg = c.shade3 },
+    a = { fg = c.shade3, bg = 'NONE' },
+    b = { fg = c.shade3 },
+    z = { fg = c.shade3 },
   },
 }
 

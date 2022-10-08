@@ -9,9 +9,10 @@ local opt = vim.opt
 -- sets
 opt.termguicolors = true
 opt.title = true
+opt.winbar = '%f'
 opt.autochdir = true
 opt.cursorline = true
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.shell = 'fish'
 opt.exrc = true
 opt.ignorecase = true
