@@ -49,7 +49,7 @@ set -g fish_color_valid_path $accent3
 
 # pager colors
 set -g fish_pager_color_progress $shade3
-set -g fish_pager_color_prefix $accent4
+set -g fish_pager_color_prefix $accent5
 set -g fish_pager_color_completion $shade7
 set -g fish_pager_color_description $shade3
 
