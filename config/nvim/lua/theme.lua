@@ -5,9 +5,9 @@
 local c = require('colors')
 
 local highlights = {
-  Normal = { fg = c.shade7 },
-  Comment = { fg = c.shade3, italic = true },
-  WinbarNC = { fg = c.shade3 },
+  Normal = { fg = c.shade7, ctermfg = 255, ctermbg = 234 },
+  Comment = { fg = c.shade3, italic = true, ctermfg = 7 },
+  WinbarNC = { fg = c.shade3, ctermfg = 7 },
 
   -- extras
   SpecialKey = { fg = c.accent4 },
