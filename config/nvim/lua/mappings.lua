@@ -118,6 +118,10 @@ map('n', '<', '<<')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
 
+-- next and prev auto-complete
+map('n', '<c-k>', '<cmd>cnext<cr>zz')
+map('n', '<c-j>', '<cmd>cprev<cr>zz')
+
 -- navigation panels
 map('n', '<c-h>', '<c-w>h')
 map('n', '<c-j>', '<c-w>j')
@@ -172,8 +176,8 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 ------------------------------------------------------------
 
 -- coc
-map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
-map('i', '<c-space>', '<cmd>coc#refresh()<cr>', { expr = true })
+-- map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
+-- map('i', '<c-space>', '<cmd>coc#refresh()<cr>', { expr = true })
 -- map('i', '<c-j>', '<cmd>CocNext<cr>', { expr = true })
 -- map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
 
@@ -185,11 +189,12 @@ map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- map('n', '<leader>e', '<cmd>Vex<cr>')
 
 -- packer
-map('n', '<leader>pc', '<cmd>PackerCompile<cr>')
-map('n', '<leader>pi', '<cmd>PackerInstall<cr>')
-map('n', '<leader>ps', '<cmd>PackerSync<cr>')
-map('n', '<leader>pS', '<cmd>PackerStatus<cr>')
-map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
+-- disable to faste paste clipboard
+-- map('n', '<leader>pc', '<cmd>PackerCompile<cr>')
+-- map('n', '<leader>pi', '<cmd>PackerInstall<cr>')
+-- map('n', '<leader>ps', '<cmd>PackerSync<cr>')
+-- map('n', '<leader>pS', '<cmd>PackerStatus<cr>')
+-- map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 
 -- telescope
 map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
