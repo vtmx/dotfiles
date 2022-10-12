@@ -277,6 +277,22 @@
       "commands": ["workbench.action.moveEditorToBelowGroup"]
     },
     {
+      "before": ["<c-f>"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["<c-s-f>"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<c-h>"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
+      "before": ["<c-s-h>"],
+      "commands": ["workbench.action.replaceInFiles"]
+    },
+    {
       "before": ["c-h"],
       "commands": ["workbench.action.focusLeftGroup"]
     },
@@ -295,22 +311,6 @@
     {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["actions.find"]
-    },
-    {
-      "before": ["<leader>", "F"],
-      "commands": ["workbench.action.findInFiles"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": ["editor.action.startFindReplaceAction"]
-    },
-    {
-      "before": ["<leader>", "H"],
-      "commands": ["workbench.action.replaceInFiles"]
     },
     {
       "before": ["<leader>", "j"],
@@ -353,8 +353,16 @@
       "after": ["V", "\"", "+", "y"]
     },
     {
-      "before": ["<leader>", "x"],
+      "before": ["<leader>", "d"],
       "after": ["V", "\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "+", "g", "p"]
+    },
+    {
+      "before": ["<leader>", "P"],
+      "after": ["o", "<esc>", "\"", "+", "g", "p", "<esc>"]
     },
     {
       "before": ["<leader>", "<esc>"],
@@ -399,8 +407,12 @@
       "after": ["\"", "+", "y"]
     },
     {
-      "before": ["<leader>", "x"],
+      "before": ["<leader>", "d"],
       "after": ["\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "_", "d", "P"]
     }
   ]
 }
