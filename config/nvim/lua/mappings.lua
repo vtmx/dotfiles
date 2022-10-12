@@ -109,8 +109,8 @@ map('n', 'Q', '@q')
 map('n', 'M', '`')
 
 -- split
-map('n', 'ss', '<cmd>sp<cr>')
-map('n', 'vv', '<cmd>vsp<cr>')
+map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
+map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
 
 -- stop copy in last char
 map('v', 'y', 'ygv<esc>')

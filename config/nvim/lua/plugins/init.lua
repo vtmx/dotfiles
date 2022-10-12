@@ -62,6 +62,7 @@ return packer.startup(function(use)
 
   -- autocomplete
   use 'nvim-treesitter/nvim-treesitter'
+  use 'hrsh7th/nvim-cmp'
   --use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Put this at the end after all plugins
