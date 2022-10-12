@@ -64,6 +64,9 @@ map('v', '<leader>d', '"+x')
 map('n', '<leader>p', '"+gp<esc>')
 map('n', '<leader>P', 'o<esc>"+gp<esc>')
 
+-- paste with no resgister
+map('x', '<leader>p', '"_dP')
+
 -- join lines
 map('n', '<leader>j', 'J')
 
