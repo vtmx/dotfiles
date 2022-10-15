@@ -1,15 +1,23 @@
 # Dotfiles
 
 ## Configuration
-- **OS:** [Manjaro](https://manjaro.org/downloads/official/kde)
-- **DE:** [Plasma](https://kde.org/pt-br/plasma-desktop)
-- **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty)
-- **Shell:** [Fish](https://fishshell.com) + [Starship](https://starship.rs)
-- **Terminal Font:** [BlexMono Nerd Font Medium 11](https://github.com/IBM/plex)
-- **System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
-- **Panel:** [Plasma Panel 28](https://userbase.kde.org/Plasma/Panels)
-- **Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar)
-- **TWM:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)
+**OS:** [Manjaro](https://manjaro.org/downloads/official/kde)
+<br>
+**DE:** [Plasma](https://kde.org/pt-br/plasma-desktop)
+<br>
+**Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty)
+<br>
+**Shell:** [Fish](https://fishshell.com) + [Starship](https://starship.rs)
+<br>
+**Terminal Font:** [BlexMono Nerd Font Medium 11](https://github.com/IBM/plex)
+<br>
+**System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)
+<br>
+**Panel:** [Plasma Panel 28](https://userbase.kde.org/Plasma/Panels)
+<br>
+**Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar)
+<br>
+**TWM:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)
 
 ## Plasma Appearance
 - **Application Style:** [Lightly](https://github.com/Luwx/Lightly)
@@ -68,6 +76,6 @@ accent7: "#be5046" # magenta
 ## Screenshots
 <details>
   <summary>Click to expand</summary>
-  <img src="img/screenshots/desktop.png" alt="Dolphin">
+  <a href="img/screenshots/desktop.png" target="_blank"><img src="img/screenshots/desktop.png" alt="Dolphin"></a>
 </details>
 
