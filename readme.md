@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" src="img/logos/vitormelo.png" alt="Vitor Melo logo">
+  <img width="250" src="images/logos/vitormelo.png" alt="Vitor Melo logo">
 </p>
 
 ## Configuration
@@ -70,6 +70,6 @@ Color Inspiration:
 ## Screenshots
 <details>
   <summary>Click to expand</summary>
-  <img src="img/screenshots/desktop.png" alt="Dolphin">
+  <img src="images/screenshots/desktop.png" alt="Dolphin">
 </details>
 
