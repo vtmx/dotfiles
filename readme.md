@@ -1,4 +1,6 @@
-# Dotfiles
+<p align="center">
+  <img width="250" src="img/logos/vitormelo.png" alt="Vitor Melo logo">
+</p>
 
 ## Configuration
 **OS:** [Manjaro](https://manjaro.org/downloads/official/kde)<br>
