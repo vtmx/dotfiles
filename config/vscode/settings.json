@@ -277,6 +277,10 @@
       "commands": ["workbench.action.moveEditorToBelowGroup"]
     },
     {
+      "before": ["<c-s-e>"],
+      "commands": ["viewContainer.workbench.view.explorer.enabled"]
+    },
+    {
       "before": ["<c-f>"],
       "commands": ["actions.find"]
     },
@@ -285,12 +289,8 @@
       "commands": ["workbench.action.findInFiles"]
     },
     {
-      "before": ["<c-h>"],
+      "before": ["<leader>", "h"],
       "commands": ["editor.action.startFindReplaceAction"]
-    },
-    {
-      "before": ["<c-s-h>"],
-      "commands": ["workbench.action.replaceInFiles"]
     },
     {
       "before": ["c-h"],
