@@ -123,7 +123,7 @@
     "editorCursor.foreground": "#abb2bf",
     "editorGroup.border": "#323740",
     "editorGroupHeader.tabsBackground": "#1e2227",
-    "editorOverviewRuler.border": "#393e48",
+    "editorOverviewRuler.border": "#00000000",
     "terminal.background": "#1e2227",
     "terminalCursor.background": "#abb2bf",
     "statusBar.background": "#1e2227",
