@@ -17,8 +17,8 @@ local highlights = {
   Directory = { fg = c.accent5 },
 
   -- search
-  IncSearch = { fg = c.shade1, bg = c.accent2 },
-  Search = { fg = c.shade1, bg = c.accent2 },
+  IncSearch = { fg = c.shade7, bg = c.shade2 },
+  Search = { fg = c.shade7, bg = c.shade2 },
 
   -- messages
   ErrorMsg = { fg = c.accent0 },
