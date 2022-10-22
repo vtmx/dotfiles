@@ -47,7 +47,6 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
 
   -- utils
-  use 'max397574/better-escape.nvim'
   use 'nathom/tmux.nvim'
   use 'tpope/vim-surround'
   use 'numToStr/Comment.nvim'
@@ -60,6 +59,7 @@ return packer.startup(function(use)
   use 'baskerville/vim-sxhkdrc'
   use 'fladson/vim-kitty'
   use 'khaveesh/vim-fish-syntax'
+  use 'ollykel/v-vim'
 
   -- autocomplete
   use 'nvim-treesitter/nvim-treesitter'

@@ -54,22 +54,11 @@ set -g fish_pager_color_completion $shade7
 set -g fish_pager_color_description $shade3
 
 # variables
-export BROWSER='vivaldi-stable'
-export CODE='code'
-export EDITOR='nvim'
-export VISUAL='nvim'
+set -x BROWSER 'vivaldi-stable'
+set -x CODE 'code'
+set -x EDITOR 'nvim'
+set -x VISUAL 'nvim'
 
-# fzf
-if type -q fzf
-  set -gx FZF_DEFAULT_OPTS '
-  --height 40% --reverse
-  --color=fg:#abb2bf,bg:#23272e,hl:#61afef
-  --color=fg+:#abb2bf,bg+:#3d4556,hl+:#61afef,gutter:#23272e
-  --color=info:#5c6370,prompt:#98c379,pointer:#abb2bf
-  --color=marker:#abb2bf,spinner:#abb2bf,header:#abb2bf'
-end
-
-# alias
 # commands
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -79,46 +68,7 @@ alias cpv='rsync -ah --info=progress2'
 alias e='exit'
 alias md='mkdir'
 alias rd='rmdir'
-
-
-# bat
-if type -q bat
-  alias cat='bat'
-end
-
-# exa
-if type -q exa
-  alias ls='exa --color=always --group-directories-first'
-  alias tree='exa -T'
-end
-
-# ranger
-if type -q ranger
-  alias r='ranger'
-end
-
-# apps
-alias v='nvim'
-alias t='tmux'
-alias matrix='cmatrix -C white'
-
-# configs
-alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
-alias bc='nvim $HOME/.config/bspwm/bspwmrc'
-alias dfc='nvim $HOME/Dev/dotfiles/setup.sh'
-alias fc='nvim $HOME/.config/fish/config.fish'
-alias kc='nvim $HOME/.config/kitty/kitty.conf'
-alias rc='nvim $HOME/.config/rofi/config.rasi'
-alias pc='nvim $HOME/.config/polybar/config.ini'
-alias tc='nvim $HOME/.tmux.conf'
-alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
-alias vc='nvim $HOME/.config/nvim/init.lua'
-alias vo='nvim $HOME/.config/nvim/lua/options.lua'
-alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
-alias vp='nvim $HOME/.config/nvim/lua/plugins/init.lua'
-alias vpc='nvim $HOME/.config/nvim/lua/plugins/config.lua'
-alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
-
+ 
 # paths
 alias cddesk='cd $HOME/Desktop'
 alias cddoc='cd $HOME/Documents'
@@ -134,38 +84,104 @@ alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cds='cd $HOME/Dev/shortcuts'
 alias cdt='cd $HOME/Downloads/temp'
 
-# pacman
-alias pac='sudo pacman'
-alias pacu='sudo pacman -Syu'
-alias paci='sudo pacman -S'
-alias pacr='sudo pacman -R'
+# bat
+if type -q bat
+  alias cat='bat'
+end
 
-# yay
-alias yayi='yay -S'
-alias yayr='yay -R'
-alias yayu='yay -Syu'
+# exa
+if type -q exa
+  alias ls='exa --color=always --group-directories-first'
+  alias tree='exa -T'
+end
+
+# fzf
+if type -q fzf
+  set -gx FZF_DEFAULT_OPTS '
+  --height 40% --reverse
+  --color=fg:#abb2bf,bg:#23272e,hl:#61afef
+  --color=fg+:#abb2bf,bg+:#3d4556,hl+:#61afef,gutter:#23272e
+  --color=info:#5c6370,prompt:#98c379,pointer:#abb2bf
+  --color=marker:#abb2bf,spinner:#abb2bf,header:#abb2bf'
+end
 
 # git
-alias g='git'
-alias gaa='git add --all'
-alias gcm='git commit -m'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcl='git clone'
-alias gb='git branch'
-alias gbd='git branch -d'
-alias gl='git pull'
-alias gp='git push'
+if type -q git
+  alias g='git'
+  alias gaa='git add --all'
+  alias gcm='git commit -m'
+  alias gco='git checkout'
+  alias gcb='git checkout -b'
+  alias gcl='git clone'
+  alias gb='git branch'
+  alias gbd='git branch -d'
+  alias gl='git pull'
+  alias gp='git push'
+end
+
+# nvim and configs
+if type -q nvim
+  alias v='nvim'
+  alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
+  alias bc='nvim $HOME/.config/bspwm/bspwmrc'
+  alias dfc='nvim $HOME/Dev/dotfiles/setup.sh'
+  alias fc='nvim $HOME/.config/fish/config.fish'
+  alias kc='nvim $HOME/.config/kitty/kitty.conf'
+  alias pc='nvim $HOME/.config/polybar/config.ini'
+  alias tc='nvim $HOME/.tmux.conf'
+  alias rc='nvim $HOME/.config/rofi/config.rasi'
+  alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
+  alias vc='nvim $HOME/.config/nvim/init.lua'
+  alias vo='nvim $HOME/.config/nvim/lua/options.lua'
+  alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
+  alias vp='nvim $HOME/.config/nvim/lua/plugins/init.lua'
+  alias vpc='nvim $HOME/.config/nvim/lua/plugins/config.lua'
+  alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
+end
+
+# pacman
+if type -q pacman
+  alias pac='sudo pacman'
+  alias paci='sudo pacman -S'
+  alias pacr='sudo pacman -R'
+  alias pacu='sudo pacman -Syu'
+end
+
+# ranger
+if type -q ranger
+  alias r='ranger'
+end
+
+# tmux
+if type -q tmux
+  alias t='tmux'
+end
+
+# vlang
+if test -e '$HOME/.v/vl'
+  alias vl='$HOME/.v/vl'
+  alias vh='$HOME/.v/vl help'
+  alias vf='$HOME/.v/vl fmt -w'
+  alias vr='$HOME/.v/vl run'
+  alias vu='$HOME/.v/vl up'
+  alias vw='$HOME/.v/vl watch'
+end
 
 # yarn
-alias yd='yarn dev'
-alias ydp='yarn deploy'
+if type -q yarn
+  alias yd='yarn dev'
+  alias ydp='yarn deploy'
+end
+
+# yay
+if type -q yay
+  alias yayi='yay -S'
+  alias yayr='yay -R'
+  alias yayu='yay -Syu'
+end
 
 # custom sh
 alias ide='ide.sh'
-
-# vlang
-alias vl='$HOME/.v/vl'
 
 # default prompt
 function fish_prompt
@@ -223,3 +239,4 @@ end
 
 # links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
+# https://github.com/jwkvam/fish-config/blob/master/config.fish

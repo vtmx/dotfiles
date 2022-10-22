@@ -50,6 +50,7 @@ map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
 
 -- select all
+map('n', '<leader>a', 'G<s-v>gg')
 map('n', '<c-a>', 'G<s-v>gg')
 
 -- copy to clipboard
