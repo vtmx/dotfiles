@@ -158,14 +158,12 @@ if type -q tmux
 end
 
 # vlang
-if test -e '$HOME/.v/vl'
-  alias vl='$HOME/.v/vl'
-  alias vh='$HOME/.v/vl help'
-  alias vf='$HOME/.v/vl fmt -w'
-  alias vr='$HOME/.v/vl run'
-  alias vu='$HOME/.v/vl up'
-  alias vw='$HOME/.v/vl watch'
-end
+alias vl='$HOME/.v/vl'
+alias vh='$HOME/.v/vl help'
+alias vf='$HOME/.v/vl fmt -w'
+alias vr='$HOME/.v/vl run'
+alias vu='$HOME/.v/vl up'
+alias vw='$HOME/.v/vl watch'
 
 # yarn
 if type -q yarn
