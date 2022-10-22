@@ -6,13 +6,17 @@
 -- vars
 local opt = vim.opt
 
--- sets
+if vim.fn.has('nvim-0.8') == 1 then
+  opt.winbar = '%f'
+  opt.cmdheight = 0
+else
+  opt.cmdheight = 1
+end
+
 opt.termguicolors = true
 opt.title = true
-opt.winbar = '%f'
 opt.autochdir = true
 opt.cursorline = true
-opt.cmdheight = 0
 opt.shell = 'fish'
 opt.exrc = true
 opt.ignorecase = true
