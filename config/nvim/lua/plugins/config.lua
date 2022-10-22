@@ -85,6 +85,38 @@ lualine.setup({
 })
 
 ------------------------------------------------------------
+-- better-scape
+------------------------------------------------------------
+
+local status_ok, better_scape = pcall(require, 'better_escape')
+if not status_ok then return end
+better_scape.setup({
+  mapping = { 'kj' }
+})
+
+------------------------------------------------------------
+-- comment
+------------------------------------------------------------
+
+local status_ok, cmp = pcall(require, 'cmp')
+if not status_ok then return end
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<c-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<c-f>'] = cmp.mapping.scroll_docs(4),
+    ['<c-space>'] = cmp.mapping.complete(),
+    ['<c-e>'] = cmp.mapping.abort(),
+    ['<cr>'] = cmp.mapping.confirm({ select = true })
+  }),
+})
+
+------------------------------------------------------------
 -- comment
 ------------------------------------------------------------
 
