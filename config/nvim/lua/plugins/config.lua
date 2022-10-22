@@ -85,16 +85,6 @@ lualine.setup({
 })
 
 ------------------------------------------------------------
--- better-scape
-------------------------------------------------------------
-
-local status_ok, better_scape = pcall(require, 'better_escape')
-if not status_ok then return end
-better_scape.setup({
-  mapping = { 'kj' }
-})
-
-------------------------------------------------------------
 -- comment
 ------------------------------------------------------------
 
