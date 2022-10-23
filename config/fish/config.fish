@@ -66,7 +66,7 @@ alias c='clear'
 alias cls='clear'
 alias cpv='rsync -ah --info=progress2'
 alias e='exit'
-alias md='mkdir'
+alias md='mkdir -p'
 alias rd='rmdir'
  
 # paths
