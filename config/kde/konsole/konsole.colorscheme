@@ -9,7 +9,7 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [BackgroundIntense]
-Color=64,69,76
+Color=34,39,46
 RandomHueRange=360
 RandomSaturationRange=100
 
@@ -20,7 +20,7 @@ Color=34,39,46
 Color=35,39,46
 
 [Color0Intense]
-Color=64,69,76
+Color=34,39,46
 
 [Color1]
 Color=224,108,117
@@ -29,7 +29,7 @@ Color=224,108,117
 Color=224,108,117
 
 [Color1Intense]
-Color=254,138,147
+Color=224,108,117
 
 [Color2]
 Color=152,195,121
@@ -38,7 +38,7 @@ Color=152,195,121
 Color=152,195,121
 
 [Color2Intense]
-Color=182,225,151
+Color=152,195,121
 
 [Color3]
 Color=209,154,102
@@ -47,7 +47,7 @@ Color=209,154,102
 Color=209,154,102
 
 [Color3Intense]
-Color=255,222,153
+Color=209,154,102
 
 [Color4]
 Color=97,175,239
@@ -56,7 +56,7 @@ Color=97,175,239
 Color=97,175,239
 
 [Color4Intense]
-Color=127,205,255
+Color=97,175,239
 
 [Color5]
 Color=198,120,221
@@ -65,7 +65,7 @@ Color=198,120,221
 Color=198,120,221
 
 [Color5Intense]
-Color=228,150,251
+Color=198,120,221
 
 [Color6]
 Color=86,182,194
@@ -74,7 +74,7 @@ Color=86,182,194
 Color=86,182,194
 
 [Color6Intense]
-Color=116,212,224
+Color=86,182,194
 
 [Color7]
 Color=171,178,191
@@ -83,7 +83,7 @@ Color=171,178,191
 Color=171,178,191
 
 [Color7Intense]
-Color=221,228,241
+Color=171,178,191
 
 [Foreground]
 Color=171,178,191
@@ -96,7 +96,7 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [ForegroundIntense]
-Color=221,228,241
+Color=171,178,191
 RandomHueRange=360
 RandomSaturationRange=100
 
