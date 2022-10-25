@@ -8,9 +8,9 @@ local c = require('colors')
 -- onedark
 ------------------------------------------------------------
 
--- local status_ok, onedarkpro = pcall(require, 'onedarkpro')
--- if not status_ok then return end
--- onedarkpro('onedarkpro').load()
+--local status_ok, onedarkpro = pcall(require, 'onedarkpro')
+--if not status_ok then return end
+--onedarkpro('onedarkpro').load()
 
 local status_ok, onedark = pcall(require, 'onedark')
 if not status_ok then return end
