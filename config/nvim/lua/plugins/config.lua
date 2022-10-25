@@ -262,7 +262,6 @@ bufferline.setup({
 ------------------------------------------------------------
 -- instructions
 ------------------------------------------------------------
-
 -- coc
 --:CocInstall coc-eslint
 --:CocInstall coc-emmet
@@ -273,4 +272,3 @@ bufferline.setup({
 
 -- treesitter
 -- :TSInstall vue javascript typescript html css scss
-
