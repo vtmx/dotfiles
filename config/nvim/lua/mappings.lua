@@ -180,10 +180,10 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 ------------------------------------------------------------
 
 -- coc
--- map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
--- map('i', '<c-space>', '<cmd>coc#refresh()<cr>', { expr = true })
--- map('i', '<c-j>', '<cmd>CocNext<cr>', { expr = true })
--- map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
+map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
+map('i', '<c-space>', '<cmd>coc#refresh()<cr>', { expr = true })
+map('i', '<c-j>', '<cmd>CocNext<cr>', { expr = true })
+map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
 
 -- hop
 map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')

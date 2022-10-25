@@ -65,9 +65,7 @@ return packer.startup(function(use)
   -- autocomplete
   use 'neovim/nvim-lspconfig'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'williamboman/mason.nvim'
-  use 'hrsh7th/nvim-cmp'
-  -- use { 'neoclide/coc.nvim', branch = 'release' }
+  use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Put this at the end after all plugins
   if packer_bootstrap then

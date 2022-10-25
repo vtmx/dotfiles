@@ -71,6 +71,7 @@ alias rd='rmdir'
  
 # paths
 alias cddesk='cd $HOME/Desktop'
+alias cddev='cd $HOME/Dev'
 alias cddoc='cd $HOME/Documents'
 alias cddow='cd $HOME/Downloads'
 alias cdpic='cd $HOME/Pictures'
