@@ -1,11 +1,11 @@
 {
   // Window
-  "window.titleBarStyle": "custom",
+  "breadcrumbs.enabled": false,
   "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
   "window.restoreWindows": "none",
 
   // Editor
-  "breadcrumbs.enabled": false,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingDelete": "always",
   "editor.autoClosingOvertype": "always",
@@ -41,8 +41,6 @@
       }
     ]
   },
-  "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
 
   // Explorer
   "explorer.confirmDelete": false,
@@ -85,6 +83,13 @@
     "**/*.code-search": true
   },
 
+  // Security
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ZenMode
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+
   // Workbench
   // https://code.visualstudio.com/api/references/theme-color
   // https://themes.vscode.one/edit/local/
@@ -108,7 +113,6 @@
     "editor.background": "#23272e",
     "editor.selectionBackground": "#3d4556",
     "editor.selectionHighlightBorder": "#00000000",
-    // "editor.selectionHighlightBackground": "#00000000",
     "editor.wordHighlightBackground": "#00000000",
     "editor.wordHighlightBorder": "#00000000",
     "editorBracketMatch.background": "#00000000",
@@ -130,10 +134,11 @@
     "statusBar.noFolderBackground": "#1e2227",
     "statusBar.debuggingBackground": "#1e2227"
   },
-  "oneDarkPro.italic": false,
-  "security.workspace.trust.untrustedFiles": "open",
 
   // Plugins
+
+  // OneDark
+  "oneDarkPro.italic": false,
 
   // Code Runner
   "code-runner.runInTerminal": true,
@@ -176,7 +181,6 @@
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatter.scss": "prettier",
-  // "vetur.format.defaultFormatter.js": "prettier",
   "vetur.format.defaultFormatter.ts": "prettier",
   "vetur.format.defaultFormatter.js": "vscode-typescript",
 

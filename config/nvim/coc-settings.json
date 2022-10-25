@@ -1,7 +1,8 @@
 {
-  "javascript.preferences.quoteStyle": "single",
+  "suggest.noselect": false,
   "prettier.singleQuote": true,
   "prettier.printWidth": 720,
+  "javascript.preferences.quoteStyle": "single",
   "html.format.wrapLineLength": 0,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
