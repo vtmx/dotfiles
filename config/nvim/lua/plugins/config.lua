@@ -88,28 +88,6 @@ lualine.setup({
 -- comment
 ------------------------------------------------------------
 
-local status_ok, cmp = pcall(require, 'cmp')
-if not status_ok then return end
-
-cmp.setup({
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<c-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<c-f>'] = cmp.mapping.scroll_docs(4),
-    ['<c-space>'] = cmp.mapping.complete(),
-    ['<c-e>'] = cmp.mapping.abort(),
-    ['<cr>'] = cmp.mapping.confirm({ select = true })
-  }),
-})
-
-------------------------------------------------------------
--- comment
-------------------------------------------------------------
-
 local status_ok, comment = pcall(require, 'Comment')
 if not status_ok then return end
 comment.setup()
@@ -131,7 +109,6 @@ indent_blankline.setup({
 
 local status_ok, hop = pcall(require, 'hop')
 if not status_ok then return end
-
 hop.setup()
 
 ------------------------------------------------------------
@@ -140,7 +117,6 @@ hop.setup()
 
 local status_ok, toggleterm = pcall(require, 'toggleterm')
 if not status_ok then return end
-
 toggleterm.setup()
 
 ------------------------------------------------------------
@@ -179,6 +155,7 @@ end
 telescope.setup({
   defaults = {
     disable_devicons=true,
+    color_devicons = false,
     sorting_strategy = 'ascending',
     layout_config = {
       horizontal = {
@@ -228,7 +205,6 @@ treesitter_install.update({ with_sync = true })
 
 local status_ok, autopairs = pcall(require, 'nvim-autopairs')
 if not status_ok then return end
-
 autopairs.setup()
 
 ------------------------------------------------------------

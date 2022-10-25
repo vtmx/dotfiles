@@ -10,8 +10,9 @@ local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
   vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#23272e' })
+  vim.api.nvim_set_hl(0, 'NormalBorder', { bg = '#23272e' })
   print('Cloning packer...')
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
   vim.cmd "packadd packer.nvim"
 end
 
@@ -62,9 +63,11 @@ return packer.startup(function(use)
   use 'ollykel/v-vim'
 
   -- autocomplete
+  use 'neovim/nvim-lspconfig'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'williamboman/mason.nvim'
   use 'hrsh7th/nvim-cmp'
-  --use { 'neoclide/coc.nvim', branch = 'release' }
+  -- use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -73,3 +76,4 @@ return packer.startup(function(use)
     require('plugins.config')
   end
 end)
+

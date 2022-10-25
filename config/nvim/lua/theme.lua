@@ -16,6 +16,10 @@ local highlights = {
   NonText = { fg = c.shade3 },
   Directory = { fg = c.accent5 },
 
+  -- float
+  NormalFloat = { bg = c.shade0 },
+  FloatBorder = { bg = c.shade0 },
+
   -- search
   IncSearch = { fg = c.shade7, bg = c.shade2 },
   Search = { fg = c.shade7, bg = c.shade2 },
