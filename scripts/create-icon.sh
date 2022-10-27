@@ -28,7 +28,7 @@
 # https://icon-icons.com/search/icons/gnome+3
 #
 # Size
-# minimum: 48x48
+# minimum: 48x48 or 32x32
 #
 # Command check file
 # desktop-file-validate filename.desktop
