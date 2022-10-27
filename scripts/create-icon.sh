@@ -16,7 +16,7 @@
 # Settings
 # Utility
 #
-# Reference
+# References
 # https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html
 # https://wiki.archlinux.org/title/Desktop_entries
 #
@@ -25,6 +25,10 @@
 #
 # Check icon
 # desktop-file-validate filename.desktop
+#
+# Icons image
+# https://commons.wikimedia.org/wiki/GNOME_Desktop_icons
+# https://icon-icons.com/search/icons/gnome+3
 # -----------------------------------------------------------------------------
 
 create_icon() {
