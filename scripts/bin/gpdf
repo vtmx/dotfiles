@@ -9,8 +9,10 @@ if [[ ! "${mesage}" ]]; then
   message="update dotfiles"
 fi
 
-# go to dotfiles folder
+# Go to dotfiles folder
 cd "${dotfiles_dir}" 
+
+# Git commands
 git add --all
 git commit -m "${message}"
 git push
