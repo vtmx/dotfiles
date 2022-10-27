@@ -39,8 +39,8 @@ create_icon() {
   df[icon]="/bin/nodejs.png"
   df[terminal]="false"
   df[categories]="Education;Languages;Java;"
-  # df[location]="/usr/share/applications/${df[name]}.desktop"
-  df[location]="/tmp/${df[name]}.desktop"
+  # df[file_path]="/usr/share/applications/${df[name]}.desktop"
+  df[file_path]="/tmp/${df[name]}.desktop"
 
   echo "[Desktop Entry]
 Type=${df[type]}
@@ -51,13 +51,12 @@ Path=${df[path]}
 Exec=${df[exec]}
 Icon=${df[icon]}
 Terminal=${df[terminal]}
-Categories=${df[categories]}">"${df[location]}"
+Categories=${df[categories]}">"${df[file_path]}"
 
-  if ! desktop-file-validate "${df[location]}"; then
+  if ! desktop-file-validate "${df[file_path]}"; then
     rm -f $tmp_icon_file
     exit 1
   fi
 }
 
 create_icon
-
