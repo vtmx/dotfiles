@@ -96,10 +96,19 @@ if type -q exa
   alias tree='exa -T'
 end
 
+# fish
+if type -q fish
+  alias fr="source $HOME/.config/fish/config.fish";
+  set_color $shade3; echo "Fish reload"
+end
+
 # fzf
+# ctrl-t - Paste the selected files and directories onto the command-line
+# ctrl-r - Paste the selected command from history onto the command-line
+# alt-c  - cd into the selected directory
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS '
-  --height 40% --reverse
+  --height 50% --reverse
   --color=fg:#abb2bf,bg:#23272e,hl:#61afef
   --color=fg+:#abb2bf,bg+:#3d4556,hl+:#61afef,gutter:#23272e
   --color=info:#5c6370,prompt:#98c379,pointer:#abb2bf
