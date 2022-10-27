@@ -3,6 +3,10 @@
 echo
 message="$@"
 
+if [[ ! "${mesage}" ]]; then
+  message="update dotfiles"
+fi
+
 cd ~/Dev/dotfiles
 git add --all
 git commit -m "${message}"
