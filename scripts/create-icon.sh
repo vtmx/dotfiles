@@ -28,6 +28,7 @@
 # https://icon-icons.com/search/icons/gnome+3
 #
 # Size
+# https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
 # minimum: 48x48
 #
 # Command check file
