@@ -99,7 +99,8 @@ end
 # fish
 if type -q fish
   alias fr="source $HOME/.config/fish/config.fish";
-  set_color $shade3; echo "Fish reload"
+  # show in autocommand vim :(
+  # set_color $shade3; echo "Fish reload"
 end
 
 # fzf
