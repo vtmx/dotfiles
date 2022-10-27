@@ -17,6 +17,7 @@
 # Utility
 #
 # Reference
+# https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html
 # https://wiki.archlinux.org/title/Desktop_entries
 #
 # Categories
