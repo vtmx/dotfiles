@@ -208,6 +208,12 @@ map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
 -- map('n', '<a-h>', '<cmd>ToggleTerm size=10<cr>')
 -- map('n', '<a-v>', '<cmd>ToggleTerm size=80 direction=vertical<cr>')
 
+-- autocmd
+vim.api.nvim_exec([[
+  autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
+  autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
+]], false)
+
 -- future mappings
 local map_table = {
   n = {
@@ -234,8 +240,10 @@ for mode, maps in pairs(map_table) do
   end
 end
 
+
 -- references
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/53d210d3905f65b9e8f0bdb0c8a307440ebfc3f8/lua/core/utils/init.lua
+-- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
