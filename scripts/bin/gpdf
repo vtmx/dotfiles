@@ -9,7 +9,7 @@ if [[ ! "${mesage}" ]]; then
   message="update dotfiles"
 fi
 
-# Go to dotfiles folder
+# Go to dotfiles dir
 cd "${dotfiles_dir}" 
 
 # Git commands
