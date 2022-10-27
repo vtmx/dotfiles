@@ -13,6 +13,6 @@ fi
 cd "${dotfiles_dir}" 
 
 # Git commands
-git add --all
+git add -A
 git commit -m "${message}"
 git push
