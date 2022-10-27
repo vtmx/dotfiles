@@ -23,12 +23,15 @@
 # Categories
 # https://askubuntu.com/questions/674403/when-creating-a-desktop-file-what-are-valid-categories
 #
-# Check icon
-# desktop-file-validate filename.desktop
-#
-# Icons image
+# Icons
 # https://commons.wikimedia.org/wiki/GNOME_Desktop_icons
 # https://icon-icons.com/search/icons/gnome+3
+#
+# Size
+# minimum: 48x48
+#
+# Command check file
+# desktop-file-validate filename.desktop
 # -----------------------------------------------------------------------------
 
 create_icon() {
