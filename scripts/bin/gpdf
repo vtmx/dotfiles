@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
 echo
+
 message="$@"
+dotfiles_dir="$HOME/Dev/dotfiles"
 
 if [[ ! "${mesage}" ]]; then
   message="update dotfiles"
 fi
 
-cd ~/Dev/dotfiles
+# go to dotfiles folder
+cd "${dotfiles_dir}" 
 git add --all
 git commit -m "${message}"
 git push
