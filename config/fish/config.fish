@@ -97,11 +97,10 @@ if type -q exa
 end
 
 # fish
-if type -q fish
-  alias fr="source $HOME/.config/fish/config.fish";
-  # show in autocommand vim :(
-  set_color $shade3; echo "Fish reload"
-end
+# if type -q fish
+#   alias fr="source $HOME/.config/fish/config.fish"
+#   # set_color $shade3 & echo "Fish reload"
+# end
 
 # fzf
 # ctrl-t - Paste the selected files and directories onto the command-line
