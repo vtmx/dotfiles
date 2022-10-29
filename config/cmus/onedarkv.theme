@@ -1,50 +1,50 @@
-### colors
-### {{{
+# colors
 
 # main
-set color_win_bg=default
-set color_win_fg=default
+set color_win_bg=black
+set color_win_fg=white
 
 # title
-set color_win_title_bg=default
-set color_win_title_fg=default
+set color_win_title_bg=black
+set color_win_title_fg=white
 
 # separator
-set color_separator=default
+set color_separator=59
 
-# cursor
-set color_win_cur=blue
-set color_win_cur_sel_bg=blue
-set color_win_cur_sel_fg=black
-
-# inactive cursor
-set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=black
-
-# directory
+# directory in browser
 set color_win_dir=blue
 
-# selection
+# cursor idk
+set color_win_cur=blue
+
+# cursor
 set color_win_sel_bg=blue
 set color_win_sel_fg=black
 
-# inactive selection
-set color_win_inactive_sel_bg=default
+# current playing in artist/album
+set color_win_cur_sel_bg=blue
+set color_win_cur_sel_fg=black
+
+# track playing
+set color_win_inactive_cur_sel_bg=black
+set color_win_inactive_cur_sel_fg=blue
+
+# inactive selection idk
+set color_win_inactive_sel_bg=black
 set color_win_inactive_sel_fg=blue
 
-# info
-set color_titleline_bg=default
-set color_titleline_fg=default
+# botton playing song
+set color_titleline_bg=black
+set color_titleline_fg=blue
 
-# statusline
-set color_statusline_bg=default
-set color_statusline_fg=default
+# status time vol etc
+set color_statusline_bg=black
+set color_statusline_fg=white
 
 # command line
-set color_cmdline_bg=default
-set color_cmdline_fg=default
+set color_cmdline_bg=black
+set color_cmdline_fg=white
 
-# info
+# info idk
 set color_info=yellow
 set color_error=red
-### }}}
