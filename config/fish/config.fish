@@ -70,12 +70,15 @@ alias md='mkdir -p'
 alias rd='rmdir'
  
 # paths
+alias cddesi='cd $HOME/Design'
 alias cddesk='cd $HOME/Desktop'
 alias cddev='cd $HOME/Dev'
 alias cddoc='cd $HOME/Documents'
 alias cddow='cd $HOME/Downloads'
-alias cdpic='cd $HOME/Pictures'
+alias cdgame='cd $HOME/Games'
 alias cdmus='cd $HOME/Music'
+alias cdpic='cd $HOME/Pictures'
+alias cdsof='cd $HOME/Softwares'
 alias cdvid='cd $HOME/Videos'
 alias cdc='cd $HOME/Dev/dotfiles/config'
 alias cdd='cd $HOME/Dev/dotfiles'
@@ -88,6 +91,31 @@ alias cdt='cd $HOME/Downloads/temp'
 # bat
 if type -q bat
   alias cat='bat'
+end
+
+# entr
+if type -q entr
+  # watch sh
+  alias wsh="wsh"
+
+  function wsh
+    if test -e "$argv"
+      echo $argv | entr ./$argv 
+    else
+      echo "Arquivo não existe: $argv"
+    end
+  end # wsh
+
+  # watch js
+  alias wjs="wjs"
+
+  function wjs
+    if test -e "$argv"
+      echo $argv | entr node $argv 
+    else
+      echo "Arquivo não existe: $argv"
+    end
+  end # wjs
 end
 
 # exa
@@ -105,7 +133,7 @@ end
 # fzf
 # ctrl-t - Paste the selected files and directories onto the command-line
 # ctrl-r - Paste the selected command from history onto the command-line
-# alt-c  - cd into the selected directory
+#  alt-c - cd into the selected directory
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS '
   --height 50% --reverse
