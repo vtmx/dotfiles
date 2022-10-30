@@ -276,3 +276,30 @@ end
 # links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
 # https://github.com/jwkvam/fish-config/blob/master/config.fish
+
+# colorize man pages
+# color  fg bg
+# black  30 40 	
+# red    31 41 	
+# green  32 42 	
+# yellow 33 43 	
+# blue   34 44 	
+# purple 35 45 	
+# cyan   36 46 	
+# white	 37 47
+
+# headers blue
+set -xU LESS_TERMCAP_md (printf "\e[01;34m")
+
+# body attribute value
+set -xU LESS_TERMCAP_us (printf "\e[01;32m")
+
+# statusline
+set -xU LESS_TERMCAP_so (printf "\e[01;40;37m")
+
+# body sem cor suja muito o documento
+set -xU LESS_TERMCAP_me (printf "\e[0m")
+set -xU LESS_TERMCAP_se (printf "\e[0m")
+set -xU LESS_TERMCAP_ue (printf "\e[0m")
+
+
