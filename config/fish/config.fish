@@ -137,10 +137,10 @@ end
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS '
   --height 50% --reverse
-  --color=fg:#abb2bf,bg:#23272e,hl:#61afef
-  --color=fg+:#abb2bf,bg+:#3d4556,hl+:#61afef,gutter:#23272e
-  --color=info:#5c6370,prompt:#98c379,pointer:#abb2bf
-  --color=marker:#abb2bf,spinner:#abb2bf,header:#abb2bf'
+  --color=fg:#'$shade7',bg:#'$shade0',hl:#'$accent5'
+  --color=fg+:#'$shade7',bg+:#'$shade2',hl+:#'$accent5',gutter:#'$shade0'
+  --color=info:#'$shade3',prompt:#'$accent3',pointer:#'$shade7'
+  --color=marker:#'$shade7',spinner:#'$shade7',header:#'$shade7
 end
 
 # git
@@ -155,6 +155,13 @@ if type -q git
   alias gbd='git branch -d'
   alias gl='git pull'
   alias gp='git push'
+end
+
+# gum
+if type -q gum
+  set -gx GUM_CHOOSE_CURSOR_FOREGROUND '#'$accent5
+  set -gx GUM_CHOOSE_ITEM_FOREGROUND '#'$shade7
+  set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$shade7
 end
 
 # nvim and configs
