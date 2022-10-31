@@ -283,6 +283,7 @@ end
 # links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
 # https://github.com/jwkvam/fish-config/blob/master/config.fish
+# https://minsw.github.io/fzf-color-picker/
 
 # colorize man pages
 # color  fg bg
