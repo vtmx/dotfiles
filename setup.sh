@@ -7,55 +7,44 @@ config_dir="$HOME/.config"
 
 menu() {
   clear
-  echo
-  echo "---------------------------------------------------------------------------------"
-  echo " Dotfiles - Vitor Melo"
-  echo "---------------------------------------------------------------------------------"
-  echo
-  echo "f. Fonts copy"
-  echo "i. Install packages"
-  echo "l. Links create"
-  echo "e. Exit"
-  echo
-  read -rp "Option: " option
+  echo "
+ _    _ _____ _______  _____   ______ _______ _______         _____ 
+  \  /    |      |    |     | |_____/ |  |  | |______ |      |     |
+   \/   __|__    |    |_____| |    \_ |  |  | |______ |_____ |_____|"
+
+  read -rp "
+ f. Copy fonts 
+ i. Install packages
+ l. Create simbolic links
+ q. Exit
+
+Option: " option
   echo
 
   case "${option}" in
-  f)
-    copy_fonts
-    ;;
-
-  i)
-    install_packages
-    ;;
-
-  l)
-    create_links
-    ;;
-
-  e)
-    exit 0
-    ;;
-  *)
-    pause "Opção inválida. Pressione qualquer tecla para retornar ao menu."
-    menu
-    ;;
+    f|F) copy_fonts       ;;
+    i|I) install_packages ;;
+    l|L) create_links     ;;
+    q|Q) exit 0           ;;
+    *) pause_error "Invalid option" ;;
   esac
 }
 
 copy_fonts() {
-  echo Copy fonts...
-  cp -R "$current_dir/fonts/BlexMono Nerdfonts" "$HOME/.fonts"
-  cp -R "$current_dir/fonts/IBM Plex Mono" "$HOME/.fonts"
-  cp -R "$current_dir/fonts/Segoe UI" "$HOME/.fonts"
-  pause "Copied"
-  menu
+  local src_dir="${current_dir}/fonts"
+  local dist_dir="${HOME}/.fonts"
+
+  echo Copying fonts...
+  cp -R "${src_dir}/BlexMono Nerdfonts" "${dist_dir}"
+  cp -R "${src_dir}/IBM Plex Mono" "${dist_dir}"
+  cp -R "${src_dir}/Segoe UI" "${dist_dir}"
+
+  pause_success "Copied"
 }
 
 install_packages() {
   echo "Install packages..."
-  pause "Installed"
-  menu
+  pause_success "Installed"
 }
 
 create_link() {
@@ -75,11 +64,6 @@ create_link() {
 
   # make a hard link
   ln -f "$src" "$dist"
-}
-
-pause() {
-  local message=$1
-  read -rp "${message}"
 }
 
 create_links() {
@@ -288,9 +272,47 @@ create_links() {
   link="$config_dir/Code - OSS/User"
   create_link "$name" "$target" "$link"
 
-  echo "Links created"
-  pause "Press any key to continue..."
+  pause_success "Links created"
+}
+
+# ------------------------------------------------------------------------------
+# Pause
+# ------------------------------------------------------------------------------
+
+pause() {
+  read -rp "${1}"
   menu
+}
+
+pause_error() {
+  read -rp "$(echo_red "${1}")"
+  menu
+}
+
+pause_success() {
+  read -rp "$(echo_green "${1}")"
+  menu
+}
+
+# ------------------------------------------------------------------------------
+# Show message in colors
+#
+# param: message
+# examples: echo_green "Pacote instalado com sucesso"
+# ------------------------------------------------------------------------------
+
+echo_red() {
+  local message="${1}"
+  local red="\033[0;31m"
+  local color_off="\033[0m"
+  echo -e "${red}${message}${color_off}"
+}
+
+echo_green() {
+  local message="${1}"
+  local green="\033[0;32m"
+  local color_off="\033[0m"
+  echo -e "${green}${message}${color_off}"
 }
 
 menu
