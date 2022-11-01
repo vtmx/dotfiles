@@ -93,6 +93,11 @@ if type -q bat
   alias cat='bat'
 end
 
+# canvas-sketch-cli
+if type -q canvas-sketch-cli
+  alias canvas='canvas-sketch-cli --open'
+end
+
 # entr
 if type -q entr
   # watch sh
@@ -100,7 +105,7 @@ if type -q entr
 
   function wsh
     if test -e "$argv"
-      echo $argv | entr ./$argv 
+      echo $argv | entr -c ./$argv 
     else
       echo "Arquivo não existe: $argv"
     end
