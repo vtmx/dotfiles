@@ -1,5 +1,5 @@
 ------------------------------------------------------------
--- config
+-- colors
 ------------------------------------------------------------
 
 local c = require('colors')
@@ -13,74 +13,6 @@ if not status_ok then return end
 onedarkpro.setup()
 
 ------------------------------------------------------------
--- lualine
-------------------------------------------------------------
-
-local onedarkv = {
-  normal = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 },
-    z = { fg = c.shade3 },
-  },
-
-  insert = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 },
-    z = { fg = c.shade3 },
-  },
-
-  visual = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 },
-    z = { fg = c.shade3 },
-  },
-
-  replace = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 },
-    z = { fg = c.shade3 },
-  },
-
-  inactive = {
-    a = { fg = c.shade3, bg = 'NONE' },
-    b = { fg = c.shade3 },
-    z = { fg = c.shade3 },
-  },
-}
-
-local status_ok, lualine = pcall(require, 'lualine')
-if not status_ok then return end
-
-lualine.setup({
-  options = {
-    theme = onedarkv,
-    icons_enabled = true,
-    component_separators = {},
-    section_separators = {},
-    disabled_filetypes = {},
-    always_divide_middle = true,
-  },
-  sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', 'diagnostics' },
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = { 'location' }
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
-})
-
-------------------------------------------------------------
 -- comment
 ------------------------------------------------------------
 
@@ -89,15 +21,20 @@ if not status_ok then return end
 comment.setup()
 
 ------------------------------------------------------------
+-- autopairs
+------------------------------------------------------------
+
+local status_ok, nvim_autopairs = pcall(require, 'nvim-autopairs')
+if not status_ok then return end
+nvim_autopairs.setup()
+
+------------------------------------------------------------
 -- indent-blankline
 ------------------------------------------------------------
 
 local status_ok, indent_blankline = pcall(require, 'indent_blankline')
 if not status_ok then return end
-
-indent_blankline.setup({ 
-  filetype_exclude = { 'dashboard', 'help', 'terminal' }
-})
+indent_blankline.setup({ filetype_exclude = { 'dashboard', 'help', 'terminal' }})
 
 ------------------------------------------------------------
 -- hop
@@ -106,14 +43,6 @@ indent_blankline.setup({
 local status_ok, hop = pcall(require, 'hop')
 if not status_ok then return end
 hop.setup()
-
-------------------------------------------------------------
--- toggleterm
-------------------------------------------------------------
-
-local status_ok, toggleterm = pcall(require, 'toggleterm')
-if not status_ok then return end
-toggleterm.setup()
 
 ------------------------------------------------------------
 -- nvim-tree
@@ -141,16 +70,31 @@ nvim_tree.setup({
 ------------------------------------------------------------
 
 local status_ok, telescope = pcall(require, 'telescope')
-if not status_ok then return end
+
+if not status_ok then
+  return
+else
+  telescope_actions = require('telescope.actions')
+end
 
 telescope.setup({
   defaults = {
-    disable_devicons=true,
+    disable_devicons = true,
     color_devicons = false,
     sorting_strategy = 'ascending',
     layout_config = {
       horizontal = {
-        prompt_position = 'top',
+        prompt_position = 'bottom',
+      },
+    },
+    mappings = {
+      n = {
+        ['<c-c>'] = telescope_actions.close
+      },
+      i = {
+        ['<c-j>'] = telescope_actions.move_selection_next,
+        ['<c-k>'] = telescope_actions.move_selection_previous,
+        ['<c-c>'] = telescope_actions.close
       }
     }
   }
@@ -179,14 +123,6 @@ local status_ok, treesitter_install = pcall(require, 'nvim-treesitter.install')
 if not status_ok then return end
 
 treesitter_install.update({ with_sync = true })
-
-------------------------------------------------------------
--- autopairs and autotag
-------------------------------------------------------------
-
-local status_ok, autopairs = pcall(require, 'nvim-autopairs')
-if not status_ok then return end
-autopairs.setup()
 
 ------------------------------------------------------------
 -- bufferline
@@ -238,6 +174,69 @@ bufferline.setup({
     indicator_selected = { bg = 'NONE', fg = 'NONE' },
     indicator_visible = { bg = 'NONE', fg = 'NONE' }
   }
+})
+
+------------------------------------------------------------
+-- lualine
+------------------------------------------------------------
+
+local onedarkv = ({
+  normal = {
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+  },
+
+  insert = {
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+  },
+
+  visual = {
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+  },
+
+  replace = {
+    a = { fg = c.shade7, bg = 'NONE' },
+    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+  },
+
+  inactive = {
+    a = { fg = c.shade3, bg = 'NONE' },
+    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+  },
+})
+
+local status_ok, lualine = pcall(require, 'lualine')
+if not status_ok then return end
+
+lualine.setup({
+  options = {
+    theme = onedarkv,
+    icons_enabled = true,
+    component_separators = {},
+    section_separators = {},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = { 'location' }
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
 })
 
 ------------------------------------------------------------
