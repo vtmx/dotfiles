@@ -4,6 +4,7 @@
 ------------------------------------------------------------
 
 -- vars
+local g = vim.g
 local opt = vim.opt
 
 -- if vim.fn.has('nvim-0.8') == 1 then
@@ -23,7 +24,6 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.lazyredraw = true
 opt.mouse = 'a'
--- opt.clipboard:append { 'unnamedplus' }
 
 -- notification
 opt.backup = false
@@ -53,12 +53,12 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- netrw
-vim.g.netrw_altv = 1
-vim.g.netrw_banner = 0
-vim.g.netrw_browse_split = 4
-vim.g.netrw_hide = 1
-vim.g.netrw_liststyle = 4
-vim.g.netrw_winsize = 25
+g.netrw_altv = 1
+g.netrw_banner = 0
+g.netrw_browse_split = 4
+g.netrw_hide = 1
+g.netrw_liststyle = 4
+g.netrw_winsize = 25
 
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {

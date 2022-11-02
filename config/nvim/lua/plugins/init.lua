@@ -8,6 +8,7 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
+-- Check if packer exist
 if fn.empty(fn.glob(install_path)) > 0 then
   vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#23272e' })
   vim.api.nvim_set_hl(0, 'NormalBorder', { bg = '#23272e' })
@@ -41,20 +42,18 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   -- ui
-  use 'navarasu/onedark.nvim'
   use 'olimorris/onedarkpro.nvim'
+  use 'akinsho/bufferline.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
-  use 'akinsho/bufferline.nvim'
 
   -- utils
-  use 'nathom/tmux.nvim'
-  use 'tpope/vim-surround'
-  use 'numToStr/Comment.nvim'
-  use 'windwp/nvim-autopairs'
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'phaazon/hop.nvim'
+  use 'numToStr/Comment.nvim'
   use 'nvim-lua/telescope.nvim'
+  use 'phaazon/hop.nvim'
+  use 'tpope/vim-surround'
+  use 'windwp/nvim-autopairs'
 
   -- syntaxes
   use 'baskerville/vim-sxhkdrc'
@@ -66,6 +65,7 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'nvim-treesitter/nvim-treesitter'
   use { 'neoclide/coc.nvim', branch = 'release' }
+
 
   -- Put this at the end after all plugins
   if packer_bootstrap then

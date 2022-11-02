@@ -113,6 +113,11 @@ local highlights = {
   -- packker
   packerStatusSuccess = { fg = c.accent3 },
 
+  -- bufferline
+  BufferLineIndicatorVisible = { bg = 'NONE' },
+  BufferLineCloseButtonVisible = { bg = 'NONE' },
+  BufferLineModified = { bg = 'NONE' },
+
   -- hop
   HopNextKey = { fg = c.accent0 },
   HopNextKey1 = { fg = c.accent5 },
@@ -122,11 +127,6 @@ local highlights = {
 
   -- indent-line
   IndentBlanklineChar = { fg = c.shade2 },
-
-  -- bufferline
-  BufferLineIndicatorVisible = { bg = 'NONE' },
-  BufferLineCloseButtonVisible = { bg = 'NONE' },
-  BufferLineModified = { bg = 'NONE' },
 
   -- nvim-tree
   NvimTreeCursorLine = { bg = c.shade4 },
@@ -139,32 +139,27 @@ local highlights = {
   NvimTreeNormalNC = { bg = c.shade0 },
   NvimTreeRootFolder = { fg = c.shade7 },
   NvimTreeOpenedFile = { fg = c.shade7 },
+  NvimTreeVertSplit = { fg = c.shade2 },
   NvimTreeWindowPicker = { fg = c.shade7 },
 
   -- telescope
   TelescopeSelection = { bg = c.shade4 },
-  TelescopeSelectionCaret = { fg = c.shade7 },
+  TelescopeSelectionCaret = { fg = c.shade7, bg = c.shade4 },
   TelescopeMultiSelection = { fg = c.shade7 },
   TelescopeMultiIcon = { fg = c.shade7 },
-
   TelescopeNormal = { fg = c.shade7 },
   TelescopePreviewNormal = { fg = c.shade7 },
   TelescopePromptNormal = { fg = c.shade7 },
   TelescopeResultsNormal = { fg = c.shade7 },
-
   TelescopePromptBorder = { fg = c.shade3 },
   TelescopeResultsBorder = { fg = c.shade3 },
   TelescopePreviewBorder = { fg = c.shade3 },
-
   TelescopeTitle = { fg = c.shade7 },
   TelescopePromptTitle = { fg = c.shade7 },
   TelescopeResultsTitle = { fg = c.shade7 },
   TelescopePreviewTitle = { fg = c.shade7 },
-
   TelescopePromptCounter = { fg = c.shade3 },
-
   TelescopeMatching = { fg = c.accent5 },
-
   TelescopePromptPrefix = { fg = c.shade7 },
 }
 
