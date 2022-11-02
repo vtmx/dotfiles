@@ -228,6 +228,15 @@ if type -q yay
   alias yayu='yay -Syu'
 end
 
+# youtube-dl
+if type -q youtube-dl
+  alias youm="youm"
+
+  function youm
+    youtube-dl -x --audio-format mp3 "$argv"
+  end
+end
+
 # custom sh
 alias ide='ide.sh'
 

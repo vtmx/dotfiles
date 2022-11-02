@@ -101,7 +101,7 @@ map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
 -- format
-map('n', '<leader>f', '<cmd>retab<cr>')
+-- map('n', '<leader>f', '<cmd>retab<cr>')
 
 -- qq to record in q, Q to play
 map('n', 'Q', '@q')
@@ -186,7 +186,7 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 -- map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
 
 -- hop
-map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
+map('n', '<leader>f', '<cmd>HopChar1<cr>')
 
 -- nvimtree
 map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
@@ -239,7 +239,6 @@ for mode, maps in pairs(map_table) do
     end
   end
 end
-
 
 -- references
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua

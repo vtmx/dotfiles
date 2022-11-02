@@ -42,8 +42,8 @@ return packer.startup(function(use)
 
   -- ui
   use 'navarasu/onedark.nvim'
-  use 'olimorris/onedarkpro.nvim' 
-  use 'kyazdani42/nvim-tree.lua'
+  use 'olimorris/onedarkpro.nvim'
+  use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
   use 'akinsho/bufferline.nvim'
 

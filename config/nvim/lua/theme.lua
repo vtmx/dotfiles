@@ -5,6 +5,7 @@
 local c = require('colors')
 
 local highlights = {
+  -- general
   Normal = { fg = c.shade7, ctermfg = 255, ctermbg = 234 },
   Comment = { fg = c.shade3, italic = true, ctermfg = 7 },
   WinbarNC = { fg = c.shade3, ctermfg = 7 },
@@ -29,6 +30,7 @@ local highlights = {
   ModeMsg = { fg = c.shade3 },
   MoreMsg = { fg = c.shade3 },
   Question = { fg = c.shade7 },
+  WarningMsg = { fg = c.accent2 },
 
   -- sintaxy
   Constant = { fg = c.accent1 },
@@ -37,10 +39,8 @@ local highlights = {
   Number = { fg = c.accent1 },
   Boolean = { fg = c.accent1 },
   Float = { fg = c.accent1 },
-
   Identifier = { fg = c.accent0 },
   Function = { fg = c.accent5 },
-
   Statement = { fg = c.accent6 },
   Conditional = { fg = c.accent6 },
   Repeat = { fg = c.accent6 },
@@ -48,7 +48,6 @@ local highlights = {
   Operator = { fg = c.accent4 },
   Keyword = { fg = c.accent6 },
   Exception = { fg = c.accent6 },
-
   PreProc	= { fg = c.accent6 },
   Include = { fg = c.accent6 },
   Define = { fg = c.accent6 },
