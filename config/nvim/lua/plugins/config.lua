@@ -8,13 +8,9 @@ local c = require('colors')
 -- onedark
 ------------------------------------------------------------
 
---local status_ok, onedarkpro = pcall(require, 'onedarkpro')
---if not status_ok then return end
---onedarkpro('onedarkpro').load()
-
-local status_ok, onedark = pcall(require, 'onedark')
+local status_ok, onedarkpro = pcall(require, 'onedarkpro')
 if not status_ok then return end
-onedark.load()
+onedarkpro.setup()
 
 ------------------------------------------------------------
 -- lualine
@@ -145,12 +141,7 @@ nvim_tree.setup({
 ------------------------------------------------------------
 
 local status_ok, telescope = pcall(require, 'telescope')
-
-if not status_ok then
-  return
-else
-  telescope_actions = require('telescope.actions')
-end
+if not status_ok then return end
 
 telescope.setup({
   defaults = {
@@ -160,16 +151,6 @@ telescope.setup({
     layout_config = {
       horizontal = {
         prompt_position = 'top',
-      },
-    },
-    mappings = {
-      n = {
-        ['<c-c>'] = telescope_actions.close
-      },
-      i = {
-        ['<c-j>'] = telescope_actions.move_selection_next,
-        ['<c-k>'] = telescope_actions.move_selection_previous,
-        ['<c-c>'] = telescope_actions.close
       }
     }
   }

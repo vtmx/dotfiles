@@ -6,12 +6,12 @@
 -- vars
 local opt = vim.opt
 
-if vim.fn.has('nvim-0.8') == 1 then
-  opt.winbar = '%f'
-  -- opt.cmdheight = 0
-else
-  opt.cmdheight = 1
-end
+-- if vim.fn.has('nvim-0.8') == 1 then
+--   opt.winbar = '%f'
+--   opt.cmdheight = 0
+-- else
+--   opt.cmdheight = 1
+-- end
 
 opt.termguicolors = true
 opt.title = true
