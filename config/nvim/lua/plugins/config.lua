@@ -84,7 +84,7 @@ telescope.setup({
     sorting_strategy = 'ascending',
     layout_config = {
       horizontal = {
-        prompt_position = 'bottom',
+        prompt_position = 'top',
       },
     },
     mappings = {
