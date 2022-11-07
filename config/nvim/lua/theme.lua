@@ -26,11 +26,9 @@ local highlights = {
   Search = { fg = c.shade7, bg = c.shade2 },
 
   -- messages
-  ErrorMsg = { fg = c.accent0 },
   ModeMsg = { fg = c.shade3 },
   MoreMsg = { fg = c.shade3 },
   Question = { fg = c.shade7 },
-  WarningMsg = { fg = c.accent2 },
 
   -- sintaxy
   Constant = { fg = c.accent1 },
@@ -53,6 +51,8 @@ local highlights = {
   Define = { fg = c.accent6 },
   Macro	= { fg = c.accent0 },
   PreCondit	= { fg = c.accent6 },
+  ErrorMsg = { fg = c.accent0 },
+  WarningMsg = { fg = c.accent2 },
 
   -- keys [] {} ()
   Type = { fg = c.accent6 },
