@@ -95,7 +95,7 @@ end
 
 # canvas-sketch-cli
 if type -q canvas-sketch-cli
-  alias canvas='canvas-sketch-cli --open'
+  alias canvas='canvas-sketch-cli'
 end
 
 # entr

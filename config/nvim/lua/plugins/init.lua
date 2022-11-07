@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
+  use 'rktjmp/lush.nvim'
 
   -- utils
   use 'lukas-reineke/indent-blankline.nvim'
