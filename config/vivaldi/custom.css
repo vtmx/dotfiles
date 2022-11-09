@@ -1,45 +1,52 @@
 body {
-	background: var(--colorBg) !important;
+  background: var(--colorBg) !important;
 }
 
-/* selection text */
+/* text selection */
 ::selection {
-	background: var(--colorAccentBg) !important;
+  background: var(--colorAccentBg) !important;
 }
 
-/* tool bar */
+/* toolbar */
 .toolbar-mainbar, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions, .color-behind-tabs-off .toolbar-mainbar {
-	position: initial;
-	background: var(--colorBgFaded) !important;
+  position: initial;
+  background: var(--colorBgFaded) !important;
 }
 
+/* search file */
 .SearchField, .UrlBar-AddressField {
-	background: var(--colorBg) !important;
-	border: none !important;
+  background: var(--colorBg) !important;
+  border: none !important;
 }
 
 /* disable outline focus adressbar */
 .SearchField:focus-within, .UrlBar-AddressField:focus-within {
-	outline: none !important;
+  outline: none !important;
 }
 
+/* buttons tollbar */
 .button-toolbar {
-	opacity: .8 !important;
+  opacity: .8 !important;
 }
 
 /* active tab */
 #browser .tab-position .tab.active {
-	background: var(--colorBgFaded) !important;
-	color: var(--colorFgIntense) !important;
+  background: var(--colorBgFaded) !important;
+  color: var(--colorFgIntense) !important;
+}
+
+/* inactive tab */
+#browser .tab-position .tab {
+  color: var(--colorAccentBgFadedMost) !important;
 }
 
 /* hover buttons toolbar */
 .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .button-toolbar > button:active, .color-behind-tabs-off .toolbar-mainbar > .button-toolbar > button:active, .color-behind-tabs-off .toolbar-mainbar .toolbar-extensions > .toolbar-group > .button-toolbar > button:active, .color-behind-tabs-off .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active {
-	background: var(--colorHighlightBgAlpha) !important;
-	transition: .2s all;
+  background: var(--colorHighlightBgAlpha) !important;
+  transition: .2s all !important;
 }
 
 /* remove glow effect favicon */
 .transparent-tabbar .tab-position .tab.active .tab-header .favicon:not(.svg), .theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg), .acc-dark.color-behind-tabs-off .tab-position .tab.active .tab-header .favicon:not(.svg) {
-	filter: none !important;
+  filter: none !important;
 }
