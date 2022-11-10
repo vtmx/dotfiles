@@ -110,10 +110,50 @@ local highlights = {
   StatusLine   = { bg = 'NONE'   },
   StatusLineNC = { fg = c.shade7 },
 
+  -- Languages
+
+  -- html
+  htmlArg = { fg = c.accent1 }, -- atribute
+  htmlH1 = { fg = c.accent0 },
+  htmlH2 = { link = 'htmlH1' },
+  htmlH3 = { link = 'htmlH1' },
+  htmlH4 = { link = 'htmlH1' },
+  htmlH5 = { link = 'htmlH1' },
+  htmlH6 = { link = 'htmlH1' },
+  htmlSpecialTagName = { fg = c.accent0 },
+  htmlTag = { fg = c.shade7 },
+  htmlTagName = { fg = c.accent0 },
+  htmlTitle = { fg = c.shade7 },
+  htmlLink = { fg = c.shade7 },
+
+  -- markdown
+  markdownBlockquote = { fg = c.shade7 },
+  markdownCodeDelimiter = { fg = c.shade7 },
+  markdownH1 = { link = 'htmlH1' },
+  markdownH3 = { link = 'htmlH1' },
+  markdownH4 = { link = 'htmlH1' },
+  markdownH5 = { link = 'htmlH1' },
+  markdownH6 = { link = 'htmlH1' },
+  markdownHeadingDelimiter = { link = 'htmlH1' },
+  markdownHeadingRule = { link = 'htmlH1' },
+  markdownListMarker = { fg = c.accent2 },
+  markdownRule = { link = 'htmlH1' },
+  markdownUrl = { fg = c.shade7 },
+
+  -- css
+  cssClassNameDot = { fg = c.accent1 },
+  cssClassName = { link = 'cssClassNameDot' },
+  cssHacks = { fg = c.shade7 },
+  cssTagName = { fg = c.accent0 },
+  cssVendor = { fg = c.shade7 },
+
   -- Plugins
 
   -- packker
   packerStatusSuccess = { fg = c.accent3 },
+
+  -- indent-line
+  IndentBlanklineChar = { fg = c.shade2 },
 
   -- bufferline
   BufferLineCloseButtonVisible = { bg = 'NONE' },
@@ -126,9 +166,6 @@ local highlights = {
   HopNextKey2  = { fg = c.accent1 },
   HopNextKey3  = { fg = c.accent6 },
   HopUnmatched = { fg = c.shade3  },
-
-  -- indent-line
-  IndentBlanklineChar = { fg = c.shade2 },
 
   -- nvim-tree
   NvimTreeCursorLine       = { bg = c.shade4 },
@@ -163,6 +200,57 @@ local highlights = {
   TelescopePromptCounter  = { fg = c.shade3 },
   TelescopeMatching       = { fg = c.accent5 },
   TelescopePromptPrefix   = { fg = c.shade7 },
+
+  -- lualine
+  lualine_b_diff_added_normal = { fg = c.shade3 },
+  lualine_b_diff_added_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_added_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_added_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_added_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_added_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_added_inactive = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_normal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_modified_inactive = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_normal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diff_removed_inactive = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_normal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_hint_inactive = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_normal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_info_inactive = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_normal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_warn_inactive = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_normal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_insert = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_visual = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_replace = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_command = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_terminal = { link = 'lualine_b_diff_added_normal' },
+  lualine_b_diagnostics_error_inactive = { link = 'lualine_b_diff_added_normal' },
 }
 
 -- expand highlights
