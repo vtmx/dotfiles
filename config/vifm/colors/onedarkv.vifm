@@ -1,0 +1,29 @@
+" onedarkv
+
+" reset all styles
+highlight clear
+
+" top
+highlight Border	   ctermfg=default ctermbg=default
+highlight TopLine	   ctermfg=default ctermbg=default
+highlight TopLineSel ctermfg=default ctermbg=default
+
+" body
+highlight Win        ctermfg=default ctermbg=default " files
+highlight CurrLine   ctermfg=blue    ctermbg=default " current line
+highlight Selected   ctermfg=yellow  ctermbg=default " select files
+
+" footer
+highlight ErrorMsg   ctermfg=red     ctermbg=default
+highlight CmdLine	   ctermfg=default ctermbg=default
+highlight StatusLine ctermfg=default ctermbg=default
+highlight WildMenu   cterm=none ctermfg=black ctermbg=white
+
+" file type
+highlight BrokenLink ctermfg=red     ctermbg=default
+highlight Device     ctermfg=red     ctermbg=default
+highlight Directory  ctermfg=blue	   ctermbg=default
+highlight Executable ctermfg=green   ctermbg=default
+highlight Fifo       ctermfg=cyan    ctermbg=default
+highlight Link       ctermfg=yellow  ctermbg=default
+highlight Socket     ctermfg=magenta ctermbg=default
