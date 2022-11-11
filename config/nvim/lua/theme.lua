@@ -113,18 +113,18 @@ local highlights = {
   -- Languages
 
   -- html
-  htmlArg = { fg = c.accent1 }, -- atribute
-  htmlH1 = { fg = c.accent0 },
-  htmlH2 = { link = 'htmlH1' },
-  htmlH3 = { link = 'htmlH1' },
-  htmlH4 = { link = 'htmlH1' },
-  htmlH5 = { link = 'htmlH1' },
-  htmlH6 = { link = 'htmlH1' },
+  htmlArg = { fg = c.accent2 }, -- atribute
+  htmlH1  = { fg = c.shade7 },
+  htmlH2  = { link = 'htmlH1' },
+  htmlH3  = { link = 'htmlH1' },
+  htmlH4  = { link = 'htmlH1' },
+  htmlH5  = { link = 'htmlH1' },
+  htmlH6  = { link = 'htmlH1' },
   htmlSpecialTagName = { fg = c.accent0 },
-  htmlTag = { fg = c.shade7 },
+  htmlTag     = { fg = c.shade7 },
   htmlTagName = { fg = c.accent0 },
-  htmlTitle = { fg = c.shade7 },
-  htmlLink = { fg = c.shade7 },
+  htmlTitle   = { fg = c.shade7 },
+  htmlLink    = { fg = c.shade7 },
 
   -- markdown
   markdownBlockquote = { fg = c.shade7 },
