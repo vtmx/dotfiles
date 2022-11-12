@@ -1,9 +1,9 @@
 configuration {
 	modi: "drun,keys";
 
-	display-drun: "";
+	display-drun: "";
   display-filebrowser: "";
-  display-keys: "key:";
+  display-keys: "key: ";
 	display-run: "";
   display-window: "";
 
@@ -51,30 +51,6 @@ configuration {
 	accent7: #be5046;
 
 	font: "IBM Plex Mono Medm 11";
-
-	border-colour: @shade2;
-	handle-colour: @shade1;
-	background-colour: @shade1;
-	foreground-colour: @shade7;
-	alternate-background: @shade4;
-	normal-background: @shade1;
-	normal-foreground: @shade7;
-	urgent-background: @shade1;
-	urgent-foreground: @accent0;
-	active-background: @shade4;
-	active-foreground: @shade7;
-	selected-normal-background: @shade4;
-	selected-normal-foreground: @shade7;
-	selected-urgent-background: @shade4;
-	selected-urgent-foreground: @shade7;
-	selected-active-background: @shade4;
-	selected-active-foreground: @shade7;
-	alternate-normal-background: @shade1;
-	alternate-normal-foreground: @shade7;
-	alternate-urgent-background: @shade1;
-	alternate-urgent-foreground: @shade7;
-	alternate-active-background: @shade4;
-	alternate-active-foreground: @shade7;
 }
 
 window {
@@ -94,17 +70,18 @@ inputbar {
 	padding: 16px;
 }
  
+/* icon */
 prompt {
-	text-color: @shade7;
-  margin: 0 16px 0 0;
+	text-color: @shade3;
 }
 
 entry {
-	background-color: transparent;
 	placeholder: "";
+	background-color: transparent;
 	text-color: @shade7;
 }
 
+/* item */
 listview {
 	columns: 1;
 	lines: 6;
@@ -131,6 +108,7 @@ element alternate.normal {
 	text-color: @shade7;
 }
 
+/* item selected */
 element selected.normal {
 	background-color: @shade4;
 	text-color: @shade7;
@@ -155,3 +133,8 @@ message {
 textbox {
 	text-color: @shade7;
 }
+
+/*
+links:
+https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
+*/

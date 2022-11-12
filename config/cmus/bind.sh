@@ -7,15 +7,19 @@ cmus="cmus remote -C"
 $cmus unbind common ,
 $cmus unbind common =
 $cmus unbind common -
+$cmus unbind common g
 $cmus unbind common h
 $cmus unbind common l
 $cmus unbind common m
+$cmus unbind common G
 $cmus unbind common right
 $cmus unbind common left
 
 # up down
 $cmus bind common J win-down 5
 $cmus bind common K win-up 5
+$cmus bind common G win-bottom
+$cmus bind common g win-top
 
 # control
 $cmus bind common space player-pause
