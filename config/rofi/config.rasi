@@ -7,31 +7,34 @@ configuration {
 	display-run: "";
   display-window: "";
 
-	terminal: "kitty";
-	show-icons: false;
 	disable-history: false;
 	max-history-size: 25;
+	terminal: "kitty";
+	show-icons: false;
 
-	/* keybindis */
+	// keybindis
 	kb-remove-char-back: "BackSpace";
 	kb-remove-word-forward: "Control+Delete";
 
-	kb-row-down: "Control+j,Down";
-
+  // up and down
 	kb-remove-to-eol: "";
-	kb-row-up: "Control+k,Up";
+	kb-row-down: "Control+j,Control+n,Down";
+	kb-row-up: "Control+k,Control+p,Up";
 
+  // next prev tab
 	kb-mode-complete: "";
 	kb-mode-next: "Control+l";
-
 	kb-mode-previous: "Control+h";
 
+  // confirm and cancel
 	kb-accept-entry: "Return";
 	kb-cancel: "Escape,Control+c";
 }
 
-/* colors */
+// clear default theme
+@theme "/dev/null"
 
+// colors
 * {
 	shade0: #23272e;
 	shade1: #1e2227;
@@ -67,11 +70,13 @@ mainbox {
 
 inputbar {
 	children: [prompt, entry];
+	background-color: @shade0;
 	padding: 16px;
 }
  
-/* icon */
+// icon
 prompt {
+	background-color: transparent;
 	text-color: @shade3;
 }
 
@@ -81,7 +86,7 @@ entry {
 	text-color: @shade7;
 }
 
-/* item */
+// item
 listview {
 	columns: 1;
 	lines: 6;
@@ -108,7 +113,7 @@ element alternate.normal {
 	text-color: @shade7;
 }
 
-/* item selected */
+// item selected
 element selected.normal {
 	background-color: @shade4;
 	text-color: @shade7;
@@ -134,7 +139,7 @@ textbox {
 	text-color: @shade7;
 }
 
-/*
-links:
-https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
-*/
+// references:
+// https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
+
+// vim: ft=sass
