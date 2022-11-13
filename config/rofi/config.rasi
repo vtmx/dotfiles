@@ -1,12 +1,18 @@
 configuration {
-	modi: "drun,keys";
+	modi: "drun,window,keys";
 
-	display-drun: "";
-  display-filebrowser: "";
-  display-keys: "key: ";
-	display-run: "";
-  display-window: "";
+  // icons
+	display-drun: "";
+  display-filebrowser: "";
+  display-keys: "";
+	display-run: "";
+  display-window: "";
 
+  // display
+  drun-display-format: "{name}";
+  window-format: "{name} {title}";
+
+  // config
 	disable-history: false;
 	max-history-size: 25;
 	terminal: "kitty";
@@ -34,8 +40,9 @@ configuration {
 // clear default theme
 @theme "/dev/null"
 
-// colors
+// general
 * {
+	font: "BlexMono Nerd Font 11";
 	shade0: #23272e;
 	shade1: #1e2227;
 	shade2: #3d4556;
@@ -52,8 +59,7 @@ configuration {
 	accent5: #61afef;
 	accent6: #c678dd;
 	accent7: #be5046;
-
-	font: "IBM Plex Mono Medm 11";
+  highlight: @accent5;
 }
 
 window {
@@ -68,6 +74,16 @@ mainbox {
 	background-color: @shade0;
 }
 
+message {
+	background-color: @shade1;
+}
+
+textbox {
+  padding: 16px;
+	background-color: @shade1;
+	text-color: @shade7;
+}
+
 inputbar {
 	children: [prompt, entry];
 	background-color: @shade0;
@@ -76,6 +92,7 @@ inputbar {
  
 // icon
 prompt {
+  margin: 0 16px 0 0;
 	background-color: transparent;
 	text-color: @shade3;
 }
@@ -94,7 +111,6 @@ listview {
 	padding: 0;
 	background-color: @shade1;
 	border: 0;
-	scrollbar: false;
 }
 
 element {
@@ -103,25 +119,10 @@ element {
 	text-color: @shade7;
 }
 
-element normal.normal {
-	background-color: inherit;
-	text-color: @shade7;
-}
-
-element alternate.normal {
-	background-color: inherit;
-	text-color: @shade7;
-}
-
-// item selected
-element selected.normal {
+element selected.normal,
+element selected.active {
 	background-color: @shade4;
 	text-color: @shade7;
-}
-
-element normal.active {
-	background-color: inherit;
-	text-color: inherit;
 }
 
 element-text {
@@ -129,17 +130,6 @@ element-text {
 	text-color: inherit;
 }
 
-message {
-	padding: 8px 16px;
-	background-color: @shade1;
-	border: 0;
-}
-
-textbox {
-	text-color: @shade7;
-}
-
 // references:
 // https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
-
 // vim: ft=sass

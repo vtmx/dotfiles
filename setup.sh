@@ -109,6 +109,11 @@ create_links() {
   # cmus
   # ----------------------------------------------------------
   name="cmus"
+  target="$src_dir/cmus/rc"
+  link="$config_dir/cmus"
+  create_link "$name" "$target" "$link"
+
+  name=""
   target="$src_dir/cmus/onedarkv.theme"
   link="$config_dir/cmus"
   create_link "$name" "$target" "$link"

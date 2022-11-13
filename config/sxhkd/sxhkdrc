@@ -12,7 +12,7 @@ super + shift + q
 
 # laucnher
 super + space
-	rofi -show drun -drun-display-format
+	rofi -show drun
 
 # terminal
 super + Return
