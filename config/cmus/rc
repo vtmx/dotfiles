@@ -1,48 +1,30 @@
-# unbind
-unbind common space
-unbind common ,
-unbind common =
-unbind common -
-unbind common g
-unbind common h
-unbind common l
-unbind common m
-unbind common q
-unbind common J
-unbind common K
-unbind common G
-unbind common right
-unbind common left
-unbind common ^N
-unbind common ^P
-
 # up down
-bind common J win-down 5
-bind common K win-up 5
-bind common G win-bottom
-bind common g win-top
+bind -f common J win-down 5
+bind -f common K win-up 5
+bind -f common G win-bottom
+bind -f common g win-top
 
 # control
-bind common space player-pause
-bind common ^N player-next
-bind common ^P player-prev
+bind -f common space player-pause
+bind -f common ^N player-next
+bind -f common ^P player-prev
 
 # seek
-bind common l seek +10
-bind common h seek -10
-bind common right seek +5
-bind common left seek -5
+bind -f common l seek +10
+bind -f common h seek -10
+bind -f common right seek +5
+bind -f common left seek -5
 
 # vol
-bind common = vol +5%
-bind common - vol -5% 
-bind common m mute
+bind -f common = vol +5%
+bind -f common - vol -5% 
+bind -f common m mute
 
 # settings
-bind common , view settings
+bind -f common , view settings
 
 # quit
-bind common q quit
+bind -f common q quit
 
 # references:
 # https://github.com/cmus/cmus/blob/master/data/rc
