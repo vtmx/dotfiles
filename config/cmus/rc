@@ -1,8 +1,8 @@
 # up down
+bind -f common g win-top
+bind -f common G win-bottom
 bind -f common J win-down 5
 bind -f common K win-up 5
-bind -f common G win-bottom
-bind -f common g win-top
 
 # control
 bind -f common space player-pause

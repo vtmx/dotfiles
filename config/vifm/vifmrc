@@ -536,3 +536,8 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
+
+nnoremap J 5j
+nnoremap K 5k
+nnoremap - <C-w>5<
+nnoremap _ <C-w>5>
