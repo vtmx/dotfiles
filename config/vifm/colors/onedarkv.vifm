@@ -6,7 +6,7 @@ hi clear
 " header
 hi Border	    cterm=none ctermfg=black ctermbg=black
 hi TopLine	  cterm=none ctermfg=white ctermbg=black
-hi TopLineSel cterm=none ctermfg=cyan ctermbg=black
+hi TopLineSel cterm=none ctermfg=white ctermbg=black
 
 " tab
 hi TabLine    cterm=none ctermfg=white ctermbg=black
