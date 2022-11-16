@@ -207,6 +207,11 @@ if type -q tmux
   alias t='tmux'
 end
 
+# vifm
+if type -q vifm
+  alias fm='vifm'
+end
+
 # vlang
 alias vl='$HOME/.v/vl'
 alias vh='$HOME/.v/vl help'
