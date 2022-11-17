@@ -19,7 +19,7 @@ nnoremap <space> tj
 " move
 nnoremap J 5j
 nnoremap K 5k
-
+ 
 "split
 nnoremap ss <c-w>s
 nnoremap vv <c-w>v

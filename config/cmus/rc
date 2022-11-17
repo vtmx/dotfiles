@@ -18,6 +18,8 @@ bind -f common left seek -5
 # vol
 bind -f common = vol +5%
 bind -f common - vol -5% 
+bind -f common ^A vol +5%
+bind -f common ^X vol -5% 
 bind -f common m mute
 
 # settings
