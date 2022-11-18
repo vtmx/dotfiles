@@ -1,0 +1,230 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=#5c6370
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0
+ContrastEffect=0
+Enable=
+IntensityAmount=0
+IntensityEffect=0
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=false
+Color=#5c6370
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0
+ContrastEffect=0
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=#1b1f23
+BackgroundNormal=#1b1f23
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:Complementary]
+BackgroundNormal=#1e2227
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:Header]
+BackgroundAlternate=#23272e
+BackgroundNormal=#23272e
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:Header][Inactive]
+BackgroundAlternate=#23272e
+BackgroundNormal=#23272e
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:Selection]
+BackgroundAlternate=#323842
+BackgroundNormal=#323842
+DecorationFocus=#323842
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:Tooltip]
+BackgroundAlternate=#1e2227
+BackgroundNormal=#1e2227
+DecorationFocus=#57a5ed
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:View]
+BackgroundAlternate=#22272e
+BackgroundNormal=#22272e
+DecorationFocus=#404859
+DecorationHover=#404859
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[Colors:Window]
+BackgroundAlternate=#1e2227
+BackgroundNormal=#1e2227
+DecorationFocus=#3d4556
+DecorationHover=#3d4556
+ForegroundActive=#abb2bf
+ForegroundInactive=#5c6370
+ForegroundLink=#61afef
+ForegroundNegative=#e06c75
+ForegroundNeutral=#d19a66
+ForegroundNormal=#abb2bf
+ForegroundPositive=#98c379
+ForegroundVisited=#c678dd
+
+[DirSelect Dialog]
+DirSelectDialog Size=949,616
+History Items[$e]=file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:///run/media/vitor/hd,file:$HOME/Design/logos/viagem-fantastica/backdrop,file:$HOME/Downloads/temp/suikoden,file:$HOME/Downloads/temp/suikoden,file:$HOME/Games/puzzlers/luxor/Luxor 3,file:$HOME/Games/puzzlers/4-elements/4 Elements,file:$HOME/Games/puzzlers/mahjong,file:///run/media/vitor/8feb8f94-e971-42fd-961a-60f18b53a919/games/Mahjong/Art_Mahjong_Egypt_New_Worlds-RAZOR,file:///run/media/vitor/8feb8f94-e971-42fd-961a-60f18b53a919/games/Mahjong,file:$HOME/Games/puzzlers/mahjong,file:$HOME/Games/puzzlers/glass-masquerade-2,file:$HOME/Games/puzzlers/glass-masquerade,file:$HOME/Games/puzzlers/7-wonders,file:$HOME/Downloads/temp/archcraft-themes,file:$HOME/Pictures/wallpapers/wallhaven/valorant,file:$HOME/Pictures/wallpapers/wallhaven,file:$HOME/Videos/ruth/videos,file:///run/media/vitor/8feb8f94-e971-42fd-961a-60f18b53a919/games/nanotale-typing,file:$HOME/Pictures/screenshots,file:$HOME/Design/_personal/investimentos,file:$HOME/app,file:$HOME/Pictures/screenshots,file:$HOME/Dev/dotfiles/config/vivaldi,file:$HOME/Pictures/screenshots,file:$HOME/Pictures/screenshots
+
+[General]
+BrowserApplication=vivaldi-stable.desktop
+ColorSchemeHash=099cb8218e5f0b26df1c29a6a4bfe5b03ed24882
+Name=Breeze Dark
+XftHintStyle=hintslight
+XftSubPixel=rgb
+accentColorFromWallpaper=false
+fixed=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
+font=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
+menuFont=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
+shadeSortColumn=true
+smallestReadableFont=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
+toolBarFont=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
+widgetStyle=Breeze
+
+[Icons]
+Theme=Sensual-Breeze-Dark
+
+[KDE]
+AnimationDurationFactor=0.125
+LookAndFeelPackage=org.kde.breezedark.desktop
+ShowDeleteCommand=false
+ShowIconsOnPushButtons=false
+contrast=4
+widgetStyle=Lightly
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=false
+Decoration position=0
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=93
+View Style=Detail
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[Shortcuts]
+AboutApp=
+AboutKDE=
+Clear=
+ConfigureNotifications=
+ConfigureToolbars=
+CreateFolder=F10; Ctrl+Shift+N
+Donate=
+EditBookmarks=
+FitToHeight=
+FitToPage=
+FitToWidth=
+Goto=
+GotoPage=
+KeyBindings=Ctrl+.
+Mail=
+OpenRecent=
+Preferences=Ctrl+,
+PrintPreview=
+Quit=
+ReportBug=
+Revert=
+SaveOptions=
+ShowStatusbar=
+ShowToolbar=
+Spelling=
+SwitchApplicationLanguage=
+TipofDay=
+Zoom=
+
+[WM]
+activeBackground=30,34,39
+activeBlend=30,34,39
+activeFont=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
+activeForeground=171,178,191
+frame=0,0,0
+inactiveBackground=30,34,39
+inactiveBlend=30,34,39
+inactiveForeground=92,99,112
+inactiveFrame=0,0,0

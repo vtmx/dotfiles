@@ -13,7 +13,7 @@ colorscheme onedarkv
 " disable space
 nnoremap <space> <nop>
 
-" select go next item
+" select and go next item
 nnoremap <space> tj
 
 " move
