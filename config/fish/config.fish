@@ -189,6 +189,11 @@ if type -q nvim
   alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
 end
 
+# mpv
+if type -q mpv
+  alias m='mpv'
+end
+
 # pacman
 if type -q pacman
   alias pac='sudo pacman'
@@ -209,7 +214,7 @@ end
 
 # vifm
 if type -q vifm
-  alias fm='vifm $(pwd)'
+  alias f='vifm $(pwd)'
 end
 
 # vlang
