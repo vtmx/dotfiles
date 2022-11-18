@@ -209,7 +209,7 @@ end
 
 # vifm
 if type -q vifm
-  alias fm='vifm $HOME'
+  alias fm='vifm $(pwd)'
 end
 
 # vlang
