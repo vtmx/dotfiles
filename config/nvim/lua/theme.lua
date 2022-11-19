@@ -96,12 +96,15 @@ local highlights = {
   PmenuThumb = { bg = c.shade4 },
 
   -- pmenu coc
-  CocFloatSbar   = { bg = c.shade1  },
-  CocMenuSel     = { bg = c.shade4  },
-  CocFloatThumb  = { bg = c.shade4  },
-  CocPumMenu     = { bg = c.shade1  },
-  CocPumShortcut = { italic = false },
-  CocSearch      = { fg = c.accent5 },
+  CocFloating       = { bg = c.shade1  },
+  CocFloatSbar      = { bg = c.shade1  },
+  CocFloatThumb     = { bg = c.shade4  },
+  CocMenuSel        = { bg = c.shade4  },
+  CocPumDetail      = { fg = c.shade3  },
+  CocPumMenu        = { bg = c.shade1  },
+  CocPumShortcut    = { fg = c.shade3  },
+  CocPumVirtualText = { fg = c.shade3  },
+  CocSearch         = { fg = c.accent5 },
 
   -- tab bar
   WinbarNC = { fg = c.shade3 },
