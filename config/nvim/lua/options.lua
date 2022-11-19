@@ -53,9 +53,12 @@ opt.splitbelow = true
 opt.splitright = true
 
 -- netrw
+-- https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer
+-- https://shapeshed.com/vim-netrw
 g.netrw_altv = 1
 g.netrw_banner = 0
 g.netrw_hide = 1
+g.netrw_keepdir = 0
 g.netrw_liststyle = 4
 g.netrw_winsize = 25
 
