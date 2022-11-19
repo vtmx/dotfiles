@@ -74,6 +74,7 @@ local status_ok, telescope = pcall(require, 'telescope')
 if not status_ok then
   return
 else
+  telescope.load_extension "file_browser"
   telescope_actions = require('telescope.actions')
 end
 
@@ -84,8 +85,8 @@ telescope.setup({
     sorting_strategy = 'ascending',
     layout_config = {
       horizontal = {
-        prompt_position = 'top',
-      },
+        prompt_position = 'top'
+      }
     },
     mappings = {
       n = {
@@ -98,6 +99,42 @@ telescope.setup({
       }
     }
   }
+})
+
+------------------------------------------------------------
+-- truezen
+------------------------------------------------------------
+
+local status_ok, zen_mode = pcall(require, 'zen-mode')
+if not status_ok then return end
+
+zen_mode.setup({
+  window = {
+    width = 80,
+    options = {
+      cursorline = false,
+      number = false,
+      relativenumber = false,
+    }
+  },
+  plugins = {
+    twilight = { enabled = true },
+    kitty = {
+      enabled = true,
+      font = "+4",
+    },
+  }
+})
+
+------------------------------------------------------------
+-- twilight
+------------------------------------------------------------
+
+local status_ok, twilight = pcall(require, 'twilight')
+if not status_ok then return end
+
+twilight.setup({
+  context = 2
 })
 
 ------------------------------------------------------------

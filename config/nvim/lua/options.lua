@@ -55,7 +55,6 @@ opt.splitright = true
 -- netrw
 g.netrw_altv = 1
 g.netrw_banner = 0
-g.netrw_browse_split = 4
 g.netrw_hide = 1
 g.netrw_liststyle = 4
 g.netrw_winsize = 25

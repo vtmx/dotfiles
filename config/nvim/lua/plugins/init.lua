@@ -52,9 +52,12 @@ return packer.startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   use 'numToStr/Comment.nvim'
   use 'nvim-lua/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
   use 'phaazon/hop.nvim'
   use 'tpope/vim-surround'
   use 'windwp/nvim-autopairs'
+  use 'folke/zen-mode.nvim'
+  use 'folke/twilight.nvim'
 
   -- syntaxes
   use 'baskerville/vim-sxhkdrc'

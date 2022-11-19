@@ -185,7 +185,7 @@ map('n', '<leader>f', '<cmd>HopChar1<cr>')
 
 -- nvimtree
 map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
--- map('n', '<leader>e', '<cmd>Vex<cr>')
+-- map('n', '<leader>e', '<cmd>Lex<cr>')
 
 -- packer
 -- disable to faste paste clipboard
@@ -196,12 +196,21 @@ map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 
 -- telescope
-map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
-map('n', '<leader>g', '<cmd>Telescope git_files<cr>')
+map('n', '<c-p>', '<cmd>Telescope file_browser<cr>')
+map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
+map('n', '<leader>tf', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>tft', '<cmd>Telescope filetypes<cr>')
+map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
+map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
+map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
+map('n', '<leader>tm', '<cmd>Telescope marks<cr>')
 
 -- toggleterm
 -- map('n', '<a-h>', '<cmd>ToggleTerm size=10<cr>')
 -- map('n', '<a-v>', '<cmd>ToggleTerm size=80 direction=vertical<cr>')
+
+-- truezen
+map('n', '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>')
 
 -- autocmd
 vim.api.nvim_exec([[
