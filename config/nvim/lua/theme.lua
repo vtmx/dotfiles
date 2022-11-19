@@ -8,6 +8,7 @@ local highlights = {
   -- general
   Normal   = { fg = c.shade7, ctermfg = 255, ctermbg = 234 },
   Comment  = { fg = c.shade3, ctermfg = 7,   italic = true },
+  Twilight = { fg = c.shade3 },
 
   -- sintaxy
   Boolean     = { fg = c.accent1 },
