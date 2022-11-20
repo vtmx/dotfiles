@@ -14,6 +14,14 @@ end
 -- leader
 vim.g.mapleader = ' '
 
+-- reload
+map('n', '<leader>r', '', {
+  callback = function()
+    vim.cmd('w | PlenaryBustedFile %')
+    -- require('plenary.reload').reload_module('theme.lua')
+  end
+})
+
 -- scape
 map('i', 'kj', '<esc>')
 map('v', '<leader>kj', '<esc>')
@@ -245,8 +253,56 @@ for mode, maps in pairs(map_table) do
 end
 
 -- references
+-- examples two mode: map({'n', 'x'}, 'cp', '"+y')
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/53d210d3905f65b9e8f0bdb0c8a307440ebfc3f8/lua/core/utils/init.lua
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
+
+-- local ok, reload = pcall(require, 'plenary.reload')
+-- RELOAD = ok and reload.reload_module or function(...) return ... end
+-- function R(name)
+--   RELOAD(name)
+--   return require(name)
+-- end
+
+-- local modules = {
+--   'mappings',
+--   'theme'
+-- }
+
+-- function ReloadModules(modules)
+--   for k, v in ipairs(modules) do
+--     print(v .. '.lua')
+--   end
+-- end
+
+-- map('n', '<leader>r', ReloadModules(modules))
+
+-- map('n', '<leader>r', '', {
+--   callback = function()
+--     for k, v in ipairs(modules) do
+--       print(v..'.lua')
+--       vim.cmd('PlenaryBustedFile theme.lua')
+--     end
+--   end
+-- })
+
+-- map('n', '<leader>r', '', {
+--   callback = function()
+--     require('plenary.reload').reload_module('theme.lua')
+--     -- <cmd>:PlenaryBustedFile theme.lua<cr>
+--   end
+-- })
+
+-- function reload(module)
+  -- require('plenary.reload').reload_module(module)
+  -- echo '<cmd>write<cr>'
+-- end
+
+-- vim.keymap.set('n', '<leader>r', '', {
+--   callback = function()
+--     printf('Reload')
+--   end,
+-- })
