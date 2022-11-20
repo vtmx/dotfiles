@@ -15,6 +15,37 @@
   --accent5: #61afef;
   --accent6: #c678dd;
   --accent7: #be5046;
+
+	--in-content-page-background: var(--shade1) !important;
+	--in-content-page-color: var(--shade7) !important;
+	--in-content-deemphasized-text: var(--shade6) !important;
+	--in-content-box-background: var(--shade1) !important;
+	--in-content-box-background-odd: var(--shade0) !important;
+	--in-content-box-info-background: var(--shade3) !important;
+	--in-content-border-color: var(--shade2) !important;
+	--in-content-border-hover: var(--shade3) !important;
+	--in-content-border-invalid: var(--accent0) !important;
+	--in-content-error-text-color: var(--accent0) !important;
+	--in-content-button-background: var(--shade0) !important;
+	--in-content-button-background-hover: var(--shade2) !important;
+	--in-content-button-background-active: var(--shade2) !important;
+	--in-content-icon-color: var(--shade7) !important;
+	--in-content-primary-button-text-color: var(--shade7) !important;
+	--in-content-primary-button-background: var(--accent5) !important;
+	--in-content-primary-button-background-hover: var(--accent5) !important;
+	--in-content-primary-button-background-active: var(--accent4) !important;
+	--in-content-danger-button-background: var(--accent0) !important;
+	--in-content-danger-button-background-hover: #ffbdc5 !important;
+	--in-content-danger-button-background-active: #ffdfe7 !important;
+	--in-content-table-background: var(--shade0) !important;
+	--in-content-accent-color: var(--in-content-primary-button-background) !important;
+	--in-content-accent-color-active: var(--in-content-primary-button-background-hover) !important;
+	--in-content-link-color: var(--in-content-primary-button-background) !important;
+	--in-content-link-color-hover: var(--in-content-primary-button-background-hover) !important;
+	--in-content-link-color-active: var(--in-content-primary-button-background-active) !important;
+	--in-content-link-color-visited: var(--in-content-link-color) !important;
+	--card-outline-color: var(--shade5) !important;
+	--dialog-warning-text-color: var(--accent0) !important;
 }
 
 .titlebar-spacer {
