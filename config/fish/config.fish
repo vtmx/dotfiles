@@ -186,6 +186,7 @@ if type -q nvim
   alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
   alias vp='nvim $HOME/.config/nvim/lua/plugins/init.lua'
   alias vpc='nvim $HOME/.config/nvim/lua/plugins/config.lua'
+  alias vpkg='nvim $HOME/_packages/main.sh'
   alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
 end
 
@@ -214,7 +215,7 @@ end
 
 # vifm
 if type -q vifm
-  alias f='vifm $(pwd)'
+  alias fm='vifm'
 end
 
 # vlang
