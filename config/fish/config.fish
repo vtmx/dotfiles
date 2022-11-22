@@ -57,6 +57,7 @@ set -g fish_pager_color_description $shade3
 set -x BROWSER 'vivaldi-stable'
 set -x CODE 'code'
 set -x EDITOR 'nvim'
+set -x SHELL '/usr/bin/fish'
 set -x VISUAL 'nvim'
 
 # commands
@@ -215,7 +216,7 @@ end
 
 # vifm
 if type -q vifm
-  alias fm='vifm'
+  alias f='vifm .'
 end
 
 # vlang
