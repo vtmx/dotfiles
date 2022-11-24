@@ -6,9 +6,37 @@
 only
 colorscheme onedarkv
 
+set syscalls
+set trash
+set trashdir=~/.local/share/Trash/
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+set nofollowlinks
+set sortnumbers
+set norunexec
+set wildmenu
+set wildstyle=popup
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+set scrolloff=4
+set vimhelp
+set history=100
+set undolevels=100
+set timefmt='%d/%m/%Y %H:%M'
+" set tablabel=" "
+" set viewcolumns=-{name},5{size},5{ext},17{mtime}
+set statusline=" "
+set rulerformat=" "
+
 " ------------------------------------------------------------------------------
 " Mappings
 " ------------------------------------------------------------------------------
+
+" reload
+nnoremap <c-r> :restart<cr> :echo "Reload"<cr>
 
 " disable space
 nnoremap <space> <nop>
@@ -19,6 +47,21 @@ nnoremap <space> tj
 " move
 nnoremap J 5j
 nnoremap K 5k
+
+" rename
+nnoremap I cw<c-a>
+nnoremap cc cw<c-u>
+nnoremap A cw
+
+" start shell in current directory
+nnoremap S :shell<cr>
+
+" display sorting dialog
+nnoremap s :sort<cr>
+
+" toggle review window
+nnoremap w :view<cr>
+vnoremap w :view<cr>gv
  
 "split
 nnoremap ss <c-w>s
@@ -41,29 +84,37 @@ nnoremap <a-l> :tabnext<cr>
 nnoremap <a-h> :tabprevious<cr> 
 nnoremap <a-w> :tabclose<cr> 
 
-" remove search
+" remove highlight search
 nnoremap <esc> :nohlsearch<cr>
 
 " mark
 nnoremap M '
 
-" exit
-nnoremap q :quit<cr> 
-
-" standard two-panel file managers mappings
+" midnight commander alike mappings
 nnoremap <f3> :!less %f<cr>
+nnoremap <f2> cW<c-u>
 nnoremap <f4> :edit<cr>
 nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
 
+" open current directory in the other pane
+nnoremap <a-i> :sync<cr>
+
+" open directory under cursor in the other pane
+nnoremap <a-o> :sync %c<cr>
+
+" exit
+nnoremap q :quit<cr> 
+
 " ------------------------------------------------------------------------------
 " Bookmarks
 " ------------------------------------------------------------------------------
 
 mark h ~/
-mark t ~/Downloads/temp/
+mark c ~/Dev/dotfiles/config
+mark t ~/Downloads/temp
 
 " references
 " https://github.com/vifm/vifm/blob/0e1dded1d6a506619fab690d3ba055cc7cb8f74d/data/vifmrc
@@ -72,34 +123,8 @@ mark t ~/Downloads/temp/
 " https://vifm.info/cheatsheets.shtml
 " https://vifm.info/manual.shtml
 
-
 " ------------------------------------------------------------------------------
-" Main settings
-" ------------------------------------------------------------------------------
-
-set syscalls
-set trash
-set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
-    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
-set nofollowlinks
-set sortnumbers
-set norunexec
-set wildmenu
-set wildstyle=popup
-set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
-set ignorecase
-set smartcase
-set nohlsearch
-set incsearch
-set scrolloff=4
-set vimhelp
-set timefmt='%Y/%m/%d %H:%M'
-set history=100
-set undolevels=100
-set statusline="%A %s %d  "
-
-" ------------------------------------------------------------------------------
-" Command
+" Commands
 " ------------------------------------------------------------------------------
 
 command! df df -h %m 2> /dev/null
@@ -111,45 +136,27 @@ command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart full
 
-if executable('vim')
-    set vicmd=vim
-elseif executable('nvim')
-    set vicmd=nvim
-elseif executable('elvis')
-    set vicmd=elvis\ -G\ termcap
-elseif executable('vile')
-    set vicmd=vile
+if executable('nvim')
+  set vicmd=nvim
 elseif $EDITOR != ''
-    echo 'Note: using `'.$EDITOR.'` as an editor'
-    let &vicmd = $EDITOR
+  echo 'Note: using `'.$EDITOR.'` as an editor'
+  let &vicmd = $EDITOR
 endif
 
 " ------------------------------------------------------------------------------
 " Fileview
 " ------------------------------------------------------------------------------
 
-" Syntax highlighting in preview
-fileviewer *.[ch],*.[ch]pp,*.[css]* bat --color always --wrap never --pager never %c -p
+" syntax highlighting
+fileviewer {*.css,*.lua}
+  \ bat --color always --wrap never --pager never %c -p
 
-" Displaying pictures in terminal
+" pictures in terminal
 fileviewer *.jpg,*.png shellpic %c
 
 " ------------------------------------------------------------------------------
-" Sample keyboard mappings
+" Clipboard
 " ------------------------------------------------------------------------------
-
-" Start shell in current directory
-nnoremap s :shell<cr>
-
-" Display sorting dialog
-nnoremap S :sort<cr>
-
-" Toggle visibility of preview window
-nnoremap w :view<cr>
-vnoremap w :view<cr>gv
-
-" Open file in the background using its default program
-nnoremap gb :file &<cr>l
 
 " Interaction with system clipboard
 if has('win')
@@ -182,38 +189,12 @@ elseif $DISPLAY
     endif
 endif
 
-" Mappings for faster renaming
-nnoremap I cw<c-a>
-nnoremap cc cw<c-u>
-nnoremap A cw
-
-" As above, but without the file extension
-" nnoremap I cW<c-a>
-" nnoremap cc cW<c-u>
-" nnoremap A cW
-
-" Open console in current directory
+" open console in current directory
 if $DISPLAY && executable('xterm')
   nnoremap ,t :!xterm &<cr>
 elseif $TERMINAL
   nnoremap ,t :!$TERMINAL &<cr>
 endif
-
-" Toggle wrap setting on ,w key
-nnoremap ,w :set wrap!<cr>
-
-" Midnight commander alike mappings
-" Open current directory in the other pane
-nnoremap <a-i> :sync<cr>
-" Open directory under cursor in the other pane
-nnoremap <a-o> :sync %c<cr>
-" Swap panes
-nnoremap <c-u> <c-w>x
-
-" ------------------------------------------------------------------------------
-" Icon decorations example
-" ------------------------------------------------------------------------------
-" https://github.com/cirala/vifm_devicons
 
 " ------------------------------------------------------------------------------
 " File types association
@@ -292,6 +273,8 @@ filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
         \ gpicview %c,
         \ {View in shotwell}
         \ shotwell,
+        \ {View in gwenview}
+        \ gwenview,
 fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
          \ identify %f
 
