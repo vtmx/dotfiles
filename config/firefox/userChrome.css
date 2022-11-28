@@ -49,7 +49,7 @@
 }
 
 .titlebar-spacer {
-	display: none;
+	display: none !important;
 }
 
 #navigator-toolbox-background {
@@ -95,6 +95,11 @@
 /* urlbar */
 #urlbar {
   padding-left: 8px !important;
+}
+
+/* tab buttons */
+#alltabs-button {
+	display: none !important;
 }
 
 /* remove icon search */
