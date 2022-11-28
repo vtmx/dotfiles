@@ -27,5 +27,13 @@ Description=4
 desktops=d14d5d6d-ddf3-4553-b9f4-541133e08e3e
 desktopsrule=3
 fsplevelrule=2
-wmclass=lutris|steam
+wmclass=steam|lutris
+wmclassmatch=3
+
+[5]
+Description=5
+desktops=652b2576-0482-4db3-9521-810e83c5117c
+desktopsrule=3
+fsplevelrule=2
+wmclass=qbittorrent
 wmclassmatch=3

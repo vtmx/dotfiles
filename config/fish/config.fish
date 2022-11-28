@@ -165,6 +165,12 @@ end
 
 # gum
 if type -q gum
+  set -gx GUM_FILTER_INDICATOR '>'
+  set -gx GUM_FILTER_INDICATOR_FOREGROUND '#'$accent5
+  set -gx GUM_INPUT_CURSOR_FOREGROUND '#'$shade7
+  set -gx GUM_INPUT_PROMPT_FOREGROUND '#'$shade7
+  set -gx GUM_INPUT_PLACEHOLDER "What's up?"
+  set -gx GUM_INPUT_PROMPT "* "
   set -gx GUM_CHOOSE_CURSOR_FOREGROUND '#'$accent5
   set -gx GUM_CHOOSE_ITEM_FOREGROUND '#'$shade7
   set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$shade7

@@ -114,6 +114,7 @@ nnoremap q :quit<cr>
 
 mark h ~/
 mark c ~/Dev/dotfiles/config
+mark d /run/media/vitor/hd
 mark t ~/Downloads/temp
 
 " references
