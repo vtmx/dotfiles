@@ -2,83 +2,81 @@
 -- Mappings
 ------------------------------------------------------------
 
--- vars
+-- Vars
 local cmd = vim.cmd
 
--- function
+-- Function for mapping
 function map(mode, lhs, rhs, opts)
   local opts = opts or { silent = true }
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
--- leader
+-- Leader
 vim.g.mapleader = ' '
 
--- reload
-map('n', '<leader>r', '', {
-  callback = function()
-    vim.cmd('w | PlenaryBustedFile %')
-    -- require('plenary.reload').reload_module('theme.lua')
-  end
-})
-
--- scape
+-- Scape
 map('i', 'kj', '<esc>')
 map('v', '<leader>kj', '<esc>')
 
--- navigate in insertmode
+-- Navigate in insertmode
 map('i', '<c-h>', '<left>')
 map('i', '<c-l>', '<right>')
 
--- ignore wordwrap jumpline
+-- Ignore wordwrap jumpline
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
 
--- like C and D
+-- Like C and D
 map('n', 'Y', 'y$')
 
--- begin and end line
+-- Begin and end line
 map('n', 'L', 'g_')
 map('n', 'H', '^')
 map('v', 'L', 'g_')
 map('v', 'H', '^')
 
--- jump varius lines
+-- Jump various lines
 map('n', 'J', '5j')
 map('n', 'K', '5k')
 map('v', 'J', '5j')
 map('v', 'K', '5k')
 
--- new line in normal mode
+-- Change text without putting it into the vim register
+map("n", "c", '"_c')
+map("n", "C", '"_C')
+map("n", "cc", '"_cc')
+map("x", "c", '"_c')
+
+-- Add new line in normal mode
 map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
 
--- select all
+-- Select all
 map('n', '<leader>a', 'G<s-v>gg')
 
--- copy to clipboard
+-- Copy to clipboard
 map('n', '<leader>y', 'V"+y')
 map('v', '<leader>y', '"+y')
 
--- cut to clipboard
+-- Cut to clipboard
 map('n', '<leader>d', '^vg_"+x')
 map('v', '<leader>d', '"+x')
 
--- paste to clipboard
-map('n', '<leader>p', '"+gp<esc>')
-map('n', '<leader>P', 'o<esc>"+gp<esc>')
+-- Paste to clipboard
+map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste of clipboard"<cr>')
+map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"<cr>')
 
--- paste with no resgister
+-- Paste with no resgister
 map('x', '<leader>p', '"_dP')
 
 -- join lines
 map('n', '<leader>j', 'J')
 
--- delete not copy
+-- Delete not copy
 map('n', 'x', '"_x')
 map('n', '<del>', '"_x')
 
--- move line like vscode
+-- Move line like vscode
 map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
 map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
 map('n', '<a-j>', '<cmd>m+<cr>')
@@ -86,24 +84,24 @@ map('n', '<a-k>', '<cmd>m-2<cr>')
 map('v', '<a-j>', "<cmd>m '>+1<cr>gv-gv")
 map('v', '<a-k>', "<cmd>m '<-2<cr>gv-gv")
 
--- clone line
+-- Clone line
 map('n', '<c-a-j>', 'yyp')
 map('n', '<c-a-k>', 'yyP')
 map('v', '<c-a-j>', ":'<,'>copy '><cr>")
 map('v', '<c-a-k>', 'ygvO<esc>P')
 
--- keep cursor end select when visual copy
+-- Keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
 
--- remove highlight
+-- Remove highlight
 map('n', '<esc>', '<cmd>noh<cr>')
 map('n', '<leader>h', '<cmd>noh<cr>')
 
--- keep search results centred
+-- Keep search results centred
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
--- format
+-- Format
 -- map('n', '<leader>f', '<cmd>retab<cr>')
 
 -- qq to record in q, Q to play
@@ -112,11 +110,11 @@ map('n', 'Q', '@q')
 -- mm to mark in m, M to jump
 map('n', 'M', '`')
 
--- split
+-- Split
 map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
 map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
 
--- stop copy in last char
+-- Stop copy in last char
 map('v', 'y', 'ygv<esc>')
 
 -- indent
@@ -125,11 +123,11 @@ map('n', '<', '<<')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
 
--- next and prev auto-complete
+-- Next and prev auto-complete
 map('n', '<c-k>', '<cmd>cnext<cr>zz')
 map('n', '<c-j>', '<cmd>cprev<cr>zz')
 
--- navigation panels
+-- Navigation panels
 map('n', '<c-h>', '<c-w>h')
 map('n', '<c-j>', '<c-w>j')
 map('n', '<c-k>', '<c-w>k')
@@ -141,19 +139,19 @@ map('n', '<c-l>', '<c-w>l')
 -- map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
 -- map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
--- move panels
+-- Move panels
 map('n', '<c-w>h', '<c-w>H')
 map('n', '<c-w>j', '<c-w>J')
 map('n', '<c-w>k', '<c-w>K')
 map('n', '<c-w>l', '<c-w>L')
 
--- resize
+-- Resize
 map('n', '<up>', '<cmd>resize +2<cr>')
 map('n', '<down>', '<cmd>resize -2<cr>')
 map('n', '<left>', '<cmd>vertical resize +2<cr>')
 map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
--- buffer
+-- Buffer
 map('n', '<leader>n', '<cmd>ene<cr>')
 map('n', '<leader>w', '<cmd>bd<cr>')
 map('n', '<a-n>', '<cmd>ene<cr>')
@@ -161,7 +159,7 @@ map('n', '<a-l>', '<cmd>bn<cr>')
 map('n', '<a-h>', '<cmd>bp<cr>')
 map('n', '<a-w>', '<cmd>bd<cr>')
 
--- menu
+-- Menu
 map('i', '<c-space>', '<c-n>')
 map('i', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
 map('i', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
@@ -170,12 +168,12 @@ map('c', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
 map('c', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
 map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 
--- save
+-- Save
 map('n', '<c-s>', '<cmd>w!<cr>', { silent = false })
 map('i', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
 map('v', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
 
--- quit
+-- Quit
 map('n', '<leader>q', '<cmd>q!<cr>')
 
 ------------------------------------------------------------
@@ -306,3 +304,6 @@ end
 --     printf('Reload')
 --   end,
 -- })
+
+-- References
+-- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua

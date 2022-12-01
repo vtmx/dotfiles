@@ -88,7 +88,8 @@ nnoremap <a-w> :tabclose<cr>
 nnoremap <esc> :nohlsearch<cr>
 
 " mark
-nnoremap M '
+nnoremap m '
+nnoremap M m
 
 " midnight commander alike mappings
 nnoremap <f3> :!less %f<cr>
