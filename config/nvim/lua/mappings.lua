@@ -206,10 +206,11 @@ map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 
 -- telescope
-map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
+map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
 map('n', '<leader>tb', '<cmd>Telescope file_browser<cr>')
 map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
-map('n', '<leader>tft', '<cmd>Telescope filetypes<cr>')
+map('n', '<leader>tf', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>tft','<cmd>Telescope filetypes<cr>')
 map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
 map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
 map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
