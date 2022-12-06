@@ -41,6 +41,10 @@ map('n', 'K', '5k')
 map('v', 'J', '5j')
 map('v', 'K', '5k')
 
+-- Jump half page in the middle
+map('n', '<c-d>', '<c-d>zz')
+map('n', '<c-u>', '<c-u>zz')
+
 -- Change text without putting it into the vim register
 map("n", "c", '"_c')
 map("n", "C", '"_C')
@@ -202,9 +206,9 @@ map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
 
 -- telescope
-map('n', '<c-p>', '<cmd>Telescope file_browser<cr>')
+map('n', '<c-p>', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>tb', '<cmd>Telescope file_browser<cr>')
 map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
-map('n', '<leader>tf', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>tft', '<cmd>Telescope filetypes<cr>')
 map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
 map('n', '<leader>th', '<cmd>Telescope highlights<cr>')

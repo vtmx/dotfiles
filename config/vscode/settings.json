@@ -281,6 +281,14 @@
       "commands": ["workbench.action.moveEditorToBelowGroup"]
     },
     {
+      "before": ["<c-d>"],
+      "after": ["<c-d>", "z", "z"]
+    },
+    {
+      "before": ["<c-u>"],
+      "after": ["<c-u>", "z", "z"]
+    },
+    {
       "before": ["<c-s-e>"],
       "commands": ["viewContainer.workbench.view.explorer.enabled"]
     },
