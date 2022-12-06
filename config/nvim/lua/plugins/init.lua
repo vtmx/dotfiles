@@ -34,21 +34,21 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- packer
+  -- Packer
   use 'wbthomason/packer.nvim'
 
-  -- requirements
+  -- Requirements
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
 
-  -- ui
+  -- UI
   use 'olimorris/onedarkpro.nvim'
   use 'akinsho/bufferline.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
   use 'rktjmp/lush.nvim'
 
-  -- utils
+  -- Utils
   use 'lukas-reineke/indent-blankline.nvim'
   use 'numToStr/Comment.nvim'
   use 'nvim-lua/telescope.nvim'
@@ -59,17 +59,16 @@ return packer.startup(function(use)
   use 'folke/zen-mode.nvim'
   use 'folke/twilight.nvim'
 
-  -- syntaxes
+  -- Syntaxes
   use 'baskerville/vim-sxhkdrc'
   use 'fladson/vim-kitty'
   use 'khaveesh/vim-fish-syntax'
   use 'ollykel/v-vim'
 
-  -- autocomplete
+  -- Autocomplete
   use 'neovim/nvim-lspconfig'
   use 'nvim-treesitter/nvim-treesitter'
   use { 'neoclide/coc.nvim', branch = 'release' }
-
 
   -- Put this at the end after all plugins
   if packer_bootstrap then
