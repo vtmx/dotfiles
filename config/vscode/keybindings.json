@@ -263,5 +263,10 @@
     "key": "ctrl+k",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   }
 ]
