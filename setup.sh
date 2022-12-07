@@ -184,6 +184,11 @@ create_links() {
   link="$config_dir/mpv"
   create_link "$name" "$target" "$link"
 
+  name=""
+  target="$src_dir/mpv/scripts/nextfile.lua"
+  link="$config_dir/mpv/scripts"
+  create_link "$name" "$target" "$link"
+
   # ----------------------------------------------------------
   # nvim
   # ----------------------------------------------------------
