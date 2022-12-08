@@ -7,7 +7,7 @@
 <table>
   <tr>
     <th align="left" width="180">OS</th>
-    <td width="300"><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
+    <td width="360"><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
   </tr>
   <tr>
     <th align="left">DE</th>
@@ -48,7 +48,7 @@
 <table>
   <tr>
     <th align="left" width="180">Application Style</th>
-    <td width="300"><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
+    <td width="360"><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
   </tr>
   <tr>
     <th align="left">Plasma Style</th>
@@ -89,7 +89,7 @@
 <table>
   <tr>
     <th align="left" width="180">File Manager</th>
-    <td width="300"><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
+    <td width="360"><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
   </tr>
   <tr>
     <th align="left">File Syncronizer</th>
@@ -153,7 +153,7 @@
 <table>
   <tr>
     <th align="left" width="180">File Manager</th>
-    <td width="300"><a href="https://vifm.info">vifm</a></td>
+    <td width="360"><a href="https://vifm.info">vifm</a></td>
   </tr>
   <tr>
     <th align="left">File Syncronizer</th>
@@ -180,7 +180,7 @@
 <table>
   <thead>
     <tr>
-      <th>Color</th>
+      <th></th>
       <th>Name</th>
       <th>Hex</th>
     </tr>
@@ -237,14 +237,14 @@
     <th align="left" colspan="4">Color</th>
   </tr>
   <tr>
-    <th align="left">Color</th>
+    <th align="left"></th>
     <th align="left">Name</th>
     <th align="left">Hex</th>
-    <th align="left">Use</th>
-    <th align="left">Color</th>
+    <th align="left"width="180">Use</th>
+    <th align="left"></th>
     <th align="left">Name</th>
     <th align="left">Hex</th>
-    <th align="left">Use</th>
+    <th align="left" width="180">Use</th>
   </tr>
   <tr>
     <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Black"></td>
