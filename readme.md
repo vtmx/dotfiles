@@ -6,8 +6,8 @@
 
 <table>
   <tr>
-    <th align="left">OS</th>
-    <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
+    <th align="left" width="180">OS</th>
+    <td width="300"><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
   </tr>
   <tr>
     <th align="left">DE</th>
@@ -47,8 +47,8 @@
 
 <table>
   <tr>
-    <th align="left">Application Style</th>
-    <td><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
+    <th align="left" width="180">Application Style</th>
+    <td width="300"><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
   </tr>
   <tr>
     <th align="left">Plasma Style</th>
@@ -88,8 +88,8 @@
 
 <table>
   <tr>
-    <th align="left">File Manager</th>
-    <td><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
+    <th align="left" width="180">File Manager</th>
+    <td width="300"><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
   </tr>
   <tr>
     <th align="left">File Syncronizer</th>
@@ -113,7 +113,7 @@
     <th align="left">Browser Plugins</th>
     <td>
       <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlockOrigin</a>,
-      <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a>,
+      <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a><br>
       <a href="https://github.com/zombieFox/nightTab">nightTAb</a>,
       <a href="https://github.com/itsecurityco/to-google-translate">To Google Translate</a>
     </td>
@@ -152,8 +152,8 @@
 
 <table>
   <tr>
-    <th align="left">File Manager</th>
-    <td><a href="https://vifm.info">vifm</a></td>
+    <th align="left" width="180">File Manager</th>
+    <td width="300"><a href="https://vifm.info">vifm</a></td>
   </tr>
   <tr>
     <th align="left">File Syncronizer</th>
@@ -233,18 +233,18 @@
 
 <table>
   <tr>
-    <th colspan="4">Shade</th>
-    <th colspan="4">Color</th>
+    <th align="left" colspan="4">Shade</th>
+    <th align="left" colspan="4">Color</th>
   </tr>
   <tr>
-    <th>Color</th>
-    <th>Name</th>
-    <th>Hex</th>
-    <th>Use</th>
-    <th>Color</th>
-    <th>Name</th>
-    <th>Hex</th>
-    <th>Use</th>
+    <th align="left">Color</th>
+    <th align="left">Name</th>
+    <th align="left">Hex</th>
+    <th align="left">Use</th>
+    <th align="left">Color</th>
+    <th align="left">Name</th>
+    <th align="left">Hex</th>
+    <th align="left">Use</th>
   </tr>
   <tr>
     <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Black"></td>
