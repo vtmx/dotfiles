@@ -3,41 +3,163 @@
 </p>
 
 ## Configuration
-**OS:** [Manjaro](https://manjaro.org/downloads/official/kde)<br>
-**DE:** [Plasma](https://kde.org/pt-br/plasma-desktop)<br>
-**Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty)<br>
-**Shell:** [Fish](https://fishshell.com) + [Starship](https://starship.rs)<br>
-**Terminal Font:** [BlexMono Nerd Font Medium 11](https://github.com/IBM/plex)<br>
-**System Font:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)<br>
-**Panel:** [Plasma Panel 28](https://userbase.kde.org/Plasma/Panels)<br>
-**Panel Widgets:** [Virtual Desktop Bar](https://github.com/wsdfhjxc/virtual-desktop-bar)<br>
-**TWM:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)
+
+<table>
+  <tr>
+    <th>OS</th>
+    <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
+  </tr>
+  <tr>
+    <th>DE</th>
+    <td><a href="https://kde.org/pt-br/plasma-desktop">Plasma</a></td>
+  </tr>
+  <tr>
+    <th>Terminal</th>
+    <td><a href="https://sw.kovidgoyal.net/kitty">Kitty</a></td>
+  </tr>
+  <tr>
+    <th>Shell</th>
+    <td><a href="https://fishshell.com">Fish</a> + <a href="https://starship.rs">Starship</a></td>
+  </tr>
+  <tr>
+    <th>Terminal Font</th>
+    <td><a href="https://github.com/IBM/plex">BlexMono Nerd Font Medium 11</a></td>
+  </tr>
+  <tr>
+    <th>System Font</th>
+    <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
+  </tr>
+  <tr>
+    <th>Panel</th>
+    <td><a href="https://userbase.kde.org/Plasma/Panels">Plasma Panel 28</a></td>
+  </tr>
+  <tr>
+    <th>Panel Widgets</th>
+    <td><a href="https://github.com/wsdfhjxc/virtual-desktop-bar">Virtual Desktop Bar</a></td>
+  </tr>
+  <tr>
+    <th>TWM</th>
+    <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
+  </tr>
+</table>
 
 ## Plasma Appearance
-**Application Style:** [Lightly](https://github.com/Luwx/Lightly)<br>
-**Plasma Style:** [Breeze](https://archlinux.org/packages/extra/x86_64/breeze)<br>
-**Colors:** [OneDarkV](config/kde/kde.colors)<br>
-**Window Decorations:** [Bismuth](https://github.com/Bismuth-Forge/bismuth)<br>
-**Icons:** [Sensual-Breeze-Dark [Plasma]](https://store.kde.org/p/1373825)<br>
-**Cursors:** [We10XOS Cursors](https://store.kde.org/p/1381208)<br>
-**Lauch Feedback:** Cursor Static<br>
-**Fonts Management:** [Segoe UI Semibold 10](https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui)<br>
-**Splash Screen:** [QuarksSplashDark Custom](config/kde/splash-screen/onedarkv)<br>
+
+<table>
+  <tr>
+    <th>Application Style</th>
+    <td><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
+  </tr>
+  <tr>
+    <th>Plasma Style</th>
+    <td><a href="https://archlinux.org/packages/extra/x86_64/breeze">Breeze</a></td>
+  </tr>
+  <tr>
+    <th>Colors</th>
+    <td><a href="config/kde/kde.colors">OneDarkV</a></td>
+  </tr>
+  <tr>
+    <th>Window Decorations</th>
+    <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
+  </tr>
+  <tr>
+    <th>Icons</th>
+    <td><a href="https://store.kde.org/p/1373825">Sensual-Breeze-Dark Icons</a></td>
+  </tr>
+  <tr>
+    <th>Cursors</th>
+    <td><a href="https://store.kde.org/p/1381208">We10XOS Cursors</a></td>
+  </tr>
+  <tr>
+    <th>Lauch Feedback</th>
+    <td>Cursor Static</td>
+  </tr>
+  <tr>
+    <th>Fonts Management</th>
+    <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
+  </tr>
+  <tr>
+    <th>Splash Screen</th>
+    <td><a href="config/kde/splash-screen/onedarkv">QuarksSplashDark Custom</a></td>
+  </tr>
+</table>
 
 ## Apps
-**File Manager:** [Dolphin](https://apps.kde.org/dolphin)<br>
-**File Syncronizer:** [FreeFileSync](https://freefilesync.org), [Krusader](https://krusader.org)<br>
-**Editor:** [VS Code](https://code.visualstudio.com), [Nvim](https://neovim.io)<br>
-**Browser:** [Vivaldi](https://vivaldi.com/pt-br), [uBlockOrigin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Blending Scrollbar](https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag)<br>
-**Music and Video Player:** [VLC](https://www.videolan.org/vlc)<br>
-**Screenshot:** [Flameshot](https://flameshot.org)<br>
-**Color Picker:** [KColorChooser](https://apps.kde.org/kcolorchooser)<br>
-**Torrent:** [qBitTorrent](https://www.qbittorrent.org)<br>
-**Password Manager:** [Bitwarden](https://bitwarden.com)<br>
-**Batch Rename:** [KRename](https://apps.kde.org/krename)<br>
-**Subtitle:** [Subtitle Composer](https://subtitlecomposer.kde.org)<br>
 
-## Colors
+<table>
+  <tr>
+    <th>File Manager</th>
+    <td><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
+  </tr>
+  <tr>
+    <th>File Syncronizer</th>
+    <td>
+      <a href="https://freefilesync.org">FreeFileSync</a><br>
+      <a href="https://krusader.org">Krusader</a>
+    </td>
+  </tr>
+  <tr>
+    <th>Editor</th>
+    <td>
+      <a href="https://code.visualstudio.com">VS Code</a><br>
+      <a href="https://neovim.io">neovim</a></td>
+  </tr>
+  <tr>
+    <th>Browser</th>
+    <td>
+      <a href="https://vivaldi.com/pt-br">Vivaldi</a><br>
+      <a href="https://www.mozilla.org">Firefox</a>
+    </td>
+  </tr>
+  <tr>
+    <th>Browser Plugins</th>
+    <td>
+      <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlockOrigin</a><br>
+      <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a><br>
+      <a href="https://github.com/zombieFox/nightTab">nightTAb</a><br>
+      <a href="https://github.com/itsecurityco/to-google-translate">To Google Translate</a>
+    </td>
+  </tr>
+  <tr>
+    <th>Music Player</th>
+    <td>
+      <a href="https://cmus.github.io">cmus</a>
+    </td>
+  </tr>
+  <tr>
+    <th>Video Player</th>
+    <td>
+      <a href="https://mpv.io">MPV</a><br>
+      <a href="https://www.videolan.org/vlc">VLC</a>
+    </td>
+  </tr>
+  <tr>
+    <th>Screenshot</th>
+    <td><a href="https://flameshot.org">Flameshot</a></td>
+  </tr>
+  <tr>
+    <th>Color Picker</th>
+    <td><a href="https://apps.kde.org/kcolorchooser">KColorChooser</a></td>
+  </tr>
+  <tr>
+    <th>Torrent</th>
+    <td><a href="https://www.qbittorrent.org">qBitTorrent</a></td>
+  </tr>
+  <tr>
+    <th>Password Manager</th>
+    <td><a href="https://bitwarden.com">Bitwarden</a></td>
+  </tr>
+  <tr>
+    <th>Batch Rename</th>
+    <td><a href="https://apps.kde.org/krename">KRename</a></td>
+  </tr>
+  <tr>
+    <th>Subtitle</th>
+    <td><a href="https://subtitlecomposer.kde.org">Subtitle Composer</a></td>
+  </tr>
+</table>
+
+## Color [OneDarkV](https://themer.dev/?colors.dark.accent0=%23e06c75&colors.dark.accent1=%23d19a66&colors.dark.accent2=%23e5c07b&colors.dark.accent3=%2398c379&colors.dark.accent4=%2356b6c2&colors.dark.accent5=%2361afef&colors.dark.accent6=%23c678dd&colors.dark.accent7=%23be5046&colors.dark.shade0=%23282c34&colors.dark.shade1=%231e2227&colors.dark.shade2=%233d4556&colors.dark.shade3=%235c6370&colors.dark.shade4=%232c313c&colors.dark.shade5=%23828997&colors.dark.shade6=%23979eab&colors.dark.shade7=%23abb2bf&colors.light.accent0=%23e45649&colors.light.accent1=%23986801&colors.light.accent2=%23c18401&colors.light.accent3=%2350a14f&colors.light.accent4=%230184bc&colors.light.accent5=%234078f2&colors.light.accent6=%23a626a4&colors.light.accent7=%23ca1243&colors.light.shade0=%23fafafa&colors.light.shade1=%23CDCED1&colors.light.shade2=%23a0a1a7&colors.light.shade3=%239d9d9f&colors.light.shade4=%2383858B&colors.light.shade5=%23696c77&colors.light.shade6=%2351535D&colors.light.shade7=%23383a42&activeColorSet=dark&calculateIntermediaryShades.dark=false&calculateIntermediaryShades.light=false)
 
 ### Terminal
 
@@ -93,31 +215,106 @@
   <tbody>
 </table>
 
-### Themer: [OneDarkV](https://themer.dev/?colors.dark.accent0=%23e06c75&colors.dark.accent1=%23d19a66&colors.dark.accent2=%23e5c07b&colors.dark.accent3=%2398c379&colors.dark.accent4=%2356b6c2&colors.dark.accent5=%2361afef&colors.dark.accent6=%23c678dd&colors.dark.accent7=%23be5046&colors.dark.shade0=%23282c34&colors.dark.shade1=%231e2227&colors.dark.shade2=%233d4556&colors.dark.shade3=%235c6370&colors.dark.shade4=%232c313c&colors.dark.shade5=%23828997&colors.dark.shade6=%23979eab&colors.dark.shade7=%23abb2bf&colors.light.accent0=%23e45649&colors.light.accent1=%23986801&colors.light.accent2=%23c18401&colors.light.accent3=%2350a14f&colors.light.accent4=%230184bc&colors.light.accent5=%234078f2&colors.light.accent6=%23a626a4&colors.light.accent7=%23ca1243&colors.light.shade0=%23fafafa&colors.light.shade1=%23CDCED1&colors.light.shade2=%23a0a1a7&colors.light.shade3=%239d9d9f&colors.light.shade4=%2383858B&colors.light.shade5=%23696c77&colors.light.shade6=%2351535D&colors.light.shade7=%23383a42&activeColorSet=dark&calculateIntermediaryShades.dark=false&calculateIntermediaryShades.light=false)
+### Editor
 
-```yml
-scheme: OneDarkV
+<table>
+  <tr>
+    <th colspan="4">Shade</th>
+    <th colspan="4">Color</th>
+  </tr>
+  <tr>
+    <th>Color</th>
+    <th>Name</th>
+    <th>Hex</th>
+    <th>Use</th>
+    <th>Color</th>
+    <th>Name</th>
+    <th>Hex</th>
+    <th>Use</th>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Black"></td>
+    <td>shade0</td>
+    <td>#23272e</td>
+    <td>background color</td>
+    <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="Black"></td>
+    <td>accent0</td>
+    <td>#e06c75</td>
+    <td>red</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-1e2227?&style=for-the-badge" alt="Black"></td>
+    <td>shade1</td>
+    <td>#1e2227</td>
+    <td>ui, darker</td>
+    <td><img src="https://shields.io/badge/-d19a66?&style=for-the-badge" alt="Black"></td>
+    <td>accent1</td>
+    <td>#d19a66</td>
+    <td>orange</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-3d4556?&style=for-the-badge" alt="Black"></td>
+    <td>shade2</td>
+    <td>#3d4556</td>
+    <td>ui, text selection</td>
+    <td><img src="https://shields.io/badge/-e5c07b?&style=for-the-badge" alt="Black"></td>
+    <td>accent2</td>
+    <td>#e5c07b</td>
+    <td>yellow</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-5c6370?&style=for-the-badge" alt="Black"></td>
+    <td>shade3</td>
+    <td>#5c6370</td>
+    <td>ui, code comments</td>
+    <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="Black"></td>
+    <td>accent3</td>
+    <td>#98c379</td>
+    <td>green</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-2c313c?&style=for-the-badge" alt="Black"></td>
+    <td>shade4</td>
+    <td>#2c313c</td>
+    <td>ui, line highlight</td>
+    <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="Black"></td>
+    <td>accent4</td>
+    <td>#56b6c2</td>
+    <td>cyan</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-828997?&style=for-the-badge" alt="Black"></td>
+    <td>shade5</td>
+    <td>#828997</td>
+    <td>ui</td>
+    <td><img src="https://shields.io/badge/-61afef?&style=for-the-badge" alt="Black"></td>
+    <td>accent5</td>
+    <td>#61afef</td>
+    <td>blue</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-979eab?&style=for-the-badge" alt="Black"></td>
+    <td>shade6</td>
+    <td>#979eab</td>
+    <td>foreground text</td>
+    <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Black"></td>
+    <td>accent6</td>
+    <td>#c678dd</td>
+    <td>purple</td>
+  </tr>
+  <tr>
+    <td><img src="https://shields.io/badge/-abb2bf?&style=for-the-badge" alt="Black"></td>
+    <td>shade7</td>
+    <td>#abb2bf</td>
+    <td>foreground text</td>
+    <td><img src="https://shields.io/badge/-be5046?&style=for-the-badge" alt="Black"></td>
+    <td>accent7</td>
+    <td>#be5046</td>
+    <td>magenta</td>
+  </tr>
+</table>
 
-shade0: "#23272e" # background color
-shade1: "#1e2227" # ui, darker
-shade2: "#3d4556" # ui, text selection
-shade3: "#5c6370" # ui, code comments
-shade4: "#2c313c" # ui, line highlight
-shade5: "#828997" # ui
-shade6: "#979eab" # foreground text
-shade7: "#abb2bf" # foreground text
-
-accent0: "#e06c75" # red
-accent1: "#d19a66" # orange
-accent2: "#e5c07b" # yellow
-accent3: "#98c379" # green
-accent4: "#56b6c2" # cyan
-accent5: "#61afef" # blue
-accent6: "#c678dd" # purple
-accent7: "#be5046" # magenta
-```
-
-Color Inspiration:
+### Color Inspiration:
 - [OneDarkPro](https://github.com/Binaryify/OneDark-Pro)
 - [Base16](https://github.com/LalitMaganti/base16-onedark-scheme)
 - [Themer](https://themer.dev/?colors.dark.accent0=%23e06c75&colors.dark.accent1=%23d19a66&colors.dark.accent2=%23e5c07b&colors.dark.accent3=%2398c379&colors.dark.accent4=%2356b6c2&colors.dark.accent5=%2361afef&colors.dark.accent6=%23c678dd&colors.dark.accent7=%23be5046&colors.dark.shade0=%23282c34&colors.dark.shade1=%23393e48&colors.dark.shade2=%234b515c&colors.dark.shade3=%235c6370&colors.dark.shade4=%23636d83&colors.dark.shade5=%23828997&colors.dark.shade6=%23979eab&colors.dark.shade7=%23abb2bf&colors.light.accent0=%23e45649&colors.light.accent1=%23986801&colors.light.accent2=%23c18401&colors.light.accent3=%2350a14f&colors.light.accent4=%230184bc&colors.light.accent5=%234078f2&colors.light.accent6=%23a626a4&colors.light.accent7=%23ca1243&colors.light.shade0=%23fafafa&colors.light.shade1=%23CDCED1&colors.light.shade2=%23a0a1a7&colors.light.shade3=%239d9d9f&colors.light.shade4=%2383858B&colors.light.shade5=%23696c77&colors.light.shade6=%2351535D&colors.light.shade7=%23383a42&activeColorSet=dark&calculateIntermediaryShades.dark=false&calculateIntermediaryShades.light=false)
