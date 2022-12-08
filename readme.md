@@ -6,7 +6,7 @@
 
 <table>
   <tr>
-    <td>OS</td>
+    <td><strong>OS</strong></td>
     <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
   </tr>
   <tr>
