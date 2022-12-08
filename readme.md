@@ -6,39 +6,39 @@
 
 <table>
   <tr>
-    <th>OS</th>
+    <td>OS</td>
     <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
   </tr>
   <tr>
-    <th>DE</th>
+    <td>DE</td>
     <td><a href="https://kde.org/pt-br/plasma-desktop">Plasma</a></td>
   </tr>
   <tr>
-    <th>Terminal</th>
+    <td>Terminal</td>
     <td><a href="https://sw.kovidgoyal.net/kitty">Kitty</a></td>
   </tr>
   <tr>
-    <th>Shell</th>
+    <td>Shell</td>
     <td><a href="https://fishshell.com">Fish</a> + <a href="https://starship.rs">Starship</a></td>
   </tr>
   <tr>
-    <th>Terminal Font</th>
+    <td>Terminal Font</td>
     <td><a href="https://github.com/IBM/plex">BlexMono Nerd Font Medium 11</a></td>
   </tr>
   <tr>
-    <th>System Font</th>
+    <td>System Font</td>
     <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
   </tr>
   <tr>
-    <th>Panel</th>
+    <td>Panel</td>
     <td><a href="https://userbase.kde.org/Plasma/Panels">Plasma Panel 28</a></td>
   </tr>
   <tr>
-    <th>Panel Widgets</th>
+    <td>Panel Widgets</td>
     <td><a href="https://github.com/wsdfhjxc/virtual-desktop-bar">Virtual Desktop Bar</a></td>
   </tr>
   <tr>
-    <th>TWM</th>
+    <td>TWM</td>
     <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
   </tr>
 </table>
@@ -47,39 +47,39 @@
 
 <table>
   <tr>
-    <th>Application Style</th>
+    <td>Application Style</td>
     <td><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
   </tr>
   <tr>
-    <th>Plasma Style</th>
+    <td>Plasma Style</td>
     <td><a href="https://archlinux.org/packages/extra/x86_64/breeze">Breeze</a></td>
   </tr>
   <tr>
-    <th>Colors</th>
+    <td>Colors</td>
     <td><a href="config/kde/kde.colors">OneDarkV</a></td>
   </tr>
   <tr>
-    <th>Window Decorations</th>
+    <td>Window Decorations</td>
     <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
   </tr>
   <tr>
-    <th>Icons</th>
+    <td>Icons</td>
     <td><a href="https://store.kde.org/p/1373825">Sensual-Breeze-Dark Icons</a></td>
   </tr>
   <tr>
-    <th>Cursors</th>
+    <td>Cursors</td>
     <td><a href="https://store.kde.org/p/1381208">We10XOS Cursors</a></td>
   </tr>
   <tr>
-    <th>Lauch Feedback</th>
+    <td>Lauch Feedback</td>
     <td>Cursor Static</td>
   </tr>
   <tr>
-    <th>Fonts Management</th>
+    <td>Fonts Management</td>
     <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
   </tr>
   <tr>
-    <th>Splash Screen</th>
+    <td>Splash Screen</td>
     <td><a href="config/kde/splash-screen/onedarkv">QuarksSplashDark Custom</a></td>
   </tr>
 </table>
@@ -88,31 +88,31 @@
 
 <table>
   <tr>
-    <th>File Manager</th>
+    <td>File Manager</td>
     <td><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
   </tr>
   <tr>
-    <th>File Syncronizer</th>
+    <td>File Syncronizer</td>
     <td>
       <a href="https://freefilesync.org">FreeFileSync</a><br>
       <a href="https://krusader.org">Krusader</a>
-    </td>
+    </dd>
   </tr>
   <tr>
-    <th>Editor</th>
+    <td>Editor</td>
     <td>
       <a href="https://code.visualstudio.com">VS Code</a><br>
       <a href="https://neovim.io">neovim</a></td>
   </tr>
   <tr>
-    <th>Browser</th>
+    <td>Browser</td>
     <td>
       <a href="https://vivaldi.com/pt-br">Vivaldi</a><br>
       <a href="https://www.mozilla.org">Firefox</a>
     </td>
   </tr>
   <tr>
-    <th>Browser Plugins</th>
+    <td>Browser Plugins</td>
     <td>
       <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlockOrigin</a><br>
       <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a><br>
@@ -121,45 +121,45 @@
     </td>
   </tr>
   <tr>
-    <th>Music Player</th>
+    <td>Music Player</td>
     <td>
       <a href="https://cmus.github.io">cmus</a>
     </td>
   </tr>
   <tr>
-    <th>Video Player</th>
+    <td>Video Player</td>
     <td>
       <a href="https://mpv.io">MPV</a><br>
       <a href="https://www.videolan.org/vlc">VLC</a>
     </td>
   </tr>
   <tr>
-    <th>Screenshot</th>
+    <td>Screenshot</td>
     <td><a href="https://flameshot.org">Flameshot</a></td>
   </tr>
   <tr>
-    <th>Color Picker</th>
+    <td>Color Picker</td>
     <td><a href="https://apps.kde.org/kcolorchooser">KColorChooser</a></td>
   </tr>
   <tr>
-    <th>Torrent</th>
+    <td>Torrent</td>
     <td><a href="https://www.qbittorrent.org">qBitTorrent</a></td>
   </tr>
   <tr>
-    <th>Password Manager</th>
+    <td>Password Manager</td>
     <td><a href="https://bitwarden.com">Bitwarden</a></td>
   </tr>
   <tr>
-    <th>Batch Rename</th>
+    <td>Batch Rename</td>
     <td><a href="https://apps.kde.org/krename">KRename</a></td>
   </tr>
   <tr>
-    <th>Subtitle</th>
+    <td>Subtitle</td>
     <td><a href="https://subtitlecomposer.kde.org">Subtitle Composer</a></td>
   </tr>
 </table>
 
-## Color [OneDarkV](https://themer.dev/?colors.dark.accent0=%23e06c75&colors.dark.accent1=%23d19a66&colors.dark.accent2=%23e5c07b&colors.dark.accent3=%2398c379&colors.dark.accent4=%2356b6c2&colors.dark.accent5=%2361afef&colors.dark.accent6=%23c678dd&colors.dark.accent7=%23be5046&colors.dark.shade0=%23282c34&colors.dark.shade1=%231e2227&colors.dark.shade2=%233d4556&colors.dark.shade3=%235c6370&colors.dark.shade4=%232c313c&colors.dark.shade5=%23828997&colors.dark.shade6=%23979eab&colors.dark.shade7=%23abb2bf&colors.light.accent0=%23e45649&colors.light.accent1=%23986801&colors.light.accent2=%23c18401&colors.light.accent3=%2350a14f&colors.light.accent4=%230184bc&colors.light.accent5=%234078f2&colors.light.accent6=%23a626a4&colors.light.accent7=%23ca1243&colors.light.shade0=%23fafafa&colors.light.shade1=%23CDCED1&colors.light.shade2=%23a0a1a7&colors.light.shade3=%239d9d9f&colors.light.shade4=%2383858B&colors.light.shade5=%23696c77&colors.light.shade6=%2351535D&colors.light.shade7=%23383a42&activeColorSet=dark&calculateIntermediaryShades.dark=false&calculateIntermediaryShades.light=false)
+## Color
 
 ### Terminal
 
@@ -318,6 +318,7 @@
 - [OneDarkPro](https://github.com/Binaryify/OneDark-Pro)
 - [Base16](https://github.com/LalitMaganti/base16-onedark-scheme)
 - [Themer](https://themer.dev/?colors.dark.accent0=%23e06c75&colors.dark.accent1=%23d19a66&colors.dark.accent2=%23e5c07b&colors.dark.accent3=%2398c379&colors.dark.accent4=%2356b6c2&colors.dark.accent5=%2361afef&colors.dark.accent6=%23c678dd&colors.dark.accent7=%23be5046&colors.dark.shade0=%23282c34&colors.dark.shade1=%23393e48&colors.dark.shade2=%234b515c&colors.dark.shade3=%235c6370&colors.dark.shade4=%23636d83&colors.dark.shade5=%23828997&colors.dark.shade6=%23979eab&colors.dark.shade7=%23abb2bf&colors.light.accent0=%23e45649&colors.light.accent1=%23986801&colors.light.accent2=%23c18401&colors.light.accent3=%2350a14f&colors.light.accent4=%230184bc&colors.light.accent5=%234078f2&colors.light.accent6=%23a626a4&colors.light.accent7=%23ca1243&colors.light.shade0=%23fafafa&colors.light.shade1=%23CDCED1&colors.light.shade2=%23a0a1a7&colors.light.shade3=%239d9d9f&colors.light.shade4=%2383858B&colors.light.shade5=%23696c77&colors.light.shade6=%2351535D&colors.light.shade7=%23383a42&activeColorSet=dark&calculateIntermediaryShades.dark=false&calculateIntermediaryShades.light=false)
+- [OneDarkV](https://themer.dev/?colors.dark.accent0=%23e06c75&colors.dark.accent1=%23d19a66&colors.dark.accent2=%23e5c07b&colors.dark.accent3=%2398c379&colors.dark.accent4=%2356b6c2&colors.dark.accent5=%2361afef&colors.dark.accent6=%23c678dd&colors.dark.accent7=%23be5046&colors.dark.shade0=%23282c34&colors.dark.shade1=%231e2227&colors.dark.shade2=%233d4556&colors.dark.shade3=%235c6370&colors.dark.shade4=%232c313c&colors.dark.shade5=%23828997&colors.dark.shade6=%23979eab&colors.dark.shade7=%23abb2bf&colors.light.accent0=%23e45649&colors.light.accent1=%23986801&colors.light.accent2=%23c18401&colors.light.accent3=%2350a14f&colors.light.accent4=%230184bc&colors.light.accent5=%234078f2&colors.light.accent6=%23a626a4&colors.light.accent7=%23ca1243&colors.light.shade0=%23fafafa&colors.light.shade1=%23CDCED1&colors.light.shade2=%23a0a1a7&colors.light.shade3=%239d9d9f&colors.light.shade4=%2383858B&colors.light.shade5=%23696c77&colors.light.shade6=%2351535D&colors.light.shade7=%23383a42&activeColorSet=dark&calculateIntermediaryShades.dark=false&calculateIntermediaryShades.light=false)
 
 ## Screenshots
 <details>
