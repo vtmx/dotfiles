@@ -4,9 +4,9 @@
 
 ## Configuration
 
-<table width="100%">
+<table>
   <tr>
-    <td>OS</td>
+    <th  align="left">OS</th>
     <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
   </tr>
   <tr>
