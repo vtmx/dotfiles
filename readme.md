@@ -4,7 +4,7 @@
 
 ## Configuration
 
-<table style="width:100%">
+<table>
   <tr>
     <td>OS</td>
     <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
@@ -101,22 +101,22 @@
   <tr>
     <td>Editor</td>
     <td>
-      <a href="https://code.visualstudio.com">VS Code</a><br>
+      <a href="https://code.visualstudio.com">VS Code</a>,
       <a href="https://neovim.io">neovim</a></td>
   </tr>
   <tr>
     <td>Browser</td>
     <td>
-      <a href="https://vivaldi.com/pt-br">Vivaldi</a><br>
+      <a href="https://vivaldi.com/pt-br">Vivaldi</a>,
       <a href="https://www.mozilla.org">Firefox</a>
     </td>
   </tr>
   <tr>
     <td>Browser Plugins</td>
     <td>
-      <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlockOrigin</a><br>
-      <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a><br>
-      <a href="https://github.com/zombieFox/nightTab">nightTAb</a><br>
+      <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlockOrigin</a>,
+      <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a>,
+      <a href="https://github.com/zombieFox/nightTab">nightTAb</a>,
       <a href="https://github.com/itsecurityco/to-google-translate">To Google Translate</a>
     </td>
   </tr>
@@ -129,7 +129,7 @@
   <tr>
     <td>Video Player</td>
     <td>
-      <a href="https://mpv.io">MPV</a><br>
+      <a href="https://mpv.io">MPV</a>,
       <a href="https://www.videolan.org/vlc">VLC</a>
     </td>
   </tr>
