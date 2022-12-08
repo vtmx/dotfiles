@@ -6,39 +6,39 @@
 
 <table>
   <tr>
-    <td><strong>OS</strong></td>
+    <td><b>OS</b></td>
     <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
   </tr>
   <tr>
-    <td>DE</td>
+    <td><b>DE</b></td>
     <td><a href="https://kde.org/pt-br/plasma-desktop">Plasma</a></td>
   </tr>
   <tr>
-    <td>Terminal</td>
+    <td><b>Terminal</b></td>
     <td><a href="https://sw.kovidgoyal.net/kitty">Kitty</a></td>
   </tr>
   <tr>
-    <td>Shell</td>
+    <td><b>Shell</b></td>
     <td><a href="https://fishshell.com">Fish</a> + <a href="https://starship.rs">Starship</a></td>
   </tr>
   <tr>
-    <td>Terminal Font</td>
+    <td><b>Terminal Font</b></td>
     <td><a href="https://github.com/IBM/plex">BlexMono Nerd Font Medium 11</a></td>
   </tr>
   <tr>
-    <td>System Font</td>
+    <td><b>System Font</b></td>
     <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
   </tr>
   <tr>
-    <td>Panel</td>
+    <td><b>Panel</b></td>
     <td><a href="https://userbase.kde.org/Plasma/Panels">Plasma Panel 28</a></td>
   </tr>
   <tr>
-    <td>Panel Widgets</td>
+    <td><b>Panel Widgets</b></td>
     <td><a href="https://github.com/wsdfhjxc/virtual-desktop-bar">Virtual Desktop Bar</a></td>
   </tr>
   <tr>
-    <td>TWM</td>
+    <td><b>TWM</b></td>
     <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
   </tr>
 </table>
@@ -47,39 +47,39 @@
 
 <table>
   <tr>
-    <td>Application Style</td>
+    <td><b>Application Style</b></td>
     <td><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
   </tr>
   <tr>
-    <td>Plasma Style</td>
+    <td><b>Plasma Style</b></td>
     <td><a href="https://archlinux.org/packages/extra/x86_64/breeze">Breeze</a></td>
   </tr>
   <tr>
-    <td>Colors</td>
+    <td><b>Colors</b></td>
     <td><a href="config/kde/kde.colors">OneDarkV</a></td>
   </tr>
   <tr>
-    <td>Window Decorations</td>
+    <td><b>Window Decorations</b></td>
     <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
   </tr>
   <tr>
-    <td>Icons</td>
+    <td><b>Icons</b></td>
     <td><a href="https://store.kde.org/p/1373825">Sensual-Breeze-Dark Icons</a></td>
   </tr>
   <tr>
-    <td>Cursors</td>
+    <td><b>Cursors</b></td>
     <td><a href="https://store.kde.org/p/1381208">We10XOS Cursors</a></td>
   </tr>
   <tr>
-    <td>Lauch Feedback</td>
+    <td><b>Lauch Feedback</b></td>
     <td>Cursor Static</td>
   </tr>
   <tr>
-    <td>Fonts Management</td>
+    <td><b>Fonts Management</b></td>
     <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
   </tr>
   <tr>
-    <td>Splash Screen</td>
+    <td><b>Splash Screen</b></td>
     <td><a href="config/kde/splash-screen/onedarkv">QuarksSplashDark Custom</a></td>
   </tr>
 </table>
@@ -88,31 +88,31 @@
 
 <table>
   <tr>
-    <td>File Manager</td>
+    <td><b>File Manager</b></td>
     <td><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
   </tr>
   <tr>
-    <td>File Syncronizer</td>
+    <td><b>File Syncronizer</b></td>
     <td>
       <a href="https://freefilesync.org">FreeFileSync</a><br>
       <a href="https://krusader.org">Krusader</a>
     </dd>
   </tr>
   <tr>
-    <td>Editor</td>
+    <td><b>Editor</b></td>
     <td>
       <a href="https://code.visualstudio.com">VS Code</a><br>
       <a href="https://neovim.io">neovim</a></td>
   </tr>
   <tr>
-    <td>Browser</td>
+    <td><b>Browser</b></td>
     <td>
       <a href="https://vivaldi.com/pt-br">Vivaldi</a><br>
       <a href="https://www.mozilla.org">Firefox</a>
     </td>
   </tr>
   <tr>
-    <td>Browser Plugins</td>
+    <td><b>Browser Plugins</b></td>
     <td>
       <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlockOrigin</a><br>
       <a href="https://chrome.google.com/webstore/detail/blending-scrollbar/ajjnokaolfbjimgelmdmdlijoclmjnag">Blending Scrollbar</a><br>
@@ -121,40 +121,40 @@
     </td>
   </tr>
   <tr>
-    <td>Music Player</td>
+    <td><b>Music Player</b></td>
     <td>
       <a href="https://cmus.github.io">cmus</a>
     </td>
   </tr>
   <tr>
-    <td>Video Player</td>
+    <td><b>Video Player</b></td>
     <td>
       <a href="https://mpv.io">MPV</a><br>
       <a href="https://www.videolan.org/vlc">VLC</a>
     </td>
   </tr>
   <tr>
-    <td>Screenshot</td>
+    <td><b>Screenshot</b></td>
     <td><a href="https://flameshot.org">Flameshot</a></td>
   </tr>
   <tr>
-    <td>Color Picker</td>
+    <td><b>Color Picker</b></td>
     <td><a href="https://apps.kde.org/kcolorchooser">KColorChooser</a></td>
   </tr>
   <tr>
-    <td>Torrent</td>
+    <td><b>Torrent</b></td>
     <td><a href="https://www.qbittorrent.org">qBitTorrent</a></td>
   </tr>
   <tr>
-    <td>Password Manager</td>
+    <td><b>Password Manager</b></td>
     <td><a href="https://bitwarden.com">Bitwarden</a></td>
   </tr>
   <tr>
-    <td>Batch Rename</td>
+    <td><b>Batch Rename</b></td>
     <td><a href="https://apps.kde.org/krename">KRename</a></td>
   </tr>
   <tr>
-    <td>Subtitle</td>
+    <td><b>Subtitle</b></td>
     <td><a href="https://subtitlecomposer.kde.org">Subtitle Composer</a></td>
   </tr>
 </table>
