@@ -4,7 +4,7 @@
 
 ## Configuration
 
-<table>
+<table width="100%">
   <tr>
     <td>OS</td>
     <td><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
@@ -84,7 +84,7 @@
   </tr>
 </table>
 
-## Apps
+## Desktop Apps
 
 <table>
   <tr>
@@ -94,15 +94,14 @@
   <tr>
     <td>File Syncronizer</td>
     <td>
-      <a href="https://freefilesync.org">FreeFileSync</a><br>
+      <a href="https://freefilesync.org">FreeFileSync</a>,
       <a href="https://krusader.org">Krusader</a>
     </dd>
   </tr>
   <tr>
     <td>Editor</td>
     <td>
-      <a href="https://code.visualstudio.com">VS Code</a>,
-      <a href="https://neovim.io">neovim</a></td>
+      <a href="https://code.visualstudio.com">VS Code</a>
   </tr>
   <tr>
     <td>Browser</td>
@@ -121,15 +120,8 @@
     </td>
   </tr>
   <tr>
-    <td>Music Player</td>
-    <td>
-      <a href="https://cmus.github.io">cmus</a>
-    </td>
-  </tr>
-  <tr>
     <td>Video Player</td>
     <td>
-      <a href="https://mpv.io">MPV</a>,
       <a href="https://www.videolan.org/vlc">VLC</a>
     </td>
   </tr>
@@ -159,7 +151,32 @@
   </tr>
 </table>
 
-## Color
+## Terminal Apps
+
+<table>
+  <tr>
+    <td>File Manager</td>
+    <td><a href="https://vifm.info">vifm</a></td>
+  </tr>
+  <tr>
+    <td>File Syncronizer</td>
+    <td><a href="https://github.com/WayneD/rsync">rsync</a></dd>
+  </tr>
+  <tr>
+    <td>Editor</td>
+    <td><a href="https://neovim.io">neovim</a></td>
+  </tr>
+  <tr>
+    <td>Music Player</td>
+    <td><a href="https://cmus.github.io">cmus</a></td>
+  </tr>
+  <tr>
+    <td>Video Player</td>
+    <td><a href="https://mpv.io">mpv</a></td>
+  </tr>
+</table>
+
+## Colors
 
 ### Terminal
 
