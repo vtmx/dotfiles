@@ -210,14 +210,19 @@
     "<c-l>": false
   },
   "vim.insertModeKeyBindingsNonRecursive": [
+    // Go to normal mode
     {
       "before": ["k", "j"],
       "after": ["<esc>"]
     },
+
+    // Go to next char in insert mode
     {
       "before": ["<c-h>"],
       "after": ["left"]
     },
+
+    // Go to prev char in insert mode
     {
       "before": ["<c-l>"],
       "after": ["right"]
@@ -233,7 +238,7 @@
       "after": ["<", "<"]
     },
     {
-      "before": ["+"],
+      "before": ["="],
       "after": ["<c-a>"]
     },
     {
