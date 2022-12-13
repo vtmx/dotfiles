@@ -83,6 +83,16 @@
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus"
+  },
 
   // Split
   {
@@ -256,18 +266,6 @@
     "when": "vim.active && editorTextFocus && !editorReadonly"
   },
 
-  // Auto-sugestion in editor
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion",
-    "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  },
-
   // Auto-sugestion in navigation
   {
     "key": "ctrl+j",
@@ -278,5 +276,17 @@
     "key": "ctrl+k",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "vim.active && inQuickOpen"
+  },
+
+  // Auto-sugestion in editor
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   }
 ]
