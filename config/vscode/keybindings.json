@@ -39,12 +39,6 @@
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   },
 
-  // Create
-  {
-    "key": "ctrl+k n",
-    "command": "workbench.action.files.newUntitledFile"
-  },
-
   // Tab
   {
     "key": "ctrl+tab",
@@ -81,15 +75,11 @@
 
   // Sidebar
   {
-    "key": "ctrl+k b",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
     "key": "ctrl+shift+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+k e",
+    "key": "ctrl+shift+e",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
@@ -153,10 +143,6 @@
     "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor"
   },
-  {
-    "key": "ctrl+k w",
-    "command": "workbench.action.closeActiveEditor"
-  },
 
   // Terminal
   {
@@ -208,14 +194,6 @@
   {
     "key": "ctrl+q",
     "command": "workbench.action.quit"
-  },
-  {
-    "key": "ctrl+k q",
-    "command": "workbench.action.quit"
-  },
-  {
-    "key": "ctrl+k w",
-    "command": "-workbench.action.closeEditorsInGroup"
   },
 
   // Plugins
