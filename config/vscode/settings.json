@@ -201,7 +201,7 @@
   "vim.easymotion": true,
   "vim.easymotionMarkerForegroundColorOneChar": "#e06c75",
   "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.duration": 150,
+  "vim.highlightedyank.duration": 100,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.useSystemClipboard": false,
@@ -383,7 +383,7 @@
     },
     {
       "before": ["<leader>", "<esc>"],
-      "commands": [":noh"]
+      "commands": [":nohl"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
