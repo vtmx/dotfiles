@@ -73,6 +73,12 @@
   color: var(--shade3) !important;
 }
 
+:root:not([privatebrowsingmode="temporary"]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs {
+  border-inline-start: none !important;
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
+}
+
 /* tab hover */
 #TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {
   color: var(--shade3) !important;
