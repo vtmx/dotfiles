@@ -14,8 +14,8 @@ end
 -- Leader
 vim.g.mapleader = ' '
 
--- Source
-map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source"<cr>')
+-- Source file
+map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
 
 -- Scape
 map('i', 'kj', '<esc>')
@@ -180,6 +180,9 @@ map('c', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
 map('c', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
 map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 
+-- Make exec
+map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
+
 -- Save
 map('n', '<c-s>', '<cmd>w!<cr>', { silent = false })
 map('i', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
@@ -263,60 +266,11 @@ for mode, maps in pairs(map_table) do
   end
 end
 
--- references
+-- References
 -- examples two mode: map({'n', 'x'}, 'cp', '"+y')
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/53d210d3905f65b9e8f0bdb0c8a307440ebfc3f8/lua/core/utils/init.lua
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
-
--- local ok, reload = pcall(require, 'plenary.reload')
--- RELOAD = ok and reload.reload_module or function(...) return ... end
--- function R(name)
---   RELOAD(name)
---   return require(name)
--- end
-
--- local modules = {
---   'mappings',
---   'theme'
--- }
-
--- function ReloadModules(modules)
---   for k, v in ipairs(modules) do
---     print(v .. '.lua')
---   end
--- end
-
--- map('n', '<leader>r', ReloadModules(modules))
-
--- map('n', '<leader>r', '', {
---   callback = function()
---     for k, v in ipairs(modules) do
---       print(v..'.lua')
---       vim.cmd('PlenaryBustedFile theme.lua')
---     end
---   end
--- })
-
--- map('n', '<leader>r', '', {
---   callback = function()
---     require('plenary.reload').reload_module('theme.lua')
---     -- <cmd>:PlenaryBustedFile theme.lua<cr>
---   end
--- })
-
--- function reload(module)
-  -- require('plenary.reload').reload_module(module)
-  -- echo '<cmd>write<cr>'
--- end
-
--- vim.keymap.set('n', '<leader>r', '', {
---   callback = function()
---     printf('Reload')
---   end,
--- })
-
--- References
 -- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
