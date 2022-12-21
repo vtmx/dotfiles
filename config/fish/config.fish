@@ -60,10 +60,11 @@ set -x EDITOR 'nvim'
 set -x SHELL '/usr/bin/fish'
 set -x VISUAL 'nvim'
 
-# commands
+# system
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c='clear'
+alias chx='chmod +x'
 alias cls='clear'
 alias cpv='rsync -ah --info=progress2'
 alias e='exit'
