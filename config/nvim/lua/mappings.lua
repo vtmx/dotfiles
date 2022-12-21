@@ -83,19 +83,21 @@ map('n', '<leader>j', 'J')
 map('n', 'x', '"_x')
 map('n', '<del>', '"_x')
 
--- Move line like vscode
-map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
-map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
+-- Move lines
 map('n', '<a-j>', '<cmd>m+<cr>')
 map('n', '<a-k>', '<cmd>m-2<cr>')
-map('v', '<a-j>', "<cmd>m '>+1<cr>gv-gv")
-map('v', '<a-k>', "<cmd>m '<-2<cr>gv-gv")
+map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
+map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
+map('v', '<a-j>', ":m '>+1<cr>gv=gv")
+map('v', '<a-k>', ":m '<-2<cr>gv=gv")
 
--- Clone line
-map('n', '<c-a-j>', 'yyp')
-map('n', '<c-a-k>', 'yyP')
-map('v', '<c-a-j>', ":'<,'>copy '><cr>")
-map('v', '<c-a-k>', 'ygvO<esc>P')
+-- Clone lines
+map('n', '<s-a-j>', 'yyp')
+map('n', '<s-a-k>', 'yyP')
+map('i', '<s-a-j>', '<esc>yypi')
+map('i', '<s-a-k>', '<esc>yyPi')
+map('v', '<s-a-j>', ":'<,'>copy '><cr>")
+map('v', '<s-a-k>', 'ygvO<esc>P')
 
 -- Keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
@@ -103,6 +105,9 @@ map('v', 'y', 'ygv<esc>')
 -- Remove highlight
 map('n', '<esc>', '<cmd>noh<cr>')
 map('n', '<leader>h', '<cmd>noh<cr>')
+
+-- Substitute word
+map('n', '<leader>s', [[:%s/\<<c-r><c-w>\>/<c-r><c-w>/gI<left><left><left>]])
 
 -- Keep search results centred
 map('n', 'n', 'nzzzv')

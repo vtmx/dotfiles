@@ -80,7 +80,7 @@
 }
 
 /* tab hover */
-#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"], [multiselected]) {
   color: var(--shade3) !important;
 }
 
@@ -94,8 +94,28 @@
   color: var(--shade7) !important;
 }
 
+/* tab icon */
+.tabbrowser-tab .tab-icon-image {
+  filter: grayscale(1) !important;
+}
+
+/* tab icon hover and active */
+.tabbrowser-tab:hover .tab-icon-image,
+.tabbrowser-tab[visuallyselected="true"] .tab-icon-image {
+  filter: grayscale(0) !important;
+}
+
 #tabs-newtab-button:hover {
   color: var(--shade3) !important;
+}
+
+/* bookmarks */
+.bookmark-item {
+  filter: grayscale(1) !important;
+}
+
+.bookmark-item:hover {
+  filter: grayscale(0) !important;
 }
 
 /* urlbar */
