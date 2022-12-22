@@ -148,6 +148,24 @@ treesitter_config.setup({
   autotag = {
     enable = true
   },
+  -- TSIntallInfo
+  ensure_installed = { 
+    'bash',
+    'css',
+    'fish',
+    'help',
+    'html',
+    'javascript',
+    'json',
+    'lua',
+    'markdown',
+    'python',
+    'typescript',
+    'scss',
+    'v',
+    'vue',
+    'yaml'
+  },
   highlight = {
     enable = true
   },
