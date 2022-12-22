@@ -288,5 +288,22 @@
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+
+  // Run AutoIT
+  {
+    "command": "extension.runScript",
+    "key": "ctrl+enter",
+    "when": "editorTextFocus && editorLangId == autoit"
+  },
+  {
+    "command": "extension.check",
+    "key": "alt+enter",
+    "when": "editorTextFocus && editorLangId == autoit"
+  },
+  {
+    "command": "extension.compile",
+    "key": "ctrl+shift+enter",
+    "when": "editorTextFocus && editorLangId == autoit"
   }
 ]

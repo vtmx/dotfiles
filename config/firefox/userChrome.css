@@ -95,27 +95,31 @@
 }
 
 /* tab icon */
-.tabbrowser-tab .tab-icon-image {
-  filter: grayscale(1) !important;
-}
+/* .tabbrowser-tab .tab-icon-image { */
+/*   filter: grayscale(1) !important; */
+/* } */
 
 /* tab icon hover and active */
-.tabbrowser-tab:hover .tab-icon-image,
-.tabbrowser-tab[visuallyselected="true"] .tab-icon-image {
-  filter: grayscale(0) !important;
-}
+/* .tabbrowser-tab:hover .tab-icon-image, */
+/* .tabbrowser-tab[visuallyselected="true"] .tab-icon-image { */
+/*   filter: grayscale(0) !important; */
+/* } */
 
 #tabs-newtab-button:hover {
   color: var(--shade3) !important;
 }
 
-/* bookmarks */
+/* bookmarks toolbar */
 .bookmark-item {
   filter: grayscale(1) !important;
 }
 
 .bookmark-item:hover {
   filter: grayscale(0) !important;
+}
+
+#import-button {
+  display: none !important;
 }
 
 /* urlbar */
@@ -145,7 +149,8 @@
 }
 
 /* bookmarks */
-#personal-toolbar-empty-description, #PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
+#personal-toolbar-empty-description,
+#PersonalToolbar .toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 2px 4px 4px 4px !important;
   padding: 4px 8px !important;
 }
