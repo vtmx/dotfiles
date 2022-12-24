@@ -48,12 +48,17 @@
 	--dialog-warning-text-color: var(--accent0) !important;
 }
 
-/* background first page */
-/* body{ */
+/* #preferences-body { */
 /* 	background: var(--shade0) !important; */
+/* 	font-family: Segoe, sans-serif !important; */
 /* } */
 
 /* search bar in settings */
-.sticky-container {
+#preferences-body .sticky-container {
   background-color: transparent !important;
+}
+
+#preferences-body .info-box-container,
+#preferences-body .qr-code-box:not([hidden="true"]) {
+	background: var(--shade0) !important;
 }
