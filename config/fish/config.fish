@@ -249,9 +249,10 @@ end
 
 # youtube-dl
 if type -q youtube-dl
-  alias youm="youm"
+  alias ytdl="ytdl"
+  abbr -a ytdlm Max 'youtube-dl'
 
-  function youm
+  function ytdl
     youtube-dl -x --audio-format mp3 "$argv"
   end
 end
