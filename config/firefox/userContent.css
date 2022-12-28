@@ -16,36 +16,79 @@
   --accent6: #c678dd;
   --accent7: #be5046;
 
-	--in-content-page-background: var(--shade1) !important;
-	--in-content-page-color: var(--shade7) !important;
-	--in-content-deemphasized-text: var(--shade6) !important;
-	--in-content-box-background: var(--shade1) !important;
-	--in-content-box-background-odd: var(--shade0) !important;
-	--in-content-box-info-background: var(--shade3) !important;
-	--in-content-border-color: var(--shade2) !important;
-	--in-content-border-hover: var(--shade3) !important;
-	--in-content-border-invalid: var(--accent0) !important;
-	--in-content-error-text-color: var(--accent0) !important;
-	--in-content-button-background: var(--shade0) !important;
-	--in-content-button-background-hover: var(--shade2) !important;
-	--in-content-button-background-active: var(--shade2) !important;
-	--in-content-icon-color: var(--shade7) !important;
-	--in-content-primary-button-text-color: var(--shade7) !important;
-	--in-content-primary-button-background: var(--accent5) !important;
-	--in-content-primary-button-background-hover: var(--accent5) !important;
-	--in-content-primary-button-background-active: var(--accent4) !important;
-	--in-content-danger-button-background: var(--accent0) !important;
-	--in-content-danger-button-background-hover: #ffbdc5 !important;
-	--in-content-danger-button-background-active: #ffdfe7 !important;
-	--in-content-table-background: var(--shade0) !important;
-	--in-content-accent-color: var(--in-content-primary-button-background) !important;
-	--in-content-accent-color-active: var(--in-content-primary-button-background-hover) !important;
-	--in-content-link-color: var(--in-content-primary-button-background) !important;
-	--in-content-link-color-hover: var(--in-content-primary-button-background-hover) !important;
-	--in-content-link-color-active: var(--in-content-primary-button-background-active) !important;
-	--in-content-link-color-visited: var(--in-content-link-color) !important;
-	--card-outline-color: var(--shade5) !important;
-	--dialog-warning-text-color: var(--accent0) !important;
+  --card-outline-color: var(--shade5) !important;
+  --dialog-warning-text-color: var(--accent0) !important;
+  --grey-50: var(--shade3) !important;
+  --in-content-accent-color: var(--accent5) !important;
+	--in-content-accent-color-active: var(--accent5) !imp
+  --in-content-border-color: var(--shade2) !important;
+  --in-content-border-hover: var(--shade3) !important;
+  --in-content-border-invalid: var(--accent0) !important;
+  --in-content-box-background: var(--shade1) !important;
+  --in-content-box-background-odd: var(--shade0) !important;
+  --in-content-box-info-background: var(--shade3) !important;
+  --in-content-button-background: var(--shade0) !important;
+  --in-content-button-background-hover: var(--shade2) !important;
+  --in-content-button-background-active: var(--shade2) !important;
+  --in-content-danger-button-background: var(--accent0) !important;
+  --in-content-danger-button-background-hover: var(--accent0) !important;
+	--in-content-danger-button-background-active: var(--accent0) !important;
+  --in-content-deemphasized-text: var(--shade6) !important;
+  --in-content-error-text-color: var(--accent0) !important;
+  --in-content-icon-color: var(--shade7) !important;
+  --in-content-link-color: var(--accent5) !important;
+	--in-content-link-color-hover: var(--accent5) !important;
+	--in-content-link-color-active: var(--accent5) !important;
+  --in-content-link-color-visited: var(--accent5) !important;
+  --in-content-page-background: var(--shade1) !important;
+  --in-content-page-color: var(--shade7) !important;
+  --in-content-primary-button-background: var(--accent5) !important;
+  --in-content-primary-button-background-hover: var(--accent5) !important;
+  --in-content-primary-button-background-active: var(--accent4) !important;
+  --in-content-primary-button-text-color: var(--shade7) !important;
+  --in-content-table-background: var(--shade0) !important;
+	
+  
+	/* devtoos */
+  /* https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html */ 
+  --console-input-background: var(--shade1) !important;
+  --markup-hidden-attr-name-color: var(--accent0) !important;
+  --markup-hidden-attr-value-color: var(--accent6) !important;
+  --markup-hidden-tag-color: var(--accent5) !important;
+  --monospace-font-family: 'BlexMono Nerd Font', monospace !important;
+  --theme-code-font-size: 13px !important;
+  --theme-accordion-header-background: var(--shade0) !important;
+  --theme-accordion-header-hover: var(--shade2) !important;
+  --theme-body-background: var(--shade0) !important;
+  --theme-body-color: var(--shade7) !important;
+  --theme-highlight-red: var(--accent0) !important;
+  --theme-highlight-orange: var(--accent1) !important;
+  --theme-highlight-lightorange: var(--accent2) !important;
+  --theme-highlight-green: var(--accent3) !important;
+  --theme-highlight-bluegrey: var(--accent4) !important;
+  --theme-highlight-blue: var(--accent5) !important;
+  --theme-highlight-purple: var(--accent6) !important;
+  --theme-highlight-pink: var(--accent6) !important;
+  --theme-selection-background: var(--shade2) !important;
+  --theme-sidebar-background: var(--shade1) !important; 
+  --theme-splitter-color: #2c313c !important;
+  --theme-emphasized-splitter-color: #2c313c !important;
+  --theme-emphasized-splitter-color-hover: var(--shade2) !important;
+  --theme-tab-toolbar-background: var(--shade0) !important;
+  --theme-text-color-strong: var(--shade7) !important;
+  --theme-toolbar-hover: var(--shade5) !important; 
+  --theme-toolbar-background: var(--shade1) !important;  
+  --theme-toolbar-selected-color: var(--shade7) !important;  
+  --theme-toolbarbutton-checked-background: var(--shade1) !important;  
+  --theme-toolbarbutton-checked-color: var(--shade7) !important;  
+  --theme-toolbarbutton-checked-hover-background: var(--shade2) !important;  
+  --theme-toolbarbutton-checked-hover-color: var(--shade7) !important;
+  --toolbarbutton-hover-background: var(--shade2) !important;
+  --toolbar-non-lwt-bgcolor: var(--shade0) !important;
+  --toolbar-non-lwt-bgimage: var(--shade0) !important;
+  --rule-header-background-color: var(--shade0) !important; 
+  --rule-overridden-value-text-color: var(--shade3) !important;
+  
 }
 
 /* #preferences-body { */
@@ -59,6 +102,43 @@
 }
 
 #preferences-body .info-box-container,
-#preferences-body .qr-code-box:not([hidden="true"]) {
+#preferences-body .qr-code-box:not([hidden="true"]),
+.devtools-searchbox > .devtools-searchinput,
+.devtools-searchbox > .devtools-filterinput,
+.devtools-tabbar,
+.theme-sidebar {
 	background: var(--shade0) !important;
+}
+
+/* devtools */
+
+.devtools-tabbar,
+.theme-sidebar {
+	color: var(--shade7) !important;
+}
+
+.devtools-tab:hover,
+.devtools-tab:focus,
+.tabs .tabs-menu-item:hover,
+.tabs .tabs-menu-item:focus,
+.devtools-tabbar-button:hover,
+.devtools-tabbar-button.checked {
+  background-color: var(--shade2) !important;
+}
+
+.editor.comment:not(.doctype),
+.ruleview-selector-separator,
+.ruleview-selector-unmatched,
+.ruleview-unmatched-variable {
+	color: var(--shade3) !important;
+}
+
+.tabs .tabs-navigation {
+  background-color: var(--shade1) !important;
+}
+
+.tag-line,
+.devtools-monospace {
+  font-family: var(--monospace-font-family) !important;
+  font-size: var(--theme-code-font-size) !important;
 }
