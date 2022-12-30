@@ -1,4 +1,4 @@
-:host, :root {
+:root {
   --shade0: #23272e;
   --shade1: #1e2227;
   --shade2: #3d4556;
@@ -16,8 +16,8 @@
   --accent6: #c678dd;
   --accent7: #be5046;
 
-  --arrowpanel-border-radius: 0 !important;
-  --arrowpanel-menuitem-border-radius: 0 !important;
+  --arrowpanel-border-radius: 2px !important;
+  --arrowpanel-menuitem-border-radius: 2px !important;
   --arrowpanel-border-color: var(--shade2) !important;
   --card-outline-color: var(--shade5) !important;
   --button-hover-bgcolor: var(--shade2) !important;
@@ -53,11 +53,9 @@
   --panel-item-hover-bgcolor: var(--shade2) !important;
   --panel-separator-color: var(--shade2) !important;
   --tab-block-margin: 0 !important;
-  --tab-border-radius: 0 !important;
+  --tab-border-radius: 2px !important;
   --tab-min-height: 28px !important;
-  --toolbarbutton-border-radius: 0 !important;
-  --urlbar-container-height: 36px !important;
-  --urlbar-toolbar-height: 40px !important;
+  --toolbarbutton-border-radius: 2px !important;
 }
 
 body {
@@ -65,15 +63,21 @@ body {
   font-size: 13px !important;
 }
 
+/* hide space init tab */
 .titlebar-spacer {
 	display: none !important;
+}
+
+/* hide window control buttons */
+.titlebar-buttonbox-container {
+  display: none !important;
 }
 
 #navigator-toolbox-background {
   background: var(--shade1) !important;
 }
 
-#titlebar, #nav-bar, #PersonalToolbar {
+#titlebar, #PersonalToolbar {
   background: var(--shade1) !important;
 }
 
@@ -81,12 +85,13 @@ body {
   border: none !important;
 }
 
+/* nav-bar */
 #nav-bar {
+  background: var(--shade4) !important;
   box-shadow: none !important;
 }
 
 /* tab */
-
 #TabsToolbar {
   height: 32px !important;
 }
@@ -110,87 +115,64 @@ body {
   background: var(--shade4) !important;
 }
 
-/* tab hover color */
-.tabbrowser-tab:hover .tab-content {
-  color: var(--shade5) !important;
-}
-
 /* tab active background */
 .tabbrowser-tab[visuallyselected="true"] .tab-background {
   background: var(--shade4) !important;
 } 
 
-/* tab active color */
-.tabbrowser-tab[visuallyselected="true"] .tab-content {
-  color: var(--shade7) !important;
+/* tab hover color */
+.tabbrowser-tab:hover .tab-content {
+  color: var(--shade5) !important;
 }
 
-/* tab icon */
-/* .tabbrowser-tab .tab-icon-image { */
-/*   filter: grayscale(1) !important; */
-/* } */
 
-/* tab icon hover and active */
-/* .tabbrowser-tab:hover .tab-icon-image, */
-/* .tabbrowser-tab[visuallyselected="true"] .tab-icon-image { */
-/*   filter: grayscale(0) !important; */
-/* } */
+/* tab active color */
+.tabbrowser-tab[visuallyselected="true"] .tab-content {
+  color: #c4cbd8 !important;
+}
 
+/* hover new tab button - 25% light shade7 */
 #tabs-newtab-button:hover {
-  color: var(--shade3) !important;
+  color: var(--shade4) !important;
+}
+
+/* hover new tab button icon */
+#tabs-newtab-button:hover .toolbarbutton-icon {
+  fill: var(--shade7) !important;
 }
 
 /* bookmarks toolbar */
-.bookmark-item {
-  filter: grayscale(1) !important;
+#PlacesToolbar {
+  background: var(--shade4);
 }
 
-.bookmark-item:hover {
-  filter: grayscale(0) !important;
-}
-
+/* hide import button */
 #import-button {
   display: none !important;
 }
 
 /* urlbar */
 
-#urlbar-container[breakout]
-  min-height: 28px !important;
+/* remove background if not hover
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  background: none !important;
+  box-shadow: none !important;
+}
+*/
+
+#urlbar {
+  padding-left: 8px !important;
+  box-shadow: none !important;
 }
 
 #urlbar[breakout] {
   min-height: 20px !important;
 }
 
-#urlbar {
-  padding-left: 8px !important;
-}
-
-/* tab buttons */
-#alltabs-button {
-	display: none !important;
-}
-
-/* remove icon search */
-#identity-box {
-  display: none !important;
-}
-
-/* remove icon close tab */
-.tab-close-button {
-  display: none !important;
-}
-
-/* remove icon new tab */
-#TabsToolbar .toolbarbutton-1 {
-  display: none !important;
-  color: var(--shade5) !important;
-}
-
-/* remove icon new reader */
-#reader-mode-button {
-  display: none !important;
+/* url background */
+#urlbar-background {
+  background: var(--shade1) !important;
+  border: none !important;
 }
 
 /* remove shadow */
@@ -198,18 +180,65 @@ body {
   box-shadow: none !important;
 }
 
-/* url background */
-#urlbar-background {
-  background: var(--shade0) !important;
-  border: none !important;
-}
-
 #urlbar-container[breakout] {
   min-height: var(--urlbar-container-height) !important;
 }
 
-#star-button[starred] {
+/* hide search site list */
+#urlbar .search-one-offs:not([hidden]) {
+  display: none !important;
+}
+
+/* hide all tabs buttons */
+#alltabs-button {
+	display: none !important;
+}
+
+/* hide icon search */
+#identity-box {
+  display: none !important;
+}
+
+/* hide icon shield */
+#tracking-protection-icon-container {
+  display: none !important;
+}
+
+/* remove padding tabs */
+.tabbrowser-tab {
+  padding: 0 !important;
+}
+
+/* hide icon new tab */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
+  color: var(--shade5) !important;
+}
+
+/* show close button on hover */
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: block !important;
+}
+
+/* hide icon reader */
+#urlbar-container #reader-mode-button {
+  display: none !important;
+}
+
+/* hide icon bookmarks */
+#urlbar-container #star-button {
+  display: none !important;
+}
+
+
+#urlbar-container #star-button[starred] {
  fill: var(--shade3) !important;
+}
+
+/* show icons when urlbar hover */
+#urlbar-container:hover #star-button,
+#urlbar-container:hover #reader-mode-button {
+  display: block !important;
 }
 
 /* bookmarks */
