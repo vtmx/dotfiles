@@ -125,19 +125,19 @@ body {
   color: var(--shade5) !important;
 }
 
-
-/* tab active color */
+/* tab active color - 25% light shade7 */
 .tabbrowser-tab[visuallyselected="true"] .tab-content {
   color: #c4cbd8 !important;
 }
 
-/* hover new tab button - 25% light shade7 */
-#tabs-newtab-button:hover {
-  color: var(--shade4) !important;
+/* new tab button icon */
+#tabs-newtab-button .toolbarbutton-icon {
+  fill: var(--shade3) !important;
 }
 
-/* hover new tab button icon */
+/* new tab button icon hover */
 #tabs-newtab-button:hover .toolbarbutton-icon {
+  background: var(--shade4) !important;
   fill: var(--shade7) !important;
 }
 
