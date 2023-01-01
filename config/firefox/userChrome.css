@@ -53,7 +53,7 @@
   --panel-item-hover-bgcolor: var(--shade2) !important;
   --panel-separator-color: var(--shade2) !important;
   --tab-block-margin: 0 !important;
-  --tab-border-radius: 2px !important;
+  --tab-border-radius: 0 !important;
   --tab-min-height: 28px !important;
   --toolbarbutton-border-radius: 2px !important;
 }
@@ -160,9 +160,14 @@ body {
 }
 */
 
+#urlbar,
+#urlbar * {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 #urlbar {
   padding-left: 8px !important;
-  box-shadow: none !important;
 }
 
 #urlbar[breakout] {
@@ -183,6 +188,13 @@ body {
 #urlbar-container[breakout] {
   min-height: var(--urlbar-container-height) !important;
 }
+
+
+/* font-size url */
+.urlbarView-url {
+  font-size: inherit !important;
+}
+
 
 /* hide search site list */
 #urlbar .search-one-offs:not([hidden]) {

@@ -54,7 +54,7 @@ set -g fish_pager_color_completion $shade7
 set -g fish_pager_color_description $shade3
 
 # variables
-set -x BROWSER 'vivaldi-stable'
+set -x BROWSER 'firefox'
 set -x CODE 'code'
 set -x EDITOR 'nvim'
 set -x SHELL '/usr/bin/fish'
