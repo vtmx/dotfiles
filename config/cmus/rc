@@ -1,3 +1,6 @@
+# color
+colorscheme onedarkv
+
 # up down
 bind -f common g win-top
 bind -f common G win-bottom
@@ -5,7 +8,7 @@ bind -f common J win-down 5
 bind -f common K win-up 5
 
 # control
-bind -f common space player-pause
+# bind -f common space player-pause
 bind -f common ^N player-next
 bind -f common ^P player-prev
 
@@ -18,8 +21,6 @@ bind -f common left seek -5
 # vol
 bind -f common = vol +5%
 bind -f common - vol -5% 
-bind -f common ^A vol +5%
-bind -f common ^X vol -5% 
 bind -f common m mute
 
 # settings
@@ -29,4 +30,5 @@ bind -f common , view settings
 bind -f common q quit
 
 # references:
+# https://man.archlinux.org/man/cmus.1
 # https://github.com/cmus/cmus/blob/master/data/rc
