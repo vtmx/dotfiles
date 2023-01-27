@@ -17,7 +17,7 @@ RandomSaturationRange=100
 Color=34,39,46
 
 [Color0Faint]
-Color=35,39,46
+Color=34,39,46
 
 [Color0Intense]
 Color=34,39,46
@@ -104,8 +104,9 @@ RandomSaturationRange=100
 Anchor=0.5,0.5
 Blur=false
 ColorRandomization=false
-Description=konsole
+Description=OneDarkV
 FillStyle=Tile
 Opacity=1
 Wallpaper=
+WallpaperFlipType=NoFlip
 WallpaperOpacity=1

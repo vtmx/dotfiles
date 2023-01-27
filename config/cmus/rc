@@ -8,7 +8,6 @@ bind -f common J win-down 5
 bind -f common K win-up 5
 
 # control
-# bind -f common space player-pause
 bind -f common ^N player-next
 bind -f common ^P player-prev
 
@@ -17,6 +16,10 @@ bind -f common l seek +10
 bind -f common h seek -10
 bind -f common right seek +5
 bind -f common left seek -5
+
+# repeat
+bind -f common r toggle repeat_current
+bind -f common R toggle repeat
 
 # vol
 bind -f common = vol +5%

@@ -154,6 +154,15 @@
     "command": "workbench.action.closeActiveEditor"
   },
 
+  // Save
+  {
+    "key": "ctrl+s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["workbench.action.files.save", "extension.vim_escape"]
+    }
+  },
+
   // Terminal
   {
     "key": "ctrl+'",
