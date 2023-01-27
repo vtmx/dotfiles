@@ -76,7 +76,7 @@ map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"
 -- Paste with no resgister
 map('x', '<leader>p', '"_dP')
 
--- join lines
+-- Join lines
 map('n', '<leader>j', 'J')
 
 -- Delete not copy
@@ -107,7 +107,7 @@ map('n', '<esc>', '<cmd>noh<cr>')
 map('n', '<leader>h', '<cmd>noh<cr>')
 
 -- Substitute word
-map('n', '<leader>s', [[:%s/\<<c-r><c-w>\>/<c-r><c-w>/gI<left><left><left>]])
+map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
 
 -- Keep search results centred
 map('n', 'n', 'nzzzv')
