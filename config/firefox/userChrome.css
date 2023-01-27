@@ -85,6 +85,11 @@ body {
   border: none !important;
 }
 
+/* hide firefox logo button */
+#firefox-view-button {
+  display: none !important;
+}
+
 /* nav-bar */
 #nav-bar {
   background: var(--shade4) !important;

@@ -95,6 +95,11 @@ if type -q bat
   alias cat='bat'
 end
 
+# bat
+if type -q cmus
+  alias cm='cmus'
+end
+
 # canvas-sketch-cli
 if type -q canvas-sketch-cli
   alias canvas='canvas-sketch-cli'
