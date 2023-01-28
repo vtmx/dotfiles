@@ -1,0 +1,46 @@
+" onedarkv
+
+" reset all styles
+hi clear
+
+" header
+hi Border	    cterm=none ctermfg=black ctermbg=black
+hi TopLine	  cterm=none ctermfg=white ctermbg=black
+hi TopLineSel cterm=none ctermfg=white ctermbg=black
+
+" tab
+hi TabLine    cterm=none ctermfg=white ctermbg=black
+hi TabLineSel cterm=none ctermfg=black ctermbg=blue
+
+" body
+hi Win        cterm=none    ctermfg=white   ctermbg=black   " files
+hi OtherWin   cterm=none    ctermfg=white   ctermbg=black   " files other win
+hi CurrLine   cterm=reverse ctermfg=default ctermbg=default " current line
+hi Selected   cterm=none    ctermfg=yellow  ctermbg=black   " select files
+hi OddLine    cterm=none    ctermfg=white   ctermbg=black
+hi OtherLine  cterm=none    ctermfg=white   ctermbg=black
+
+" footer
+hi CmdLine	  cterm=none ctermfg=white ctermbg=black
+hi ErrorMsg   cterm=none ctermfg=red   ctermbg=black
+hi JobLine    cterm=none ctermfg=red   ctermbg=black
+hi StatusLine cterm=none ctermfg=white ctermbg=black
+hi WildMenu   cterm=none ctermfg=black ctermbg=white
+
+" comparation
+hi CmpBlank     cterm=none
+hi CmpMismatch  cterm=none ctermfg=red ctermbg=black
+hi CmpUnmatched cterm=none ctermfg=green ctermbg=black
+
+" file type
+hi BrokenLink cterm=none ctermfg=red     ctermbg=black
+hi Device     cterm=none ctermfg=red     ctermbg=black
+hi Directory  cterm=none ctermfg=blue	   ctermbg=black
+hi Executable cterm=none ctermfg=green   ctermbg=black
+hi Fifo       cterm=none ctermfg=cyan    ctermbg=black
+hi HardLink   cterm=none ctermfg=red     ctermbg=black
+hi Link       cterm=none ctermfg=yellow  ctermbg=black
+hi Socket     cterm=none ctermfg=magenta ctermbg=black
+hi SuggestBox cterm=none ctermfg=white   ctermbg=black
+
+" vim: ft=vim
