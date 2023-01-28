@@ -32,6 +32,26 @@ bind -f common , view settings
 # quit
 bind -f common q quit
 
+# Size sidebar
+set tree_width_percent=30
+set tree_width_max=30
+
+# Format playlist columns
+# %30 percent align right
+# %-30 percent align left
+# %= alignt to right
+# set format_playlist= %-30%t %a %d
+
+# 1
+set format_trackwin= %{title}
+
+# 3
+set format_playlist= %{title} %= %{duration} 
+
+# Bottom current playing
+set format_current= %{title} - %{artist}
+
 # references:
+# https://linux.die.net/man/1/cmus
 # https://man.archlinux.org/man/cmus.1
 # https://github.com/cmus/cmus/blob/master/data/rc

@@ -35,7 +35,7 @@ set color_win_cur=blue
 
 # Botton playing song
 set color_titleline_bg=default
-set color_titleline_fg=default
+set color_titleline_fg=blue
 
 # Status time vol etc
 set color_statusline_bg=default
@@ -48,9 +48,3 @@ set color_cmdline_fg=default
 # Info idk
 set color_info=yellow
 set color_error=red
-
-# Options
-
-# Size sidebar
-set tree_width_percent=30
-set tree_width_max=30
