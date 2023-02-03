@@ -251,6 +251,14 @@
       "after": ["\"", "_", "x"]
     },
     {
+      "before": ["r"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<c-r>"],
+      "commands": ["redo"]
+    },
+    {
       "before": ["J"],
       "after": ["5", "j"]
     },

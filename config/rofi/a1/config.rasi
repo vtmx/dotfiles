@@ -41,7 +41,7 @@ configuration {
 @theme "/dev/null"
 
 // general
-@import "onedarkv.rasi"
+@import "colors.rasi"
 
 * {
 	font: "BlexMono Nerd Font 11";
@@ -50,9 +50,9 @@ configuration {
 window {
 	width: 600;
 	padding: 0;
-	background-color: @shade1;
+	background-color: @base10;
 	border: 1px;
-	border-color: @shade4;
+	border-color: @base20;
 }
 
 mainbox {
@@ -68,7 +68,7 @@ message {
 textbox {
   padding: 8px 16px;
 	background-color: transparent;
-	text-color: @shade7;
+	text-color: @base80;
 }
 
 // input
@@ -77,21 +77,21 @@ inputbar {
 	padding: 14px 16px;
 	background-color: transparent;
   border: 0 0 1px 0;
-  border-color: @shade4;
+  border-color: @base20;
 }
  
 // icon
 prompt {
   margin: 0 16px 0 0;
 	background-color: transparent;
-	text-color: @shade7;
+	text-color: @base80;
 }
 
 // input
 entry {
 	placeholder: "";
 	background-color: transparent;
-	text-color: @shade7;
+	text-color: @base80;
 }
 
 // item
@@ -104,14 +104,14 @@ listview {
 element {
 	padding: 8px 16px;
 	background-color: transparent;
-	text-color: @shade7;
+	text-color: @base70;
 }
 
 // hover
 element selected.normal,
 element selected.active {
-	background-color: @shade4;
-	text-color: @shade7;
+	background-color: @base15;
+	text-color: @base80;
 }
 
 element-text {
