@@ -41,62 +41,53 @@ configuration {
 @theme "/dev/null"
 
 // general
+@import "onedarkv.rasi"
+
 * {
 	font: "BlexMono Nerd Font 11";
-	shade0: #23272e;
-	shade1: #1e2227;
-	shade2: #3d4556;
-	shade3: #5c6370;
-	shade4: #2c313c;
-	shade5: #828997;
-	shade6: #979eab;
-	shade7: #abb2bf;
-	accent0: #e06c75;
-	accent1: #d19a66;
-	accent2: #e5c07b;
-	accent3: #98c379;
-	accent4: #56b6c2;
-	accent5: #61afef;
-	accent6: #c678dd;
-	accent7: #be5046;
-  highlight: @accent5;
 }
 
 window {
 	width: 600;
 	padding: 0;
 	background-color: @shade1;
-	border: 2px;
-	border-color: @shade2;
+	border: 1px;
+	border-color: @shade4;
 }
 
 mainbox {
-	background-color: @shade0;
+  spacing: 0px;
+	background-color: transparent;
 }
 
 message {
-	background-color: @shade1;
+	background-color: transparent;
 }
 
+// File browser
 textbox {
-  padding: 16px;
-	background-color: @shade1;
+  padding: 8px 16px;
+	background-color: transparent;
 	text-color: @shade7;
 }
 
+// input
 inputbar {
 	children: [prompt, entry];
-	background-color: @shade0;
-	padding: 16px;
+	padding: 14px 16px;
+	background-color: transparent;
+  border: 0 0 1px 0;
+  border-color: @shade4;
 }
  
 // icon
 prompt {
   margin: 0 16px 0 0;
 	background-color: transparent;
-	text-color: @shade3;
+	text-color: @shade7;
 }
 
+// input
 entry {
 	placeholder: "";
 	background-color: transparent;
@@ -105,20 +96,18 @@ entry {
 
 // item
 listview {
-	columns: 1;
 	lines: 6;
-	margin: 0;
-	padding: 0;
-	background-color: @shade1;
-	border: 0;
+	background-color: transparent;
+  spacing: 0;
 }
 
 element {
 	padding: 8px 16px;
-	background-color: @shade1;
+	background-color: transparent;
 	text-color: @shade7;
 }
 
+// hover
 element selected.normal,
 element selected.active {
 	background-color: @shade4;

@@ -130,6 +130,7 @@ ForegroundVisited=#c678dd
 [General]
 ColorScheme=kde
 Name=- One Dark V -
+accentActiveTitlebar=false
 shadeSortColumn=true
 
 [KDE]

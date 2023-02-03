@@ -257,7 +257,7 @@ create_links() {
   # rofi
   # ----------------------------------------------------------
   name="rofi"
-  target="$src_dir/rofi/config.rasi"
+  target="$src_dir/rofi/*.rasi"
   link="$config_dir/rofi"
   create_link "$name" "$target" "$link"
 
