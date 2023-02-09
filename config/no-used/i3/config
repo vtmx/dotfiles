@@ -1,0 +1,5 @@
+include ~/.config/i3/var.conf
+include ~/.config/i3/*.conf
+
+# conf
+set $ws10 "10"

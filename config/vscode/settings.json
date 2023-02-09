@@ -251,7 +251,7 @@
       "after": ["\"", "_", "x"]
     },
     {
-      "before": ["r"],
+      "before": ["u"],
       "commands": ["undo"]
     },
     {
