@@ -18,7 +18,7 @@ hi OtherWin     ctermfg=default ctermbg=default " files other win
 hi CurrLine     ctermfg=default ctermbg=default " current line
 hi Selected     ctermfg=yellow  ctermbg=default " select files
 hi OddLine      ctermfg=default ctermbg=default
-hi OtherLine    ctermfg=default ctermbg=default
+hi OtherLine    ctermfg=default ctermbg=black
 
 " Footer
 hi CmdLine	    ctermfg=default ctermbg=default
