@@ -20,7 +20,7 @@
   --dialog-warning-text-color: var(--accent0) !important;
   --grey-50: var(--shade3) !important;
   --in-content-accent-color: var(--accent5) !important;
-	--in-content-accent-color-active: var(--accent5) !imp
+  --in-content-accent-color-active: var(--accent5) !imp
   --in-content-border-color: var(--shade2) !important;
   --in-content-border-hover: var(--shade3) !important;
   --in-content-border-invalid: var(--accent0) !important;
@@ -32,13 +32,13 @@
   --in-content-button-background-active: var(--shade2) !important;
   --in-content-danger-button-background: var(--accent0) !important;
   --in-content-danger-button-background-hover: var(--accent0) !important;
-	--in-content-danger-button-background-active: var(--accent0) !important;
+  --in-content-danger-button-background-active: var(--accent0) !important;
   --in-content-deemphasized-text: var(--shade6) !important;
   --in-content-error-text-color: var(--accent0) !important;
   --in-content-icon-color: var(--shade7) !important;
   --in-content-link-color: var(--accent5) !important;
-	--in-content-link-color-hover: var(--accent5) !important;
-	--in-content-link-color-active: var(--accent5) !important;
+  --in-content-link-color-hover: var(--accent5) !important;
+  --in-content-link-color-active: var(--accent5) !important;
   --in-content-link-color-visited: var(--accent5) !important;
   --in-content-page-background: var(--shade1) !important;
   --in-content-page-color: var(--shade7) !important;
@@ -48,8 +48,7 @@
   --in-content-primary-button-text-color: var(--shade7) !important;
   --in-content-table-background: var(--shade0) !important;
 	
-  
-	/* devtoos */
+  /* devtoos */
   /* https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html */ 
   --console-input-background: var(--shade1) !important;
   --markup-hidden-attr-name-color: var(--accent0) !important;
@@ -91,11 +90,6 @@
   
 }
 
-/* #preferences-body { */
-/* 	background: var(--shade0) !important; */
-/* 	font-family: Segoe, sans-serif !important; */
-/* } */
-
 /* search bar in settings */
 #preferences-body .sticky-container {
   background-color: transparent !important;
@@ -107,14 +101,13 @@
 .devtools-searchbox > .devtools-filterinput,
 .devtools-tabbar,
 .theme-sidebar {
-	background: var(--shade0) !important;
+  background: var(--shade0) !important;
 }
 
 /* devtools */
-
 .devtools-tabbar,
 .theme-sidebar {
-	color: var(--shade7) !important;
+  color: var(--shade7) !important;
 }
 
 .devtools-tab:hover,
@@ -130,7 +123,7 @@
 .ruleview-selector-separator,
 .ruleview-selector-unmatched,
 .ruleview-unmatched-variable {
-	color: var(--shade3) !important;
+  color: var(--shade3) !important;
 }
 
 .tabs .tabs-navigation {

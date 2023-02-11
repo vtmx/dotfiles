@@ -96,11 +96,12 @@ body {
   box-shadow: none !important;
 }
 
-/* tab */
+/* tab height */
 #TabsToolbar {
   height: 32px !important;
 }
 
+/* tab height */
 .tabbrowser-tab {
   height: 32px !important;
 }
@@ -194,12 +195,10 @@ body {
   min-height: var(--urlbar-container-height) !important;
 }
 
-
 /* font-size url */
 .urlbarView-url {
   font-size: inherit !important;
 }
-
 
 /* hide search site list */
 #urlbar .search-one-offs:not([hidden]) {
@@ -237,6 +236,11 @@ body {
   display: block !important;
 }
 
+/* hide icon extension */
+#unified-extensions-button {
+  display: none !important;
+}
+
 /* hide icon reader */
 #urlbar-container #reader-mode-button {
   display: none !important;
@@ -246,7 +250,6 @@ body {
 #urlbar-container #star-button {
   display: none !important;
 }
-
 
 #urlbar-container #star-button[starred] {
  fill: var(--shade3) !important;
