@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'folke/zen-mode.nvim'
   use 'folke/twilight.nvim'
+  use 'junegunn/vim-slash'
 
   -- Syntaxes
   use 'baskerville/vim-sxhkdrc'
