@@ -1,6 +1,9 @@
 # color
 colorscheme onedarkv
 
+# start in view 3
+set start_view=playlist
+
 # up down
 bind -f common g win-top
 bind -f common G win-bottom
