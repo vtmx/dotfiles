@@ -108,26 +108,22 @@ end
 # entr
 if type -q entr
   # watch sh
-  alias wsh="wsh"
+  alias watch="watch"
 
-  function wsh
-    if test -e "$argv"
-      echo $argv | entr -c ./$argv 
+  # function for watch file and execute after save
+  function watch
+    if test -e $argv
+      set file_extension (echo $argv | awk -F . '{print $NF}')
+
+      if [ $file_extension = 'sh' ]
+        find $argv | entr -cr ./$argv 
+      else if [ $file_extension = 'js' ]
+        find $argv | entr -cr node $argv
+      end
     else
       echo "Arquivo não existe: $argv"
     end
-  end # wsh
-
-  # watch js
-  alias wjs="wjs"
-
-  function wjs
-    if test -e "$argv"
-      echo $argv | entr node $argv 
-    else
-      echo "Arquivo não existe: $argv"
-    end
-  end # wjs
+  end # watch
 end
 
 # exa
