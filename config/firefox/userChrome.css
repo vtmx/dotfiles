@@ -71,8 +71,7 @@ body {
 	display: none !important;
 }
 
-#titlebar #tabs-newtab-button,
-#titlebar .tab-icon-stack {
+#titlebar #tabs-newtab-button {
   opacity: 0 !important;
   transition: all .2s;
 }
