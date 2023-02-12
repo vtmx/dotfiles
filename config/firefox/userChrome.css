@@ -63,21 +63,56 @@ body {
   font-size: 13px !important;
 }
 
-/* hide space init tab */
-.titlebar-spacer {
+/* titlebar hide elements  */
+#titlebar #alltabs-button,
+#titlebar #firefox-view-button,
+#titlebar .titlebar-spacer,
+#titlebar .titlebar-buttonbox-container {
 	display: none !important;
 }
 
-/* hide window control buttons */
-.titlebar-buttonbox-container {
+#titlebar #tabs-newtab-button,
+#titlebar .tab-icon-stack {
+  opacity: 0 !important;
+  transition: all .2s;
+}
+
+#titlebar:hover #tabs-newtab-button {
+  opacity: 1 !important;
+}
+
+/* nav-bar hide elements */
+#nav-bar #identity-box,
+#nav-bar #identity-permission-box,
+#nav-bar #tracking-protection-icon-container {
   display: none !important;
 }
 
-#navigator-toolbox-background {
-  background: var(--shade1) !important;
+#nav-bar #back-button, 
+#nav-bar #forward-button,
+#nav-bar #nav-bar-overflow-button,
+#nav-bar #reader-mode-button,
+#nav-bar #star-button,
+#nav-bar #unified-extensions-button,
+#nav-bar #PanelUI-menu-button,
+#nav-bar .webextension-browser-action {
+  opacity: 0 !important;
+  transition: all .2s;
 }
 
-#titlebar, #PersonalToolbar {
+/* nav-bar show elements on hover */
+#nav-bar:hover #back-button, 
+#nav-bar:hover #forward-button,
+#nav-bar:hover #nav-bar-overflow-button,
+#nav-bar:hover #reader-mode-button,
+#nav-bar:hover #star-button,
+#nav-bar:hover #unified-extensions-button,
+#nav-bar:hover #PanelUI-menu-button,
+#nav-bar:hover .webextension-browser-action {
+  opacity: 1 !important;
+}
+
+#navigator-toolbox-background {
   background: var(--shade1) !important;
 }
 
@@ -85,9 +120,8 @@ body {
   border: none !important;
 }
 
-/* hide firefox logo button */
-#firefox-view-button {
-  display: none !important;
+#titlebar, #PersonalToolbar {
+  background: var(--shade1) !important;
 }
 
 /* nav-bar */
@@ -96,16 +130,18 @@ body {
   box-shadow: none !important;
 }
 
-/* tab height */
-#TabsToolbar {
-  height: 32px !important;
-}
-
-/* tab height */
+/* tabs */
+#TabsToolbar,
 .tabbrowser-tab {
   height: 32px !important;
 }
 
+/* tabs remove padding */
+.tabbrowser-tab {
+  padding: 0 !important;
+}
+
+/* tabs color */
 .tabbrowser-tab .tab-content {
   color: var(--shade3) !important;
 }
@@ -116,15 +152,28 @@ body {
   margin-inline-start: 0 !important;
 }
 
+/* tab hide favicons */
+.tabbrowser-tab .tab-icon-stack {
+  opacity: 0 !important;
+  transition: all .2s;
+}
+
+/* tab show favicons on hover */
+.tabbrowser-tab[visuallyselected="true"] .tab-icon-stack,
+.tabbrowser-tab:hover .tab-icon-stack {
+  opacity: 1 !important;
+}
+
 /* tab hover background */
 .tabbrowser-tab:hover .tab-background {
   background: var(--shade4) !important;
+  transition: all .05s !important;
 }
 
 /* tab active background */
 .tabbrowser-tab[visuallyselected="true"] .tab-background {
   background: var(--shade4) !important;
-} 
+}
 
 /* tab hover color */
 .tabbrowser-tab:hover .tab-content {
@@ -136,12 +185,24 @@ body {
   color: #c4cbd8 !important;
 }
 
-/* new tab button icon */
+/* tab hide icon close */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  opacity: 0 !important;
+  color: var(--shade5) !important;
+  transition: all .2s !imporntat;
+}
+
+/* tab show close on hover */
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 1 !important;
+}
+
+/* tab new tab button */
 #tabs-newtab-button .toolbarbutton-icon {
   fill: var(--shade3) !important;
 }
 
-/* new tab button icon hover */
+/* tab new tab button on hover */
 #tabs-newtab-button:hover .toolbarbutton-icon {
   background: var(--shade4) !important;
   fill: var(--shade7) !important;
@@ -152,19 +213,13 @@ body {
   background: var(--shade4);
 }
 
-/* hide import button */
-#import-button {
-  display: none !important;
-}
-
 /* urlbar */
 
-/* remove background if not hover
+/* remove background if not hover */
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
   background: none !important;
   box-shadow: none !important;
 }
-*/
 
 #urlbar,
 #urlbar * {
@@ -205,60 +260,9 @@ body {
   display: none !important;
 }
 
-/* hide all tabs buttons */
-#alltabs-button {
-	display: none !important;
-}
-
-/* hide icon search */
-#identity-box {
-  display: none !important;
-}
-
-/* hide icon shield */
-#tracking-protection-icon-container {
-  display: none !important;
-}
-
-/* remove padding tabs */
-.tabbrowser-tab {
-  padding: 0 !important;
-}
-
-/* hide icon new tab */
-.tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: none !important;
-  color: var(--shade5) !important;
-}
-
-/* show close button on hover */
-.tabbrowser-tab:not([pinned]):hover .tab-close-button {
-  display: block !important;
-}
-
-/* hide icon extension */
-#unified-extensions-button {
-  display: none !important;
-}
-
-/* hide icon reader */
-#urlbar-container #reader-mode-button {
-  display: none !important;
-}
-
-/* hide icon bookmarks */
-#urlbar-container #star-button {
-  display: none !important;
-}
-
+/* change color bookmarks icon */
 #urlbar-container #star-button[starred] {
  fill: var(--shade3) !important;
-}
-
-/* show icons when urlbar hover */
-#urlbar-container:hover #star-button,
-#urlbar-container:hover #reader-mode-button {
-  display: block !important;
 }
 
 /* bookmarks */
