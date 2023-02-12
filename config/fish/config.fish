@@ -147,12 +147,14 @@ end
 # ctrl-r - Paste the selected command from history onto the command-line
 #  alt-c - cd into the selected directory
 if type -q fzf
-  set -gx FZF_DEFAULT_OPTS '
+  set -gx FZF_DEFAULT_OPTS "
   --height 50% --reverse
   --color=fg:#'$shade7',bg:#'$shade0',hl:#'$accent5'
   --color=fg+:#'$shade7',bg+:#'$shade2',hl+:#'$accent5',gutter:#'$shade0'
   --color=info:#'$shade3',prompt:#'$accent3',pointer:#'$shade7'
-  --color=marker:#'$shade7',spinner:#'$shade7',header:#'$shade7
+  --color=marker:#'$shade7',spinner:#'$shade7',header:#'$shade7'
+  --color=border:#'$shade4'
+  --preview 'bat -n --color=always {}'"
 end
 
 # git
