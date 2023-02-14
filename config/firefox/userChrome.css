@@ -232,20 +232,20 @@ body {
   padding-left: 8px !important;
 }
 
-/* urlbar remove background if not hover */
-#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
-  background: none !important;
-}
-
 /* urlbar add transition when hover */
 #urlbar #urlbar-background {
+  border: none !important;
   transition: all .2s !important;
 }
 
-/* urlbar remove border */
-#urlbar #urlbar-background {
+/* urlbar remove background if not focus */
+#urlbar:not([focused]) #urlbar-background {
+  background: none !important;
+}
+
+/* urlbar change background on focus */
+#urlbar[focused] #urlbar-background {
   background: var(--shade1) !important;
-  border: none !important;
 }
 
 /* urlbar show border when active */
