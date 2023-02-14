@@ -128,13 +128,13 @@ ForegroundPositive=#98c379
 ForegroundVisited=#c678dd
 
 [General]
-ColorScheme=kde
+ColorScheme=OneDarkV
 Name=- One Dark V -
 accentActiveTitlebar=false
 shadeSortColumn=true
 
 [KDE]
-contrast=4
+contrast=0
 
 [WM]
 activeBackground=#1e2227
