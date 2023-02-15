@@ -234,6 +234,7 @@ body {
 
 /* urlbar add transition when hover */
 #urlbar #urlbar-background {
+  background: var(--shade1) !important;
   border: none !important;
   transition: all .2s !important;
 }
@@ -244,11 +245,13 @@ body {
 }
 
 /* urlbar change background on focus */
+#urlbar:hover #urlbar-background,
 #urlbar[focused] #urlbar-background {
   background: var(--shade1) !important;
 }
 
 /* urlbar show border when active */
+#urlbar[breakout] #urlbar-background,
 #urlbar[breakout][breakout-extend] #urlbar-background {
   border: 1px solid var(--shade4) !important;
 }
@@ -266,11 +269,27 @@ body {
 }
 
 /* urlbar font-size url */
-.urlbarView-url {
+#urlbar .urlbarView-url {
   font-size: inherit !important;
 }
 
-/* hide search site list */
+/* urlbar item list */
+#urlbar .urlbarView-row {
+  border-radius: 2px;
+  transition: all .1s !important;
+}
+
+/* urlbar item list on hover */
+#urlbar .urlbarView-row:hover {
+  background: var(--shade2) !important;
+}
+
+/* urlbar item list url */
+#urlbar .urlbarView-url {
+  color: var(--shade5) !important;
+}
+
+/* hide search end site list */
 #urlbar .search-one-offs:not([hidden]) {
   display: none !important;
 }
@@ -286,4 +305,23 @@ body {
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 2px 4px 4px 4px !important;
   padding: 4px 8px !important;
+}
+
+#appMenu-popup[panelopen] {
+  border-color: red !important;
+}
+
+/* appMenu-popup */
+#appMenu-popup .panel-viewcontainer[panelopen] {
+  background: var(--shade1) !important;
+}
+
+/* appMenu-popup item */
+#appMenu-popup .subviewbutton {
+  transition: all .1s !important;
+}
+
+/* appMenu-popup item on hover */
+#appMenu-popup .subviewbutton:hover {
+  background: var(--shade2) !important;
 }

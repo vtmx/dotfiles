@@ -131,7 +131,7 @@ ForegroundVisited=#c678dd
 ColorScheme=OneDarkV
 Name=- One Dark V -
 accentActiveTitlebar=false
-shadeSortColumn=true
+shadeSortColumn=false
 
 [KDE]
 contrast=0
@@ -143,3 +143,5 @@ activeForeground=#abb2bf
 inactiveBackground=#1e2227
 inactiveBlend=#1e2227
 inactiveForeground=#5c6370
+
+; vim: set ft=dosini:
