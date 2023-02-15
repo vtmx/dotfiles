@@ -144,3 +144,4 @@ inactiveBackground=#181b1b
 inactiveBlend=#181b1b
 inactiveForeground=#788787
 
+; vim: set ft=dosini:
