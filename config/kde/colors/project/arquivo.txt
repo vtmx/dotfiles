@@ -1,0 +1,2 @@
+atributo1=valor1
+atributo2=valor2
