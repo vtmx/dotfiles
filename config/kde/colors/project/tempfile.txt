@@ -1,0 +1,13 @@
+[Colors]
+shade0=#23272e
+shade1=#1e2227
+shade2=#3d4556
+accent0=#ff0000
+accent1=#98c379
+accent2=#be5046
+
+[Colors:Button]
+BackgroundAlternate=#23272e
+BackgroundNormal=#1e2227
+DecorationFocus=#ff0000
+ForegroundLink=#be5046
