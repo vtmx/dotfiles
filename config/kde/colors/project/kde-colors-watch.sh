@@ -4,8 +4,8 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-
 main() {
+  clear
   filebase=$(pwd)"/Base.colors"
 
   # Check if filebase exist
@@ -22,9 +22,6 @@ main() {
 
   # Write color scheme file
   cat "${filebase}" > "${tempfile}"
-
-  # Replace attribute for values
-
 
   # declare -A attributes
   #
@@ -45,11 +42,16 @@ main() {
   # Remove the blocks of variables
   sed -i '/\[Colors\]/,/^$/d' "${tempfile}"
 
-  cat "${tempfile}"
+  # Copy file
+  echo "Copy colorscheme file..."
+  cp -f "${tempfile}" "${HOME}/.local/share/color-schemes"
+
+  # Aplly color scheme
+  # plasma-apply-colorscheme "${base_colorscheme_name}"
 }
 
 get_base_colorscheme_name() {
-  echo $(grep -oP '((?<=Name=).*)' "${1}")
+  echo $(grep -oP '((?<=ColorScheme=).*)' "${1}")
 }
 
 get_current_colorscheme_name() {
