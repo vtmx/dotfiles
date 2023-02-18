@@ -1,23 +1,77 @@
 #!/usr/bin/env bash
 
-# Check if fzf exist
-if type fzf > /dev/null; then
-  # List themes
-  theme_name=$(plasma-apply-colorscheme --list-schemes | fzf)
+set -o errexit
+set -o pipefail
+set -o nounset
 
-  # Format theme name
-  theme_name=$(sed 's/ \* //' <<< $theme_name)
 
-  # Apply theme name
-  plasma-apply-colorscheme $theme_name
-else
-  echo "Command fzf not exist, install in:
-https://github.com/junegunn/fzf#installation"
-fi
+main() {
+  filebase=$(pwd)"/Base.colors"
 
-# References
-# https://www.reddit.com/r/kde/comments/8oq8vm/change_kde_color_scheme_from_terminal
-# https://stackoverflow.com/questions/35920314/have-sed-operate-on-variable-instead-of-standard-input-or-a-file
-# https://terminalroot.com.br/2015/07/30-exemplos-do-comando-sed-com-regex.html
-# https://www.mankier.com/1/fzf
-# https://www.redhat.com/sysadmin/fzf-linux-fuzzy-finder
+  # Check if filebase exist
+  [[ ! -f "${filebase}" ]] && exit_error "Error: File ${filebase} not exist" 
+
+  # Get filebase colorscheme name
+  base_colorscheme_name=$(get_base_colorscheme_name "${filebase}")
+
+  # Get attr and values of [Colors]
+  filebase_vars=$(grep -ozP '(?<=\[Colors\]\n)[\s\S]*?(?=\n\[|\z)' "${filebase}" | tr '\0' '\n')
+
+  # Create color scheme file
+  tempfile="${base_colorscheme_name}.colors"
+
+  # Write color scheme file
+  cat "${filebase}" > "${tempfile}"
+
+  # Replace attribute for values
+
+
+  # declare -A attributes
+  #
+  # while read -r par; do
+  #   attributes["${par#*=}"]="${par%=*}"
+  # done <<< "${filebase_vars}"
+
+  # for value in "${!attributes[@]}"; do
+  #   sed -i "s/\$${attributes[$value]}/${value}/g" "$tempfile"
+  # done
+
+  while read -r line; do
+    attribute=("\$${line%=*}")
+    value=("${line#*=}")
+    sed -i "s/${attribute}/${value}/g" "$tempfile"
+  done <<< ${filebase_vars}
+
+  # Remove the blocks of variables
+  sed -i '/\[Colors\]/,/^$/d' "${tempfile}"
+
+  cat "${tempfile}"
+}
+
+get_base_colorscheme_name() {
+  echo $(grep -oP '((?<=Name=).*)' "${1}")
+}
+
+get_current_colorscheme_name() {
+  local current_colorscheme=$(plasma-apply-colorscheme --list-schemes | grep -m1 -E '\s\*\s\w*' | cut -d' ' -f3)
+  echo "${current_colorscheme}"
+}
+
+exit_success() {
+  local message="$1"
+  local green="\033[0;32m"
+  local color_off="\033[0m"
+  echo -e "${green}${message}${color_off}\n"
+  exit 0
+}
+
+exit_error() {
+  local message="$1"
+  local red="\033[0;31m"
+  local color_off="\033[0m"
+  echo -e "${red}${message}${color_off}\n"
+  exit 1
+}
+
+main
+
