@@ -46,7 +46,7 @@ get_base_colorscheme_name() {
 }
 
 get_current_colorscheme_name() {
-  local current_colorscheme=$(plasma-apply-colorscheme --list-schemes | grep -m1 -E '\s\*\s\w*' | cut -d' ' -f3)
+  local current_colorscheme=$(plasma-apply-colorscheme --list-schemes | grep current | awk '{print $2}')
   echo "${current_colorscheme}"
 }
 
