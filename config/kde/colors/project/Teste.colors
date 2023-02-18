@@ -33,7 +33,7 @@ ForegroundPositive=#98c379
 ForegroundVisited=#c678dd
 
 [Colors:Complementary]
-BackgroundNormal=#222222
+BackgroundNormal=#ff0000
 DecorationFocus=#5c6370
 DecorationHover=#5c6370
 ForegroundActive=#abb2bf
@@ -87,8 +87,8 @@ ForegroundPositive=#98c379
 ForegroundVisited=#c678dd
 
 [Colors:Tooltip]
-BackgroundAlternate=#222222
-BackgroundNormal=#222222
+BackgroundAlternate=#ff0000
+BackgroundNormal=#ff0000
 DecorationFocus=#57a5ed
 ForegroundActive=#abb2bf
 ForegroundInactive=#5c6370
@@ -114,8 +114,8 @@ ForegroundPositive=#98c379
 ForegroundVisited=#c678dd
 
 [Colors:Window]
-BackgroundAlternate=#222222
-BackgroundNormal=#222222
+BackgroundAlternate=#ff0000
+BackgroundNormal=#ff0000
 DecorationFocus=#3d4556
 DecorationHover=#3d4556
 ForegroundActive=#abb2bf
@@ -136,9 +136,9 @@ shadeSortColumn=false
 contrast=4
 
 [WM]
-activeBackground=#222222
-activeBlend=#222222
+activeBackground=#ff0000
+activeBlend=#ff0000
 activeForeground=#abb2bf
-inactiveBackground=#222222
-inactiveBlend=#222222
+inactiveBackground=#ff0000
+inactiveBlend=#ff0000
 inactiveForeground=#5c6370

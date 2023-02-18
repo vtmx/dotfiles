@@ -23,16 +23,7 @@ main() {
   # Write color scheme file
   cat "${filebase}" > "${tempfile}"
 
-  # declare -A attributes
-  #
-  # while read -r par; do
-  #   attributes["${par#*=}"]="${par%=*}"
-  # done <<< "${filebase_vars}"
-
-  # for value in "${!attributes[@]}"; do
-  #   sed -i "s/\$${attributes[$value]}/${value}/g" "$tempfile"
-  # done
-
+  # Loop line
   while read -r line; do
     attribute=("\$${line%=*}")
     value=("${line#*=}")
