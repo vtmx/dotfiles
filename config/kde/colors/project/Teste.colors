@@ -1,0 +1,14 @@
+[Colors:Window]
+BackgroundAlternate=#23272e
+BackgroundNormal=#1e2227
+DecorationFocus=#3d4556
+
+[Colors:View]
+BackgroundAlternate=#3d4556
+BackgroundNormal=#1e2227
+DecorationFocus=#23272e
+
+[General]
+ColorScheme=Teste
+Name=Teste
+shadeSortColumn=false
