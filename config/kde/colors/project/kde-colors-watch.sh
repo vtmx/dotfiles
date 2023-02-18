@@ -68,3 +68,5 @@ exit_error() {
 
 main
 
+# References
+# https://raw.githubusercontent.com/justjokiing/kshift/main/src/kshift
