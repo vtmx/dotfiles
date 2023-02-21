@@ -1,26 +1,11 @@
 #!/usr/bin/env bash
 
-clear
-echo
-echo "---------------------------------"
-echo " Dotfiles - Vitor Melo"
-echo "---------------------------------"
-echo
+echo "Atualizando fish..."
+wget -qOP "$HOME/.config/fish" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/fish/config.fish"
 
-if [[ -e dotfiles ]]; then
-  rm -rdf dotfiles
-fi
+echo "Atualizando kitty..."
+wget -qOP "$HOME/.config/kitty" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/kitty/kitty.conf"
 
-git clone https://github.com/vtmx/dotfiles.git
-
-if [[ $? -ne 0 ]]; then
-  exit 1
-fi
-
-echo "Copying 'dotfiles'..."
-cp -f dotfiles/config/fish/config.fish $HOME/.config/fish
-cp -f dotfiles/config/kitty/kitty.conf $HOME/.config/kitty
-cp -f dotfiles/config/vscode/*.* $HOME/.config/Code/User
-cp -rf dotfiles/config/nvim $HOME/.config
-
-rm -rdf dotfiles
+echo "Atualizando code..."
+wget -qOP "$HOME/.config/Code/User" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/vscode/keybindings.json"
+wget -qOP "$HOME/.config/Code/User" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/vscode/settings.json"

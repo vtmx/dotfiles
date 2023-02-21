@@ -4,50 +4,59 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
+filebase=$(pwd)"/Base.colors"
+colorscheme_dir="${HOME}/.local/share/color-schemes"
+
 main() {
-  clear
-  filebase=$(pwd)"/Base.colors"
+  echo "Geting colorscheme name..."
+  filebase_colorscheme_name=$(grep -oP '((?<=ColorScheme=).*)' "${filebase}")
 
-  # Check if filebase exist
-  [[ ! -f "${filebase}" ]] && exit_error "Error: File ${filebase} not exist" 
+  echo "Geting variables..."
+  filebase_vars=$(grep -Poz '(?<=\[Colors\]\n)[\s\S]*?(?=\n\[|\z)' "${filebase}" | tr '\0' '\n')
 
-  # Get filebase colorscheme name
-  base_colorscheme_name=$(get_base_colorscheme_name "${filebase}")
+  echo "Creating tempfile..."
+  tempfile="${filebase_colorscheme_name}.colors"
+  cp -f "${filebase}" "${tempfile}"
 
-  # Get attr and values of [Colors]
-  filebase_vars=$(grep -ozP '(?<=\[Colors\]\n)[\s\S]*?(?=\n\[|\z)' "${filebase}" | tr '\0' '\n')
-
-  # Create color scheme file
-  tempfile="${base_colorscheme_name}.colors"
-
-  # Write color scheme file
-  cat "${filebase}" > "${tempfile}"
-
-  # Loop line
+  echo "Replacing vars in file..."
   while read -r line; do
     attribute=("\$${line%=*}")
     value=("${line#*=}")
     sed -i "s/${attribute}/${value}/g" "$tempfile"
   done <<< ${filebase_vars}
 
-  # Remove the blocks of variables
+  echo "Formating colorscheme file..."
   sed -i '/\[Colors\]/,/^$/d' "${tempfile}"
 
   # Copy file
-  echo "Copy colorscheme file..."
-  cp -f "${tempfile}" "${HOME}/.local/share/color-schemes"
+  echo "Copying colorscheme file..."
+  cp -f "${tempfile}" "${colorscheme_dir}"
 
-  # Aplly color scheme
-  # plasma-apply-colorscheme "${base_colorscheme_name}"
+  echo "Apllying color scheme..."
+  plasma-apply-colorscheme BreezeDark > /dev/null
+  plasma-apply-colorscheme "${filebase_colorscheme_name}" > /dev/null
 }
 
-get_base_colorscheme_name() {
-  echo $(grep -oP '((?<=ColorScheme=).*)' "${1}")
+check_prerequisites() {
+  if ! type entr > /dev/null; then
+    exit_error "Command not exist: entr "
+  fi
+
+  if ! plasma-apply-colorscheme > /dev/null; then
+    exit_error "Command not exist: plasma-apply-colorscheme"
+  fi
+
+  if [[ ! -d "${colorscheme_dir}" ]]; then
+    exit_error "Dir not exist: ${colorscheme_dir}"
+  fi
+
+  if [[ ! -f "${filebase}" ]]; then
+    exit_error "File not exist: ${filebase}" 
+  fi
 }
 
 get_current_colorscheme_name() {
-  local current_colorscheme=$(plasma-apply-colorscheme --list-schemes | grep current | awk '{print $2}')
-  echo "${current_colorscheme}"
+  echo $(plasma-apply-colorscheme --list-schemes | grep current | awk '{print $2}')
 }
 
 exit_success() {
@@ -66,7 +75,10 @@ exit_error() {
   exit 1
 }
 
+echo
+check_prerequisites
 main
+exit_success "Colorscheme applyied"
 
 # References
 # https://raw.githubusercontent.com/justjokiing/kshift/main/src/kshift
