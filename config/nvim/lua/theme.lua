@@ -6,39 +6,40 @@ local c = require('colors')
 
 local highlights = {
   -- general
-  Normal   = { fg = c.shade7, ctermfg = 255, ctermbg = 234 },
-  Comment  = { fg = c.shade3, ctermfg = 7,   italic = true },
-  Twilight = { fg = c.shade3 },
+  Normal         = { fg = c.shade7, ctermfg = 255, ctermbg = 234 },
+  Comment        = { fg = c.shade3, ctermfg = 7,   italic = true },
+  Title          = { fg = c.accent6 },
+  Twilight       = { fg = c.shade3  },
 
   -- sintaxy
-  Boolean     = { fg = c.accent1 },
-  Character   = { fg = c.accent3 },
-  Conditional = { fg = c.accent6 },
-  Constant    = { fg = c.accent1 },
-  Define      = { fg = c.accent6 },
-  ErrorMsg    = { fg = c.accent0 },
-  Exception   = { fg = c.accent6 },
-  Float       = { fg = c.accent1 },
-  Function    = { fg = c.accent5 },
-  Identifier  = { fg = c.accent0 },
-  Include     = { fg = c.accent6 },
-  Keyword     = { fg = c.accent6 },
-  Label       = { fg = c.accent0 },
-  Macro       = { fg = c.accent0 },
-  Number      = { fg = c.accent1 },
-  Operator    = { fg = c.accent4 },
-  PreCondit   = { fg = c.accent6 },
-  PreProc     = { fg = c.accent6 },
-  Repeat      = { fg = c.accent6 },
-  Tag         = { fg = c.accent3 },
-  Statement   = { fg = c.accent6 },
-  String      = { fg = c.accent3 },
+  Boolean        = { fg = c.accent1 },
+  Character      = { fg = c.accent3 },
+  Conditional    = { fg = c.accent6 },
+  Constant       = { fg = c.accent1 },
+  Define         = { fg = c.accent6 },
+  ErrorMsg       = { fg = c.accent0 },
+  Exception      = { fg = c.accent6 },
+  Float          = { fg = c.accent1 },
+  Function       = { fg = c.accent5 },
+  Identifier     = { fg = c.accent0 },
+  Include        = { fg = c.accent6 },
+  Keyword        = { fg = c.accent6 },
+  Label          = { fg = c.accent0 },
+  Macro          = { fg = c.accent0 },
+  Number         = { fg = c.accent1 },
+  Operator       = { fg = c.accent4 },
+  PreCondit      = { fg = c.accent6 },
+  PreProc        = { fg = c.accent6 },
+  Repeat         = { fg = c.accent6 },
+  Tag            = { fg = c.accent3 },
+  Statement      = { fg = c.accent6 },
+  String         = { fg = c.accent3 },
 
   -- keys [] {} ()
-  Type         = { fg = c.accent6 },
-  Typedef      = { fg = c.accent6 },
-  StorageClass = { fg = c.accent6 },
-  Structure    = { fg = c.accent6 },
+  Type           = { fg = c.accent6 },
+  Typedef        = { fg = c.accent6 },
+  StorageClass   = { fg = c.accent6 },
+  Structure      = { fg = c.accent6 },
 
   -- extras
   Debug          = { fg = c.accent2 },
@@ -52,34 +53,34 @@ local highlights = {
   TermCursor     = { fg = c.shade7  },
 
   -- float popup
-  NormalFloat = { bg = c.shade0 },
-  FloatBorder = { bg = c.shade0 },
+  NormalFloat    = { bg = c.shade0 },
+  FloatBorder    = { bg = c.shade0 },
 
   -- search
-  Delimiter  = { fg = c.accent6 },
-  IncSearch  = { bg = c.shade2  },
-  MatchParen = { fg = c.accent2 },
-  Search     = { bg = c.shade2  },
+  Delimiter      = { fg = c.accent6 },
+  IncSearch      = { bg = c.shade2  },
+  MatchParen     = { fg = c.accent2 },
+  Search         = { bg = c.shade2  },
 
   -- messages
-  ModeMsg    = { fg = c.shade3  },
-  MoreMsg    = { fg = c.shade3  },
-  Question   = { fg = c.shade7  },
-  WarningMsg = { fg = c.accent2 },
+  ModeMsg        = { fg = c.shade3  },
+  MoreMsg        = { fg = c.shade3  },
+  Question       = { fg = c.shade7  },
+  WarningMsg     = { fg = c.accent2 },
 
   -- alerts
-  Ignore = { fg = c.shade7  },
-  Error  = { fg = c.accent0 },
-  Todo   = { fg = c.accent6 },
+  Ignore         = { fg = c.shade7  },
+  Error          = { fg = c.accent0 },
+  Todo           = { fg = c.accent6 },
 
   -- line tilde blank ~
-  EndOfBuffer = { fg = c.shade0 },
+  EndOfBuffer    = { fg = c.shade0 },
 
   -- line highlight
-  CursorLine = { bg = c.shade4 },
+  CursorLine     = { bg = c.shade4 },
 
   -- select text
-  Visual = { bg = c.shade2 },
+  Visual         = { bg = c.shade2 },
 
   -- line number column
   CursorLineFold = { fg = c.shade7 },
@@ -90,10 +91,10 @@ local highlights = {
   LineNrBelow    = { fg = c.shade3 },
 
   -- pmenu
-  Pmenu      = { bg = c.shade1 },
-  PmenuSbar  = { bg = c.shade1 },
-  PmenuSel   = { bg = c.shade4 },
-  PmenuThumb = { bg = c.shade4 },
+  Pmenu          = { bg = c.shade1 },
+  PmenuSbar      = { bg = c.shade1 },
+  PmenuSel       = { bg = c.shade4 },
+  PmenuThumb     = { bg = c.shade4 },
 
   -- pmenu coc
   CocFloating       = { bg = c.shade1  },
@@ -107,49 +108,51 @@ local highlights = {
   CocSearch         = { fg = c.accent5 },
 
   -- tab bar
-  WinbarNC = { fg = c.shade3 },
+  WinbarNC          = { fg = c.shade3 },
 
   -- line win separator split
-  StatusLine   = { bg = 'NONE'   },
-  StatusLineNC = { fg = c.shade7 },
-  WinSeparator = { fg = c.shade2 },
+  StatusLine        = { bg = 'NONE'   },
+  StatusLineNC      = { fg = c.shade7 },
+  WinSeparator      = { fg = c.shade2 },
 
   -- Languages
 
   -- html
-  htmlArg = { fg = c.accent2 }, -- atribute
-  htmlH1  = { fg = c.shade7 },
-  htmlH2  = { link = 'htmlH1' },
-  htmlH3  = { link = 'htmlH1' },
-  htmlH4  = { link = 'htmlH1' },
-  htmlH5  = { link = 'htmlH1' },
-  htmlH6  = { link = 'htmlH1' },
+  htmlArg            = { fg = c.accent2 }, -- atribute
+  htmlH1             = { fg = c.shade7 },
+  htmlH2             = { link = 'htmlH1' },
+  htmlH3             = { link = 'htmlH1' },
+  htmlH4             = { link = 'htmlH1' },
+  htmlH5             = { link = 'htmlH1' },
+  htmlH6             = { link = 'htmlH1' },
   htmlSpecialTagName = { fg = c.accent0 },
-  htmlTag     = { fg = c.shade7 },
-  htmlTagName = { fg = c.accent0 },
-  htmlTitle   = { fg = c.shade7 },
-  htmlLink    = { fg = c.shade7 },
+  htmlTag            = { fg = c.shade7 },
+  htmlTagName        = { fg = c.accent0 },
+  htmlTitle          = { fg = c.shade7 },
+  htmlLink           = { fg = c.shade7 },
 
   -- markdown
-  markdownBlockquote = { fg = c.shade7 },
-  markdownCodeDelimiter = { fg = c.shade7 },
-  markdownH1 = { link = 'htmlH1' },
-  markdownH3 = { link = 'htmlH1' },
-  markdownH4 = { link = 'htmlH1' },
-  markdownH5 = { link = 'htmlH1' },
-  markdownH6 = { link = 'htmlH1' },
-  markdownHeadingDelimiter = { link = 'htmlH1' },
-  markdownHeadingRule = { link = 'htmlH1' },
-  markdownListMarker = { fg = c.accent2 },
-  markdownRule = { link = 'htmlH1' },
-  markdownUrl = { fg = c.shade7 },
+  markdownBlockquote       = { fg = c.shade7 },
+  markdownCodeDelimiter    = { fg = c.shade7 },
+  markdownId               = { link = 'markdownH1' },
+  markdownH1               = { fg = c.accent6      },
+  markdownH2               = { link = 'markdownH1' },
+  markdownH3               = { link = 'markdownH1' },
+  markdownH4               = { link = 'markdownH1' },
+  markdownH5               = { link = 'markdownH1' },
+  markdownH6               = { link = 'markdownH1' },
+  markdownHeadingDelimiter = { link = 'markdownH1' },
+  markdownHeadingRule      = { link = 'markdownH1' },
+  markdownListMarker       = { fg = c.accent2 },
+  markdownRule             = { link = 'markdownH1' },
+  markdownUrl              = { fg = c.shade7 },
 
   -- css
   cssClassNameDot = { fg = c.accent1 },
-  cssClassName = { link = 'cssClassNameDot' },
-  cssHacks = { fg = c.shade7 },
-  cssTagName = { fg = c.accent0 },
-  cssVendor = { fg = c.shade7 },
+  cssClassName    = { link = 'cssClassNameDot' },
+  cssHacks        = { fg = c.shade7 },
+  cssTagName      = { fg = c.accent0 },
+  cssVendor       = { fg = c.shade7 },
 
   -- Plugins
 
@@ -165,11 +168,11 @@ local highlights = {
   BufferLineModified           = { bg = 'NONE' },
 
   -- hop
-  HopNextKey   = { fg = c.accent0 },
-  HopNextKey1  = { fg = c.accent5 },
-  HopNextKey2  = { fg = c.accent1 },
-  HopNextKey3  = { fg = c.accent6 },
-  HopUnmatched = { fg = c.shade3  },
+  HopNextKey               = { fg = c.accent0 },
+  HopNextKey1              = { fg = c.accent5 },
+  HopNextKey2              = { fg = c.accent1 },
+  HopNextKey3              = { fg = c.accent6 },
+  HopUnmatched             = { fg = c.shade3  },
 
   -- nvim-tree
   NvimTreeCursorLine       = { bg = c.shade4 },
@@ -186,24 +189,24 @@ local highlights = {
   NvimTreeWindowPicker     = { fg = c.shade7 },
 
   -- telescope
-  TelescopeMultiSelection = { fg = c.shade7 },
-  TelescopeMultiIcon      = { fg = c.shade7 },
-  TelescopeNormal         = { fg = c.shade7 },
-  TelescopePreviewNormal  = { fg = c.shade7 },
-  TelescopePromptNormal   = { fg = c.shade7 },
-  TelescopeResultsNormal  = { fg = c.shade7 },
-  TelescopePromptBorder   = { fg = c.shade3 },
-  TelescopeResultsBorder  = { fg = c.shade3 },
-  TelescopePreviewBorder  = { fg = c.shade3 },
-  TelescopeSelection      = { bg = c.shade4 },
-  TelescopeSelectionCaret = { fg = c.shade7, bg = c.shade4 },
-  TelescopeTitle          = { fg = c.shade7 },
-  TelescopePromptTitle    = { fg = c.shade7 },
-  TelescopeResultsTitle   = { fg = c.shade7 },
-  TelescopePreviewTitle   = { fg = c.shade7 },
-  TelescopePromptCounter  = { fg = c.shade3 },
-  TelescopeMatching       = { fg = c.accent5 },
-  TelescopePromptPrefix   = { fg = c.shade7 },
+  TelescopeMultiSelection  = { fg = c.shade7 },
+  TelescopeMultiIcon       = { fg = c.shade7 },
+  TelescopeNormal          = { fg = c.shade7 },
+  TelescopePreviewNormal   = { fg = c.shade7 },
+  TelescopePromptNormal    = { fg = c.shade7 },
+  TelescopeResultsNormal   = { fg = c.shade7 },
+  TelescopePromptBorder    = { fg = c.shade3 },
+  TelescopeResultsBorder   = { fg = c.shade3 },
+  TelescopePreviewBorder   = { fg = c.shade3 },
+  TelescopeSelection       = { bg = c.shade4 },
+  TelescopeSelectionCaret  = { fg = c.shade7, bg = c.shade4 },
+  TelescopeTitle           = { fg = c.shade7 },
+  TelescopePromptTitle     = { fg = c.shade7 },
+  TelescopeResultsTitle    = { fg = c.shade7 },
+  TelescopePreviewTitle    = { fg = c.shade7 },
+  TelescopePromptCounter   = { fg = c.shade3 },
+  TelescopeMatching        = { fg = c.accent5 },
+  TelescopePromptPrefix    = { fg = c.shade7 },
 
   -- lualine
   lualine_b_diff_added_normal          = { fg = c.shade3 },
