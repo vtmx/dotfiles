@@ -1,81 +1,19 @@
 ------------------------------------------------------------
--- plugins
--- ~/.local/share/nvim/site/pack/packer/start
--- https://www.chiarulli.me/Neovim-2/03-plugins
+-- Plugins
 ------------------------------------------------------------
 
--- Automatically install packer
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-
--- Check if packer exist
-if fn.empty(fn.glob(install_path)) > 0 then
-  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#23272e' })
-  vim.api.nvim_set_hl(0, 'NormalBorder', { bg = '#23272e' })
-  print('Cloning packer...')
-  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-  vim.cmd "packadd packer.nvim"
+-- Lazy init
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
-
--- Packer use a popup window
-packer.init({
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'rounded' })
-    end
-  }
-})
-
--- Install your plugins here
-return packer.startup(function(use)
-  -- Packer
-  use 'wbthomason/packer.nvim'
-
-  -- Requirements
-  use 'nvim-lua/plenary.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-
-  -- UI
-  use 'olimorris/onedarkpro.nvim'
-  use 'akinsho/bufferline.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-lualine/lualine.nvim'
-  use 'rktjmp/lush.nvim'
-
-  -- Utils
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'numToStr/Comment.nvim'
-  use 'nvim-lua/telescope.nvim'
-  use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'phaazon/hop.nvim'
-  use 'tpope/vim-surround'
-  use 'windwp/nvim-autopairs'
-  use 'folke/zen-mode.nvim'
-  use 'folke/twilight.nvim'
-  use 'junegunn/vim-slash'
-
-  -- Syntaxes
-  use 'baskerville/vim-sxhkdrc'
-  use 'fladson/vim-kitty'
-  use 'khaveesh/vim-fish-syntax'
-  use 'ollykel/v-vim'
-
-  -- Autocomplete
-  use 'neovim/nvim-lspconfig'
-  use 'nvim-treesitter/nvim-treesitter'
-  use { 'neoclide/coc.nvim', branch = 'release' }
-
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  else
-    require('plugins.config')
-  end
-end)
-
+require('lazy').setup('plugins')

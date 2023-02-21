@@ -13,6 +13,7 @@ end
 
 -- Leader
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Source file
 map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
@@ -201,38 +202,12 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 -- map('i', '<c-j>', '<cmd>CocNext<cr>', { expr = true })
 -- map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
 
--- hop
-map('n', '<leader>f', '<cmd>HopChar1<cr>')
-
 -- nvimtree
-map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- map('n', '<leader>e', '<cmd>Lex<cr>')
-
--- packer
--- disable to faste paste clipboard
--- map('n', '<leader>pc', '<cmd>PackerCompile<cr>')
--- map('n', '<leader>pi', '<cmd>PackerInstall<cr>')
--- map('n', '<leader>ps', '<cmd>PackerSync<cr>')
--- map('n', '<leader>pS', '<cmd>PackerStatus<cr>')
--- map('n', '<leader>pu', '<cmd>PackerUpdate<cr>')
-
--- telescope
-map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
-map('n', '<leader>tb', '<cmd>Telescope file_browser<cr>')
-map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
-map('n', '<leader>tf', '<cmd>Telescope find_files<cr>')
-map('n', '<leader>tft','<cmd>Telescope filetypes<cr>')
-map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
-map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
-map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
-map('n', '<leader>tm', '<cmd>Telescope marks<cr>')
 
 -- toggleterm
 -- map('n', '<a-h>', '<cmd>ToggleTerm size=10<cr>')
 -- map('n', '<a-v>', '<cmd>ToggleTerm size=80 direction=vertical<cr>')
-
--- truezen
-map('n', '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>')
 
 -- autocmd
 vim.api.nvim_exec([[
