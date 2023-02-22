@@ -156,43 +156,23 @@ create_links() {
 
   # nvim
   name="nvim"
-  target="$src_dir/nvim/init.lua"
+  target="$src_dir/nvim/*.lua"
   link="$config_dir/nvim"
   create_link "$name" "$target" "$link"
 
   name=""
-  target="$src_dir/nvim/coc-settings.json"
+  target="$src_dir/nvim/*.json"
   link="$config_dir/nvim"
   create_link "$name" "$target" "$link"
 
   name=""
-  target="$src_dir/nvim/lua/colors.lua"
+  target="$src_dir/nvim/lua/*.lua"
   link="$config_dir/nvim/lua"
   create_link "$name" "$target" "$link"
 
   name=""
-  target="$src_dir/nvim/lua/mappings.lua"
-  link="$config_dir/nvim/lua"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/lua/options.lua"
-  link="$config_dir/nvim/lua"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/lua/plugins/init.lua"
+  target="$src_dir/nvim/lua/plugins/*.lua"
   link="$config_dir/nvim/lua/plugins"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/lua/plugins/config.lua"
-  link="$config_dir/nvim/lua/plugins"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/lua/theme.lua"
-  link="$config_dir/nvim/lua"
   create_link "$name" "$target" "$link"
 
   # polybar
