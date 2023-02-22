@@ -5,13 +5,14 @@ echo
 message="$@"
 dotfiles_dir="$HOME/Dev/dotfiles"
 
-if [[ ! "${mesage}" ]]; then
+# If empt string
+if [[ -z "${mesage}" ]]; then
   message="update dotfiles"
 fi
 
 # Copy nvim folder
 rm -rdf "$HOME/Dev/dotfiles/config/nvim" > /dev/null
-cp -fr "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" > /dev/null
+cp -r "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" > /dev/null
 
 # Go to dotfiles dir
 cd "${dotfiles_dir}" 
