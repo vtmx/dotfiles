@@ -10,8 +10,8 @@ if [[ ! "${mesage}" ]]; then
 fi
 
 # Copy nvim folder
-rm -rdf "$HOME/Dev/dotfiles/config/nvim"
-cp -fr "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim"
+rm -rdf "$HOME/Dev/dotfiles/config/nvim" > /dev/null
+cp -fr "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" > /dev/null
 
 # Go to dotfiles dir
 cd "${dotfiles_dir}" 
