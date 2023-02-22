@@ -3,7 +3,5 @@ return {
   keys = {
     { '<leader>f', '<cmd>HopChar1<cr>' },
   },
-  config = function()
-    require('hop').setup()
-  end
+  config = true
 }

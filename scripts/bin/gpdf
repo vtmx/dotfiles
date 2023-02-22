@@ -9,6 +9,10 @@ if [[ ! "${mesage}" ]]; then
   message="update dotfiles"
 fi
 
+# Copy nvim folder
+rm -rdf "$HOME/Dev/dotfiles/config/nvim"
+cp -fr "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim"
+
 # Go to dotfiles dir
 cd "${dotfiles_dir}" 
 

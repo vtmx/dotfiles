@@ -4,7 +4,7 @@
 
 local c = require('colors')
 
-local highlights = {
+local hl_groups = {
   -- general
   Normal         = { fg = c.shade7, ctermfg = 255, ctermbg = 234 },
   Comment        = { fg = c.shade3, ctermfg = 7,   italic = true },
@@ -260,7 +260,6 @@ local highlights = {
   lualine_b_diagnostics_error_inactive = { link = 'lualine_b_diff_added_normal' },
 }
 
--- expand highlights
-for name, val in pairs(highlights) do
+for name, val in pairs(hl_groups) do
   vim.api.nvim_set_hl(0, name, val)
 end
