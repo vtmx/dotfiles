@@ -2,7 +2,7 @@
 
 echo
 
-message="$@"
+message=$1
 dotfiles_dir="$HOME/Dev/dotfiles"
 
 # If empt string
