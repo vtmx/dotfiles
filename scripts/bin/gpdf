@@ -2,11 +2,11 @@
 
 echo
 
-message=$1
+message="$@"
 dotfiles_dir="$HOME/Dev/dotfiles"
 
 # If empt string
-if [[ -z "${mesage}" ]]; then
+if [[ -z "${message}" ]]; then
   message="update dotfiles"
 fi
 
