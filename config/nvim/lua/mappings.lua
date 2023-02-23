@@ -85,8 +85,8 @@ map('n', 'x', '"_x')
 map('n', '<del>', '"_x')
 
 -- Move lines
-map('n', '<a-j>', '<cmd>m+<cr>')
-map('n', '<a-k>', '<cmd>m-2<cr>')
+map('n', '<a-j>', '<cmd>m .+1<cr>')
+map('n', '<a-k>', '<cmd>m .-2<cr>')
 map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
 map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
 map('v', '<a-j>', ":m '>+1<cr>gv=gv")
@@ -104,7 +104,7 @@ map('v', '<s-a-k>', 'ygvO<esc>P')
 map('v', 'y', 'ygv<esc>')
 
 -- Remove highlight
-map('n', '<esc>', '<cmd>noh<cr>')
+map({ 'n', 'i' }, '<esc>', '<cmd>noh<cr><esc>')
 map('n', '<leader>h', '<cmd>noh<cr>')
 
 -- Substitute word
@@ -159,10 +159,10 @@ map('n', '<c-w>k', '<c-w>K')
 map('n', '<c-w>l', '<c-w>L')
 
 -- Resize
-map('n', '<up>', '<cmd>resize +2<cr>')
-map('n', '<down>', '<cmd>resize -2<cr>')
-map('n', '<left>', '<cmd>vertical resize +2<cr>')
-map('n', '<right>', '<cmd>vertical resize -2<cr>')
+map('n', '<up>', '<cmd>resize -2<cr>')
+map('n', '<down>', '<cmd>resize +2<cr>')
+map('n', '<left>', '<cmd>vertical resize -2<cr>')
+map('n', '<right>', '<cmd>vertical resize +2<cr>')
 
 -- Buffer
 map('n', '<leader>n', '<cmd>ene<cr>')
@@ -185,9 +185,7 @@ map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
 
 -- Save
-map('n', '<c-s>', '<cmd>w!<cr>', { silent = false })
-map('i', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
-map('v', '<c-s>', '<esc><cmd>w!<cr>', { silent = false })
+map({ 'n', 'i', 'v' }, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 
 -- Quit
 map('n', '<leader>q', '<cmd>q!<cr>')
@@ -196,13 +194,6 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 -- Plugins
 ------------------------------------------------------------
 
--- coc
--- map('n', '<leader>f', '<cmd>CocCommand prettier.formatFile<cr>')
--- map('i', '<c-space>', '<cmd>coc#refresh()<cr>', { expr = true })
--- map('i', '<c-j>', '<cmd>CocNext<cr>', { expr = true })
--- map('i', '<c-k>', '<cmd>CocPrev<cr>', { expr = true })
-
--- nvimtree
 -- map('n', '<leader>e', '<cmd>Lex<cr>')
 
 -- toggleterm
