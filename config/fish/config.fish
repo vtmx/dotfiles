@@ -180,6 +180,10 @@ if type -q gum
   set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$shade7
 end
 
+# helix
+if type -q helix
+  alias hx='helix'
+end
 # nvim and configs
 if type -q nvim
   alias v='nvim'
@@ -259,14 +263,18 @@ if type -q youtube-dl
   end
 end
 
-# custom sh
-alias ide='ide.sh'
+# functions
 
 # default prompt
 function fish_prompt
   echo ''
   set_color cyan; echo (pwd) 
   set_color green; echo '❯ '
+end
+
+# create dir and enter
+function mdcd
+  mkdir -p $argv && cd $argv
 end
 
 # starship prompt

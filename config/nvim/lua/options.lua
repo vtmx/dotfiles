@@ -60,7 +60,7 @@ g.netrw_banner = 0
 g.netrw_hide = 1
 g.netrw_keepdir = 0
 g.netrw_liststyle = 4
-g.netrw_winsize = 25
+g.netrw_winsize = 20
 
 -- highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {

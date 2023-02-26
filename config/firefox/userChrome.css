@@ -325,3 +325,14 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #appMenu-popup .subviewbutton:hover {
   background: var(--shade2) !important;
 }
+
+/* hide import button on bookmarks bar */
+#import-button {
+  display: none !important;
+}
+
+/* findbar */
+findbar {
+  background: var(--shade1) !important;
+  border: none !important;
+}
