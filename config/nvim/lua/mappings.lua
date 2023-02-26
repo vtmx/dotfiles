@@ -34,30 +34,31 @@ map('n', 'k', 'gk')
 map('n', 'Y', 'y$')
 
 -- Begin and end line
-map('n', 'L', 'g_')
-map('n', 'H', '^')
-map('v', 'L', 'g_')
-map('v', 'H', '^')
+map({'n', 'v'}, 'L', 'g_')
+map({'n', 'v'}, 'H', '^')
 
 -- Jump various lines
-map('n', 'J', '5j')
-map('n', 'K', '5k')
-map('v', 'J', '5j')
-map('v', 'K', '5k')
+map({'n', 'v'}, 'J', '5j')
+map({'n', 'v'}, 'K', '5k')
 
 -- Jump half page in the middle
 map('n', '<c-d>', '<c-d>zz')
 map('n', '<c-u>', '<c-u>zz')
 
 -- Change text without putting it into the vim register
-map("n", "c", '"_c')
-map("n", "C", '"_C')
-map("n", "cc", '"_cc')
-map("x", "c", '"_c')
+map({'n', 'x'}, 'c', '"_c')
+map('n', 'C', '"_C')
+map('n', 'cc', '"_cc')
 
 -- Add new line in normal mode
 map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
+map('n', '<a-o>', 'm`o<esc>``')
+map('n', '<a-O>', 'm`O<esc>``')
+
+-- Plus number
+map('n', '=', '<c-a>')
+map('n', '-', '<c-x>')
 
 -- Select all
 map('n', '<leader>a', 'G<s-v>gg')
@@ -65,6 +66,8 @@ map('n', '<leader>a', 'G<s-v>gg')
 -- Copy to clipboard
 map('n', '<leader>y', 'V"+y')
 map('v', '<leader>y', '"+y')
+map('n', '<a-y>', 'V"+y')
+map('v', '<a-y>', '"+y')
 
 -- Cut to clipboard
 map('n', '<leader>d', '^vg_"+x')
@@ -73,6 +76,8 @@ map('v', '<leader>d', '"+x')
 -- Paste to clipboard
 map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste of clipboard"<cr>')
 map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"<cr>')
+map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste of clipboard"<cr>')
+map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"<cr>')
 
 -- Paste with no resgister
 map('x', '<leader>p', '"_dP')
@@ -104,7 +109,7 @@ map('v', '<s-a-k>', 'ygvO<esc>P')
 map('v', 'y', 'ygv<esc>')
 
 -- Remove highlight
-map({ 'n', 'i' }, '<esc>', '<cmd>noh<cr><esc>')
+map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
 map('n', '<leader>h', '<cmd>noh<cr>')
 
 -- Substitute word
@@ -117,11 +122,13 @@ map('n', 'N', 'Nzzzv')
 -- Format
 -- map('n', '<leader>f', '<cmd>retab<cr>')
 
--- qq to record in q, Q to play
-map('n', 'Q', '@q')
+-- Q to recorder q to play
+map('n', 'q', 'Q')
+map('n', 'Q', 'q')
 
--- mm to mark in m, M to jump
-map('n', 'M', '`')
+-- M to mark m to jump
+map('n', 'm', '`')
+map('n', 'M', 'm')
 
 -- Split
 map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
@@ -159,10 +166,10 @@ map('n', '<c-w>k', '<c-w>K')
 map('n', '<c-w>l', '<c-w>L')
 
 -- Resize
-map('n', '<up>', '<cmd>resize -2<cr>')
-map('n', '<down>', '<cmd>resize +2<cr>')
-map('n', '<left>', '<cmd>vertical resize -2<cr>')
-map('n', '<right>', '<cmd>vertical resize +2<cr>')
+map('n', '<up>', '<cmd>resize +2<cr>')
+map('n', '<down>', '<cmd>resize -2<cr>')
+map('n', '<left>', '<cmd>vertical resize +2<cr>')
+map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Buffer
 map('n', '<leader>n', '<cmd>ene<cr>')
@@ -174,18 +181,15 @@ map('n', '<a-w>', '<cmd>bd<cr>')
 
 -- Menu
 map('i', '<c-space>', '<c-n>')
-map('i', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
-map('i', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
-map('i', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
-map('c', '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
-map('c', '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
-map('c', '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
+map({'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
+map({'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
+map({'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 
 -- Make exec
 map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
 
 -- Save
-map({ 'n', 'i', 'v' }, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
+map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 
 -- Quit
 map('n', '<leader>q', '<cmd>q!<cr>')
