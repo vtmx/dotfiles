@@ -63,6 +63,9 @@ map('n', '-', '<c-x>')
 -- Select all
 map('n', '<leader>a', 'G<s-v>gg')
 
+-- Redo
+map('n', 'U', '<c-r>')
+
 -- Copy to clipboard
 map('n', '<leader>y', 'V"+y')
 map('v', '<leader>y', '"+y')
@@ -119,13 +122,6 @@ map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
--- Format
--- map('n', '<leader>f', '<cmd>retab<cr>')
-
--- Q to recorder q to play
-map('n', 'q', 'Q')
-map('n', 'Q', 'q')
-
 -- M to mark m to jump
 map('n', 'm', '`')
 map('n', 'M', 'm')
@@ -152,12 +148,6 @@ map('n', '<c-h>', '<c-w>h')
 map('n', '<c-j>', '<c-w>j')
 map('n', '<c-k>', '<c-w>k')
 map('n', '<c-l>', '<c-w>l')
-
--- tmux
--- map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
--- map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
--- map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
--- map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- Move panels
 map('n', '<c-w>h', '<c-w>H')
@@ -198,26 +188,34 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 -- Plugins
 ------------------------------------------------------------
 
+-- Format
+-- map('n', '<leader>f', '<cmd>retab<cr>')
+
+-- tmux
+-- map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
+-- map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
+-- map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
+-- map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 -- map('n', '<leader>e', '<cmd>Lex<cr>')
 
 -- toggleterm
 -- map('n', '<a-h>', '<cmd>ToggleTerm size=10<cr>')
 -- map('n', '<a-v>', '<cmd>ToggleTerm size=80 direction=vertical<cr>')
 
--- autocmd
+-- Autocmd
 vim.api.nvim_exec([[
   autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
   autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
 ]], false)
 
--- future mappings
+-- Future mappings
 local map_table = {
   n = {
     ['<leader>ç'] = { '<cmd>enew<cr>' }
   }
 }
 
--- iterate over the first keys for each mode
+-- Iterate over the first keys for each mode
 for mode, maps in pairs(map_table) do
   -- iterate over each keybinding set in the current mode
   for keymap, options in pairs(maps) do

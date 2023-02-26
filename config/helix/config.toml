@@ -1,0 +1,17 @@
+theme = "onedark"
+
+[editor]
+cursor-shape.insert = "bar"
+line-number = "relative"
+true-color = true
+
+[keys.normal]
+C-r = ":config-reload"
+C-s = ":w"
+
+[keys.normal.space]
+q = ":quit"
+
+[keys.insert]
+C-s = [":w", "normal_mode"]
+k = { j = "normal_mode" }
