@@ -1,7 +1,7 @@
 # remove greeting
 set fish_greeting
 
-# var colors
+# Colors
 set -l shade0 23272e # background color
 set -l shade1 1e2227 # ui, darker
 set -l shade2 3d4556 # ui, text selection
@@ -20,7 +20,7 @@ set -l accent5 61afef # blue
 set -l accent6 c678dd # purple
 set -l accent7 be5046 # magenta
 
-# syntax colors
+# Syntaxy
 set -g fish_color_autosuggestion $shade3
 set -g fish_color_cancel $accent0
 set -g fish_color_command $shade7
@@ -47,20 +47,20 @@ set -g fish_color_selection --background=$accent5
 set -g fish_color_user $accent4
 set -g fish_color_valid_path $accent3
 
-# pager colors
-set -g fish_pager_color_progress $shade3
-set -g fish_pager_color_prefix $accent5
+# Pager colors
 set -g fish_pager_color_completion $shade7
 set -g fish_pager_color_description $shade3
+set -g fish_pager_color_prefix $accent5
+set -g fish_pager_color_progress $shade3
 
-# variables
+# Variables
 set -x BROWSER 'firefox'
 set -x CODE 'code'
 set -x EDITOR 'nvim'
 set -x SHELL '/usr/bin/fish'
 set -x VISUAL 'nvim'
 
-# system
+# System
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c='clear'
@@ -71,7 +71,7 @@ alias e='exit'
 alias md='mkdir -p'
 alias rd='rmdir'
  
-# paths
+# Paths
 alias cddesi='cd $HOME/Design'
 alias cddesk='cd $HOME/Desktop'
 alias cddev='cd $HOME/Dev'
@@ -182,8 +182,10 @@ end
 
 # helix
 if type -q helix
-  alias hx='helix'
+  alias h='helix'
+  alias hc='helix $HOME/.config/helix/config.toml'
 end
+
 # nvim and configs
 if type -q nvim
   alias v='nvim'
@@ -327,7 +329,7 @@ end
 # links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
 # https://github.com/jwkvam/fish-config/blob/master/config.fish
-# https://minsw.github.io/fzf-color-picker/
+# https://minsw.github.io/fzf-color-picker
 
 # colorize man pages
 # color  fg bg
@@ -340,16 +342,16 @@ end
 # cyan   36 46 	
 # white	 37 47
 
-# headers blue
+# Headers blue
 set -xU LESS_TERMCAP_md (printf "\e[01;34m")
 
-# body attribute value
+# Body attribute value
 set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 
-# statusline
+# Statusline
 set -xU LESS_TERMCAP_so (printf "\e[01;40;37m")
 
-# body sem cor suja muito o documento
+# Body sem cor suja muito o documento
 set -xU LESS_TERMCAP_me (printf "\e[0m")
 set -xU LESS_TERMCAP_se (printf "\e[0m")
 set -xU LESS_TERMCAP_ue (printf "\e[0m")
