@@ -183,6 +183,7 @@ end
 # helix
 if type -q helix
   alias h='helix'
+  alias hx='helix'
   alias hc='helix $HOME/.config/helix/config.toml'
 end
 
