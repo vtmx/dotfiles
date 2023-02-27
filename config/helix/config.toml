@@ -1,9 +1,13 @@
 theme = "onedark"
 
 [editor]
+bufferline = "multiple"
+cursorline = true
 cursor-shape.insert = "bar"
+indent-guides.render = true
+indent-guides.character = "▏"
 line-number = "relative"
-true-color = true
+shell = ["fish", "-c"]
 
 [keys.normal]
 C-r = ":config-reload"
