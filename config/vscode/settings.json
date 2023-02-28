@@ -154,7 +154,20 @@
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
   "html.format.wrapLineLength": 0,
+  "[autoit]": {
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true
+  },
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
@@ -162,16 +175,7 @@
     "editor.formatOnSave": false,
     "editor.wordWrap": "off"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
