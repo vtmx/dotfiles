@@ -220,7 +220,11 @@
       "before": ["k", "j"],
       "after": ["<esc>"]
     },
-
+    // Go to normal mode
+    {
+      "before": ["c-j"],
+      "after": ["<esc>"]
+    },
     // Go to next char in insert mode
     {
       "before": ["<c-h>"],
@@ -401,12 +405,16 @@
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["y"],
-      "after": ["y", "g", "v", "<esc>"]
-    },
-    {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
+    },
+    {
+      "before": ["c-j"],
+      "after": ["<esc>"]
+    },
+    {
+      "before": ["y"],
+      "after": ["y", "g", "v", "<esc>"]
     },
     {
       "before": ["L"],

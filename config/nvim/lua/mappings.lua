@@ -20,6 +20,7 @@ map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>'
 
 -- Scape
 map('i', 'kj', '<esc>')
+map('v', '<c-j>', '<esc>')
 map('v', '<leader>kj', '<esc>')
 
 -- Navigate in insertmode
