@@ -207,6 +207,11 @@ if type -q nvim
   alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
 end
 
+# lazygit
+if type -q lazygit
+  alias lg='lazygit'
+end
+
 # mpv
 if type -q mpv
   alias m='mpv'
