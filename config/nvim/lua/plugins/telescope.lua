@@ -9,7 +9,7 @@ return {
       { '<leader>tb', '<cmd>Telescope file_browser<cr>' },
       { '<leader>tc', '<cmd>Telescope colorscheme<cr>'  },
       { '<leader>tf', '<cmd>Telescope find_files<cr>'   },
-      { '<leader>tl', '<cmd>Telescope filetypes<cr>'    },
+      { '<leader>tt', '<cmd>Telescope filetypes<cr>'    },
       { '<leader>tg', '<cmd>Telescope git_files<cr>'    },
       { '<leader>th', '<cmd>Telescope highlights<cr>'   },
       { '<leader>tk', '<cmd>Telescope keymaps<cr>'      },
