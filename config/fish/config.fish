@@ -40,7 +40,7 @@ set -g fish_color_operator $shade7
 set -g fish_color_option $shade7
 set -g fish_color_param $shade7
 set -g fish_color_quote $accent3
-set -g fish_color_redirection $accent7
+set -g fish_color_redirection $accent6
 set -g fish_color_status $shade7
 set -g fish_color_search_match --background=$shade2
 set -g fish_color_selection --background=$accent5

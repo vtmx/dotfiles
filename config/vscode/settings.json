@@ -409,7 +409,7 @@
       "after": ["<esc>"]
     },
     {
-      "before": ["c-j"],
+      "before": ["ç"],
       "after": ["<esc>"]
     },
     {
