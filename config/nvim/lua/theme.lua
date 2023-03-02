@@ -188,6 +188,9 @@ local hl_groups = {
   NvimTreeVertSplit        = { fg = c.shade2 },
   NvimTreeWindowPicker     = { fg = c.shade7 },
 
+  -- mini
+  MiniJump                 = { fg = c.accent0 },
+
   -- telescope
   TelescopeMultiSelection  = { fg = c.shade7 },
   TelescopeMultiIcon       = { fg = c.shade7 },
