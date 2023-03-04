@@ -3,7 +3,7 @@
 -- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
 ------------------------------------------------------------
 
--- vars
+-- Vars
 local g = vim.g
 local opt = vim.opt
 
@@ -62,16 +62,3 @@ g.netrw_keepdir = 0
 g.netrw_liststyle = 4
 g.netrw_winsize = 20
 
--- highlight yank
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank({ timeout = 100 })
-  end
-})
-
--- disable auto comments
-vim.api.nvim_create_autocmd('FileType', {
-  callback = function()
-    vim.opt.formatoptions = vim.opt.formatoptions - { 'c', 'r', 'o' }
-  end
-})

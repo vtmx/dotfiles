@@ -133,10 +133,10 @@ if type -q exa
 end
 
 # fish
-# if type -q fish
-#   alias fr="source $HOME/.config/fish/config.fish"
-#   # set_color $shade3 & echo "Fish reload"
-# end
+if type -q fish
+  abbr -a -g fr source $HOME/.config/fish/config.fish
+  abbr -a -g sof source $HOME/.config/fish/config.fish
+end
 
 # fzf
 # ctrl-t - Paste the selected files and directories onto the command-line
@@ -200,11 +200,11 @@ if type -q nvim
   alias rc='nvim $HOME/.config/rofi/config.rasi'
   alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
   alias vc='nvim $HOME/.config/nvim/init.lua'
-  alias vo='nvim $HOME/.config/nvim/lua/options.lua'
-  alias vm='nvim $HOME/.config/nvim/lua/mappings.lua'
+  alias vo='nvim $HOME/.config/nvim/lua/config/options.lua'
+  alias vm='nvim $HOME/.config/nvim/lua/config/keymaps.lua'
   alias vp='nvim $HOME/.config/nvim/lua/plugins/init.lua'
   alias vpkg='nvim $HOME/_packages/main.sh'
-  alias vt='nvim $HOME/.config/nvim/lua/theme.lua'
+  alias vt='nvim $HOME/.config/nvim/lua/config/theme.lua'
 end
 
 # lazygit
@@ -237,7 +237,7 @@ end
 
 # vifm
 if type -q vifm
-  alias f='vifm .'
+  alias vfm='vifm .'
 end
 
 # vlang

@@ -2,7 +2,7 @@
 -- theme
 ------------------------------------------------------------
 
-local c = require('colors')
+local c = require('config.colors')
 
 local hl_groups = {
   -- general

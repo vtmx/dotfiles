@@ -2,9 +2,6 @@
 -- Mappings
 ------------------------------------------------------------
 
--- Vars
-local cmd = vim.cmd
-
 -- Function for mapping
 function map(mode, lhs, rhs, opts)
   local opts = opts or { silent = true }
@@ -114,10 +111,10 @@ map('v', 'y', 'ygv<esc>')
 
 -- Remove highlight
 map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
-map('n', '<leader>h', '<cmd>noh<cr>')
+map('n', '<leader>ç', '<cmd>noh<cr>')
 
 -- Substitute word
-map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
+map('n', '<leader>h', [[:%s/<c-r><c-w>//g<left><left>]])
 
 -- Keep search results centred
 map('n', 'n', 'nzzzv')
@@ -184,12 +181,13 @@ map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 
 -- Quit
 map('n', '<leader>q', '<cmd>q!<cr>')
+map('n', '<leader>Q', '<cmd>qa!<cr>')
 
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------
 
--- Format
+-- map('n', '<leader>e', '<cmd>Lex<cr>')
 -- map('n', '<leader>f', '<cmd>retab<cr>')
 
 -- tmux
@@ -197,22 +195,11 @@ map('n', '<leader>q', '<cmd>q!<cr>')
 -- map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
 -- map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
 -- map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
--- map('n', '<leader>e', '<cmd>Lex<cr>')
-
--- toggleterm
--- map('n', '<a-h>', '<cmd>ToggleTerm size=10<cr>')
--- map('n', '<a-v>', '<cmd>ToggleTerm size=80 direction=vertical<cr>')
-
--- Autocmd
-vim.api.nvim_exec([[
-  autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
-  autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
-]], false)
 
 -- Future mappings
 local map_table = {
   n = {
-    ['<leader>ç'] = { '<cmd>enew<cr>' }
+    ['<leader>9'] = { '<cmd>enew<cr>' }
   }
 }
 
