@@ -1,4 +1,4 @@
-local c = require('colors')
+local c = require('config.colors')
 
 return {
   'akinsho/bufferline.nvim',

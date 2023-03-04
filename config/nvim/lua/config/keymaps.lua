@@ -8,15 +8,17 @@ function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
--- Leader
+-- Leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Source file
+-- Reload file
 map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
 
 -- Scape
 map('i', 'kj', '<esc>')
+
+-- Return to normal mode
 map('v', 'ç', '<esc>')
 map('v', '<leader>kj', '<esc>')
 
@@ -113,7 +115,7 @@ map('v', 'y', 'ygv<esc>')
 map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
 map('n', '<leader>ç', '<cmd>noh<cr>')
 
--- Substitute word
+-- Replace word
 map('n', '<leader>h', [[:%s/<c-r><c-w>//g<left><left>]])
 
 -- Keep search results centred
@@ -180,21 +182,21 @@ map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
 map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 
 -- Quit
-map('n', '<leader>q', '<cmd>q!<cr>')
+map('n', '<leader>q', '<cmd>q<cr>')
+
+-- Quit all
 map('n', '<leader>Q', '<cmd>qa!<cr>')
 
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------
 
--- map('n', '<leader>e', '<cmd>Lex<cr>')
--- map('n', '<leader>f', '<cmd>retab<cr>')
-
 -- tmux
 -- map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
 -- map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
 -- map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
 -- map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
+-- map('n', '<leader>e', '<cmd>Lex<cr>')
 
 -- Future mappings
 local map_table = {
