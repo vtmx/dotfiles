@@ -162,6 +162,7 @@ map('n', '<left>', '<cmd>vertical resize +2<cr>')
 map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Buffer
+map('n', '<leader>c', '<cmd>bd<cr>')
 map('n', '<leader>n', '<cmd>ene<cr>')
 map('n', '<leader>w', '<cmd>bd<cr>')
 map('n', '<a-n>', '<cmd>ene<cr>')
@@ -186,6 +187,7 @@ map('n', '<leader>q', '<cmd>q<cr>')
 
 -- Quit all
 map('n', '<leader>Q', '<cmd>qa!<cr>')
+
 
 ------------------------------------------------------------
 -- Plugins

@@ -2,6 +2,7 @@ return {
   { 'lukas-reineke/indent-blankline.nvim', event = 'VeryLazy' },
   { 'neovim/nvim-lspconfig', event = 'VeryLazy' },
   { 'junegunn/vim-slash', event = 'VeryLazy'},
+  { 'rebelot/kanagawa.nvim' },
   { 'echasnovski/mini.align', event = 'VeryLazy', config = function() require('mini.align').setup() end },
   { 'echasnovski/mini.comment', config = function() require('mini.comment').setup() end },
   { 'echasnovski/mini.completion', event = 'VeryLazy', config = function() require('mini.completion').setup() end },
