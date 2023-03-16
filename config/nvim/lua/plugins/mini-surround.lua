@@ -4,7 +4,7 @@ return {
   config = function()
     require('mini.surround').setup({
        mappings = {
-        add = 'ys', -- Add surrounding in Normal and Visual modes
+        -- add = 'ys', -- Add surrounding in Normal and Visual modes - slow in visual
         delete = 'ds', -- Delete surrounding
         find = 'sf', -- Find surrounding (to the right)
         find_left = 'sF', -- Find surrounding (to the left)
