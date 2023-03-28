@@ -85,6 +85,7 @@ alias cdvid='cd $HOME/Videos'
 alias cdc='cd $HOME/Dev/dotfiles/config'
 alias cdd='cd $HOME/Dev/dotfiles'
 alias cdp='cd $HOME/Dev/projects'
+alias cdpkg='cd $HOME/_packages'
 alias cdf='cd $HOME/Dev/projects/fraseologia'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cds='cd $HOME/Dev/shortcuts'
@@ -217,6 +218,16 @@ if type -q mpv
   alias m='mpv'
 end
 
+# npm
+if type -q npm
+  # set -gx NO_COLOR true
+  alias npmi='npm install'
+  alias npms='npm start'
+  alias npmr='npm remove'
+  alias npmu='npm update'
+end
+
+
 # pacman
 if type -q pacman
   alias pac='sudo pacman'
@@ -250,8 +261,19 @@ alias vw='$HOME/.v/vl watch'
 
 # yarn
 if type -q yarn
+  # set -gx FORCE_COLOR 0
+  alias ya='yarn add'
+  alias yb='yarn build'
+  alias yc='yarn autoclean'
   alias yd='yarn dev'
+  alias yh='yarn help'
   alias ydp='yarn deploy'
+  alias yi='yarn add'
+  alias yr='yarn remove'
+  alias ys='yarn start'
+  alias yt='yarn test'
+  alias yu='yarn upgrade'
+  alias yv='yarn version'
 end
 
 # yay
@@ -271,17 +293,17 @@ if type -q youtube-dl
   end
 end
 
-# functions
+# Functions
 
-# default prompt
+# Default prompt
 function fish_prompt
   echo ''
   set_color cyan; echo (pwd) 
   set_color green; echo '❯ '
 end
 
-# create dir and enter
-function mdcd
+# Create dir and enter
+function mkcd
   mkdir -p $argv && cd $argv
 end
 
@@ -290,10 +312,15 @@ if type -q starship
   starship init fish | source
 end
 
-# enable vi mode
+# Init zoxide
+if type -q zoxide
+  zoxide init fish | source
+end
+
+# Enable vi mode
 # fish_vi_key_bindings
 
-# to go back to default mode
+# To go back to default mode
 # fish_default_key_bindings
 
 # active keybinds vim
@@ -325,14 +352,14 @@ end
 # visual mode, but due to fish_cursor_default, is redundant here
 # set fish_cursor_visual block
 
-# plugin ssh
+# Plugin ssh
 # fish_ssh_agent
 
-# colors
+# Colors
 # https://fishshell.com/docs/current/interactive.html#variables-color
 # defaults: black, red, green, yellow, blue, magenta, cyan, white
 
-# links
+# Links
 # https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
 # https://github.com/jwkvam/fish-config/blob/master/config.fish
 # https://minsw.github.io/fzf-color-picker
