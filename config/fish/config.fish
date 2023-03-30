@@ -307,7 +307,9 @@ function mkcd
   mkdir -p $argv && cd $argv
 end
 
-# starship prompt
+# Inits
+
+# Init starship prompt
 if type -q starship
   starship init fish | source
 end
