@@ -307,8 +307,8 @@ function mkcd
   mkdir -p $argv && cd $argv
 end
 
-# Init connection ssh
-function ssh
+# Start ssh connection 
+function sshs
   if test -z "$SSH_AUTH_SOCK"
     eval (ssh-agent -c)
     ssh-add -k
@@ -327,64 +327,6 @@ if type -q zoxide
   zoxide init fish | source
 end
 
-# Enable vi mode
-# fish_vi_key_bindings
-
-# To go back to default mode
-# fish_default_key_bindings
-
-# active keybinds vim
-# function fish_user_key_bindings
-#   # mappings
-#   # bind -M insert -m default kj backward-char force-repaint
-#   bind -m default L end-of-line
-#   bind -m default H beginning-of-line
-#
-#   # fish shortcuts
-#   bind -M insert \cf accept-autosuggestion
-#   bind -M insert \cj history-search-backward
-#   bind -M insert \cn history-search-backward
-#   bind -M insert \ck history-search-forward
-#   bind -M insert \cp history-search-forward
-# end
-
-# emulates vim's cursor shape behavior
-# set the normal and visual mode cursors to a block
-# set fish_cursor_default block
-
-# set the insert mode cursor to a line
-# set fish_cursor_insert line
-
-# set the replace mode cursor to an underscore
-# set fish_cursor_replace_one underscore
-
-# the following variable can be used to configure cursor shape in
-# visual mode, but due to fish_cursor_default, is redundant here
-# set fish_cursor_visual block
-
-# Plugin ssh
-# fish_ssh_agent
-
-# Colors
-# https://fishshell.com/docs/current/interactive.html#variables-color
-# defaults: black, red, green, yellow, blue, magenta, cyan, white
-
-# Links
-# https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
-# https://github.com/jwkvam/fish-config/blob/master/config.fish
-# https://minsw.github.io/fzf-color-picker
-
-# colorize man pages
-# color  fg bg
-# black  30 40 	
-# red    31 41 	
-# green  32 42 	
-# yellow 33 43 	
-# blue   34 44 	
-# purple 35 45 	
-# cyan   36 46 	
-# white	 37 47
-
 # Headers blue
 set -xU LESS_TERMCAP_md (printf "\e[01;34m")
 
@@ -399,4 +341,22 @@ set -xU LESS_TERMCAP_me (printf "\e[0m")
 set -xU LESS_TERMCAP_se (printf "\e[0m")
 set -xU LESS_TERMCAP_ue (printf "\e[0m")
 
+# References
+# https://fishshell.com/docs/current/interactive.html#variables-color
+# https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
+# https://github.com/jwkvam/fish-config/blob/master/config.fish
+# https://minsw.github.io/fzf-color-picker
 
+# defaults colors:
+# black, red, green, yellow, blue, magenta, cyan, white
+
+# colorize man pages
+# color  fg bg
+# black  30 40 	
+# red    31 41 	
+# green  32 42 	
+# yellow 33 43 	
+# blue   34 44 	
+# purple 35 45 	
+# cyan   36 46 	
+# white	 37 47
