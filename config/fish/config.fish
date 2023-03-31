@@ -307,14 +307,22 @@ function mkcd
   mkdir -p $argv && cd $argv
 end
 
+# Init connection ssh
+function ssh
+  if test -z "$SSH_AUTH_SOCK"
+    eval (ssh-agent -c)
+    ssh-add -k
+  end
+end
+
 # Inits
 
-# Init starship prompt
+# starship
 if type -q starship
   starship init fish | source
 end
 
-# Init zoxide
+# zoxide
 if type -q zoxide
   zoxide init fish | source
 end
