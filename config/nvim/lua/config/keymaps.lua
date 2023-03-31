@@ -133,11 +133,43 @@ map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
 -- Stop copy in last char
 map('v', 'y', 'ygv<esc>')
 
--- indent
+-- Indent
 map('n', '>', '>>')
 map('n', '<', '<<')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
+
+-- Toggle number
+map('n', '<leader>un', '', {
+  noremap = true,
+  callback = function()
+    if vim.o.number then
+      vim.opt.number = false
+      vim.opt.relativenumber = false
+    else
+      vim.opt.number = true
+      vim.opt.relativenumber = true
+    end
+
+    vim.cmd 'redraw'
+    print('Toggle number')
+  end
+})
+
+-- Toggle cmd height
+map('n', '<leader>uc', '', {
+  noremap = true,
+  callback = function()
+    if vim.o.cmdheight == 1 then
+      vim.opt.cmdheight = 0
+    else
+      vim.opt.cmdheight = 1
+    end
+
+    vim.cmd 'redraw'
+    print('Toggle cmdheight')
+  end
+})
 
 -- Next and prev auto-complete
 map('n', '<c-k>', '<cmd>cnext<cr>zz')
