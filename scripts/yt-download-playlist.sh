@@ -4,10 +4,14 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-playlist="https://music.youtube.com/playlist?list=PLaI_ujMy5jERUTZf6Aon75woA-aoiJDns"
+echo
+read -rp "Playlist: " playlist
+read -rp "Link: " url
+dist="~/Music/${playlist}"
 
-main() {
-  ytdlp -x --audio-format mp3 -o "%(title)s.%(ext)s" "${playlist}"
-}
+if [[ ! -d "{dist}" ]]; then
+  mkdir -p "${dist}"
+fi
 
-main
+yt-dlp -x --audio-format mp3 -o "${dist}/%(title)s.%(ext)s" "${url}"
+
