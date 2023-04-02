@@ -221,6 +221,7 @@ end
 # npm
 if type -q npm
   # set -gx NO_COLOR true
+  alias npmd='npm run dev'
   alias npmi='npm install'
   alias npms='npm start'
   alias npmr='npm remove'
@@ -283,14 +284,9 @@ if type -q yay
   alias yayu='yay -Syu'
 end
 
-# youtube-dl
-if type -q youtube-dl
-  alias ytdl="ytdl"
-  abbr -a ytdlm Max 'youtube-dl'
-
-  function ytdl
-    youtube-dl -x --audio-format mp3 "$argv"
-  end
+# yt-dlp youtube 
+if type -q yt-dlp
+  alias yt="yt-dlp -x --audio-format mp3 -o '%(title)s.%(ext)s' $argv"
 end
 
 # Functions
