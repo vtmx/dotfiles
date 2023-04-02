@@ -452,5 +452,7 @@
       "before": ["<leader>", "p"],
       "after": ["\"", "_", "d", "P"]
     }
-  ]
+  ],
+  "svelte.enable-ts-plugin": true,
+  "git.openRepositoryInParentFolders": "never"
 }

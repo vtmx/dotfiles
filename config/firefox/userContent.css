@@ -20,7 +20,7 @@
   --dialog-warning-text-color: var(--accent0) !important;
   --grey-50: var(--shade3) !important;
   --in-content-accent-color: var(--accent5) !important;
-  --in-content-accent-color-active: var(--accent5) !imp
+  --in-content-accent-color-active: var(--accent5);
   --in-content-border-color: var(--shade2) !important;
   --in-content-border-hover: var(--shade3) !important;
   --in-content-border-invalid: var(--accent0) !important;
@@ -87,7 +87,20 @@
   --toolbar-non-lwt-bgimage: var(--shade0) !important;
   --rule-header-background-color: var(--shade0) !important; 
   --rule-overridden-value-text-color: var(--shade3) !important;
-  
+}
+
+/* selection in all pages */
+*::selection {
+  background: var(--accent5);
+  color: var(--shade0);
+}
+
+/* não funciona */
+@-moz-document url('about:home'),
+url('about:newtab') {
+  body {
+    background: red !important;
+  }
 }
 
 /* search bar in settings */
