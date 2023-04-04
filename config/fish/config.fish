@@ -345,7 +345,8 @@ end
 
 # zoxide
 if type -q zoxide
-  zoxide init fish | source
+  # zoxide init fish | source
+  zoxide init --cmd j fish | source
 end
 
 # Headers blue
