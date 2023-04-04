@@ -286,16 +286,30 @@ end
 
 # yt-dlp youtube 
 if type -q yt-dlp
-  alias yt="download_yt"
+  alias yt="yt_dow"
+  alias ytm="yt_dow_meta"
 
-  function download_yt
+  # Download song of YouTube
+  function yt_dow
     set url $argv[1]
     set name $argv[2]
 
     if test -n "$name"
-      yt-dlp -x --audio-format mp3 -o "$name" "$url"
+      yt-dlp -x --audio-format mp3 --embed-thumbnail -o "$name" "$url"
     else
-      yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s" "$url"
+      yt-dlp -x --audio-format mp3 --embed-thumbnail -o "%(title)s.%(ext)s" "$url"
+    end
+  end
+
+  # Download song of YouTube with metadata
+  function yt_dow_meta
+    set url $argv[1]
+    set name $argv[2]
+
+    if test -n "$name"
+      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$name" "$url"
+    else
+      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$url"
     end
   end
 end
