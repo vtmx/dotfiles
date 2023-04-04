@@ -286,7 +286,18 @@ end
 
 # yt-dlp youtube 
 if type -q yt-dlp
-  alias yt="yt-dlp -x --audio-format mp3 -o '%(title)s.%(ext)s' $argv"
+  alias yt="download_yt"
+
+  function download_yt
+    set url $argv[1]
+    set name $argv[2]
+
+    if test -n "$name"
+      yt-dlp -x --audio-format mp3 -o "$name" "$url"
+    else
+      yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s" "$url"
+    end
+  end
 end
 
 # Functions
