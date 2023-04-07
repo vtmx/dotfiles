@@ -1,0 +1,40 @@
+{
+  // CSS
+  "var(--)": {
+    "scope": "css, scss, svelte, vue",
+    "prefix": "var",
+    "body": ["var(--$1)"]
+  },
+
+  // Javascript
+  "console.log()": {
+    "scope": "javascript, typescript, svelte, vue",
+    "prefix": "cl",
+    "body": ["console.log($1);"]
+  },
+  "console.log('string')": {
+    "scope": "javascript, svelte, typescript, vue",
+    "prefix": "cls",
+    "body": ["console.log('$1');"]
+  },
+  "console.info('string')": {
+    "scope": "javascript, svelte, typescript, vue",
+    "prefix": "cli",
+    "body": ["console.info('$1');"]
+  },
+  "console.warn('string')": {
+    "scope": "javascript, svelte, typescript, vue",
+    "prefix": "clw",
+    "body": ["console.warn('$1');"]
+  },
+  "console.error('string')": {
+    "scope": "javascript, svelte, typescript, vue",
+    "prefix": "cle",
+    "body": ["console.error('$1');"]
+  },
+  "console.clear()": {
+    "scope": "javascript, svelte, typescript, vue",
+    "prefix": "clc",
+    "body": ["console.clear();"]
+  }
+}

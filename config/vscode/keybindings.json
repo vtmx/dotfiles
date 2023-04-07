@@ -301,18 +301,27 @@
 
   // Run AutoIT
   {
-    "command": "extension.runScript",
     "key": "ctrl+enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["extension.vim_escape", "extension.runScript"]
+    },
     "when": "editorTextFocus && editorLangId == autoit"
   },
   {
-    "command": "extension.check",
     "key": "alt+enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["extension.vim_escape", "extension.check"]
+    },
     "when": "editorTextFocus && editorLangId == autoit"
   },
   {
-    "command": "extension.compile",
     "key": "ctrl+shift+enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["extension.vim_escape", "extension.compile"]
+    },
     "when": "editorTextFocus && editorLangId == autoit"
-  }
+  },
 ]

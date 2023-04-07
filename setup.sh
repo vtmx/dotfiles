@@ -215,6 +215,10 @@ create_links() {
   link="$config_dir/Code - OSS/User"
   create_link "$name" "$target" "$link"
 
+  target="$src_dir/vscode/vs.code-snippets"
+  link="$config_dir/Code - OSS/User/snippets"
+  create_link "$name" "$target" "$link"
+
   pause_success "Links created"
 }
 
