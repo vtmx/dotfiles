@@ -18,7 +18,7 @@
   "editor.fontSize": 14,
   "editor.fontWeight": "500",
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.glyphMargin": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": false,

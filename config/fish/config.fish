@@ -328,8 +328,8 @@ function mkcd
   mkdir -p $argv && cd $argv
 end
 
-# Start ssh connection 
-function sshs
+# ssh login 
+function ssl
   if test -z "$SSH_AUTH_SOCK"
     eval (ssh-agent -c)
     ssh-add -k
