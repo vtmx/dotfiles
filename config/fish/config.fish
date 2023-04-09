@@ -103,7 +103,7 @@ end
 
 # canvas-sketch-cli
 if type -q canvas-sketch-cli
-  alias canvas='canvas-sketch-cli'
+  alias canva='canvas-sketch-cli'
 end
 
 # entr

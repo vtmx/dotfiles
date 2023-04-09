@@ -50,6 +50,10 @@
   --in-content-link-color-hover: var(--in-content-primary-button-background-hover) !important;
   --in-content-link-color-active: var(--in-content-primary-button-background-active) !important;
   --in-content-link-color-visited: var(--in-content-link-color) !important;
+  /* disable flash in tabs */
+  --lwt-tabs-border-color: transparent !important;
+  --lwt-text-color: transparent !important;
+  --tab-loading-fill: transparent !important;
   --panel-item-hover-bgcolor: var(--shade2) !important;
   --panel-separator-color: var(--shade2) !important;
   --tab-block-margin: 0 !important;
@@ -175,19 +179,19 @@ body {
   transition: all .05s !important;
 }
 
+/* tab hover foreground */
+.tabbrowser-tab:hover .tab-content {
+  color: var(--shade7) !important;
+}
+
 /* tab active background */
 .tabbrowser-tab[visuallyselected="true"] .tab-background {
   background: var(--shade4) !important;
 }
 
-/* tab hover color */
-.tabbrowser-tab:hover .tab-content {
-  color: var(--shade5) !important;
-}
-
-/* tab active color - 25% light shade7 */
+/* tab active foreground */
 .tabbrowser-tab[visuallyselected="true"] .tab-content {
-  color: #c4cbd8 !important;
+  color: var(--shade7) !important;
 }
 
 /* tab hide icon close */
@@ -292,6 +296,12 @@ body {
 /* hide search end site list */
 #urlbar .search-one-offs:not([hidden]) {
   display: none !important;
+}
+
+/* urlbar Search with... */
+#urlbar *|input::placeholder {
+ color: transparent !important;
+ opacity: 0 !important;
 }
 
 /* change color bookmarks icon */
