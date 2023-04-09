@@ -341,6 +341,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
+/* hide nav-bar overflow */
+#nav-bar-overflow-button {
+ display: none !important;
+}
+
+
 /* findbar */
 findbar {
   background: var(--shade1) !important;
