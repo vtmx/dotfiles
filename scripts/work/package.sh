@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Autor:  
-# Data:  
+# Autor: 
+# Data: 
 
 # Caminho do script
 script_dir=$(pwd)
@@ -16,17 +16,14 @@ pkg[description]=""
 pkg[size]=""
 
 # Categorias
-# AudioVideo, Audio, Video, Development, Education
-# Game, Graphics, Network, Office, Settings, Utility
-# System, ConsoleOnly
 pkg[categories]=""
 
 # Executa em terminal?
 pkg[terminal]="false"
 
 # Caminhos
-pkg[exec]=""
 pkg[path]="/usr/bin"
+pkg[exec]=""
 pkg[exec_path]="${pkg[path]}/${pkg[exec]}"
 
 # ------------------------------------------------------------------------------
@@ -45,6 +42,15 @@ install() {
 
   # rpm
   # sudo dnf install -y "${script_dir}"/pkg/*.rpm
+
+  # tar
+  # sudo tar -xzf "${script_dir}/pkg/ideaIC-2022.3.3.tar.gz" -C /opt
+
+  # zip
+  # unzip -o *.zip > /dev/null
+
+  # se precisar criar ícone
+  # create_desktop_file
 }
 
 # ------------------------------------------------------------------------------
@@ -63,7 +69,14 @@ remove() {
 
   # rpm
   # sudo dnf remove -y "draw.io"
+
+  # tar
+  # sudo rm -rdf "/opt/idea-IC-223.8836.41"
+
+  # se precisar remover ícone
+  # remove_desktop_file
 }
+
 
 # ------------------------------------------------------------------------------
 # Verifica informações do pacote
@@ -71,10 +84,9 @@ remove() {
 
 check_pkg_info() {
   clear
-
   local is_null="false"
 
-  echo Verificando informações do pacote...
+  echo "Verificando informações do pacote..."
   for key in "${!pkg[@]}"; do
     if [[ ! ${pkg[$key]} ]]; then
       is_null="true"
@@ -91,10 +103,10 @@ check_pkg_info() {
 # ------------------------------------------------------------------------------
 
 install_exec() {
-  local src="${script_dir}"/pkg/"${1}"
+  local src="${script_dir}/pkg/${1}"
 
   echo "Verificando arquivo..."
-  if ls ${src} >/dev/null 2>&1; then
+  if ls "${src}" >/dev/null 2>&1; then
     copy_to_bin "${src}"
     make_exec "${pkg[exec_path]}"
   else
@@ -110,7 +122,7 @@ copy_to_bin() {
   local src=$1
 
   echo "Copiando arquivo..."
-  if ! sudo rsync -arzP ${src} "${pkg[exec_path]}"; then
+  if ! sudo rsync -arzP "${src}" "${pkg[exec_path]}"; then
     exit_error "Falha na cópia do arquivo: ${src} para ${pkg[exec_path]}"
   fi
 }
@@ -169,9 +181,8 @@ show_doc() {
 # ------------------------------------------------------------------------------
 
 ask_exit() {
-  local message=""
   read -rp "
-Deseja sair? [Y/n] " option
+Deseja sair? [Y/n]: " option
 
   if [[ "${option}" == "n" ]] || [[ "${option}" == "N" ]]; then
     show_menu
@@ -280,12 +291,12 @@ pause() {
 create_desktop_file() {
   local df_file_src="${script_dir}/pkg/${pkg[exec]}.desktop"
   local df_file_dist="/usr/share/applications/${pkg[exec]}.desktop"
-  local df_icon_src="${script_dir}"/pkg/*.png
+  local df_icon_src="${script_dir}/pkg/*.png"
   local df_icon_dir="/usr/share/icons/homologacao"
   local df_icon_dist="${df_icon_dir}/${pkg[exec]}.png"
 
   # Verifica se existe algum .png na pasta pkg
-  if ! ls ${df_icon_src} >/dev/null 2>&1; then
+  if ! ls "${df_icon_src}" >/dev/null 2>&1; then
     exit_error "Falha ícone não existe: ${df_icon_src}"
   fi
 
@@ -296,9 +307,9 @@ Name=${pkg[name]}
 Comment=${pkg[description]}
 Categories=${pkg[categories]}
 Terminal=${pkg[terminal]}
-Path=${pkg[path]}
-Exec=${pkg[exec]}
+Exec=${pkg[exec_path]}
 Icon=${df_icon_dist}
+
 [X-Homologacao]
 PackageName=${pkg[name]}
 PackageVersion=${pkg[version]}" >"$df_file_src"; then
@@ -322,13 +333,18 @@ PackageVersion=${pkg[version]}" >"$df_file_src"; then
 
   if [[ ! -d "${df_icon_dir}" ]]; then
     echo "Criando pasta de ícones..."
-    if ! sudo mkdir -p "${df_icon_dir}" && sudo chmod ugo+rx "${df_icon_dir}"; then
+    if ! sudo mkdir -p "${df_icon_dir}" ; then
       exit_error "Falha ao criar pasta de ícones: ${df_icon_dir}"
+    fi
+
+    echo "Alterando permissões na pasta de ícones..."
+    if ! sudo chmod ugo+rx "${df_icon_dir}"; then
+      exit_error "Falha ao alterar permissões na pasta de ícones: ${df_icon_dir}"
     fi
   fi
 
   echo "Copiando ícone..."
-  if ! sudo cp ${df_icon_src} ${df_icon_dist}; then
+  if ! sudo cp "${df_icon_src}" "${df_icon_dist}"; then
     exit_error "Falha ao copiar ícone: ${df_icon_src}"
   fi
 
@@ -360,23 +376,59 @@ remove_desktop_file() {
 # ------------------------------------------------------------------------------
 # Verifica se o pacote criado pela homologação está instalado
 # O arquivo validador é o desktop file que contém o grupo customizado:
-# /usr/share/applications/pkg[exec].desktop
-# [X-Homologacao]
-# PackageName=pkg[name]
-# PackageVersion=pkg[version]
 # ------------------------------------------------------------------------------
 
 is_installed() {
-  local df="/usr/share/applications/${pkg[exec]}.desktop"
+  local list_installed="/var/log/homologacao-installed"
 
-  if [[ -f "${df}" ]]; then
-    if grep -xq "\[X-Homologacao\]" "${df}" &&
-      grep -xq "PackageName=${pkg[name]}" "${df}" &&
-      grep -xq "PackageVersion=${pkg[version]}" "${df}"; then
-      echo_yellow "Pacote já instalado\n"
+  echo "Verificando se está instalado..."
+  if [[ -f "${list_installed}" ]]; then
+    if grep -qx "${pkg[name]} ${pkg[version]}" "${list_installed}"; then
+      echo_yellow "Pacote instalado\n"
     fi
   fi
 }
+
+# ------------------------------------------------------------------------------
+# Adiciona pacote na lista de instalados
+# ------------------------------------------------------------------------------
+
+add_list_installed() {
+  local pkg_name_version="${pkg[name]} ${pkg[version]}"
+  local list_installed="/var/log/homologacao-installed"
+
+  # Cria arquivo caso não exista
+  if [[ ! -f "${list_installed}" ]]; then
+    echo "Criando lista de pacotes instalados..."
+    sudo touch "${list_installed}"
+    sudo chmod a+r "${list_installed}"
+  fi
+
+  # Adiciona pacote caso não exista
+  if ! grep -q "${pkg_name_version}" "${list_installed}"; then
+    echo "Adicionando à lista de pacotes instalados..."
+    echo "${pkg_name_version}" | sudo tee -a "${list_installed}" > /dev/null 
+  fi
+
+  # Organiza a lista por ordem alfabética
+  echo "Organizando lista de pacotes instalados..."
+  sudo sort -o "${list_installed}" "${list_installed}"
+}
+
+# ------------------------------------------------------------------------------
+# Remove pacote da lista de instalados
+# ------------------------------------------------------------------------------
+
+remove_list_installed() {
+  local pkg_name_version="${pkg[name]} ${pkg[version]}"
+  local list_installed="/var/log/homologacao-installed"
+
+  if [[ -f "${list_installed}" ]]; then
+    echo "Removendo da lista de pacotes instalados..."
+    sudo sed -Ei "/^${pkg_name_version}/d" "${list_installed}"
+  fi
+}
+
 
 # ------------------------------------------------------------------------------
 # Exibe mensagem de sucesso e sai do script
@@ -422,16 +474,14 @@ read_option() {
   if [[ "${option}" ]]; then
     case "${option}" in
     i | -i | install | --install)
-      echo -e "Instalando ${pkg[name]} ${pkg[version]}..."
       install
-      create_desktop_file
+      add_list_installed
       exit_success "Pacote instalado com sucesso"
       ;;
 
     r | -r | remove | --remove)
-      echo -e "Removendo ${pkg[name]} ${pkg[version]}..."
       remove
-      remove_desktop_file
+      remove_list_installed
       exit_success "Pacote removido com sucesso"
       ;;
 
@@ -495,3 +545,4 @@ main() {
 }
 
 main "$@"
+

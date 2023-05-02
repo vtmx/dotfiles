@@ -1,51 +1,51 @@
-# reload
+# Reload
 super + r
 	bspc wm -r && pkill -USR1 -x sxhkd
 
-# close and kill window
+# Close and kill window
 super + {_,shift + }c
 	bspc node -{c,k}
 
-# quit
+# Quit
 super + shift + q
 	bspc quit
 
-# laucnher
+# Laucnher
 super + space
 	rofi -show drun
 
-# terminal
+# Terminal
 super + Return
 	kitty
 
-# toggle polybar
+# Toggle polybar
 super + ctrl + shift + b
 	polybar bspwm
 
-# toggle fullscreen and floating
+# Toggle fullscreen and floating
 super + {_,shift + }f
 	bspc node -t "~"{fullscreen,floating}
 
-# focus and move window
+# Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
 	bspc node -{f,s} {west,west,south,south,north,north,east,east}
 
 super + bracket{left,right}
 	bspc node -f {prev,next}
 
-# switch workspace or send window to other workspace
+# Switch workspace or send window to other workspace
 super + ctrl + {_,shift + }{h,Left,l,Right}
 	bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
 
-# switch and send window to other workspace
+# Switch and send window to other workspace
 super {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}' --follow
 
-# resize window
+# Resize window
 # super + alt + {h,j,k,l}
 # 	bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
 
-# expand / contract a window by moving one of its side outward/inward
+# Expand / contract a window by moving one of its side outward/inward
 ctrl + alt + r : {h,j,k,l}
   STEP=20; SELECTION={1,2,3,4}; \
   bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
@@ -56,14 +56,14 @@ ctrl + alt + r : {Left,Down,Up,Right}
   bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
   bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
-# move a floating window
+# Move a floating window
 ctrl + alt + {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 ctrl + alt + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# apps
+# Apps
 super + {a,b,g,m,p,t,s,v}
 	{pamac-manager,vivaldi-stable,steam,vlc,color-picker,qbittorrent,flameshot gui,code}
 

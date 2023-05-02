@@ -346,9 +346,21 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
  display: none !important;
 }
 
-
 /* findbar */
 findbar {
   background: var(--shade1) !important;
   border: none !important;
+}
+
+/* disable tooltip */
+tooltip {
+  background-color: transparent; !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  border-color: transparent; !important;
+  font-size: 0px !important; 
+  font-family: tahoma, verdana !important;
+  color: transparent; !important;
+  -moz-appearance: none !important;
 }
