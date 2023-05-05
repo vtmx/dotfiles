@@ -64,9 +64,9 @@ set -x VISUAL 'nvim'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias c='clear'
-alias chx='chmod +x'
 alias cls='clear'
 alias cpv='rsync -ah --info=progress2'
+alias cx='chmod +x'
 alias e='exit'
 alias md='mkdir -p'
 alias rd='rmdir'
@@ -327,6 +327,11 @@ end
 # Create dir and enter
 function mkcd
   mkdir -p $argv && cd $argv
+end
+
+# Unzip and enter
+function uzcd
+  unzip $argv && cd $argv
 end
 
 # ssh login 
