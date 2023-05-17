@@ -1,8 +1,3 @@
-------------------------------------------------------------
--- settings
--- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
-------------------------------------------------------------
-
 -- Vars
 local g = vim.g
 local opt = vim.opt
@@ -61,4 +56,7 @@ g.netrw_hide = 1
 g.netrw_keepdir = 0
 g.netrw_liststyle = 4
 g.netrw_winsize = 20
+
+-- References
+-- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
 

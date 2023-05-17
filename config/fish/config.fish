@@ -2,56 +2,51 @@
 set fish_greeting
 
 # Colors
-set -l shade0 23272e # background color
-set -l shade1 1e2227 # ui, darker
-set -l shade2 3d4556 # ui, text selection
-set -l shade3 5c6370 # ui, code comments
-set -l shade4 2c313c # iu, line highlight
-set -l shade5 828997 # iu
-set -l shade6 979eab # foreground text
-set -l shade7 abb2bf # foreground text
+set -l background 23272e
+set -l foreground abb2bf
+set -l selection_background 3d4556
+set -l comment_foreground 5c6370
 
-set -l accent0 e06c75 # red
-set -l accent1 d19a66 # orange
-set -l accent2 e5c07b # yellow
-set -l accent3 98c379 # green
-set -l accent4 56b6c2 # cyan
-set -l accent5 61afef # blue
-set -l accent6 c678dd # purple
-set -l accent7 be5046 # magenta
+set -l red e06c75
+set -l orange d19a66
+set -l yellow e5c07b
+set -l green 98c379
+set -l cyan 56b6c2
+set -l blue 61afef
+set -l purple c678dd
 
 # Syntaxy
-set -g fish_color_autosuggestion $shade3
-set -g fish_color_cancel $accent0
-set -g fish_color_command $shade7
-set -g fish_color_comment $shade3
-set -g fish_color_cwd $accent2
-set -g fish_color_cwd_root $accent0
-set -g fish_color_end $accent1
-set -g fish_color_error $accent0
-set -g fish_color_escape $shade7
-set -g fish_color_history_current $shade3
-set -g fish_color_host $accent5
-set -g fish_color_host_remote $accent5
-set -g fish_color_keyword $shade7
-set -g fish_color_match --background=$accent5
-set -g fish_color_normal $shade7
-set -g fish_color_operator $shade7
-set -g fish_color_option $shade7
-set -g fish_color_param $shade7
-set -g fish_color_quote $accent3
-set -g fish_color_redirection $accent6
-set -g fish_color_status $shade7
-set -g fish_color_search_match --background=$shade2
-set -g fish_color_selection --background=$accent5
-set -g fish_color_user $accent4
-set -g fish_color_valid_path $accent3
+set -g fish_color_autosuggestion $comment_foreground
+set -g fish_color_cancel $red
+set -g fish_color_command $foreground
+set -g fish_color_comment_foreground $comment_foreground
+set -g fish_color_cwd $yellow
+set -g fish_color_cwd_root $red
+set -g fish_color_end $orange
+set -g fish_color_error $red
+set -g fish_color_escape $foreground
+set -g fish_color_history_current $comment_foreground
+set -g fish_color_host $blue
+set -g fish_color_host_remote $blue
+set -g fish_color_keyword $foreground
+set -g fish_color_match --background=$blue
+set -g fish_color_normal $foreground
+set -g fish_color_operator $foreground
+set -g fish_color_option $foreground
+set -g fish_color_param $foreground
+set -g fish_color_quote $green
+set -g fish_color_redirection $purple
+set -g fish_color_status $foreground
+set -g fish_color_search_match --background=$selection_background
+set -g fish_color_selection --background=$blue
+set -g fish_color_user $cyan
+set -g fish_color_valid_path $green
 
 # Pager colors
-set -g fish_pager_color_completion $shade7
-set -g fish_pager_color_description $shade3
-set -g fish_pager_color_prefix $accent5
-set -g fish_pager_color_progress $shade3
+set -g fish_pager_color_completion $foreground
+set -g fish_pager_color_description $comment_foreground
+set -g fish_pager_color_prefix $blue
+set -g fish_pager_color_progress $comment_foreground
 
 # Variables
 set -x BROWSER 'firefox'
@@ -147,11 +142,11 @@ end
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS "
   --height 50% --reverse
-  --color=fg:#'$shade7',bg:#'$shade0',hl:#'$accent5'
-  --color=fg+:#'$shade7',bg+:#'$shade2',hl+:#'$accent5',gutter:#'$shade0'
-  --color=info:#'$shade3',prompt:#'$accent3',pointer:#'$shade7'
-  --color=marker:#'$shade7',spinner:#'$shade7',header:#'$shade7'
-  --color=border:#'$shade4'
+  --color=fg:#'$foreground',bg:#'$background',hl:#'$blue'
+  --color=fg+:#'$foreground',bg+:#'$selection_background',hl+:#'$blue',gutter:#'$background'
+  --color=info:#'$comment_foreground',prompt:#'$green',pointer:#'$foreground'
+  --color=marker:#'$foreground',spinner:#'$foreground',header:#'$foreground'
+  --color=border:#'$comment_foreground'
   --preview 'bat -n --color=always {}'"
 end
 
@@ -172,14 +167,14 @@ end
 # gum
 if type -q gum
   set -gx GUM_FILTER_INDICATOR '>'
-  set -gx GUM_FILTER_INDICATOR_FOREGROUND '#'$accent5
-  set -gx GUM_INPUT_CURSOR_FOREGROUND '#'$shade7
-  set -gx GUM_INPUT_PROMPT_FOREGROUND '#'$shade7
+  set -gx GUM_FILTER_INDICATOR_FOREGROUND '#'$blue
+  set -gx GUM_INPUT_CURSOR_FOREGROUND '#'$foreground
+  set -gx GUM_INPUT_PROMPT_FOREGROUND '#'$foreground
   set -gx GUM_INPUT_PLACEHOLDER "What's up?"
   set -gx GUM_INPUT_PROMPT "* "
-  set -gx GUM_CHOOSE_CURSOR_FOREGROUND '#'$accent5
-  set -gx GUM_CHOOSE_ITEM_FOREGROUND '#'$shade7
-  set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$shade7
+  set -gx GUM_CHOOSE_CURSOR_FOREGROUND '#'$blue
+  set -gx GUM_CHOOSE_ITEM_FOREGROUND '#'$foreground
+  set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$foreground
 end
 
 # helix
@@ -287,8 +282,20 @@ end
 
 # yt-dlp youtube 
 if type -q yt-dlp
-  alias yt="yt_dow"
-  alias ytm="yt_dow_meta"
+  alias yt="yt_dow_meta"
+  alias ytd="yt_dow"
+
+  # Download song of YouTube with metadata
+  function yt_dow_meta
+    set url $argv[1]
+    set name $argv[2]
+
+    if test -n "$name"
+      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$name" "$url"
+    else
+      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$url"
+    end
+  end
 
   # Download song of YouTube
   function yt_dow
@@ -302,17 +309,6 @@ if type -q yt-dlp
     end
   end
 
-  # Download song of YouTube with metadata
-  function yt_dow_meta
-    set url $argv[1]
-    set name $argv[2]
-
-    if test -n "$name"
-      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$name" "$url"
-    else
-      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$url"
-    end
-  end
 end
 
 # Functions
@@ -376,7 +372,7 @@ set -xU LESS_TERMCAP_ue (printf "\e[0m")
 # https://minsw.github.io/fzf-color-picker
 
 # defaults colors:
-# black, red, green, yellow, blue, magenta, cyan, white
+# black, red, green, yellow, blue, purple, cyan, white
 
 # colorize man pages
 # color  fg bg

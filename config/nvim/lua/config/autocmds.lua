@@ -1,3 +1,5 @@
+local M = {}
+
 -- Vars
 local autocmd = vim.api.nvim_create_autocmd
 local exec = vim.api.nvim_exec
@@ -35,3 +37,5 @@ exec([[
   autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
   autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
 ]], false)
+
+return M
