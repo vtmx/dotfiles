@@ -1,4 +1,4 @@
-local c = require('config.colors')
+local c = require('config.theme')
 
 return {
   {

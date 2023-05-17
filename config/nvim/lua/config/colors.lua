@@ -1,25 +1,18 @@
-------------------------------------------------------------
--- colors
-------------------------------------------------------------
-
 local c = {
-  shade0 = '#23272e', --background color (one dark darker)
-  shade1 = '#1e2227', --ui, darker
-  shade2 = '#3d4556', --ui, text selection
-  shade3 = '#5c6370', --ui, code comments
-  shade4 = '#2c313c', --ui, line highlight
-  shade5 = '#828997', --ui
-  shade6 = '#979eab', --foreground text
-  shade7 = '#abb2bf', --foreground text
+  background                = '#23272e',
+  foreground                = '#abb2bf',
+  dark_background           = '#1e2227',
+  selection_background      = '#3d4556',
+  comment_foreground        = '#5c6370',
+  line_highlight_background = '#2c313c',
 
-  accent0 = '#e06c75', --red
-  accent1 = '#d19a66', --orange
-  accent2 = '#e5c07b', --yellow
-  accent3 = '#98c379', --green
-  accent4 = '#56b6c2', --cyan
-  accent5 = '#61afef', --blue
-  accent6 = '#c678dd', --purple
-  accent7 = '#be5046', --magenta
+  red    = '#e06c75',
+  orange = '#d19a66',
+  yellow = '#e5c07b',
+  green  = '#98c379',
+  cyan   = '#56b6c2',
+  blue   = '#61afef',
+  purple = '#c678dd',
 }
 
 return c
