@@ -1,8 +1,5 @@
 return {
   'nvim-tree/nvim-tree.lua',
-  keys = {
-    { '<leader>e', '<cmd>NvimTreeToggle<cr>' },
-  },
   opts = {
     disable_netrw = false,
     hijack_netrw = false,

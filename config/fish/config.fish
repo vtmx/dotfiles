@@ -4,9 +4,8 @@ set fish_greeting
 # Colors
 set -l background 23272e
 set -l foreground abb2bf
-set -l selection_background 3d4556
-set -l comment_foreground 5c6370
-
+set -l selection 3d4556
+set -l comment 5c6370
 set -l red e06c75
 set -l orange d19a66
 set -l yellow e5c07b
@@ -16,16 +15,16 @@ set -l blue 61afef
 set -l purple c678dd
 
 # Syntaxy
-set -g fish_color_autosuggestion $comment_foreground
+set -g fish_color_autosuggestion $comment
 set -g fish_color_cancel $red
 set -g fish_color_command $foreground
-set -g fish_color_comment_foreground $comment_foreground
+set -g fish_color_comment $comment
 set -g fish_color_cwd $yellow
 set -g fish_color_cwd_root $red
 set -g fish_color_end $orange
 set -g fish_color_error $red
 set -g fish_color_escape $foreground
-set -g fish_color_history_current $comment_foreground
+set -g fish_color_history_current $comment
 set -g fish_color_host $blue
 set -g fish_color_host_remote $blue
 set -g fish_color_keyword $foreground
@@ -37,16 +36,16 @@ set -g fish_color_param $foreground
 set -g fish_color_quote $green
 set -g fish_color_redirection $purple
 set -g fish_color_status $foreground
-set -g fish_color_search_match --background=$selection_background
+set -g fish_color_search_match --background=$selection
 set -g fish_color_selection --background=$blue
 set -g fish_color_user $cyan
 set -g fish_color_valid_path $green
 
 # Pager colors
 set -g fish_pager_color_completion $foreground
-set -g fish_pager_color_description $comment_foreground
+set -g fish_pager_color_description $comment
 set -g fish_pager_color_prefix $blue
-set -g fish_pager_color_progress $comment_foreground
+set -g fish_pager_color_progress $comment
 
 # Variables
 set -x BROWSER 'firefox'
@@ -143,10 +142,10 @@ if type -q fzf
   set -gx FZF_DEFAULT_OPTS "
   --height 50% --reverse
   --color=fg:#'$foreground',bg:#'$background',hl:#'$blue'
-  --color=fg+:#'$foreground',bg+:#'$selection_background',hl+:#'$blue',gutter:#'$background'
-  --color=info:#'$comment_foreground',prompt:#'$green',pointer:#'$foreground'
+  --color=fg+:#'$foreground',bg+:#'$selection',hl+:#'$blue',gutter:#'$background'
+  --color=info:#'$comment',prompt:#'$green',pointer:#'$foreground'
   --color=marker:#'$foreground',spinner:#'$foreground',header:#'$foreground'
-  --color=border:#'$comment_foreground'
+  --color=border:#'$comment'
   --preview 'bat -n --color=always {}'"
 end
 
