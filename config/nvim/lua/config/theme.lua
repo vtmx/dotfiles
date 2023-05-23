@@ -1,13 +1,13 @@
 local c = require('config.colors')
 
 local hl_groups = {
-  -- general
-  Normal         = { fg = c.foreground, ctermfg = 255, ctermbg = 234 },
-  Comment        = { fg = c.comment_foreground, ctermfg = 7,   italic = true },
+  -- General
+  Normal         = { fg = c.fg, ctermfg = 255, ctermbg = 234 },
+  Comment        = { fg = c.comment, ctermfg = 7,   italic = true },
   Title          = { fg = c.purple },
-  Twilight       = { fg = c.comment_foreground  },
+  Twilight       = { fg = c.comment  },
 
-  -- sintaxy
+  -- Sintaxy
   Boolean        = { fg = c.orange },
   Character      = { fg = c.green },
   Conditional    = { fg = c.purple },
@@ -31,105 +31,105 @@ local hl_groups = {
   Statement      = { fg = c.purple },
   String         = { fg = c.green },
 
-  -- keys [] {} ()
+  -- Keys [] {} ()
   Type           = { fg = c.purple },
   Typedef        = { fg = c.purple },
   StorageClass   = { fg = c.purple },
   Structure      = { fg = c.purple },
 
-  -- extras
+  -- Extras
   Debug          = { fg = c.yellow },
   Directory      = { fg = c.blue },
-  EndOfBuffer    = { fg = c.comment_foreground  },
-  NonText        = { fg = c.comment_foreground  },
+  EndOfBuffer    = { fg = c.comment  },
+  NonText        = { fg = c.comment  },
   Special        = { fg = c.yellow },
   SpecialChar    = { fg = c.yellow },
-  SpecialComment = { fg = c.comment_foreground  },
+  SpecialComment = { fg = c.comment  },
   SpecialKey     = { fg = c.cyan },
-  TermCursor     = { fg = c.foreground  },
+  TermCursor     = { fg = c.fg  },
 
-  -- float popup
-  NormalFloat    = { bg = c.background },
-  FloatBorder    = { bg = c.background },
+  -- Float popup
+  NormalFloat    = { bg = c.bg },
+  FloatBorder    = { bg = c.bg },
 
-  -- search
+  -- Search
   Delimiter      = { fg = c.purple },
-  IncSearch      = { bg = c.selection_background  },
+  IncSearch      = { bg = c.selection  },
   MatchParen     = { fg = c.yellow },
-  Search         = { bg = c.selection_background  },
+  Search         = { bg = c.selection  },
 
-  -- messages
-  ModeMsg        = { fg = c.comment_foreground  },
-  MoreMsg        = { fg = c.comment_foreground  },
-  Question       = { fg = c.foreground  },
+  -- Messages
+  ModeMsg        = { fg = c.comment  },
+  MoreMsg        = { fg = c.comment  },
+  Question       = { fg = c.fg  },
   WarningMsg     = { fg = c.yellow },
 
-  -- alerts
-  Ignore         = { fg = c.foreground  },
+  -- Alerts
+  Ignore         = { fg = c.fg  },
   Error          = { fg = c.red },
   Todo           = { fg = c.purple },
 
-  -- line tilde blank ~
-  EndOfBuffer    = { fg = c.background },
+  -- Line tilde blank ~
+  EndOfBuffer    = { fg = c.bg },
 
-  -- line highlight
-  CursorLine     = { bg = c.line_highlight_background },
+  -- Line highlight
+  CursorLine     = { bg = c.cursor_line },
 
-  -- select text
-  Visual         = { bg = c.selection_background },
+  -- Select text
+  Visual         = { bg = c.selection },
 
-  -- line number column
-  CursorLineFold = { fg = c.foreground },
-  CursorLineNr   = { fg = c.foreground },
-  CursorLineSign = { fg = c.foreground },
-  LineNr         = { fg = c.selection_background },
-  LineNrAbove    = { fg = c.comment_foreground },
-  LineNrBelow    = { fg = c.comment_foreground },
+  -- Line number column
+  CursorLineFold = { fg = c.fg },
+  CursorLineNr   = { fg = c.fg },
+  CursorLineSign = { fg = c.fg },
+  LineNr         = { fg = c.selection },
+  LineNrAbove    = { fg = c.comment },
+  LineNrBelow    = { fg = c.comment },
 
-  -- pmenu
-  Pmenu          = { bg = c.dark_background },
-  PmenuSbar      = { bg = c.dark_background },
-  PmenuSel       = { bg = c.line_highlight_background },
-  PmenuThumb     = { bg = c.line_highlight_background },
+  -- Pmenu
+  Pmenu          = { bg = c.bg_dark },
+  PmenuSbar      = { bg = c.bg_dark },
+  PmenuSel       = { bg = c.cursor_line },
+  PmenuThumb     = { bg = c.cursor_line },
 
-  -- pmenu coc
-  CocFloating       = { bg = c.dark_background  },
-  CocFloatSbar      = { bg = c.dark_background  },
-  CocFloatThumb     = { bg = c.line_highlight_background  },
-  CocMenuSel        = { bg = c.line_highlight_background  },
-  CocPumDetail      = { fg = c.comment_foreground  },
-  CocPumMenu        = { bg = c.dark_background  },
-  CocPumShortcut    = { fg = c.comment_foreground  },
-  CocPumVirtualText = { fg = c.comment_foreground  },
+  -- Pmenu coc
+  CocFloating       = { bg = c.bg_dark  },
+  CocFloatSbar      = { bg = c.bg_dark  },
+  CocFloatThumb     = { bg = c.cursor_line  },
+  CocMenuSel        = { bg = c.cursor_line  },
+  CocPumDetail      = { fg = c.comment  },
+  CocPumMenu        = { bg = c.bg_dark  },
+  CocPumShortcut    = { fg = c.comment  },
+  CocPumVirtualText = { fg = c.comment  },
   CocSearch         = { fg = c.blue },
 
-  -- tab bar
-  WinbarNC          = { fg = c.comment_foreground },
+  -- Tab bar
+  WinbarNC          = { fg = c.comment },
 
-  -- line win separator split
+  -- Line win separator split
   StatusLine        = { bg = 'NONE'   },
-  StatusLineNC      = { fg = c.foreground },
-  WinSeparator      = { fg = c.selection_background },
+  StatusLineNC      = { fg = c.fg },
+  WinSeparator      = { fg = c.selection },
 
   -- Languages
 
   -- html
   htmlArg            = { fg = c.yellow }, -- atribute
-  htmlH1             = { fg = c.foreground },
+  htmlH1             = { fg = c.fg },
   htmlH2             = { link = 'htmlH1' },
   htmlH3             = { link = 'htmlH1' },
   htmlH4             = { link = 'htmlH1' },
   htmlH5             = { link = 'htmlH1' },
   htmlH6             = { link = 'htmlH1' },
   htmlSpecialTagName = { fg = c.red },
-  htmlTag            = { fg = c.foreground },
+  htmlTag            = { fg = c.fg },
   htmlTagName        = { fg = c.red },
-  htmlTitle          = { fg = c.foreground },
-  htmlLink           = { fg = c.foreground },
+  htmlTitle          = { fg = c.fg },
+  htmlLink           = { fg = c.fg },
 
   -- markdown
-  markdownBlockquote       = { fg = c.foreground },
-  markdownCodeDelimiter    = { fg = c.foreground },
+  markdownBlockquote       = { fg = c.fg },
+  markdownCodeDelimiter    = { fg = c.fg },
   markdownId               = { link = 'markdownH1' },
   markdownH1               = { fg = c.purple      },
   markdownH2               = { link = 'markdownH1' },
@@ -141,22 +141,19 @@ local hl_groups = {
   markdownHeadingRule      = { link = 'markdownH1' },
   markdownListMarker       = { fg = c.yellow },
   markdownRule             = { link = 'markdownH1' },
-  markdownUrl              = { fg = c.foreground },
+  markdownUrl              = { fg = c.fg },
 
   -- css
   cssClassNameDot = { fg = c.orange },
   cssClassName    = { link = 'cssClassNameDot' },
-  cssHacks        = { fg = c.foreground },
+  cssHacks        = { fg = c.fg },
   cssTagName      = { fg = c.red },
-  cssVendor       = { fg = c.foreground },
+  cssVendor       = { fg = c.fg },
 
   -- Plugins
 
-  -- packker
-  packerStatusSuccess = { fg = c.green },
-
   -- indent-line
-  IndentBlanklineChar = { fg = c.selection_background },
+  IndentBlanklineChar = { fg = c.selection },
 
   -- bufferline
   BufferLineCloseButtonVisible = { bg = 'NONE' },
@@ -168,47 +165,47 @@ local hl_groups = {
   HopNextKey1              = { fg = c.blue },
   HopNextKey2              = { fg = c.orange },
   HopNextKey3              = { fg = c.purple },
-  HopUnmatched             = { fg = c.comment_foreground  },
+  HopUnmatched             = { fg = c.comment  },
 
   -- nvim-tree
-  NvimTreeCursorLine       = { bg = c.line_highlight_background },
-  NvimTreeFolder           = { fg = c.foreground },
-  NvimTreeFolderIcon       = { fg = c.foreground },
-  NvimTreeFolderName       = { fg = c.foreground },
-  NvimTreeEmptyFolderName  = { fg = c.foreground },
-  NvimTreeOpenedFolderName = { fg = c.foreground },
-  NvimTreeNormal           = { bg = c.background },
-  NvimTreeNormalNC         = { bg = c.background },
-  NvimTreeRootFolder       = { fg = c.foreground },
-  NvimTreeOpenedFile       = { fg = c.foreground },
-  NvimTreeVertSplit        = { fg = c.selection_background },
-  NvimTreeWindowPicker     = { fg = c.foreground },
+  NvimTreeCursorLine       = { bg = c.cursor_line },
+  NvimTreeFolder           = { fg = c.fg },
+  NvimTreeFolderIcon       = { fg = c.fg },
+  NvimTreeFolderName       = { fg = c.fg },
+  NvimTreeEmptyFolderName  = { fg = c.fg },
+  NvimTreeOpenedFolderName = { fg = c.fg },
+  NvimTreeNormal           = { bg = c.bg },
+  NvimTreeNormalNC         = { bg = c.bg },
+  NvimTreeRootFolder       = { fg = c.fg },
+  NvimTreeOpenedFile       = { fg = c.fg },
+  NvimTreeVertSplit        = { fg = c.selection  },
+  NvimTreeWindowPicker     = { fg = c.fg },
 
   -- mini
   MiniJump                 = { fg = c.red },
 
   -- telescope
-  TelescopeMultiSelection  = { fg = c.foreground },
-  TelescopeMultiIcon       = { fg = c.foreground },
-  TelescopeNormal          = { fg = c.foreground },
-  TelescopePreviewNormal   = { fg = c.foreground },
-  TelescopePromptNormal    = { fg = c.foreground },
-  TelescopeResultsNormal   = { fg = c.foreground },
-  TelescopePromptBorder    = { fg = c.comment_foreground },
-  TelescopeResultsBorder   = { fg = c.comment_foreground },
-  TelescopePreviewBorder   = { fg = c.comment_foreground },
-  TelescopeSelection       = { bg = c.line_highlight_background },
-  TelescopeSelectionCaret  = { fg = c.foreground, bg = c.line_highlight_background },
-  TelescopeTitle           = { fg = c.foreground },
-  TelescopePromptTitle     = { fg = c.foreground },
-  TelescopeResultsTitle    = { fg = c.foreground },
-  TelescopePreviewTitle    = { fg = c.foreground },
-  TelescopePromptCounter   = { fg = c.comment_foreground },
+  TelescopeMultiSelection  = { fg = c.fg },
+  TelescopeMultiIcon       = { fg = c.fg },
+  TelescopeNormal          = { fg = c.fg },
+  TelescopePreviewNormal   = { fg = c.fg },
+  TelescopePromptNormal    = { fg = c.fg },
+  TelescopeResultsNormal   = { fg = c.fg },
+  TelescopePromptBorder    = { fg = c.comment },
+  TelescopeResultsBorder   = { fg = c.comment },
+  TelescopePreviewBorder   = { fg = c.comment },
+  TelescopeSelection       = { bg = c.cursor_line },
+  TelescopeSelectionCaret  = { fg = c.fg, bg = c.cursor_line },
+  TelescopeTitle           = { fg = c.fg },
+  TelescopePromptTitle     = { fg = c.fg },
+  TelescopeResultsTitle    = { fg = c.fg },
+  TelescopePreviewTitle    = { fg = c.fg },
+  TelescopePromptCounter   = { fg = c.comment },
   TelescopeMatching        = { fg = c.blue },
-  TelescopePromptPrefix    = { fg = c.foreground },
+  TelescopePromptPrefix    = { fg = c.fg },
 
   -- lualine
-  lualine_b_diff_added_normal          = { fg = c.comment_foreground },
+  lualine_b_diff_added_normal          = { fg = c.comment },
   lualine_b_diff_added_insert          = { link = 'lualine_b_diff_added_normal' },
   lualine_b_diff_added_visual          = { link = 'lualine_b_diff_added_normal' },
   lualine_b_diff_added_replace         = { link = 'lualine_b_diff_added_normal' },

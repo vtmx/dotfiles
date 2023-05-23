@@ -3,9 +3,6 @@ return {
   dependencies = {
     'folke/twilight.nvim'
   },
-  keys = {
-    { '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>' }
-  },
   opts = {
     window = {
       width = 80,

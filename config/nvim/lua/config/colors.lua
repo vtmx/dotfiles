@@ -1,10 +1,10 @@
 local c = {
-  background                = '#23272e',
-  foreground                = '#abb2bf',
-  dark_background           = '#1e2227',
-  selection_background      = '#3d4556',
-  comment_foreground        = '#5c6370',
-  line_highlight_background = '#2c313c',
+  bg          = '#23272e',
+  bg_dark     = '#1e2227',
+  fg          = '#abb2bf',
+  selection   = '#3d4556',
+  comment     = '#5c6370',
+  cursor_line = '#2c313c',
 
   red    = '#e06c75',
   orange = '#d19a66',

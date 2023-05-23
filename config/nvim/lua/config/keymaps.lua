@@ -224,6 +224,27 @@ M.map('n', '<leader>Q', '<cmd>qa!<cr>')
 -- Plugins
 ------------------------------------------------------------
 
+-- hop
+M.map('n', '<leader>f', '<cmd>HopChar1<cr>')
+
+-- nvim-tree
+M.map('n',  '<leader>e', '<cmd>NvimTreeToggle<cr>')
+
+-- telescope
+M.map('n', '<c-p>', '<cmd>Telescope file_browser<cr>')
+M.map('n', '<leader>F', '<cmd>Telescope file_files<cr>')
+M.map('n', '<leader>b', '<cmd>Telescope buffers<cr>')
+M.map('n', '<leader>tc', '<cmd>Telescope commands<cr>')
+M.map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
+M.map('n', '<leader>m',  '<cmd>Telescope marks<cr>')
+M.map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
+M.map('n', '<leader>tt', '<cmd>Telescope filetypes<cr>')
+M.map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
+M.map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
+
+-- zenmode
+M.map('n', '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>')
+
 -- tmux
 -- M.map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
 -- M.map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')

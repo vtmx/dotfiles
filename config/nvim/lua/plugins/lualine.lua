@@ -2,28 +2,28 @@ local c = require('config.colors')
 
 local onedarkv = ({
   normal = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+    a = { fg = c.fg, bg = 'NONE' },
+    b = { fg = c.comment }, z = { fg = c.comment },
   },
 
   insert = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+    a = { fg = c.fg, bg = 'NONE' },
+    b = { fg = c.comment }, z = { fg = c.comment },
   },
 
   visual = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+    a = { fg = c.fg, bg = 'NONE' },
+    b = { fg = c.comment }, z = { fg = c.comment },
   },
 
   replace = {
-    a = { fg = c.shade7, bg = 'NONE' },
-    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+    a = { fg = c.fg, bg = 'NONE' },
+    b = { fg = c.comment }, z = { fg = c.comment },
   },
 
   inactive = {
-    a = { fg = c.shade3, bg = 'NONE' },
-    b = { fg = c.shade3 }, z = { fg = c.shade3 },
+    a = { fg = c.comment, bg = 'NONE' },
+    b = { fg = c.comment }, z = { fg = c.comment },
   },
 })
 
