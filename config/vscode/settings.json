@@ -6,9 +6,10 @@
   "window.restoreWindows": "none",
 
   // Editor
-  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingBrackets": "never",
   "editor.autoClosingDelete": "always",
-  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingOvertype": "never",
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": true,
