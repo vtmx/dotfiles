@@ -189,42 +189,42 @@
     <tr>
       <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Black"></td>
       <td>Black</td>
-      <td>#23272e</td>
+      <td><code>#23272e</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="Red"></td>
       <td>Red</td>
-      <td>#e06c75</td>
+      <td><code>#e06c75</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="Green"></td>
       <td>Green</td>
-      <td>#98c379</td>
+      <td><code>#98c379</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-e5c07b?&style=for-the-badge" alt="Yellow"></td>
       <td>Yellow</td>
-      <td>#e5c07b</td>
+      <td><code>#e5c07b</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-61afef?&style=for-the-badge" alt="Blue"></td>
       <td>Blue</td>
-      <td>#61afef</td>
+      <td><code>#61afef</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Magenta"></td>
       <td>Magenta</td>
-      <td>#c678dd</td>
+      <td><code>#c678dd</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="Cyan"></td>
       <td>Cyan</td>
-      <td>#56b6c2</td>
+      <td><code>#56b6c2</code></td>
     </tr>
     <tr>
       <td><img src="https://shields.io/badge/-abb2bf?&style=for-the-badge" alt="White"></td>
       <td>White</td>
-      <td>#abb2bf</td>
+      <td><code>#abb2bf</code></td>
     </tr>
   <tbody>
 </table>
@@ -238,67 +238,67 @@
   </tr>
   <tr>
     <th align="left"></th>
+    <th align="left" width="180">Name</th>
     <th align="left">Hex</th>
-    <th align="left" width="180">Use</th>
     <th align="left"></th>
+    <th align="left" width="180">Name</th>
     <th align="left">Hex</th>
-    <th align="left" width="180">Use</th>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-1e2227?&style=for-the-badge" alt="shade1"></td>
-    <td>#1e2227</td>
-    <td>dark background</td>
-    <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="accent0"></td>
-    <td>#e06c75</td>
-    <td>red</td>
+    <td><img src="https://shields.io/badge/-1e2227?&style=for-the-badge" alt="Background Darker"></td>
+    <td>Background Darker</td>
+    <td><code>#1e2227</code></td>
+    <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="Red"></td>
+    <td>Red</td>
+    <td><code>#e06c75</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="shade0"></td>
-    <td>#23272e</td>
-    <td>background</td>
-    <td><img src="https://shields.io/badge/-d19a66?&style=for-the-badge" alt="accent1"></td>
-    <td>#d19a66</td>
-    <td>orange</td>
+    <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Background"></td>
+    <td>Background</td>
+    <td><code>#23272e</code></td>
+    <td><img src="https://shields.io/badge/-d19a66?&style=for-the-badge" alt="Orange"></td>
+    <td>Orange</td>
+    <td><code>#d19a66</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-2c313c?&style=for-the-badge" alt=">shade4"></td>
-    <td>#2c313c</td>
-    <td>line highlight background</td>
-    <td><img src="https://shields.io/badge/-e5c07b?&style=for-the-badge" alt="accent2"></td>
-    <td>#e5c07b</td>
-    <td>yellow</td>
+    <td><img src="https://shields.io/badge/-2c313c?&style=for-the-badge" alt="Line Hightlight"></td>
+    <td>Line Highlight</td>
+    <td><code>#2c313c</code></td>
+    <td><img src="https://shields.io/badge/-e5c07b?&style=for-the-badge" alt="Yellow"></td>
+    <td>Yellow</td>
+    <td><code>#e5c07b</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-3d4556?&style=for-the-badge" alt=">shade2"></td>
-    <td>#3d4556</td>
-    <td>selection background</td>
-    <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="accent3"></td>
-    <td>#98c379</td>
-    <td>green</td>
+    <td><img src="https://shields.io/badge/-3d4556?&style=for-the-badge" alt="Selection Background"></td>
+    <td>Selection Background</td>
+    <td><code>#3d4556</code></td>
+    <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="Green"></td>
+    <td>Green</td>
+    <td><code>#98c379</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-5c6370?&style=for-the-badge" alt=">shade3"></td>
-    <td>#5c6370</td>
-    <td>comment foreground</td>
-    <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="accent4"></td>
-    <td>#56b6c2</td>
-    <td>cyan</td>
+    <td><img src="https://shields.io/badge/-5c6370?&style=for-the-badge" alt="Comment Foreground"></td>
+    <td>Comment Foreground</td>
+    <td><code>#5c6370</code></td>
+    <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="Cyan"></td>
+    <td>Cyan</td>
+    <td><code>#56b6c2</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-abb2bf?&style=for-the-badge" alt="shade7"></td>
-    <td>#abb2bf</td>
-    <td>foreground</td>
-    <td><img src="https://shields.io/badge/-61afef?&style=for-the-badge" alt="accent5"></td>
-    <td>#61afef</td>
-    <td>blue</td>
+    <td><img src="https://shields.io/badge/-abb2bf?&style=for-the-badge" alt="Foreground"></td>
+    <td>Foreground</td>
+    <td><code>#abb2bf</code></td>
+    <td><img src="https://shields.io/badge/-61afef?&style=for-the-badge" alt="Blue"></td>
+    <td>Blue</td>
+    <td><code>#61afef</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-dadfe9?&style=for-the-badge" alt="shade7"></td>
-    <td>#dadfe9</td>
-    <td>light foreground</td>
-    <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="purple"></td>
-    <td>#c678dd</td>
-    <td>purple</td>
+    <td><img src="https://shields.io/badge/-dadfe9?&style=for-the-badge" alt="Light Foreground"></td>
+    <td>Light Foreground</td>
+    <td><code>#dadfe9</code></td>
+    <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Purple"></td>
+    <td>Purple</td>
+    <td><code>#c678dd</code></td>
   </tr>
 </table>
 

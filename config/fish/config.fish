@@ -154,7 +154,7 @@ end
 if type -q git
   alias g='git'
   alias gaa='git add --all'
-  alias gcm='git commit -m'
+  alias gcm='git_commit'
   alias gco='git checkout'
   alias gcb='git checkout -b'
   alias gcl='git clone'
@@ -162,6 +162,16 @@ if type -q git
   alias gbd='git branch -d'
   alias gl='git pull'
   alias gp='git push'
+
+  function git_commit
+    set msg $argv[1]
+
+    if test -n "$msg"
+      git commit -m "$msg"
+    else
+      git commit -m "update"
+    end
+  end
 end
 
 # gum
@@ -265,10 +275,10 @@ if type -q yarn
   alias yd='yarn dev'
   alias yh='yarn help'
   alias ydp='yarn deploy'
-  alias yi='yarn add'
+  alias yi='yarn install'
   alias yr='yarn remove'
   alias ys='yarn start'
-  alias yt='yarn test'
+  alias yte='yarn test'
   alias yu='yarn upgrade'
   alias yv='yarn version'
 end
