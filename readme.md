@@ -269,16 +269,16 @@
     <td><code>#e5c07b</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-3d4556?&style=for-the-badge" alt="Selection Background"></td>
-    <td>Selection Background</td>
+    <td><img src="https://shields.io/badge/-3d4556?&style=for-the-badge" alt="Selection"></td>
+    <td>Selection</td>
     <td><code>#3d4556</code></td>
     <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="Green"></td>
     <td>Green</td>
     <td><code>#98c379</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-5c6370?&style=for-the-badge" alt="Comment Foreground"></td>
-    <td>Comment Foreground</td>
+    <td><img src="https://shields.io/badge/-5c6370?&style=for-the-badge" alt="Comment"></td>
+    <td>Comment</td>
     <td><code>#5c6370</code></td>
     <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="Cyan"></td>
     <td>Cyan</td>
@@ -293,8 +293,8 @@
     <td><code>#61afef</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-dadfe9?&style=for-the-badge" alt="Light Foreground"></td>
-    <td>Light Foreground</td>
+    <td><img src="https://shields.io/badge/-dadfe9?&style=for-the-badge" alt="Foreground Light"></td>
+    <td>Foreground Light</td>
     <td><code>#dadfe9</code></td>
     <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Purple"></td>
     <td>Purple</td>
