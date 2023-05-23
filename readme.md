@@ -212,8 +212,8 @@
       <td><code>#61afef</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Magenta"></td>
-      <td>Magenta</td>
+      <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Purple"></td>
+      <td>Purple</td>
       <td><code>#c678dd</code></td>
     </tr>
     <tr>
