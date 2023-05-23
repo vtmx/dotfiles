@@ -7,67 +7,66 @@
   --shade5: #828997;
   --shade6: #979eab;
   --shade7: #abb2bf;
-  --accent0: #e06c75;
-  --accent1: #d19a66;
-  --accent2: #e5c07b;
-  --accent3: #98c379;
-  --accent4: #56b6c2;
-  --accent5: #61afef;
-  --accent6: #c678dd;
-  --accent7: #be5046;
+  --red: #e06c75;
+  --orange: #d19a66;
+  --yellow: #e5c07b;
+  --green: #98c379;
+  --cyan: #56b6c2;
+  --blue: #61afef;
+  --purple: #c678dd;
 
   --card-outline-color: var(--shade5) !important;
-  --dialog-warning-text-color: var(--accent0) !important;
+  --dialog-warning-text-color: var(--red) !important;
   --grey-50: var(--shade3) !important;
-  --in-content-accent-color: var(--accent5) !important;
-  --in-content-accent-color-active: var(--accent5);
+  --in-content-accent-color: var(--blue) !important;
+  --in-content-accent-color-active: var(--blue);
   --in-content-border-color: var(--shade2) !important;
   --in-content-border-hover: var(--shade3) !important;
-  --in-content-border-invalid: var(--accent0) !important;
+  --in-content-border-invalid: var(--red) !important;
   --in-content-box-background: var(--shade1) !important;
   --in-content-box-background-odd: var(--shade0) !important;
   --in-content-box-info-background: var(--shade3) !important;
   --in-content-button-background: var(--shade0) !important;
   --in-content-button-background-hover: var(--shade2) !important;
   --in-content-button-background-active: var(--shade2) !important;
-  --in-content-danger-button-background: var(--accent0) !important;
-  --in-content-danger-button-background-hover: var(--accent0) !important;
-  --in-content-danger-button-background-active: var(--accent0) !important;
+  --in-content-danger-button-background: var(--red) !important;
+  --in-content-danger-button-background-hover: var(--red) !important;
+  --in-content-danger-button-background-active: var(--red) !important;
   --in-content-deemphasized-text: var(--shade6) !important;
-  --in-content-error-text-color: var(--accent0) !important;
+  --in-content-error-text-color: var(--red) !important;
   --in-content-icon-color: var(--shade7) !important;
-  --in-content-link-color: var(--accent5) !important;
-  --in-content-link-color-hover: var(--accent5) !important;
-  --in-content-link-color-active: var(--accent5) !important;
-  --in-content-link-color-visited: var(--accent5) !important;
+  --in-content-link-color: var(--blue) !important;
+  --in-content-link-color-hover: var(--blue) !important;
+  --in-content-link-color-active: var(--blue) !important;
+  --in-content-link-color-visited: var(--blue) !important;
   --in-content-page-background: var(--shade1) !important;
   --in-content-page-color: var(--shade7) !important;
-  --in-content-primary-button-background: var(--accent5) !important;
-  --in-content-primary-button-background-hover: var(--accent5) !important;
-  --in-content-primary-button-background-active: var(--accent4) !important;
+  --in-content-primary-button-background: var(--blue) !important;
+  --in-content-primary-button-background-hover: var(--blue) !important;
+  --in-content-primary-button-background-active: var(--cyan) !important;
   --in-content-primary-button-text-color: var(--shade7) !important;
   --in-content-table-background: var(--shade0) !important;
 	
   /* devtoos */
   /* https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html */ 
   --console-input-background: var(--shade1) !important;
-  --markup-hidden-attr-name-color: var(--accent0) !important;
-  --markup-hidden-attr-value-color: var(--accent6) !important;
-  --markup-hidden-tag-color: var(--accent5) !important;
+  --markup-hidden-attr-name-color: var(--red) !important;
+  --markup-hidden-attr-value-color: var(--purple) !important;
+  --markup-hidden-tag-color: var(--blue) !important;
   --monospace-font-family: 'BlexMono Nerd Font', monospace !important;
   --theme-code-font-size: 13px !important;
   --theme-accordion-header-background: var(--shade0) !important;
   --theme-accordion-header-hover: var(--shade2) !important;
   --theme-body-background: var(--shade0) !important;
   --theme-body-color: var(--shade7) !important;
-  --theme-highlight-red: var(--accent0) !important;
-  --theme-highlight-orange: var(--accent1) !important;
-  --theme-highlight-lightorange: var(--accent2) !important;
-  --theme-highlight-green: var(--accent3) !important;
-  --theme-highlight-bluegrey: var(--accent4) !important;
-  --theme-highlight-blue: var(--accent5) !important;
-  --theme-highlight-purple: var(--accent6) !important;
-  --theme-highlight-pink: var(--accent6) !important;
+  --theme-highlight-red: var(--red) !important;
+  --theme-highlight-orange: var(--orange) !important;
+  --theme-highlight-lightorange: var(--yellow) !important;
+  --theme-highlight-green: var(--green) !important;
+  --theme-highlight-bluegrey: var(--cyan) !important;
+  --theme-highlight-blue: var(--blue) !important;
+  --theme-highlight-purple: var(--purple) !important;
+  --theme-highlight-pink: var(--purple) !important;
   --theme-selection-background: var(--shade2) !important;
   --theme-sidebar-background: var(--shade1) !important; 
   --theme-splitter-color: #2c313c !important;
@@ -91,7 +90,7 @@
 
 /* selection in all pages */
 *::selection {
-  background: var(--accent5);
+  background: var(--blue);
   color: var(--shade0);
 }
 

@@ -83,7 +83,7 @@ alias cdp='cd $HOME/Dev/projects'
 alias cdf='cd $HOME/Dev/projects/fraseologia'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cds='cd $HOME/Dev/shortcuts'
-alias cdmoz='firefox/ph8r9j57.default-release/chrome'
+alias cdmoz='cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome'
 alias cdpkg='cd $HOME/_packages'
 
 # bat
@@ -357,7 +357,7 @@ end
 # zoxide
 if type -q zoxide
   zoxide init fish | source
-  # zoxide init --cmd j fish | source
+  # zoxide init --cmd f fish | source
 end
 
 # Headers blue
@@ -380,10 +380,10 @@ set -xU LESS_TERMCAP_ue (printf "\e[0m")
 # https://github.com/jwkvam/fish-config/blob/master/config.fish
 # https://minsw.github.io/fzf-color-picker
 
-# defaults colors:
+# Defaults colors:
 # black, red, green, yellow, blue, purple, cyan, white
 
-# colorize man pages
+# Colorize man pages
 # color  fg bg
 # black  30 40 	
 # red    31 41 	
