@@ -245,8 +245,8 @@
     <th align="left">Hex</th>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-1e2227?&style=for-the-badge" alt="Background Darker"></td>
-    <td>Background Darker</td>
+    <td><img src="https://shields.io/badge/-1e2227?&style=for-the-badge" alt="Background Dark"></td>
+    <td>Background Dark</td>
     <td><code>#1e2227</code></td>
     <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="Red"></td>
     <td>Red</td>
