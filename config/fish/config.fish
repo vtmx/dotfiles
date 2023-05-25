@@ -357,7 +357,15 @@ end
 # zoxide
 if type -q zoxide
   zoxide init fish | source
+
+  # custom key
   # zoxide init --cmd f fish | source
+
+  alias zo='zoxide_open'
+
+  function zoxide_open
+    zoxide query $argv | xargs dolphin & 
+  end
 end
 
 # Headers blue
