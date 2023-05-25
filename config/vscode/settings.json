@@ -296,6 +296,10 @@
       "after": ["y", "$"]
     },
     {
+      "before": ["R"],
+      "after": ["\"", "0", "p"]
+    },
+    {
       "before": ["v", "v"],
       "commands": ["workbench.action.moveEditorToNextGroup"]
     },
@@ -402,7 +406,19 @@
     {
       "before": ["<leader>", "<esc>"],
       "commands": [":nohl"]
-    }
+    },
+    {
+      "before": ["s", "a"],
+      "after": ["<plugys>"]
+    },
+    {
+      "before": ["s", "d"],
+      "after": ["<plugds>"]
+    },
+    {
+      "before": ["s", "r"],
+      "after": ["<plugcs>"]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {

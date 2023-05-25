@@ -81,6 +81,9 @@ M.map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new lin
 M.map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste of clipboard"<cr>')
 M.map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"<cr>')
 
+-- Replace yank
+M.map('n', 'R', '"0p')
+
 -- Paste with no resgister
 M.map('x', '<leader>p', '"_dP')
 
