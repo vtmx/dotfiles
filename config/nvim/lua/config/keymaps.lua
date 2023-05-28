@@ -61,6 +61,7 @@ M.map('n', '-', '<c-x>')
 
 -- Select all
 M.map('n', '<leader>a', 'G<s-v>gg')
+M.map('n', '%', 'G<s-v>gg')
 
 -- Redo
 M.map('n', 'U', '<c-r>')

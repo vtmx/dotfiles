@@ -348,6 +348,10 @@
       "after": ["G", "V", "g", "g"]
     },
     {
+      "before": ["%"],
+      "after": ["G", "V", "g", "g"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
