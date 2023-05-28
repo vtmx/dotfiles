@@ -5,7 +5,7 @@ auto-pairs = false
 bufferline = "multiple"
 cursorline = true
 cursor-shape.insert = "bar"
-gutters = ["line-numbers", "spacer", "spacer"]
+gutters = ["diff", "line-numbers", "spacer", "spacer"]
 indent-guides.render = true
 indent-guides.character = "▏"
 line-number = "relative"
@@ -20,13 +20,14 @@ G = "goto_file_end"
 X = "extend_line_above"
 "=" = ":format"
 esc = ["collapse_selection", "keep_primary_selection"]
+Z = { Z = ":wq" }
 
 [keys.normal.space]
 q = ":q"
 Q = ":qa!"
 
 [keys.normal.space.c]
-r = ":config-reload"
+r = [":w", ":config-reload"]
 o = ":config-open"
 l = ":o ~/.config/helix/languages.toml"
 i = ":indent-style 2"
