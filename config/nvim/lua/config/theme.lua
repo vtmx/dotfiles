@@ -42,7 +42,7 @@ local hl_groups = {
   Directory      = { fg = c.blue },
   EndOfBuffer    = { fg = c.comment  },
   NonText        = { fg = c.comment  },
-  Special        = { fg = c.yellow },
+  Special        = { fg = c.blue },
   SpecialChar    = { fg = c.yellow },
   SpecialComment = { fg = c.comment  },
   SpecialKey     = { fg = c.cyan },

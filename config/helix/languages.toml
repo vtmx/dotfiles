@@ -1,0 +1,9 @@
+[[language]]
+name = "v"
+file-types = ["v", "vv"]
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "verilog"
+file-types = ["vh", "sv", "svh"]
+indent = { tab-width = 2, unit = "  " }

@@ -115,6 +115,8 @@ if type -q entr
         find $argv | entr -cr ./$argv 
       else if [ $file_extension = 'js' ]
         find $argv | entr -cr node $argv
+      else if [ $file_extension = 'v' ]
+        find $argv | entr -cr vl run $argv
       end
     else
       echo "Arquivo não existe: $argv"
