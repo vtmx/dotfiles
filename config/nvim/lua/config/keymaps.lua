@@ -118,7 +118,7 @@ M.map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
 M.map('n', '<leader>ç', '<cmd>noh<cr>')
 
 -- Replace word
-M.map('n', '<leader>h', [[:%s/<c-r><c-w>//g<left><left>]])
+M.map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
 
 -- Keep search results centred
 M.map('n', 'n', 'nzzzv')
@@ -228,7 +228,7 @@ M.map('n', '<leader>Q', '<cmd>qa!<cr>')
 ------------------------------------------------------------
 
 -- hop
-M.map('n', '<leader>f', '<cmd>HopChar1<cr>')
+M.map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
 
 -- nvim-tree
 M.map('n',  '<leader>e', '<cmd>NvimTreeToggle<cr>')
