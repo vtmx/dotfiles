@@ -201,7 +201,7 @@ create_links() {
   # tmux
   name="tmux"
   target="$src_dir/tmux/tmux.conf"
-  link="$HOME/.tmux.conf"
+  link="$HOME/.config/tmux.conf"
   create_link "$name" "$target" "$link"
 
   # vscode
