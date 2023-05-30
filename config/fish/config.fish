@@ -204,7 +204,7 @@ if type -q nvim
   alias fc='nvim $HOME/.config/fish/config.fish'
   alias kc='nvim $HOME/.config/kitty/kitty.conf'
   alias pc='nvim $HOME/.config/polybar/config.ini'
-  alias tc='nvim $HOME/.tmux.conf'
+  alias tc='nvim $HOME/.config/tmux/tmux.conf'
   alias rc='nvim $HOME/.config/rofi/config.rasi'
   alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
   alias vc='nvim $HOME/.config/nvim/init.lua'
