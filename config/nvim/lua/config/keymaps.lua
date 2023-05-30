@@ -232,7 +232,11 @@ M.map('n', '<leader>Q', '<cmd>qa!<cr>')
 M.map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
 
 -- nvim-tree
-M.map('n',  '<leader>e', '<cmd>NvimTreeToggle<cr>')
+if vim.fn.exists(":NvimTreeToggle") ~= 0 then
+  M.map('n', '<leader>e', '<cmd>Lex<cr>')
+else
+  M.map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+end
 
 -- telescope
 M.map('n', '<c-p>', '<cmd>Telescope file_browser<cr>')
@@ -250,11 +254,10 @@ M.map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
 M.map('n', '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>')
 
 -- tmux
--- M.map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
--- M.map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
--- M.map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
--- M.map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
--- M.map('n', '<leader>e', '<cmd>Lex<cr>')
+M.map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
+M.map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
+M.map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
+M.map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- Future mappings
 local map_table = {
