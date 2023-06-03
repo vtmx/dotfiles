@@ -7,21 +7,20 @@
   --shade5: #828997;
   --shade6: #979eab;
   --shade7: #abb2bf;
-  --accent0: #e06c75;
-  --accent1: #d19a66;
-  --accent2: #e5c07b;
-  --accent3: #98c379;
-  --accent4: #56b6c2;
-  --accent5: #61afef;
-  --accent6: #c678dd;
-  --accent7: #be5046;
+  --red: #e06c75;
+  --orange: #d19a66;
+  --yellow: #e5c07b;
+  --green: #98c379;
+  --cyan: #56b6c2;
+  --blue: #61afef;
+  --purple: #c678dd;
 
   --arrowpanel-border-radius: 2px !important;
   --arrowpanel-menuitem-border-radius: 2px !important;
   --arrowpanel-border-color: var(--shade2) !important;
   --card-outline-color: var(--shade5) !important;
   --button-hover-bgcolor: var(--shade2) !important;
-  --dialog-warning-text-color: var(--accent0) !important;
+  --dialog-warning-text-color: var(--red) !important;
   --in-content-page-background: var(--shade1) !important;
   --in-content-page-color: var(--shade7) !important;
   --in-content-deemphasized-text: var(--shade6) !important;
@@ -30,17 +29,17 @@
   --in-content-box-info-background: var(--shade3) !important;
   --in-content-border-color: var(--shade2) !important;
   --in-content-border-hover: var(--shade3) !important;
-  --in-content-border-invalid: var(--accent0) !important;
-  --in-content-error-text-color: var(--accent0) !important;
+  --in-content-border-invalid: var(--red) !important;
+  --in-content-error-text-color: var(--red) !important;
   --in-content-button-background: var(--shade0) !important;
   --in-content-button-background-hover: var(--shade2) !important;
   --in-content-button-background-active: var(--shade2) !important;
   --in-content-icon-color: var(--shade7) !important;
   --in-content-primary-button-text-color: var(--shade7) !important;
-  --in-content-primary-button-background: var(--accent5) !important;
-  --in-content-primary-button-background-hover: var(--accent5) !important;
-  --in-content-primary-button-background-active: var(--accent4) !important;
-  --in-content-danger-button-background: var(--accent0) !important;
+  --in-content-primary-button-background: var(--blue) !important;
+  --in-content-primary-button-background-hover: var(--blue) !important;
+  --in-content-primary-button-background-active: var(--cyan) !important;
+  --in-content-danger-button-background: var(--red) !important;
   --in-content-danger-button-background-hover: #ffbdc5 !important;
   --in-content-danger-button-background-active: #ffdfe7 !important;
   --in-content-table-background: var(--shade0) !important;
@@ -228,12 +227,17 @@ body {
 #urlbar, #urlbar * {
   outline: none !important;
   box-shadow: none !important;
+  border-radius: 4px !important;
 }
 
 /* urlbar height and padding */
 #urlbar {
   min-height: 20px !important;
-  padding-left: 8px !important;
+  padding-left: 0 !important;
+}
+
+.urlbar-input-box {
+ padding: 0 4px !important; 
 }
 
 /* urlbar add transition when hover */
@@ -262,7 +266,7 @@ body {
 
 /* urlbar selection color when window active */
 #urlbar[breakout][breakout-extend] ::selection {
-  background: var(--accent5);
+  background: var(--blue);
   color: var(--shade0);
 }
 
@@ -277,20 +281,37 @@ body {
   font-size: inherit !important;
 }
 
-/* urlbar item list */
-#urlbar .urlbarView-row {
-  border-radius: 2px;
-  transition: all .1s !important;
+#urlbar:not([open]) > .urlbarView {
+  margin-top: 2px !important;
 }
 
-/* urlbar item list on hover */
-#urlbar .urlbarView-row:hover {
-  background: var(--shade2) !important;
+/* urlbar item list */
+#urlbar .urlbarView-row {
+  padding: 0 8px !important;
+  border-radius: 0 !important;
+  transition: all .1s !important;
 }
 
 /* urlbar item list url */
 #urlbar .urlbarView-url {
   color: var(--shade5) !important;
+}
+
+/* urlbar list */
+.urlbarView {
+  width: 100% !important;
+  margin-inline: 0 !important;
+}
+
+/* urlbar item list on hover */
+#urlbar .urlbarView-row:hover {
+  /* cursor: pointer !important; */
+  background: var(--shade2) !important;
+  color: #dadfe9 !important;
+}
+
+.urlbarView-results {
+  padding-block: 0 !important;
 }
 
 /* hide search end site list */
