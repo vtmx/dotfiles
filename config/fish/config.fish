@@ -66,6 +66,7 @@ alias md='mkdir -p'
 alias rd='rmdir'
  
 # Paths
+alias cdbig='cd $HOME/Dev/projects/biglinux'
 alias cddesi='cd $HOME/Design'
 alias cddesk='cd $HOME/Desktop'
 alias cddev='cd $HOME/Dev'
