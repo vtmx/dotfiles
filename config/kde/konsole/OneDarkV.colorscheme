@@ -14,13 +14,13 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [Color0]
-Color=34,39,46
+Color=44,49,60
 
 [Color0Faint]
-Color=34,39,46
+Color=44,49,60
 
 [Color0Intense]
-Color=34,39,46
+Color=44,49,60
 
 [Color1]
 Color=224,108,117
@@ -41,13 +41,13 @@ Color=152,195,121
 Color=152,195,121
 
 [Color3]
-Color=209,154,102
+Color=229,192,123
 
 [Color3Faint]
-Color=209,154,102
+Color=229,192,123
 
 [Color3Intense]
-Color=209,154,102
+Color=229,192,123
 
 [Color4]
 Color=97,175,239
@@ -77,13 +77,13 @@ Color=86,182,194
 Color=86,182,194
 
 [Color7]
-Color=171,178,191
+Color=92,99,112
 
 [Color7Faint]
-Color=171,178,191
+Color=92,99,112
 
 [Color7Intense]
-Color=171,178,191
+Color=92,99,112
 
 [Foreground]
 Color=171,178,191
