@@ -187,45 +187,45 @@
   </thead>
   <tbody>
     <tr>
-      <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Black"></td>
+      <td><img src="https://fakeimg.pl/32x32/23272e/?text=+" alt="Black"></td>
       <td>Black</td>
       <td><code>#23272e</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="Red"></td>
+      <td><img src="https://fakeimg.pl/32x32/e06c75/?text=+" alt="Red"></td>
       <td>Red</td>
       <td><code>#e06c75</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="Green"></td>
+      <td><img src="https://fakeimg.pl/32x32/98c379/?text=+" alt="Green"></td>
       <td>Green</td>
       <td><code>#98c379</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-e5c07b?&style=for-the-badge" alt="Yellow"></td>
+      <td><img src="https://fakeimg.pl/32x32/e5c07b/?text=+" alt="Yellow"></td>
       <td>Yellow</td>
       <td><code>#e5c07b</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-61afef?&style=for-the-badge" alt="Blue"></td>
+      <td><img src="https://fakeimg.pl/32x32/61afef/?text=+" alt="Blue"></td>
       <td>Blue</td>
       <td><code>#61afef</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Purple"></td>
+      <td><img src="https://fakeimg.pl/32x32/c678dd/?text=+" alt="Purple"></td>
       <td>Purple</td>
       <td><code>#c678dd</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="Cyan"></td>
+      <td><img src="https://fakeimg.pl/32x32/56b6c2/?text=+" alt="Cyan"></td>
       <td>Cyan</td>
       <td><code>#56b6c2</code></td>
     </tr>
     <tr>
-      <td><img src="https://shields.io/badge/-abb2bf?&style=for-the-badge" alt="White"></td>
+      <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="White"></td>
       <td>White</td>
       <td><code>#abb2bf</code></td>
-    </tr>
+    </tr/?text=+>
   <tbody>
 </table>
 
@@ -245,58 +245,58 @@
     <th align="left">Hex</th>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-1e2227?&style=for-the-badge" alt="Background Dark"></td>
+    <td><img src="https://fakeimg.pl/32x32/1e2227/?text=+" alt="Background Dark"></td>
     <td>Background Dark</td>
     <td><code>#1e2227</code></td>
-    <td><img src="https://shields.io/badge/-e06c75?&style=for-the-badge" alt="Red"></td>
+    <td><img src="https://fakeimg.pl/32x32/e06c75/?text=+" alt="Red"></td>
     <td>Red</td>
     <td><code>#e06c75</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-23272e?&style=for-the-badge" alt="Background"></td>
+    <td><img src="https://fakeimg.pl/32x32/23272e/?text=+" alt="Background"></td>
     <td>Background</td>
     <td><code>#23272e</code></td>
-    <td><img src="https://shields.io/badge/-d19a66?&style=for-the-badge" alt="Orange"></td>
+    <td><img src="https://fakeimg.pl/32x32/d19a66/?text=+" alt="Orange"></td>
     <td>Orange</td>
     <td><code>#d19a66</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-2c313c?&style=for-the-badge" alt="Line Hightlight"></td>
+    <td><img src="https://fakeimg.pl/32x32/2c313c/?text=+" alt="Line Hightlight"></td>
     <td>Line Highlight</td>
     <td><code>#2c313c</code></td>
-    <td><img src="https://shields.io/badge/-e5c07b?&style=for-the-badge" alt="Yellow"></td>
+    <td><img src="https://fakeimg.pl/32x32/e5c07b/?text=+" alt="Yellow"></td>
     <td>Yellow</td>
     <td><code>#e5c07b</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-3d4556?&style=for-the-badge" alt="Selection"></td>
+    <td><img src="https://fakeimg.pl/32x32/3d4556/?text=+" alt="Selection"></td>
     <td>Selection</td>
     <td><code>#3d4556</code></td>
-    <td><img src="https://shields.io/badge/-98c379?&style=for-the-badge" alt="Green"></td>
+    <td><img src="https://fakeimg.pl/32x32/98c379/?text=+" alt="Green"></td>
     <td>Green</td>
     <td><code>#98c379</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-5c6370?&style=for-the-badge" alt="Comment"></td>
+    <td><img src="https://fakeimg.pl/32x32/5c6370/?text=+" alt="Comment"></td>
     <td>Comment</td>
     <td><code>#5c6370</code></td>
-    <td><img src="https://shields.io/badge/-56b6c2?&style=for-the-badge" alt="Cyan"></td>
+    <td><img src="https://fakeimg.pl/32x32/56b6c2/?text=+" alt="Cyan"></td>
     <td>Cyan</td>
     <td><code>#56b6c2</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-abb2bf?&style=for-the-badge" alt="Foreground"></td>
+    <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="Foreground"></td>
     <td>Foreground</td>
     <td><code>#abb2bf</code></td>
-    <td><img src="https://shields.io/badge/-61afef?&style=for-the-badge" alt="Blue"></td>
+    <td><img src="https://fakeimg.pl/32x32/61afef/?text=+" alt="Blue"></td>
     <td>Blue</td>
     <td><code>#61afef</code></td>
   </tr>
   <tr>
-    <td><img src="https://shields.io/badge/-dadfe9?&style=for-the-badge" alt="Foreground Light"></td>
+    <td><img src="https://fakeimg.pl/32x32/dadfe9/?text=+" alt="Foreground Light"></td>
     <td>Foreground Light</td>
     <td><code>#dadfe9</code></td>
-    <td><img src="https://shields.io/badge/-c678dd?&style=for-the-badge" alt="Purple"></td>
+    <td><img src="https://fakeimg.pl/32x32/c678dd/?text=+" alt="Purple"></td>
     <td>Purple</td>
     <td><code>#c678dd</code></td>
   </tr>

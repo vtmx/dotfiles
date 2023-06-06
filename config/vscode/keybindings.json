@@ -38,6 +38,15 @@
     "command": "-markdown.showPreview",
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   },
+
+  // Disable ctrl+shift+m
+  {
+    "key": "ctrl+shift+m",
+    "command": "-workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
+  },
+
+  // Enable ctrl+shift+m
   {
     "key": "ctrl+shift+m",
     "command": "markdown.showPreviewToSide",
