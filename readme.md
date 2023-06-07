@@ -180,7 +180,7 @@
 <table>
   <thead>
     <tr>
-      <th></th>
+      <th>Color</th>
       <th>Name</th>
       <th>Hex</th>
     </tr>
@@ -188,8 +188,18 @@
   <tbody>
     <tr>
       <td><img src="https://fakeimg.pl/32x32/23272e/?text=+" alt="Black"></td>
-      <td>Black</td>
+      <td>Background</td>
       <td><code>#23272e</code></td>
+    </tr>
+    <tr>
+      <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="White"></td>
+      <td>Foreground</td>
+      <td><code>#abb2bf</code></td>
+    </tr>
+    <tr>
+      <td><img src="https://fakeimg.pl/32x32/2c313c/?text=+" alt="Black"></td>
+      <td>Black</td>
+      <td><code>#2c313c</code></td>
     </tr>
     <tr>
       <td><img src="https://fakeimg.pl/32x32/e06c75/?text=+" alt="Red"></td>
@@ -222,10 +232,10 @@
       <td><code>#56b6c2</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="White"></td>
+      <td><img src="https://fakeimg.pl/32x32/5c6370/?text=+" alt="White"></td>
       <td>White</td>
-      <td><code>#abb2bf</code></td>
-    </tr/?text=+>
+      <td><code>#5c6370</code></td>
+    </tr>
   <tbody>
 </table>
 
@@ -237,7 +247,7 @@
     <th align="left" colspan="4">Color</th>
   </tr>
   <tr>
-    <th align="left"></th>
+    <th align="left">Color</th>
     <th align="left" width="180">Name</th>
     <th align="left">Hex</th>
     <th align="left"></th>
