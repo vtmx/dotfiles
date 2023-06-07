@@ -10,6 +10,7 @@
   "editor.autoClosingDelete": "always",
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingOvertype": "never",
+  "html.autoClosingTags": false,
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": true,
@@ -475,5 +476,5 @@
     }
   ],
   "svelte.enable-ts-plugin": true,
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
 }
