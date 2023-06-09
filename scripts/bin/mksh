@@ -6,7 +6,7 @@ set -o nounset
 
 # Test if has argument
 [[ -z "${1}" ]] && echo "Need a name for script" && exit 1
-arg="${1}.sh"
+arg="${1}"
 
 # Check if file exit
 [[ -e "${arg}" ]] && echo "File already exist" && exit 1
