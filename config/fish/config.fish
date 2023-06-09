@@ -85,7 +85,7 @@ alias cdf='cd $HOME/Dev/projects/fraseologia'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cds='cd $HOME/Dev/shortcuts'
 alias cdmoz='cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome'
-alias cdpkg='cd $HOME/_packages'
+alias cdpkg='cd $HOME/packages'
 
 # bat
 if type -q bat
