@@ -146,8 +146,8 @@ ForegroundPositive=$accent3
 ForegroundVisited=$accent6
 
 [General]
-ColorScheme=Teste
-Name=Teste
+ColorScheme=AOneDark
+Name=AOneDark
 shadeSortColumn=false
 
 [KDE]
