@@ -477,4 +477,7 @@
   ],
   "svelte.enable-ts-plugin": true,
   "git.openRepositoryInParentFolders": "never",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
