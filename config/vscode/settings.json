@@ -7,7 +7,7 @@
 
   // Editor
   "editor.autoClosingBrackets": "never",
-  "editor.autoClosingDelete": "always",
+  "editor.autoClosingDelete": "never",
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingOvertype": "never",
   "html.autoClosingTags": false,

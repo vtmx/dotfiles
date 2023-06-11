@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=konsole
+ColorScheme=OneDarkV
 DimmValue=128
 Font=BlexMono Nerd Font,11,-1,5,57,0,0,0,0,0,Medium
 LineSpacing=0
@@ -65,7 +65,7 @@ ScrollBarPosition=2
 ScrollFullPage=false
 
 [Terminal Features]
-BellMode=1
+BellMode=3
 BidiRenderingEnabled=true
 BlinkingCursorEnabled=false
 BlinkingTextEnabled=true
