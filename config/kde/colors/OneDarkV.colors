@@ -76,7 +76,8 @@ ForegroundVisited=#c678dd
 [Colors:Selection]
 BackgroundAlternate=#323842
 BackgroundNormal=#323842
-DecorationFocus=#323842
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
 ForegroundActive=#abb2bf
 ForegroundInactive=#5c6370
 ForegroundLink=#61afef
@@ -89,7 +90,8 @@ ForegroundVisited=#c678dd
 [Colors:Tooltip]
 BackgroundAlternate=#1e2227
 BackgroundNormal=#1e2227
-DecorationFocus=#57a5ed
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
 ForegroundActive=#abb2bf
 ForegroundInactive=#5c6370
 ForegroundLink=#61afef
@@ -116,8 +118,8 @@ ForegroundVisited=#c678dd
 [Colors:Window]
 BackgroundAlternate=#1e2227
 BackgroundNormal=#23272e
-DecorationFocus=#3d4556
-DecorationHover=#3d4556
+DecorationFocus=#5c6370
+DecorationHover=#5c6370
 ForegroundActive=#abb2bf
 ForegroundInactive=#5c6370
 ForegroundLink=#61afef
@@ -137,10 +139,11 @@ shadeSortColumn=false
 contrast=0
 
 [WM]
-; vim: set ft=dosini:
 activeBackground=#1e2227
 activeBlend=#1e2227
 activeForeground=#abb2bf
 inactiveBackground=#1e2227
 inactiveBlend=#1e2227
 inactiveForeground=#5c6370
+
+; vim: set ft=dosini:

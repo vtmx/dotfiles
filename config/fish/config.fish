@@ -163,6 +163,7 @@ if type -q git
   alias gb='git branch'
   alias gbd='git branch -d'
   alias gl='git pull'
+  alias gm='git merge'
   alias gp='git push'
 
   function git_commit
