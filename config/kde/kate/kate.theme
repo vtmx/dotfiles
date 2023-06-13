@@ -158,6 +158,12 @@
                 "text-color": "#56b6c2"
             }
         },
+        "SPDX-Comments": {
+            "SPDX License Expression Operator": {
+                "selected-text-color": "#5c6370",
+                "text-color": "#5c6370"
+            }
+        },
         "TypeScript": {
             "Built-in Objects": {
                 "selected-text-color": "#d19a66",
@@ -197,33 +203,33 @@
     },
     "editor-colors": {
         "BackgroundColor": "#23272e",
-        "BracketMatching": "#8e44ad",
-        "CodeFolding": "#363c4a",
-        "CurrentLine": "#0a2c313c",
+        "BracketMatching": "#005c6370",
+        "CodeFolding": "#3d4556",
+        "CurrentLine": "#2c323c",
         "CurrentLineNumber": "#abb2bf",
-        "IconBorder": "#282c34",
-        "IndentationLine": "#3a3f44",
-        "LineNumbers": "#636d83",
-        "MarkBookmark": "#0404bf",
-        "MarkBreakpointActive": "#8b0607",
-        "MarkBreakpointDisabled": "#820683",
-        "MarkBreakpointReached": "#6d6e07",
-        "MarkError": "#c24038",
-        "MarkExecution": "#4d4e50",
-        "MarkWarning": "#d19a66",
-        "ModifiedLines": "#e06c75",
-        "ReplaceHighlight": "#a34f56",
+        "IconBorder": "#23272e",
+        "IndentationLine": "#5c6370",
+        "LineNumbers": "#3d4556",
+        "MarkBookmark": "#61afef",
+        "MarkBreakpointActive": "#e06c75",
+        "MarkBreakpointDisabled": "#c678dd",
+        "MarkBreakpointReached": "#d19a66",
+        "MarkError": "#e06c75",
+        "MarkExecution": "#5c6370",
+        "MarkWarning": "#e5c07b",
+        "ModifiedLines": "#d19a66",
+        "ReplaceHighlight": "#a098c379",
         "SavedLines": "#98c379",
-        "SearchHighlight": "#3d528bff",
-        "Separator": "#3f4347",
-        "SpellChecking": "#c24038",
+        "SearchHighlight": "#3d4556",
+        "Separator": "#0023272e",
+        "SpellChecking": "#e06c75",
         "TabMarker": "#21252b",
-        "TemplateBackground": "#31363b",
-        "TemplateFocusedPlaceholder": "#123723",
-        "TemplatePlaceholder": "#123723",
-        "TemplateReadOnlyPlaceholder": "#4d1f24",
-        "TextSelection": "#363c4a",
-        "WordWrapMarker": "#3a3f44"
+        "TemplateBackground": "#23272e",
+        "TemplateFocusedPlaceholder": "#98c379",
+        "TemplatePlaceholder": "#98c379",
+        "TemplateReadOnlyPlaceholder": "#e06c75",
+        "TextSelection": "#3d4556",
+        "WordWrapMarker": "#0023272e"
     },
     "metadata": {
         "name": "OneDarkV",
@@ -231,8 +237,8 @@
     },
     "text-styles": {
         "Alert": {
-            "selected-text-color": "#e06c75",
-            "text-color": "#e06c75"
+            "selected-text-color": "#5c6370",
+            "text-color": "#5c6370"
         },
         "Annotation": {
             "selected-text-color": "#5c6370",
@@ -281,15 +287,14 @@
             "text-color": "#d19a66"
         },
         "Documentation": {
-            "selected-text-color": "#56b6c2",
-            "text-color": "#56b6c2"
+            "selected-text-color": "#5c6370",
+            "text-color": "#5c6370"
         },
         "Error": {
             "selected-text-color": "#e06c75",
             "text-color": "#e06c75"
         },
         "Extension": {
-            "bold": true,
             "selected-text-color": "#61afef",
             "text-color": "#61afef"
         },
@@ -306,8 +311,8 @@
             "text-color": "#98c379"
         },
         "Information": {
-            "selected-text-color": "#61afef",
-            "text-color": "#61afef"
+            "selected-text-color": "#5c6370",
+            "text-color": "#5c6370"
         },
         "Keyword": {
             "selected-text-color": "#c678dd",
@@ -330,8 +335,8 @@
             "text-color": "#c678dd"
         },
         "RegionMarker": {
-            "selected-text-color": "#3daee9",
-            "text-color": "#61afef"
+            "selected-text-color": "#5c6370",
+            "text-color": "#5c6370"
         },
         "SpecialChar": {
             "selected-text-color": "#56b6c2",
@@ -354,8 +359,8 @@
             "text-color": "#e06c75"
         },
         "Warning": {
-            "selected-text-color": "#e5c07b",
-            "text-color": "#e5c07b"
+            "selected-text-color": "#5c6370",
+            "text-color": "#5c6370"
         }
     }
 }

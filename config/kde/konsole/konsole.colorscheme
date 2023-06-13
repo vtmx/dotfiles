@@ -1,15 +1,15 @@
 [Background]
-Color=35,39,46
+Color=30,34,39
 RandomHueRange=360
 RandomSaturationRange=100
 
 [BackgroundFaint]
-Color=35,39,46
+Color=30,34,39
 RandomHueRange=360
 RandomSaturationRange=100
 
 [BackgroundIntense]
-Color=35,39,46
+Color=30,34,39
 RandomHueRange=360
 RandomSaturationRange=100
 

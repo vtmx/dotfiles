@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=OneDarkV
+ColorScheme=konsole
 DimmValue=128
 Font=BlexMono Nerd Font,11,-1,5,57,0,0,0,0,0,Medium
 LineSpacing=0
