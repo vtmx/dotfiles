@@ -1,0 +1,309 @@
+[FileDialogSize]
+HDMI-0 Window-Maximized 1920x1080=true
+
+[General]
+Allow Tab Scrolling=false
+Auto Hide Tabs=true
+Close After Last=false
+Close documents with window=true
+Config Revision=10
+Days Meta Infos=30
+Diff Show Style=0
+Elide Tab Text=false
+Expand Tabs=false
+Icon size for left and right sidebar buttons=32
+Modified Notification=false
+Mouse back button action=0
+Mouse forward button action=0
+Output History Limit=100
+Quickopen Filter Mode=0
+Quickopen List Mode=true
+Recent File List Entry Count=10
+Restore Window Configuration=true
+SDI Mode=false
+Save Meta Infos=true
+Show Full Path in Title=false
+Show Menu Bar=true
+Show Status Bar=true
+Show Symbol In Navigation Bar=true
+Show Tab Bar=true
+Show Tabs Close Button=true
+Show Url Nav Bar=false
+Show output view for message type=1
+Show text for left and right sidebar=false
+Show welcome view for new window=false
+Startup Session=new
+Stash new unsaved files=true
+Stash unsaved file changes=false
+Sync section size with tab positions=false
+Tab Double Click New Document=true
+Tab Middle Click Close Document=true
+Tabbar Tab Limit=0
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc,file:$HOME/Downloads/teste.sh,file:$HOME/Downloads/temp/teste.sh,file:$HOME/Dev/projects/biglinux/biglinux-colors/install.sh,file:$HOME/Downloads/temp/pamac,file:$HOME/Downloads/temp/kate-opt,file:$HOME/Dev/dotfiles/config/no-used/godot/OneDarkV.tet,file:$HOME/Downloads/ps-verificando.txt,file:$HOME/Downloads/sh-verificando.txt,file:$HOME/Downloads/power.txt,file:$HOME/Downloads/inps.txt,file:$HOME/Downloads/deleta80gb.txt,file:$HOME/Downloads/temp/temp-sideu.txt,file:$HOME/Documents/vitor/temp.txt
+Recent URLs[$e]=file:$HOME/Documents/,file:$HOME/Downloads/temp/,file:$HOME/Dev/dotfiles/config/no-used/godot/,file:$HOME/Dev/sh/kdialog/,file:$HOME/Dev/dotfiles/config/kde/kate/,file:$HOME/Dev/dotfiles/config/kde/,file:$HOME/Dev/projects/biglinux/biglinux-colors/,file:$HOME/Dev/projects/biglinux/,file:$HOME/Downloads/,file:$HOME/Dev/dotfiles/config/,file:$HOME/
+detailViewIconSize=16
+iconViewIconSize=64
+
+[KPropertiesDialog]
+HDMI-0 Height 1600x900=458
+HDMI-0 Width 1600x900=423
+
+[KTextEditor Document]
+Allow End of Line Detection=true
+Auto Detect Indent=true
+Auto Reload If State Is In Version Control=true
+Auto Save=false
+Auto Save Interval=0
+Auto Save On Focus Out=false
+BOM=false
+Backup Local=false
+Backup Prefix=
+Backup Remote=false
+Backup Suffix=~
+Camel Cursor=true
+Encoding=UTF-8
+End of Line=0
+Indent On Backspace=true
+Indent On Tab=true
+Indent On Text Paste=false
+Indentation Mode=normal
+Indentation Width=2
+Keep Extra Spaces=false
+Line Length Limit=10000
+Newline at End of File=true
+On-The-Fly Spellcheck=false
+Overwrite Mode=false
+PageUp/PageDown Moves Cursor=false
+Remove Spaces=1
+ReplaceTabsDyn=true
+Show Spaces=0
+Show Tabs=false
+Smart Home=true
+Swap Directory=
+Swap File Mode=1
+Swap Sync Interval=15
+Tab Handling=2
+Tab Width=2
+Trailing Marker Size=1
+Word Wrap=false
+Word Wrap Column=80
+
+[KTextEditor Editor]
+Encoding Prober Type=1
+Fallback Encoding=ISO 8859-15
+
+[KTextEditor Renderer]
+Animate Bracket Matching=false
+Auto Color Theme Selection=false
+Color Theme=OneDarkV
+Font=IBM Plex Mono,11,-1,5,57,0,0,0,0,0
+Line Height Multiplier=1
+Show Indentation Lines=false
+Show Whole Bracket Expression=false
+Word Wrap Marker=false
+
+[KTextEditor View]
+Allow Mark Menu=true
+Auto Brackets=false
+Auto Center Lines=5
+Auto Completion=true
+Auto Completion Preselect First Entry=true
+Backspace Remove Composed Characters=false
+Bookmark Menu Sorting=0
+Bracket Match Preview=false
+Chars To Enclose Selection=<>(){}[]'"
+Default Mark Type=1
+Dynamic Word Wrap=false
+Dynamic Word Wrap Align Indent=0
+Dynamic Word Wrap At Static Marker=false
+Dynamic Word Wrap Indicators=2
+Dynamic Wrap not at word boundaries=false
+Enable Tab completion=false
+Fold First Line=false
+Folding Bar=false
+Folding Preview=false
+Icon Bar=false
+Input Mode=0
+Keyword Completion=true
+Line Modification=false
+Line Numbers=true
+Max Clipboard History Entries=20
+Maximum Search History Size=100
+Mouse Paste At Cursor Position=false
+Multiple Cursor Modifier=67108864
+Persistent Selection=false
+Scroll Bar Marks=false
+Scroll Bar Mini Map All=true
+Scroll Bar Mini Map Width=60
+Scroll Bar MiniMap=false
+Scroll Bar Preview=false
+Scroll Past End=false
+Search/Replace Flags=140
+Shoe Line Ending Type in Statusbar=false
+Show Documentation With Completion=true
+Show File Encoding=false
+Show Focus Frame Around Editor=false
+Show Folding Icons On Hover Only=true
+Show Line Count=false
+Show Scrollbars=1
+Show Statusbar Dictionary=true
+Show Statusbar Highlighting Mode=true
+Show Statusbar Input Mode=false
+Show Statusbar Line Column=true
+Show Statusbar Tab Settings=true
+Show Word Count=false
+Smart Copy Cut=true
+Statusbar Line Column Compact Mode=true
+Text Drag And Drop=true
+User Sets Of Chars To Enclose Selection=
+Vi Input Mode Steal Keys=false
+Vi Relative Line Numbers=false
+Word Completion=true
+Word Completion Minimal Word Length=3
+Word Completion Remove Tail=true
+
+[KTextEditor::Search]
+Replace History=rgba,#5c6370,#1e2227,#23272e,23272e,PERÍODO,- ,"#,blue,#DCD7BA,#3b4045,~/.config/retroarch
+Search History=bar,rgb,Shortcut,shortcut,local,main,exit_succ,ctrl+esc,select,92\\,99\\,112,30\\,34\\,39,35\\,39\\,46,30\\,34.39,positive,\\,60,PERILDO,* ,"ff,speed,on-,button,header,volume,kde,consta,brown,brow,theme,vlc,Data_1_17Actions0,#abb2bf,Hover,hover,93cee9,59\\,64\\,69,DecorationHover=190\\,80\\,70,be5046,link,konsole,/usr,/usr/lib/retroarch,contras,color,pane,adap,onedark,f1,app,clock,opera,dol,do
+
+[Konsole]
+AutoSyncronize=true
+KonsoleEscKeyBehaviour=true
+KonsoleEscKeyExceptions=vi,vim,nvim
+RemoveExtension=false
+RunPrefix=
+SetEditor=false
+
+[MainWindow]
+1920x1080 screen: Height=727
+1920x1080 screen: Width=1755
+1920x1080 screen: XPosition=384
+1920x1080 screen: YPosition=210
+HDMI-0=HDMI-0
+HDMI-0 Height 1920x1080=1052
+HDMI-0 Height 1920x1080 HDMI-0=626
+HDMI-0 Width 1920x1080=1920
+HDMI-0 Width 1920x1080 HDMI-0=1202
+HDMI-0 Window-Maximized 1600x900=true
+HDMI-0 Window-Maximized 1920x1080=true
+HDMI-0 XPosition 1920x1080=249
+HDMI-0 YPosition 1920x1080=165
+State=AAAA/wAAAAD9AAAAAAAABFoAAAL/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+HideMenuBarWarning=false
+Kate hide sidebars notification message=false
+Konsole: Run in Terminal Warning=false
+Pipe To Terminal Warning=false
+Quick FixConfigure Keyboard Shortcuts...Ctrl+.=false
+
+[Printing][HeaderFooter]
+FooterBackground=211,211,211
+FooterBackgroundEnabled=false
+FooterEnabled=true
+FooterForeground=0,0,0
+FooterFormatCenter=
+FooterFormatLeft=
+FooterFormatRight=%U
+HeaderBackground=211,211,211
+HeaderBackgroundEnabled=false
+HeaderEnabled=true
+HeaderFooterFont=IBM Plex Mono,11,-1,5,57,0,0,0,0,0
+HeaderForeground=0,0,0
+HeaderFormatCenter=%f
+HeaderFormatLeft=%y
+HeaderFormatRight=%p
+
+[Printing][Layout]
+BackgroundColorEnabled=false
+BoxColor=invalid
+BoxEnabled=false
+BoxMargin=6
+BoxWidth=1
+ColorScheme=Printing
+Font=IBM Plex Mono,11,-1,5,57,0,0,0,0,0
+
+[Printing][Text]
+Legend=false
+LineNumbers=false
+
+[Shortcuts]
+kate_mdi_focus_toolview_diagnostics=none
+kate_mdi_focus_toolview_kate_plugin_katesearch=none
+kate_mdi_focus_toolview_kate_private_plugin_katefileselectorplugin=none
+kate_mdi_focus_toolview_kate_private_plugin_katefiletreeplugin=none
+kate_mdi_focus_toolview_kate_private_plugin_katekonsoleplugin=none
+kate_mdi_focus_toolview_kateproject=none
+kate_mdi_focus_toolview_kateprojectgit=none
+kate_mdi_focus_toolview_kateprojectinfo=none
+kate_mdi_focus_toolview_lspclient_symbol_outline=none
+kate_mdi_focus_toolview_output=none
+kate_mdi_show_toolview_button_diagnostics=none
+kate_mdi_show_toolview_button_kate_plugin_katesearch=none
+kate_mdi_show_toolview_button_kate_private_plugin_katefileselectorplugin=none
+kate_mdi_show_toolview_button_kate_private_plugin_katefiletreeplugin=none
+kate_mdi_show_toolview_button_kate_private_plugin_katekonsoleplugin=none
+kate_mdi_show_toolview_button_kateproject=none
+kate_mdi_show_toolview_button_kateprojectgit=none
+kate_mdi_show_toolview_button_kateprojectinfo=none
+kate_mdi_show_toolview_button_lspclient_symbol_outline=none
+kate_mdi_show_toolview_button_output=none
+kate_mdi_toolview_diagnostics=none
+kate_mdi_toolview_kate_lspclient=none
+
+[UiSettings]
+ColorScheme=- One Dark V -
+
+[filebrowser]
+toolbar actions=
+
+[filetree]
+editShade=47,84,118
+listMode=false
+shadingEnabled=true
+showCloseButton=false
+showFullPathOnRoots=false
+showToolbar=true
+sortRole=0
+viewShade=62,66,76
+
+[lspclient]
+AllowedServerCommandLines=/usr/bin/bash-language-server start
+AutoHover=true
+AutoImport=true
+BlockedServerCommandLines=/usr/bin/clangd -log=error --background-index --limit-results=500 --completion-style=bundled
+CompletionDocumentation=true
+CompletionParens=true
+Diagnostics=true
+DiagnosticsHighlight=true
+DiagnosticsHover=true
+DiagnosticsMark=true
+DiagnosticsSize=1024
+FormatOnSave=false
+HighlightGoto=true
+IncrementalSync=false
+InlayHints=false
+Messages=true
+ReferencesDeclaration=true
+SemanticHighlighting=false
+ServerConfiguration=
+SignatureHelp=true
+SymbolDetails=false
+SymbolExpand=true
+SymbolSort=false
+SymbolTree=true
+TypeFormatting=false
+
+[project]
+autorepository=git,subversion,mercurial
+gitStatusDoubleClick=3
+gitStatusNumStat=true
+gitStatusSingleClick=0
+index=false
+indexDirectory=
+multiProjectCompletion=false
+multiProjectGoto=false
+restoreProjectsForSessions=false
