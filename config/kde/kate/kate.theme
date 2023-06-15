@@ -216,7 +216,7 @@
         "MarkBreakpointReached": "#d19a66",
         "MarkError": "#e06c75",
         "MarkExecution": "#5c6370",
-        "MarkWarning": "#e5c07b",
+        "MarkWarning": "#d19a66",
         "ModifiedLines": "#d19a66",
         "ReplaceHighlight": "#a098c379",
         "SavedLines": "#98c379",
@@ -225,8 +225,8 @@
         "SpellChecking": "#e06c75",
         "TabMarker": "#21252b",
         "TemplateBackground": "#23272e",
-        "TemplateFocusedPlaceholder": "#98c379",
-        "TemplatePlaceholder": "#98c379",
+        "TemplateFocusedPlaceholder": "#56b6c2",
+        "TemplatePlaceholder": "#61afef",
         "TemplateReadOnlyPlaceholder": "#e06c75",
         "TextSelection": "#3d4556",
         "WordWrapMarker": "#0023272e"
@@ -237,10 +237,12 @@
     },
     "text-styles": {
         "Alert": {
+            "italic": true,
             "selected-text-color": "#5c6370",
             "text-color": "#5c6370"
         },
         "Annotation": {
+            "italic": true,
             "selected-text-color": "#5c6370",
             "text-color": "#5c6370"
         },
@@ -287,6 +289,7 @@
             "text-color": "#d19a66"
         },
         "Documentation": {
+            "italic": true,
             "selected-text-color": "#5c6370",
             "text-color": "#5c6370"
         },
@@ -311,6 +314,7 @@
             "text-color": "#98c379"
         },
         "Information": {
+            "italic": true,
             "selected-text-color": "#5c6370",
             "text-color": "#5c6370"
         },
@@ -335,6 +339,7 @@
             "text-color": "#c678dd"
         },
         "RegionMarker": {
+            "italic": true,
             "selected-text-color": "#5c6370",
             "text-color": "#5c6370"
         },
@@ -359,6 +364,7 @@
             "text-color": "#e06c75"
         },
         "Warning": {
+            "italic": true,
             "selected-text-color": "#5c6370",
             "text-color": "#5c6370"
         }
