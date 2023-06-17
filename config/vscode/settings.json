@@ -257,20 +257,36 @@
       "after": ["<c-x>"]
     },
     {
-      "before": ["c", "i", ","],
+      "before": ["c", ","],
       "after": ["c", "t", ","]
     },
     {
-      "before": ["c", "i", "."],
+      "before": ["c", "."],
       "after": ["c", "t", "."]
     },
     {
-      "before": ["c", "i", ":"],
+      "before": ["c", ":"],
       "after": ["c", "t", ":"]
     },
     {
-      "before": ["c", "i", ";"],
+      "before": ["c", ";"],
       "after": ["c", "t", ";"]
+    },
+    {
+      "before": ["c", ")"],
+      "after": ["c", "t", ")"]
+    },
+    {
+      "before": ["c", "]"],
+      "after": ["c", "t", "]"]
+    },
+    {
+      "before": ["c", "}"],
+      "after": ["c", "t", "}"]
+    },
+    {
+      "before": ["c", ">"],
+      "after": ["c", "t", ">"]
     },
     {
       "before": ["x"],
