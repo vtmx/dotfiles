@@ -56,6 +56,8 @@ M.map('n', 'c)', 'ct)')
 M.map('n', 'c]', 'ct]')
 M.map('n', 'c}', 'ct}')
 M.map('n', 'c>', 'ct>')
+M.map('n', 'c\'', 'ct\'')
+M.map('n', 'c"', 'ct"')
 
 -- Add new line in normal mode
 M.map('n', '<leader>o', 'm`o<esc>``')
