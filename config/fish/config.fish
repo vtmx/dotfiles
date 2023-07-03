@@ -148,8 +148,8 @@ if type -q fzf
   --color=fg+:#'$foreground',bg+:#'$selection',hl+:#'$blue',gutter:#'$background'
   --color=info:#'$comment',prompt:#'$green',pointer:#'$foreground'
   --color=marker:#'$foreground',spinner:#'$foreground',header:#'$foreground'
-  --color=border:#'$comment'
-  --preview 'bat -n --color=always {}'"
+  --color=border:#'$comment'"
+  # --preview 'bat -n --color=always {}'"
 end
 
 # git
@@ -236,7 +236,6 @@ if type -q npm
   alias npmr='npm remove'
   alias npmu='npm update'
 end
-
 
 # pacman
 if type -q pacman
@@ -344,7 +343,7 @@ function uzcd
 end
 
 # ssh login 
-function ssl
+function ssha
   if test -z "$SSH_AUTH_SOCK"
     eval (ssh-agent -c)
     ssh-add -k
