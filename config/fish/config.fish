@@ -124,6 +124,8 @@ end
 
 # exa
 if type -q exa
+  alias l.='exa -a | grep "^\."'
+  alias ll='exa -l --color=always --group-directories-first'
   alias ls='exa --color=always --group-directories-first'
   alias tree='exa -T'
 end
