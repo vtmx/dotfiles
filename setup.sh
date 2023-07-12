@@ -69,6 +69,12 @@ create_link() {
 }
 
 create_links() {
+  # bash
+  name="bash"
+  target="$HOME/.bashrc"
+  link="$config_dir/bash"
+  create_link "$name" "$target" "$link"
+
   # bat
   name="bat"
   target="$src_dir/bat/config"
@@ -192,6 +198,12 @@ create_links() {
   link="$config_dir/ranger"
   create_link "$name" "$target" "$link"
 
+  # shell
+  name="shell"
+  target="$src_dir/shell/aliases.sh"
+  link="$config_dir/shell"
+  create_link "$name" "$target" "$link"
+
   # rofi
   name="rofi"
   target="$src_dir/rofi/*.rasi"
@@ -227,7 +239,7 @@ create_links() {
 # ------------------------------------------------------------------------------
 
 copy_scripts() {
-  cp -rf "${current_dir}/scripts/bin" "${HOME}/.local"
+  cp -rf "${current_dir}/bin" "${HOME}/.local"
 }
 
 # ------------------------------------------------------------------------------

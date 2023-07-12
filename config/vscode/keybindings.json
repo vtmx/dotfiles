@@ -170,19 +170,20 @@
     "command": "workbench.action.moveActiveEditorGroupUp"
   },
 
-  // Close
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor"
-  },
-
   // Save
   {
     "key": "ctrl+s",
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": ["workbench.action.files.save", "extension.vim_escape"]
-    }
+    },
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Close
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
   },
 
   // Terminal

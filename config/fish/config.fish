@@ -52,44 +52,64 @@ set -x BROWSER 'firefox'
 set -x CODE 'code'
 set -x EDITOR 'nvim'
 set -x SHELL '/usr/bin/fish'
-set -x VISUAL 'nvim'
+set -x VISUAL 'kate'
 
-# System
-alias ...='cd ../..'
-alias ....='cd ../../..'
+# Aliases
+# source $HOME/.config/shell/aliases.sh
+
+# Built-in
 alias c='clear'
-alias cls='clear'
 alias chx='chmod +x'
+alias cls='clear'
+alias cp='cp -i'
 alias cpv='rsync -ah --info=progress2'
-alias e='exit'
+alias e='$EDITOR'
 alias md='mkdir -p'
+alias mv='mv -i'
 alias rd='rmdir'
- 
-# Paths
+alias rm='rm -i'
+alias so='source'
+
+# Change directories
+alias .='cd -'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 alias cdbig='cd $HOME/Dev/projects/biglinux'
+alias cdc='cd $HOME/Dev/dotfiles/config'
 alias cddesi='cd $HOME/Design'
 alias cddesk='cd $HOME/Desktop'
+alias cdd='cd $HOME/Dev/dotfiles'
 alias cddev='cd $HOME/Dev'
 alias cddoc='cd $HOME/Documents'
 alias cddow='cd $HOME/Downloads'
-alias cdt='cd $HOME/Downloads/temp'
-alias cdgame='cd $HOME/Games'
-alias cdmus='cd $HOME/Music'
-alias cdpic='cd $HOME/Pictures'
-alias cdsof='cd $HOME/Softwares'
-alias cdvid='cd $HOME/Videos'
-alias cdd='cd $HOME/Dev/dotfiles'
-alias cdc='cd $HOME/Dev/dotfiles/config'
-alias cdp='cd $HOME/Dev/projects'
 alias cdf='cd $HOME/Dev/projects/fraseologia'
-alias cdv='cd $HOME/Dev/projects/vitormelo'
-alias cds='cd $HOME/Dev/shortcuts'
+alias cdgame='cd $HOME/Games'
 alias cdmoz='cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome'
+alias cdmus='cd $HOME/Music'
+alias cdp='cd $HOME/Dev/projects'
+alias cdpic='cd $HOME/Pictures'
 alias cdpkg='cd $HOME/packages'
+alias cds='cd $HOME/Dev/shortcuts'
+alias cdsof='cd $HOME/Softwares'
+alias cdt='cd $HOME/Downloads/temp'
+alias cdv='cd $HOME/Dev/projects/vitormelo'
+alias cdvid='cd $HOME/Videos'
 
 # bat
 if type -q bat
   alias cat='bat'
+end
+
+# dnf
+if type -q dnf
+  alias dnfl='sudo dnf list'
+  alias dnfi='sudo dnf install'
+  alias dnfr='sudo dnf remove'
+  alias dnfs='sudo dnf search'
+  alias dnfrepo='sudo dnf repoquery'
 end
 
 # bat
@@ -102,29 +122,6 @@ if type -q canvas-sketch-cli
   alias canva='canvas-sketch-cli'
 end
 
-# entr
-if type -q entr
-  # watch sh
-  alias watch="watch"
-
-  # function for watch file and execute after save
-  function watch
-    if test -e $argv
-      set file_extension (echo $argv | awk -F . '{print $NF}')
-
-      if [ $file_extension = 'sh' ]
-        find $argv | entr -cr ./$argv 
-      else if [ $file_extension = 'js' ]
-        find $argv | entr -cr node $argv
-      else if [ $file_extension = 'v' ]
-        find $argv | entr -cr vl run $argv
-      end
-    else
-      echo "Arquivo não existe: $argv"
-    end
-  end # watch
-end
-
 # exa
 if type -q exa
   alias ls='exa --color=always --group-directories-first'
@@ -133,7 +130,6 @@ end
 
 # fish
 if type -q fish
-  abbr -a -g fr source $HOME/.config/fish/config.fish
   abbr -a -g sof source $HOME/.config/fish/config.fish
 end
 
@@ -177,6 +173,11 @@ if type -q git
   end
 end
 
+# grep
+if type -q grep
+  alias grep='grep --color=auto'
+end
+
 # gum
 if type -q gum
   set -gx GUM_FILTER_INDICATOR '>'
@@ -200,31 +201,22 @@ end
 # nvim and configs
 if type -q nvim
   alias v='nvim'
-  alias ac='nvim $HOME/.config/alacritty/alacritty.yml'
-  alias bc='nvim $HOME/.config/bspwm/bspwmrc'
-  alias dfc='nvim $HOME/Dev/dotfiles/setup.sh'
-  alias fc='nvim $HOME/.config/fish/config.fish'
-  alias kc='nvim $HOME/.config/kitty/kitty.conf'
-  alias pc='nvim $HOME/.config/polybar/config.ini'
-  alias tc='nvim $HOME/.config/tmux/tmux.conf'
-  alias rc='nvim $HOME/.config/rofi/config.rasi'
-  alias sc='nvim $HOME/.config/sxhkd/sxhkdrc'
-  alias vc='nvim $HOME/.config/nvim/init.lua'
-  alias vo='nvim $HOME/.config/nvim/lua/config/options.lua'
-  alias vm='nvim $HOME/.config/nvim/lua/config/keymaps.lua'
-  alias vp='nvim $HOME/.config/nvim/lua/plugins/init.lua'
-  alias vpkg='nvim $HOME/_packages/main.sh'
-  alias vt='nvim $HOME/.config/nvim/lua/config/theme.lua'
+  alias ac='$EDITOR $HOME/.config/shell/aliases.sh'
+  alias fc='$EDITOR $HOME/.config/fish/config.fish'
+  alias kc='$EDITOR $HOME/.config/kitty/kitty.conf'
+  alias pc='$EDITOR $HOME/.config/polybar/config.ini'
+  alias tc='$EDITOR $HOME/.config/tmux/tmux.conf'
+  alias rc='$EDITOR $HOME/.config/rofi/config.rasi'
+  alias vc='$EDITOR $HOME/.config/nvim/init.lua'
+  alias vo='$EDITOR $HOME/.config/nvim/lua/config/options.lua'
+  alias vm='$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua'
+  alias vp='$EDITOR $HOME/.config/nvim/lua/plugins/init.lua'
+  alias vt='$EDITOR $HOME/.config/nvim/lua/config/theme.lua'
 end
 
 # lazygit
 if type -q lazygit
   alias lg='lazygit'
-end
-
-# mpv
-if type -q mpv
-  alias m='mpv'
 end
 
 # npm
@@ -261,12 +253,14 @@ if type -q vifm
 end
 
 # vlang
-alias vl='$HOME/.v/vl'
-alias vh='$HOME/.v/vl help'
-alias vf='$HOME/.v/vl fmt -w'
-alias vr='$HOME/.v/vl run'
-alias vu='$HOME/.v/vl up'
-alias vw='$HOME/.v/vl watch'
+if type -q '$HOME/.v/v'
+  alias vl='$HOME/.v/vl'
+  alias vh='$HOME/.v/vl help'
+  alias vf='$HOME/.v/vl fmt -w'
+  alias vr='$HOME/.v/vl run'
+  alias vu='$HOME/.v/vl up'
+  alias vw='$HOME/.v/vl watch'
+end
 
 # yarn
 if type -q yarn
@@ -292,37 +286,6 @@ if type -q yay
   alias yayu='yay -Syu'
 end
 
-# yt-dlp youtube 
-if type -q yt-dlp
-  alias yt="yt_dow_meta"
-  alias ytd="yt_dow"
-
-  # Download song of YouTube with metadata
-  function yt_dow_meta
-    set url $argv[1]
-    set name $argv[2]
-
-    if test -n "$name"
-      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$name" "$url"
-    else
-      yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$url"
-    end
-  end
-
-  # Download song of YouTube
-  function yt_dow
-    set url $argv[1]
-    set name $argv[2]
-
-    if test -n "$name"
-      yt-dlp -x --audio-format mp3 --embed-thumbnail -o "$name" "$url"
-    else
-      yt-dlp -x --audio-format mp3 --embed-thumbnail -o "%(title)s.%(ext)s" "$url"
-    end
-  end
-
-end
-
 # Functions
 
 # Default prompt
@@ -330,11 +293,6 @@ function fish_prompt
   echo ''
   set_color cyan; echo (pwd) 
   set_color green; echo '❯ '
-end
-
-# Create dir and enter
-function mkcd
-  mkdir -p $argv && cd $argv
 end
 
 # Unzip and enter
