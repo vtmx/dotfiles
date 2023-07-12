@@ -5,7 +5,7 @@ echo
 message="$@"
 dotfiles_dir="$HOME/Dev/dotfiles"
 
-# If empt string
+# If empty string
 if [[ -z "${message}" ]]; then
   message="update dotfiles"
 fi

@@ -1,6 +1,7 @@
 {
   // Window
   "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
   "window.restoreWindows": "none",
@@ -138,6 +139,9 @@
     "statusBar.debuggingBackground": "#1e2227"
   },
 
+  // Git
+  "git.openRepositoryInParentFolders": "never",
+
   // Plugins
 
   // OneDark
@@ -163,6 +167,9 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -184,6 +191,12 @@
     "editor.defaultFormatter": "octref.vetur"
   },
 
+  // SpellCheck Bash
+  "shellcheck.exclude": ["SC1091", "SC2154"],
+
+  // Svelte
+  "svelte.enable-ts-plugin": true,
+
   // Vetur
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatter.css": "prettier",
@@ -200,9 +213,6 @@
       "printWidth": 120
     }
   },
-
-  // SpellCheck Bash
-  "shellcheck.exclude": ["SC1091", "SC2154"],
 
   // Vim
   "vim.easymotion": true,
@@ -515,9 +525,4 @@
       "after": ["\"", "_", "d", "P"]
     }
   ],
-  "svelte.enable-ts-plugin": true,
-  "git.openRepositoryInParentFolders": "never",
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
 }
