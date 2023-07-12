@@ -48,11 +48,11 @@ set -g fish_pager_color_prefix $blue
 set -g fish_pager_color_progress $comment
 
 # Variables
-set -x BROWSER 'firefox'
-set -x CODE 'code'
-set -x EDITOR 'nvim'
-set -x SHELL '/usr/bin/fish'
-set -x VISUAL 'kate'
+set -gx BROWSER 'firefox'
+set -gx CODE 'code'
+set -gx EDITOR 'nvim'
+set -gx SHELL '/usr/bin/fish'
+set -gx VISUAL 'kate'
 
 # Aliases
 # source $HOME/.config/shell/aliases.sh
