@@ -52,7 +52,7 @@ set -gx BROWSER 'firefox'
 set -gx CODE 'code'
 set -gx EDITOR 'nvim'
 set -gx SHELL '/usr/bin/fish'
-set -gx VISUAL 'kate'
+set -gx VISUAL 'nvim'
 
 # Aliases
 # source $HOME/.config/shell/aliases.sh
@@ -71,7 +71,6 @@ alias rm='rm -i'
 alias so='source'
 
 # Change directories
-alias .='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
