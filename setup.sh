@@ -261,6 +261,16 @@ pause_success() {
   menu
 }
 
+exit_error() {
+  read -rp "$(echo_red "${1}")"
+  exit 1
+}
+
+exit_success() {
+  read -rp "$(echo_green "${1}")"
+  exit 0
+}
+
 # ------------------------------------------------------------------------------
 # Show message in colors
 #
