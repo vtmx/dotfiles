@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -n $2 ]]; then
+if [[ -n "$2" ]]; then
   yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$2" "$1"
 else
   yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$1"
