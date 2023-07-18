@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if type -P entr > /dev/null; then
-  if [[ -n $1 ]]; then
+  if [[ -n "$1" ]]; then
     filename=$1
     ext=$(echo $1 | awk -F . '{print $NF}')
 

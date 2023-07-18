@@ -2,22 +2,20 @@
 
 echo
 
-message="$@"
+message="$1"
 dotfiles_dir="$HOME/Dev/dotfiles"
 
 # If empty string
-if [[ -z "${message}" ]]; then
-  message="update dotfiles"
-fi
+[[ -z "$message" ]] && message="update dotfiles"
 
 # Copy nvim folder
 rm -rdf "$HOME/Dev/dotfiles/config/nvim" > /dev/null
 cp -r "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" > /dev/null
 
 # Go to dotfiles dir
-cd "${dotfiles_dir}" 
+cd "$dotfiles_dir" 
 
 # Git commands
 git add -A
-git commit -m "${message}"
+git commit -m "$message"
 git push

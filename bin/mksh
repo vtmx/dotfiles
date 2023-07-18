@@ -1,30 +1,27 @@
 #!/usr/bin/env bash
 
 set -o errexit
-set -o pipefail
-set -o nounset
+
+argv="$1"
 
 # Test if has argument
-[[ -z "${1}" ]] && echo "Need a name for script" && exit 1
-arg="${1}"
+[[ -z "$argv" ]] && echo "Need a name for script" && exit 1
 
 # Check if file exit
-[[ -e "${arg}" ]] && echo "File already exist" && exit 1
+[[ -e "$argv" ]] && echo "File already exist" && exit 1
 
 # Create script
->"${arg}"
-
-# Write scirpt
 echo "#!/usr/bin/env bash
 
 set -o errexit
 set -o pipefail
 set -o nounset
 
-" > "${arg}"
+" > "$argv"
 
-# Make executable
-chmod +x "${arg}"
+# Make script executable
+chmod +x "$argv"
 
 # Open script
-$EDITOR "${arg}"
+$VISUAL "$argv"
+
