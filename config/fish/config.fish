@@ -56,25 +56,14 @@ set -gx VISUAL 'nvim'
 # Aliases
 source $HOME/.config/shell/aliases.sh
 
-# exa
-if type -q exa
-  alias la='exa -a | grep "^\."'
-  alias ll='exa -l --color=always --group-directories-first'
-  alias ls='exa --color=always --group-directories-first'
-  alias tree='exa -T'
-else
-  alias la='ls -A'
-  alias ll='ls -alF'
-  alias ls='ls --sort=extension --color=auto'
-end
 
-# fish
+# Abbreviations
 abbr -a -g fs source $HOME/.config/fish/config.fish
 
 # fzf
 # ctrl-t - Paste the selected files and directories onto the command-line
 # ctrl-r - Paste the selected command from history onto the command-line
-#  alt-c - cd into the selected directory
+# alt-c  - cd into the selected directory
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS "
   --height 50% --reverse
@@ -84,31 +73,6 @@ if type -q fzf
   --color=marker:#'$foreground',spinner:#'$foreground',header:#'$foreground'
   --color=border:#'$comment'"
   # --preview 'bat -n --color=always {}'"
-end
-
-alias gcm='git_commit'
-
-function git_commit
-  set msg $argv[1]
-
-  if test -n "$msg"
-    git commit -m "$msg"
-  else
-    git commit -m "update"
-  end
-end
-
-# gum
-if type -q gum
-  set -gx GUM_FILTER_INDICATOR '>'
-  set -gx GUM_FILTER_INDICATOR_FOREGROUND '#'$blue
-  set -gx GUM_INPUT_CURSOR_FOREGROUND '#'$foreground
-  set -gx GUM_INPUT_PROMPT_FOREGROUND '#'$foreground
-  set -gx GUM_INPUT_PLACEHOLDER "What's up?"
-  set -gx GUM_INPUT_PROMPT "* "
-  set -gx GUM_CHOOSE_CURSOR_FOREGROUND '#'$blue
-  set -gx GUM_CHOOSE_ITEM_FOREGROUND '#'$foreground
-  set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$foreground
 end
 
 # Functions
