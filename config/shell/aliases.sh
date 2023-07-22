@@ -98,6 +98,8 @@ alias v='nvim'
 # remove
 alias rd='rmdir'
 alias rm='rm -i'
+alias rmd='rm -rdf'
+alias rmf='rm -f'
 
 # source
 alias so='source'
