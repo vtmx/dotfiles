@@ -77,6 +77,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias cdbig='cd $HOME/Dev/projects/biglinux'
+alias cdbin='cd $HOME/.local/bin'
 alias cdc='cd $HOME/Dev/dotfiles/config'
 alias cddesi='cd $HOME/Design'
 alias cddesk='cd $HOME/Desktop'
@@ -346,20 +347,16 @@ set -xU LESS_TERMCAP_ue (printf "\e[0m")
 
 # References
 # https://fishshell.com/docs/current/interactive.html#variables-color
-# https://superuser.com/questions/603359/how-do-i-install-make-a-custom-prompt-for-fish-shell
-# https://github.com/jwkvam/fish-config/blob/master/config.fish
 # https://minsw.github.io/fzf-color-picker
 
-# Defaults colors:
-# black, red, green, yellow, blue, purple, cyan, white
-
 # Colorize man pages
-# color  fg bg
-# black  30 40 	
-# red    31 41 	
-# green  32 42 	
-# yellow 33 43 	
-# blue   34 44 	
-# purple 35 45 	
-# cyan   36 46 	
-# white	 37 47
+# black
+# brblack 
+# red
+# green
+# yellow
+# blue
+# purple
+# cyan
+# white	
+# brwhite
