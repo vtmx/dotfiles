@@ -1,16 +1,3 @@
-# Built-in
-alias c='clear'
-alias chx='chmod +x'
-alias cls='clear'
-alias cp='cp -i'
-alias cpv='rsync -ah --info=progress2'
-alias e='$EDITOR'
-alias md='mkdir -p'
-alias mv='mv -i'
-alias rd='rmdir'
-alias rm='rm -i'
-alias so='source'
-
 # Change directories
 alias .='cd -'
 alias ..='cd ..'
@@ -40,27 +27,48 @@ alias cdt='cd $HOME/Downloads/temp'
 alias cdv='cd $HOME/Dev/projects/vitormelo'
 alias cdvid='cd $HOME/Videos'
 
-# cmus
-alias cm='cmus'
-
 # canvas-sketch-cli
 alias canva='canvas-sketch-cli'
 
+# chmod
+alias chx='chmod +x'
+
+# clear
+alias c='clear'
+alias cls='clear'
+
+# cmus
+alias cm='cmus'
+
+# copy
+alias cp='cp -i'
+alias cpv='rsync -ah --info=progress2'
+
 # dnf
-alias dnfl='sudo dnf list'
 alias dnfi='sudo dnf install'
+alias dnfl='sudo dnf list'
 alias dnfr='sudo dnf remove'
-alias dnfs='sudo dnf search'
 alias dnfrepo='sudo dnf repoquery'
+alias dnfs='sudo dnf search'
+
+# editor
+alias e='$EDITOR'
+
+# exa
+alias exaa='exa -a | grep "^\."'
+alias exal='exa -l --color=auto --group-directories-first'
+alias exas='exa --color=auto --group-directories-first'
+alias tree='exa -T'
 
 # git
 alias g='git'
 alias gaa='git add --all'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcl='git clone'
 alias gb='git branch'
 alias gbd='git branch -d'
+alias gcb='git checkout -b'
+alias gcl='git clone'
+alias gcm='git commit'
+alias gco='git checkout'
 alias gl='git pull'
 alias gm='git merge'
 alias gp='git push'
@@ -70,14 +78,31 @@ alias grep='grep --color=auto'
 
 # helix
 alias h='helix'
-alias hx='helix'
 alias hc='helix $HOME/.config/helix/config.toml'
+alias hx='helix'
+
+# ls
+alias la='ls -A | grep "^\."'
+alias ll='ls -Fal'
+alias ls='ls --color=auto --group-directories-first --sort=extension'
+
+# make
+alias md='mkdir -p'
+
+# move
+alias mv='mv -i'
 
 # nvim
 alias v='nvim'
 
+# remove
+alias rd='rmdir'
+alias rm='rm -i'
+
+# source
+alias so='source'
+
 # yarn
-# set -gx FORCE_COLOR 0
 alias ya='yarn add'
 alias yb='yarn build'
 alias yc='yarn autoclean'
@@ -98,20 +123,17 @@ alias yayu='yay -Syu'
 
 # vlang
 alias vl='$HOME/.v/vl'
-alias vh='$HOME/.v/vl help'
 alias vf='$HOME/.v/vl fmt -w'
+alias vh='$HOME/.v/vl help'
 alias vr='$HOME/.v/vl run'
 alias vu='$HOME/.v/vl up'
 alias vw='$HOME/.v/vl watch'
 
 # config
-alias alc='$EDITOR $HOME/.config/shell/aliases.sh'
+alias ac='$EDITOR $HOME/.config/shell/aliases.sh'
 alias brc='$EDITOR $HOME/.bashrc'
 alias fc='$EDITOR $HOME/.config/fish/config.fish'
 alias kc='$EDITOR $HOME/.config/kitty/kitty.conf'
-alias pc='$EDITOR $HOME/.config/polybar/config.ini'
-alias tc='$EDITOR $HOME/.config/tmux/tmux.conf'
-alias rc='$EDITOR $HOME/.config/rofi/config.rasi'
 alias vc='$EDITOR $HOME/.config/nvim/init.lua'
 alias vo='$EDITOR $HOME/.config/nvim/lua/config/options.lua'
 alias vm='$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua'
