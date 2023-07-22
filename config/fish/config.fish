@@ -51,89 +51,25 @@ set -g fish_pager_color_progress $comment
 set -gx BROWSER 'firefox'
 set -gx CODE 'code'
 set -gx EDITOR 'nvim'
-set -gx SHELL '/usr/bin/fish'
 set -gx VISUAL 'nvim'
 
 # Aliases
-# source $HOME/.config/shell/aliases.sh
-
-# Built-in
-alias c='clear'
-alias chx='chmod +x'
-alias cls='clear'
-alias cp='cp -i'
-alias cpv='rsync -ah --info=progress2'
-alias e='$EDITOR'
-alias md='mkdir -p'
-alias mv='mv -i'
-alias rd='rmdir'
-alias rm='rm -i'
-alias so='source'
-
-# Change directories
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-alias cdbig='cd $HOME/Dev/projects/biglinux'
-alias cdbin='cd $HOME/.local/bin'
-alias cdc='cd $HOME/Dev/dotfiles/config'
-alias cddesi='cd $HOME/Design'
-alias cddesk='cd $HOME/Desktop'
-alias cdd='cd $HOME/Dev/dotfiles'
-alias cddev='cd $HOME/Dev'
-alias cddoc='cd $HOME/Documents'
-alias cddow='cd $HOME/Downloads'
-alias cdf='cd $HOME/Dev/projects/fraseologia'
-alias cdgame='cd $HOME/Games'
-alias cdmoz='cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome'
-alias cdmus='cd $HOME/Music'
-alias cdp='cd $HOME/Dev/projects'
-alias cdpic='cd $HOME/Pictures'
-alias cdpkg='cd $HOME/packages'
-alias cds='cd $HOME/Dev/shortcuts'
-alias cdsof='cd $HOME/Softwares'
-alias cdt='cd $HOME/Downloads/temp'
-alias cdv='cd $HOME/Dev/projects/vitormelo'
-alias cdvid='cd $HOME/Videos'
-
-# bat
-if type -q bat
-  alias cat='bat'
-end
-
-# dnf
-if type -q dnf
-  alias dnfl='sudo dnf list'
-  alias dnfi='sudo dnf install'
-  alias dnfr='sudo dnf remove'
-  alias dnfs='sudo dnf search'
-  alias dnfrepo='sudo dnf repoquery'
-end
-
-# bat
-if type -q cmus
-  alias cm='cmus'
-end
-
-# canvas-sketch-cli
-if type -q canvas-sketch-cli
-  alias canva='canvas-sketch-cli'
-end
+source $HOME/.config/shell/aliases.sh
 
 # exa
 if type -q exa
-  alias l.='exa -a | grep "^\."'
+  alias la='exa -a | grep "^\."'
   alias ll='exa -l --color=always --group-directories-first'
   alias ls='exa --color=always --group-directories-first'
   alias tree='exa -T'
+else
+  alias la='ls -A'
+  alias ll='ls -alF'
+  alias ls='ls --sort=extension --color=auto'
 end
 
 # fish
-if type -q fish
-  abbr -a -g sof source $HOME/.config/fish/config.fish
-end
+abbr -a -g fs source $HOME/.config/fish/config.fish
 
 # fzf
 # ctrl-t - Paste the selected files and directories onto the command-line
@@ -151,33 +87,26 @@ if type -q fzf
 end
 
 # git
-if type -q git
-  alias g='git'
-  alias gaa='git add --all'
-  alias gcm='git_commit'
-  alias gco='git checkout'
-  alias gcb='git checkout -b'
-  alias gcl='git clone'
-  alias gb='git branch'
-  alias gbd='git branch -d'
-  alias gl='git pull'
-  alias gm='git merge'
-  alias gp='git push'
+alias g='git'
+alias gaa='git add --all'
+alias gcm='git_commit'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcl='git clone'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gl='git pull'
+alias gm='git merge'
+alias gp='git push'
 
-  function git_commit
-    set msg $argv[1]
+function git_commit
+  set msg $argv[1]
 
-    if test -n "$msg"
-      git commit -m "$msg"
-    else
-      git commit -m "update"
-    end
+  if test -n "$msg"
+    git commit -m "$msg"
+  else
+    git commit -m "update"
   end
-end
-
-# grep
-if type -q grep
-  alias grep='grep --color=auto'
 end
 
 # gum
@@ -193,67 +122,6 @@ if type -q gum
   set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$foreground
 end
 
-# helix
-if type -q helix
-  alias h='helix'
-  alias hx='helix'
-  alias hc='helix $HOME/.config/helix/config.toml'
-end
-
-# nvim and configs
-if type -q nvim
-  alias v='nvim'
-  alias ac='$EDITOR $HOME/.config/shell/aliases.sh'
-  alias fc='$EDITOR $HOME/.config/fish/config.fish'
-  alias kc='$EDITOR $HOME/.config/kitty/kitty.conf'
-  alias pc='$EDITOR $HOME/.config/polybar/config.ini'
-  alias tc='$EDITOR $HOME/.config/tmux/tmux.conf'
-  alias rc='$EDITOR $HOME/.config/rofi/config.rasi'
-  alias vc='$EDITOR $HOME/.config/nvim/init.lua'
-  alias vo='$EDITOR $HOME/.config/nvim/lua/config/options.lua'
-  alias vm='$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua'
-  alias vp='$EDITOR $HOME/.config/nvim/lua/plugins/init.lua'
-  alias vt='$EDITOR $HOME/.config/nvim/lua/config/theme.lua'
-end
-
-# lazygit
-if type -q lazygit
-  alias lg='lazygit'
-end
-
-# npm
-if type -q npm
-  # set -gx NO_COLOR true
-  alias npmd='npm run dev'
-  alias npmi='npm install'
-  alias npms='npm start'
-  alias npmr='npm remove'
-  alias npmu='npm update'
-end
-
-# pacman
-if type -q pacman
-  alias pac='sudo pacman'
-  alias paci='sudo pacman -S'
-  alias pacr='sudo pacman -R'
-  alias pacu='sudo pacman -Syu'
-end
-
-# ranger
-if type -q ranger
-  alias r='ranger'
-end
-
-# tmux
-if type -q tmux
-  alias t='tmux'
-end
-
-# vifm
-if type -q vifm
-  alias vfm='vifm .'
-end
-
 # vlang
 if type -q '$HOME/.v/v'
   alias vl='$HOME/.v/vl'
@@ -264,30 +132,6 @@ if type -q '$HOME/.v/v'
   alias vw='$HOME/.v/vl watch'
 end
 
-# yarn
-if type -q yarn
-  # set -gx FORCE_COLOR 0
-  alias ya='yarn add'
-  alias yb='yarn build'
-  alias yc='yarn autoclean'
-  alias yd='yarn dev'
-  alias yh='yarn help'
-  alias ydp='yarn deploy'
-  alias yi='yarn install'
-  alias yr='yarn remove'
-  alias ys='yarn start'
-  alias yte='yarn test'
-  alias yu='yarn upgrade'
-  alias yv='yarn version'
-end
-
-# yay
-if type -q yay
-  alias yayi='yay -S'
-  alias yayr='yay -R'
-  alias yayu='yay -Syu'
-end
-
 # Functions
 
 # Default prompt
@@ -295,11 +139,6 @@ function fish_prompt
   echo ''
   set_color cyan; echo (pwd) 
   set_color green; echo '❯ '
-end
-
-# Unzip and enter
-function uzcd
-  unzip $argv && cd $argv
 end
 
 # ssh login 
