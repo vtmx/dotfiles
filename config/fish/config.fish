@@ -86,18 +86,7 @@ if type -q fzf
   # --preview 'bat -n --color=always {}'"
 end
 
-# git
-alias g='git'
-alias gaa='git add --all'
 alias gcm='git_commit'
-alias gco='git checkout'
-alias gcb='git checkout -b'
-alias gcl='git clone'
-alias gb='git branch'
-alias gbd='git branch -d'
-alias gl='git pull'
-alias gm='git merge'
-alias gp='git push'
 
 function git_commit
   set msg $argv[1]
@@ -120,16 +109,6 @@ if type -q gum
   set -gx GUM_CHOOSE_CURSOR_FOREGROUND '#'$blue
   set -gx GUM_CHOOSE_ITEM_FOREGROUND '#'$foreground
   set -gx GUM_CHOOSE_SELECTED_FOREGROUND '#'$foreground
-end
-
-# vlang
-if type -q '$HOME/.v/v'
-  alias vl='$HOME/.v/vl'
-  alias vh='$HOME/.v/vl help'
-  alias vf='$HOME/.v/vl fmt -w'
-  alias vr='$HOME/.v/vl run'
-  alias vu='$HOME/.v/vl up'
-  alias vw='$HOME/.v/vl watch'
 end
 
 # Functions

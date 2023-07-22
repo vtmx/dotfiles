@@ -53,6 +53,18 @@ alias dnfr='sudo dnf remove'
 alias dnfs='sudo dnf search'
 alias dnfrepo='sudo dnf repoquery'
 
+# git
+alias g='git'
+alias gaa='git add --all'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcl='git clone'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gl='git pull'
+alias gm='git merge'
+alias gp='git push'
+
 # grep
 alias grep='grep --color=auto'
 
@@ -60,6 +72,9 @@ alias grep='grep --color=auto'
 alias h='helix'
 alias hx='helix'
 alias hc='helix $HOME/.config/helix/config.toml'
+
+# nvim
+alias v='nvim'
 
 # yarn
 # set -gx FORCE_COLOR 0
@@ -88,3 +103,18 @@ alias vf='$HOME/.v/vl fmt -w'
 alias vr='$HOME/.v/vl run'
 alias vu='$HOME/.v/vl up'
 alias vw='$HOME/.v/vl watch'
+
+# config
+alias alc='$EDITOR $HOME/.config/shell/aliases.sh'
+alias brc='$EDITOR $HOME/.bashrc'
+alias fc='$EDITOR $HOME/.config/fish/config.fish'
+alias kc='$EDITOR $HOME/.config/kitty/kitty.conf'
+alias pc='$EDITOR $HOME/.config/polybar/config.ini'
+alias tc='$EDITOR $HOME/.config/tmux/tmux.conf'
+alias rc='$EDITOR $HOME/.config/rofi/config.rasi'
+alias vc='$EDITOR $HOME/.config/nvim/init.lua'
+alias vo='$EDITOR $HOME/.config/nvim/lua/config/options.lua'
+alias vm='$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua'
+alias vp='$EDITOR $HOME/.config/nvim/lua/plugins/init.lua'
+alias vt='$EDITOR $HOME/.config/nvim/lua/config/theme.lua'
+
