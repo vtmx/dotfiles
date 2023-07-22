@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+wget_files() {
+  [[ -d "$1" ]] || mkdir -p "$1"
+  wget -qP "$1" "$2"
+}
+
+echo "Update alias..."
+wget_files "$HOME/.config/shell" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/shell/aliases.sh" 
+
+echo "Update bash..."
+wget_files "$HOME/.config/bash" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/bash/.bashrc"
+
+echo "Update code..."
+wget_files "$HOME/.config/Code/User" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/vscode/settings.json"
+
+echo "Update fish..."
+wget_files "$HOME/.config/fish" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/fish/config.fish"
+
+echo "Update kitty..."
+wget_files "$HOME/.config/kitty" "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/kitty/kitty.conf"
