@@ -47,31 +47,26 @@ set -g fish_pager_color_description $comment
 set -g fish_pager_color_prefix $blue
 set -g fish_pager_color_progress $comment
 
-# Variables
-set -gx BROWSER 'firefox'
-set -gx CODE 'code'
-set -gx EDITOR 'nvim'
-set -gx VISUAL 'nvim'
-
 # Aliases
 source $HOME/.config/shell/aliases.sh
-
 
 # Abbreviations
 abbr -a -g fs source $HOME/.config/fish/config.fish
 
 # fzf
-# ctrl-t - Paste the selected files and directories onto the command-line
-# ctrl-r - Paste the selected command from history onto the command-line
-# alt-c  - cd into the selected directory
+# ctrl-t - List files
+# ctrl-r - List history
+# alt-c  - Change directory
 if type -q fzf
   set -gx FZF_DEFAULT_OPTS "
   --height 50% --reverse
-  --color=fg:#'$foreground',bg:#'$background',hl:#'$blue'
-  --color=fg+:#'$foreground',bg+:#'$selection',hl+:#'$blue',gutter:#'$background'
-  --color=info:#'$comment',prompt:#'$green',pointer:#'$foreground'
-  --color=marker:#'$foreground',spinner:#'$foreground',header:#'$foreground'
-  --color=border:#'$comment'"
+  --color=fg:#'$foreground',fg+:#'$foreground'
+  --color=bg:#'$background',bg+:#'$selection'
+  --color=hl:#'$blue',hl+:#'$blue'
+  --color=info:#'$comment',marker:#'$foreground'
+  --color=prompt:#'$green',spinner:#'$foreground'
+  --color=pointer:#'$foreground',header:#'$foreground'
+  --color=gutter:#'$background',border:#'$comment'"
   # --preview 'bat -n --color=always {}'"
 end
 
