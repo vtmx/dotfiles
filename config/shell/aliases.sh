@@ -1,9 +1,3 @@
-# Enviroment variables
-export BROWSER="firefox"
-export CODE="code"
-export EDITOR="nvim"
-export VISUAL="nvim"
-
 # Change directories
 alias .="cd -"
 alias ..="cd .."

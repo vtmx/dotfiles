@@ -207,13 +207,13 @@ M.map('n', '<left>', '<cmd>vertical resize +2<cr>')
 M.map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Buffer
-M.map('n', '<leader>c', '<cmd>bd<cr>')
 M.map('n', '<leader>n', '<cmd>ene<cr>')
+M.map('n', '<leader>c', '<cmd>bd<cr>')
 M.map('n', '<leader>w', '<cmd>bd<cr>')
-M.map('n', '<a-n>', '<cmd>ene<cr>')
+M.map('n', '<leader>l', '<cmd>bn<cr>')
+M.map('n', '<leader>h', '<cmd>bp<cr>')
 M.map('n', '<a-l>', '<cmd>bn<cr>')
 M.map('n', '<a-h>', '<cmd>bp<cr>')
-M.map('n', '<a-w>', '<cmd>bd<cr>')
 
 -- Menu
 M.map('i', '<c-space>', '<c-n>')

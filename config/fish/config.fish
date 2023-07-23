@@ -1,4 +1,4 @@
-# remove greeting
+# Remove greeting
 set fish_greeting
 
 # Colors
@@ -34,20 +34,10 @@ set -g fish_pager_color_description fg
 set -g fish_pager_color_prefix blue
 set -g fish_pager_color_progress white
 
-# Aliases
-source $HOME/.config/shell/aliases.sh
-
 # Abbreviations
 abbr -a -g fs source $HOME/.config/fish/config.fish
 
 # Functions
-
-# Default prompt
-function fish_prompt
-  echo ''
-  set_color cyan; echo (pwd) 
-  set_color green; echo '❯ '
-end
 
 # ssh login 
 function ssha
@@ -55,23 +45,6 @@ function ssha
     eval (ssh-agent -c)
     ssh-add -k
   end
-end
-
-# Startup
-
-# fzf - ctrl-t, ctrl-r, alt-c
-# -1 default white bright-white
-if type -q fzf
-  set -gx FZF_DEFAULT_OPTS "
-  --height 50% --reverse
-  --color=fg:-1,fg+:-1
-  --color=bg:-1,bg+:black
-  --color=hl:blue,hl+:blue
-  --color=info:-1,marker:-1
-  --color=prompt:green,spinner:green
-  --color=pointer:-1,header:-1
-  --color=gutter:-1,border:white"
-  # --preview 'bat -n --color=always {}'"
 end
 
 # zoxide
@@ -88,9 +61,13 @@ end
 # starship
 if type -q starship
   starship init fish | source
+else
+  function fish_prompt
+    set_color cyan; echo \n(pwd) 
+    set_color green; echo '❯ '
+  end
 end
 
 # References
 # https://fishshell.com/docs/current/interactive.html#variables-color
-# https://minsw.github.io/fzf-color-picker
 # black, brblack 
