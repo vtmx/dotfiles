@@ -27,6 +27,12 @@ alias cdt="cd $HOME/Downloads/temp"
 alias cdv="cd $HOME/Dev/projects/vitormelo"
 alias cdvid="cd $HOME/Videos"
 
+# bash
+alias b="bash"
+
+# clear
+alias c="clear"
+
 # canvas-sketch-cli
 alias canva="canvas-sketch-cli"
 
@@ -34,7 +40,6 @@ alias canva="canvas-sketch-cli"
 alias chx="chmod +x"
 
 # clear
-alias c="clear"
 alias cls="clear"
 
 # cmus
@@ -52,7 +57,10 @@ alias dnfrepo="sudo dnf repoquery"
 alias dnfs="sudo dnf search"
 
 # editor
-alias e="$EDITOR"
+alias e="$VISUAL"
+
+# fish
+alias f="fish"
 
 # exa
 alias exaa="exa -a | grep '^\.'"
@@ -62,12 +70,12 @@ alias tree="exa -T"
 
 # git
 alias g="git"
-alias gaa="git add --all"
+alias ga="git add --all"
 alias gb="git branch"
+alias gc="git commit -m"
 alias gbd="git branch -d"
 alias gcb="git checkout -b"
 alias gcl="git clone"
-alias gcm="git commit"
 alias gco="git checkout"
 alias gl="git pull"
 alias gm="git merge"
@@ -77,18 +85,12 @@ alias gp="git push"
 alias grep="grep --color=auto"
 
 # helix
-alias h="helix"
-alias hc="helix $HOME/.config/helix/config.toml"
 alias hx="helix"
 
 # ls
 alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
-
-# pip
-alias pipi="pip install"
-alias pipr="pip uninstall"
 
 # make
 alias md="mkdir -p"
@@ -98,6 +100,10 @@ alias mv="mv -i"
 
 # nvim
 alias v="nvim"
+
+# pip
+alias pipi="pip install"
+alias pipr="pip uninstall"
 
 # remove
 alias rd="rmdir"
@@ -136,12 +142,13 @@ alias vu="$HOME/.v/vl up"
 alias vw="$HOME/.v/vl watch"
 
 # config
-alias ac="$EDITOR $HOME/.config/shell/aliases.sh"
-alias brc="$EDITOR $HOME/.bashrc"
-alias fc="$EDITOR $HOME/.config/fish/config.fish"
-alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
-alias vc="$EDITOR $HOME/.config/nvim/init.lua"
-alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
-alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
-alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
-alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
+alias ac="$VISUAL $HOME/.config/shell/aliases.sh"
+alias br="$VISUAL $HOME/.bashrc"
+alias fc="$VISUAL $HOME/.config/fish/config.fish"
+alias hc="helix $HOME/.config/helix/config.toml"
+alias kc="$VISUAL $HOME/.config/kitty/kitty.conf"
+alias vc="$VISUAL $HOME/.config/nvim/init.lua"
+alias vo="$VISUAL $HOME/.config/nvim/lua/config/options.lua"
+alias vm="$VISUAL $HOME/.config/nvim/lua/config/keymaps.lua"
+alias vp="$VISUAL $HOME/.config/nvim/lua/plugins/init.lua"
+alias vt="$VISUAL $HOME/.config/nvim/lua/config/theme.lua"

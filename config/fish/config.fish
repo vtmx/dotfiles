@@ -34,6 +34,9 @@ set -g fish_pager_color_description fg
 set -g fish_pager_color_prefix blue
 set -g fish_pager_color_progress white
 
+# Aliases
+source $HOME/.config/shell/aliases.sh
+
 # Abbreviations
 abbr -a -g fs source $HOME/.config/fish/config.fish
 
