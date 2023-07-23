@@ -2,73 +2,43 @@
 set fish_greeting
 
 # Colors
-set -l background 23272e
-set -l foreground abb2bf
-set -l selection 3d4556
-set -l comment 5c6370
-set -l red e06c75
-set -l orange d19a66
-set -l yellow e5c07b
-set -l green 98c379
-set -l cyan 56b6c2
-set -l blue 61afef
-set -l purple c678dd
-
-# Syntaxy
-set -g fish_color_autosuggestion $comment
-set -g fish_color_cancel $red
-set -g fish_color_command $foreground
-set -g fish_color_comment $comment
-set -g fish_color_cwd $yellow
-set -g fish_color_cwd_root $red
-set -g fish_color_end $orange
-set -g fish_color_error $red
-set -g fish_color_escape $foreground
-set -g fish_color_history_current $comment
-set -g fish_color_host $blue
-set -g fish_color_host_remote $blue
-set -g fish_color_keyword $foreground
-set -g fish_color_match --background=$blue
-set -g fish_color_normal $foreground
-set -g fish_color_operator $foreground
-set -g fish_color_option $foreground
-set -g fish_color_param $foreground
-set -g fish_color_quote $green
-set -g fish_color_redirection $purple
-set -g fish_color_status $foreground
-set -g fish_color_search_match --background=$selection
-set -g fish_color_selection --background=$blue
-set -g fish_color_user $cyan
-set -g fish_color_valid_path $green
+set -g fish_color_autosuggestion white
+set -g fish_color_cancel red
+set -g fish_color_command fg
+set -g fish_color_comment white
+set -g fish_color_cwd yellow
+set -g fish_color_cwd_root red
+set -g fish_color_end yellow
+set -g fish_color_error red
+set -g fish_color_escape fg
+set -g fish_color_history_current white
+set -g fish_color_host blue
+set -g fish_color_host_remote blue
+set -g fish_color_keyword fg
+set -g fish_color_match --background=blue
+set -g fish_color_normal fg
+set -g fish_color_operator fg
+set -g fish_color_option fg
+set -g fish_color_param fg
+set -g fish_color_quote green
+set -g fish_color_redirection purple
+set -g fish_color_status fg
+set -g fish_color_search_match --background=brblack
+set -g fish_color_selection --background=blue
+set -g fish_color_user cyan
+set -g fish_color_valid_path green
 
 # Pager colors
-set -g fish_pager_color_completion $foreground
-set -g fish_pager_color_description $comment
-set -g fish_pager_color_prefix $blue
-set -g fish_pager_color_progress $comment
+set -g fish_pager_color_completion fg
+set -g fish_pager_color_description fg
+set -g fish_pager_color_prefix blue
+set -g fish_pager_color_progress white
 
 # Aliases
 source $HOME/.config/shell/aliases.sh
 
 # Abbreviations
 abbr -a -g fs source $HOME/.config/fish/config.fish
-
-# fzf
-# ctrl-t - List files
-# ctrl-r - List history
-# alt-c  - Change directory
-if type -q fzf
-  set -gx FZF_DEFAULT_OPTS "
-  --height 50% --reverse
-  --color=fg:#'$foreground',fg+:#'$foreground'
-  --color=bg:#'$background',bg+:#'$selection'
-  --color=hl:#'$blue',hl+:#'$blue'
-  --color=info:#'$comment',marker:#'$foreground'
-  --color=prompt:#'$green',spinner:#'$foreground'
-  --color=pointer:#'$foreground',header:#'$foreground'
-  --color=gutter:#'$background',border:#'$comment'"
-  # --preview 'bat -n --color=always {}'"
-end
 
 # Functions
 
@@ -87,53 +57,40 @@ function ssha
   end
 end
 
-# Inits
+# Startup
+
+# fzf - ctrl-t, ctrl-r, alt-c
+# -1 default white bright-white
+if type -q fzf
+  set -gx FZF_DEFAULT_OPTS "
+  --height 50% --reverse
+  --color=fg:-1,fg+:-1
+  --color=bg:-1,bg+:black
+  --color=hl:blue,hl+:blue
+  --color=info:-1,marker:-1
+  --color=prompt:green,spinner:green
+  --color=pointer:-1,header:-1
+  --color=gutter:-1,border:white"
+  # --preview 'bat -n --color=always {}'"
+end
+
+# zoxide
+if type -q zoxide
+  zoxide init fish | source
+  # zoxide init --cmd f fish | source
+
+  alias zo='zoxide_open'
+  function zoxide_open
+    zoxide query $argv | xargs dolphin & 
+  end
+end
 
 # starship
 if type -q starship
   starship init fish | source
 end
 
-# zoxide
-if type -q zoxide
-  zoxide init fish | source
-
-  # custom key
-  # zoxide init --cmd f fish | source
-
-  alias zo='zoxide_open'
-
-  function zoxide_open
-    zoxide query $argv | xargs dolphin & 
-  end
-end
-
-# Headers blue
-set -xU LESS_TERMCAP_md (printf "\e[01;34m")
-
-# Body attribute value
-set -xU LESS_TERMCAP_us (printf "\e[01;32m")
-
-# Statusline
-set -xU LESS_TERMCAP_so (printf "\e[01;40;37m")
-
-# Body sem cor suja muito o documento
-set -xU LESS_TERMCAP_me (printf "\e[0m")
-set -xU LESS_TERMCAP_se (printf "\e[0m")
-set -xU LESS_TERMCAP_ue (printf "\e[0m")
-
 # References
 # https://fishshell.com/docs/current/interactive.html#variables-color
 # https://minsw.github.io/fzf-color-picker
-
-# Colorize man pages
-# black
-# brblack 
-# red
-# green
-# yellow
-# blue
-# purple
-# cyan
-# white	
-# brwhite
+# black, brblack 
