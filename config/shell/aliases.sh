@@ -92,6 +92,10 @@ alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 
+# pip
+alias pipi="pip install"
+alias pipr="pip uninstall"
+
 # make
 alias md="mkdir -p"
 
