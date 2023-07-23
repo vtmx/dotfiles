@@ -69,6 +69,12 @@ create_link() {
 }
 
 create_links() {
+  # shell
+  name="shell"
+  target="$src_dir/shell"
+  link="$config_dir/shell"
+  create_link "$name" "$target" "$link"
+
   # bash
   name="bash"
   target="$HOME/.bashrc"
