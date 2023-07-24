@@ -87,6 +87,9 @@ alias grep="grep --color=auto"
 # helix
 alias hx="helix"
 
+# ln
+alias lnf="ln -f"
+
 # ls
 alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
@@ -113,6 +116,7 @@ alias rd="rmdir"
 alias rm="rm -i"
 alias rmd="rm -rdf"
 alias rmf="rm -f"
+alias rmy="rm -f"
 
 # source
 alias so="source"
