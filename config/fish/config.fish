@@ -35,14 +35,14 @@ set -g fish_pager_color_prefix blue
 set -g fish_pager_color_progress white
 
 # Aliases
-source $HOME/.config/shell/aliases.sh
+source "$HOME/.config/shell/aliases.sh"
 
 # Abbreviations
-abbr -a -g fs source $HOME/.config/fish/config.fish
+abbr -a -g fs source "$HOME/.config/fish/config.fish"
+abbr -a -g df "$HOME/Dev/dotfiles"
 
 # Functions
-# Create dir and enter
-function mkcd
+function mkcd -d "Create dir and enter"
   if test -n "$argv"
     mkdir -p $argv && cd $argv
   else
