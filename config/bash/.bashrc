@@ -17,15 +17,17 @@ export GROFF_NO_SGR=1                       # for konsole and gnome-terminal
 
 # Aliases
 aliases="$HOME/.config/shell/aliases.sh"
-if [[ -f $aliases ]]; then
-  . "$aliases"
-fi
+[[ -f $aliases ]] && . "$aliases"
 
 # Functions
-functions="$HOME/.config/shell/functions.sh"
-if [[ -f $functions ]]; then
-  source "$functions"
-fi
+mkcd() {
+  if [[ -n $1 ]]; then
+    mkdir -p "$1" && cd "$1" || exit 1
+  else
+    echo "error: dirname not exist"
+    exit 1
+  fi
+}
 
 # Startup
 # fzf - ctrl-t, ctrl-r, alt-c
