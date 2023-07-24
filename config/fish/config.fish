@@ -41,6 +41,15 @@ source $HOME/.config/shell/aliases.sh
 abbr -a -g fs source $HOME/.config/fish/config.fish
 
 # Functions
+# Create dir and enter
+function mkcd
+  if test -n "$argv"
+    mkdir -p $argv && cd $argv
+  else
+    echo "error: dirname not exist"
+    exit 1
+  end
+end
 
 # ssh login 
 function ssha

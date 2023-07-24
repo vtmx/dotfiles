@@ -21,8 +21,18 @@ if [[ -f $aliases ]]; then
   . $aliases
 fi
 
-# Startup
+# Functions
+# Create dir and enter
+mkcd() {
+  if [[ -n $1 ]]; then
+    mkdir -p "$1" && cd "$1" || exit 1
+  else
+    echo "error: dirname not exist"
+    exit 1
+  fi
+}
 
+# Startup
 # fzf - ctrl-t, ctrl-r, alt-c
 # -1 default, white bright-white
 # https://minsw.github.io/fzf-color-picker
@@ -40,10 +50,12 @@ if [[ -f ~/.fzf.bash ]]; then
   --border none"
 fi
 
+# zoxide
 if type -P zoxide > /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
+# starship
 if type -P starship > /dev/null; then
   export STARSHIP_CONFIG="$HOME/.config/shell/starship.toml"
   eval "$(starship init bash)"
