@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
+export HTTP_PROXY="$HTTP_PROXY"
+export HTTPS_PROXY="$HTTPS_PROXY"
+
 wget_files() {
   [[ -d "$1" ]] || mkdir -p "$1"
-  wget -qP "$1" "$2"
+
+  if ! wget -cqP "$1" "$2"; then
+    echo "error: fail download"
+    exit 1
+  fi
 }
 
 echo "Update alias..."
