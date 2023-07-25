@@ -39,6 +39,14 @@ if test -f "$HOME/.config/shell/aliases.sh"
   source "$HOME/.config/shell/aliases.sh"
 end
 
+# Start ssh connection 
+function ssha
+  if test -z "$SSH_AUTH_SOCK"
+    eval (ssh-agent -c)
+    ssh-add -k
+  end
+end
+
 # Abbreviations
 abbr -a fs source "$HOME/.config/fish/config.fish"
 abbr -a df "$HOME/Dev/dotfiles"
@@ -78,7 +86,11 @@ if type -q starship
 else
   function fish_prompt
     set_color cyan; echo \n(pwd) 
-    set_color green; echo '❯ '
+    if test -z "$SSH_(CLIENT|CONNECTION|TTY)"
+      set_color green; echo '❯ '
+    else
+      set_color green; echo '> '
+    end
   end
 end
 
