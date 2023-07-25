@@ -4,14 +4,14 @@ export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Colors for man
-export LESS_TERMCAP_mb=$'\e[34;1m'          # no-used blue
-export LESS_TERMCAP_md=$'\e[34;1m'          # title blue
-export LESS_TERMCAP_me=$'\e[0m'             # text
-export LESS_TERMCAP_se=$'\e[0m'             # text
+export LESS_TERMCAP_mb=$'\e[34;1m'            # no-used blue
+export LESS_TERMCAP_md=$'\e[34;1m'            # title blue
+export LESS_TERMCAP_me=$'\e[0m'               # fg
+export LESS_TERMCAP_se=$'\e[0m'               # fg
 export LESS_TERMCAP_so=$'\e[48;5;15m\e[1;30m' # statusbar and search fg and bg
-export LESS_TERMCAP_ue=$'\e[0m'             # text
-export LESS_TERMCAP_us=$'\e[34;1m'          # header and attr blue
-export GROFF_NO_SGR=1                       # for konsole and gnome-terminal
+export LESS_TERMCAP_ue=$'\e[0m'               # fg
+export LESS_TERMCAP_us=$'\e[34;1m'            # header and attr blue
+export GROFF_NO_SGR=1                         # for konsole and gnome-terminal
 
 # Aliases
 if [[ -f "$HOME/.config/shell/aliases.sh" ]]; then
