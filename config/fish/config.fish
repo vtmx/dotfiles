@@ -35,7 +35,9 @@ set -g fish_pager_color_prefix blue
 set -g fish_pager_color_progress normal
 
 # Aliases
-source "$HOME/.config/shell/aliases.sh"
+if test -f "$HOME/.config/shell/aliases.sh"
+  source "$HOME/.config/shell/aliases.sh"
+end
 
 # Abbreviations
 abbr -a fs source "$HOME/.config/fish/config.fish"
