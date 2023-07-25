@@ -2,44 +2,44 @@
 set fish_greeting
 
 # Colors
-set -g fish_color_autosuggestion white
+set -g fish_color_autosuggestion normal
 set -g fish_color_cancel red
-set -g fish_color_command fg
-set -g fish_color_comment white
+set -g fish_color_command normal
+set -g fish_color_comment normal
 set -g fish_color_cwd yellow
 set -g fish_color_cwd_root red
 set -g fish_color_end yellow
 set -g fish_color_error red
-set -g fish_color_escape fg
-set -g fish_color_history_current white
+set -g fish_color_escape normal
+set -g fish_color_history_current normal
 set -g fish_color_host blue
 set -g fish_color_host_remote blue
-set -g fish_color_keyword fg
+set -g fish_color_keyword normal
 set -g fish_color_match --background=blue
-set -g fish_color_normal fg
-set -g fish_color_operator fg
-set -g fish_color_option fg
-set -g fish_color_param fg
+set -g fish_color_normal normal
+set -g fish_color_operator normal
+set -g fish_color_option normal
+set -g fish_color_param normal
 set -g fish_color_quote green
 set -g fish_color_redirection purple
-set -g fish_color_status fg
+set -g fish_color_status normal
 set -g fish_color_search_match --background=brblack
 set -g fish_color_selection --background=blue
 set -g fish_color_user cyan
 set -g fish_color_valid_path green
 
 # Pager colors
-set -g fish_pager_color_completion fg
-set -g fish_pager_color_description fg
+set -g fish_pager_color_completion normal
+set -g fish_pager_color_description normal
 set -g fish_pager_color_prefix blue
-set -g fish_pager_color_progress white
+set -g fish_pager_color_progress normal
 
 # Aliases
 source "$HOME/.config/shell/aliases.sh"
 
 # Abbreviations
-abbr -a -g fs source "$HOME/.config/fish/config.fish"
-abbr -a -g df "$HOME/Dev/dotfiles"
+abbr -a fs source "$HOME/.config/fish/config.fish"
+abbr -a df "$HOME/Dev/dotfiles"
 
 # Functions
 function mkcd -d "Create dir and enter"
