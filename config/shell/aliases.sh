@@ -1,3 +1,6 @@
+# Environment variables
+export EDITOR="nvim"
+
 # Change directories
 alias .="cd -"
 alias ..="cd .."
@@ -57,7 +60,7 @@ alias dnfrepo="sudo dnf repoquery"
 alias dnfs="sudo dnf search"
 
 # editor
-alias e="$VISUAL"
+alias e="$EDITOR"
 
 # fish
 alias f="fish"
@@ -86,6 +89,9 @@ alias grep="grep --color=auto"
 
 # helix
 alias hx="helix"
+
+# ip
+alias ip="ip -color=auto"
 
 # ln
 alias lnf="ln -f"
@@ -149,13 +155,13 @@ alias vu="$HOME/.v/vl up"
 alias vw="$HOME/.v/vl watch"
 
 # config
-alias ac="$VISUAL $HOME/.config/shell/aliases.sh"
-alias br="$VISUAL $HOME/.bashrc"
-alias fc="$VISUAL $HOME/.config/fish/config.fish"
+alias ac="$EDITOR $HOME/.config/shell/aliases.sh"
+alias br="$EDITOR $HOME/.bashrc"
+alias fc="$EDITOR $HOME/.config/fish/config.fish"
 alias hc="helix $HOME/.config/helix/config.toml"
-alias kc="$VISUAL $HOME/.config/kitty/kitty.conf"
-alias vc="$VISUAL $HOME/.config/nvim/init.lua"
-alias vo="$VISUAL $HOME/.config/nvim/lua/config/options.lua"
-alias vm="$VISUAL $HOME/.config/nvim/lua/config/keymaps.lua"
-alias vp="$VISUAL $HOME/.config/nvim/lua/plugins/init.lua"
-alias vt="$VISUAL $HOME/.config/nvim/lua/config/theme.lua"
+alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
+alias vc="$EDITOR $HOME/.config/nvim/init.lua"
+alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
+alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
+alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
+alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
