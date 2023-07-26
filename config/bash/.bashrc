@@ -32,8 +32,8 @@ mkcd() {
 # fzf - ctrl-t, ctrl-r, alt-c
 # -1 default, white bright-white
 # https://minsw.github.io/fzf-color-picker
-if [[ -f ~/.fzf.bash ]]; then
-  source ~/.fzf.bash
+if [[ -f "$HOME/.fzf.bash" ]]; then
+  source "$HOME/.fzf.bash"
   export FZF_DEFAULT_OPTS="--height 50% --reverse \
   --prompt '❯ ' --pointer '❯ ' --marker '❯ ' \
   --color=fg:-1,fg+:black \
@@ -56,7 +56,7 @@ if type -P starship > /dev/null; then
   export STARSHIP_CONFIG="$HOME/.config/shell/starship.toml"
   eval "$(starship init bash)"
 else
-  if [[ -z "$SSH_@(CLIENT|CONNECTION|TTY)" ]]; then
+  if [[ -n "$DISPLAY" ]]; then
     PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]❯\\[\E[0m\\] '
   else
     PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]>\\[\E[0m\\] '

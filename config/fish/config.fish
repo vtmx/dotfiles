@@ -51,6 +51,20 @@ end
 abbr -a fs source "$HOME/.config/fish/config.fish"
 abbr -a df "$HOME/Dev/dotfiles"
 
+if type -q fzf
+  set -gx FZF_DEFAULT_OPTS "
+  --height 50% --reverse
+  --prompt '❯ ' --pointer '❯ ' --marker '❯ '
+  --color=fg:-1,fg+:black
+  --color=bg:-1,bg+:bright-white
+  --color=hl:blue,hl+:blue
+  --color=info:-1,marker:blue
+  --color=prompt:green,spinner:green
+  --color=pointer:black,header:-1
+  --color=gutter:-1,border:black
+  --border none"
+end
+
 # Functions
 function mkcd -d "Create dir and enter"
   if test -n "$argv"
@@ -86,7 +100,7 @@ if type -q starship
 else
   function fish_prompt
     set_color cyan; echo \n(pwd) 
-    if test -z "$SSH_(CLIENT|CONNECTION|TTY)"
+    if test -n "$DISPLAY"
       set_color green; echo '❯ '
     else
       set_color green; echo '> '
