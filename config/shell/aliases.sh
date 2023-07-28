@@ -54,8 +54,9 @@ alias cpv="rsync -ah --info=progress2"
 
 # dnf
 alias dnfi="sudo dnf install"
+alias dnfiy="sudo dnf install -y"
 alias dnfl="sudo dnf list"
-alias dnfr="sudo dnf remove"
+alias dnfr="sudo dnf remove -y"
 alias dnfrepo="sudo dnf repoquery"
 alias dnfs="sudo dnf search"
 
