@@ -57,6 +57,20 @@ g.netrw_keepdir = 0
 g.netrw_liststyle = 4
 g.netrw_winsize = 20
 
+-- Disable plugins
+vim.g.loaded_zip = 1
+vim.g.loaded_gzip = 1
+vim.g.loaded_man = 1
+vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_remote_plugins = 1
+vim.g.loaded_shada_plugin = 1
+vim.g.loaded_spellfile_plugin = 1
+vim.g.loaded_tarPlugin= 1
+vim.g.loaded_2html_plugin= 1
+vim.g.loaded_tutor_mode_plugin = 1
+
 -- References
 -- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
 

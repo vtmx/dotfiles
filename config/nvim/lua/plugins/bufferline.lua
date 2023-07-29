@@ -2,9 +2,7 @@ local c = require('config.colors')
 
 return {
   'akinsho/bufferline.nvim',
-  dependencies = {
-    'kyazdani42/nvim-web-devicons'
-  },
+  dependencies = 'kyazdani42/nvim-web-devicons',
   opts = {
     options = {
       buffer_close_icon = '',
