@@ -141,6 +141,13 @@ alias rmy="rm -f"
 # source
 alias so="source"
 
+# tmux
+alias t="tmux"
+alias ta="tmux attach -t"
+alias tk="tmux kill-session -t"
+alias tls="tmux ls"
+alias tn="tmux new -s"
+
 # yarn
 alias ya="yarn add"
 alias yb="yarn build"
