@@ -2,6 +2,7 @@ return {
   {
     'nvim-lua/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
+    cmd = 'Telescope',
     config = function()
       require('telescope').setup({
         defaults = {
@@ -30,8 +31,8 @@ return {
   },
   {
     'nvim-telescope/telescope-file-browser.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    }
+    cmd = 'Telescope file_browser',
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-lua/plenary.nvim' }
   }
 }
+

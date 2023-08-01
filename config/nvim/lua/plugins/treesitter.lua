@@ -1,10 +1,11 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  event = 'VeryLazy', 
   build = ':TSUpdate',
   opts = {
-    autotag = {
-      enable = true
-    },
+    autotag = { enable = true },
+    highlight = { enable = true },
+    indent = { enable = true },
     ensure_installed = { 
       'bash',
       'css',
@@ -21,12 +22,6 @@ return {
       'v',
       'vue',
       'yaml'
-    },
-    highlight = {
-      enable = true
-    },
-    indent = {
-      enable = true
     }
   }
 }
