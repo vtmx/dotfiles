@@ -131,6 +131,16 @@ alias v="nvim"
 alias pipi="pip install"
 alias pipr="pip uninstall"
 
+# pacman
+alias pac="sudo pacman"
+alias paci="sudo pacman -S"
+alias paciy="sudo pacman --noconfirm -S"
+alias pacl="pacman -Q"
+alias paclo="pacman -Qdt" # list orphans
+alias pacr="sudo pacman -R"
+alias pacry="sudo pacman --noconfirm  -R"
+alias pacu="sudo pacman -Syu"
+
 # remove
 alias rd="rmdir"
 alias rm="rm -i"
@@ -145,7 +155,7 @@ alias so="source"
 alias t="tmux"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
-alias tls="tmux ls"
+alias tl="tmux ls"
 alias tn="tmux new -s"
 
 # yarn
