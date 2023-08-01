@@ -59,6 +59,7 @@ alias dnfl="sudo dnf list"
 alias dnfr="sudo dnf remove -y"
 alias dnfrepo="sudo dnf repoquery"
 alias dnfs="sudo dnf search"
+alias dnfu="sudo dnf upgrade --refresh"
 
 # editor
 alias e="$EDITOR"

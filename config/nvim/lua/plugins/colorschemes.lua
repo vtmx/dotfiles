@@ -1,9 +1,9 @@
-local c = require('config.theme')
+local c = require('config.colors')
 
 return {
   {
     'olimorris/onedarkpro.nvim',
-    lazy = true,
+    lazy = false,
     config = function()
       require('onedarkpro').setup {
         theme = 'onedark',
