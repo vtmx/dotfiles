@@ -29,7 +29,7 @@ local onedarkv = ({
 
 return {
   'nvim-lualine/lualine.nvim',
-  event = 'VeryLazy',
+  event = 'BufRead',
   dependencies = 'kyazdani42/nvim-web-devicons',
   opts = {
     options = {
@@ -43,7 +43,7 @@ return {
     sections = {
       lualine_a = { 'mode' },
       lualine_b = { 'branch', 'diff', 'diagnostics' },
-      lualine_c = {},
+      lualine_c = { 'filename' },
       lualine_x = {},
       lualine_y = {},
       lualine_z = { 'location' }

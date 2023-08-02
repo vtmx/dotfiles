@@ -1,6 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  event = 'VeryLazy', 
+  event = 'BufRead', 
   build = ':TSUpdate',
   opts = {
     autotag = { enable = true },
