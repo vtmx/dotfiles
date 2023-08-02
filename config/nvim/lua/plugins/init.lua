@@ -1,20 +1,15 @@
 return {
-  -- { 'christoomey/vim-tmux-navigator' },
   {
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead'
   },
+  -- example: ga=
   {
-    'kyazdani42/nvim-web-devicons',
-    event = 'VeryLazy'
-  },
-  {
-    'neovim/nvim-lspconfig',
-    event = 'BufRead'
-  },
-  {
-    'junegunn/vim-slash',
-    event = 'BufRead'
+    'echasnovski/mini.align',
+    event = 'BufRead',
+    config = function()
+      require('mini.align').setup()
+    end
   },
   {
     'echasnovski/mini.comment',
@@ -29,5 +24,20 @@ return {
     config = function()
       require('mini.jump').setup()
     end
+  },
+  {
+    'neovim/nvim-lspconfig',
+    event = 'BufReadPre'
+  },
+  {
+    'kyazdani42/nvim-web-devicons',
+    event = 'VeryLazy'
+  },
+  {
+    'junegunn/vim-slash',
+    event = 'BufRead'
+  },
+  { 
+    'christoomey/vim-tmux-navigator'
   }
 }
