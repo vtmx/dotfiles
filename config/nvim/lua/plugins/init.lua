@@ -38,6 +38,7 @@ return {
     event = 'BufRead'
   },
   { 
-    'christoomey/vim-tmux-navigator'
+    'christoomey/vim-tmux-navigator',
+    event = 'BufRead'
   }
 }
