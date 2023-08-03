@@ -224,3 +224,13 @@ tooltip {
   color: transparent; !important;
   -moz-appearance: none !important;
 }
+
+/* history */
+.sidebar-splitter {
+  background: var(--shade1) !important;
+  border: none !important;
+}
+
+.scrollbar-topmost {
+  background: transparent !important;
+}
