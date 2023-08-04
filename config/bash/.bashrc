@@ -14,8 +14,17 @@ export LESS_TERMCAP_us=$'\e[34;1m'            # header and attr blue
 export GROFF_NO_SGR=1                         # for konsole and gnome-terminal
 
 # Aliases
-if [[ -f "$HOME/.config/shell/aliases.sh" ]]; then
-  . "$HOME/.config/shell/aliases.sh"
+if [[ -f $HOME/.config/shell/aliases.sh ]]; then
+  . $HOME/.config/shell/aliases.sh
+fi
+
+# Enable auto-completion
+if ! shopt -oq posix; then
+  if [[ -f /usr/share/bash-completion/bash_completion ]]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [[ -f /etc/bash_completion ]]; then
+    . /etc/bash_completion
+  fi
 fi
 
 # Functions
