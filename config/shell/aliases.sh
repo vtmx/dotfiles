@@ -52,6 +52,9 @@ alias cm="cmus"
 alias cp="cp -i"
 alias cpv="rsync -ah --info=progress2"
 
+# diff
+alias diff="diff --color=auto"
+
 # dnf
 alias dnfi="sudo dnf install"
 alias dnfiy="sudo dnf install -y"

@@ -2,6 +2,7 @@
 export BROWSER="firefox"
 export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
+export CDPATH=".:..:~"
 
 # Colors for man
 export LESS_TERMCAP_mb=$'\e[34;1m'            # no-used blue

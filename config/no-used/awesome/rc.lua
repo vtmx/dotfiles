@@ -141,11 +141,11 @@ local tasklist_buttons = gears.table.join(
     awful.menu.client_list({ theme = { width = 250 } })
   end),
 
-  awful.button({ }, 4, function ()
+  awful.button({ }, 4, function()
     awful.client.focus.byidx(1)
   end),
 
-  awful.button({ }, 5, function ()
+  awful.button({ }, 5, function()
     awful.client.focus.byidx(-1)
   end)
 )
@@ -179,10 +179,10 @@ awful.screen.connect_for_each_screen(function(s)
   s.mylayoutbox = awful.widget.layoutbox(s)
 
   s.mylayoutbox:buttons(gears.table.join(
-    awful.button({ }, 1, function () awful.layout.inc( 1) end),
-    awful.button({ }, 3, function () awful.layout.inc(-1) end),
-    awful.button({ }, 4, function () awful.layout.inc( 1) end),
-    awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+    awful.button({ }, 1, function() awful.layout.inc( 1) end),
+    awful.button({ }, 3, function() awful.layout.inc(-1) end),
+    awful.button({ }, 4, function() awful.layout.inc( 1) end),
+    awful.button({ }, 5, function() awful.layout.inc(-1) end)))
 
   -- Create a taglist widget
   s.mytaglist = awful.widget.taglist {
@@ -204,15 +204,17 @@ awful.screen.connect_for_each_screen(function(s)
   -- Add widgets to the wibox
   s.mywibox:setup {
     layout = wibox.layout.align.horizontal,
-    { -- Left widgets
+    -- Left widgets
+    {
         layout = wibox.layout.fixed.horizontal,
         mylauncher,
         s.mytaglist,
         s.mypromptbox,
     },
-
-    s.mytasklist, -- Middle widget
-    { -- Right widgets
+    -- Middle widget
+    s.mytasklist{ },
+    -- Right widgets
+    {
         layout = wibox.layout.fixed.horizontal,
         mykeyboardlayout,
         wibox.widget.systray(),
@@ -224,7 +226,7 @@ end)
 
 -- Mouse bindings
 root.buttons(gears.table.join(
-  awful.button({ }, 3, function () mymainmenu:toggle() end),
+  awful.button({ }, 3, function() mymainmenu:toggle() end),
   awful.button({ }, 4, awful.tag.viewnext),
   awful.button({ }, 5, awful.tag.viewprev)
 ))
@@ -278,7 +280,7 @@ globalkeys = gears.table.join(
   ),
 
   awful.key(
-    { super }, 'k', function () awful.client.focus.byidx(-1) end,
+    { super }, 'k', function() awful.client.focus.byidx(-1) end,
     { description = 'focus previous by index', group = 'Client' }
   ),
 
@@ -315,13 +317,13 @@ globalkeys = gears.table.join(
 
   awful.key(
     { alt }, tab,
-    function ()
+    function()
       awful.client.focus.history.previous()
       if client.focus then
         client.focus:raise()
       end
     end,
-    { description = 'go back', group = 'client' }
+    { description = 'go back', group = 'Client' }
   ),
 
   -- Extras
@@ -331,7 +333,7 @@ globalkeys = gears.table.join(
   ),
 
   awful.key(
-    { super }, 'w', function () mymainmenu:show() end,
+    { super }, 'w', function() mymainmenu:show() end,
     { description = 'show main menu', group = 'Menu' }
   ),
 
@@ -355,7 +357,7 @@ globalkeys = gears.table.join(
 
   awful.key(
   { modkey }, 'x',
-  function ()
+  function()
     awful.prompt.run {
       prompt       = 'Run Lua code: ',
       textbox      = awful.screen.focused().mypromptbox.widget,
@@ -383,7 +385,7 @@ globalkeys = gears.table.join(
 
   -- Apps
   awful.key(
-    { super, }, enter, function () awful.spawn(terminal) end,
+    { super, }, enter, function() awful.spawn(terminal) end,
     { description = 'terminal', group = 'Apps' }
   ),
 
@@ -515,7 +517,7 @@ for i = 1, 9 do
     -- View tag only.
     awful.key(
       { super }, '#' .. i + 9,
-      function ()
+      function()
         local screen = awful.screen.focused()
         local tag = screen.tags[i]
         if tag then
@@ -528,7 +530,7 @@ for i = 1, 9 do
     -- Toggle tag display.
     awful.key(
       { super, ctrl }, '#' .. i + 9,
-      function ()
+      function()
         local screen = awful.screen.focused()
         local tag = screen.tags[i]
         if tag then
@@ -541,7 +543,7 @@ for i = 1, 9 do
     -- Move client to tag.
     awful.key(
       { super, shift }, '#' .. i + 9,
-      function ()
+      function()
         if client.focus then
           local tag = client.focus.screen.tags[i]
           if tag then
@@ -555,7 +557,7 @@ for i = 1, 9 do
     -- Toggle tag on focused client.
     awful.key(
       { super, ctrl, shift }, '#' .. i + 9,
-      function ()
+      function()
         if client.focus then
           local tag = client.focus.screen.tags[i]
           if tag then
