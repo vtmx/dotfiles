@@ -23,5 +23,5 @@ set -o nounset
 chmod +x "$argv"
 
 # Open script
-$VISUAL "$argv"
+$EDITOR "$argv"
 
