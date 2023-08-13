@@ -1,60 +1,52 @@
 #!/usr/bin/env bash
 
-# init
-export SXHKD_SHELL="/usr/bin/bash"
-
-# commands
-bm="bspc monitor -d"
+# Simplify commands
 bc="bspc config"
+bm="bspc monitor -d"
 br="bspc rule -a"
 
-# workspaces
+# Add workspaces
 $bm 1 2 3 4 5 6 7 8 9 0
 
-# config
-$bc border_width 3
-$bc window_gap 8
-$bc split_ratio 0.50
-$bc single_monocle true
-$bc borderless_monocle true
-$bc gapless_monocle true
-$bc paddingless_monocle true
+# Config
+$bc border_width          3
+$bc window_gap            8
+$bc split_ratio           0.50
+$bc single_monocle        true
+$bc borderless_monocle    true
+$bc gapless_monocle       true
+$bc paddingless_monocle   true
 $bc focus_follows_pointer true
 
-# theme
-$bc focused_border_color "#5c6370"  
-$bc normal_border_color "#23272e"
-$bc active_border_color "#be5046"
+# Theme
+$bc focused_border_color  "#5c6370"  
+$bc normal_border_color   "#23272e"
+$bc active_border_color   "#be5046"
 $bc presel_feedback_color "#98c379"
 
-# rules
+# Rules
 
-# web
-$br brave desktop='^1', follow=on focus=on
-$br chromium desktop='^1', follow=on focus=on
-$br firefox desktop='^1' follow=on focus=on
-$br vivaldi-stable desktop='^1' follow=on focus=on
+# Web
+$br firefox desktop="^1" focus=on follow=on
 
-# code
-$br alacritty desktop='^2' follow=on focus=on
-$br code desktop='^2' follow=on focus=on
-$br kitty desktop='^2' follow=on focus=on
+# Code
+$br code    desktop="^2" focus=on follow=on
+$br kitty   desktop="^2" focus=on follow=on
 
-# file
-$br dolphin desktop='^3' follow=on focus=on
-$br nemo desktop='^3' follow=on focus=on
-$br thunar desktop='^3' follow=on focus=on
+# File
+$br dolphin desktop="^3" focus=on follow=on
+$br nemo    desktop="^3" focus=on follow=on
+$br thunar  desktop="^3" focus=on follow=on
 
-# media
-$br mpv desktop='^4' follow=on focus=on state=floating
-$br vlc desktop='^4' follow=on focus=on
+# Media
+$br mpv     desktop="^4" focus=on follow=on state=floating
+$br vlc     desktop="^4" focus=on follow=on
 
-# autostart
+# Autostart
 xsetroot -cursor_name left_ptr &
 pkill -USR1 sxhkd &
 sxhkd &
-feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/valorant/* &
+feh --no-fehbg --bg-scale --randomize "~/Pictures/wallpapers/wallhaven/valorant/*" &
 # picom &
 # dunst &
-$HOME/.config/polybar/launch.sh &
-
+"$HOME/.config/polybar/launch.sh" &
