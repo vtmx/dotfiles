@@ -39,8 +39,8 @@ super + ctrl + {_,shift + }{h,Left,l,Right}
 	bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
 
 # Switch and send window to other workspace
-super {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} "^{1-9,10}" --follow
+super {_,shift + }{1-9}
+	bspc {desktop -f,node -d} "^{1-9}" --follow
 
 # Resize window
 # super + alt + {h,j,k,l}

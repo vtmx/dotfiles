@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
+# Autostart
+xsetroot -cursor_name left_ptr &
+pkill -USR1 sxhkd & sxhkd &
+feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/* &
+pkill -USR1 polybar & polybar bspwm &
+
 # Simplify commands
 bc="bspc config"
 bm="bspc monitor -d"
 br="bspc rule -a"
 
 # Add workspaces
-$bm 1 2 3 4 5 6 7 8 9 0
+$bm 1 2 3 4 5 6 7 8 9
 
 # Config
 $bc border_width          3
@@ -25,28 +31,11 @@ $bc active_border_color   "#be5046"
 $bc presel_feedback_color "#98c379"
 
 # Rules
-
-# Web
 $br firefox desktop="^1" focus=on follow=on
-
-# Code
 $br code    desktop="^2" focus=on follow=on
 $br kitty   desktop="^2" focus=on follow=on
-
-# File
 $br dolphin desktop="^3" focus=on follow=on
 $br nemo    desktop="^3" focus=on follow=on
 $br thunar  desktop="^3" focus=on follow=on
-
-# Media
-$br mpv     desktop="^4" focus=on follow=on state=floating
+$br mpv     desktop="^4" focus=on follow=on state=floating 
 $br vlc     desktop="^4" focus=on follow=on
-
-# Autostart
-xsetroot -cursor_name left_ptr &
-pkill -USR1 sxhkd &
-sxhkd &
-feh --no-fehbg --bg-scale --randomize "~/Pictures/wallpapers/wallhaven/valorant/*" &
-# picom &
-# dunst &
-"$HOME/.config/polybar/launch.sh" &

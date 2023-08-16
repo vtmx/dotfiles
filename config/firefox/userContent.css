@@ -86,20 +86,14 @@
   --toolbar-non-lwt-bgimage: var(--shade0) !important;
   --rule-header-background-color: var(--shade0) !important; 
   --rule-overridden-value-text-color: var(--shade3) !important;
+  --in-content-primary-button-background: var(--shade0) !important;
+  --in-content-primary-button-text-color: var(--shade7) !important;
 }
 
-/* selection in all pages */
-*::selection {
-  background: var(--blue);
-  color: var(--shade0);
-}
-
-/* não funciona */
-@-moz-document url('about:home'),
-url('about:newtab') {
-  body {
-    background: red !important;
-  }
+/* selection */
+::-moz-selection {
+  background: var(--blue) !important;
+  color: var(--shade0) !important;
 }
 
 /* search bar in settings */
