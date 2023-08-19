@@ -10,6 +10,10 @@ super + {_,shift + }c
 super + shift + q
 	bspc quit
 
+# Reload sxhkd
+super + scape
+  pkill -USR1 -x sxhkd
+
 # Laucnher
 super + space
 	rofi -show drun

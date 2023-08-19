@@ -77,26 +77,28 @@ M.map('n', '%', 'G<s-v>gg')
 M.map('n', 'U', '<c-r>')
 
 -- Copy to clipboard
-M.map('n', '<leader>y', 'V"+y')
-M.map('v', '<leader>y', '"+y')
-M.map('n', '<a-y>', 'V"+y')
-M.map('v', '<a-y>', '"+y')
+M.map('n', '<leader>y', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
+M.map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')
+M.map('n', '<a-y>', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
+M.map('v', '<a-y>', '"+y<cmd>echo "Copy to clipboard"<cr>')
 
 -- Cut to clipboard
-M.map('n', '<leader>d', '^vg_"+x')
-M.map('v', '<leader>d', '"+x')
+M.map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
+M.map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
 
 -- Paste to clipboard
-M.map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste of clipboard"<cr>')
-M.map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"<cr>')
-M.map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste of clipboard"<cr>')
-M.map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste of clipboard in new line"<cr>')
+M.map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+M.map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
+M.map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+M.map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
+M.map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+M.map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 
 -- Replace yank
 M.map('n', 'R', '"0p')
 
--- Paste with no resgister
-M.map('x', '<leader>p', '"_dP')
+-- Paste with no resgister fail if select mode
+-- M.map('x', '<leader>p', '"_dP')
 
 -- Join lines
 M.map('n', '<leader>j', 'J')

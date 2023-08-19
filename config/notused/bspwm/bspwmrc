@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-# Autostart before
+# Autostart
 xsetroot -cursor_name left_ptr &
 pkill -USR1 sxhkd & sxhkd &
+feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/* &
+pkill -USR1 polybar & polybar bspwm &
 
 # Simplify commands
 bc="bspc config"
@@ -37,8 +39,3 @@ $br nemo    desktop="^3" focus=on follow=on
 $br thunar  desktop="^3" focus=on follow=on
 $br mpv     desktop="^4" focus=on follow=on state=floating 
 $br vlc     desktop="^4" focus=on follow=on
-
-# Autostart after
-feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/* &
-pkill -USR1 polybar & polybar bspwm &
-
