@@ -83,7 +83,7 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"
 alias gbd="git branch -d"
-alias gc="git commit -m"
+# alias gc="git commit -m"
 alias gcb="git checkout -b"
 alias gcl="git clone"
 alias gco="git checkout"
@@ -145,10 +145,9 @@ alias pacry="sudo pacman --noconfirm  -R"
 alias pacu="sudo pacman -Syu"
 
 # remove
-alias rd="rmdir"
+alias rd="rm -rdf"
 alias rm="rm -i"
 alias rmd="rm -rdf"
-alias rmf="rm -f"
 alias rmy="rm -f"
 
 # source
