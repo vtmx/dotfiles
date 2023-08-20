@@ -12,7 +12,7 @@ no=' No'
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p "" \
+		-p "" \
 		-theme-str 'listview { lines: 5; }'
 }
 

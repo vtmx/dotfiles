@@ -1,5 +1,0 @@
-export
-pacman -Qqe > installs.txt
-
-install
-yay -S --needed - < installs.txt
