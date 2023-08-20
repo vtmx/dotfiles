@@ -139,6 +139,7 @@ alias pac="sudo pacman"
 alias paci="sudo pacman -S"
 alias paciy="sudo pacman --noconfirm -S"
 alias pacl="pacman -Q"
+alias paclq="pacman -Qqe"
 alias paclo="pacman -Qdt" # list orphans
 alias pacr="sudo pacman -R"
 alias pacry="sudo pacman --noconfirm  -R"
