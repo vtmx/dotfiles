@@ -73,7 +73,7 @@ local hl_groups = {
   EndOfBuffer    = { fg = c.bg },
 
   -- Line highlight
-  CursorLine     = { bg = c.cul },
+  CursorLine     = { bg = c.bgl },
 
   -- Select text
   Visual         = { bg = c.sel },
@@ -89,14 +89,14 @@ local hl_groups = {
   -- Pmenu
   Pmenu          = { bg = c.bgd },
   PmenuSbar      = { bg = c.bgd },
-  PmenuSel       = { bg = c.cul },
-  PmenuThumb     = { bg = c.cul },
+  PmenuSel       = { bg = c.bgl },
+  PmenuThumb     = { bg = c.bgl },
 
   -- Pmenu coc
   CocFloating       = { bg = c.bgd  },
   CocFloatSbar      = { bg = c.bgd  },
-  CocFloatThumb     = { bg = c.cul  },
-  CocMenuSel        = { bg = c.cul  },
+  CocFloatThumb     = { bg = c.bgl  },
+  CocMenuSel        = { bg = c.bgl  },
   CocPumDetail      = { fg = c.fgd  },
   CocPumMenu        = { bg = c.bgd  },
   CocPumShortcut    = { fg = c.fgd  },
@@ -174,7 +174,7 @@ local hl_groups = {
   HopUnmatched             = { fg = c.fgd    },
 
   -- nvim-tree
-  NvimTreeCursorLine       = { bg = c.cul },
+  NvimTreeCursorLine       = { bg = c.bgl },
   NvimTreeFolder           = { fg = c.fg  },
   NvimTreeFolderIcon       = { fg = c.fg  },
   NvimTreeFolderName       = { fg = c.fg  },
@@ -200,8 +200,8 @@ local hl_groups = {
   TelescopePromptBorder    = { fg = c.fgd },
   TelescopeResultsBorder   = { fg = c.fgd },
   TelescopePreviewBorder   = { fg = c.fgd },
-  TelescopeSelection       = { bg = c.cul },
-  TelescopeSelectionCaret  = { fg = c.fg, bg = c.cul },
+  TelescopeSelection       = { bg = c.bgl },
+  TelescopeSelectionCaret  = { fg = c.fg, bg = c.bgl },
   TelescopeTitle           = { fg = c.fg   },
   TelescopePromptTitle     = { fg = c.fg   },
   TelescopeResultsTitle    = { fg = c.fg   },
