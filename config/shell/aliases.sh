@@ -2,7 +2,6 @@
 export EDITOR="nvim"
 
 # Change directories
-alias .="cd -"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .3="cd ../../.."

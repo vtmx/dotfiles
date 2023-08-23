@@ -29,7 +29,6 @@ $bc single_monocle        true
 $bc borderless_monocle    true
 $bc gapless_monocle       true
 $bc paddingless_monocle   true
-$bc focus_follows_pointer true
 
 # Theme
 $bc focused_border_color  "#5c6370"  
