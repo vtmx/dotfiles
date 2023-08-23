@@ -41,18 +41,21 @@ configuration {
 @theme "/dev/null"
 
 // general
-@import "onedarkv.rasi"
+// @import "onedarkv.rasi"
 
 * {
 	font: "BlexMono Nerd Font 11";
+	bg:  #1e2227;
+	bgl: #2c313c;
+	fg:  #abb2bf;
 }
 
 window {
 	width: 600;
 	padding: 0;
-	background-color: @background;
+	background-color: @bg;
 	border: 1px;
-	border-color: @selection;
+	border-color: @bgl;
 }
 
 mainbox {
@@ -68,7 +71,7 @@ message {
 textbox {
   padding: 8px 16px;
 	background-color: transparent;
-	text-color: @foreground;
+	text-color: @fg;
 }
 
 // input
@@ -77,21 +80,21 @@ inputbar {
 	padding: 14px 16px;
 	background-color: transparent;
   border: 0 0 1px 0;
-  border-color: @selection;
+  border-color: @bgl;
 }
  
 // icon
 prompt {
   margin: 0 16px 0 0;
 	background-color: transparent;
-	text-color: @foreground;
+	text-color: @fg;
 }
 
 // input
 entry {
 	placeholder: "";
 	background-color: transparent;
-	text-color: @foreground;
+	text-color: @fg;
 }
 
 // item
@@ -104,14 +107,14 @@ listview {
 element {
 	padding: 8px 16px;
 	background-color: transparent;
-	text-color: @foreground;
+	text-color: @fg;
 }
 
 // hover
 element selected.normal,
 element selected.active {
-	background-color: @selection;
-	text-color: @foreground;
+	background-color: @bgl;
+	text-color: @fg;
 }
 
 element-text {
@@ -121,4 +124,4 @@ element-text {
 
 // references:
 // https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
-// vim: ft=sass
+// vim:ft=scss
