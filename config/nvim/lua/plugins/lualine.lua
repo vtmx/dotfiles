@@ -3,27 +3,32 @@ local c = require('config.colors')
 local onedarkv = ({
   normal = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.fgd }, z = { fg = c.fgd },
+    b = { fg = c.fgd },
+    z = { fg = c.fgd },
   },
 
   insert = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.fgd }, z = { fg = c.fgd },
+    b = { fg = c.fgd },
+    z = { fg = c.fgd },
   },
 
   visual = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.fgd }, z = { fg = c.fgd },
+    b = { fg = c.fgd },
+    z = { fg = c.fgd },
   },
 
   replace = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.fgd }, z = { fg = c.fgd },
+    b = { fg = c.fgd },
+    z = { fg = c.fgd },
   },
 
   inactive = {
     a = { fg = c.fgd, bg = 'NONE' },
-    b = { fg = c.fgd }, z = { fg = c.fgd },
+    b = { fg = c.fgd },
+    z = { fg = c.fgd },
   },
 })
 
@@ -33,12 +38,12 @@ return {
   dependencies = 'kyazdani42/nvim-web-devicons',
   opts = {
     options = {
-      theme = onedarkv,
-      icons_enabled = true,
-      component_separators = {},
-      section_separators = {},
-      disabled_filetypes = {},
       always_divide_middle = true,
+      component_separators = {},
+      disabled_filetypes = {},
+      icons_enabled = true,
+      section_separators = {},
+      theme = onedarkv,
     },
     sections = {
       lualine_a = { 'mode' },

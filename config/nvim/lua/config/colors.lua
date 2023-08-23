@@ -1,10 +1,10 @@
 local colors = {
   bg  = '#23272e',
   bgd = '#1e2227',
+  bgl = '#2c313c', -- cursorline and sel
   fg  = '#abb2bf',
-  fgd = '#5c6370',
-  sel = '#3d4556', -- select
-  cul = '#2c313c', -- cursorline
+  fgd = '#5c6370', -- comment
+  sel = '#3d4556', -- selection
 
   red    = '#e06c75',
   orange = '#d19a66',
