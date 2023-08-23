@@ -1,10 +1,10 @@
-local c = {
-  bg          = '#23272e',
-  bg_dark     = '#1e2227',
-  fg          = '#abb2bf',
-  selection   = '#3d4556',
-  comment     = '#5c6370',
-  cursor_line = '#2c313c',
+local colors = {
+  bg  = '#23272e',
+  bgd = '#1e2227',
+  fg  = '#abb2bf',
+  fgd = '#5c6370',
+  sel = '#3d4556', -- select
+  cul = '#2c313c', -- cursorline
 
   red    = '#e06c75',
   orange = '#d19a66',
@@ -15,4 +15,4 @@ local c = {
   purple = '#c678dd',
 }
 
-return c
+return colors

@@ -3,27 +3,27 @@ local c = require('config.colors')
 local onedarkv = ({
   normal = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.comment }, z = { fg = c.comment },
+    b = { fg = c.fgd }, z = { fg = c.fgd },
   },
 
   insert = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.comment }, z = { fg = c.comment },
+    b = { fg = c.fgd }, z = { fg = c.fgd },
   },
 
   visual = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.comment }, z = { fg = c.comment },
+    b = { fg = c.fgd }, z = { fg = c.fgd },
   },
 
   replace = {
     a = { fg = c.fg, bg = 'NONE' },
-    b = { fg = c.comment }, z = { fg = c.comment },
+    b = { fg = c.fgd }, z = { fg = c.fgd },
   },
 
   inactive = {
-    a = { fg = c.comment, bg = 'NONE' },
-    b = { fg = c.comment }, z = { fg = c.comment },
+    a = { fg = c.fgd, bg = 'NONE' },
+    b = { fg = c.fgd }, z = { fg = c.fgd },
   },
 })
 

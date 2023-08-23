@@ -8,10 +8,10 @@ return {
       require('onedarkpro').setup {
         theme = 'onedark',
         colors = {
-          bg = c.bg_dark,
+          bg = c.bgd,
         },
         hlgroups = {
-          VertSplit = { bg = c.bg_dark, fg = c.comment }
+          VertSplit = { bg = c.bgd, fg = c.fgd }
         },
         options = {
           italic = false,
