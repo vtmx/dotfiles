@@ -41,6 +41,16 @@ body {
   border: none !important;
 }
 
+/* bookmarks toolbar */
+#personal-bookmarks {
+  background: var(--shade1) !important;
+}
+
+/* bookmarks toolbar remove space */
+:root[uidensity="compact"] #PersonalToolbar {
+  padding-inline: 0 !important;
+}
+
 /* colors of github dimmed */
 #nav-bar {
   background: var(--shade4) !important;
