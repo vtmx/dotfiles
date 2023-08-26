@@ -1,0 +1,41 @@
+[Desktop Entry]
+DefaultProfile=konsole.profile
+
+[General]
+ConfigVersion=1
+
+[KFileDialog Settings]
+Recent Files[$e]=konsole.shortcuts,file:$HOME/Dev/dotfiles/config/kde/konsole/konsole.shortcuts
+Recent URLs[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/,file:$HOME/Dev/dotfiles/config/kde/konsole/
+detailViewIconSize=16
+
+[MainWindow]
+1920x1080 screen: Height=1052
+1920x1080 screen: Width=1920
+1920x1080 screen: Window-Maximized=true
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=0
+HDMI-0=HDMI-0
+HDMI-0 Height 1920x1080=1052
+HDMI-0 Height 1920x1080 HDMI-0=1080
+HDMI-0 Width 1920x1080=1920
+HDMI-0 Width 1920x1080 HDMI-0=1920
+HDMI-0 Window-Maximized 1920x1080=true
+HDMI-0 Window-Maximized 1920x1080 HDMI-0=true
+HDMI-0 XPosition 1920x1080=0
+HDMI-0 XPosition 1920x1080 HDMI-0=0
+HDMI-0 YPosition 1920x1080=0
+HDMI-0 YPosition 1920x1080 HDMI-0=0
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAAUEBAAAJ+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABtwEAAAkAAAO4AAAEFAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+CloseAllEmptyTabs=true
+CloseAllTabs=true
+
+[Shortcut Schemes]
+Current Scheme=konsole
+
+[UiSettings]
+ColorScheme=
