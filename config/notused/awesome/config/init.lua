@@ -27,6 +27,7 @@ end
 -- Handle runtime errors after startup
 do
   local in_error = false
+
   awesome.connect_signal('debug::error', function(err)
     if in_error then return end
     in_error = true

@@ -1,25 +1,44 @@
+-- reference
+-- https://awesomewm.org/doc/api/documentation/06-appearance.md.html
+
 local dpi = require('beautiful.xresources').apply_dpi
 local gfs = require('gears.filesystem')
 local theme_assets = require('beautiful.theme_assets')
 local themes_path = gfs.get_themes_dir()
 
+local c = {
+  bg     = '#23272e',
+  bgd    = '#1e2227',
+  bgl    = '#2c313c',
+  fg     = '#abb2bf',
+  fgd    = '#5c6370',
+  red    = '#e06c75',
+  orange = '#d19a66',
+  yellow = '#e5c07b',
+  green  = '#98c379',
+  cyan   = '#56b6c2',
+  blue   = '#61afef',
+  purple = '#c678dd',
+}
+
 local theme = {}
 
 theme.font          = 'Segoe UI 12'
+theme.wallpaper     = nil
 
-theme.bg_normal     = "#1e2227"
+theme.bg_normal     = c.bgd
 theme.bg_focus      = '#535d6c'
 theme.bg_urgent     = '#ff0000'
 theme.bg_minimize   = '#444444'
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#abb2bf"
+theme.fg_normal     = c.fg
 theme.fg_focus      = "#abb2bf"
 theme.fg_urgent     = '#fffefe'
 theme.fg_minimize   = '#fffefe'
 
-theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
+theme.useless_gap   = 8
+theme.border_width  = 4
 theme.border_normal = "#abb2bf"
 theme.border_focus  = "#2c313c"
 theme.border_marked = "#61afef"
@@ -35,13 +54,18 @@ theme.border_marked = "#61afef"
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 -- Example:
---theme.taglist_bg_focus = '#ff0000'
+-- theme.taglist_bg_focus = '#ff0000'
+
+-- Enable gaps only more clients
+theme.gap_single_client = false
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
+local taglist_square_size = 4
+
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
   taglist_square_size, theme.fg_normal
 )
+
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
   taglist_square_size, theme.fg_normal
 )
@@ -56,8 +80,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path..'default/submenu.png'
-theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
+theme.menu_height = 15
+theme.menu_width  = 100
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -111,13 +135,13 @@ theme.layout_cornerne = themes_path..'default/layouts/cornernew.png'
 theme.layout_cornersw = themes_path..'default/layouts/cornersww.png'
 theme.layout_cornerse = themes_path..'default/layouts/cornersew.png'
 
--- Generate Awesome icon:
+-- Generate Awesome icon
 theme.awesome_icon = theme_assets.awesome_icon(
   theme.menu_height, theme.bg_focus, theme.fg_focus
 )
 
 -- Define the icon theme for application icons. If not set then the icons
--- from /usr/share/icons and /usr/share/icons/hicolor will be used.
+-- from /usr/share/icons and /usr/share/icons/hicolor will be used
 theme.icon_theme = nil
 
 return theme
