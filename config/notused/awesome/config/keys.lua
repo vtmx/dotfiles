@@ -21,79 +21,79 @@ globalkeys = gears.table.join(
   -- Tags
   awful.key(
     { super, ctrl }, 'h', awful.tag.viewprev,
-    { description = 'prev tag', group = 'tag'}
+    { description = 'prev tag', group = 'Tag'}
   ),
 
   awful.key(
     { super, ctrl }, 'l', awful.tag.viewnext,
-    { description = 'next tag', group = 'tag'}
+    { description = 'next tag', group = 'Tag'}
   ),
 
   awful.key(
     { super, ctrl }, left, awful.tag.viewprev,
-    { description = 'prev tag', group = 'tag'}
+    { description = 'prev tag', group = 'Tag'}
   ),
 
   awful.key(
     { super, ctrl }, right, awful.tag.viewnext,
-    { description = 'next tag', group = 'tag'}
+    { description = 'next tag', group = 'Tag'}
   ),
 
   awful.key(
     { super }, escape, awful.tag.history.restore,
-    { description = 'go back', group = 'tag'}
+    { description = 'go back', group = 'Tag'}
   ),
 
   -- Client
   awful.key(
     { super }, 'l', function() awful.client.focus.bydirection('right') end,
-    { description = 'focus next by index', group = 'client' }
+    { description = 'focus next by index', group = 'Client' }
   ),
 
   awful.key(
     { super }, 'h', function() awful.client.focus.bydirection('left') end,
-    { description = 'focus previous by index', group = 'client' }
+    { description = 'focus previous by index', group = 'Client' }
   ),
 
   awful.key(
     { super }, 'j', function() awful.client.focus.bydirection('down') end,
-    { description = 'focus next by index', group = 'client' }
+    { description = 'focus next by index', group = 'Client' }
   ),
 
   awful.key(
     { super }, 'k', function() awful.client.focus.bydirection('up') end,
-    { description = 'focus previous by index', group = 'client' }
+    { description = 'focus previous by index', group = 'Client' }
   ),
 
   awful.key(
     { super, shift }, 'j', function() awful.client.swap.byidx(1) end,
-    { description = 'swap with next client by index', group = 'client' }
+    { description = 'swap with next client by index', group = 'Client' }
   ),
 
   awful.key(
     { super, shift }, 'k', function() awful.client.swap.byidx(1) end,
-    { description = 'swap with previous client by index', group = 'client' }
+    { description = 'swap with previous client by index', group = 'Client' }
   ),
 
   -- Resize
   awful.key(
     { super, alt }, 'h', function() awful.tag.incmwfact(-0.02) end,
-    { description = 'decrease master width factor', group = 'client' }
+    { description = 'decrease master width factor', group = 'Client' }
   ),
 
   awful.key(
     { super, alt }, 'l', function() awful.tag.incmwfact(0.02) end,
-    { description = 'increase master width factor', group = 'client' }
+    { description = 'increase master width factor', group = 'Client' }
   ),
 
   awful.key(
     { super, alt }, left, function() awful.tag.incmwfact(-0.02) end,
-    { description = 'decrease master width factor', group = 'client' }
+    { description = 'decrease master width factor', group = 'Client' }
   ),
 
   awful.key(
     { super, alt }, right, function() awful.tag.incmwfact(0.02) end,
-    { description = 'increase master width factor', group = 'client' }
+    { description = 'increase master width factor', group = 'Client' }
   ),
 
   awful.key(
@@ -104,7 +104,7 @@ globalkeys = gears.table.join(
         client.focus:raise()
       end
     end,
-    { description = 'go back', group = 'client' }
+    { description = 'go back', group = 'Client' }
   ),
 
   -- Awesome
@@ -115,22 +115,22 @@ globalkeys = gears.table.join(
 
   awful.key(
     { super, shift }, 'r', awesome.restart,
-    { description = 'reload awesome', group = 'awesome' }
+    { description = 'reload awesome', group = 'Awesome' }
   ),
 
   awful.key(
     { super }, 'w', function() mymainmenu:show() end,
-    { description = 'show main menu', group = 'awesome' }
+    { description = 'show main menu', group = 'Awesome' }
   ),
 
   awful.key(
     { super }, 'r', function() awful.screen.focused().mypromptbox:run() end,
-    { description = 'run prompt', group = 'awesome' }
+    { description = 'run prompt', group = 'Awesome' }
   ),
 
   awful.key(
     { super, shift }, 'q', awesome.quit,
-    { description = 'quit awesome', group = 'awesome' }
+    { description = 'quit awesome', group = 'Awesome' }
   ),
 
   awful.key(
@@ -143,7 +143,7 @@ globalkeys = gears.table.join(
       history_path = awful.util.get_cache_dir() .. '/history_eval'
     }
   end,
-  { description = 'lua execute prompt', group = 'awesome' }),
+  { description = 'lua execute prompt', group = 'Awesome' }),
 
   -- Layout manipulation
   awful.key(
@@ -158,7 +158,7 @@ globalkeys = gears.table.join(
 
   -- awful.key(
   --   { super, }, 'u', awful.client.urgent.jumpto,
-  --   { description = 'jump to urgent client', group = 'client' }
+  --   { description = 'jump to urgent client', group = 'Client' }
   -- ),
 
   -- Apps
@@ -207,13 +207,13 @@ globalkeys = gears.table.join(
           c:emit_signal('request::activate', 'key.unminimize', {raise = true} )
         end
     end,
-    { description = 'restore minimized', group = 'client' }
+    { description = 'restore minimized', group = 'Client' }
   ),
 
   awful.key(
     { super }, 'p',
     function() menubar.show() end,
-    { description = 'show the menubar', group = 'awesome' })
+    { description = 'show the menubar', group = 'Awesome' })
   )
 
 clientkeys = gears.table.join(
@@ -222,32 +222,32 @@ clientkeys = gears.table.join(
       c.fullscreen = not c.fullscreen
       c:raise()
     end,
-    { description = 'toggle fullscreen', group = 'client' }
+    { description = 'toggle fullscreen', group = 'Client' }
   ),
 
   awful.key(
     { super, shift }, 'f', awful.client.floating.toggle,
-    { description = 'toggle floating', group = 'client' }
+    { description = 'toggle floating', group = 'Client' }
   ),
 
   awful.key(
     { super }, 'c', function(c) c:kill() end,
-    { description = 'close', group = 'client' }
+    { description = 'close', group = 'Client' }
   ),
 
   awful.key(
     { super, ctrl }, enter, function(c) c:swap(awful.client.getmaster()) end,
-    { description = 'move to master', group = 'client' }
+    { description = 'move to master', group = 'Client' }
   ),
 
   awful.key(
     { super }, 'o', function(c) c:move_to_screen() end,
-    { description = 'move to screen', group = 'client' }
+    { description = 'move to screen', group = 'Client' }
   ),
 
   awful.key(
     { super }, 't', function(c) c.ontop = not c.ontop end,
-    { description = 'toggle keep on top', group = 'client' }
+    { description = 'toggle keep on top', group = 'Client' }
   ),
 
   awful.key({ super }, 'n',
@@ -256,7 +256,7 @@ clientkeys = gears.table.join(
         -- minimized, since minimized clients can't have the focus.
         c.minimized = true
     end ,
-    { description = 'minimize', group = 'client' }
+    { description = 'minimize', group = 'Client' }
   ),
 
   awful.key(
@@ -265,7 +265,7 @@ clientkeys = gears.table.join(
       c.maximized = not c.maximized
       c:raise()
     end,
-    { description = '(un)maximize', group = 'client' }
+    { description = '(un)maximize', group = 'Client' }
   ),
 
   awful.key(
@@ -274,7 +274,7 @@ clientkeys = gears.table.join(
       c.maximized_vertical = not c.maximized_vertical
       c:raise()
     end ,
-    { description = '(un)maximize vertically', group = 'client' }
+    { description = '(un)maximize vertically', group = 'Client' }
   ),
    
   awful.key(
@@ -283,7 +283,7 @@ clientkeys = gears.table.join(
       c.maximized_horizontal = not c.maximized_horizontal
       c:raise()
     end,
-    { description = '(un)maximize horizontally', group = 'client' }
+    { description = '(un)maximize horizontally', group = 'Client' }
   )
 )
 
@@ -302,7 +302,7 @@ for i = 1, 9 do
            tag:view_only()
         end
       end,
-      { description = 'view tag #'..i, group = 'tag' }
+      { description = 'view tag #'..i, group = 'Tag' }
     ),
 
     -- Toggle tag display.
@@ -315,7 +315,7 @@ for i = 1, 9 do
            awful.tag.viewtoggle(tag)
         end
       end,
-      { description = 'toggle tag #' .. i, group = 'tag' }
+      { description = 'toggle tag #' .. i, group = 'Tag' }
     ),
 
     -- Move client to tag.
@@ -329,7 +329,7 @@ for i = 1, 9 do
           end
         end
       end,
-      { description = 'move focused client to tag #'..i, group = 'tag' }
+      { description = 'move focused client to tag #'..i, group = 'Tag' }
     ),
 
     -- Toggle tag on focused client.
@@ -343,7 +343,7 @@ for i = 1, 9 do
           end
         end
       end,
-      { description = 'toggle focused client on tag #' .. i, group = 'tag' }
+      { description = 'toggle focused client on tag #' .. i, group = 'Tag' }
     )
   )
 end
