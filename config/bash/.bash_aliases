@@ -188,7 +188,7 @@ alias vu="$HOME/.v/vl up"
 alias vw="$HOME/.v/vl watch"
 
 # config
-alias ac="$EDITOR $HOME/.bash_aliases.sh"
+alias ac="$EDITOR $HOME/.bash_aliases"
 alias br="$EDITOR $HOME/.bashrc"
 alias fc="$EDITOR $HOME/.config/fish/config.fish"
 alias hc="helix $HOME/.config/helix/config.toml"
@@ -198,5 +198,3 @@ alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
-
-# vim:ft=sh
