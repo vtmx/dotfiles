@@ -18,7 +18,7 @@ UseCustomCursorColor=false
 DefaultEncoding=UTF-8
 
 [General]
-Command=/usr/bin/fish
+Command=/usr/bin/bash
 DimWhenInactive=false
 Environment=TERM=xterm-256color,COLORTERM=truecolor
 Icon=utilities-terminal
@@ -26,7 +26,7 @@ LocalTabTitleFormat=%n
 Name=konsole
 Parent=FALLBACK/
 RemoteTabTitleFormat=(%u) %H
-ShowTerminalSizeHint=true
+ShowTerminalSizeHint=false
 SilenceSeconds=10
 StartInCurrentSessionDir=true
 TerminalCenter=false
@@ -58,9 +58,10 @@ WordCharacters=:@-./_~?&=%+#
 KeyBindings=default
 
 [Scrolling]
-HighlightScrolledLines=true
+HighlightScrolledLines=false
 HistoryMode=1
 HistorySize=1000
+ReflowLines=true
 ScrollBarPosition=2
 ScrollFullPage=false
 
