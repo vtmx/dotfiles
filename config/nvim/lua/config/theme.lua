@@ -65,11 +65,11 @@ local hl_groups = {
   WarningMsg     = { fg = c.yellow  },
 
   -- Alerts
-  Ignore         = { fg = c.fg     },
-  Error          = { fg = c.red    },
-  Todo           = { fg = c.purple },
+  Ignore         = { fg = c.fg      },
+  Error          = { fg = c.red     },
+  Todo           = { fg = c.purple  },
 
-  -- Line tilde blank ~
+  -- Line tilde blank
   EndOfBuffer    = { fg = c.bg },
 
   -- Line highlight
@@ -173,6 +173,9 @@ local hl_groups = {
   HopNextKey3              = { fg = c.purple },
   HopUnmatched             = { fg = c.fgd    },
 
+  -- lazy
+  LazyNormal               = { bg = c.bgd },
+
   -- nvim-tree
   NvimTreeCursorLine       = { bg = c.bgl },
   NvimTreeFolder           = { fg = c.fg  },
@@ -188,19 +191,19 @@ local hl_groups = {
   NvimTreeWindowPicker     = { fg = c.fg  },
 
   -- mini
-  MiniJump                 = { fg = c.red },
+  MiniJump                 = { fg = c.red  },
 
   -- telescope
-  TelescopeMultiSelection  = { fg = c.fg  },
-  TelescopeMultiIcon       = { fg = c.fg  },
-  TelescopeNormal          = { fg = c.fg  },
-  TelescopePreviewNormal   = { fg = c.fg  },
-  TelescopePromptNormal    = { fg = c.fg  },
-  TelescopeResultsNormal   = { fg = c.fg  },
-  TelescopePromptBorder    = { fg = c.fgd },
-  TelescopeResultsBorder   = { fg = c.fgd },
-  TelescopePreviewBorder   = { fg = c.fgd },
-  TelescopeSelection       = { bg = c.bgl },
+  TelescopeMultiSelection  = { fg = c.fg   },
+  TelescopeMultiIcon       = { fg = c.fg   },
+  TelescopeNormal          = { fg = c.fg   },
+  TelescopePreviewNormal   = { fg = c.fg   },
+  TelescopePromptNormal    = { fg = c.fg   },
+  TelescopeResultsNormal   = { fg = c.fg   },
+  TelescopePromptBorder    = { fg = c.fgd  },
+  TelescopeResultsBorder   = { fg = c.fgd  },
+  TelescopePreviewBorder   = { fg = c.fgd  },
+  TelescopeSelection       = { bg = c.bgl  },
   TelescopeSelectionCaret  = { fg = c.fg, bg = c.bgl },
   TelescopeTitle           = { fg = c.fg   },
   TelescopePromptTitle     = { fg = c.fg   },
