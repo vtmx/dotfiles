@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+shopt -s extglob
+
+args="--no-video --shuffle"
+music="$HOME/Music"
+brian="$music/jazz/brian-cullberston"
+jazz="$music/jazz"
+mj="$music/lentas/michael-jackson"
+retro="$music/retrowave"
+
+case $1 in
+  @(brian|bc)) mpv $args $brian ;;
+  @(mj|michael)) mpv $args $mj ;;
+  @(jaz?(z))) mpv $args $jazz ;;
+  @(retro?(wave))) mpv $args $retro ;;
+  *) mpv $args $1 ;;
+esac
