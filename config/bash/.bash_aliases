@@ -144,6 +144,9 @@ alias pacr="sudo pacman -R"
 alias pacry="sudo pacman --noconfirm  -R"
 alias pacu="sudo pacman -Syu"
 
+# ps
+alias pstree="pstree -npTC age"
+
 # remove
 alias rd="rm -rdf"
 alias rm="rm -i"
