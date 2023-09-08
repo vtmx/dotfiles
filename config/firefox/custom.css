@@ -15,18 +15,18 @@ body {
 }
 
 /* hidens element */
-#titlebar #alltabs-button,
-#titlebar #firefox-view-button,
-#titlebar .titlebar-spacer,
-#titlebar .titlebar-buttonbox-container,
+#import-button,
 #nav-bar #identity-box,
 #nav-bar #identity-permission-box,
 #nav-bar #tracking-protection-icon-container,
 #nav-bar-overflow-button,
-#urlbar .search-one-offs:not([hidden]),
-#import-button,
 #reader-mode-button,
+#titlebar #alltabs-button,
+#titlebar #firefox-view-button,
+#titlebar .titlebar-buttonbox-container,
+#titlebar .titlebar-spacer,
 #unified-extensions-button,
+#urlbar .search-one-offs:not([hidden]),
 #urlbar-zoom-button {
  display: none !important;
 }
