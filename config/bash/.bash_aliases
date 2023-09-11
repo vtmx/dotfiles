@@ -153,6 +153,10 @@ alias rm="rm -i"
 alias rmd="rm -rdf"
 alias rmy="rm -f"
 
+# live-server
+# https://www.npmjs.com/package/live-server
+alias serv="live-server"
+
 # source
 alias so="source"
 
