@@ -18,6 +18,7 @@ alias cddoc="cd $HOME/Documents"
 alias cddow="cd $HOME/Downloads"
 alias cdgame="cd $HOME/Games"
 alias cdf="cd $HOME/Dev/projects/fraseologia"
+alias cdh="cd $HOME"
 alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdmus="cd $HOME/Music"
 alias cdp="cd $HOME/Dev/projects"
@@ -118,7 +119,8 @@ alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 
 # man
-alias m="man"
+alias m="man -L pt_BR.UTF-8"
+alias man="man -L pt_BR.UTF-8"
 
 # make
 alias md="mkdir -p"

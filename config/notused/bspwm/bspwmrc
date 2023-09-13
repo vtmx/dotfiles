@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 # Autostart
+# pkill -USR1 sxhkd & sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
-pkill -USR1 sxhkd & sxhkd &
 feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/* &
 pkill -USR1 polybar & polybar bspwm &
 
