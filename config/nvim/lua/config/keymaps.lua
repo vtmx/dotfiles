@@ -264,7 +264,7 @@ M.map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
 M.map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
 
 -- zenmode
--- M.map('n', '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>')
+M.map('n', '<leader>z', '<cmd>ZenMode<cr> <cmd>set wrap<cr> <cmd>set linebreak<cr>')
 
 -- tmux
 M.map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
