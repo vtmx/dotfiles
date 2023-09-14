@@ -91,6 +91,7 @@
   "security.workspace.trust.untrustedFiles": "open",
 
   // ZenMode
+  "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": false,
 
@@ -457,6 +458,10 @@
     {
       "before": ["<leader>", "P"],
       "after": ["o", "<esc>", "\"", "+", "g", "p", "<esc>"]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
     },
     {
       "before": ["<leader>", "<esc>"],
