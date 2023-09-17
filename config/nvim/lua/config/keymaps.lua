@@ -251,9 +251,10 @@ else
 end
 
 -- telescope
-M.map('n', '<c-p>',      '<cmd>Telescope git_files<cr>')
+M.map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
 M.map('n', '<leader>f',  '<cmd>Telescope file_browser<cr>')
-M.map('n', '<leader>F',  '<cmd>Telescope file_files<cr>')
+M.map('n', '<leader>F',  '<cmd>Telescope find_files<cr>')
+M.map('n', '<leader>E',  '<cmd>Telescope git_files<cr>')
 M.map('n', '<leader>b',  '<cmd>Telescope buffers<cr>')
 M.map('n', '<leader>tc', '<cmd>Telescope commands<cr>')
 M.map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
