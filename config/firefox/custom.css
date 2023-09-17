@@ -51,6 +51,12 @@ body {
   padding-inline: 0 !important;
 }
 
+/* bookmark height */
+#editBMPanel_folderTree,
+#editBMPanel_tagsSelector {
+  height: 65vh !important;
+}
+
 /* colors of github dimmed */
 #nav-bar {
   background: var(--shade4) !important;
