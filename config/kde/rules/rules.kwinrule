@@ -3,37 +3,37 @@ Description=1
 desktops=9bcf2a9f-926f-4d9a-a46b-8086d4a9c6fc
 desktopsrule=3
 fsplevelrule=2
-wmclass=brave|chromium|firefox|opera|vivaldi
+wmclass=firefox
 wmclassmatch=3
 
 [2]
 Description=2
-desktops=eb365eeb-1c0a-4f88-800a-f5f6d0d3eeb5
+desktops=eeb68f6c-4533-486e-a22e-9a6e76c7a72f
 desktopsrule=3
 fsplevelrule=2
-wmclass=code
+wmclass=kitty
 wmclassmatch=3
 
 [3]
 Description=3
-desktops=95683234-a196-4fd2-9528-1c224c4c202b
+desktops=997e2c3d-796c-4301-bca2-1c1232eed9ca
 desktopsrule=3
-fsplevelrule=2
-wmclass=dolphin|nemo|thunar
+fsplevelrule=1
+wmclass=inkscape|dolphin
 wmclassmatch=3
 
 [4]
 Description=4
-desktops=d14d5d6d-ddf3-4553-b9f4-541133e08e3e
+desktops=ccd79e8f-e4e7-4dcb-a145-0b17f3668e8b
 desktopsrule=3
-fsplevelrule=2
+fsplevelrule=1
 wmclass=steam|lutris
 wmclassmatch=3
 
 [5]
 Description=5
-desktops=652b2576-0482-4db3-9521-810e83c5117c
+desktops=bc45c18f-0957-4f46-9c4c-4778f083b4f5
 desktopsrule=3
-fsplevelrule=2
+fsplevelrule=1
 wmclass=qbittorrent
 wmclassmatch=3

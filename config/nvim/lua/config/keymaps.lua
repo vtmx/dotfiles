@@ -76,6 +76,10 @@ M.map('n', '%', 'G<s-v>gg')
 -- Redo
 M.map('n', 'U', '<c-r>')
 
+-- Easy register
+M.map('n', "'", '"')
+M.map('v', "'", '"')
+
 -- Copy to clipboard
 M.map('n', '<leader>y', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
 M.map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')

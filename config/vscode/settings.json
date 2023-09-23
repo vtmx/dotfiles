@@ -252,6 +252,10 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["'"],
+      "after": ["\""]
+    },
+    {
       "before": [">"],
       "after": [">", ">"]
     },
@@ -484,6 +488,10 @@
     {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
+    },
+    {
+      "before": ["'"],
+      "after": ["\""]
     },
     {
       "before": ["ç"],
