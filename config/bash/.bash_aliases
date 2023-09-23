@@ -146,6 +146,10 @@ alias pacr="sudo pacman -R"
 alias pacry="sudo pacman --noconfirm  -R"
 alias pacu="sudo pacman -Syu"
 
+# play
+alias play="mpv --no-video *"
+alias playall="find . -name *.mp3 | xargs mpv --no-video"
+
 # ps
 alias pstree="pstree -npTC age"
 
