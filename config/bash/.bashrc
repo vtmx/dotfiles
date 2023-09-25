@@ -63,7 +63,7 @@ fi
 
 # starship
 if type -P starship > /dev/null; then
-  export STARSHIP_CONFIG="$HOME/.config/shell/starship.toml"
+  export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
   eval "$(starship init bash)"
 else
   if [[ -n "$DISPLAY" ]]; then

@@ -69,33 +69,21 @@ create_link() {
 }
 
 create_links() {
-  # shell
-  name="shell"
-  target="$src_dir/shell"
-  link="$config_dir/shell"
-  create_link "$name" "$target" "$link"
-
   # bash
   name="bash"
-  target="$HOME/.bashrc"
-  link="$config_dir/bash"
+  target="$src_dir/bash/.bashrc"
+  link="$HOME"
+  create_link "$name" "$target" "$link"
+
+  name="bash aliases"
+  target="$src_dir/bash/.bash_aliases"
+  link="$HOME"
   create_link "$name" "$target" "$link"
 
   # bat
   name="bat"
   target="$src_dir/bat/config"
   link="$config_dir/bat"
-  create_link "$name" "$target" "$link"
-
-  # btop
-  name="btop"
-  target="$src_dir/btop/btop.conf"
-  link="$config_dir/btop"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/btop/btop.conf"
-  link="$config_dir/btop/themes"
   create_link "$name" "$target" "$link"
 
   # cmus
@@ -198,16 +186,10 @@ create_links() {
   link="$config_dir/polybar"
   create_link "$name" "$target" "$link"
 
-  # ranger
-  name="ranger"
-  target="$src_dir/ranger/rc.conf"
-  link="$config_dir/ranger"
-  create_link "$name" "$target" "$link"
-
-  # shell
-  name="shell"
-  target="$src_dir/shell/aliases.sh"
-  link="$config_dir/shell"
+  # starship
+  name="starship"
+  target="$src_dir/starship/starship.toml"
+  link="$config_dir"
   create_link "$name" "$target" "$link"
 
   # rofi
