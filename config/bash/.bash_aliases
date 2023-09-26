@@ -25,6 +25,7 @@ alias cdp="cd $HOME/Dev/projects"
 alias cdpic="cd $HOME/Pictures"
 alias cdpkg="cd $HOME/packages"
 alias cds="cd $HOME/Dev/shortcuts"
+alias cdsc="cd $HOME/Dev/doffiles/sripts"
 alias cdsof="cd $HOME/Softwares"
 alias cdt="cd $HOME/Downloads/temp"
 alias cdv="cd $HOME/Dev/projects/vitormelo"
@@ -156,7 +157,7 @@ alias pstree="pstree -npTC age"
 # remove
 alias rd="rm -rdf"
 alias rm="rm -i"
-alias rmd="rm -rdf"
+alias rmdy="rm -rf"
 alias rmy="rm -f"
 
 # live-server
