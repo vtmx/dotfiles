@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Declara nome do arquivo
+filename=$(date +'%Y-%m-%d').md
+
+# Verifica título
+if [[ -n $1 ]]; then
+  title=$1
+else
+  title="Título"
+fi
+
+# Cria arquivo com padrão
+echo -e "# ${title^}\n$(date +'%d-%m-%Y')\n\n" > $filename
+
+# Abre arquivo no editor
+$EDITOR +4 $filename

@@ -3,7 +3,7 @@ return {
   event = 'VeryLazy',
   opts = {
     window = {
-      width = 80,
+      width = 50,
       options = {
         cursorline = false,
         number = false,

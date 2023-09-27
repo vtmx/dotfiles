@@ -13,15 +13,11 @@ argv="$1"
 # Create script
 echo "#!/usr/bin/env bash
 
-set -o errexit
-set -o pipefail
-set -o nounset
-
 " > "$argv"
 
 # Make script executable
 chmod +x "$argv"
 
 # Open script
-$EDITOR "$argv"
+$EDITOR +3 "$argv"
 
