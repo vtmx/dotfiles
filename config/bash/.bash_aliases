@@ -148,17 +148,17 @@ alias pacry="sudo pacman --noconfirm  -R"
 alias pacu="sudo pacman -Syu"
 
 # play
-alias play="mpv --no-video *"
-alias playall="find . -name *.mp3 | xargs mpv --no-video"
+alias play="find . -name *.mp3 | xargs mpv --no-video --volume=70"
 
 # ps
 alias pstree="pstree -npTC age"
 
 # remove
-alias rd="rm -rdf"
+alias rd="rm -rf"
 alias rm="rm -i"
-alias rmdy="rm -rf"
 alias rmy="rm -f"
+alias rmd="rm -r"
+alias rmdy="rm -rf"
 
 # live-server
 # https://www.npmjs.com/package/live-server
