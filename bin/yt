@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 
-if [[ -n "$2" ]]; then
-  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$2" "$1"
+url="$1"
+
+# Make url $1 and all words $2
+shift
+filename="$*"
+
+# Replace spaces with dashes
+filename="${filename// /-}"
+
+# Convert to lowercase
+filename="${filename,,}"
+
+if [[ -n "$filename" ]]; then
+  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
 else
-  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$1"
+  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$url"
 fi
