@@ -1,19 +1,31 @@
 #!/usr/bin/env bash
 
-url="$1"
+main() {
+  url="$1"
 
-# Make url $1 and all words $2
-shift
-filename="$*"
+  # Make url $1 and all words $2
+  shift
+  filename="$*"
 
-# Replace spaces with dashes
-filename="${filename// /-}"
+  if [[ -n "$2" ]]; then
+    filename=$(transform_filename $filename)
+    yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
+  else
+    # Get title of video
+    filename=$(yt-dlp --print filename -o "%(title)s" "$url")
+    filename=$(transform_filename $filename)
+    yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
+  fi
+}
 
-# Convert to lowercase
-filename="${filename,,}"
+transform_filename() {
+  # Replace spaces with dashes
+  filename="${filename// /-}"
 
-if [[ -n "$filename" ]]; then
-  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
-else
-  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "%(title)s.%(ext)s" "$url"
-fi
+  # Convert to lowercase
+  filename="${filename,,}"
+
+  echo $filename
+}
+
+main "$@"
