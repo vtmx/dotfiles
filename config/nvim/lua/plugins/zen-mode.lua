@@ -12,10 +12,7 @@ return {
     },
     plugins = {
       twilight = { enabled = true },
-      kitty = {
-        enabled = true,
-        font = "+4"
-      }
+      kitty = { enabled = true, font = "+4" }
     }
   }
 }
