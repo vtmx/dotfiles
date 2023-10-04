@@ -7,7 +7,7 @@ main() {
   shift
   filename="$*"
 
-  if [[ -n "$2" ]]; then
+  if [[ -n "$filename" ]]; then
     filename=$(transform_filename $filename)
     yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
   else
