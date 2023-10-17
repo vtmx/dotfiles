@@ -145,6 +145,7 @@ alias paclq="pacman -Qqe"
 alias paclo="pacman -Qdt" # list orphans
 alias pacr="sudo pacman -R"
 alias pacry="sudo pacman --noconfirm  -R"
+alias pacs="sudo pacman -Ss"
 alias pacu="sudo pacman -Syu"
 
 # play
