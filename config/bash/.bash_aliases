@@ -51,6 +51,7 @@ alias cm="cmus"
 
 # copy
 alias cp="cp -i"
+alias cpr="cp -r"
 alias cpv="rsync -ah --info=progress2"
 
 # diff
