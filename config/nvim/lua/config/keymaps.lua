@@ -250,6 +250,7 @@ M.map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
 -- nvim-tree
 if vim.fn.exists(":NvimTreeToggle") ~= 0 then
   M.map('n', '<leader>e', '<cmd>Lex<cr>')
+  -- M.map('n', '<leader>e', '<cmd>!Lex<cr>') Right
 else
   M.map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 end
