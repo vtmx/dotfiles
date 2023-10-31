@@ -9,7 +9,7 @@ set color_win_title_bg=default
 set color_win_title_fg=default
 
 # Border sidebar
-set color_separator=darkgray
+set color_separator=gray
 
 # Directory of browser
 set color_win_dir=blue
