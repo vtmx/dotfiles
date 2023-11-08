@@ -1,5 +1,6 @@
 return {
   'nvim-tree/nvim-tree.lua',
+  enable = false,
   cmd = 'NvimTreeToggle',
   opts = {
     disable_netrw = false,

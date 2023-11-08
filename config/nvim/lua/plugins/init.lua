@@ -1,29 +1,28 @@
 return {
+  -- example: ga=
   {
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead'
   },
-  -- example: ga=
+  {
+    'phaazon/hop.nvim',
+    cmd = 'HopChar1',
+    config = true
+  },
   {
     'echasnovski/mini.align',
     event = 'BufRead',
-    config = function()
-      require('mini.align').setup()
-    end
+    config = function() require('mini.align').setup() end
   },
   {
     'echasnovski/mini.comment',
     event = 'BufRead',
-    config = function()
-      require('mini.comment').setup()
-    end
+    config = function() require('mini.comment').setup() end
   },
   {
     'echasnovski/mini.jump',
     event = 'VeryLazy',
-    config = function()
-      require('mini.jump').setup()
-    end
+    config = function() require('mini.jump').setup() end
   },
   {
     'neovim/nvim-lspconfig',
