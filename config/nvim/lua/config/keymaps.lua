@@ -248,12 +248,13 @@ M.map('n', '<leader>Q', '<cmd>qa!<cr>')
 M.map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
 
 -- nvim-tree
-if vim.fn.exists(":NvimTreeToggle") ~= 0 then
-  M.map('n', '<leader>e', '<cmd>Lex<cr>')
-  -- M.map('n', '<leader>e', '<cmd>!Lex<cr>') Right
-else
-  M.map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
-end
+M.map('n', '<leader>e', '<cmd>Lex<cr>')
+-- if vim.fn.exists(":NvimTreeToggle") ~= 0 then
+--   M.map('n', '<leader>e', '<cmd>Lex<cr>')
+--   -- M.map('n', '<leader>e', '<cmd>!Lex<cr>') Right
+-- else
+--   M.map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+-- end
 
 -- telescope
 M.map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')

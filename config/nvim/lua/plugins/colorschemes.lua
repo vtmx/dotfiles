@@ -7,15 +7,9 @@ return {
     config = function()
       require('onedarkpro').setup {
         theme = 'onedark',
-        colors = {
-          bg = c.bgd,
-        },
-        hlgroups = {
-          VertSplit = { bg = c.bgd, fg = c.fgd }
-        },
-        options = {
-          italic = false,
-        }
+        colors = { bg = c.bgd },
+        hlgroups = { VertSplit = { bg = c.bgd, fg = c.fgd } },
+        options = { italic = false }
       }
     end
   },
