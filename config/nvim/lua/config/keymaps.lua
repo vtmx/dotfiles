@@ -1,8 +1,5 @@
--- Use to local options
-local M = {}
-
 -- Function for mapping
-function M.map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts)
   local opts = opts or { silent = true }
   vim.keymap.set(mode, lhs, rhs, opts)
 end
@@ -12,154 +9,154 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Reload file
-M.map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
+map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
 
 -- Scape
-M.map('i', 'kj', '<esc>')
+map('i', 'kj', '<esc>')
 
 -- Return to normal mode
-M.map('v', 'ç', '<esc>')
-M.map('v', '<leader>kj', '<esc>')
+map('v', 'ç', '<esc>')
+map('v', '<leader>kj', '<esc>')
 
 -- Navigate in insertmode
-M.map('i', '<c-h>', '<left>')
-M.map('i', '<c-l>', '<right>')
+map('i', '<c-h>', '<left>')
+map('i', '<c-l>', '<right>')
 
 -- Ignore wordwrap jumpline
-M.map('n', 'j', 'gj')
-M.map('n', 'k', 'gk')
+map('n', 'j', 'gj')
+map('n', 'k', 'gk')
 
 -- Like C and D
-M.map('n', 'Y', 'y$')
+map('n', 'Y', 'y$')
 
 -- Begin and end line
-M.map({'n', 'v'}, 'L', 'g_')
-M.map({'n', 'v'}, 'H', '^')
+map({'n', 'v'}, 'L', 'g_')
+map({'n', 'v'}, 'H', '^')
 
 -- Jump various lines
-M.map({'n', 'v'}, 'J', '5j')
-M.map({'n', 'v'}, 'K', '5k')
+map({'n', 'v'}, 'J', '5j')
+map({'n', 'v'}, 'K', '5k')
 
 -- Jump half page in the middle
-M.map('n', '<c-d>', '<c-d>zz')
-M.map('n', '<c-u>', '<c-u>zz')
+map('n', '<c-d>', '<c-d>zz')
+map('n', '<c-u>', '<c-u>zz')
 
 -- Change text without putting it into the vim register
-M.map({'n', 'x'}, 'c', '"_c')
-M.map('n', 'C', '"_C')
-M.map('n', 'cc', '"_cc')
-M.map('n', 'c,', 'ct,')
-M.map('n', 'c.', 'ct.')
-M.map('n', 'c:', 'ct:')
-M.map('n', 'c;', 'ct;')
-M.map('n', 'c)', 'ct)')
-M.map('n', 'c]', 'ct]')
-M.map('n', 'c}', 'ct}')
-M.map('n', 'c>', 'ct>')
-M.map('n', 'c\'', 'ct\'')
-M.map('n', 'c"', 'ct"')
+map({'n', 'x'}, 'c', '"_c')
+map('n', 'C', '"_C')
+map('n', 'cc', '"_cc')
+map('n', 'c,', 'ct,')
+map('n', 'c.', 'ct.')
+map('n', 'c:', 'ct:')
+map('n', 'c;', 'ct;')
+map('n', 'c)', 'ct)')
+map('n', 'c]', 'ct]')
+map('n', 'c}', 'ct}')
+map('n', 'c>', 'ct>')
+map('n', 'c\'', 'ct\'')
+map('n', 'c"', 'ct"')
 
 -- Add new line in normal mode
-M.map('n', '<leader>o', 'm`o<esc>``')
-M.map('n', '<leader>O', 'm`O<esc>``')
-M.map('n', '<a-o>', 'm`o<esc>``')
-M.map('n', '<a-O>', 'm`O<esc>``')
+map('n', '<leader>o', 'm`o<esc>``')
+map('n', '<leader>O', 'm`O<esc>``')
+map('n', '<a-o>', 'm`o<esc>``')
+map('n', '<a-O>', 'm`O<esc>``')
 
 -- Plus number
-M.map('n', '=', '<c-a>')
-M.map('n', '-', '<c-x>')
+map('n', '=', '<c-a>')
+map('n', '-', '<c-x>')
 
 -- Select all
-M.map('n', '<leader>a', 'G<s-v>gg')
-M.map('n', '%', 'G<s-v>gg')
+map('n', '<leader>a', 'G<s-v>gg')
+map('n', '%', 'G<s-v>gg')
 
 -- Redo
-M.map('n', 'U', '<c-r>')
+map('n', 'U', '<c-r>')
 
 -- Easy register
-M.map('n', "'", '"')
-M.map('v', "'", '"')
+map('n', "'", '"')
+map('v', "'", '"')
 
 -- Copy to clipboard
-M.map('n', '<leader>y', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
-M.map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')
-M.map('n', '<a-y>', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
-M.map('v', '<a-y>', '"+y<cmd>echo "Copy to clipboard"<cr>')
+map('n', '<leader>y', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
+map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')
+map('n', '<a-y>', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
+map('v', '<a-y>', '"+y<cmd>echo "Copy to clipboard"<cr>')
 
 -- Cut to clipboard
-M.map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
-M.map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
+map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
+map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
 
 -- Paste to clipboard
-M.map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
-M.map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
-M.map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
-M.map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
-M.map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
-M.map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
+map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
+map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 
 -- Replace yank
-M.map('n', 'R', '"0p')
+map('n', 'R', '"0p')
 
 -- Paste with no resgister fail if select mode
--- M.map('x', '<leader>p', '"_dP')
+-- map('x', '<leader>p', '"_dP')
 
 -- Join lines
-M.map('n', '<leader>j', 'J')
+map('n', '<leader>j', 'J')
 
 -- Delete not copy
-M.map('n', 'x', '"_x')
-M.map('n', '<del>', '"_x')
+map('n', 'x', '"_x')
+map('n', '<del>', '"_x')
 
 -- Move lines
-M.map('n', '<a-j>', '<cmd>m .+1<cr>')
-M.map('n', '<a-k>', '<cmd>m .-2<cr>')
-M.map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
-M.map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
-M.map('v', '<a-j>', ":m '>+1<cr>gv=gv")
-M.map('v', '<a-k>', ":m '<-2<cr>gv=gv")
+map('n', '<a-j>', '<cmd>m .+1<cr>')
+map('n', '<a-k>', '<cmd>m .-2<cr>')
+map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
+map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
+map('v', '<a-j>', ":m '>+1<cr>gv=gv")
+map('v', '<a-k>', ":m '<-2<cr>gv=gv")
 
 -- Clone lines
-M.map('n', '<s-a-j>', 'yyp')
-M.map('n', '<s-a-k>', 'yyP')
-M.map('i', '<s-a-j>', '<esc>yypi')
-M.map('i', '<s-a-k>', '<esc>yyPi')
-M.map('v', '<s-a-j>', ":'<,'>copy '><cr>")
-M.map('v', '<s-a-k>', 'ygvO<esc>P')
+map('n', '<s-a-j>', 'yyp')
+map('n', '<s-a-k>', 'yyP')
+map('i', '<s-a-j>', '<esc>yypi')
+map('i', '<s-a-k>', '<esc>yyPi')
+map('v', '<s-a-j>', ":'<,'>copy '><cr>")
+map('v', '<s-a-k>', 'ygvO<esc>P')
 
 -- Keep cursor end select when visual copy
-M.map('v', 'y', 'ygv<esc>')
+map('v', 'y', 'ygv<esc>')
 
 -- Remove highlight
-M.map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
-M.map('n', '<leader>ç', '<cmd>noh<cr>')
+map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
+map('n', '<leader>ç', '<cmd>noh<cr>')
 
 -- Replace word
-M.map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
+map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
 
 -- Keep search results centred
-M.map('n', 'n', 'nzzzv')
-M.map('n', 'N', 'Nzzzv')
+map('n', 'n', 'nzzzv')
+map('n', 'N', 'Nzzzv')
 
 -- M to mark m to jump
-M.map('n', 'm', '`')
-M.map('n', 'M', 'm')
+map('n', 'm', '`')
+map('n', 'M', 'm')
 
 -- Split
-M.map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
-M.map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
+map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
+map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
 
 -- Stop copy in last char
-M.map('v', 'y', 'ygv<esc>')
+map('v', 'y', 'ygv<esc>')
 
 -- Indent
-M.map('n', '>', '>>')
-M.map('n', '<', '<<')
-M.map('v', '>', '>gv')
-M.map('v', '<', '<gv')
+map('n', '>', '>>')
+map('n', '<', '<<')
+map('v', '>', '>gv')
+map('v', '<', '<gv')
 
 -- Toggle number
-M.map('n', '<leader>un', '', {
+map('n', '<leader>un', '', {
   noremap = true,
   callback = function()
     if vim.o.number then
@@ -176,7 +173,7 @@ M.map('n', '<leader>un', '', {
 })
 
 -- Toggle cmd height
-M.map('n', '<leader>uc', '', {
+map('n', '<leader>uc', '', {
   noremap = true,
   callback = function()
     if vim.o.cmdheight == 1 then
@@ -191,53 +188,52 @@ M.map('n', '<leader>uc', '', {
 })
 
 -- Next and prev auto-complete
-M.map('n', '<c-k>', '<cmd>cnext<cr>zz')
-M.map('n', '<c-j>', '<cmd>cprev<cr>zz')
+map('n', '<c-k>', '<cmd>cnext<cr>zz')
+map('n', '<c-j>', '<cmd>cprev<cr>zz')
 
 -- Navigation panels
-M.map('n', '<c-h>', '<c-w>h')
-M.map('n', '<c-j>', '<c-w>j')
-M.map('n', '<c-k>', '<c-w>k')
-M.map('n', '<c-l>', '<c-w>l')
+map('n', '<c-h>', '<c-w>h')
+map('n', '<c-j>', '<c-w>j')
+map('n', '<c-k>', '<c-w>k')
+map('n', '<c-l>', '<c-w>l')
 
 -- Move panels
-M.map('n', '<c-w>h', '<c-w>H')
-M.map('n', '<c-w>j', '<c-w>J')
-M.map('n', '<c-w>k', '<c-w>K')
-M.map('n', '<c-w>l', '<c-w>L')
+map('n', '<c-w>h', '<c-w>H')
+map('n', '<c-w>j', '<c-w>J')
+map('n', '<c-w>k', '<c-w>K')
+map('n', '<c-w>l', '<c-w>L')
 
 -- Resize
-M.map('n', '<up>', '<cmd>resize +2<cr>')
-M.map('n', '<down>', '<cmd>resize -2<cr>')
-M.map('n', '<left>', '<cmd>vertical resize +2<cr>')
-M.map('n', '<right>', '<cmd>vertical resize -2<cr>')
+map('n', '<up>', '<cmd>resize +2<cr>')
+map('n', '<down>', '<cmd>resize -2<cr>')
+map('n', '<left>', '<cmd>vertical resize +2<cr>')
+map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Buffer
-M.map('n', '<leader>n', '<cmd>ene<cr>')
-M.map('n', '<leader>c', '<cmd>bd<cr>')
-M.map('n', '<leader>w', '<cmd>bd<cr>')
-M.map('n', '<leader>l', '<cmd>bn<cr>')
-M.map('n', '<leader>h', '<cmd>bp<cr>')
-M.map('n', '<a-l>', '<cmd>bn<cr>')
-M.map('n', '<a-h>', '<cmd>bp<cr>')
+map('n', '<leader>n', '<cmd>ene<cr>')
+map('n', '<leader>bd', '<cmd>bd<cr>')
+map('n', '<leader>l', '<cmd>bn<cr>')
+map('n', '<leader>h', '<cmd>bp<cr>')
+map('n', '<alt-l>', '<cmd>bn<cr>')
+map('n', '<alt-h>', '<cmd>bp<cr>')
 
 -- Menu
-M.map('i', '<c-space>', '<c-n>')
-M.map({'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
-M.map({'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
-M.map({'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
+map('i', '<c-space>', '<c-n>')
+map({'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
+map({'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
+map({'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 
 -- Make exec
-M.map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
+map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
 
 -- Save
-M.map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
+map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 
 -- Quit
-M.map('n', '<leader>q', '<cmd>q<cr>')
+map('n', '<leader>q', '<cmd>q<cr>')
 
 -- Quit all
-M.map('n', '<leader>Q', '<cmd>qa!<cr>')
+map('n', '<leader>Q', '<cmd>qa!<cr>')
 
 
 ------------------------------------------------------------
@@ -245,39 +241,39 @@ M.map('n', '<leader>Q', '<cmd>qa!<cr>')
 ------------------------------------------------------------
 
 -- hop
-M.map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
+map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
 
 -- nvim-tree
-M.map('n', '<leader>e', '<cmd>Lex<cr>')
+map('n', '<leader>e', '<cmd>Lex<cr>')
 -- if vim.fn.exists(":NvimTreeToggle") ~= 0 then
---   M.map('n', '<leader>e', '<cmd>Lex<cr>')
---   -- M.map('n', '<leader>e', '<cmd>!Lex<cr>') Right
+--   map('n', '<leader>e', '<cmd>Lex<cr>')
+--   -- map('n', '<leader>e', '<cmd>!Lex<cr>') Right
 -- else
---   M.map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+--   map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- end
 
 -- telescope
-M.map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
-M.map('n', '<leader>f',  '<cmd>Telescope file_browser<cr>')
-M.map('n', '<leader>F',  '<cmd>Telescope find_files<cr>')
-M.map('n', '<leader>E',  '<cmd>Telescope git_files<cr>')
-M.map('n', '<leader>b',  '<cmd>Telescope buffers<cr>')
-M.map('n', '<leader>tc', '<cmd>Telescope commands<cr>')
-M.map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
-M.map('n', '<leader>m',  '<cmd>Telescope marks<cr>')
-M.map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
-M.map('n', '<leader>tt', '<cmd>Telescope filetypes<cr>')
-M.map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
-M.map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
+map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
+map('n', '<leader>f',  '<cmd>Telescope file_browser<cr>')
+map('n', '<leader>F',  '<cmd>Telescope find_files<cr>')
+map('n', '<leader>E',  '<cmd>Telescope git_files<cr>')
+map('n', '<leader>b',  '<cmd>Telescope buffers<cr>')
+map('n', '<leader>tc', '<cmd>Telescope commands<cr>')
+map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
+map('n', '<leader>m',  '<cmd>Telescope marks<cr>')
+map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
+map('n', '<leader>tt', '<cmd>Telescope filetypes<cr>')
+map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
+map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
 
 -- zenmode
-M.map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
+map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
 
 -- tmux
-M.map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
-M.map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
-M.map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
-M.map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
+map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
+map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
+map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
+map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- Future mappings
 local map_table = {
@@ -300,7 +296,7 @@ for mode, maps in pairs(map_table) do
         keymap_opts[1] = nil
       end
       -- extend the keybinding options with the base provided and set the mapping
-      M.map(mode, keymap, cmd, keymap_opts)
+      map(mode, keymap, cmd, keymap_opts)
     end
   end
 end
@@ -308,7 +304,7 @@ end
 return M
 
 -- References
--- examples two mode: M.map({'n', 'x'}, 'cp', '"+y')
+-- examples two mode: map({'n', 'x'}, 'cp', '"+y')
 -- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
 -- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua

@@ -54,7 +54,7 @@ body {
 /* bookmark height */
 #editBMPanel_folderTree,
 #editBMPanel_tagsSelector {
-  height: 65vh !important;
+  height: 55vh !important;
 }
 
 /* colors of github dimmed */
