@@ -77,29 +77,26 @@ map('n', 'U', '<c-r>')
 map('n', "'", '"')
 map('v', "'", '"')
 
--- Copy to clipboard
+-- Yankie to clipboard
 map('n', '<leader>y', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
 map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')
-map('n', '<a-y>', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
-map('v', '<a-y>', '"+y<cmd>echo "Copy to clipboard"<cr>')
 
--- Cut to clipboard
+-- Delete to clipboard
 map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
 map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
+
+-- Change to clipboard
+map('n', '<leader>c', '^vg_"+xi<cmd>echo "Cut line to clipboard"<cr>')
+map('v', '<leader>c', '"+xi<cmd>echo "Cut to clipboard"<cr>')
 
 -- Paste to clipboard
 map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
-map('n', '<a-p>', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
-map('n', '<a-P>', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
 map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 
 -- Replace yank
 map('n', 'R', '"0p')
-
--- Paste with no resgister fail if select mode
--- map('x', '<leader>p', '"_dP')
 
 -- Join lines
 map('n', '<leader>j', 'J')
@@ -187,10 +184,6 @@ map('n', '<leader>uc', '', {
   end
 })
 
--- Next and prev auto-complete
-map('n', '<c-k>', '<cmd>cnext<cr>zz')
-map('n', '<c-j>', '<cmd>cprev<cr>zz')
-
 -- Navigation panels
 map('n', '<c-h>', '<c-w>h')
 map('n', '<c-j>', '<c-w>j')
@@ -214,8 +207,12 @@ map('n', '<leader>n', '<cmd>ene<cr>')
 map('n', '<leader>bd', '<cmd>bd<cr>')
 map('n', '<leader>l', '<cmd>bn<cr>')
 map('n', '<leader>h', '<cmd>bp<cr>')
-map('n', '<alt-l>', '<cmd>bn<cr>')
-map('n', '<alt-h>', '<cmd>bp<cr>')
+map('n', '<a-l>', '<cmd>bn<cr>')
+map('n', '<a-h>', '<cmd>bp<cr>')
+
+-- Next and prev auto-complete
+map('n', '<c-k>', '<cmd>cnext<cr>zz')
+map('n', '<c-j>', '<cmd>cprev<cr>zz')
 
 -- Menu
 map('i', '<c-space>', '<c-n>')
