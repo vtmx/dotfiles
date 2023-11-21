@@ -1,7 +1,9 @@
 return {
   {
-    'lukas-reineke/indent-blankline.nvim',
-    event = 'BufRead'
+    "lukas-reineke/indent-blankline.nvim",
+    main = 'ibl',
+    event = 'BufReadPre',
+    config = true
   },
   {
     'phaazon/hop.nvim',
@@ -10,18 +12,18 @@ return {
   },
   {
     'echasnovski/mini.align',
-    event = 'BufRead',
-    config = function() require('mini.align').setup() end
+    event = 'BufReadPre',
+    config = true
   },
   {
     'echasnovski/mini.comment',
-    event = 'BufRead',
-    config = function() require('mini.comment').setup() end
+    event = 'BufReadPre',
+    config = true
   },
   {
     'echasnovski/mini.jump',
     event = 'VeryLazy',
-    config = function() require('mini.jump').setup() end
+    config = true
   },
   {
     'neovim/nvim-lspconfig',
@@ -33,10 +35,10 @@ return {
   },
   {
     'junegunn/vim-slash',
-    event = 'BufRead'
+    event = 'BufReadPre'
   },
   { 
     'christoomey/vim-tmux-navigator',
-    event = 'BufRead'
+    event = 'BufReadPre'
   }
 }

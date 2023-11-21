@@ -159,7 +159,7 @@ local hl_groups = {
   -- Plugins
 
   -- indent-line
-  IndentBlanklineChar = { fg = c.sel },
+  IblIndent = { fg = c.sel },
 
   -- bufferline
   BufferLineCloseButtonVisible = { bg = 'NONE' },
