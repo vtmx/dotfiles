@@ -45,6 +45,8 @@ map('n', '<c-u>', '<c-u>zz')
 map({'n', 'x'}, 'c', '"_c')
 map('n', 'C', '"_C')
 map('n', 'cc', '"_cc')
+
+-- Change line until border
 map('n', 'c,', 'ct,')
 map('n', 'c.', 'ct.')
 map('n', 'c:', 'ct:')
@@ -73,7 +75,11 @@ map('n', '%', 'G<s-v>gg')
 -- Redo
 map('n', 'U', '<c-r>')
 
--- Easy register
+-- Mark
+map('n', 'm', '`')
+map('n', 'M', 'm')
+
+-- Register
 map('n', "'", '"')
 map('v', "'", '"')
 
@@ -85,18 +91,14 @@ map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')
 map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
 map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
 
--- Change to clipboard
-map('n', '<leader>c', '^vg_"+xi<cmd>echo "Cut line to clipboard"<cr>')
-map('v', '<leader>c', '"+xi<cmd>echo "Cut to clipboard"<cr>')
-
 -- Paste to clipboard
 map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
 map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 
--- Replace yank
-map('n', 'R', '"0p')
+-- Replace select to clipboard :(
+-- map('v', 'r', '"0p')
 
 -- Join lines
 map('n', '<leader>j', 'J')
@@ -134,10 +136,6 @@ map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
 -- Keep search results centred
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
-
--- M to mark m to jump
-map('n', 'm', '`')
-map('n', 'M', 'm')
 
 -- Split
 map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
@@ -204,11 +202,20 @@ map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Buffer
 map('n', '<leader>n', '<cmd>ene<cr>')
+map('n', '<leader>bn', '<cmd>ene<cr>')
+
 map('n', '<leader>bd', '<cmd>bd<cr>')
-map('n', '<leader>l', '<cmd>bn<cr>')
-map('n', '<leader>h', '<cmd>bp<cr>')
+map('n', '<leader>bc', '<cmd>bd<cr>')
+
 map('n', '<a-l>', '<cmd>bn<cr>')
+map('n', '<leader>l', '<cmd>bn<cr>')
+map('n', '<leader>bl', '<cmd>bn<cr>')
+map('n', '<leader>bn', '<cmd>bn<cr>')
+
 map('n', '<a-h>', '<cmd>bp<cr>')
+map('n', '<leader>h', '<cmd>bp<cr>')
+map('n', '<leader>bh', '<cmd>bp<cr>')
+map('n', '<leader>bp', '<cmd>bp<cr>')
 
 -- Next and prev auto-complete
 map('n', '<c-k>', '<cmd>cnext<cr>zz')
@@ -226,10 +233,8 @@ map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
 -- Save
 map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 
--- Quit
+-- Quit and quit all
 map('n', '<leader>q', '<cmd>q<cr>')
-
--- Quit all
 map('n', '<leader>Q', '<cmd>qa!<cr>')
 
 
@@ -238,7 +243,10 @@ map('n', '<leader>Q', '<cmd>qa!<cr>')
 ------------------------------------------------------------
 
 -- hop
-map('n', '<leader><leader>f', '<cmd>HopChar1<cr>')
+map('n', '<leader>fc', '<cmd>HopChar1<cr>')
+
+-- lazy
+map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
 
 -- nvim-tree
 map('n', '<leader>e', '<cmd>Lex<cr>')
@@ -251,17 +259,17 @@ map('n', '<leader>e', '<cmd>Lex<cr>')
 
 -- telescope
 map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
-map('n', '<leader>f',  '<cmd>Telescope file_browser<cr>')
-map('n', '<leader>F',  '<cmd>Telescope find_files<cr>')
-map('n', '<leader>E',  '<cmd>Telescope git_files<cr>')
-map('n', '<leader>b',  '<cmd>Telescope buffers<cr>')
-map('n', '<leader>tc', '<cmd>Telescope commands<cr>')
-map('n', '<leader>tg', '<cmd>Telescope git_files<cr>')
-map('n', '<leader>m',  '<cmd>Telescope marks<cr>')
-map('n', '<leader>tc', '<cmd>Telescope colorscheme<cr>')
-map('n', '<leader>tt', '<cmd>Telescope filetypes<cr>')
-map('n', '<leader>th', '<cmd>Telescope highlights<cr>')
-map('n', '<leader>tk', '<cmd>Telescope keymaps<cr>')
+map('n', '<leader>ff', '<cmd>Telescope file_browser<cr>')
+map('n', '<leader>fF', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>fg', '<cmd>Telescope git_files<cr>')
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
+map('n', '<leader>fl', '<cmd>Telescope live_grep<cr>')
+map('n', '<leader>fC', '<cmd>Telescope commands<cr>')
+map('n', '<leader>fm', '<cmd>Telescope marks<cr>')
+map('n', '<leader>ft', '<cmd>Telescope colorscheme<cr>')
+map('n', '<leader>fT', '<cmd>Telescope filetypes<cr>')
+map('n', '<leader>fh', '<cmd>Telescope highlights<cr>')
+map('n', '<leader>fk', '<cmd>Telescope keymaps<cr>')
 
 -- zenmode
 map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
