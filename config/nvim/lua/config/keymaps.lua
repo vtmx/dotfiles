@@ -227,6 +227,10 @@ map({'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true }
 map({'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
 map({'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
 
+-- In command mode (not working)
+map('c', '<c-a>', '<home>')
+map('c', '<c-e>', '<end>')
+
 -- Make exec
 map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
 
@@ -236,7 +240,6 @@ map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 -- Quit and quit all
 map('n', '<leader>q', '<cmd>q<cr>')
 map('n', '<leader>Q', '<cmd>qa!<cr>')
-
 
 ------------------------------------------------------------
 -- Plugins
@@ -252,7 +255,6 @@ map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
 map('n', '<leader>e', '<cmd>Lex<cr>')
 -- if vim.fn.exists(":NvimTreeToggle") ~= 0 then
 --   map('n', '<leader>e', '<cmd>Lex<cr>')
---   -- map('n', '<leader>e', '<cmd>!Lex<cr>') Right
 -- else
 --   map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 -- end
@@ -281,32 +283,30 @@ map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
 map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- Future mappings
-local map_table = {
-  n = {
-    ['<leader>9'] = { '<cmd>enew<cr>' }
-  }
-}
-
--- Iterate over the first keys for each mode
-for mode, maps in pairs(map_table) do
-  -- iterate over each keybinding set in the current mode
-  for keymap, options in pairs(maps) do
-    -- build the options for the command accordingly
-    if options then
-      local cmd = options
-      local keymap_opts = keymap_opts or {}
-      if type(options) == 'table' then
-        cmd = options[1]
-        keymap_opts = vim.tbl_deep_extend('force', options, keymap_opts)
-        keymap_opts[1] = nil
-      end
-      -- extend the keybinding options with the base provided and set the mapping
-      map(mode, keymap, cmd, keymap_opts)
-    end
-  end
-end
-
-return M
+-- local map_table = {
+--   n = {
+--     ['<leader>9'] = { '<cmd>enew<cr>' }
+--   }
+-- }
+--
+-- -- Iterate over the first keys for each mode
+-- for mode, maps in pairs(map_table) do
+--   -- iterate over each keybinding set in the current mode
+--   for keymap, options in pairs(maps) do
+--     -- build the options for the command accordingly
+--     if options then
+--       local cmd = options
+--       local keymap_opts = keymap_opts or {}
+--       if type(options) == 'table' then
+--         cmd = options[1]
+--         keymap_opts = vim.tbl_deep_extend('force', options, keymap_opts)
+--         keymap_opts[1] = nil
+--       end
+--       -- extend the keybinding options with the base provided and set the mapping
+--       map(mode, keymap, cmd, keymap_opts)
+--     end
+--   end
+-- end
 
 -- References
 -- examples two mode: map({'n', 'x'}, 'cp', '"+y')
