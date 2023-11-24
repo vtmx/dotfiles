@@ -1,6 +1,6 @@
 return {
   'folke/zen-mode.nvim',
-  event = 'VeryLazy',
+  event = 'BufEnter',
   opts = {
     window = {
       width = 80,

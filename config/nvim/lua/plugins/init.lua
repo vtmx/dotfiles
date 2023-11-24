@@ -2,7 +2,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = 'ibl',
-    event = 'BufReadPre',
+    event = 'BufEnter',
     config = true
   },
   {
@@ -12,22 +12,22 @@ return {
   },
   {
     'echasnovski/mini.align',
-    event = 'BufReadPre',
+    event = 'BufEnter',
     config = true
   },
   {
     'echasnovski/mini.comment',
-    event = 'BufReadPre',
+    event = 'BufEnter',
     config = true
   },
   {
     'echasnovski/mini.jump',
-    event = 'VeryLazy',
+    event = 'BufEnter',
     config = true
   },
   {
     'neovim/nvim-lspconfig',
-    event = 'BufReadPre'
+    event = 'BufEnter'
   },
   {
     'kyazdani42/nvim-web-devicons',
@@ -35,10 +35,10 @@ return {
   },
   {
     'junegunn/vim-slash',
-    event = 'BufReadPre'
+    event = 'BufEnter'
   },
   { 
     'christoomey/vim-tmux-navigator',
-    event = 'BufReadPre'
+    event = 'BufEnter'
   }
 }

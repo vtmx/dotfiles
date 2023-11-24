@@ -1,5 +1,25 @@
 local c = require('config.colors')
 
+local mode_map = {
+  ['NORMAL']    = 'NOR',
+  ['O-PENDING'] = 'OPE',
+  ['INSERT']    = 'INS',
+  ['VISUAL']    = 'VIS',
+  ['V-BLOCK']   = 'VIS',
+  ['V-LINE']    = 'VIS',
+  ['V-REPLACE'] = 'VIS',
+  ['REPLACE']   = 'REP',
+  ['COMMAND']   = 'COM',
+  ['SHELL']     = 'SHE',
+  ['TERMINAL']  = 'TER',
+  ['EX']        = 'EX',
+  ['S-BLOCK']   = 'SBL',
+  ['S-LINE']    = 'SLI',
+  ['SELECT']    = 'SEL',
+  ['CONFIRM']   = 'CON',
+  ['MORE']      = 'MOR',
+}
+
 local onedarkv = ({
   normal = {
     a = { fg = c.fg, bg = 'NONE' },
@@ -34,7 +54,7 @@ local onedarkv = ({
 
 return {
   'nvim-lualine/lualine.nvim',
-  event = 'BufRead',
+  event = 'BufEnter',
   dependencies = 'kyazdani42/nvim-web-devicons',
   opts = {
     options = {
@@ -46,7 +66,7 @@ return {
       theme = onedarkv,
     },
     sections = {
-      lualine_a = { 'mode' },
+      lualine_a = { { 'mode', fmt = function(s) return mode_map[s] or s end } },
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { 'filename' },
       lualine_x = {},

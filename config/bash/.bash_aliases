@@ -170,7 +170,7 @@ alias serv="live-server"
 alias so="source"
 
 # tmux
-alias t="tmux"
+alias t="tmux -f $HOME/.config/tmux/tmux.conf"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
 alias tl="tmux ls"
@@ -203,9 +203,14 @@ alias vr="$HOME/.v/vl run"
 alias vu="$HOME/.v/vl up"
 alias vw="$HOME/.v/vl watch"
 
+# weather
+alias wt="curl http://wttr.in"
+
 # config
 alias ba="$EDITOR $HOME/.bash_aliases"
 alias br="$EDITOR $HOME/.bashrc"
+alias brl="source $HOME/.bashrc; echo Reload bashrc"
+alias bf="$EDITOR $HOME/.bash_functions"
 alias fc="$EDITOR $HOME/.config/fish/config.fish"
 alias hc="helix $HOME/.config/helix/config.toml"
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"

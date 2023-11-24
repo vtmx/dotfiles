@@ -212,6 +212,13 @@ local hl_groups = {
   TelescopePromptCounter   = { fg = c.fgd  },
   TelescopeMatching        = { fg = c.blue },
   TelescopePromptPrefix    = { fg = c.fg   },
+
+  -- which-key
+  WhichKey                 = { fg = c.blue   },
+  WhichKeyDesc             = { fg = c.fg     },
+  WhichKeyFloat            = { bg = c.bgd    },
+  WhichKeyGroup            = { fg = c.purple },
+  WhichKeySeparator        = { fg = c.fg     },
 }
 
 for name, val in pairs(hl_groups) do
