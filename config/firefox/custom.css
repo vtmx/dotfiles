@@ -27,7 +27,8 @@ body {
 #titlebar .titlebar-spacer,
 #unified-extensions-button,
 #urlbar .search-one-offs:not([hidden]),
-#urlbar-zoom-button {
+#urlbar-zoom-button,
+#picture-in-picture-button {
  display: none !important;
 }
 
