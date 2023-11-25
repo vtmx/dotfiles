@@ -58,7 +58,7 @@ body {
 }
 
 /* colors of github dimmed */
-#nav-bar {
+#nav-bar:before {
   background: var(--shade4) !important;
 }
 
