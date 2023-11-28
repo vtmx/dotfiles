@@ -80,6 +80,11 @@ create_links() {
   link="$HOME"
   create_link "$name" "$target" "$link"
 
+  name="bash functions"
+  target="$src_dir/bash/.bash_functions"
+  link="$HOME"
+  create_link "$name" "$target" "$link"
+
   # bat
   name="bat"
   target="$src_dir/bat/config"
