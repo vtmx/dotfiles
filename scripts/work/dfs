@@ -15,11 +15,11 @@ wget_files() {
 echo "Update alias..."
 wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/shell/aliases.sh" "$HOME/.config/shell"  
 
+echo "Update alias..."
+wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/shell/aliases.sh" "$HOME/.config/shell"  
+
 echo "Update bash..."
 wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/bash/.bashrc" "$HOME/.config/bash" 
-
-echo "Update code..."
-wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/vscode/settings.json" "$HOME/.config/Code/User" 
 
 echo "Update fish..."
 wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/fish/config.fish" "$HOME/.config/fish" 
