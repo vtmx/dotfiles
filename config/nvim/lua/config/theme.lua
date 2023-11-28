@@ -82,7 +82,7 @@ local hl_groups = {
   CursorLineFold = { fg = c.fg  },
   CursorLineNr   = { fg = c.fg  },
   CursorLineSign = { fg = c.fg  },
-  LineNr         = { fg = c.sel },
+  LineNr         = { fg = c.fgd },
   LineNrAbove    = { fg = c.fgd },
   LineNrBelow    = { fg = c.fgd },
 
@@ -224,3 +224,10 @@ local hl_groups = {
 for name, val in pairs(hl_groups) do
   vim.api.nvim_set_hl(0, name, val)
 end
+
+-- Spell
+vim.cmd('highlight SpellBad guisp=' .. c.red)
+vim.cmd('highlight SpellCap guisp=' .. c.blue)
+vim.cmd('highlight SpellRare guisp=' .. c.purple)
+vim.cmd('highlight SpellLocal guisp=' .. c.cyan)
+

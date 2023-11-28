@@ -128,7 +128,7 @@ map('v', 'y', 'ygv<esc>')
 
 -- Remove highlight
 map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
-map('n', '<leader>ç', '<cmd>noh<cr>')
+map('n', 'ç', '<cmd>noh<cr>')
 
 -- Replace word
 map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
@@ -136,10 +136,6 @@ map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
 -- Keep search results centred
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
-
--- Split
-map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
-map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
 
 -- Stop copy in last char
 map('v', 'y', 'ygv<esc>')
@@ -149,56 +145,6 @@ map('n', '>', '>>')
 map('n', '<', '<<')
 map('v', '>', '>gv')
 map('v', '<', '<gv')
-
--- Toggle number
-map('n', '<leader>un', '', {
-  noremap = true,
-  callback = function()
-    if vim.o.number then
-      vim.opt.number = false
-      vim.opt.relativenumber = false
-    else
-      vim.opt.number = true
-      vim.opt.relativenumber = true
-    end
-
-    vim.cmd 'redraw'
-    print('Toggle number')
-  end
-})
-
--- Toggle cmd height
-map('n', '<leader>uc', '', {
-  noremap = true,
-  callback = function()
-    if vim.o.cmdheight == 1 then
-      vim.opt.cmdheight = 0
-    else
-      vim.opt.cmdheight = 1
-    end
-
-    vim.cmd 'redraw'
-    print('Toggle cmdheight')
-  end
-})
-
--- Navigation panels
-map('n', '<c-h>', '<c-w>h')
-map('n', '<c-j>', '<c-w>j')
-map('n', '<c-k>', '<c-w>k')
-map('n', '<c-l>', '<c-w>l')
-
--- Move panels
-map('n', '<c-w>h', '<c-w>H')
-map('n', '<c-w>j', '<c-w>J')
-map('n', '<c-w>k', '<c-w>K')
-map('n', '<c-w>l', '<c-w>L')
-
--- Resize
-map('n', '<up>', '<cmd>resize +2<cr>')
-map('n', '<down>', '<cmd>resize -2<cr>')
-map('n', '<left>', '<cmd>vertical resize +2<cr>')
-map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Buffer
 map('n', '<leader>n', '<cmd>ene<cr>')
@@ -216,6 +162,22 @@ map('n', '<a-h>', '<cmd>bp<cr>')
 map('n', '<leader>h', '<cmd>bp<cr>')
 map('n', '<leader>bh', '<cmd>bp<cr>')
 map('n', '<leader>bp', '<cmd>bp<cr>')
+
+-- Split pane
+map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
+map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
+
+-- Navigation panes
+map('n', '<c-h>', '<c-w>h')
+map('n', '<c-j>', '<c-w>j')
+map('n', '<c-k>', '<c-w>k')
+map('n', '<c-l>', '<c-w>l')
+
+-- Resize panes
+map('n', '<up>', '<cmd>resize +2<cr>')
+map('n', '<down>', '<cmd>resize -2<cr>')
+map('n', '<left>', '<cmd>vertical resize +2<cr>')
+map('n', '<right>', '<cmd>vertical resize -2<cr>')
 
 -- Next and prev auto-complete
 map('n', '<c-k>', '<cmd>cnext<cr>zz')
@@ -241,6 +203,78 @@ map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
 map('n', '<leader>q', '<cmd>q<cr>')
 map('n', '<leader>Q', '<cmd>qa!<cr>')
 
+-- Toggle cmd height
+map('n', '<leader>uc', '', {
+  noremap = true,
+  callback = function()
+    if vim.o.cmdheight == 1 then
+      vim.opt.cmdheight = 0
+    else
+      vim.opt.cmdheight = 1
+    end
+    print('Toggle cmdheight')
+  end
+})
+
+-- Toggle number
+map('n', '<leader>un', '', {
+  noremap = true,
+  callback = function()
+    if vim.o.number then
+      vim.opt.number = false
+      vim.opt.relativenumber = false
+    else
+      vim.opt.number = true
+      vim.opt.relativenumber = true
+    end
+    print('Toggle number')
+  end
+})
+
+-- Toggle relative number
+map('n', '<leader>ur', '', {
+  noremap = true,
+  callback = function()
+    if vim.o.relativenumber then
+      vim.opt.relativenumber = false
+    else
+      vim.opt.relativenumber = true
+    end
+    print('Toggle relative number')
+  end
+})
+
+-- Toggle list chars
+map('n', '<leader>ul', '', {
+  noremap = true,
+  callback = function()
+    if vim.o.list then
+      vim.opt.list = false
+    else
+      vim.opt.list = true
+    end
+    print('Toggle list chars')
+  end
+})
+
+-- Toggle spell
+map('n', '<leader>us', '', {
+  noremap = true,
+  callback = function()
+    vim.wo.spell = not vim.wo.spell 
+    print('Toggle spell')
+  end
+})
+
+-- Toggle wrap
+map('n', '<leader>uw', '', {
+  noremap = true,
+  callback = function()
+    vim.wo.wrap = not vim.wo.wrap
+    print('Toggle wrap')
+  end
+})
+
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------
@@ -261,19 +295,26 @@ map('n', '<leader>e', '<cmd>Lex<cr>')
 
 -- telescope
 map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
+map('n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>')
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
+map('n', '<leader>fC', '<cmd>Telescope commands<cr>')
 map('n', '<leader>ff', '<cmd>Telescope file_browser<cr>')
 map('n', '<leader>fF', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>fg', '<cmd>Telescope git_files<cr>')
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
-map('n', '<leader>fl', '<cmd>Telescope live_grep<cr>')
-map('n', '<leader>fC', '<cmd>Telescope commands<cr>')
-map('n', '<leader>fm', '<cmd>Telescope marks<cr>')
-map('n', '<leader>ft', '<cmd>Telescope colorscheme<cr>')
-map('n', '<leader>fT', '<cmd>Telescope filetypes<cr>')
+map('n', '<leader>fgb', '<cmd>Telescope git_branches<cr>')
+map('n', '<leader>fgc', '<cmd>Telescope git_commits<cr>')
+map('n', '<leader>fgs', '<cmd>Telescope git_status<cr>')
 map('n', '<leader>fh', '<cmd>Telescope highlights<cr>')
+map('n', '<leader>fH', '<cmd>Telescope help_tags<cr>')
 map('n', '<leader>fk', '<cmd>Telescope keymaps<cr>')
+map('n', '<leader>fl', '<cmd>Telescope live_grep<cr>')
+map('n', '<leader>fm', '<cmd>Telescope marks<cr>')
+map('n', '<leader>ft', '<cmd>Telescope filetypes<cr>')
+map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>')
+map('n', '<leader>fO', '<cmd>Telescope vim_options<cr>')
+map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 
--- zenmode
+-- zen mode
 map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
 
 -- tmux
@@ -309,10 +350,9 @@ map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
 -- end
 
 -- References
--- examples two mode: map({'n', 'x'}, 'cp', '"+y')
--- https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/keymappings.lua
--- https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua
--- https://github.com/NvChad/NvChad/blob/main/lua/core/mappings.lua
--- https://github.com/AstroNvim/AstroNvim/blob/53d210d3905f65b9e8f0bdb0c8a307440ebfc3f8/lua/core/utils/init.lua
+-- https://github.com/AstroNvim
+-- https://github.com/LazyVim/LazyVim
+-- https://github.com/LunarVim
+-- https://github.com/NvChad
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
 -- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
