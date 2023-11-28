@@ -42,6 +42,9 @@ opt.tabstop = indent
 opt.softtabstop = indent 
 opt.wildignore:append { '*/node_modules/*' }
 
+-- list char
+opt.listchars = 'tab:›-,space:·,trail:⋯,eol:↲'
+
 -- split
 opt.laststatus = 3
 opt.splitbelow = true
