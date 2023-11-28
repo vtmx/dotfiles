@@ -19,6 +19,11 @@ if [[ -f $HOME/.bash_aliases ]]; then
   . $HOME/.bash_aliases 
 fi
 
+# Functions
+if [[ -f $HOME/.bash_functions ]]; then
+  . $HOME/.bash_functions 
+fi
+
 # Enable auto-completion
 if ! shopt -oq posix; then
   if [[ -f /usr/share/bash-completion/bash_completion ]]; then
@@ -28,22 +33,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Functions
-mkcd() {
-  if [[ -n $1 ]]; then
-    mkdir -p "$1" && cd "$1" || exit 1
-  else
-    echo "error: dirname not exist"
-    exit 1
-  fi
-}
-
 # Startup
 # fzf - ctrl-t, ctrl-r, alt-c
 # -1 default, white bright-white
 # https://minsw.github.io/fzf-color-picker
 if [[ -f "$HOME/.fzf.bash" ]]; then
-  source "$HOME/.fzf.bash"
+  . "$HOME/.fzf.bash"
   export FZF_DEFAULT_OPTS="--height 50% --reverse \
   --prompt '❯ ' --pointer '❯ ' --marker '❯ ' \
   --color=bg:-1,fg:-1 \

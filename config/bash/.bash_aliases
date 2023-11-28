@@ -209,6 +209,7 @@ alias wt="curl http://wttr.in"
 # config
 alias ba="$EDITOR $HOME/.bash_aliases"
 alias br="$EDITOR $HOME/.bashrc"
+alias brc="$EDITOR $HOME/.bashrc"
 alias brl="source $HOME/.bashrc; echo Reload bashrc"
 alias bf="$EDITOR $HOME/.bash_functions"
 alias fc="$EDITOR $HOME/.config/fish/config.fish"
