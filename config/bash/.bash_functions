@@ -116,7 +116,7 @@ play() {
       @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
       ost)                to_play "$music/ost"                                  ;;
       @(retro?(wave)))    to_play "$music/retrowave"                            ;;
-      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"  ;;
+      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"    ;;
       *)                  to_play "**/*.mp3"                                    ;;
     esac
   fi
