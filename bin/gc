@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if [[ -n "$1" ]]; then
-  git commit -m "$*"
-else
-  echo "error: no commit message provided"
-  exit 1
-fi

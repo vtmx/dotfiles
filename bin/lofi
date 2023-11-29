@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if type -P mpv >/dev/null; then
-  if [[ -z "$1" ]]; then
-    mpv "https://www.youtube.com/live/jfKfPfyJRdk" --no-video
-  else
-    mpv $1
-  fi
-fi
