@@ -109,15 +109,15 @@ play() {
     }
 
     case "$1" in
-      @(ani?(me)))     to_play "$music/j-music/anime"                        ;;
-      @(brian|bc))     to_play "$music/jazz/brian-cullberston"               ;;
-      @(jaz?(z)))      to_play "$music/jazz"                                 ;;
-      lofi)            to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
-      @(mj|michael))   to_play "$music/lentas/michael-jackson"               ;;
-      ost)             to_play "$music/ost"                                  ;;
-      @(retro?(wave))) to_play "$music/retrowave"                            ;;
+      @(ani?(me)))        to_play "$music/j-music/anime"                        ;;
+      @(brian|bc))        to_play "$music/jazz/brian-cullberston"               ;;
+      @(jaz?(z)))         to_play "$music/jazz"                                 ;;
+      lofi)               to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
+      @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
+      ost)                to_play "$music/ost"                                  ;;
+      @(retro?(wave)))    to_play "$music/retrowave"                            ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"  ;;
-      *)               to_play "**/*.mp3"                                    ;;
+      *)                  to_play "**/*.mp3"                                    ;;
     esac
   fi
 }
