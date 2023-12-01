@@ -64,7 +64,7 @@ ex() {
 # Create dir and enter
 mkcd() {
   if [[ -n $1 ]]; then
-    mkdir -p "$1" && cd "$1" || return 1
+    mkdir -p "$1" && cd "$1"
   else
     echo "error: dirname not exist"
     return 1
