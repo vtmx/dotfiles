@@ -104,12 +104,14 @@ play() {
     local music="$HOME/Music"
     local args="--no-video"
 
+    # If subdir play like playlist
     to_play() {
-      mpv $args $1
-    }
-
-    to_playlist() {
-      ls $PWD/**/*.mp3 > /tmp/playlist && mpv $args --playlist=/tmp/playlist
+      if ls -d */ > /dev/null; then
+        ls $1/**/*.mp3 > /tmp/playlist && mpv $args --playlist=/tmp/playlist
+        rm -f /tmp/playlist
+      else
+        mpv $args $1
+      fi
     }
 
     case "$1" in
@@ -121,7 +123,7 @@ play() {
       ost)                to_play "$music/ost"                                  ;;
       @(retro?(wave)))    to_play "$music/retrowave"                            ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"    ;;
-      *)                  to_playlist                                           ;;
+      *)                  to_play $PWD                                          ;;
     esac
   fi
 }
