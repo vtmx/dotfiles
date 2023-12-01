@@ -20,11 +20,11 @@ return {
     event = 'BufEnter',
     config = true
   },
-  {
-    'echasnovski/mini.jump',
-    event = 'BufEnter',
-    config = true
-  },
+  -- {
+  --   'echasnovski/mini.jump',
+  --   event = 'BufEnter',
+  --   config = true
+  -- },
   {
     'neovim/nvim-lspconfig',
     event = 'BufEnter'
