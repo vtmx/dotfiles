@@ -125,7 +125,7 @@ play() {
 # Watch file
 watch() {
   if type -P entr >& /dev/null; then
-    if [[ -n $1 ]]; then
+    if [[ -n "$1" ]]; then
       local file=$1
       local ext=$(echo $1 | awk -F . '{print $NF}')
 
