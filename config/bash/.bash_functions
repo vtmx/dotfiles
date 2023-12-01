@@ -108,6 +108,10 @@ play() {
       mpv $args $1
     }
 
+    to_playlist() {
+      ls $PWD/**/*.mp3 > /tmp/playlist && mpv $args --playlist=/tmp/playlist
+    }
+
     case "$1" in
       @(ani?(me)))        to_play "$music/j-music/anime"                        ;;
       @(brian|bc))        to_play "$music/jazz/brian-cullberston"               ;;
@@ -117,7 +121,7 @@ play() {
       ost)                to_play "$music/ost"                                  ;;
       @(retro?(wave)))    to_play "$music/retrowave"                            ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"    ;;
-      *)                  to_play "**/*.mp3"                                    ;;
+      *)                  to_playlist                                           ;;
     esac
   fi
 }
