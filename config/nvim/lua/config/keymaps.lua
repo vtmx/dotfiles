@@ -46,23 +46,9 @@ map({'n', 'x'}, 'c', '"_c')
 map('n', 'C', '"_C')
 map('n', 'cc', '"_cc')
 
--- Change line until border
-map('n', 'c,', 'ct,')
-map('n', 'c.', 'ct.')
-map('n', 'c:', 'ct:')
-map('n', 'c;', 'ct;')
-map('n', 'c)', 'ct)')
-map('n', 'c]', 'ct]')
-map('n', 'c}', 'ct}')
-map('n', 'c>', 'ct>')
-map('n', 'c\'', 'ct\'')
-map('n', 'c"', 'ct"')
-
 -- Add new line in normal mode
 map('n', '<leader>o', 'm`o<esc>``')
 map('n', '<leader>O', 'm`O<esc>``')
-map('n', '<a-o>', 'm`o<esc>``')
-map('n', '<a-O>', 'm`O<esc>``')
 
 -- Plus number
 map('n', '=', '<c-a>')
@@ -108,20 +94,28 @@ map('n', 'x', '"_x')
 map('n', '<del>', '"_x')
 
 -- Move lines
-map('n', '<a-j>', '<cmd>m .+1<cr>')
-map('n', '<a-k>', '<cmd>m .-2<cr>')
-map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
-map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
-map('v', '<a-j>', ":m '>+1<cr>gv=gv")
-map('v', '<a-k>', ":m '<-2<cr>gv=gv")
+map('n', '<s-a-j>', '<cmd>m .+1<cr>')
+map('n', '<s-a-k>', '<cmd>m .-2<cr>')
+map('i', '<s-a-j>', '<esc><cmd>m .+1<cr>==gi')
+map('i', '<s-a-k>', '<esc><cmd>m .-2<cr>==gi')
+map('v', '<s-a-j>', ":m '>+1<cr>gv=gv")
+map('v', '<s-a-k>', ":m '<-2<cr>gv=gv")
+
+-- Move lines
+-- map('n', '<a-j>', '<cmd>m .+1<cr>')
+-- map('n', '<a-k>', '<cmd>m .-2<cr>')
+-- map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
+-- map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
+-- map('v', '<a-j>', ":m '>+1<cr>gv=gv")
+-- map('v', '<a-k>', ":m '<-2<cr>gv=gv")
 
 -- Clone lines
-map('n', '<s-a-j>', 'yyp')
-map('n', '<s-a-k>', 'yyP')
-map('i', '<s-a-j>', '<esc>yypi')
-map('i', '<s-a-k>', '<esc>yyPi')
-map('v', '<s-a-j>', ":'<,'>copy '><cr>")
-map('v', '<s-a-k>', 'ygvO<esc>P')
+-- map('n', '<s-a-j>', 'yyp')
+-- map('n', '<s-a-k>', 'yyP')
+-- map('i', '<s-a-j>', '<esc>yypi')
+-- map('i', '<s-a-k>', '<esc>yyPi')
+-- map('v', '<s-a-j>', ":'<,'>copy '><cr>")
+-- map('v', '<s-a-k>', 'ygvO<esc>P')
 
 -- Keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
@@ -153,15 +147,15 @@ map('n', '<leader>bn', '<cmd>ene<cr>')
 map('n', '<leader>bd', '<cmd>bd<cr>')
 map('n', '<leader>bc', '<cmd>bd<cr>')
 
-map('n', '<a-l>', '<cmd>bn<cr>')
 map('n', '<leader>l', '<cmd>bn<cr>')
 map('n', '<leader>bl', '<cmd>bn<cr>')
 map('n', '<leader>bn', '<cmd>bn<cr>')
+map('n', '<tab>', '<cmd>bn<cr>')
 
-map('n', '<a-h>', '<cmd>bp<cr>')
 map('n', '<leader>h', '<cmd>bp<cr>')
 map('n', '<leader>bh', '<cmd>bp<cr>')
 map('n', '<leader>bp', '<cmd>bp<cr>')
+map('n', '<s-tab>', '<cmd>bn<cr>')
 
 -- Split pane
 map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
@@ -318,36 +312,10 @@ map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
 
 -- tmux
-map('n', '<c-h>', '<cmd>lua require("tmux").move_left()<cr>')
-map('n', '<c-j>', '<cmd>lua require("tmux").move_down()<cr>')
-map('n', '<c-k>', '<cmd>lua require("tmux").move_up()<cr>')
-map('n', '<c-l>', '<cmd>lua require("tmux").move_right()<cr>')
-
--- Future mappings
--- local map_table = {
---   n = {
---     ['<leader>9'] = { '<cmd>enew<cr>' }
---   }
--- }
---
--- -- Iterate over the first keys for each mode
--- for mode, maps in pairs(map_table) do
---   -- iterate over each keybinding set in the current mode
---   for keymap, options in pairs(maps) do
---     -- build the options for the command accordingly
---     if options then
---       local cmd = options
---       local keymap_opts = keymap_opts or {}
---       if type(options) == 'table' then
---         cmd = options[1]
---         keymap_opts = vim.tbl_deep_extend('force', options, keymap_opts)
---         keymap_opts[1] = nil
---       end
---       -- extend the keybinding options with the base provided and set the mapping
---       map(mode, keymap, cmd, keymap_opts)
---     end
---   end
--- end
+map('n', '<m-h>', '<cmd>lua require("tmux").move_left()<cr>')
+map('n', '<m-j>', '<cmd>lua require("tmux").move_down()<cr>')
+map('n', '<m-k>', '<cmd>lua require("tmux").move_up()<cr>')
+map('n', '<m-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- References
 -- https://github.com/AstroNvim

@@ -106,12 +106,12 @@ play() {
 
     # If subdir play like playlist
     to_play() {
-      if ls -d */ > /dev/null; then
-        ls $1/**/*.mp3 > /tmp/playlist && mpv $args --playlist=/tmp/playlist
-        rm -f /tmp/playlist
-      else
+      # if ls -d */ > /dev/null; then
+      #   ls $1/**/*.mp3 > /tmp/playlist && mpv $args --playlist=/tmp/playlist
+      #   rm -f /tmp/playlist
+      # else
         mpv $args $1
-      fi
+      # fi
     }
 
     case "$1" in
@@ -123,9 +123,14 @@ play() {
       ost)                to_play "$music/ost"                                  ;;
       @(retro?(wave)))    to_play "$music/retrowave"                            ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"    ;;
-      *)                  to_play $PWD                                          ;;
+      *)                  to_play $1                                            ;;
     esac
   fi
+}
+
+# SSH agent
+ssha() {
+  eval "$(ssh-agent -s)"
 }
 
 # Watch file
