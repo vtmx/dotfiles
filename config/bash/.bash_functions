@@ -128,9 +128,10 @@ play() {
   fi
 }
 
-# SSH agent
+# Add ssh
 ssha() {
   eval "$(ssh-agent -s)"
+  ssh-add -k
 }
 
 # Watch file
