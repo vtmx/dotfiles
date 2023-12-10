@@ -16,26 +16,26 @@ export GROFF_NO_SGR=1                         # for konsole and gnome-terminal
 
 # Aliases
 if [[ -f $HOME/.bash_aliases ]]; then
-  . $HOME/.bash_aliases 
+  source $HOME/.bash_aliases 
 fi
 
 # Functions
 if [[ -f $HOME/.bash_functions ]]; then
-  . $HOME/.bash_functions 
+  source $HOME/.bash_functions 
 fi
 
 # Enable auto-completion
 if ! shopt -oq posix; then
   if [[ -f /usr/share/bash-completion/bash_completion ]]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
   elif [[ -f /etc/bash_completion ]]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
 fi
 
 # fzf
-if [[ -f "$HOME/.fzf.bash" ]]; then
-  . "$HOME/.fzf.bash"
+if [[ -f $HOME/.fzf.bash ]]; then
+  source $HOME/.fzf.bash
   export FZF_DEFAULT_OPTS="--height 50% --reverse \
   --prompt '❯ ' --pointer '❯ ' --marker '❯ ' \
   --color=bg:-1,fg:-1 \
