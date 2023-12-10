@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=Restart KWin and Plasma
+Exec=kwin_x11 --replace; plasmashell --replace
+GenericName=Restart KWin and Plasma
+Icon=chronometer-reset
+Name=Restart Plasma Shell and Kwin
+NoDisplay=false
+Path[$e]=
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

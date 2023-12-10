@@ -33,10 +33,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Startup
-# fzf - ctrl-t, ctrl-r, alt-c
-# -1 default, white bright-white
-# https://minsw.github.io/fzf-color-picker
+# fzf
 if [[ -f "$HOME/.fzf.bash" ]]; then
   . "$HOME/.fzf.bash"
   export FZF_DEFAULT_OPTS="--height 50% --reverse \
@@ -51,11 +48,6 @@ if [[ -f "$HOME/.fzf.bash" ]]; then
   --border none"
 fi
 
-# zoxide
-if type -P zoxide > /dev/null; then
-  eval "$(zoxide init bash)"
-fi
-
 # starship
 if type -P starship > /dev/null; then
   export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
@@ -67,3 +59,9 @@ else
     PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]>\\[\E[0m\\] '
   fi
 fi
+
+# zoxide
+if type -P zoxide > /dev/null; then
+  eval "$(zoxide init bash)"
+fi
+
