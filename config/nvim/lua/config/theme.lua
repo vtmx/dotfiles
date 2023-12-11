@@ -82,9 +82,9 @@ local hl_groups = {
   CursorLineFold = { fg = c.fg  },
   CursorLineNr   = { fg = c.fg  },
   CursorLineSign = { fg = c.fg  },
-  LineNr         = { fg = c.fgd },
-  LineNrAbove    = { fg = c.fgd },
-  LineNrBelow    = { fg = c.fgd },
+  LineNr         = { fg = c.sel },
+  LineNrAbove    = { fg = c.sel },
+  LineNrBelow    = { fg = c.sel },
 
   -- Pmenu
   Pmenu          = { bg = c.bgd },
