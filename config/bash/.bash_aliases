@@ -201,7 +201,7 @@ alias vu="$HOME/.v/vl up"
 alias vw="$HOME/.v/vl watch"
 
 # weather
-alias wt="curl http://wttr.in"
+alias wt="curl wttr.in/?format=3"
 
 # config
 alias ba="$EDITOR $HOME/.bash_aliases"
