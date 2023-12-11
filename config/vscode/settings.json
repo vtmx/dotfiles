@@ -2,6 +2,8 @@
   // Window
   "breadcrumbs.enabled": false,
   "window.commandCenter": false,
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
   "window.restoreWindows": "none",
@@ -61,7 +63,7 @@
   "github.gitAuthentication": false,
 
   // Terminal
-  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "cmd",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "'BlexMono Nerd Font', 'IBM Plex Mono', Consolas, monospace",
@@ -69,8 +71,8 @@
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontWeightBold": "500",
   "terminal.integrated.profiles.linux": {
-    "fish": {
-      "path": "/usr/bin/fish"
+    "bash": {
+      "path": "/usr/bin/bash"
     }
   },
   "terminal.integrated.profiles.windows": {
@@ -93,12 +95,8 @@
   // ZenMode
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
-
-  // Workbench
-  // https://code.visualstudio.com/api/references/theme-color
-  // https://themes.vscode.one/edit/local/
-  "workbench.activityBar.visible": false,
+  "zenMode.hideStatusBar": false,
+  "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
@@ -272,46 +270,6 @@
       "after": ["<c-x>"]
     },
     {
-      "before": ["c", ","],
-      "after": ["c", "t", ","]
-    },
-    {
-      "before": ["c", "."],
-      "after": ["c", "t", "."]
-    },
-    {
-      "before": ["c", ":"],
-      "after": ["c", "t", ":"]
-    },
-    {
-      "before": ["c", ";"],
-      "after": ["c", "t", ";"]
-    },
-    {
-      "before": ["c", ")"],
-      "after": ["c", "t", ")"]
-    },
-    {
-      "before": ["c", "]"],
-      "after": ["c", "t", "]"]
-    },
-    {
-      "before": ["c", "}"],
-      "after": ["c", "t", "}"]
-    },
-    {
-      "before": ["c", ">"],
-      "after": ["c", "t", ">"]
-    },
-    {
-      "before": ["c", "'"],
-      "after": ["c", "t", "'"]
-    },
-    {
-      "before": ["c", "\""],
-      "after": ["c", "t", "\""]
-    },
-    {
       "before": ["x"],
       "after": ["\"", "_", "x"]
     },
@@ -356,6 +314,10 @@
       "after": ["\"", "0", "p"]
     },
     {
+      "before": ["%"],
+      "after": ["G", "V", "g", "g"]
+    },
+    {
       "before": ["v", "v"],
       "commands": ["workbench.action.moveEditorToNextGroup"]
     },
@@ -372,39 +334,27 @@
       "after": ["<c-u>", "z", "z"]
     },
     {
-      "before": ["<c-s-e>"],
-      "commands": ["viewContainer.workbench.view.explorer.enabled"]
-    },
-    {
       "before": ["<c-f>"],
       "commands": ["actions.find"]
+    },
+    {
+      "before": ["<c-h>"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
+      "before": ["<c-s-e>"],
+      "commands": ["viewContainer.workbench.view.explorer.enabled"]
     },
     {
       "before": ["<c-s-f>"],
       "commands": ["workbench.action.findInFiles"]
     },
     {
-      "before": ["<leader>", "h"],
-      "commands": ["editor.action.startFindReplaceAction"]
-    },
-    {
-      "before": ["c-h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["c-l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-    {
-      "before": ["c-o"],
-      "commands": ["workbench.action.files.openFile"]
+      "before": ["<c-s-h>"],
+      "commands": ["workbench.action.replaceAllInFolder"]
     },
     {
       "before": ["<leader>", "a"],
-      "after": ["G", "V", "g", "g"]
-    },
-    {
-      "before": ["%"],
       "after": ["G", "V", "g", "g"]
     },
     {
@@ -436,10 +386,6 @@
       "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
     },
     {
-      "before": ["<leader>", "t"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
       "before": ["<leader>", "q"],
       "commands": ["workbench.action.quit"]
     },
@@ -469,7 +415,11 @@
     },
     {
       "before": ["<leader>", "<esc>"],
-      "commands": [":nohl"]
+      "commands": [":noh"]
+    },
+    {
+      "before": ["ç"],
+      "commands": [":noh"]
     },
     {
       "before": ["s", "a"],
@@ -483,15 +433,19 @@
       "before": ["s", "r"],
       "after": ["<plugcs>"]
     },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["<space>", "k", "j"],
       "after": ["<esc>"]
-    },
-    {
-      "before": ["'"],
-      "after": ["\""]
     },
     {
       "before": ["ç"],

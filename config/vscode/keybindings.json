@@ -71,27 +71,19 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "alt+l",
+    "key": "alt+.",
     "command": "workbench.action.nextEditor"
   },
   {
-    "key": "alt+h",
+    "key": "alt+,",
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "alt+left",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "alt+right",
-    "command": "workbench.action.previousEditor"
-  },
-  {
-    "key": "alt+shift+l",
+    "key": "alt+shift+.",
     "command": "workbench.action.moveEditorRightInGroup"
   },
   {
-    "key": "alt+shift+h",
+    "key": "alt+shift+,",
     "command": "workbench.action.moveEditorLeftInGroup"
   },
 
@@ -151,6 +143,22 @@
     "key": "ctrl+k k",
     "command": "workbench.action.focusUpGroup"
   },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.focusDownGroup"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.focusUpGroup"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.focusRightGroup"
+  },
 
   // Move
   {
@@ -168,6 +176,29 @@
   {
     "key": "ctrl+k shift+k",
     "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+
+  // Find files
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus && !editorReadonly"
   },
 
   // Save
@@ -280,27 +311,27 @@
 
   // Move lines
   {
-    "key": "alt+j",
+    "key": "shift+alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "vim.active && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "alt+k",
+    "key": "shift+alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "vim.active && editorTextFocus && !editorReadonly"
   },
 
   // Clone lines
-  {
-    "key": "alt+shift+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "vim.active && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+shift+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "vim.active && editorTextFocus && !editorReadonly"
-  },
+  // {
+  //   "key": "alt+shift+j",
+  //   "command": "editor.action.copyLinesDownAction",
+  //   "when": "vim.active && editorTextFocus && !editorReadonly"
+  // },
+  // {
+  //   "key": "alt+shift+k",
+  //   "command": "editor.action.copyLinesUpAction",
+  //   "when": "vim.active && editorTextFocus && !editorReadonly"
+  // },
 
   // Auto-sugestion in navigation
   {
