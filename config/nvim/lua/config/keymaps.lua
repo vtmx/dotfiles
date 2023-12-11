@@ -120,6 +120,16 @@ map('v', '<s-a-k>', ":m '<-2<cr>gv=gv")
 -- Keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
 
+-- Visual match pairs
+map('v', '<leader>(', 'c()<esc>P')
+map('v', '<leader>)', 'c()<esc>P')
+map('v', '<leader>[', 'c[]<esc>P')
+map('v', '<leader>]', 'c[]<esc>P')
+map('v', '<leader>{', 'c{}<esc>P')
+map('v', '<leader>}', 'c{}<esc>P')
+map('v', "<leader>'", "c''<esc>P")
+map('v', '<leader>"', 'c""<esc>P')
+
 -- Remove highlight
 map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
 map('n', 'ç', '<cmd>noh<cr>')
