@@ -16,7 +16,7 @@
   "html.autoClosingTags": false,
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
-  "editor.colorDecorators": true,
+  "editor.colorDecorators": false,
   "editor.detectIndentation": false,
   "editor.fontFamily": "'BlexMono Nerd Font', 'IBM Plex Mono', Consolas, monospace",
   "editor.fontLigatures": "'zero'",
@@ -241,11 +241,15 @@
       "before": ["<c-h>"],
       "after": ["left"]
     },
-
     // Go to prev char in insert mode
     {
       "before": ["<c-l>"],
       "after": ["right"]
+    },
+    // Paste register
+    {
+      "before": ["<c-v>"],
+      "after": ["c-r", "\""]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -490,6 +494,10 @@
     {
       "before": ["<leader>", "p"],
       "after": ["\"", "_", "d", "P"]
+    },
+    {
+      "before": ["<leader>", "'"],
+      "after": ["c", "'", "'", "<esc>", "P"]
     }
-  ],
+  ]
 }
