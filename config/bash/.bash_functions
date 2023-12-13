@@ -129,13 +129,13 @@ play() {
 }
 
 # Add ssh
-ssha() {
+sa() {
   eval "$(ssh-agent -s)"
   ssh-add -k
 }
 
 # Watch file
-watch() {
+wa() {
   if type -P entr >& /dev/null; then
     if [[ -n "$1" ]]; then
       local file=$1
