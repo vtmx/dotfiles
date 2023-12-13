@@ -6,7 +6,6 @@ end
 
 -- Leader key
 vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 -- Reload file
 map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
@@ -21,6 +20,9 @@ map('v', '<leader>kj', '<esc>')
 -- Navigate in insertmode
 map('i', '<c-h>', '<left>')
 map('i', '<c-l>', '<right>')
+
+-- Paste register
+map('i', '<c-v>', '<c-r>"')
 
 -- Ignore wordwrap jumpline
 map('n', 'j', 'gj')
@@ -121,14 +123,20 @@ map('v', '<s-a-k>', ":m '<-2<cr>gv=gv")
 map('v', 'y', 'ygv<esc>')
 
 -- Visual match pairs
-map('v', '<leader>(', 'c()<esc>P')
-map('v', '<leader>)', 'c()<esc>P')
-map('v', '<leader>[', 'c[]<esc>P')
-map('v', '<leader>]', 'c[]<esc>P')
-map('v', '<leader>{', 'c{}<esc>P')
-map('v', '<leader>}', 'c{}<esc>P')
-map('v', "<leader>'", "c''<esc>P")
-map('v', '<leader>"', 'c""<esc>P')
+map('v', '<leader>(',  'c()<esc>P')
+map('v', '<leader>)',  'c()<esc>P')
+map('v', '<leader>((', 'c(())<left><esc>P')
+map('v', '<leader>))', 'c(())<left><esc>P')
+map('v', '<leader>[',  'c[]<esc>P')
+map('v', '<leader>]',  'c[]<esc>P')
+map('v', '<leader>[[', 'c[[]]<left><esc>P')
+map('v', '<leader>]]', 'c[[]]<left><esc>P')
+map('v', '<leader>{',  'c{}<esc>P')
+map('v', '<leader>}',  'c{}<esc>P')
+map('v', '<leader>{{', 'c{{}}<left><esc>P')
+map('v', '<leader>}}', 'c{{}}<left><esc>P')
+map('v', "<leader>'",  "c''<esc>P")
+map('v', '<leader>"',  'c""<esc>P')
 
 -- Remove highlight
 map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
