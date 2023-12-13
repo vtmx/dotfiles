@@ -322,10 +322,10 @@ map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
 
 -- tmux
-map('n', '<m-h>', '<cmd>lua require("tmux").move_left()<cr>')
-map('n', '<m-j>', '<cmd>lua require("tmux").move_down()<cr>')
-map('n', '<m-k>', '<cmd>lua require("tmux").move_up()<cr>')
-map('n', '<m-l>', '<cmd>lua require("tmux").move_right()<cr>')
+map('n', '<a-h>', '<cmd>lua require("tmux").move_left()<cr>')
+map('n', '<a-j>', '<cmd>lua require("tmux").move_down()<cr>')
+map('n', '<a-k>', '<cmd>lua require("tmux").move_up()<cr>')
+map('n', '<a-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- References
 -- https://github.com/AstroNvim
