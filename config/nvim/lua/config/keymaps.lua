@@ -96,28 +96,20 @@ map('n', 'x', '"_x')
 map('n', '<del>', '"_x')
 
 -- Move lines
-map('n', '<s-a-j>', '<cmd>m .+1<cr>')
-map('n', '<s-a-k>', '<cmd>m .-2<cr>')
-map('i', '<s-a-j>', '<esc><cmd>m .+1<cr>==gi')
-map('i', '<s-a-k>', '<esc><cmd>m .-2<cr>==gi')
-map('v', '<s-a-j>', ":m '>+1<cr>gv=gv")
-map('v', '<s-a-k>', ":m '<-2<cr>gv=gv")
-
--- Move lines
--- map('n', '<a-j>', '<cmd>m .+1<cr>')
--- map('n', '<a-k>', '<cmd>m .-2<cr>')
--- map('i', '<a-j>', '<esc><cmd>m .+1<cr>==gi')
--- map('i', '<a-k>', '<esc><cmd>m .-2<cr>==gi')
--- map('v', '<a-j>', ":m '>+1<cr>gv=gv")
--- map('v', '<a-k>', ":m '<-2<cr>gv=gv")
+map('n', '<c-a-j>', '<cmd>m .+1<cr>')
+map('n', '<c-a-k>', '<cmd>m .-2<cr>')
+map('i', '<c-a-j>', '<esc><cmd>m .+1<cr>==gi')
+map('i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi')
+map('v', '<c-a-j>', ":m '>+1<cr>gv=gv")
+map('v', '<c-a-k>', ":m '<-2<cr>gv=gv")
 
 -- Clone lines
--- map('n', '<s-a-j>', 'yyp')
--- map('n', '<s-a-k>', 'yyP')
--- map('i', '<s-a-j>', '<esc>yypi')
--- map('i', '<s-a-k>', '<esc>yyPi')
--- map('v', '<s-a-j>', ":'<,'>copy '><cr>")
--- map('v', '<s-a-k>', 'ygvO<esc>P')
+map('n', '<c-s-a-j>', 'yyp')
+map('n', '<c-s-a-k>', 'yyP')
+map('i', '<c-s-a-j>', '<esc>yypi')
+map('i', '<c-s-a-k>', '<esc>yyPi')
+map('v', '<c-s-a-j>', ":'<,'>copy '><cr>")
+map('v', '<c-s-a-k>', 'ygvO<esc>P')
 
 -- Keep cursor end select when visual copy
 map('v', 'y', 'ygv<esc>')
