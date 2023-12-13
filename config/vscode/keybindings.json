@@ -1,5 +1,10 @@
 [
-  // Editor
+  // New file
+  {
+    "key": "alt+n",
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "editorTextFocus && !editorReadonly"
+  },
 
   // Add comment line
   {
@@ -22,7 +27,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
-  // Select all matches (ctrl + a). This is effectively the same as (ctrl + shift + l)
+  // Format document
   {
     "key": "shift+alt+f",
     "command": "editor.action.formatDocument"
@@ -278,7 +283,7 @@
   { "key": "ctrl+shift+a", "command": "wwm.aligncode", "when": "editorTextFocus && !editorReadonly" },
 
   // Vim
-  // Select
+  // Format document
   // VSCode attempt to emulate https://github.com/terryma/vim-multiple-cursors
 
   // Disable ctrl+a in search
