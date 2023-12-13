@@ -221,27 +221,18 @@
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.useSystemClipboard": false,
-  "vim.handleKeys": {
-    "<c-h>": false,
-    "<c-l>": false
-  },
   "vim.insertModeKeyBindingsNonRecursive": [
     // Go to normal mode
     {
       "before": ["k", "j"],
       "after": ["<esc>"]
     },
-    // Go to normal mode
-    {
-      "before": ["c-j"],
-      "after": ["<esc>"]
-    },
-    // Go to next char in insert mode
+    // Go to prev char
     {
       "before": ["<c-h>"],
       "after": ["left"]
     },
-    // Go to prev char in insert mode
+    // Go to prev char
     {
       "before": ["<c-l>"],
       "after": ["right"]
@@ -274,16 +265,8 @@
       "after": ["<c-x>"]
     },
     {
-      "before": ["x"],
-      "after": ["\"", "_", "x"]
-    },
-    {
-      "before": ["u"],
-      "commands": ["undo"]
-    },
-    {
-      "before": ["<c-r>"],
-      "commands": ["redo"]
+      "before": ["%"],
+      "after": ["G", "V", "g", "g"]
     },
     {
       "before": ["J"],
@@ -318,8 +301,16 @@
       "after": ["\"", "0", "p"]
     },
     {
-      "before": ["%"],
-      "after": ["G", "V", "g", "g"]
+      "before": ["ç"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
     },
     {
       "before": ["v", "v"],
@@ -330,12 +321,20 @@
       "commands": ["workbench.action.moveEditorToBelowGroup"]
     },
     {
-      "before": ["<c-d>"],
-      "after": ["<c-d>", "z", "z"]
+      "before": ["s", "a"],
+      "after": ["<plugys>"]
     },
     {
-      "before": ["<c-u>"],
-      "after": ["<c-u>", "z", "z"]
+      "before": ["s", "d"],
+      "after": ["<plugds>"]
+    },
+    {
+      "before": ["s", "r"],
+      "after": ["<plugcs>"]
+    },
+    {
+      "before": ["<c-d>"],
+      "after": ["<c-d>", "z", "z"]
     },
     {
       "before": ["<c-f>"],
@@ -344,6 +343,14 @@
     {
       "before": ["<c-h>"],
       "commands": ["editor.action.startFindReplaceAction"]
+    },
+    {
+      "before": ["<c-r>"],
+      "commands": ["redo"]
+    },
+    {
+      "before": ["<c-u>"],
+      "after": ["<c-u>", "z", "z"]
     },
     {
       "before": ["<c-s-e>"],
@@ -422,22 +429,6 @@
       "commands": [":noh"]
     },
     {
-      "before": ["ç"],
-      "commands": [":noh"]
-    },
-    {
-      "before": ["s", "a"],
-      "after": ["<plugys>"]
-    },
-    {
-      "before": ["s", "d"],
-      "after": ["<plugds>"]
-    },
-    {
-      "before": ["s", "r"],
-      "after": ["<plugcs>"]
-    },
-    {
       "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
@@ -452,12 +443,12 @@
       "after": ["<esc>"]
     },
     {
-      "before": ["ç"],
-      "after": ["<esc>"]
+      "before": [">"],
+      "after": [">", "g", "v"]
     },
     {
-      "before": ["y"],
-      "after": ["y", "g", "v", "<esc>"]
+      "before": ["<"],
+      "after": ["<", "g", "v"]
     },
     {
       "before": ["L"],
@@ -476,20 +467,20 @@
       "after": ["5", "k"]
     },
     {
-      "before": [">"],
-      "after": [">", "g", "v"]
+      "before": ["ç"],
+      "after": ["<esc>"]
     },
     {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    },
-    {
-      "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
+      "before": ["y"],
+      "after": ["y", "g", "v", "<esc>"]
     },
     {
       "before": ["<leader>", "d"],
       "after": ["\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "after": ["\"", "+", "y"]
     },
     {
       "before": ["<leader>", "p"],

@@ -316,27 +316,27 @@
 
   // Move lines
   {
-    "key": "shift+alt+j",
+    "key": "ctrl+alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "vim.active && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+alt+k",
+    "key": "ctrl+alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "vim.active && editorTextFocus && !editorReadonly"
   },
 
   // Clone lines
-  // {
-  //   "key": "alt+shift+j",
-  //   "command": "editor.action.copyLinesDownAction",
-  //   "when": "vim.active && editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+shift+k",
-  //   "command": "editor.action.copyLinesUpAction",
-  //   "when": "vim.active && editorTextFocus && !editorReadonly"
-  // },
+  {
+    "key": "ctrl+alt+shift+j",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "vim.active && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+shift+k",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "vim.active && editorTextFocus && !editorReadonly"
+  },
 
   // Auto-sugestion in navigation
   {
