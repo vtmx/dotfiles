@@ -32,11 +32,8 @@ gpdf() {
   cp -f "$HOME/.config/Code - OSS/User/keybindings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
   cp -f "$HOME/.config/Code - OSS/User/settings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
 
-  # Go to dotfiles dir
-  cd "$dotfiles_dir" 
-
   # Git commands
-  git add -A
+  git add -A "$dotfiles_dir"
   git commit -m "$message"
   git push
 }
