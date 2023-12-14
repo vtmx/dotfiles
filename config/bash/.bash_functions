@@ -23,14 +23,14 @@ gpdf() {
   [[ -z "$message" ]] && message="update dotfiles"
 
   # Copy nvim folder
-  rm -rdf "$HOME/Dev/dotfiles/config/nvim" > /dev/null
-  cp -r "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" > /dev/null
+  rm -rdf "$HOME/Dev/dotfiles/config/nvim" 2>&-
+  cp -r "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" 2>&-
 
   # Copy vscode
-  rm -f "$HOME/Dev/dotfiles/config/vscode/keybindings.json" > /dev/null
-  rm -f "$HOME/Dev/dotfiles/config/vscode/settings.json" > /dev/null
-  cp -f "$HOME/.config/Code - OSS/User/keybindings.json" "$HOME/Dev/dotfiles/config/vscode" > /dev/null
-  cp -f "$HOME/.config/Code - OSS/User/settings.json" "$HOME/Dev/dotfiles/config/vscode" > /dev/null
+  rm -f "$HOME/Dev/dotfiles/config/vscode/keybindings.json" 2>&-
+  rm -f "$HOME/Dev/dotfiles/config/vscode/settings.json" 2>&-
+  cp -f "$HOME/.config/Code - OSS/User/keybindings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
+  cp -f "$HOME/.config/Code - OSS/User/settings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
 
   # Go to dotfiles dir
   cd "$dotfiles_dir" 
