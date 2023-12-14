@@ -142,11 +142,11 @@
   },
   {
     "key": "ctrl+k j",
-    "command": "workbench.action.focusDownGroup"
+    "command": "workbench.action.focusBelowGroup"
   },
   {
     "key": "ctrl+k k",
-    "command": "workbench.action.focusUpGroup"
+    "command": "workbench.action.focusAboveGroup"
   },
   {
     "key": "alt+h",
@@ -154,11 +154,11 @@
   },
   {
     "key": "alt+j",
-    "command": "workbench.action.focusDownGroup"
+    "command": "workbench.action.focusBelowGroup"
   },
   {
     "key": "alt+k",
-    "command": "workbench.action.focusUpGroup"
+    "command": "workbench.action.focusAboveGroup"
   },
   {
     "key": "alt+l",

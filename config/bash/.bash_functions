@@ -26,6 +26,12 @@ gpdf() {
   rm -rdf "$HOME/Dev/dotfiles/config/nvim" > /dev/null
   cp -r "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" > /dev/null
 
+  # Copy vscode
+  rm -f "$HOME/Dev/dotfiles/config/vscode/keybindings.json" > /dev/null
+  rm -f "$HOME/Dev/dotfiles/config/vscode/settings.json" > /dev/null
+  cp -f "$HOME/.config/Code - OSS/User/keybindings.json" "$HOME/Dev/dotfiles/config/vscode" > /dev/null
+  cp -f "$HOME/.config/Code - OSS/User/settings.json" "$HOME/Dev/dotfiles/config/vscode" > /dev/null
+
   # Go to dotfiles dir
   cd "$dotfiles_dir" 
 
