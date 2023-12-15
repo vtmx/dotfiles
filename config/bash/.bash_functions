@@ -33,7 +33,8 @@ gpdf() {
   cp -f "$HOME/.config/Code - OSS/User/settings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
 
   # Git commands
-  git add -A "$dotfiles_dir"
+  cd "$dotfiles_dir"
+  git add -A
   git commit -m "$message"
   git push
 }
@@ -109,12 +110,13 @@ play() {
 
     # If subdir play like playlist
     to_play() {
-      # if ls -d */ > /dev/null; then
-      #   ls $1/**/*.mp3 > /tmp/playlist && mpv $args --playlist=/tmp/playlist
-      #   rm -f /tmp/playlist
-      # else
-        mpv $args $1
-      # fi
+      if [[ -d "$1" ]]; then
+        mpv $args --playlist=- <<< ls "$1"/** 2>&-
+      elif [[ "$1" =~ ^"http" ]]; then
+        mpv $args "$1"
+      else
+        mpv $args *
+      fi
     }
 
     case "$1" in
