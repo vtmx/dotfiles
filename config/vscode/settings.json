@@ -409,6 +409,10 @@
       "after": ["V", "\"", "+", "y"]
     },
     {
+      "before": ["<leader>", "y", "a"],
+      "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o"]
+    },
+    {
       "before": ["<leader>", "d"],
       "after": ["V", "\"", "+", "x"]
     },
@@ -480,7 +484,7 @@
     },
     {
       "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y"]
+      "after": ["\"", "+", "y", "g", "v", "<esc>"]
     },
     {
       "before": ["<leader>", "p"],
