@@ -106,7 +106,7 @@ mksh() {
 play() {
   if type mpv >& /dev/null; then
     local music="$HOME/Music"
-    local args="--no-video"
+    local args="--no-video --display-tags-clr"
 
     # If subdir play like playlist
     to_play() {

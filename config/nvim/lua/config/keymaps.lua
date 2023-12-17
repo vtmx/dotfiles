@@ -72,8 +72,11 @@ map('n', "'", '"')
 map('v', "'", '"')
 
 -- Yankie to clipboard
-map('n', '<leader>y', 'V"+y<esc><cmd>echo "Copy line to clipboard"<cr>')
-map('v', '<leader>y', '"+y<cmd>echo "Copy to clipboard"<cr>')
+map('n', '<leader>y', 'V"+y<cmd>echo "Copy line to clipboard"<cr>')
+map('v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>')
+
+-- Yankie all to clipboard
+map('n', '<leader>ya', 'G<s-v>gg"+y<c-o><c-o><cmd>echo "Copy all content to clipboard"<cr>')
 
 -- Delete to clipboard
 map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
