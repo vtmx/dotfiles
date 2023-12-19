@@ -123,6 +123,7 @@ play() {
       @(ani?(me)))        to_play "$music/j-music/anime"                        ;;
       @(brian|bc))        to_play "$music/jazz/brian-cullberston"               ;;
       @(jaz?(z)))         to_play "$music/jazz"                                 ;;
+      @(hiro|sawa))       to_play "$music/j-music/hiroyuki-sawano"              ;;
       lofi)               to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
       @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
       ost)                to_play "$music/ost"                                  ;;
