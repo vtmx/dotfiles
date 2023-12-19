@@ -158,6 +158,9 @@ local hl_groups = {
 
   -- Plugins
 
+  -- netrw
+  netrwTreeBar = { fg = c.fg },
+
   -- indent-line
   IblIndent = { fg = c.sel },
 
