@@ -374,7 +374,7 @@
     },
     {
       "before": ["<leader>", "j"],
-      "after": ["J"]
+      "after": ["m", "z", "J", "`", "z"]
     },
     {
       "before": ["<leader>", "n"],
@@ -481,6 +481,10 @@
     {
       "before": ["<leader>", "d"],
       "after": ["\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "R"],
+      "after": ["d", "<esc>", "\"", "+", "p"]
     },
     {
       "before": ["<leader>", "y"],

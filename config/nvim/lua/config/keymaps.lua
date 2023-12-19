@@ -84,15 +84,15 @@ map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
 
 -- Paste to clipboard
 map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+
+-- Register is not changed on paste
+map('x', '<leader>p', '"_dP')
 map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
 map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
 
--- Replace select to clipboard :(
--- map('v', 'r', '"0p')
-
--- Join lines
-map('n', '<leader>j', 'J')
+-- Join lines and keep cursor
+map('n', '<leader>j', 'mzJ`z')
 
 -- Delete not copy
 map('n', 'x', '"_x')
@@ -137,9 +137,14 @@ map('v', '<leader>"',  'c""<esc>P')
 map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
 map('n', 'ç', '<cmd>noh<cr>')
 
--- Replace word
+-- Replace word in cursor
 map('n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>')
-map('v', '<leader>r', '"hy:%s/<C-r>h//g<left><left>')
+
+-- Replace selected
+map('v', '<leader>r', '"hy:%s/<c-r>h//g<left><left>')
+
+-- Replace select to clipboard and keep cursor
+map('v', '<leader>R', ':s/<c-r><c-w>/<c-r>+/<cr>e')
 
 -- Keep search results centred
 map('n', 'n', 'nzzzv')
