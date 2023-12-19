@@ -176,10 +176,10 @@ map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
 map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
 
 -- Navigation panes
-map('n', '<c-h>', '<c-w>h')
-map('n', '<c-j>', '<c-w>j')
-map('n', '<c-k>', '<c-w>k')
-map('n', '<c-l>', '<c-w>l')
+map('n', '<a-h>', '<c-w>h')
+map('n', '<a-j>', '<c-w>j')
+map('n', '<a-k>', '<c-w>k')
+map('n', '<a-l>', '<c-w>l')
 
 -- Resize panes
 map('n', '<up>', '<cmd>resize +2<cr>')
