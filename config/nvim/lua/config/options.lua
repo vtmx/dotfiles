@@ -55,10 +55,14 @@ opt.splitright = true
 -- https://shapeshed.com/vim-netrw
 g.netrw_altv = 1
 g.netrw_banner = 0
+g.netrw_browse_split=4
 g.netrw_hide = 1
 g.netrw_keepdir = 0
-g.netrw_liststyle = 4
+g.netrw_liststyle = 3
 g.netrw_winsize = 20
+
+-- Search current directory recursively
+vim.cmd('set path+=**')
 
 -- Disable plugins
 vim.g.loaded_zip = 1

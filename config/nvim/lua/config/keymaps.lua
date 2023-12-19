@@ -138,7 +138,8 @@ map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
 map('n', 'ç', '<cmd>noh<cr>')
 
 -- Replace word
-map('n', '<leader>s', [[:%s/<c-r><c-w>//g<left><left>]])
+map('n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>')
+map('v', '<leader>r', '"hy:%s/<C-r>h//g<left><left>')
 
 -- Keep search results centred
 map('n', 'n', 'nzzzv')
@@ -293,7 +294,7 @@ map('n', '<leader>fc', '<cmd>HopChar1<cr>')
 map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
 
 -- nvim-tree
-map('n', '<leader>e', '<cmd>Lex<cr>')
+map('n', '<leader>e', '<cmd>15Lex<cr>')
 -- if vim.fn.exists(":NvimTreeToggle") ~= 0 then
 --   map('n', '<leader>e', '<cmd>Lex<cr>')
 -- else
@@ -330,6 +331,11 @@ map('n', '<a-j>', '<cmd>lua require("tmux").move_down()<cr>')
 map('n', '<a-k>', '<cmd>lua require("tmux").move_up()<cr>')
 map('n', '<a-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
+-- Test snipets
+-- map('i', ',i', 'if [ @ ]; then <cr><cr> else <cr><cr> fi ')
+-- map('i', ',c', 'case "$@" in <cr><cr> @)    ;; <cr><cr> esac')
+-- map('i', ',f', '@() {<cr><cr> } ')
+
 -- References
 -- https://github.com/AstroNvim
 -- https://github.com/LazyVim/LazyVim
@@ -337,3 +343,5 @@ map('n', '<a-l>', '<cmd>lua require("tmux").move_right()<cr>')
 -- https://github.com/NvChad
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
 -- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
+-- Automatically create if, case, and function templates in insert mode
+
