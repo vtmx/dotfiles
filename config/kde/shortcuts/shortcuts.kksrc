@@ -10,11 +10,11 @@ Switch to Next Keyboard Layout=
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+PgUp; Ctrl+[
+Activate Next Tab=Ctrl+PgDown; Ctrl+]
+Activate Previous Tab=Ctrl+[; Ctrl+PgUp
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
-Back=Back; Alt+Left
+Back=Alt+Left; Back
 BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
@@ -57,7 +57,7 @@ Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
 OpenRecent=
-Paste=Shift+Ins; Ctrl+V
+Paste=Ctrl+V; Shift+Ins
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+,
 PrevCompletion=Ctrl+Up
@@ -66,7 +66,7 @@ PrintPreview=
 Prior=PgUp
 Quit=
 Redo=Ctrl+Shift+Z
-Reload=Refresh; F5
+Reload=F5; Refresh
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -90,30 +90,30 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl+=; Ctrl++
+ZoomIn=Ctrl++; Ctrl+=
 ZoomOut=Ctrl+-
 
 [bismuth][Global Shortcuts]
 decrease_master_size=
 decrease_master_win_count=
-decrease_window_height=Meta+Alt+K; Meta+Alt+Up
-decrease_window_width=Meta+Alt+H; Meta+Alt+Left
-focus_bottom_window=Meta+J; Meta+Down
-focus_left_window=Meta+H; Meta+Left
+decrease_window_height=Meta+Alt+Up; Meta+Alt+K
+decrease_window_width=Meta+Alt+H
+focus_bottom_window=Meta+J
+focus_left_window=Meta+H
 focus_next_window=
 focus_prev_window=Meta+[
-focus_right_window=Meta+Right; Meta+L
-focus_upper_window=Meta+K; Meta+Up
+focus_right_window=Meta+L
+focus_upper_window=Meta+K
 increase_master_size=
 increase_master_win_count=
-increase_window_height=Meta+Alt+Down; Meta+Alt+J
-increase_window_width=Meta+Alt+L; Meta+Alt+Right
+increase_window_height=Meta+Alt+J; Meta+Alt+Down
+increase_window_width=Meta+Alt+L
 move_window_to_bottom_pos=Meta+Shift+J; Meta+Shift+Down
-move_window_to_left_pos=Meta+Shift+H; Meta+Shift+Left
+move_window_to_left_pos=Meta+Shift+Left; Meta+Shift+H
 move_window_to_next_pos=Meta+}
 move_window_to_prev_pos=Meta+{
 move_window_to_right_pos=Meta+Shift+Right; Meta+Shift+L
-move_window_to_upper_pos=Meta+Shift+Up; Meta+Shift+K
+move_window_to_upper_pos=Meta+Shift+K; Meta+Shift+Up
 next_layout=
 prev_layout=
 push_window_to_master=
@@ -129,6 +129,19 @@ toggle_stair_layout=
 toggle_three_column_layout=
 toggle_tile_layout=
 toggle_window_floating=
+
+[bitwarden.desktop][Global Shortcuts]
+_launch=Meta+W
+
+[code-oss.desktop][Global Shortcuts]
+_launch=Meta+V
+new-empty-window=
+
+[firefox.desktop][Global Shortcuts]
+_launch=Meta+B
+new-private-window=
+new-window=
+profile-manager-window=
 
 [juk][Global Shortcuts]
 back=Ctrl+Alt+Left
@@ -156,7 +169,7 @@ display=Meta+Shift+P; Display
 
 [khotkeys][Global Shortcuts]
 {0d49fc0d-917e-479c-a9da-8d50a7da6fce}=Meta+T
-{10c9bcc3-9b0d-4521-84ca-379dd92751b7}=Meta+B
+{10c9bcc3-9b0d-4521-84ca-379dd92751b7}=Meta+Shift+B
 {1a335688-a506-4256-9f49-ce930f66b214}=Print
 {451567a5-0106-4432-9e47-3574ab357941}=Meta+W
 {47c18075-af43-46bc-8961-8253910d4d4c}=Meta+,
@@ -167,8 +180,10 @@ display=Meta+Shift+P; Display
 {6362f0bd-d70e-4a33-9664-f5082b5cb972}=Meta+Space
 {6683d2fb-4605-4f27-a024-9bd0dcf67a10}=Meta+Ctrl+Return
 {71139430-99b7-43ad-8884-aaf60d7ddbc1}=Meta+G
-{761900a0-a7b8-41fc-a251-c898a66353cb}=Meta+Shift+B
+{761900a0-a7b8-41fc-a251-c898a66353cb}=Meta+B
 {7b1c160e-d384-4557-806c-818752ef2a42}=Meta+V
+{83ec1912-d71c-45f7-8b6b-886fbb6a4948}=Ctrl+Alt+Del
+{8577e6db-a469-4e2a-9a5c-684b9f7b5b36}=Meta+.
 {8fc7e5f7-8ccd-4f9d-afe4-ca72467449d3}=Meta+F1
 {91bc8599-b17c-452b-ade7-2049a29c83ca}=Meta+Shift+G
 {95051306-72da-45e1-b1c5-49efa10ca798}=Meta+F11
@@ -178,28 +193,34 @@ display=Meta+Shift+P; Display
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=
 {e46c203e-c9bc-4c90-8806-7c1167e45c2d}=Meta+A
 {e57d3a8f-11e9-4d75-87d1-bfd9ce763d5e}=Meta+S
+{f7b2137d-b365-437a-945c-8b6f759f7351}=Ctrl+Shift+Esc
+
+[kitty.desktop][Global Shortcuts]
+_launch=Meta+Return
 
 [kmix][Global Shortcuts]
 decrease_microphone_volume=Microphone Volume Down
-decrease_volume=Volume Down; Ctrl+Shift+F2
+decrease_volume=Ctrl+Shift+F2; Volume Down
 increase_microphone_volume=Microphone Volume Up
-increase_volume=Volume Up; Ctrl+Shift+F3
+increase_volume=Ctrl+Shift+F3; Volume Up
 mic_mute=Microphone Mute
 mute=Volume Mute
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
 Lock Session=
-Log Out=Ctrl+Alt+Del
+Log Out=
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
 
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=Ctrl+Alt+A
 Decrease Opacity=
+Edit Tiles=
 Expose=Ctrl+F9
 ExposeAll=Launch (C); Ctrl+F10
 ExposeClass=Ctrl+F7
+ExposeClassCurrentDesktop=
 FlipSwitchAll=
 FlipSwitchCurrent=
 Increase Opacity=
@@ -238,7 +259,7 @@ Switch to Desktop 19=
 Switch to Desktop 2=Ctrl+F2; Meta+2
 Switch to Desktop 20=
 Switch to Desktop 3=Meta+3; Ctrl+F3
-Switch to Desktop 4=Meta+4; Ctrl+F4
+Switch to Desktop 4=Ctrl+F4; Meta+4
 Switch to Desktop 5=Meta+5
 Switch to Desktop 6=Meta+6
 Switch to Desktop 7=Meta+7
@@ -246,7 +267,7 @@ Switch to Desktop 8=Meta+8
 Switch to Desktop 9=Meta+9
 Switch to Next Desktop=Meta+Ctrl+L; Meta+Ctrl+Right
 Switch to Next Screen=
-Switch to Previous Desktop=Meta+Ctrl+H; Meta+Ctrl+Left
+Switch to Previous Desktop=Meta+Ctrl+Left; Meta+Ctrl+H
 Switch to Previous Screen=
 Switch to Screen 0=
 Switch to Screen 1=
@@ -256,6 +277,10 @@ Switch to Screen 4=
 Switch to Screen 5=
 Switch to Screen 6=
 Switch to Screen 7=
+Switch to Screen Above=
+Switch to Screen Below=
+Switch to Screen to the Left=
+Switch to Screen to the Right=
 Toggle=
 Toggle Night Color=
 Toggle Window Raise/Lower=
@@ -273,15 +298,15 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Meta+C; Alt+F4; Meta+Q; Ctrl+Q
+Window Close=Meta+Q; Meta+C; Ctrl+Q; Alt+F4
 Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
 Window Lower=
-Window Maximize=
+Window Maximize=Meta+Up; Meta+PgUp
 Window Maximize Horizontal=
 Window Maximize Vertical=
-Window Minimize=
+Window Minimize=Meta+PgDown; Meta+Down
 Window Move=
 Window Move Center=
 Window No Border=
@@ -290,6 +315,10 @@ Window One Desktop Down=
 Window One Desktop Up=
 Window One Desktop to the Left=
 Window One Desktop to the Right=
+Window One Screen Down=
+Window One Screen Up=
+Window One Screen to the Left=
+Window One Screen to the Right=
 Window Operations Menu=Alt+F3
 Window Pack Down=
 Window Pack Left=
@@ -298,13 +327,13 @@ Window Pack Up=
 Window Quick Tile Bottom=
 Window Quick Tile Bottom Left=
 Window Quick Tile Bottom Right=
-Window Quick Tile Left=
-Window Quick Tile Right=
+Window Quick Tile Left=Meta+Left
+Window Quick Tile Right=Meta+Right
 Window Quick Tile Top=
 Window Quick Tile Top Left=
 Window Quick Tile Top Right=
 Window Raise=
-Window Resize=
+Window Resize=Meta+Alt+Left
 Window Shade=
 Window Shrink Horizontal=
 Window Shrink Vertical=
@@ -328,9 +357,9 @@ Window to Desktop 6=
 Window to Desktop 7=Meta+&
 Window to Desktop 8=Meta+*
 Window to Desktop 9=Meta+(
-Window to Next Desktop=Meta+Ctrl+Shift+Right; Meta+Ctrl+Shift+L
+Window to Next Desktop=Meta+Ctrl+Shift+L; Meta+Ctrl+Shift+Right
 Window to Next Screen=
-Window to Previous Desktop=Meta+Ctrl+Shift+H; Meta+Ctrl+Shift+Left
+Window to Previous Desktop=Meta+Ctrl+Shift+Left; Meta+Ctrl+Shift+H
 Window to Previous Screen=
 Window to Screen 0=
 Window to Screen 1=
@@ -361,17 +390,32 @@ playpausemedia=Media Play
 previousmedia=Media Previous
 stopmedia=Media Stop
 
+[net.lutris.Lutris.desktop][Global Shortcuts]
+_launch=Meta+Shift+G
+
+[org.flameshot.Flameshot.desktop][Global Shortcuts]
+Capture=Meta+S; Print
+Configure=
+Launcher=
+_launch=
+
 [org.kde.dolphin.desktop][Global Shortcuts]
 _launch=Meta+E
+
+[org.kde.kcalc.desktop][Global Shortcuts]
+_launch=Launch (1)
+
+[org.kde.kcolorchooser.desktop][Global Shortcuts]
+_launch=Meta+P
 
 [org.kde.konsole.desktop][Global Shortcuts]
 NewTab=
 NewWindow=
-_launch=
+_launch=Ctrl+Alt+T
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Alt+F2; Search; Alt+Space
+_launch=Alt+Space; Search; Alt+F2
 
 [org.kde.ksysguard.desktop][Global Shortcuts]
 _launch=Ctrl+Shift+Esc
@@ -391,6 +435,9 @@ _launch=
 [org.manjaro.pamac.manager.desktop][Global Shortcuts]
 _launch=Meta+A
 updates=
+
+[org.qbittorrent.qBittorrent.desktop][Global Shortcuts]
+_launch=Meta+T
 
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
@@ -419,6 +466,7 @@ activate widget 20=
 activate widget 3=
 activate widget 32=
 activate widget 35=Meta+F4
+activate widget 5=
 activate widget 8=
 clear-history=
 clipboard_action=Ctrl+Alt+X
@@ -438,10 +486,30 @@ switch to next activity=
 switch to previous activity=
 toggle do not disturb=
 
+[steam.desktop][Global Shortcuts]
+BigPicture=
+Community=
+Friends=
+Library=
+News=
+Screenshots=
+Servers=
+Settings=
+Store=
+_launch=Meta+G
+
 [systemsettings.desktop][Global Shortcuts]
-_launch=Meta+I; Tools
+_launch=Meta+,; Tools; Meta+I
 kcm-kscreen=
 kcm-lookandfeel=
 kcm-users=
 powerdevilprofilesconfig=
 screenlocker=
+
+[vivaldi-stable.desktop][Global Shortcuts]
+_launch=Meta+Shift+B
+new-private-window=
+new-window=
+
+[vlc.desktop][Global Shortcuts]
+_launch=Meta+M

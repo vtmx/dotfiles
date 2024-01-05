@@ -39,6 +39,7 @@ krita
 krusader
 kwin-bismuth
 lutris
+lynx
 mkvtoolnix-cli
 mkvtoolnix-gui
 mpv

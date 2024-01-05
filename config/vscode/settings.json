@@ -104,7 +104,6 @@
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
-  "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#1e2227",

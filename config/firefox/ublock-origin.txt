@@ -1,0 +1,30 @@
+! Spotify
+open.spotify.com##._gB1lxCfXeR8_Wze5Cx9
+open.spotify.com##.ZzUvBwE6uj5CAU2pjlQX.NGSgqDuaOH2VDApkzoxN.HkbHLcqgUfXruL5xVi28
+
+! Torrent
+www.torrentdofilmeshd.net##.znzfspwtvrvmkjqfkmmvwwkzckzntbjvhztrgfidudgfmvhyutjwyjl.rnjqyfmgurtldmwbbrcmdvxrnvbxtasvtdrugqyujcmdjwyjl
+
+! Youtube
+www.youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
+www.youtube.com##ytd-rich-section-renderer.ytd-rich-grid-renderer.style-scope
+www.youtube.com###details-container
+www.youtube.com###foreground-content
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(1)
+www.youtube.com###chips-wrapper > .ytd-feed-filter-chip-bar-renderer.style-scope
+www.youtube.com###header > .ytd-rich-grid-renderer.style-scope
+
+! Sidebar
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(3)
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(4)
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(5)
+www.youtube.com###guide-links-primary
+www.youtube.com###guide-links-secondary
+www.youtube.com###copyright
+
+! Content
+! www.youtube.com##.ytd-two-column-browse-results-renderer.style-scope > .ytd-rich-grid-renderer.style-scope
+
+! Chat
+! www.youtube.com###secondary
+

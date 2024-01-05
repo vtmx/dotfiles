@@ -39,6 +39,13 @@ gpdf() {
   git push
 }
 
+# Git add, commit and push
+gP() {
+  git add -A
+  if ! gc $1; then return 1; fi
+  git push
+}
+
 # Extract
 ex() {
   if [[ -f "$1" ]]; then
