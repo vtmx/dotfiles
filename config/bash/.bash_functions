@@ -142,7 +142,7 @@ play() {
 }
 
 # SSH Add Agent
-sa() {
+ssa() {
   eval "$(ssh-agent -s)"
   ssh-add -k
 }
