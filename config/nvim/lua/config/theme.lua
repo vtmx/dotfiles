@@ -178,6 +178,8 @@ local hl_groups = {
 
   -- lazy
   LazyNormal               = { bg = c.bgd },
+  LazyProp                 = { bg = c.sel },
+  LazyDimmed               = { bg = c.sel },
 
   -- nvim-tree
   NvimTreeCursorLine       = { bg = c.bgl },
