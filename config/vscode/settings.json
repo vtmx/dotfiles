@@ -35,6 +35,9 @@
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "none",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.semanticHighlighting.enabled": false,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "comments": "#5c6370",
@@ -100,6 +103,7 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
+  "workbench.editor.labelFormat": "short",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
