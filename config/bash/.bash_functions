@@ -2,6 +2,15 @@
 shopt -s extglob
 shopt -s globstar
 
+# Copy and go to the directory
+cpcd () {
+	if [[ -d "$2" ]]; then
+		cp "$1" "$2" && cd "$2"
+	else
+		cp "$1" "$2"
+	fi
+}
+
 # Simplified git commit
 gc() {
   if [[ -n "$1" ]]; then
@@ -107,6 +116,29 @@ mksh() {
 
   # Make script executable and open script
   chmod +x "$file" && $EDITOR +3 "$file"
+}
+
+# Move and go to the directory
+mvcd () {
+	if [[ -d "$2" ]];then
+		mv "$1" "$2" && cd "$2"
+	else
+		mv "$1" "$2"
+	fi
+}
+
+# Rename extension
+mvext() {
+  [[ $1 && $2 ]] || {
+    echo 'usage: mvext [old extension] [new extension]'
+    return 1
+  }
+
+  for file in *.$1; do
+    mv "$file" "${file%.$1}.$2"
+  done
+
+  return 0
 }
 
 # Play
