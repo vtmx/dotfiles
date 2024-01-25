@@ -501,5 +501,6 @@
       "before": ["<leader>", "'"],
       "after": ["c", "'", "'", "<esc>", "P"]
     }
-  ]
+  ],
+  "window.zoomLevel": 2
 }

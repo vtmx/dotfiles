@@ -106,6 +106,9 @@ map('i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi')
 map('v', '<c-a-j>', ":m '>+1<cr>gv=gv")
 map('v', '<c-a-k>', ":m '<-2<cr>gv=gv")
 
+-- Comment line (dosen't work)
+map('i', '<c-;>', "<esc><cmd>MiniComment.toggle_lines()<cr>i")
+
 -- Clone lines
 map('n', '<c-s-a-j>', 'yyp')
 map('n', '<c-s-a-k>', 'yyP')
@@ -163,6 +166,7 @@ map('v', '<', '<gv')
 map('n', '<leader>n', '<cmd>ene<cr>')
 map('n', '<leader>bn', '<cmd>ene<cr>')
 
+map('n', '<leader>w', '<cmd>bd<cr>')
 map('n', '<leader>bd', '<cmd>bd<cr>')
 map('n', '<leader>bc', '<cmd>bd<cr>')
 

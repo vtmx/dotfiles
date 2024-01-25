@@ -160,7 +160,10 @@ alias rmdy="rm -rf"
 
 # live-server
 # https://www.npmjs.com/package/live-server
-alias live="live-server"
+# https://github.com/Browsersync/browser-sync
+# alias live="live-server"
+# alias live=" python -m http.server -b 127.0.0.1 8000 
+alias live="browser-sync start --server --files *"
 
 # source
 alias so="source"
