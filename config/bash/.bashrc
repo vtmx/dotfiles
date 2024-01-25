@@ -65,3 +65,5 @@ if type -P zoxide > /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
+# nvm
+source ~/.nvm/nvm.sh

@@ -3,7 +3,7 @@ return {
   event = 'BufEnter',
   opts = {
     window = {
-      width = 80,
+      width = 60,
       options = {
         cursorline = false,
         number = false,
