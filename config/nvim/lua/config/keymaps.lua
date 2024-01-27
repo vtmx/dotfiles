@@ -170,14 +170,14 @@ map('n', '<leader>w', '<cmd>bd<cr>')
 map('n', '<leader>bd', '<cmd>bd<cr>')
 map('n', '<leader>bc', '<cmd>bd<cr>')
 
-map('n', '<leader>l', '<cmd>bn<cr>')
 map('n', '<leader>bl', '<cmd>bn<cr>')
 map('n', '<leader>bn', '<cmd>bn<cr>')
+map('n', '<c-l>', '<cmd>bn<cr>')
 map('n', '<tab>', '<cmd>bn<cr>')
 
-map('n', '<leader>h', '<cmd>bp<cr>')
 map('n', '<leader>bh', '<cmd>bp<cr>')
 map('n', '<leader>bp', '<cmd>bp<cr>')
+map('n', '<c-h>', '<cmd>bn<cr>')
 map('n', '<s-tab>', '<cmd>bn<cr>')
 
 -- Split pane
@@ -189,6 +189,12 @@ map('n', '<a-h>', '<c-w>h')
 map('n', '<a-j>', '<c-w>j')
 map('n', '<a-k>', '<c-w>k')
 map('n', '<a-l>', '<c-w>l')
+
+-- tmux
+map('n', '<a-h>', '<cmd>TmuxNavigateLeft<cr>')
+map('n', '<a-j>', '<cmd>TmuxNavigateDown<cr>')
+map('n', '<a-k>', '<cmd>TmuxNavigateUp<cr>')
+map('n', '<a-l>', '<cmd>TmuxNavigateRight<cr>')
 
 -- Resize panes
 map('n', '<up>', '<cmd>resize +2<cr>')
@@ -333,12 +339,6 @@ map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 
 -- zen mode
 map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
-
--- tmux
-map('n', '<a-h>', '<cmd>lua require("tmux").move_left()<cr>')
-map('n', '<a-j>', '<cmd>lua require("tmux").move_down()<cr>')
-map('n', '<a-k>', '<cmd>lua require("tmux").move_up()<cr>')
-map('n', '<a-l>', '<cmd>lua require("tmux").move_right()<cr>')
 
 -- Test snipets
 -- map('i', ',i', 'if [ @ ]; then <cr><cr> else <cr><cr> fi ')
