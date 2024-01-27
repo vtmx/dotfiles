@@ -37,8 +37,8 @@ return {
     'junegunn/vim-slash',
     event = 'BufEnter'
   },
-  { 
-    'christoomey/vim-tmux-navigator',
+  {
+    "christoomey/vim-tmux-navigator",
     event = 'BufEnter'
   }
 }
