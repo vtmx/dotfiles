@@ -178,7 +178,7 @@ map('n', '<tab>', '<cmd>bn<cr>')
 map('n', '<leader>bh', '<cmd>bp<cr>')
 map('n', '<leader>bp', '<cmd>bp<cr>')
 map('n', '<c-h>', '<cmd>bn<cr>')
-map('n', '<s-tab>', '<cmd>bn<cr>')
+map('n', '<s-tab>', '<cmd>bp<cr>')
 
 -- Split pane
 map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')

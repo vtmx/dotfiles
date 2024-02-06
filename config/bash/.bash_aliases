@@ -73,10 +73,10 @@ alias e="$EDITOR"
 alias f="fish"
 
 # exa
-alias exaa="exa -a | grep '^\.'"
-alias exal="exa -l --color=auto --group-directories-first"
-alias exas="exa --color=auto --group-directories-first"
-alias tree="exa -T"
+alias ezaa="eza -a | grep '^\.'"
+alias ezal="eza -l --color=auto --group-directories-first"
+alias ezas="eza --color=auto --group-directories-first"
+alias tree="eza -T"
 
 # git
 alias g="git"
@@ -163,7 +163,7 @@ alias rmdy="rm -rf"
 # https://github.com/Browsersync/browser-sync
 # alias live="live-server"
 # alias live=" python -m http.server -b 127.0.0.1 8000 
-alias live="browser-sync start --server --files *"
+alias live="browser-sync start --server "." --files *"
 
 # source
 alias so="source"

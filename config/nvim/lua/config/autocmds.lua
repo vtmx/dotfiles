@@ -30,6 +30,16 @@ autocmd('FileType', {
   }
 )
 
+-- Force markdown to 2 spaces
+autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.opt.shiftwidth = 2
+    vim.opt.tabstop = 2
+    vim.opt.softtabstop = 2
+  end
+})
+
 -- Run by file
 exec([[
   autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
