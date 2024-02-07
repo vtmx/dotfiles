@@ -172,12 +172,10 @@ map('n', '<leader>bc', '<cmd>bd<cr>')
 
 map('n', '<leader>bl', '<cmd>bn<cr>')
 map('n', '<leader>bn', '<cmd>bn<cr>')
-map('n', '<c-l>', '<cmd>bn<cr>')
 map('n', '<tab>', '<cmd>bn<cr>')
 
 map('n', '<leader>bh', '<cmd>bp<cr>')
 map('n', '<leader>bp', '<cmd>bp<cr>')
-map('n', '<c-h>', '<cmd>bn<cr>')
 map('n', '<s-tab>', '<cmd>bp<cr>')
 
 -- Split pane
@@ -302,31 +300,28 @@ map('n', '<leader>uw', '', {
 -- Plugins
 ------------------------------------------------------------
 
--- hop
-map('n', '<leader>fc', '<cmd>HopChar1<cr>')
-
 -- lazy
 map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
 
 -- nvim-tree
-map('n', '<leader>e', '<cmd>15Lex<cr>')
--- if vim.fn.exists(":NvimTreeToggle") ~= 0 then
---   map('n', '<leader>e', '<cmd>Lex<cr>')
--- else
---   map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
--- end
+if vim.fn.exists(':NvimTreeToggle') then
+  map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+else
+  map('n', '<leader>e', '<cmd>15Lex<cr>')
+end
 
 -- telescope
 map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
 map('n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>')
+map('n', '<leader>fc', '<cmd>HopChar1<cr>') -- hop
 map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
 map('n', '<leader>fC', '<cmd>Telescope commands<cr>')
 map('n', '<leader>ff', '<cmd>Telescope file_browser<cr>')
 map('n', '<leader>fF', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>fg', '<cmd>Telescope git_files<cr>')
-map('n', '<leader>fgb', '<cmd>Telescope git_branches<cr>')
-map('n', '<leader>fgc', '<cmd>Telescope git_commits<cr>')
-map('n', '<leader>fgs', '<cmd>Telescope git_status<cr>')
+-- map('n', '<leader>fgb', '<cmd>Telescope git_branches<cr>')
+-- map('n', '<leader>fgc', '<cmd>Telescope git_commits<cr>')
+-- map('n', '<leader>fgs', '<cmd>Telescope git_status<cr>')
 map('n', '<leader>fh', '<cmd>Telescope highlights<cr>')
 map('n', '<leader>fH', '<cmd>Telescope help_tags<cr>')
 map('n', '<leader>fk', '<cmd>Telescope keymaps<cr>')
