@@ -218,6 +218,9 @@ local hl_groups = {
   TelescopeMatching        = { fg = c.blue },
   TelescopePromptPrefix    = { fg = c.fg   },
 
+  -- mini.indentscope
+  MiniIndentscopeSymbol    = { fg = c.sel  },
+
   -- which-key
   WhichKey                 = { fg = c.blue   },
   WhichKeyDesc             = { fg = c.fg     },

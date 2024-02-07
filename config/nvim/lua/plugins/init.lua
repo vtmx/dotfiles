@@ -1,11 +1,5 @@
 return {
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = 'ibl',
-    event = 'BufEnter',
-    config = true
-  },
-  {
     'phaazon/hop.nvim',
     cmd = 'HopChar1',
     config = true
@@ -19,6 +13,19 @@ return {
     'echasnovski/mini.comment',
     event = 'BufEnter',
     config = true
+  },
+  {
+    'echasnovski/mini.indentscope',
+    event = 'BufEnter',
+    config = true,
+    opts = {
+      symbol = '│',
+      priority = 3,
+
+      draw = {
+        delay = 0
+      }
+    }
   },
   -- {
   --   'echasnovski/mini.jump',
@@ -37,8 +44,8 @@ return {
     'junegunn/vim-slash',
     event = 'BufEnter'
   },
-  {
-    "christoomey/vim-tmux-navigator",
-    event = 'BufEnter'
-  }
+  -- {
+  --   "christoomey/vim-tmux-navigator",
+  --   event = 'BufEnter'
+  -- }
 }
