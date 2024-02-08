@@ -75,8 +75,12 @@ map('v', "'", '"')
 map('n', '<leader>y', 'V"+y<cmd>echo "Copy line to clipboard"<cr>')
 map('v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>')
 
--- Yankie all to clipboard
-map('n', '<leader>ya', 'G<s-v>gg"+y<c-o><c-o><cmd>echo "Copy all content to clipboard"<cr>')
+-- Yankie line to clipboard
+map('n', 'gy', '0V"+y<c-o><cmd>echo "Copy line to clipboard"<cr>')
+
+-- Yankie file to clipboard
+-- map('n', 'gY', 'ggVG"+y<c-o><cmd>echo "Copy all content to clipboard"<cr>') -- effect hightlight strange
+map('n', 'gY', 'GVgg"+y<c-o><c-o><cmd>echo "Copy all content to clipboard"<cr>') -- effect hightight nice
 
 -- Delete to clipboard
 map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
