@@ -49,14 +49,18 @@ local hl_groups = {
   TermCursor     = { fg = c.fg      },
 
   -- Float popup
-  NormalFloat    = { bg = c.bg },
-  FloatBorder    = { bg = c.bg },
+  NormalFloat        = { bg = c.bg },
+  FloatBorder        = { bg = c.bg, fg = c.fgd },
+  FloatShadow        = { bg = c.bgd },
+  FloatShadowThrough = { bg = c.bgd },
 
   -- Search
   Delimiter      = { fg = c.purple },
   IncSearch      = { bg = c.sel    },
   MatchParen     = { fg = c.yellow },
   Search         = { bg = c.sel    },
+  CurSearch      = { bg = c.sel    },
+  Conceal        = { bg = c.sel    },
 
   -- Messages
   ModeMsg        = { fg = c.fgd     },
@@ -156,13 +160,54 @@ local hl_groups = {
   cssTagName      = { fg = c.red    },
   cssVendor       = { fg = c.fg     },
 
+  -- Diagnostic
+  DiagnosticError            = { fg = c.red },
+  DiagnosticFloatingError    = { fg = c.red },
+  DiagnosticFloatingHiting   = { fg = c.cyan },
+  DiagnosticFloatingInfo     = { fg = c.blue },
+  DiagnosticFloatingOk       = { fg = c.green },
+  DiagnosticFloatingWarn     = { fg = c.yellow },
+  DiagnosticHint             = { fg = c.cyan },
+  DiagnosticInfo             = { fg = c.blue },
+  DiagnosticOk               = { fg = c.green },
+  DiagnosticSignError        = { fg = c.red },
+  DiagnosticSignHint         = { fg = c.cyan },
+  DiagnosticSignOk           = { fg = c.green },
+  DiagnosticSignWarn         = { fg = c.yellow },
+  DiagnosticUnnecessary      = { fg = c.comment, italic = true },
+  DiagnosticVirtualTextError = { fg = c.red },
+  DiagnosticVirtualTextHint  = { fg = c.cyan },
+  DiagnosticVirtualTextInfo  = { fg = c.blue },
+  DiagnosticVirtualTextOk    = { fg = c.green },
+  DiagnosticVirtualTextWarn  = { fg = c.yellow },
+  DiagnosticWarn             = { fg = c.yellow },
+
+  -- Diff
+  DiffAdd    = { fg = c.green },
+  DiffChange = { fg = c.blue },
+  DiffDelete = { fg = c.red },
+  DiffText   = { fg = c.fg },
+
+  -- Float
+  FoldColumn = { bg = c.sel, fg = c.cyan },
+  Folder = { bg = c.sel, fg = c.cyan },
+
+  -- I dont know
+  ColorColumn     = { bg = c.red, fg = c.bg },
+  CursorColumn    = { fg = c.sel },
+
   -- Plugins
 
   -- netrw
   netrwTreeBar = { fg = c.fg },
 
+  -- codium
+  CodiumAnnotation = { fg = c.fg },
+  CodiumSuggestion = { fg = c.fgd },
+
   -- indent-line
-  IblIndent = { fg = c.sel },
+  IblIndent = { fg = c.sel  },
+  IblScope =  { fg = c.red, bg = c.blue  },
 
   -- bufferline
   BufferLineCloseButtonVisible = { bg = 'NONE' },
@@ -198,6 +243,9 @@ local hl_groups = {
   -- mini
   MiniJump                 = { fg = c.red  },
 
+  -- oil
+  -- OilSocket                = { fg = c.fg  },
+
   -- telescope
   TelescopeMultiSelection  = { fg = c.fg   },
   TelescopeMultiIcon       = { fg = c.fg   },
@@ -218,9 +266,6 @@ local hl_groups = {
   TelescopeMatching        = { fg = c.blue },
   TelescopePromptPrefix    = { fg = c.fg   },
 
-  -- mini.indentscope
-  MiniIndentscopeSymbol    = { fg = c.sel  },
-
   -- which-key
   WhichKey                 = { fg = c.blue   },
   WhichKeyDesc             = { fg = c.fg     },
@@ -229,6 +274,7 @@ local hl_groups = {
   WhichKeySeparator        = { fg = c.fg     },
 }
 
+-- Loop for colors
 for name, val in pairs(hl_groups) do
   vim.api.nvim_set_hl(0, name, val)
 end

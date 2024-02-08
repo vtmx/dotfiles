@@ -304,7 +304,9 @@ map('n', '<leader>uw', '', {
 map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
 
 -- nvim-tree
-if vim.fn.exists(':NvimTreeToggle') then
+if vim.fn.exists(':Oil') then
+  map('n', '<leader>e', '<cmd>lua require("oil").toggle_float()<cr>')
+elseif vim.fn.exists(':NvimTreeToggle') then
   map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 else
   map('n', '<leader>e', '<cmd>15Lex<cr>')
