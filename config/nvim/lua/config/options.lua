@@ -2,6 +2,7 @@
 local g = vim.g
 local opt = vim.opt
 
+-- News
 -- if vim.fn.has('nvim-0.8') == 1 then
 --   opt.winbar = '%f'
 --   opt.cmdheight = 0
@@ -9,75 +10,92 @@ local opt = vim.opt
 --   opt.cmdheight = 1
 -- end
 
-opt.termguicolors = true
-opt.title = true
-opt.autochdir = true
-opt.cursorline = true
-opt.shell = 'fish'
-opt.exrc = true
-opt.ignorecase = true
-opt.smartcase = true
-opt.lazyredraw = true
-opt.mouse = 'a'
+-- if vim.fn.has('nvim-0.10') == 1 then
+--   opt.smoothscroll = true
+-- end
 
--- notification
-opt.backup = false
-opt.swapfile = false
-
--- number
-opt.number = true
-opt.relativenumber = true
-
--- wrap
-opt.wrap = false
-opt.textwidth = 0
-opt.wrapmargin = 0
-
--- indent
 local indent = 2
-opt.expandtab = true
-opt.smartindent = true
-opt.shiftwidth = indent 
-opt.tabstop = indent 
-opt.softtabstop = indent 
+
+local opts = {
+  termguicolors = true,
+  title = true,
+  autochdir = true,
+  cursorline = true,
+  shell = 'fish',
+  exrc = true,
+  ignorecase = true,
+  smartcase = true,
+  lazyredraw = true,
+  mouse = 'a',
+
+  -- notification
+  backup = false,
+  swapfile = false,
+
+  -- number
+  number = true,
+  relativenumber = true,
+
+  -- wrap
+  wrap = false,
+  textwidth = 0,
+  wrapmargin = 0,
+
+  -- indent
+  expandtab = true,
+  smartindent = true,
+  shiftwidth = indent ,
+  tabstop = indent ,
+  softtabstop = indent ,
+
+  -- list char
+  listchars = 'tab:›-,space:·,trail:⋯,eol:↲',
+
+  -- split
+  laststatus = 3,
+  splitbelow = true,
+  splitright = true,
+}
+
 opt.wildignore:append { '*/node_modules/*' }
 
--- list char
-opt.listchars = 'tab:›-,space:·,trail:⋯,eol:↲'
+for k, v in pairs(opts) do
+  opt[k] = v
+end
 
--- split
-opt.laststatus = 3
-opt.splitbelow = true
-opt.splitright = true
+local gs = {
+  netrw_altv = 1,
+  netrw_banner = 0,
+  netrw_browse_split=4,
+  netrw_hide = 1,
+  netrw_keepdir = 0,
+  netrw_liststyle = 3,
+  netrw_winsize = 20,
 
--- netrw
--- https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer
--- https://shapeshed.com/vim-netrw
-g.netrw_altv = 1
-g.netrw_banner = 0
-g.netrw_browse_split=4
-g.netrw_hide = 1
-g.netrw_keepdir = 0
-g.netrw_liststyle = 3
-g.netrw_winsize = 20
+  -- Disable plugins
+  loaded_zip = 1,
+  loaded_gzip = 1,
+  loaded_man = 1,
+  loaded_matchit = 1,
+  loaded_matchparen = 1,
+  -- loaded_netrwPlugin = 1,
+  loaded_remote_plugins = 1,
+  loaded_shada_plugin = 1,
+  loaded_spellfile_plugin = 1,
+  loaded_tarPlugin= 1,
+  loaded_2html_plugin= 1,
+  loaded_tutor_mode_plugin = 1,
+}
+
+for k, v in pairs(gs) do
+  g[k] = v
+end
 
 -- Search current directory recursively
 vim.cmd('set path+=**')
 
--- Disable plugins
-vim.g.loaded_zip = 1
-vim.g.loaded_gzip = 1
-vim.g.loaded_man = 1
-vim.g.loaded_matchit = 1
-vim.g.loaded_matchparen = 1
--- vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_remote_plugins = 1
-vim.g.loaded_shada_plugin = 1
-vim.g.loaded_spellfile_plugin = 1
-vim.g.loaded_tarPlugin= 1
-vim.g.loaded_2html_plugin= 1
-vim.g.loaded_tutor_mode_plugin = 1
-
 -- References
+-- https://shapeshed.com/vim-netrw
 -- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
+-- https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer
 
