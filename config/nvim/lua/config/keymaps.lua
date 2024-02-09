@@ -7,8 +7,12 @@ end
 -- Leader key
 vim.g.mapleader = ' '
 
--- Reload file
-map('n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>')
+map(
+  'n',
+  '<leader>r',
+  '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
+  { desc = 'Reload config file' }
+)
 
 -- Scape
 map('i', 'kj', '<esc>')
@@ -57,11 +61,10 @@ map('n', '=', '<c-a>')
 map('n', '-', '<c-x>')
 
 -- Select all
-map('n', '<leader>a', 'G<s-v>gg')
-map('n', '%', 'G<s-v>gg')
+map('n', '<leader>a', 'G<s-v>gg', { desc = 'Select all' })
 
--- Redo
-map('n', 'U', '<c-r>')
+map('n', '%', 'G<s-v>gg', { desc = 'Select all' })
+map('n', 'U', '<c-r>', { desc = 'Redo' })
 
 -- Mark
 map('n', 'm', '`')
@@ -71,29 +74,84 @@ map('n', 'M', 'm')
 map('n', "'", '"')
 map('v', "'", '"')
 
--- Yankie to clipboard
-map('n', '<leader>y', 'V"+y<cmd>echo "Copy line to clipboard"<cr>')
-map('v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>')
+-- Clipboard
 
--- Yankie line to clipboard
-map('n', 'gy', '0V"+y<c-o><cmd>echo "Copy line to clipboard"<cr>')
+map(
+  'v',
+  '<leader>y',
+  '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
+  { desc = 'Yanki selectted line to clipboard' }
+)
 
--- Yankie file to clipboard
--- map('n', 'gY', 'ggVG"+y<c-o><cmd>echo "Copy all content to clipboard"<cr>') -- effect hightlight strange
-map('n', 'gY', 'GVgg"+y<c-o><c-o><cmd>echo "Copy all content to clipboard"<cr>') -- effect hightight nice
+map(
+  'n',
+  '<leader>y',
+  '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  { desc = 'Yank current line to clipboard' }
+)
 
--- Delete to clipboard
-map('n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>')
-map('v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>')
+map(
+  'n',
+  'yl',
+  '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  { desc = 'Yank current line to clipboard' }
+)
 
--- Paste to clipboard
-map('n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+map(
+  'n',
+  'ya',
+  '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  { desc = 'Copy all content to clipboard' }
+)
 
--- Register is not changed on paste
-map('x', '<leader>p', '"_dP')
-map('n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>')
-map('v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
-map('v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>')
+map(
+  'n',
+  '<leader>d',
+  '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
+  { desc = 'Delete to clipboard' }
+)
+
+map(
+  'v',
+  '<leader>d',
+  '"+x<cmd>echo "Cut to clipboard"<cr>',
+  { desc = 'Cut to clipboard' }
+)
+
+map(
+  'n',
+  '<leader>p',
+  '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
+)
+
+map(
+  'x',
+  '<leader>p',
+  '"_dP',
+  { desc = 'Register is not changed on paste' }
+)
+
+map(
+  'n',
+  '<leader>P',
+  'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  { desc = 'Paste from clipboard in new line' }
+)
+
+map(
+  'v',
+  '<leader>p',
+  'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
+)
+
+map(
+  'v',
+  '<leader>P',
+  'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
+)
 
 -- Join lines and keep cursor
 map('n', '<leader>j', 'mzJ`z')
@@ -167,138 +225,396 @@ map('v', '>', '>gv')
 map('v', '<', '<gv')
 
 -- Buffer
-map('n', '<leader>n', '<cmd>ene<cr>')
-map('n', '<leader>bn', '<cmd>ene<cr>')
 
-map('n', '<leader>w', '<cmd>bd<cr>')
-map('n', '<leader>bd', '<cmd>bd<cr>')
-map('n', '<leader>bc', '<cmd>bd<cr>')
+map(
+  'n',
+  '<leader>n',
+  '<cmd>ene<cr>',
+  { desc = 'Buffer new' }
+)
 
-map('n', '<leader>bl', '<cmd>bn<cr>')
-map('n', '<leader>bn', '<cmd>bn<cr>')
-map('n', '<tab>', '<cmd>bn<cr>')
+map(
+  'n',
+  '<leader>bn',
+  '<cmd>ene<cr>',
+  { desc = 'Buffer new' }
+)
 
-map('n', '<leader>bh', '<cmd>bp<cr>')
-map('n', '<leader>bp', '<cmd>bp<cr>')
-map('n', '<s-tab>', '<cmd>bp<cr>')
+map(
+  'n',
+  '<leader>w',
+  '<cmd>bd<cr>',
+  { desc = 'Buffer delete' }
+)
 
--- Split pane
-map('n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>')
-map('n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>')
+map(
+  'n',
+  '<leader>bd',
+  '<cmd>bd<cr>',
+  { desc = 'Buffer delete' }
+)
+
+map(
+  'n',
+  '<leader>bc',
+  '<cmd>bd<cr>',
+  { desc = 'Belete close' }
+)
+
+map(
+  'n',
+  '<leader>bl',
+  '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
+)
+
+map(
+  'n',
+  '<leader>bn',
+  '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
+)
+
+map(
+  'n',
+  '<tab>',
+  '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
+)
+
+map(
+  'n',
+  '<leader>bh',
+  '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
+)
+
+map(
+  'n',
+  '<leader>bp',
+  '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
+)
+
+map(
+  'n',
+  '<s-tab>',
+  '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
+)
+
+map(
+  'n',
+  '<leader>by',
+  '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  { desc = 'Buffer yank' }
+)
+
+-- Split Window
+
+map(
+  'n',
+  'ss',
+  '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
+  { desc = 'Split' }
+)
+
+map(
+  'n',
+  'vv',
+  '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
+  { desc = 'Split vertical' }
+)
 
 -- Navigation panes
-map('n', '<a-h>', '<c-w>h')
-map('n', '<a-j>', '<c-w>j')
-map('n', '<a-k>', '<c-w>k')
-map('n', '<a-l>', '<c-w>l')
+
+map(
+  'n',
+  '<a-h>',
+  '<c-w>h',
+  { desc = 'Go left window' }
+)
+
+map(
+  'n',
+  '<a-j>',
+  '<c-w>j',
+  { desc = 'Go dow window' }
+)
+
+map(
+  'n',
+  '<a-k>',
+  '<c-w>k',
+  { desc = 'Go up window' }
+)
+
+map(
+  'n',
+  '<a-l>',
+  '<c-w>l',
+  { desc = 'Go right window' }
+)
 
 -- tmux
-map('n', '<a-h>', '<cmd>TmuxNavigateLeft<cr>')
-map('n', '<a-j>', '<cmd>TmuxNavigateDown<cr>')
-map('n', '<a-k>', '<cmd>TmuxNavigateUp<cr>')
-map('n', '<a-l>', '<cmd>TmuxNavigateRight<cr>')
 
--- Resize panes
-map('n', '<up>', '<cmd>resize +2<cr>')
-map('n', '<down>', '<cmd>resize -2<cr>')
-map('n', '<left>', '<cmd>vertical resize +2<cr>')
-map('n', '<right>', '<cmd>vertical resize -2<cr>')
+map(
+  'n',
+  '<a-h>',
+  '<cmd>TmuxNavigateLeft<cr>',
+  { desc = 'Tmux navigate left' }
+)
 
--- Next and prev auto-complete
-map('n', '<c-k>', '<cmd>cnext<cr>zz')
-map('n', '<c-j>', '<cmd>cprev<cr>zz')
+map(
+  'n',
+  '<a-j>',
+  '<cmd>TmuxNavigateDown<cr>',
+  { desc = 'Tmux navigate down' }
+)
+
+map(
+  'n',
+  '<a-k>',
+  '<cmd>TmuxNavigateUp<cr>',
+  { desc = 'Tmux navigate up' }
+)
+
+map(
+  'n',
+  '<a-l>',
+  '<cmd>TmuxNavigateRight<cr>',
+  { desc = 'Tmux navigate right' }
+)
+
+-- Resize Window
+
+map(
+  'n',
+  '<up>',
+  '<cmd>resize +2<cr>',
+  { desc = 'Resize height taller' }
+)
+
+map(
+  'n',
+  '<down>',
+  '<cmd>resize -2<cr>',
+  { desc = 'Resize height shorter' }
+)
+
+map(
+  'n',
+  '<left>',
+  '<cmd>vertical resize +2<cr>',
+  { desc = 'Resize height left' }
+)
+
+map(
+  'n',
+  '<right>',
+  '<cmd>vertical resize -2<cr>',
+  { desc = 'Resize height right' }
+)
+
+-- Auto-complete
+
+map(
+  'n',
+  '<c-k>',
+  '<cmd>cnext<cr>zz',
+  { desc = 'Next item' }
+)
+
+map(
+  'n',
+  '<c-j>',
+  '<cmd>cprev<cr>zz',
+  { desc = 'Prev item' }
+)
 
 -- Menu
-map('i', '<c-space>', '<c-n>')
-map({'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"', { expr = true })
-map({'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"', { expr = true })
-map({'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"', { expr = true })
+map(
+  'i',
+  '<c-space>',
+  '<c-n>',
+  { desc = 'Show menu' }
+)
+
+map(
+  {'i', 'c'},
+  '<c-j>',
+  'pumvisible() ? "\\<c-n>" : "\\<c-j>"',
+  { desc = 'Next item', expr = true }
+)
+
+map(
+  {'i', 'c'},
+  '<c-k>',
+  'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
+  { desc = 'Prev item', expr = true }
+)
+
+map(
+  {'i', 'c'},
+  '<c-c>',
+  'pumvisible() ? "\\<c-e>" : "\\<c-c>"',
+  { desc= "Close menu", expr = true }
+)
 
 -- In command mode (not working)
-map('c', '<c-a>', '<home>')
-map('c', '<c-e>', '<end>')
+map(
+  'c',
+  '<c-a>',
+  '<home>',
+  { desc = 'Go home' }
+)
 
--- Make exec
-map('n', '<leader>x', '<cmd>!chmod +x %<cr>')
+map(
+  'c',
+  '<c-e>',
+  '<end>',
+  { desc = 'Go end' }
+)
 
--- Save
-map({'n', 'i', 'v'}, '<c-s>', '<cmd>w!<cr><esc>', { silent = false })
+map(
+  'n',
+  '<leader>x',
+  '<cmd>!chmod +x %<cr>',
+  { desc = 'Make file executable' }
+)
 
--- Quit and quit all
-map('n', '<leader>q', '<cmd>q<cr>')
-map('n', '<leader>Q', '<cmd>qa!<cr>')
+map(
+  {'n', 'i', 'v'},
+  '<c-s>',
+  '<cmd>w!<cr><esc>',
+  {
+    desc = 'Save file',
+    silent = false
+  }
+)
 
--- Toggle cmd height
-map('n', '<leader>uc', '', {
-  noremap = true,
-  callback = function()
-    if vim.o.cmdheight == 1 then
-      vim.opt.cmdheight = 0
-    else
-      vim.opt.cmdheight = 1
+map(
+  'n',
+  '<leader>q',
+  '<cmd>q<cr>',
+  { desc = 'Quit' }
+)
+
+map(
+  'n',
+  '<leader>Q',
+  '<cmd>qa!<cr>',
+  { desc = 'Quit all' }
+)
+
+map(
+  'n',
+  '<leader>uc',
+  '',
+  {
+    desc = 'Toggle cmd height',
+    noremap = true,
+    callback = function()
+      if vim.o.cmdheight == 1 then
+        vim.opt.cmdheight = 0
+      else
+        vim.opt.cmdheight = 1
+      end
+      print('Toggle cmdheight')
     end
-    print('Toggle cmdheight')
-  end
-})
+  }
+)
 
--- Toggle number
-map('n', '<leader>un', '', {
-  noremap = true,
-  callback = function()
-    if vim.o.number then
-      vim.opt.number = false
-      vim.opt.relativenumber = false
-    else
-      vim.opt.number = true
-      vim.opt.relativenumber = true
+map(
+  'n',
+  '<leader>un',
+  '',
+  {
+    desc = 'Toggle line number',
+    noremap = true,
+    callback = function()
+      if vim.o.number then
+        vim.opt.number = false
+        vim.opt.relativenumber = false
+      else
+        vim.opt.number = true
+        vim.opt.relativenumber = true
+      end
+      print('Toggle number')
     end
-    print('Toggle number')
-  end
-})
+  }
+)
 
--- Toggle relative number
-map('n', '<leader>ur', '', {
-  noremap = true,
-  callback = function()
-    if vim.o.relativenumber then
-      vim.opt.relativenumber = false
-    else
-      vim.opt.relativenumber = true
+map(
+  'n',
+  '<leader>ur',
+  '',
+  {
+    desc = 'Toggle relative number',
+    noremap = true,
+    callback = function()
+      if vim.o.relativenumber then
+        vim.opt.relativenumber = false
+      else
+        vim.opt.relativenumber = true
+      end
+      print('Toggle relative number')
     end
-    print('Toggle relative number')
-  end
-})
+  }
+)
 
--- Toggle list chars
-map('n', '<leader>ul', '', {
-  noremap = true,
-  callback = function()
-    if vim.o.list then
-      vim.opt.list = false
-    else
-      vim.opt.list = true
+map(
+  'n',
+  '<leader>ul',
+  '',
+  {
+    desc = 'Toggle list char',
+    noremap = true,
+    callback = function()
+      if vim.o.list then
+        vim.opt.list = false
+      else
+        vim.opt.list = true
+      end
+      print('Toggle list chars')
     end
-    print('Toggle list chars')
-  end
-})
+  }
+)
 
--- Toggle spell
-map('n', '<leader>us', '', {
-  noremap = true,
-  callback = function()
-    vim.wo.spell = not vim.wo.spell 
-    print('Toggle spell')
-  end
-})
+map(
+  'n',
+  '<leader>us',
+  '',
+  {
+    desc = 'Toggle spell',
+    noremap = true,
+    callback = function()
+      vim.wo.spell = not vim.wo.spell 
+      print('Toggle spell')
+    end
+  }
+)
 
--- Toggle wrap
-map('n', '<leader>uw', '', {
-  noremap = true,
-  callback = function()
-    vim.wo.wrap = not vim.wo.wrap
-    print('Toggle wrap')
-  end
-})
+map(
+  'n',
+  '<leader>uw',
+  '',
+  {
+    desc = 'Toggle wrap',
+    noremap = true,
+    callback = function()
+      vim.wo.wrap = not vim.wo.wrap
+      print('Toggle wrap')
+    end
+  }
+)
+
+map(
+  'n',
+  '<leader>uw',
+  '<cmd>WhichKey<cr>',
+  { desc = 'WhichKey' }
+)
 
 ------------------------------------------------------------
 -- Plugins
@@ -308,13 +624,14 @@ map('n', '<leader>uw', '', {
 map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
 
 -- nvim-tree
-if vim.fn.exists(':Oil') then
-  map('n', '<leader>e', '<cmd>lua require("oil").toggle_float()<cr>')
-elseif vim.fn.exists(':NvimTreeToggle') then
+if vim.fn.exists(':NvimTreeToggle') then
   map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 else
   map('n', '<leader>e', '<cmd>15Lex<cr>')
 end
+
+-- oil
+map('n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>')
 
 -- telescope
 map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
@@ -347,11 +664,12 @@ map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>
 -- map('i', ',f', '@() {<cr><cr> } ')
 
 -- References
+-- https://github.com/NvChad
+-- https://github.com/LunarVim
 -- https://github.com/AstroNvim
 -- https://github.com/LazyVim/LazyVim
--- https://github.com/LunarVim
--- https://github.com/NvChad
+-- https://bitbucket.org/sergio/mylazy-nvim
+-- Automatically create if, case, and function templates in insert mode
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
 -- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
--- Automatically create if, case, and function templates in insert mode
 

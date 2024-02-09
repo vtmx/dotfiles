@@ -42,8 +42,10 @@ return {
           ['<c-enter>'] = 'actions.select_split', -- this is used to navigate left
           ['<c-t>'] = 'actions.select_tab',
           ['<c-p>'] = 'actions.preview',
+          ['q'] = 'actions.close',
           ['<c-c>'] = 'actions.close',
           ['<c-r>'] = 'actions.refresh',
+          ['-'] = 'actions.parent',
           ['<c-h>'] = 'actions.parent',
           ['_'] = 'actions.open_cwd',
           ['`'] = 'actions.cd',
