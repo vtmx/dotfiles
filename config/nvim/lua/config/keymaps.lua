@@ -1,10 +1,6 @@
--- Function for mapping
-local function map(mode, lhs, rhs, opts)
-  local opts = opts or { silent = true }
-  vim.keymap.set(mode, lhs, rhs, opts)
-end
+local map = require('config.utils').map
+local utils = require('config.utils')
 
--- Leader key
 vim.g.mapleader = ' '
 
 map(
@@ -14,7 +10,15 @@ map(
   { desc = 'Reload config file' }
 )
 
--- Return to normal mode
+map(
+  'n',
+  '<f1>',
+  function()
+    local word = vim.fn.expand('<cword>')
+    vim.cmd('help ' .. word)
+  end,
+  { desc = 'Help for current word' }
+)
 
 map(
   'i',
@@ -420,6 +424,19 @@ map(
   { desc = 'Keep cursor end select when visual copy' }
 )
 
+-- Substitute
+
+map(
+  'n',
+  '<leader>s',
+  function()
+    local cmd = ':%s/<C-r><C-w>//g<Left><Left>'
+    local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+    vim.api.nvim_feedkeys(keys, 'n', false)
+  end,
+  { desc = 'Substitute current word' }
+)
+
 -- Searching and replace
 
 map(
@@ -593,7 +610,16 @@ map(
   { desc = 'Buffer yank' }
 )
 
--- Split Window
+map(
+  'n',
+  '<leader>bu',
+  function()
+    vim.cmd('update')
+  end,
+  { desc = 'Buffer :update' }
+)
+
+-- Split window
 
 map(
   'n',
@@ -716,6 +742,7 @@ map(
 )
 
 -- Menu
+
 map(
   'i',
   '<c-space>',
@@ -732,7 +759,7 @@ map(
 
 map(
   {'i', 'c'},
-  '<c-k>',
+  'pumvisible<c-k>',
   'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
   { desc = 'Prev item', expr = true }
 )
@@ -745,18 +772,19 @@ map(
 )
 
 -- In command mode (not working)
+
 map(
   'c',
   '<c-a>',
   '<home>',
-  { desc = 'Go home' }
+  { desc = 'Beginner of line' }
 )
 
 map(
   'c',
   '<c-e>',
   '<end>',
-  { desc = 'Go end' }
+  { desc = 'End of line' }
 )
 
 map(
@@ -793,117 +821,57 @@ map(
 map(
   'n',
   '<leader>uc',
-  '',
-  {
-    desc = 'Toggle cmd height',
-    noremap = true,
-    callback = function()
-      if vim.o.cmdheight == 1 then
-        vim.opt.cmdheight = 0
-      else
-        vim.opt.cmdheight = 1
-      end
-      print('Toggle cmdheight')
-    end
-  }
+  function() utils.toggle_cmdheight() end,
+  { desc = 'Toggle cmd height' }
 )
 
 map(
   'n',
   '<leader>un',
-  '',
-  {
-    desc = 'Toggle line number',
-    noremap = true,
-    callback = function()
-      if vim.o.number then
-        vim.opt.number = false
-        vim.opt.relativenumber = false
-      else
-        vim.opt.number = true
-        vim.opt.relativenumber = true
-      end
-      print('Toggle number')
-    end
-  }
+  function() utils.toggle_number() end,
+  { desc = 'Toggle line number', }
 )
 
 map(
   'n',
   '<leader>ur',
-  '',
-  {
-    desc = 'Toggle relative number',
-    noremap = true,
-    callback = function()
-      if vim.o.relativenumber then
-        vim.opt.relativenumber = false
-      else
-        vim.opt.relativenumber = true
-      end
-      print('Toggle relative number')
-    end
-  }
+  function() utils.toggle_relativenumber() end,
+  { desc = 'Toggle relative number', }
 )
 
 map(
   'n',
   '<leader>ul',
-  '',
-  {
-    desc = 'Toggle list char',
-    noremap = true,
-    callback = function()
-      if vim.o.list then
-        vim.opt.list = false
-      else
-        vim.opt.list = true
-      end
-      print('Toggle list chars')
-    end
-  }
+  function() utils.toggle_listchars() end,
+  { desc = 'Toggle list chars' }
 )
 
 map(
   'n',
   '<leader>us',
-  '',
-  {
-    desc = 'Toggle spell',
-    noremap = true,
-    callback = function()
-      vim.wo.spell = not vim.wo.spell 
-      print('Toggle spell')
-    end
-  }
+  function() utils.toggle_spell() end,
+  { desc = 'Toggle spell' }
 )
 
 map(
   'n',
   '<leader>uw',
-  '',
-  {
-    desc = 'Toggle wrap',
-    noremap = true,
-    callback = function()
-      vim.wo.wrap = not vim.wo.wrap
-      print('Toggle wrap')
-    end
-  }
+  function() utils.toggle_wrap() end,
+  { desc = 'Toggle wrap' }
 )
 
 map(
   'n',
-  '<leader>uw',
+  '<leader>uh',
   '<cmd>WhichKey<cr>',
-  { desc = 'WhichKey' }
+  { desc = 'Active WhichKey' }
 )
 
 map(
   'n',
   '<leader>uz',
   '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
-  { desc = 'ZenMode' }
+  { desc = 'Toggle ZenMode' }
 )
 
 ------------------------------------------------------------
@@ -1094,11 +1062,10 @@ map(
 
 -- References
 -- https://github.com/NvChad
--- https://github.com/LunarVim
--- https://github.com/AstroNvim
 -- https://github.com/LazyVim/LazyVim
+-- https://github.com/LunarVim/LunarVim
+-- https://github.com/AstroNvim/AstroNvim
 -- https://bitbucket.org/sergio/mylazy-nvim
--- Automatically create if, case, and function templates in insert mode
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
 -- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
 
