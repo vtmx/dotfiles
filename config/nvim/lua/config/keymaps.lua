@@ -14,65 +14,210 @@ map(
   { desc = 'Reload config file' }
 )
 
--- Scape
-map('i', 'kj', '<esc>')
-
 -- Return to normal mode
-map('v', 'ç', '<esc>')
-map('v', '<leader>kj', '<esc>')
 
--- Navigate in insertmode
-map('i', '<c-h>', '<left>')
-map('i', '<c-l>', '<right>')
+map(
+  'i',
+  'kj',
+  '<esc>',
+  { desc = 'Return to normal mode' }
+)
 
--- Paste register
-map('i', '<c-v>', '<c-r>"')
+map(
+  'v',
+  'ç',
+  '<esc>',
+  { desc = 'Return to normal mode' }
+)
 
--- Ignore wordwrap jumpline
-map('n', 'j', 'gj')
-map('n', 'k', 'gk')
+map(
+  'v',
+  '<leader>kj',
+  '<esc>',
+  { desc = 'Return to normal mode' }
+)
 
--- Like C and D
-map('n', 'Y', 'y$')
+map(
+  'i',
+  '<c-h>',
+  '<left>',
+  { desc = 'Go left in insert mode' }
+)
 
--- Begin and end line
-map({'n', 'v'}, 'L', 'g_')
-map({'n', 'v'}, 'H', '^')
+map(
+  'i',
+  '<c-l>',
+  '<right>',
+  { desc = 'Go right in insert mode' }
+)
 
--- Jump various lines
-map({'n', 'v'}, 'J', '5j')
-map({'n', 'v'}, 'K', '5k')
+map(
+  'i',
+  '<c-v>',
+  '<c-r>"',
+  { desc = 'Paste register' }
+)
 
--- Jump half page in the middle
-map('n', '<c-d>', '<c-d>zz')
-map('n', '<c-u>', '<c-u>zz')
 
--- Change text without putting it into the vim register
-map({'n', 'x'}, 'c', '"_c')
-map('n', 'C', '"_C')
-map('n', 'cc', '"_cc')
+map(
+  'n',
+  'j',
+  'gj',
+  { desc = 'Ignore wordwrap jumpline' }
+)
 
--- Add new line in normal mode
-map('n', '<leader>o', 'm`o<esc>``')
-map('n', '<leader>O', 'm`O<esc>``')
+map(
+  'n',
+  'k',
+  'gk',
+  { desc = 'Ignore wordwrap jumpline' }
+)
 
--- Plus number
-map('n', '=', '<c-a>')
-map('n', '-', '<c-x>')
+map(
+  'n',
+  'Y',
+  'y$',
+  { desc = 'Like C and D' }
+)
 
--- Select all
-map('n', '<leader>a', 'G<s-v>gg', { desc = 'Select all' })
+map(
+  {'n', 'v'},
+  'L', 'g_',
+  { desc = 'Go to end line' }
+)
 
-map('n', '%', 'G<s-v>gg', { desc = 'Select all' })
-map('n', 'U', '<c-r>', { desc = 'Redo' })
+map(
+  {'n', 'v'},
+  'H', '^',
+  { desc = 'Go to begin line' }
+)
+
+map(
+  {'n', 'v' },
+  'J', '5j',
+  { desc = 'Jump 5 line to down' }
+)
+
+map(
+  {'n', 'v'},
+  'K', '5k',
+  { desc = 'Jump 5 line to up' }
+)
+
+map(
+  'n',
+  '<c-d>',
+  '<c-d>zz',
+  { desc = 'Maintain cursor in the middle screen' }
+)
+
+map(
+  'n',
+  '<c-u>',
+  '<c-u>zz',
+  { desc = 'Maintain cursor in the middle screen' }
+)
+
+map(
+  {'n', 'x'},
+  'c', '"_c',
+  { desc = 'Change text without putting it into register' }
+)
+
+map(
+  'n',
+  'C',
+  '"_C',
+  { desc = 'Change aborve cursor without putting it into register' }
+)
+
+map(
+  'n',
+  'cc',
+  '"_cc',
+  { desc = 'Change line without putting it into register' }
+)
+
+map(
+  'n',
+  '<leader>o',
+  'm`o<esc>``',
+  { desc = 'Add new line in normal mode' }
+)
+
+map(
+  'n',
+  '<leader>O',
+  'm`O<esc>``',
+  { desc = 'Add new line in normal mode' }
+)
+
+map(
+  'n',
+  '=',
+  '<c-a>',
+  { desc = 'Incrase number' }
+)
+
+map(
+  'n',
+  '-',
+  '<c-x>',
+  { desc = 'Decrease number' }
+)
+
+map(
+  'n',
+  '<leader>a',
+  'G<s-v>gg',
+  { desc = 'Select all text' }
+)
+
+map(
+  'n',
+  '%',
+  'G<s-v>gg',
+  { desc = 'Select all text' }
+)
+
+map(
+  'n',
+  'U',
+  '<c-r>',
+  { desc = 'Redo' }
+)
 
 -- Mark
-map('n', 'm', '`')
-map('n', 'M', 'm')
+
+map(
+  'n',
+  'm',
+  '`',
+  { desc = 'Go to mark' }
+)
+
+map(
+  'n',
+  'M',
+  'm',
+  { desc = 'Create mark' }
+)
 
 -- Register
-map('n', "'", '"')
-map('v', "'", '"')
+
+map(
+  'n',
+  "'",
+  '"',
+  { desc = 'Create register' }
+)
+
+map(
+  'v',
+  "'",
+  '"',
+  { desc = 'Create register' }
+)
 
 -- Clipboard
 
@@ -153,76 +298,214 @@ map(
   { desc = 'Paste from clipboard' }
 )
 
--- Join lines and keep cursor
-map('n', '<leader>j', 'mzJ`z')
+map(
+  'n',
+  '<leader>j',
+  'mzJ`z',
+  { desc = 'Join lines' }
+)
 
--- Delete not copy
-map('n', 'x', '"_x')
-map('n', '<del>', '"_x')
+map(
+  'n',
+  'x',
+  '"_x',
+  { desc = 'Delete not copy' }
+)
 
--- Move lines
-map('n', '<c-a-j>', '<cmd>m .+1<cr>')
-map('n', '<c-a-k>', '<cmd>m .-2<cr>')
-map('i', '<c-a-j>', '<esc><cmd>m .+1<cr>==gi')
-map('i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi')
-map('v', '<c-a-j>', ":m '>+1<cr>gv=gv")
-map('v', '<c-a-k>', ":m '<-2<cr>gv=gv")
+map(
+  'n',
+  '<del>',
+  '"_x',
+  { desc = 'Delete not copy' }
+)
 
--- Comment line (dosen't work)
-map('i', '<c-;>', "<esc><cmd>MiniComment.toggle_lines()<cr>i")
 
--- Clone lines
-map('n', '<c-s-a-j>', 'yyp')
-map('n', '<c-s-a-k>', 'yyP')
-map('i', '<c-s-a-j>', '<esc>yypi')
-map('i', '<c-s-a-k>', '<esc>yyPi')
-map('v', '<c-s-a-j>', ":'<,'>copy '><cr>")
-map('v', '<c-s-a-k>', 'ygvO<esc>P')
+map(
+  'n',
+  '<c-a-j>',
+  '<cmd>m .+1<cr>',
+  { desc = 'Move line to down' }
+)
 
--- Keep cursor end select when visual copy
-map('v', 'y', 'ygv<esc>')
+map(
+  'n',
+  '<c-a-k>',
+  '<cmd>m .-2<cr>',
+  { desc = 'Move line to up' }
+)
 
--- Visual match pairs
-map('v', '<leader>(',  'c()<esc>P')
-map('v', '<leader>)',  'c()<esc>P')
-map('v', '<leader>((', 'c(())<left><esc>P')
-map('v', '<leader>))', 'c(())<left><esc>P')
-map('v', '<leader>[',  'c[]<esc>P')
-map('v', '<leader>]',  'c[]<esc>P')
-map('v', '<leader>[[', 'c[[]]<left><esc>P')
-map('v', '<leader>]]', 'c[[]]<left><esc>P')
-map('v', '<leader>{',  'c{}<esc>P')
-map('v', '<leader>}',  'c{}<esc>P')
-map('v', '<leader>{{', 'c{{}}<left><esc>P')
-map('v', '<leader>}}', 'c{{}}<left><esc>P')
-map('v', "<leader>'",  "c''<esc>P")
-map('v', '<leader>"',  'c""<esc>P')
+map(
+  'i',
+  '<c-a-j>',
+  '<esc><cmd>m .+1<cr>==gi',
+  { desc = 'Move line to down' }
+)
 
--- Remove highlight
-map({'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>')
-map('n', 'ç', '<cmd>noh<cr>')
+map(
+  'i',
+  '<c-a-k>',
+  '<esc><cmd>m .-2<cr>==gi',
+  { desc = 'Move line to up' }
+)
 
--- Replace word in cursor
-map('n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>')
+map(
+  'v',
+  '<c-a-j>',
+  ":m '>+1<cr>gv=gv",
+  { desc = 'Move select line(s) to down' }
+)
 
--- Replace selected
-map('v', '<leader>r', '"hy:%s/<c-r>h//g<left><left>')
+map(
+  'v',
+  '<c-a-k>',
+  ":m '<-2<cr>gv=gv",
+  { desc = 'Move select line(s) to up' }
+)
 
--- Replace select to clipboard and keep cursor
-map('v', '<leader>R', ':s/<c-r><c-w>/<c-r>+/<cr>e')
+map(
+  'i',
+  '<c-;>',
+  "<esc><cmd>MiniComment.toggle_lines()<cr>i",
+  { desc = 'Comment line' }
+)
 
--- Keep search results centred
-map('n', 'n', 'nzzzv')
-map('n', 'N', 'Nzzzv')
+-- Move and clone line(s)
 
--- Stop copy in last char
-map('v', 'y', 'ygv<esc>')
+map(
+  'n',
+  '<c-s-a-j>',
+  'yyp',
+  { desc = 'Clone line to down' }
+)
+
+map(
+  'n',
+  '<c-s-a-k>',
+  'yyP',
+  { desc = 'Clone line to up' }
+)
+
+map(
+  'i',
+  '<c-s-a-j>',
+  '<esc>yypi',
+  { desc = 'Clone line down' }
+)
+
+map(
+  'i',
+  '<c-s-a-k>',
+  '<esc>yyPi',
+  { desc = 'Clone line up' }
+)
+
+map(
+  'v',
+  '<c-s-a-j>',
+  ":'<,'>copy '><cr>",
+  { desc = 'Clone select line(s) down' }
+)
+
+map(
+  'v',
+  '<c-s-a-k>',
+  'ygvO<esc>P',
+  { desc = 'Clone select line(s) up' }
+)
+
+map(
+  'v',
+  'y',
+  'ygv<esc>',
+  { desc = 'Keep cursor end select when visual copy' }
+)
+
+-- Searching and replace
+
+map(
+  {'n', 'i'},
+  '<esc>', '<cmd>noh<cr><esc>',
+  { desc = 'Remove highlight' }
+)
+
+map(
+  'n',
+  'ç',
+  '<cmd>noh<cr>',
+  { desc = 'Remove highlight' }
+)
+
+map(
+  'n',
+  '<leader>R',
+  ':%s/<c-r><c-w>//g<left><left>',
+  { desc = 'Replace word in cursor' }
+)
+
+map(
+  'v',
+  '<leader>r',
+  '"hy:%s/<c-r>h//g<left><left>',
+  { desc = 'Replace selected' }
+)
+
+map(
+  'v',
+  '<leader>R',
+  ':s/<c-r><c-w>/<c-r>+/<cr>e',
+  { desc = 'Replace select to clipboard and keep cursor' }
+)
+
+map(
+  'n',
+  'n',
+  'nzzzv',
+  { desc = 'Keep next result centred' }
+)
+
+map(
+  'n',
+  'N',
+  'Nzzzv',
+  { desc = 'Keep prev result centred' }
+)
+
+map(
+  'v',
+  'y',
+  'ygv<esc>',
+  { desc = 'Stop copy in last char' }
+)
 
 -- Indent
-map('n', '>', '>>')
-map('n', '<', '<<')
-map('v', '>', '>gv')
-map('v', '<', '<gv')
+
+map(
+  'n',
+  '>',
+  '>>',
+  { desc = 'Add indent' }
+)
+
+map(
+  'n',
+  '<',
+  '<<',
+  { desc = 'Remove indent' }
+)
+
+map(
+  'v',
+  '>',
+  '>gv',
+  { desc = 'Add indent' }
+)
+
+map(
+  'v',
+  '<',
+  '<gv',
+  { desc = 'Remove indent' }
+)
 
 -- Buffer
 
@@ -616,52 +899,198 @@ map(
   { desc = 'WhichKey' }
 )
 
+map(
+  'n',
+  '<leader>uz',
+  '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
+  { desc = 'ZenMode' }
+)
+
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------
 
 -- lazy
-map('n', '<leader><leader>p', '<cmd>Lazy<cr>')
+map(
+  'n',
+  '<leader><leader>p',
+  '<cmd>Lazy<cr>',
+  { desc = 'Lazy' }
+)
 
 -- nvim-tree
 if vim.fn.exists(':NvimTreeToggle') then
-  map('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+  map(
+    'n',
+    '<leader>e',
+    '<cmd>NvimTreeToggle<cr>',
+    { desc = 'NvimTree' }
+  )
 else
-  map('n', '<leader>e', '<cmd>15Lex<cr>')
+  map(
+    'n',
+    '<leader>e',
+    '<cmd>15Lex<cr>',
+    { desc = 'Lex' }
+  )
 end
 
 -- oil
-map('n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>')
+map(
+  'n',
+  '<leader>E',
+  '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
+)
 
 -- telescope
-map('n', '<c-p>',      '<cmd>Telescope file_browser<cr>')
-map('n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>')
-map('n', '<leader>fc', '<cmd>HopChar1<cr>') -- hop
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
-map('n', '<leader>fC', '<cmd>Telescope commands<cr>')
-map('n', '<leader>ff', '<cmd>Telescope file_browser<cr>')
-map('n', '<leader>fF', '<cmd>Telescope find_files<cr>')
-map('n', '<leader>fg', '<cmd>Telescope git_files<cr>')
--- map('n', '<leader>fgb', '<cmd>Telescope git_branches<cr>')
--- map('n', '<leader>fgc', '<cmd>Telescope git_commits<cr>')
--- map('n', '<leader>fgs', '<cmd>Telescope git_status<cr>')
-map('n', '<leader>fh', '<cmd>Telescope highlights<cr>')
-map('n', '<leader>fH', '<cmd>Telescope help_tags<cr>')
-map('n', '<leader>fk', '<cmd>Telescope keymaps<cr>')
-map('n', '<leader>fl', '<cmd>Telescope live_grep<cr>')
-map('n', '<leader>fm', '<cmd>Telescope marks<cr>')
-map('n', '<leader>ft', '<cmd>Telescope filetypes<cr>')
-map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>')
-map('n', '<leader>fO', '<cmd>Telescope vim_options<cr>')
-map('n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
+map(
+  'n',
+  '<c-p>',
+  '<cmd>Telescope file_browser<cr>',
+  { desc = 'Files' }
+)
+
+map(
+  'n',
+  '<leader>fa',
+  '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>',
+  { desc = 'Files with hidden' }
+)
+
+map(
+  'n',
+  '<leader>fc',
+  '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
+)
+
+map(
+  'n',
+  '<leader>fb',
+  '<cmd>Telescope buffers<cr>',
+  { desc = 'Buffers' }
+)
+
+map(
+  'n',
+  '<leader>fC',
+  '<cmd>Telescope commands<cr>',
+  { desc = 'Commands' }
+)
+
+map(
+  'n',
+  '<leader>ff',
+  '<cmd>Telescope file_browser<cr>',
+  { desc = 'Files browser' }
+)
+
+map(
+  'n',
+  '<leader>fF',
+  '<cmd>Telescope find_files<cr>',
+  { desc = 'Files' }
+)
+
+map(
+  'n',
+  '<leader>fg',
+  '<cmd>Telescope git_files<cr>',
+  { desc = 'Git files' }
+)
+
+-- map(
+--   'n',
+--   '<leader>fgb',
+--   '<cmd>Telescope git_branches<cr>',
+--   { desc = '' }
+-- )
+--
+-- map(
+--   'n',
+--   '<leader>fgc',
+--   '<cmd>Telescope git_commits<cr>',
+--   { desc = '' }
+-- )
+--
+-- map(
+--   'n',
+--   '<leader>fgs',
+--   '<cmd>Telescope git_status<cr>',
+--   { desc = '' }
+-- )
+--
+map(
+  'n',
+  '<leader>fh',
+  '<cmd>Telescope highlights<cr>',
+  { desc = 'Highlights' }
+)
+
+map(
+  'n',
+  '<leader>fH',
+  '<cmd>Telescope help_tags<cr>',
+  { desc = 'Help' }
+)
+
+map(
+  'n',
+  '<leader>fk',
+  '<cmd>Telescope keymaps<cr>',
+  { desc = 'Keymaps' }
+)
+
+map(
+  'n',
+  '<leader>fl',
+  '<cmd>Telescope live_grep<cr>',
+  { desc = 'Live grep' }
+)
+
+map(
+  'n',
+  '<leader>fm',
+  '<cmd>Telescope marks<cr>',
+  { desc = 'Marks' }
+)
+
+map(
+  'n',
+  '<leader>ft',
+  '<cmd>Telescope filetypes<cr>',
+  { desc = 'File types' }
+)
+
+map(
+  'n',
+  '<leader>fo',
+  '<cmd>Telescope oldfiles<cr>',
+  { desc = 'Old files' }
+)
+
+map(
+  'n',
+  '<leader>fO',
+  '<cmd>Telescope vim_options<cr>',
+  { desc = 'Options' }
+)
+
+map(
+  'n',
+  '<leader>fz',
+  '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  { desc = 'Fuzzy' }
+)
 
 -- zen mode
-map('n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>')
-
--- Test snipets
--- map('i', ',i', 'if [ @ ]; then <cr><cr> else <cr><cr> fi ')
--- map('i', ',c', 'case "$@" in <cr><cr> @)    ;; <cr><cr> esac')
--- map('i', ',f', '@() {<cr><cr> } ')
+map(
+  'n',
+  '<leader>z',
+  '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
+  { desc = 'ZenMode' }
+)
 
 -- References
 -- https://github.com/NvChad
