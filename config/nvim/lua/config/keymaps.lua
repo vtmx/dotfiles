@@ -309,12 +309,12 @@ map(
   { desc = 'Paste from clipboard' }
 )
 
-map(
-  'x',
-  '<leader>p',
-  '"_dP',
-  { desc = 'Register not change on paste' }
-)
+-- map(
+--   'x',
+--   '<leader>p',
+--   '"_dP',
+--   { desc = 'Register not change on paste' }
+-- )
 
 map(
   'n',
