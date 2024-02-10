@@ -49,6 +49,8 @@ install_packages() {
   pause_success "Installed"
 }
 
+
+# Links need the complete path
 create_link() {
   local name=$1
   local src=$2
@@ -65,7 +67,7 @@ create_link() {
   fi
 
   # make a hard link
-  ln -f "$src" "$dist"
+  ln -sf "$src" "$dist"
 }
 
 create_links() {
