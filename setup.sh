@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Dir
+# Current dir
 current_dir=$(cd $(dirname $0) && pwd)
 
 menu() {
@@ -11,6 +11,7 @@ menu() {
    \/   __|__    |    |_____| |    \_ |  |  | |______ |_____ |_____|"
 
   read -rp "
+ c. Clone repository
  f. Copy fonts 
  i. Install packages
  l. Create simbolic links
@@ -21,6 +22,7 @@ Option: " option
   echo ""
 
   case "${option}" in
+    c|C) clone_repository ;;
     i|I) install_packages ;;
     f|F) copy_fonts       ;;
     l|L) create_links     ;;
@@ -28,6 +30,12 @@ Option: " option
     q|Q) exit 0           ;;
     *) pause_error "Invalid option" ;;
   esac
+}
+
+clone_repository() {
+  local dir=$HOME/Dev/dotfiles
+  [[ ! -d $dir ]] && mkdir -p $dir
+  git clone git@github.com:vtmx/dotfiles.git $dir
 }
 
 copy_fonts() {
