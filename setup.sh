@@ -2,8 +2,6 @@
 
 # Dir
 current_dir=$(cd $(dirname $0) && pwd)
-src_dir="$current_dir/config"
-config_dir="$HOME/.config"
 
 menu() {
   clear
@@ -23,8 +21,8 @@ Option: " option
   echo ""
 
   case "${option}" in
-    f|F) copy_fonts       ;;
     i|I) install_packages ;;
+    f|F) copy_fonts       ;;
     l|L) create_links     ;;
     s|S) copy_scripts     ;;
     q|Q) exit 0           ;;
@@ -33,13 +31,10 @@ Option: " option
 }
 
 copy_fonts() {
-  local src_dir="${current_dir}/fonts"
-  local dist_dir="${HOME}/.fonts"
-
   echo Copying fonts...
-  cp -R "${src_dir}/BlexMono Nerdfonts" "${dist_dir}"
-  cp -R "${src_dir}/IBM Plex Mono" "${dist_dir}"
-  cp -R "${src_dir}/Segoe UI" "${dist_dir}"
+  cp -R "${current_dir}/fonts/BlexMono Nerdfonts" "${HOME}/.fonts"
+  cp -R "${current_dir}/fonts/IBM Plex Mono" "${HOME}/.fonts"
+  cp -R "${current_dir}/fonts/Segoe UI" "${HOME}/.fonts"
 
   pause_success "Copied"
 }
@@ -56,185 +51,124 @@ create_link() {
   local src=$2
   local dist=$3
 
-  # if folder not exist create folder
-  if [[ ! -d "$dist" ]]; then
-    mkdir -p "$dist"
-  fi
+  # If not name
+  if [[ "$name" ]] && echo "Create link for $name..."
 
-  # if not name
-  if [[ -n "$name" ]]; then
-    echo "Create link for $name..."
-  fi
-
-  # make a hard link
+  # Create a hard symlink
   ln -sf "$src" "$dist"
 }
 
 create_links() {
+  local $config_src="$current_dir/config"
+  local $config_dist="$HOME/.config/"
+   
+  # bin
+  name="bin"
+  target="$current_dir/bin"
+  link="$HOME/.local/"
+  create_link "$name" "$target" "$link"
+
   # bash
   name="bash"
-  target="$src_dir/bash/.bashrc"
-  link="$HOME"
-  create_link "$name" "$target" "$link"
-
-  name="bash aliases"
-  target="$src_dir/bash/.bash_aliases"
-  link="$HOME"
-  create_link "$name" "$target" "$link"
-
-  name="bash functions"
-  target="$src_dir/bash/.bash_functions"
+  target="$config_src/bash/.*"
   link="$HOME"
   create_link "$name" "$target" "$link"
 
   # bat
   name="bat"
-  target="$src_dir/bat/config"
-  link="$config_dir/bat"
+  target="$config_src/bat"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # cmus
   name="cmus"
-  target="$src_dir/cmus/rc"
-  link="$config_dir/cmus"
+  target="$config_src/cmus"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
-  name=""
-  target="$src_dir/cmus/onedarkv.theme"
-  link="$config_dir/cmus"
-  create_link "$name" "$target" "$link"
 
   # conky
   name="conky"
-  target="$src_dir/conky/conky.conf"
-  link="$config_dir/conky"
+  target="$config_src/conky"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # fish
   name="fish"
-  target="$src_dir/fish/config.fish"
-  link="$config_dir/fish"
-  create_link "$name" "$target" "$link"
-
-  name="fish_variables"
-  target="$src_dir/fish/fish_variables"
-  link="$config_dir/fish"
+  target="$config_src/fish"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # flameshot
   name="flameshot"
-  target="$src_dir/flameshot/flameshot.ini"
-  link="$config_dir/flameshot"
-  create_link "$name" "$target" "$link"
-
-  # git
-  name="git"
-  target="$src_dir/git/gitconfig"
-  link="$HOME/.gitconfig"
+  target="$config_src/flameshot"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # kitty
   name="kitty"
-  target="$src_dir/kitty/kitty.conf"
-  link="$config_dir/kitty"
+  target="$config_src/kitty"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # neofetch
   name="neofetch"
-  target="$src_dir/neofetch/config.conf"
-  link="$config_dir/neofetch"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/neofetch/logo.txt"
-  link="$config_dir/neofetch"
+  target="$config_src/neofetch"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # mpv
   name="mpv"
-  target="$src_dir/mpv/input.conf"
-  link="$config_dir/mpv"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/mpv/scripts/nextfile.lua"
-  link="$config_dir/mpv/scripts"
+  target="$config_src/mpv"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # nvim
   name="nvim"
-  target="$src_dir/nvim/*.lua"
-  link="$config_dir/nvim"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/*.json"
-  link="$config_dir/nvim"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/lua/*.lua"
-  link="$config_dir/nvim/lua"
-  create_link "$name" "$target" "$link"
-
-  name=""
-  target="$src_dir/nvim/lua/plugins/*.lua"
-  link="$config_dir/nvim/lua/plugins"
+  target="$config_src/nvim"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # polybar
   name="polybar"
-  target="$src_dir/polybar/config.ini"
-  link="$config_dir/polybar"
+  target="$config_src/polybar"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   name="polybar launch"
-  target="$src_dir/polybar/launch.sh"
-  link="$config_dir/polybar"
+  target="$config_src/polybar"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # starship
   name="starship"
-  target="$src_dir/starship/starship.toml"
-  link="$config_dir"
+  target="$config_src/starship"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # rofi
   name="rofi"
-  target="$src_dir/rofi/*.rasi"
-  link="$config_dir/rofi"
+  target="$config_src/rofi"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # tmux
   name="tmux"
-  target="$src_dir/tmux/tmux.conf"
-  link="$HOME/.config/tmux.conf"
+  target="$config_src/tmux"
+  link="$config_dist"
   create_link "$name" "$target" "$link"
 
   # vscode
   name="vscode"
-  target="$src_dir/vscode/keybindings.json"
-  link="$config_dir/Code - OSS/User"
+  target="$config_src/vscode/*.json"
+  link="$config_dist/Code - OSS/User"
   create_link "$name" "$target" "$link"
 
-  name=""
-  target="$src_dir/vscode/settings.json"
-  link="$config_dir/Code - OSS/User"
-  create_link "$name" "$target" "$link"
-
-  target="$src_dir/vscode/vs.code-snippets"
-  link="$config_dir/Code - OSS/User/snippets"
+  target="$config_src/vscode/snippets"
+  link="$config_dist/Code - OSS/User/snippets"
   create_link "$name" "$target" "$link"
 
   pause_success "Links created"
-}
-
-# ------------------------------------------------------------------------------
-# Copy scrpts
-# ------------------------------------------------------------------------------
-
-copy_scripts() {
-  cp -rf "${current_dir}/bin" "${HOME}/.local"
 }
 
 # ------------------------------------------------------------------------------
