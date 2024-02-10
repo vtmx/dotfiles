@@ -123,48 +123,6 @@ map(
 )
 
 map(
-  'n',
-  '<c-i>',
-  '<c-i>zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n',
-  '<c-o>',
-  '<c-o>zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n',
-  '{',
-  '{zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n',
-  '}',
-  '}zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n',
-  '*',
-  '*zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n',
-  '#',
-  '#zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
   {'n', 'x'},
   'c', '"_c',
   { desc = 'Change text without putting it into register' }
@@ -215,6 +173,13 @@ map(
 map(
   'n',
   '<leader>a',
+  'G<s-v>gg',
+  { desc = 'Select all text' }
+)
+
+map(
+  'n',
+  '%',
   'G<s-v>gg',
   { desc = 'Select all text' }
 )
@@ -313,7 +278,7 @@ map(
   'x',
   '<leader>p',
   '"_dP',
-  { desc = 'Register not change on paste' }
+  { desc = 'Register is not changed on paste' }
 )
 
 map(
@@ -862,13 +827,6 @@ map(
 
 map(
   'n',
-  '<leader>ui',
-  function() utils.toggle_ia() end,
-  { desc = 'Toggle IA' }
-)
-
-map(
-  'n',
   '<leader>un',
   function() utils.toggle_number() end,
   { desc = 'Toggle line number', }
@@ -1110,3 +1068,4 @@ map(
 -- https://bitbucket.org/sergio/mylazy-nvim
 -- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
 -- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
+

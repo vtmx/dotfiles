@@ -1,6 +1,6 @@
 return {
   {
-    'lukas-reineke/indent-blankline.nvim',
+    "lukas-reineke/indent-blankline.nvim",
     main = 'ibl',
     event = 'VeryLazy',
     config = true
@@ -33,7 +33,7 @@ return {
     event = 'BufEnter'
   },
   {
-    'christoomey/vim-tmux-navigator',
+    "christoomey/vim-tmux-navigator",
     event = 'BufEnter'
   }
 }

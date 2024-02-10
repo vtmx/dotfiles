@@ -31,16 +31,6 @@ gpdf() {
   # If empty string
   [[ -z "$message" ]] && message="update dotfiles"
 
-  # Copy nvim folder
-  rm -rdf "$HOME/Dev/dotfiles/config/nvim" 2>&-
-  cp -r "$HOME/.config/nvim" "$HOME/Dev/dotfiles/config/nvim" 2>&-
-
-  # Copy vscode
-  rm -f "$HOME/Dev/dotfiles/config/vscode/keybindings.json" 2>&-
-  rm -f "$HOME/Dev/dotfiles/config/vscode/settings.json" 2>&-
-  cp -f "$HOME/.config/Code - OSS/User/keybindings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
-  cp -f "$HOME/.config/Code - OSS/User/settings.json" "$HOME/Dev/dotfiles/config/vscode" 2>&-
-
   # Git commands
   cd "$dotfiles_dir"
   git add -A
