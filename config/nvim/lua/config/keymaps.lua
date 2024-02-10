@@ -568,12 +568,12 @@ map(
   { desc = 'Buffer new' }
 )
 
-map(
-  'n',
-  '<leader>bn',
-  '<cmd>ene<cr>',
-  { desc = 'Buffer new' }
-)
+-- map(
+--   'n',
+--   '<leader>bn',
+--   '<cmd>ene<cr>',
+--   { desc = 'Buffer new' }
+-- )
 
 map(
   'n',
@@ -598,13 +598,6 @@ map(
 
 map(
   'n',
-  '<leader>bl',
-  '<cmd>bn<cr>',
-  { desc = 'Buffer next' }
-)
-
-map(
-  'n',
   '<leader>bn',
   '<cmd>bn<cr>',
   { desc = 'Buffer next' }
@@ -612,7 +605,14 @@ map(
 
 map(
   'n',
-  '<tab>',
+  '<leader>bp',
+  '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
+)
+
+map(
+  'n',
+  '<leader>bl',
   '<cmd>bn<cr>',
   { desc = 'Buffer next' }
 )
@@ -626,9 +626,9 @@ map(
 
 map(
   'n',
-  '<leader>bp',
-  '<cmd>bp<cr>',
-  { desc = 'Buffer prev' }
+  '<tab>',
+  '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
 )
 
 map(
