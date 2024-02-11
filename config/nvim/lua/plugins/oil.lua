@@ -12,6 +12,7 @@
 return {
   {
     'stevearc/oil.nvim',
+    cmd = 'Oil',
     config = function()
       require('oil').setup({
         -- Buffer-local options to use for oil buffers

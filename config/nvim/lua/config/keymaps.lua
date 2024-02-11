@@ -401,13 +401,6 @@ map(
   { desc = 'Move select line(s) to up' }
 )
 
-map(
-  'i',
-  '<c-;>',
-  "<esc><cmd>MiniComment.toggle_lines()<cr>i",
-  { desc = 'Comment line' }
-)
-
 -- Move and clone line(s)
 
 map(
@@ -706,28 +699,28 @@ map(
   'n',
   '<a-h>',
   '<cmd>TmuxNavigateLeft<cr>',
-  { desc = 'Tmux navigate left' }
+  { desc = 'Tmux go left' }
 )
 
 map(
   'n',
   '<a-j>',
   '<cmd>TmuxNavigateDown<cr>',
-  { desc = 'Tmux navigate down' }
+  { desc = 'Tmux go down' }
 )
 
 map(
   'n',
   '<a-k>',
   '<cmd>TmuxNavigateUp<cr>',
-  { desc = 'Tmux navigate up' }
+  { desc = 'Tmux go up' }
 )
 
 map(
   'n',
   '<a-l>',
   '<cmd>TmuxNavigateRight<cr>',
-  { desc = 'Tmux navigate right' }
+  { desc = 'Tmux go right' }
 )
 
 -- Resize Window
@@ -853,6 +846,15 @@ map(
   { desc = 'Quit all' }
 )
 
+-- No work in insert mode
+
+map(
+  'n',
+  '<c-;>',
+  function() utils.toggle_comment_line() end,
+  { desc = 'Comment line' }
+)
+
 map(
   'n',
   '<leader>uc',
@@ -865,6 +867,13 @@ map(
   '<leader>ui',
   function() utils.toggle_ia() end,
   { desc = 'Toggle IA' }
+)
+
+map(
+  'n',
+  '<leader>uk',
+  '<cmd>WhichKey<cr>',
+  { desc = 'Active WhichKey' }
 )
 
 map(
@@ -883,13 +892,6 @@ map(
 
 map(
   'n',
-  '<leader>ul',
-  function() utils.toggle_listchars() end,
-  { desc = 'Toggle list chars' }
-)
-
-map(
-  'n',
   '<leader>us',
   function() utils.toggle_spell() end,
   { desc = 'Toggle spell' }
@@ -900,13 +902,6 @@ map(
   '<leader>uw',
   function() utils.toggle_wrap() end,
   { desc = 'Toggle wrap' }
-)
-
-map(
-  'n',
-  '<leader>uh',
-  '<cmd>WhichKey<cr>',
-  { desc = 'Active WhichKey' }
 )
 
 map(
