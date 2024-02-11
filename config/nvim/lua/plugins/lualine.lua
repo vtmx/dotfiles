@@ -67,7 +67,8 @@ return {
     },
     sections = {
       lualine_a = { { 'mode', fmt = function(s) return mode_map[s] or s end } },
-      lualine_b = { 'branch', 'diff', 'diagnostics' },
+      lualine_b = { 'branch' },
+      -- lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { 'filename' },
       lualine_x = {},
       lualine_y = {},

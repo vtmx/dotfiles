@@ -6,6 +6,11 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
+-- Toggle comment line
+function M.toggle_comment_line()
+  require('mini.comment').toggle_lines(vim.fn.line('.'), vim.fn.line('.'))
+end
+
 -- Toggle line command
 function M.toggle_cmdheight()
   if vim.o.cmdheight == 1 then
@@ -17,7 +22,7 @@ function M.toggle_cmdheight()
   end
 end
 
--- Toggle ia
+-- Toggle IA
 function M.toggle_ia()
   if vim.cmd('CodeiumToggle') then
     print('Toggle Codeium')
