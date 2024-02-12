@@ -4,27 +4,25 @@ export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
 export CDPATH=".:..:~"
 
-# Colors for man
-export LESS_TERMCAP_mb=$'\e[34;1m'            # no-used blue
-export LESS_TERMCAP_md=$'\e[34;1m'            # title blue
-export LESS_TERMCAP_me=$'\e[0m'               # fg
-export LESS_TERMCAP_se=$'\e[0m'               # fg
-export LESS_TERMCAP_so=$'\e[48;5;15m\e[1;30m' # statusbar and search fg and bg
-export LESS_TERMCAP_ue=$'\e[0m'               # fg
-export LESS_TERMCAP_us=$'\e[34;1m'            # header and attr blue
-export GROFF_NO_SGR=1                         # for konsole and gnome-terminal
+# Man
+# https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
+# https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
+export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
+export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
+export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect 
+export LESS_TERMCAP_so=$(tput setab 15; tput setaf 0) # statusbar and search active
+export LESS_TERMCAP_se=$(tput setab 0; tput setaf 15) # statusbar space and type
+export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
+export LESS_TERMCAP_ue=$(tput sgr0)                   # end underline effect            
+export GROFF_NO_SGR=1                                 # for konsole and gnome-terminal
 
 # Aliases
-if [[ -f $HOME/.bash_aliases ]]; then
-  source $HOME/.bash_aliases 
-fi
+[[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases 
 
 # Functions
-if [[ -f $HOME/.bash_functions ]]; then
-  source $HOME/.bash_functions 
-fi
+[[ -f $HOME/.bash_functions ]] && source $HOME/.bash_functions 
 
-# Enable auto-completion
+# Auto-completion
 if ! shopt -oq posix; then
   if [[ -f /usr/share/bash-completion/bash_completion ]]; then
     source /usr/share/bash-completion/bash_completion
@@ -48,6 +46,9 @@ if [[ -f $HOME/.fzf.bash ]]; then
   --border none"
 fi
 
+# nvm
+[[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
+
 # starship
 if type -P starship > /dev/null; then
   export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
@@ -64,6 +65,3 @@ fi
 if type -P zoxide > /dev/null; then
   eval "$(zoxide init bash)"
 fi
-
-# nvm
-source ~/.nvm/nvm.sh
