@@ -40,10 +40,7 @@ clone_repository() {
 
 copy_fonts() {
   echo Copying fonts...
-  cp -R "${current_dir}/fonts/BlexMono Nerdfonts" "${HOME}/.fonts"
-  cp -R "${current_dir}/fonts/IBM Plex Mono" "${HOME}/.fonts"
-  cp -R "${current_dir}/fonts/Segoe UI" "${HOME}/.fonts"
-
+  cp -R "${current_dir}/fonts/*" "${HOME}/.local/share/fonts"
   pause_success "Copied"
 }
 

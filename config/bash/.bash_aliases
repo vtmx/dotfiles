@@ -91,6 +91,7 @@ alias gco="git checkout"
 alias gd="git diff --color-words"
 alias gh="git help"
 alias gl="git pull"
+alias glog="git log -5 --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(cyan)%ai%C(reset) - %C(normal)%an%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n %C(normal)%s%C(reset)'"
 alias gm="git merge"
 alias gmv="git mv"
 alias gp="git push"
@@ -100,7 +101,7 @@ alias grm="git rm"
 alias grrm="git remote remove"
 alias grmv="git remote move"
 alias gru="git remote update"
-alias gs="git status"
+alias gs="git status -sb"
 
 # grep
 alias grep="grep --color=auto"
@@ -137,16 +138,17 @@ alias pipi="pip install"
 alias pipr="pip uninstall"
 
 # pacman
-alias pac="sudo pacman"
-alias paci="sudo pacman -S"
-alias paciy="sudo pacman --noconfirm -S"
-alias pacl="pacman -Q"
-alias paclq="pacman -Qqe"
-alias paclo="pacman -Qdt" # list orphans
-alias pacr="sudo pacman -R"
-alias pacry="sudo pacman --noconfirm  -R"
-alias pacs="sudo pacman -Ss"
-alias pacu="sudo pacman -Syu"
+alias pac="sudo pacman"                   # pacman
+alias pacc="sudo pacman -Sc"              # clean old from cache
+alias paci="sudo pacman -S"               # install
+alias paciy="sudo pacman -S --noconfirm"  # install no confirm
+alias pacl="pacman -Q"                    # list
+alias paclq="pacman -Qqe"                 # filter
+alias paclo="pacman -Qdt"                 # list orphans
+alias pacr="sudo pacman -R"               # remove
+alias pacry="sudo pacman --noconfirm  -R" # remove no confirm
+alias pacs="sudo pacman -Ss"              # search
+alias pacu="sudo pacman -Syu"             # update
 
 # ps
 alias pstree="pstree -npTC age"
@@ -190,6 +192,7 @@ alias yu="yarn upgrade"
 alias yv="yarn version"
 
 # yay
+alias yayc='yay -Sc'
 alias yayi="yay -S"
 alias yayr="yay -R"
 alias yayu="yay -Syu"
