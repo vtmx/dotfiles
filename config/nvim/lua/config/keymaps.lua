@@ -633,6 +633,13 @@ map(
 
 map(
   'n',
+  '<leader>bo',
+  '<cmd>BufOnly<cr>',
+  { desc = 'Keep just current buffer' }
+)
+
+map(
+  'n',
   '<leader>by',
   '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
   { desc = 'Buffer yank' }
