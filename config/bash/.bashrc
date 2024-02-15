@@ -1,6 +1,8 @@
 # Environment variables
 export BROWSER="firefox"
 export EDITOR="nvim"
+export HISTCONTROL="ignoredups:ignorespace"
+export HISTTIMEFORMAT="%F %T "
 export PATH="$PATH:$HOME/.local/bin"
 export CDPATH=".:..:~"
 
