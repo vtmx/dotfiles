@@ -106,6 +106,9 @@ alias gs="git status -sb"
 # grep
 alias grep="grep --color=auto"
 
+# history
+alias hi="history"
+
 # helix
 alias hx="helix"
 
@@ -157,7 +160,6 @@ alias pstree="pstree -npTC age"
 alias rd="rm -rf"
 alias rm="rm -i"
 alias rmy="rm -f"
-alias rmd="rm -r"
 alias rmdy="rm -rf"
 
 # live-server
@@ -169,6 +171,9 @@ alias live="browser-sync start --server "." --files *"
 
 # source
 alias so="source"
+
+# su
+alias su="su - "
 
 # tmux
 alias t="tmux -f $HOME/.config/tmux/tmux.conf"
