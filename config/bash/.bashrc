@@ -1,3 +1,6 @@
+# Shell options
+shopt -s checkwinsize
+
 # Environment variables
 export BROWSER="firefox"
 export EDITOR="nvim"
@@ -7,8 +10,6 @@ export PATH="$PATH:$HOME/.local/bin"
 export CDPATH=".:..:~"
 
 # Man
-# https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
-# https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
 export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
 export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
 export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect
@@ -67,3 +68,7 @@ fi
 if type -P zoxide > /dev/null; then
   eval "$(zoxide init bash)"
 fi
+
+# References
+# https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
+# https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
