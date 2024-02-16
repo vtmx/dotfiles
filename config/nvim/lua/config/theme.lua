@@ -2,7 +2,7 @@ local c = require('config.colors')
 
 local hl_groups = {
   -- General
-  Normal         = { fg = c.fg, ctermfg = 255, ctermbg = 234 },
+  Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
   Comment        = { fg = c.fgd, ctermfg = 7, italic = true },
   Title          = { fg = c.purple  },
   Twilight       = { fg = c.fgd },
@@ -196,7 +196,12 @@ local hl_groups = {
   ColorColumn     = { bg = c.red, fg = c.bg },
   CursorColumn    = { fg = c.sel },
 
+  -- LSP Example
+  -- ['@boolean'] = { link = 'Boolean' },
+
+------------------------------------------------------------
   -- Plugins
+------------------------------------------------------------
 
   -- netrw
   netrwTreeBar = { fg = c.fg },
