@@ -648,9 +648,7 @@ map(
 map(
   'n',
   '<leader>bu',
-  function()
-    vim.cmd('update')
-  end,
+  function() vim.cmd('update') end,
   { desc = 'Buffer :update' }
 )
 
@@ -853,10 +851,8 @@ map(
   { desc = 'Quit all' }
 )
 
--- No work in insert mode
-
 map(
-  'n',
+  {'n', 'i'},
   '<c-;>',
   function() utils.toggle_comment_line() end,
   { desc = 'Comment line' }
@@ -916,6 +912,59 @@ map(
   '<leader>uz',
   '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
   { desc = 'Toggle ZenMode' }
+)
+
+------------------------------------------------------------
+-- LSP
+------------------------------------------------------------
+
+map(
+  'n',
+  '<leader>fm',
+  function() vim.lsp.buf.format { async = true } end,
+  { desc = 'LSP formatting' }
+)
+
+map(
+  'n',
+  'gd',
+  function() vim.lsp.buf.declaration() end,
+  { desc = 'Go definition' }
+)
+
+map(
+  'n',
+  'gD',
+  function() vim.lsp.buf.definition() end,
+  { desc = 'Go declaration' }
+)
+
+map(
+  'n',
+  'gi',
+  function() vim.lsp.buf.implementation() end,
+  { desc = 'Go declaration' }
+)
+
+map(
+  'n',
+  'gK',
+  function() vim.lsp.buf.hover() end,
+  { desc = 'Hover definition' }
+)
+
+map(
+  'n',
+  ']d',
+  function() vim.diagnostic.goto_next() end,
+  { desc = 'Next diagnostic' }
+)
+
+map(
+  'n',
+  '[d',
+  function() vim.diagnostic.goto_prev() end,
+  { desc = 'Prev diagnostic' }
 )
 
 ------------------------------------------------------------
