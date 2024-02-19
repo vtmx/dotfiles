@@ -228,3 +228,6 @@ alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
+
+# References
+# https://dev.to/robertcoopercode/using-aliases-to-speed-up-your-git-workflow-2f5a

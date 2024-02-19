@@ -289,6 +289,13 @@ map(
 )
 
 map(
+  {'n', 'x'},
+  'p',
+  '"0p',
+  { desc = 'Register not change on paste' }
+)
+
+map(
   'n',
   '<leader>d',
   '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
@@ -308,13 +315,6 @@ map(
   '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
-
--- map(
---   'x',
---   '<leader>p',
---   '"_dP',
---   { desc = 'Register not change on paste' }
--- )
 
 map(
   'n',
@@ -830,11 +830,8 @@ map(
 map(
   {'n', 'i', 'v'},
   '<c-s>',
-  '<cmd>w!<cr><esc>',
-  {
-    desc = 'Save file',
-    silent = false
-  }
+  '<cmd>up!<cr><esc>',
+  { desc = 'Save file if file is change', silent = false }
 )
 
 map(
