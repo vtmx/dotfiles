@@ -258,6 +258,22 @@ map(
   { desc = 'Create register' }
 )
 
+-- Surround add
+
+map(
+   'n',
+   '<leader>"',
+   function() vim.cmd.normal('saiw"') end,
+   { desc = 'Add double quote' }
+)
+
+map(
+   'n',
+   "<leader>'",
+   function() vim.cmd.normal("saiw'") end,
+   { desc = 'Add single quote' }
+)
+
 -- Clipboard
 
 map(
