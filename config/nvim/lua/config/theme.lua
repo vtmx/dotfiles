@@ -183,21 +183,92 @@ local hl_groups = {
   DiagnosticWarn             = { fg = c.yellow },
 
   -- Diff
-  DiffAdd    = { fg = c.green },
-  DiffChange = { fg = c.blue },
-  DiffDelete = { fg = c.red },
-  DiffText   = { fg = c.fg },
+  DiffAdd      = { fg = c.green },
+  DiffChange   = { fg = c.blue },
+  DiffDelete   = { fg = c.red },
+  DiffText     = { fg = c.fg },
 
   -- Float
-  FoldColumn = { bg = c.sel, fg = c.cyan },
-  Folder = { bg = c.sel, fg = c.cyan },
+  FoldColumn   = { bg = c.sel, fg = c.cyan },
+  Folder       = { bg = c.sel, fg = c.cyan },
 
   -- I dont know
-  ColorColumn     = { bg = c.red, fg = c.bg },
-  CursorColumn    = { fg = c.sel },
+  ColorColumn  = { bg = c.red, fg = c.bg },
+  CursorColumn = { fg = c.sel },
 
-  -- LSP Example
-  -- ['@boolean'] = { link = 'Boolean' },
+  -- Tree-sitter
+
+  -- - Text
+  ['@text.literal']      = { link = 'Comment' },
+  ['@text.reference']    = { link = 'Identifier' },
+  ['@text.title']        = { link = 'Title' },
+  ['@text.uri']          = { link = 'Underlined' },
+  ['@text.underline']    = { link = 'Underlined' },
+  ['@text.todo']         = { link = 'Todo' },
+
+  -- - Miscs
+  ['@comment']           = { link = 'Comment' },
+  ['@punctuation']       = { link = 'Delimiter' },
+
+  -- - Constants
+  ['@constant']          = { link = 'Constant' },
+  ['@constant.builtin']  = { link = 'Special' },
+  ['@constant.macro']    = { link = 'Define' },
+  ['@define']            = { link = 'Define' },
+  ['@macro']             = { link = 'Macro' },
+  ['@string']            = { link = 'String' },
+  ['@string.escape']     = { link = 'SpecialChar' },
+  ['@string.special']    = { link = 'SpecialChar' },
+  ['@character']         = { link = 'Character' },
+  ['@character.special'] = { link = 'SpecialChar' },
+  ['@number']            = { link = 'Number' },
+  ['@boolean']           = { link = 'Boolean' },
+  ['@float']             = { link = 'Float' },
+
+  -- - Functions
+  ['@function']          = { link = 'Function' },
+  ['@function.builtin']  = { link = 'Special' },
+  ['@function.macro']    = { link = 'Macro' },
+  ['@parameter']         = { link = 'Identifier' },
+  ['@method']            = { link = 'Function' },
+  ['@field']             = { link = 'Identifier' },
+  ['@property']          = { link = 'Identifier' },
+  ['@constructor']       = { link = 'Special' },
+
+  -- - Keywords
+  ['@conditional']       = { link = 'Conditional' },
+  ['@repeat']            = { link = 'Repeat' },
+  ['@label']             = { link = 'Label' },
+  ['@operator']          = { link = 'Operator' },
+  ['@keyword']           = { link = 'Keyword' },
+  ['@exception']         = { link = 'Exception' },
+  ['@variable']          = { fg   = nil, bg = nil }, -- using default foreground reduces visual overloa,
+  ['@type']              = { link = 'Type' },
+  ['@type.definition']   = { link = 'Typedef' },
+  ['@storageclass']      = { link = 'StorageClass' },
+  ['@namespace']         = { link = 'Identifier' },
+  ['@include']           = { link = 'Include' },
+  ['@preproc']           = { link = 'PreProc' },
+  ['@debug']             = { link = 'Debug' },
+  ['@tag']               = { link = 'Tag' },
+
+  -- - LSP semantic tokens
+  ['@lsp.type.class']         = { link = 'Structure' },
+  ['@lsp.type.comment']       = { link = 'Comment' },
+  ['@lsp.type.decorator']     = { link = 'Function' },
+  ['@lsp.type.enum']          = { link = 'Structure' },
+  ['@lsp.type.enumMember']    = { link = 'Constant' },
+  ['@lsp.type.function']      = { link = 'Function' },
+  ['@lsp.type.interface']     = { link = 'Structure' },
+  ['@lsp.type.macro']         = { link = 'Macro' },
+  ['@lsp.type.method']        = { link = 'Function' },
+  ['@lsp.type.namespace']     = { link = 'Structure' },
+  ['@lsp.type.parameter']     = { link = 'Identifier' },
+  ['@lsp.type.property']      = { link = 'Identifier' },
+  ['@lsp.type.struct']        = { link = 'Structure' },
+  ['@lsp.type.type']          = { link = 'Type' },
+  ['@lsp.type.typeParameter'] = { link = 'TypeDef' },
+  ['@lsp.type.variable']      = { link = '@variable' }, -- links to tree-sitter group to reduce overloa,
 
 ------------------------------------------------------------
   -- Plugins
@@ -245,11 +316,8 @@ local hl_groups = {
   NvimTreeVertSplit        = { fg = c.sel },
   NvimTreeWindowPicker     = { fg = c.fg  },
 
-  -- mini
+  -- mini-jump
   MiniJump                 = { fg = c.red  },
-
-  -- oil
-  -- OilSocket                = { fg = c.fg  },
 
   -- telescope
   TelescopeMultiSelection  = { fg = c.fg   },

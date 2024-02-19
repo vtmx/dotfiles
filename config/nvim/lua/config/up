@@ -289,7 +289,7 @@ map(
 )
 
 map(
-  {'n', 'x'},
+  'x',
   'p',
   '"0p',
   { desc = 'Register not change on paste' }
@@ -830,8 +830,11 @@ map(
 map(
   {'n', 'i', 'v'},
   '<c-s>',
-  '<cmd>up!<cr><esc>',
-  { desc = 'Save file if file is change', silent = false }
+  '<cmd>w! up<cr><esc>',
+  {
+    desc = 'Save file',
+    silent = false
+  }
 )
 
 map(

@@ -9,6 +9,7 @@ return {
           disable_devicons = true,
           color_devicons = false,
           sorting_strategy = 'ascending',
+          prompt_prefix = '   ',
           layout_config = {
             horizontal = {
               prompt_position = 'top'
@@ -16,12 +17,12 @@ return {
           },
            mappings = {
             n = {
-              ['<c-c>']= function(...) return require('telescope.actions').close(...) end
+              ['<c-c>'] = function(...) return require('telescope.actions').close(...) end
             },
             i = {
               ['<c-j>'] = function(...) return require('telescope.actions').move_selection_next(...) end,
-              ['<c-k>']= function(...) return require('telescope.actions').move_selection_previous(...) end,
-              ['<c-c>']= function(...) return require('telescope.actions').close(...) end
+              ['<c-k>'] = function(...) return require('telescope.actions').move_selection_previous(...) end,
+              ['<c-c>'] = function(...) return require('telescope.actions').close(...) end
             }
           }
         }
