@@ -1,10 +1,7 @@
 [ActivityManager][Global Shortcuts]
-switch-to-activity-0eeff7d3-d8d6-4fec-9e9c-a676342ae53a=
 switch-to-activity-d189b209-e023-4888-baa1-91429ce80352=
-switch-to-activity-dc10ea50-5766-403f-825b-8e0326aac23e=
 
 [KDE Keyboard Layout Switcher][Global Shortcuts]
-Switch keyboard layout to Portuguese (Brazil)=
 Switch to Next Keyboard Layout=
 
 [StandardShortcuts]
@@ -93,110 +90,14 @@ Zoom=
 ZoomIn=Ctrl+=; Ctrl++
 ZoomOut=Ctrl+-
 
-[bismuth][Global Shortcuts]
-decrease_master_size=
-decrease_master_win_count=
-decrease_window_height=Meta+Alt+Up; Meta+Alt+K
-decrease_window_width=Meta+Alt+H
-focus_bottom_window=Meta+J
-focus_left_window=Meta+H
-focus_next_window=
-focus_prev_window=Meta+[
-focus_right_window=Meta+L
-focus_upper_window=Meta+K
-increase_master_size=
-increase_master_win_count=
-increase_window_height=Meta+Alt+J; Meta+Alt+Down
-increase_window_width=Meta+Alt+L
-move_window_to_bottom_pos=Meta+Shift+J; Meta+Shift+Down
-move_window_to_left_pos=Meta+Shift+Left; Meta+Shift+H
-move_window_to_next_pos=Meta+}
-move_window_to_prev_pos=Meta+{
-move_window_to_right_pos=Meta+Shift+Right; Meta+Shift+L
-move_window_to_upper_pos=Meta+Shift+K; Meta+Shift+Up
-next_layout=
-prev_layout=
-push_window_to_master=
-rotate=
-rotate_part=
-rotate_reverse=
-toggle_float_layout=Meta+Shift+F
-toggle_monocle_layout=
-toggle_quarter_layout=
-toggle_spiral_layout=
-toggle_spread_layout=
-toggle_stair_layout=
-toggle_three_column_layout=
-toggle_tile_layout=
-toggle_window_floating=
-
-[bitwarden.desktop][Global Shortcuts]
-_launch=Meta+W
-
-[code-oss.desktop][Global Shortcuts]
-_launch=Meta+V
-new-empty-window=
-
-[firefox.desktop][Global Shortcuts]
-_launch=Meta+B
-new-private-window=
-new-window=
-profile-manager-window=
-
-[juk][Global Shortcuts]
-back=Ctrl+Alt+Left
-forward=Ctrl+Alt+Right
-forwardAlbum=Ctrl+Alt+Up
-mute=Ctrl+Alt+M
-playPause=Ctrl+Alt+P
-seekBack=Ctrl+Alt+Shift+Left
-seekForward=Ctrl+Alt+Shift+Right
-stop=Ctrl+Alt+S
-volumeDown=Ctrl+Alt+Shift+Down
-volumeUp=Ctrl+Alt+Shift+Up
-
-[kaccess][Global Shortcuts]
-Toggle Screen Reader On and Off=Meta+Alt+S
-
-[kcm_touchpad][Global Shortcuts]
-Disable Touchpad=Touchpad Off
-Enable Touchpad=Touchpad On
-Toggle Touchpad=Touchpad Toggle
-
 [kded5][Global Shortcuts]
 Show System Activity=Ctrl+Esc
 display=Meta+Shift+P; Display
 
 [khotkeys][Global Shortcuts]
-{0d49fc0d-917e-479c-a9da-8d50a7da6fce}=Meta+T
-{10c9bcc3-9b0d-4521-84ca-379dd92751b7}=Meta+Shift+B
-{1a335688-a506-4256-9f49-ce930f66b214}=Print
-{451567a5-0106-4432-9e47-3574ab357941}=Meta+W
-{47c18075-af43-46bc-8961-8253910d4d4c}=Meta+,
-{49e2694c-7563-4557-ba69-6f6e55f8e36f}=Meta+G
-{5648e70b-6fe4-4a96-93f1-4a302c590945}=Meta+M
-{5662454d-1fc6-494f-a873-7cb653af9448}=Meta+Ctrl+Shift+B
-{5be1b960-a4f5-4386-a18b-e5082191728f}=
 {6362f0bd-d70e-4a33-9664-f5082b5cb972}=Meta+Space
-{6683d2fb-4605-4f27-a024-9bd0dcf67a10}=Meta+Ctrl+Return
-{71139430-99b7-43ad-8884-aaf60d7ddbc1}=Meta+G
-{761900a0-a7b8-41fc-a251-c898a66353cb}=Meta+B
-{7b1c160e-d384-4557-806c-818752ef2a42}=Meta+V
 {83ec1912-d71c-45f7-8b6b-886fbb6a4948}=Ctrl+Alt+Del
 {8577e6db-a469-4e2a-9a5c-684b9f7b5b36}=Meta+.
-{8fc7e5f7-8ccd-4f9d-afe4-ca72467449d3}=Meta+F1
-{91bc8599-b17c-452b-ade7-2049a29c83ca}=Meta+Shift+G
-{95051306-72da-45e1-b1c5-49efa10ca798}=Meta+F11
-{9fa53dfb-82cc-4dc6-af23-9feeb42c4f78}=Meta+P
-{a9833ece-93d5-4f29-8b89-8e7931e80c4c}=Meta+.
-{b8eeb6be-9372-4089-a1ca-c6145aa5e453}=Meta+Return
-{d03619b6-9b3c-48cc-9d9c-a2aadb485550}=
-{e46c203e-c9bc-4c90-8806-7c1167e45c2d}=Meta+A
-{e57d3a8f-11e9-4d75-87d1-bfd9ce763d5e}=Meta+S
-{f7b2137d-b365-437a-945c-8b6f759f7351}=Ctrl+Shift+Esc
-
-[kitty.desktop][Global Shortcuts]
-_launch=Meta+Return
 
 [kmix][Global Shortcuts]
 decrease_microphone_volume=Microphone Volume Down
@@ -221,8 +122,6 @@ Expose=Ctrl+F9
 ExposeAll=Ctrl+F10; Launch (C)
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
-FlipSwitchAll=
-FlipSwitchCurrent=
 Increase Opacity=
 Invert Screen Colors=
 Kill Window=Ctrl+Alt+Esc
@@ -281,7 +180,6 @@ Switch to Screen Above=
 Switch to Screen Below=
 Switch to Screen to the Left=
 Switch to Screen to the Right=
-Toggle=
 Toggle Night Color=
 Toggle Window Raise/Lower=
 Walk Through Desktop List=
@@ -390,55 +288,6 @@ playpausemedia=Media Play
 previousmedia=Media Previous
 stopmedia=Media Stop
 
-[net.lutris.Lutris.desktop][Global Shortcuts]
-_launch=Meta+Shift+G
-
-[org.flameshot.Flameshot.desktop][Global Shortcuts]
-Capture=Print; Meta+S
-Configure=
-Launcher=
-_launch=
-
-[org.kde.dolphin.desktop][Global Shortcuts]
-_launch=Meta+E
-
-[org.kde.kcalc.desktop][Global Shortcuts]
-_launch=Launch (1)
-
-[org.kde.kcolorchooser.desktop][Global Shortcuts]
-_launch=Meta+P
-
-[org.kde.konsole.desktop][Global Shortcuts]
-NewTab=
-NewWindow=
-_launch=Ctrl+Alt+T
-
-[org.kde.krunner.desktop][Global Shortcuts]
-RunClipboard=Alt+Shift+F2
-_launch=Search; Alt+Space; Alt+F2
-
-[org.kde.ksysguard.desktop][Global Shortcuts]
-_launch=Ctrl+Shift+Esc
-
-[org.kde.plasma.emojier.desktop][Global Shortcuts]
-_launch=Meta+Ctrl+Alt+Shift+Space
-
-[org.kde.spectacle.desktop][Global Shortcuts]
-ActiveWindowScreenShot=Meta+Print
-CurrentMonitorScreenShot=
-FullScreenScreenShot=Shift+Print
-OpenWithoutScreenshot=
-RectangularRegionScreenShot=Meta+Shift+Print
-WindowUnderCursorScreenShot=
-_launch=
-
-[org.manjaro.pamac.manager.desktop][Global Shortcuts]
-_launch=Meta+A
-updates=
-
-[org.qbittorrent.qBittorrent.desktop][Global Shortcuts]
-_launch=Meta+T
-
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
 Decrease Screen Brightness=Monitor Brightness Down
@@ -462,12 +311,7 @@ activate task manager entry 6=
 activate task manager entry 7=
 activate task manager entry 8=
 activate task manager entry 9=
-activate widget 20=
-activate widget 3=
-activate widget 32=
-activate widget 35=Meta+F4
 activate widget 5=
-activate widget 8=
 clear-history=
 clipboard_action=Ctrl+Alt+X
 cycle-panels=Meta+Alt+P
@@ -485,31 +329,3 @@ stop current activity=
 switch to next activity=
 switch to previous activity=
 toggle do not disturb=
-
-[steam.desktop][Global Shortcuts]
-BigPicture=
-Community=
-Friends=
-Library=
-News=
-Screenshots=
-Servers=
-Settings=
-Store=
-_launch=Meta+G
-
-[systemsettings.desktop][Global Shortcuts]
-_launch=Tools; Meta+,; Meta+I
-kcm-kscreen=
-kcm-lookandfeel=
-kcm-users=
-powerdevilprofilesconfig=
-screenlocker=
-
-[vivaldi-stable.desktop][Global Shortcuts]
-_launch=Meta+Shift+B
-new-private-window=
-new-window=
-
-[vlc.desktop][Global Shortcuts]
-_launch=Meta+M

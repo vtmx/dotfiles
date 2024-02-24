@@ -304,12 +304,12 @@ map(
   { desc = 'Copy all content to clipboard' }
 )
 
-map(
-  {'n', 'x'},
-  'p',
-  '"0p',
-  { desc = 'Register not change on paste' }
-)
+-- map(
+--   {'n', 'x'},
+--   'p',
+--   '"0p',
+--   { desc = 'Register not change on paste' }
+-- )
 
 map(
   'n',
@@ -712,36 +712,6 @@ map(
   '<a-l>',
   '<c-w>l',
   { desc = 'Go right window' }
-)
-
--- tmux
-
-map(
-  'n',
-  '<a-h>',
-  '<cmd>TmuxNavigateLeft<cr>',
-  { desc = 'Tmux go left' }
-)
-
-map(
-  'n',
-  '<a-j>',
-  '<cmd>TmuxNavigateDown<cr>',
-  { desc = 'Tmux go down' }
-)
-
-map(
-  'n',
-  '<a-k>',
-  '<cmd>TmuxNavigateUp<cr>',
-  { desc = 'Tmux go up' }
-)
-
-map(
-  'n',
-  '<a-l>',
-  '<cmd>TmuxNavigateRight<cr>',
-  { desc = 'Tmux go right' }
 )
 
 -- Resize Window

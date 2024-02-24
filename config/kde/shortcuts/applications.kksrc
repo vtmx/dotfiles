@@ -1,0 +1,95 @@
+[bitwarden.desktop][Global Shortcuts]
+_launch=Meta+W
+
+[code-oss.desktop][Global Shortcuts]
+_launch=Meta+V
+new-empty-window=
+
+[firefox.desktop][Global Shortcuts]
+_launch=Meta+B
+new-private-window=
+new-window=
+profile-manager-window=
+
+[kaccess][Global Shortcuts]
+Toggle Screen Reader On and Off=Meta+Alt+S
+
+[kitty.desktop][Global Shortcuts]
+_launch=Meta+Return
+
+[net.lutris.Lutris.desktop][Global Shortcuts]
+_launch=Meta+Shift+G
+
+[org.flameshot.Flameshot.desktop][Global Shortcuts]
+Capture=Print; Meta+S
+Configure=
+Launcher=
+_launch=
+
+[org.kde.dolphin.desktop][Global Shortcuts]
+_launch=Meta+E
+
+[org.kde.kcalc.desktop][Global Shortcuts]
+_launch=Launch (1)
+
+[org.kde.kcolorchooser.desktop][Global Shortcuts]
+_launch=Meta+P
+
+[org.kde.konsole.desktop][Global Shortcuts]
+NewTab=
+NewWindow=
+_launch=Ctrl+Alt+T
+
+[org.kde.krunner.desktop][Global Shortcuts]
+RunClipboard=Alt+Shift+F2
+_launch=Search; Alt+Space; Alt+F2
+
+[org.kde.ksysguard.desktop][Global Shortcuts]
+_launch=Ctrl+Shift+Esc
+
+[org.kde.plasma.emojier.desktop][Global Shortcuts]
+_launch=Meta+Ctrl+Alt+Shift+Space
+
+[org.kde.spectacle.desktop][Global Shortcuts]
+ActiveWindowScreenShot=Meta+Print
+CurrentMonitorScreenShot=
+FullScreenScreenShot=Shift+Print
+OpenWithoutScreenshot=
+RectangularRegionScreenShot=Meta+Shift+Print
+WindowUnderCursorScreenShot=
+_launch=
+
+[org.manjaro.pamac.manager.desktop][Global Shortcuts]
+_launch=Meta+A
+updates=
+
+[org.qbittorrent.qBittorrent.desktop][Global Shortcuts]
+_launch=Meta+T
+
+[steam.desktop][Global Shortcuts]
+BigPicture=
+Community=
+Friends=
+Library=
+News=
+Screenshots=
+Servers=
+Settings=
+Store=
+_launch=Meta+G
+
+[systemsettings.desktop][Global Shortcuts]
+_launch=Tools; Meta+,; Meta+I
+kcm-kscreen=
+kcm-lookandfeel=
+kcm-users=
+powerdevilprofilesconfig=
+screenlocker=
+
+[vivaldi-stable.desktop][Global Shortcuts]
+_launch=Meta+Shift+B
+new-private-window=
+new-window=
+
+[vlc.desktop][Global Shortcuts]
+_launch=Meta+M
