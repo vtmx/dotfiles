@@ -122,6 +122,7 @@ alias lnf="ln -f"
 alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
+alias lls="ls -ltra | grep --color=never '\->'"
 
 # man
 alias m="man -L pt_BR.UTF-8"

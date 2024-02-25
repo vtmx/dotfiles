@@ -1,18 +1,10 @@
 #!/usr/bin/env bash
 
 # Autostart
-# pkill -USR1 sxhkd & sxhkd &
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/* &
 pkill -USR1 polybar & polybar bspwm &
-
-# If KDE
-if [[ "$XDG_CURRENT_DESKTOP" == "KDE" ]]; then
-  export KDE_SHORTCUT="qdbus org.kde.kglobalaccel /component/kwin invokeShortcut"
-  export BISMUTH_SHORTCUT="qdbus org.kde.kglobalaccel /component/bismuth org.kde.kglobalaccel.Component.invokeShortcut"
-  pkill -USR1 sxhkd & sxhkd -c kde &
-fi
 
 # Simplify commands
 bc="bspc config"
