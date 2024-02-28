@@ -1,22 +1,18 @@
 # Reload
-super + r
+super + shift + r
 	bspc wm -r && pkill -USR1 -x sxhkd
-
-# Powermenu
-super + p
-  ${HOME}/Dev/dotfiles/scripts/powermenu.sh
 
 # Close, kill window
 super + {_,shift + }c
-	bspc node -{c
+	bspc node -{c,k}
 
 # Quit
 super + shift + q
 	bspc quit
 
 # Reload sxhkd
-super + Escape
-  pkill -USR1 -x sxhkd
+super + r
+  pkill -USR1 -x sxhkd && notify-send 'sxhkd reloaded'
 
 # Laucnher
 super + @space
@@ -34,13 +30,6 @@ super + ctrl + shift + b
 super + {_,shift + }f
 	bspc node -t "~"{fullscreen,floating}
 
-# Next and Prev Workspace
-#super + {_shift + }{h, l}
-#	{qdbus org.kde.KWin /KWin org.kde.KWin.previousDesktop,\
-#	 qdbus org.kde.KWin /KWin org.kde.KWin.nextDesktop,\
-#	 qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Window to Previous Desktop',\
-#	 qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Window to Next Desktop'}
-
 # Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
 	bspc node -{f,s} {west,west,south,south,north,north,east,east}
@@ -54,7 +43,7 @@ super + ctrl + {_,shift + }{h,Left,l,Right}
 	bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
 
 # Switch and send window to other workspace
-super + {_,shift + }{1-9}
+super {_,shift + }{1-9}
 	bspc {desktop -f,node -d} "^{1-9}" --follow
 
 # Resize window
@@ -77,17 +66,8 @@ ctrl + alt + {h,Left,j,Down,k,Up,l,Right}
 	bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
 
 # Apps
-super + {a,b,e,g,m,p,t,s,v,w}
-	{pamac-manager,\
-  firefox,\
-  dolphin,\
-  steam,\
-  vlc,\
-  color-picker,\
-  qbittorrent,\
-  flameshot gui,\
-  code,\
-  bitwaden}
+super + {a,b,g,m,p,t,s,v}
+	{pamac-manager,firefox,steam,vlc,color-picker,qbittorrent,flameshot gui,code}
 
 super + shift + {g}
 	{lutris}
@@ -101,6 +81,8 @@ super + shift + {g}
 # systemctl poweroff
 # systemctl reboot
 # systemctl suspend
+# dunst
+# jgmenu
 
 # Change wallpaper
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm

@@ -57,7 +57,7 @@ create_link() {
   local dist=$3
 
   # If not name
-  if [[ "$name" ]] && echo "Create link for $name..."
+  [[ "$name" ]] && echo "Create link for $name..."
 
   # Create a hard symlink
   ln -sf "$src" "$dist"
@@ -82,19 +82,6 @@ create_links() {
   # bat
   name="bat"
   target="$config_src/bat"
-  link="$config_dist"
-  create_link "$name" "$target" "$link"
-
-  # cmus
-  name="cmus"
-  target="$config_src/cmus"
-  link="$config_dist"
-  create_link "$name" "$target" "$link"
-
-
-  # conky
-  name="conky"
-  target="$config_src/conky"
   link="$config_dist"
   create_link "$name" "$target" "$link"
 
@@ -131,17 +118,6 @@ create_links() {
   # nvim
   name="nvim"
   target="$config_src/nvim"
-  link="$config_dist"
-  create_link "$name" "$target" "$link"
-
-  # polybar
-  name="polybar"
-  target="$config_src/polybar"
-  link="$config_dist"
-  create_link "$name" "$target" "$link"
-
-  name="polybar launch"
-  target="$config_src/polybar"
   link="$config_dist"
   create_link "$name" "$target" "$link"
 
