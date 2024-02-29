@@ -684,34 +684,34 @@ map(
   { desc = 'Split vertical' }
 )
 
--- Navigation panes
+-- Tmux Navigate
+
+map(
+  'n',
+  '<a-l>',
+  '<cmd>TmuxNavigateRight<cr>',
+  { desc = 'Tmux navigate right' }
+)
 
 map(
   'n',
   '<a-h>',
-  '<c-w>h',
-  { desc = 'Go left window' }
+  '<cmd>TmuxNavigateLeft<cr>',
+  { desc = 'Tmux navigate left' }
 )
 
 map(
   'n',
   '<a-j>',
-  '<c-w>j',
-  { desc = 'Go dow window' }
+  '<cmd>TmuxNavigateDown<cr>',
+  { desc = 'Tmux navigate down' }
 )
 
 map(
   'n',
   '<a-k>',
-  '<c-w>k',
-  { desc = 'Go up window' }
-)
-
-map(
-  'n',
-  '<a-l>',
-  '<c-w>l',
-  { desc = 'Go right window' }
+  '<cmd>TmuxNavigateUp<cr>',
+  { desc = 'Tmux navigate up' }
 )
 
 -- Resize Window
