@@ -40,7 +40,7 @@ clone_repository() {
 
 copy_fonts() {
   echo Copying fonts...
-  cp -R "${current_dir}/fonts/*" "${HOME}/.local/share/fonts"
+  cp -r "${current_dir}/fonts/*" "${HOME}/.local/share/fonts"
   pause_success "Copied"
 }
 
@@ -58,6 +58,9 @@ create_link() {
 
   # If not name
   [[ "$name" ]] && echo "Create link for $name..."
+
+  # Copy dir
+  cp -r "$src" "$dist"
 
   # Create a hard symlink
   ln -sf "$src" "$dist"
