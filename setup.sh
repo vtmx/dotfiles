@@ -11,6 +11,7 @@ menu() {
    \/   __|__    |    |_____| |    \_ |  |  | |______ |_____ |_____|"
 
   read -rp "
+ b. Copy bin
  c. Clone repository
  f. Copy fonts 
  i. Install packages
@@ -22,11 +23,11 @@ Option: " option
   echo ""
 
   case "${option}" in
+    b|b) copy_bin         ;;
     c|C) clone_repository ;;
     i|I) install_packages ;;
     f|F) copy_fonts       ;;
     l|L) create_links     ;;
-    s|S) copy_scripts     ;;
     q|Q) exit 0           ;;
     *) pause_error "Invalid option" ;;
   esac
@@ -38,10 +39,26 @@ clone_repository() {
   git clone git@github.com:vtmx/dotfiles.git $dir
 }
 
+copy_bin() {
+  bindir=${HOME}/.local/bin
+  [[ ! -d $bindir ]] && echo Create bin dir...; mkdir -p $bindir
+  echo Create simolic link of bin...
+  if ln -sf "${current_dir}/bin/"* $bindir; then
+    pause_success "Created symolic link"
+  else
+    pause_error "Not created symolic link"
+  fi
+}
+
 copy_fonts() {
+  fontdir=${HOME}/.local/share/fonts
   echo Copying fonts...
-  cp -r "${current_dir}/fonts/*" "${HOME}/.local/share/fonts"
-  pause_success "Copied"
+  [[ ! -d $fontdir ]] && echo Create font dir...; mkdir -p $fontdir
+  if cp -r "${current_dir}/fonts/"* $fontdir; then
+    pause_success "Fonts copied"
+  else
+    pause_error "Fonts not copied"
+  fi
 }
 
 install_packages() {
@@ -56,41 +73,28 @@ create_link() {
   local src=$2
   local dist=$3
 
-  # If not name
-  [[ "$name" ]] && echo "Create link for $name..."
+  [[ $name ]] && echo "Create link for $name..."
 
-  # Copy dir
-  cp -r "$src" "$dist"
+  [[ -d $dist ]] || mkdir -p $dist 
+  cp -rf $src $dist
 
   # Create a hard symlink
-  ln -sf "$src" "$dist"
+  # ln -sf $src $dist
 }
 
 create_links() {
-  local $config_src="$current_dir/config"
-  local $config_dist="$HOME/.config/"
+  local config_src="${current_dir}/config"
+  local config_dist="${HOME}/.config/"
    
-  # bin
-  name="bin"
-  target="$current_dir/bin"
-  link="$HOME/.local/"
-  create_link "$name" "$target" "$link"
-
   # bash
-  name="bash"
-  target="$config_src/bash/.*"
-  link="$HOME"
-  create_link "$name" "$target" "$link"
+  # name="bash"
+  # target="$config_src/bash/."*
+  # link="$HOME"
+  # create_link "$name" "$target" "$link"
 
   # bat
   name="bat"
   target="$config_src/bat"
-  link="$config_dist"
-  create_link "$name" "$target" "$link"
-
-  # fish
-  name="fish"
-  target="$config_src/fish"
   link="$config_dist"
   create_link "$name" "$target" "$link"
 
@@ -143,20 +147,16 @@ create_links() {
   create_link "$name" "$target" "$link"
 
   # vscode
-  name="vscode"
-  target="$config_src/vscode/*.json"
-  link="$config_dist/Code - OSS/User"
-  create_link "$name" "$target" "$link"
-
-  target="$config_src/vscode/snippets"
-  link="$config_dist/Code - OSS/User/snippets"
-  create_link "$name" "$target" "$link"
+  # name="vscode"
+  # target="$config_src/vscode"
+  # link="$config_dist/code - oss/user"
+  # create_link "$name" "$target" "$link"
 
   pause_success "Links created"
 }
 
 # ------------------------------------------------------------------------------
-# Pause
+# pause
 # ------------------------------------------------------------------------------
 
 pause() {
@@ -205,4 +205,4 @@ echo_green() {
   echo -e "${green}${message}${color_off}"
 }
 
-menu
+menu $1
