@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-setsid kwin_x11 --replace &
-setsid plasmashell --replace & 

@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Onyx-Citrus</name>
+    <name>Photoshop</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -95,7 +95,7 @@
   </theme>
   <!-- Workspace -->
   <desktops>
-    <number>5</number>
+    <number>9</number>
     <firstdesk>1</firstdesk>
     <!-- <popupTime>0</popupTime> -->
     <names>
@@ -104,7 +104,12 @@
       <name>3</name>
       <name>4</name>
       <name>5</name>
+      <name>6</name>
+      <name>7</name>
+      <name>8</name>
+      <name>9</name>
     </names>
+    <popupTime>875</popupTime>
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
@@ -157,9 +162,19 @@
         <command>kitty</command>
       </action>
     </keybind>
+    <keybind key="W-,">
+      <action name="execute">
+        <command>obconf</command>
+      </action>
+    </keybind>
     <keybind key="W-space">
       <action name="execute">
         <command>rofi -show drun</command>
+      </action>
+    </keybind>
+    <keybind key="W-a">
+      <action name="execute">
+        <command>pamac-manager</command>
       </action>
     </keybind>
     <keybind key="Print W-s">
@@ -167,9 +182,14 @@
         <command>ob-screenshot --now</command>
       </action>
     </keybind>
-    <!-- Reload config -->
     <keybind key="W-r">
       <action name="Reconfigure"/>
+      <action name="execute">
+        <command>notify-send 'Openbox reloaded'</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-r">
+      <action name="Restart"/>
       <action name="execute">
         <command>notify-send 'Openbox reloaded'</command>
       </action>
@@ -178,7 +198,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="W-C">
+    <keybind key="W-c">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -444,11 +464,6 @@
         <to>9</to>
       </action>
     </keybind>
-    <keybind key="W-0">
-      <action name="GoToDesktop">
-        <to>0</to>
-      </action>
-    </keybind>
     <!--Send to desktop-->
     <keybind key="W-S-1">
       <action name="SendToDesktop">
@@ -493,11 +508,6 @@
     <keybind key="W-S-9">
       <action name="SendToDesktop">
         <to>9</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-0">
-      <action name="SendToDesktop">
-        <to>0</to>
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
@@ -830,6 +840,9 @@
         <action name="ShowMenu">
           <menu>root-menu</menu>
         </action>
+        <!-- <action name="Execute"> -->
+        <!--   <command>jgmenu_run</command> -->
+        <!-- </action> -->
       </mousebind>
     </context>
     <context name="MoveResize">
@@ -885,10 +898,12 @@
     <application class="*">
       <focus>yes</focus>
     </application>
-    <application class="Firefox*">
+    <application class="Firefox">
       <decor>no</decor>
     </application>
-
+    <application name="Navigator" role="browser">
+      <decor>no</decor>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
@@ -985,8 +1000,9 @@
 -->
   </applications>
 </openbox_config>
-
 <!--
 References:
 https://github.com/archcraft-os/archcraft-openbox/blob/main/files/rc.xml
+https://xyne.dev/projects/obtheme/
+obmenu, obmenu-generator, obtheme 
 -->

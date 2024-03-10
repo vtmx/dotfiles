@@ -368,3 +368,43 @@
     <tbody>
   </table>
 </details> -->
+
+<!-- ### Apps
+
+<details>
+  <summary>Click to expand</summary>
+  <table>
+    <thead>
+      <tr>
+        <th>Shortcut</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>Super + a</code></td>
+        <td>Pamac manager</td>
+      </tr>
+      <tr>
+        <td><code>Super + b</code></td>
+        <td>Browser</td>
+      </tr>
+      <tr>
+        <td><code>Super + p</code></td>
+        <td>Color picker</td>
+      </tr>
+      <tr>
+        <td><code>Super + s</code></td>
+        <td>Screenshot</td>
+      </tr>
+      <tr>
+        <td><code>Super + v</code></td>
+        <td>VS Code</td>
+      </tr>
+      <tr>
+        <td><code>Super + w</code></td>
+        <td>Bitwarden</td>
+      </tr>
+    <tbody>
+  </table>
+</details> -->

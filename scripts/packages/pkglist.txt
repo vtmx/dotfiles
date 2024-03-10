@@ -1,4 +1,3 @@
-awesome
 bash
 bat
 bitwarden
@@ -6,7 +5,6 @@ breeze-gtk
 bspwm
 btop
 cmatrix-git
-cmus
 code
 conky-lua-nv
 discord
@@ -14,6 +12,7 @@ dolphin
 dolphin-plugins
 entr
 exa
+fd
 feh
 figlet
 filelight
@@ -26,7 +25,9 @@ fwupd
 gum
 helix
 htop
+hyperfine
 inkscape
+jq
 kate
 kcalc
 kcolorchooser
@@ -37,8 +38,6 @@ konsole
 krename
 krita
 krusader
-kwin-bismuth
-lutris
 lynx
 mkvtoolnix-cli
 mkvtoolnix-gui
@@ -47,26 +46,30 @@ neofetch
 neovim
 nodejs
 npm
+openbox
+obconf
 pandoc
 polybar
 qtile
 ranger
 retroarch
+ripgrep
 rofi
 rsync
-telegram-desktop
 tesseract
-tesseract-data-por
 timeshift
-timeshift-autosnap-manjaro
 tmux
 veracrypt
 vifm
 virtualbox
 vivaldi
-vivaldi-ffmpeg-codecs
 vlc
 xclip
 yay
 zellij
 zoxide
+
+# References
+# https://gist.github.com/albertguedes/314819ad5c84c1d2a3d6298233ad0d5e#file-rust-command-line-utilities-markdown
+# https://github.com/TaKO8Ki/awesome-alternatives-in-rust
+

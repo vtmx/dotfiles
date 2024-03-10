@@ -43,18 +43,18 @@ copy_bin() {
   bindir=${HOME}/.local/bin
   [[ ! -d $bindir ]] && echo Create bin dir...; mkdir -p $bindir
   echo Create simolic link of bin...
-  if ln -sf "${current_dir}/bin/"* $bindir; then
-    pause_success "Created symolic link"
+  if cp -r "${current_dir}/local/bin/"* $fontdir; then
+    pause_success "Bin copied"
   else
-    pause_error "Not created symolic link"
+    pause_error "Bin not copied"
   fi
 }
 
 copy_fonts() {
   fontdir=${HOME}/.local/share/fonts
-  echo Copying fonts...
   [[ ! -d $fontdir ]] && echo Create font dir...; mkdir -p $fontdir
-  if cp -r "${current_dir}/fonts/"* $fontdir; then
+  echo Copying fonts...
+  if cp -r "${current_dir}/local/share/fonts/"* $fontdir; then
     pause_success "Fonts copied"
   else
     pause_error "Fonts not copied"
@@ -65,7 +65,6 @@ install_packages() {
   echo "Install packages..."
   pause_success "Installed"
 }
-
 
 # Links need the complete path
 create_link() {
