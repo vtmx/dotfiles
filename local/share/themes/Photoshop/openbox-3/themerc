@@ -1,0 +1,100 @@
+! Photoshop by Vitor Melo
+! Inspired by Photoshop app.
+! https://www.youtube.com/watch?v=aiOI4-a6YS4
+! https://drive.google.com/drive/folders/1J2GZSkOVd5C_tAkG16PeX7BkfQ_lPFh4
+
+! General
+border.width: 1
+
+! Menu background
+menu.items.bg: flat
+menu.items.bg.color: #282828
+menu.items.font:shadow=y:shadowtint=30
+menu.items.text.color: #dddddd
+menu.items.justify: left
+menu.items.disabled.text.color: #606060
+menu.overlap: 0
+
+! Menu header
+menu.title.bg: vertical gradient
+menu.title.bg.color: #373737
+menu.title.bg.colorTo: #181818
+menu.title.text.color: #eee
+menu.title.text.justify: center
+
+! Separator
+menu.separator.color: #606060
+
+! Selected menu item
+menu.items.active.bg: vertical gradient
+menu.items.active.bg.color: #6b6b6b
+menu.items.active.bg.colorTo: #444
+menu.items.active.text.color: #dddddd
+
+! Window
+window.active.button.*.hover.bg.color: #e18a51
+window.active.button.*.hover.bg.colorTo: #e1621d
+window.active.border.color: #181818
+window.active.button.*.hover.bg.border.color: #ab5d20
+window.active.client.color: #181818
+
+window.inactive.title.separator.color: #eeeee6
+window.inactive.border.color: #404040
+window.inactive.client.color: #CACAB6
+
+window.handle.width: 0
+window.client.padding.width: 1
+window.client.padding.height: 1
+
+! Window Titlebar
+window.active.title.bg: vertical gradient
+window.active.title.bg.color: #373737
+window.active.title.bg.colorTo: #181818
+window.inactive.title.bg: gradient flat
+window.inactive.title.bg.color: #373737
+window.inactive.title.bg.colorTo: #181818
+padding.width: 2
+
+! Titlebar text
+window.label.text.justify: center
+window.active.label.bg: parentrelative
+window.active.label.text.color: #f8f8f8
+window.inactive.label.bg: parentrelative
+window.inactive.label.text.color: #747474
+
+! Window buttons
+window.*.button.*.bg: parentrelative
+window.*.button.*.pressed.bg: flat splitvertical gradient border
+
+window.active.button.*.hover.bg: flat splitvertical gradient border
+window.active.button.*.pressed.bg.color: #99663c
+window.active.button.*.pressed.bg.colorTo: #99663c
+window.active.button.*.pressed.image.color: #888888
+window.active.button.*.pressed.bg.border.color: #683913
+window.active.button.*.image.color: #e0e0e0
+window.active.button.disabled.image.color: #707070
+
+window.inactive.button.*.hover.bg: parentrelative
+window.inactive.button.*.pressed.bg.color: #ffaa64
+window.inactive.button.*.pressed.bg.colorTo: #ffaa64
+window.inactive.button.*.pressed.image.color: #fdceb7
+window.inactive.button.*.pressed.bg.border.color: #f0832c
+window.inactive.button.*.image.color: #747474
+window.inactive.button.disabled.image.color: #c0c0c0
+
+! On-screen displays
+osd.bg: gradient vertical
+osd.bg.color: #303030
+osd.bg.colorTo: #080808
+
+osd.unhilight.bg: gradient vertical
+osd.unhilight.bg.color: #555
+osd.unhilight.bg.colorTo: #333
+
+osd.hilight.bg: gradient vertical
+osd.hilight.bg.color: #ddd
+osd.hilight.bg.colorTo: #666
+
+! set ft=yaml
+! http://openbox.org/wiki/Help:Themes
+! find themerc | entr -cr openbox --reconfigure

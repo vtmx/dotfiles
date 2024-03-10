@@ -229,6 +229,7 @@ alias vc="$EDITOR $HOME/.config/nvim/init.lua"
 alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
+alias ob="$EDITOR $HOME/.config/openbox/rc.xml"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
 
 # References
