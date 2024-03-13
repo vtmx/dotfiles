@@ -22,7 +22,9 @@ case $opt in
   openbox)
     openbox --reconfigure ;;
   polybar)
-    pgrep -x polybar > /dev/null || polybar bspwm &; ;;
+    pgrep -x polybar > /dev/null || polybar bspwm & ;;
   sxhkd)
     pgrep -x sxhkd > /dev/null || sxhkd & ;;
 esac
+
+notify-send "$opt reloaded"
