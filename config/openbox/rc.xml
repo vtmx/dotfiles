@@ -157,6 +157,11 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="C-A-Delete">
+      <action name="execute">
+        <command>powermenu</command>
+      </action>
+    </keybind>
     <keybind key="W-Return">
       <action name="execute">
         <command>kitty</command>
