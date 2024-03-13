@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# Editor
+editor='kitty nvim'
+
+# Options
+opts="bash
+bash_alias
+bash_functions
+bspwm
+kitty
+nvim
+openbox
+polybar
+rofi
+tmux
+sxhkd"
+
+# Get option
+opt=$(echo "$opts" | rofi -dmenu -p "" -theme-str 'listview { lines: 5; }')
+
+# Open config file
+openconf() {
+  [[ -f $1 ]] && $editor $1 &
+}
+
+# Open config file
+case $opt in
+  bash)
+    openconf ~/.bashrc ;;
+  bash_functions)
+    openconf ~/.bash_functions ;;
+  bash_alias)
+    openconf ~/.bash_alias ;;
+  bspwm)
+    openconf ~/.config/bspwm/bspwmrc ;;
+  kitty)
+    openconf ~/.config/kitty/kitty.conf ;;
+  nvim)
+    openconf ~/.config/nvim/init.lua ;;
+  openbox)
+    openconf ~/.config/openbox/rc.xml ;;
+  polybar)
+    openconf ~/.config/polybar/config.ini ;;
+  rofi)
+    openconf ~/.config/rofi/config.rasi ;;
+  tmux)
+    openconf ~/.config/tmux/tmux.conf ;;
+  sxhkd)
+    openconf ~/.config/sxhkd/sxhkdrc ;;
+esac

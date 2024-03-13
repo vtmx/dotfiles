@@ -6,6 +6,10 @@ super + shift + r
 super + {_,shift + }c
 	bspc node -{c,k}
 
+# Powermenu
+ctrl + alt + Delete
+  powermenu
+
 # Quit
 super + shift + q
 	bspc quit
@@ -46,6 +50,9 @@ super + ctrl + {_,shift + }{h,Left,l,Right}
 super {_,shift + }{1-9}
 	bspc {desktop -f,node -d} "^{1-9}" --follow
 
+alt + tab
+  rofi -show window
+
 # Resize window
 # super + alt + {h,j,k,l}
 # 	bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
@@ -65,12 +72,36 @@ ctrl + alt + r : {Left,Down,Up,Right}
 ctrl + alt + {h,Left,j,Down,k,Up,l,Right}
 	bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
 
+# Brighness control
+# XF86MonBrightness{Up,Down}
+# 	bspbrightness{ --inc, --dec}
+	
+# Volume control
+# XF86Audio{RaiseVolume,LowerVolume}
+# 	bspvolume{ --inc, --dec}
+
+# Volume Mute
+# XF86AudioMute
+	# bspvolume --toggle
+
+# Music control
+# XF86Audio{Next,Prev,Play,Stop}
+# 	mpc {next,prev,toggle,stop}
+
+# Mic Volume control
+# XF86Audio{Mute,MicMute}
+# 	bspvolume{ --toggle, --toggle-mic}
+
 # Apps
 super + {a,b,g,m,p,t,s,v}
 	{pamac-manager,firefox,steam,vlc,color-picker,qbittorrent,flameshot gui,code}
 
 super + shift + {g}
 	{lutris}
+
+# Mouse
+# ~button3
+#   jgmenu_run
 
 # Return current desktop
 # bspc query -D -d --names

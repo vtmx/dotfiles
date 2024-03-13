@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+shopt -s globstar
+
+# Options
+opts="background
+bspwm
+kitty
+openbox
+polybar
+sxhkd"
+
+# Get option
+opt=$(echo "$opts" | rofi -dmenu -p "" -theme-str 'listview { lines: 5; }')
+
+# Open config file
+case $opt in
+  background)
+    feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/** & ;;
+  bspwm)
+    bspc wm -r && pkill -USR1 -x sxhkd ;;
+  openbox)
+    openbox --reconfigure ;;
+  polybar)
+    pgrep -x polybar > /dev/null || polybar bspwm &; ;;
+  sxhkd)
+    pgrep -x sxhkd > /dev/null || sxhkd & ;;
+esac
