@@ -16,15 +16,14 @@ opt=$(echo "$opts" | rofi -dmenu -p "" -theme-str 'listview { lines: 5; }')
 # Open config file
 case $opt in
   background)
-    feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/** ;;
+    feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/** && notify-send "$opt reloaded" ;; 
   bspwm)
-    bspc wm -r && pkill -USR1 -x sxhkd ;;
+    bspc wm -r && pkill -USR1 -x sxhkd && notify-send "$opt reloaded";;
   openbox)
-    openbox --reconfigure ;;
+    openbox --reconfigure && notify-send "$opt reconfigured";;
   polybar)
-    pgrep -x polybar > /dev/null || polybar bspwm ;;
+    pgrep -x polybar > /dev/null || polybar bspwm && notify-send "$opt reloaded";;
   sxhkd)
-    pgrep -x sxhkd > /dev/null || sxhkd ;;
+    pgrep -x sxhkd > /dev/null || sxhkd && notify-send "$opt reloaded";;
 esac
 
-notify-send "$opt reloaded"
