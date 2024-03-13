@@ -6,6 +6,7 @@ shopt -s globstar
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
 feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/** &
+dunst &
 pgrep -x polybar > /dev/null || polybar bspwm &
 
 # Simplify commands
