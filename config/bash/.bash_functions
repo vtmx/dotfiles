@@ -3,12 +3,21 @@ shopt -s extglob
 shopt -s globstar
 
 # Copy and go to the directory
-cpcd () {
+cpcd() {
 	if [[ -d "$2" ]]; then
 		cp "$1" "$2" && cd "$2"
 	else
 		cp "$1" "$2"
 	fi
+}
+
+# Cheat curl cht.sh/:styles-demo
+cheat() {
+  if [[ "$1" ]]; then 
+    curl "https://cheat.sh/$1"
+  else
+    echo 'command not exit'
+  fi
 }
 
 # Simplified git commit

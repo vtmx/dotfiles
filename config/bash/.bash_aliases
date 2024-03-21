@@ -104,6 +104,9 @@ alias grmv="git remote move"
 alias gru="git remote update"
 alias gs="git status -sb"
 
+# gtk
+alias gtk="GTK_DEBUG=interactive"
+
 # grep
 alias grep="grep --color=auto"
 
