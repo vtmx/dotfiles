@@ -991,7 +991,7 @@ map(
 map(
   'n',
   '<c-p>',
-  '<cmd>Telescope file_browser<cr>',
+  '<cmd>Telescope git_files<cr>',
   { desc = 'Files' }
 )
 

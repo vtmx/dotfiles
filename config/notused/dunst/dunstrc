@@ -1,0 +1,61 @@
+[global]
+origin = bottom-right
+offset = 8x64
+alignment = left
+vertical_alignment = center
+font = JetBrains Mono 10
+frame_width = 1
+# always_run_script = true
+# browser = x-www-browser -new-tab
+# class = Dunst
+# follow = mouse
+# format = %s\n%b
+# frame_width = 6
+# geometry = "280x50-10+48"
+# hide_duplicate_count = yes
+# history_length = 20
+# horizontal_padding = 15
+# icon_position = left
+# idle_threshold = 120
+# ignore_newline = no
+# indicate_hidden = yes
+# line_height = 4
+# markup = full
+# max_icon_size = 48
+# monitor = 0
+# padding = 15
+# separator_color = auto
+# separator_height = 4
+# show_age_threshold = 60
+# show_indicators = no
+# shrink = no
+# sort = no
+# stack_duplicates = false
+# sticky_history = yes
+# title = Dunst
+# word_wrap = yes
+#
+# [shortcuts]
+# close = ctrl+shift+space
+# close_all = ctrl+shift+space
+# history = ctrl+grave
+# context = ctrl+shift+period
+
+[urgency_low]
+timeout = 2
+background  = "#1e2227"
+foreground  = "#abb2bf"
+frame_color = "#3d4556"
+
+[urgency_normal]
+timeout = 2
+background  = "#1e2227"
+foreground  = "#abb2bf"
+frame_color = "#3d4556"
+
+[urgency_critical]
+timeout = 0
+background  = "#1e2227"
+foreground  = "#abb2bf"
+frame_color = "#e06c75"
+

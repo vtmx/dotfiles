@@ -38,6 +38,7 @@
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.semanticHighlighting.enabled": false,
+  "editor.stickyScroll.enabled": false,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "comments": "#5c6370",
@@ -501,5 +502,5 @@
       "before": ["<leader>", "'"],
       "after": ["c", "'", "'", "<esc>", "P"]
     }
-  ]
+  ],
 }

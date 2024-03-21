@@ -27,6 +27,7 @@ helix
 htop
 hyperfine
 inkscape
+inotify-tools
 jq
 kate
 kcalc
