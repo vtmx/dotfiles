@@ -57,11 +57,13 @@ main() {
 get_color() {
   local color=$(kreadconfig5 --file $kdeglobals --group Colors:${2} --key ${3})
 
-  # If rgb color
-  if [[ "$color" =~ ([[:digit:]]{2},){2}[[:digit:]]{2} ]]; then
-    echo "--${1}: rgb($color);"
-  else
-    echo "--${1}: $color;"
+  # Check if color and if is rgb
+  if [[ -n "$color" ]]; then
+    if [[ "$color" =~ ([[:digit:]]{2},){2}[[:digit:]]{2} ]]; then
+      echo "--${1}: rgb($color);"
+    else
+      echo "--${1}: $color;"
+    fi
   fi
 }
 
