@@ -119,6 +119,10 @@ alias hx="helix"
 # ip
 alias ip="ip -color=auto"
 
+# inotify
+alias iwait="inotifywait"
+alias iwatch="inotifywatch"
+
 # ln
 alias lnf="ln -f"
 

@@ -19,12 +19,12 @@ BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
 Clear=
-Close=Ctrl+W; Ctrl+Esc
+Close=Ctrl+Esc; Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
 Copy=Ctrl+Ins; Ctrl+C
 CreateFolder=Ctrl+Shift+N; F10
-Cut=Shift+Del; Ctrl+X
+Cut=Ctrl+X; Shift+Del
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
 DeleteWordForward=Ctrl+Del
@@ -41,14 +41,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Forward; Alt+Right
+Forward=Alt+Right; Forward
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Home Page; Alt+Home
+Home=Alt+Home; Home Page
 KeyBindings=Ctrl+.
 Mail=
 MoveToTrash=Del
@@ -77,7 +77,7 @@ Save=Ctrl+S
 SaveAs=Ctrl+Shift+S
 SaveOptions=
 SelectAll=Ctrl+A
-ShowHideHiddenFiles=Alt+.; Ctrl+H
+ShowHideHiddenFiles=Ctrl+H; Alt+.
 ShowMenubar=Ctrl+M
 ShowStatusbar=
 ShowToolbar=
@@ -90,7 +90,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl+=; Ctrl++
+ZoomIn=Ctrl++; Ctrl+=
 ZoomOut=Ctrl+-
 
 [bismuth][Global Shortcuts]
@@ -165,7 +165,7 @@ Toggle Touchpad=Touchpad Toggle
 
 [kded5][Global Shortcuts]
 Show System Activity=Ctrl+Esc
-display=Meta+Shift+P; Display
+display=Display; Meta+Shift+P
 
 [khotkeys][Global Shortcuts]
 {0d49fc0d-917e-479c-a9da-8d50a7da6fce}=Meta+T
@@ -202,7 +202,7 @@ _launch=Meta+Return
 decrease_microphone_volume=Microphone Volume Down
 decrease_volume=Ctrl+Shift+F2; Volume Down
 increase_microphone_volume=Microphone Volume Up
-increase_volume=Ctrl+Shift+F3; Volume Up
+increase_volume=Volume Up; Ctrl+Shift+F3
 mic_mute=Microphone Mute
 mute=Volume Mute
 
@@ -218,7 +218,7 @@ Activate Window Demanding Attention=Ctrl+Alt+A
 Decrease Opacity=
 Edit Tiles=
 Expose=Ctrl+F9
-ExposeAll=Ctrl+F10; Launch (C)
+ExposeAll=Launch (C); Ctrl+F10
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 FlipSwitchAll=
@@ -245,7 +245,7 @@ Switch Window Down=
 Switch Window Left=
 Switch Window Right=
 Switch Window Up=
-Switch to Desktop 1=Ctrl+F1; Meta+1
+Switch to Desktop 1=Meta+1; Ctrl+F1
 Switch to Desktop 10=Meta+0
 Switch to Desktop 11=
 Switch to Desktop 12=
@@ -258,7 +258,7 @@ Switch to Desktop 18=
 Switch to Desktop 19=
 Switch to Desktop 2=Meta+2; Ctrl+F2
 Switch to Desktop 20=
-Switch to Desktop 3=Meta+3; Ctrl+F3
+Switch to Desktop 3=Ctrl+F3; Meta+3
 Switch to Desktop 4=Meta+4; Ctrl+F4
 Switch to Desktop 5=Meta+5
 Switch to Desktop 6=Meta+6
@@ -298,15 +298,15 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Q; Ctrl+Q; Meta+C
+Window Close=Alt+F4; Meta+C; Ctrl+Q; Meta+Q
 Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
 Window Lower=
-Window Maximize=Meta+Up; Meta+PgUp
+Window Maximize=Meta+Up
 Window Maximize Horizontal=
 Window Maximize Vertical=
-Window Minimize=Meta+Down; Meta+PgDown
+Window Minimize=Meta+PgDown; Meta+Down
 Window Move=
 Window Move Center=
 Window No Border=
@@ -394,7 +394,7 @@ stopmedia=Media Stop
 _launch=Meta+Shift+G
 
 [org.flameshot.Flameshot.desktop][Global Shortcuts]
-Capture=Print; Meta+S
+Capture=Meta+S; Print
 Configure=
 Launcher=
 _launch=
@@ -415,7 +415,7 @@ _launch=Ctrl+Alt+T
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Search; Alt+Space; Alt+F2
+_launch=Alt+F2; Search; Alt+Space
 
 [org.kde.ksysguard.desktop][Global Shortcuts]
 _launch=Ctrl+Shift+Esc
@@ -499,7 +499,7 @@ Store=
 _launch=Meta+G
 
 [systemsettings.desktop][Global Shortcuts]
-_launch=Tools; Meta+,; Meta+I
+_launch=Meta+I; Meta+,; Tools
 kcm-kscreen=
 kcm-lookandfeel=
 kcm-users=
