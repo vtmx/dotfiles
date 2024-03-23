@@ -15,6 +15,7 @@
   --blue: #61afef;
   --purple: #c678dd;
 
+  --brand-color-accent: var(--blue) !important;
   --card-outline-color: var(--shade5) !important;
   --dialog-warning-text-color: var(--red) !important;
   --grey-50: var(--shade3) !important;
@@ -89,6 +90,18 @@
   --in-content-primary-button-background: var(--shade0) !important;
   --in-content-primary-button-text-color: var(--shade7) !important;
 }
+
+/* pages preferences */
+@-moz-document
+  url-prefix(about:preferences),
+  url-prefix(about:addons) {
+  html {
+    max-width: 1000px !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* https://github.com/Godiesc/firefox-gx/blob/60f90981e21f8f9ba1b783b911a72434c206b54b/chrome/components/ogx_UC-settings-addons-pages.css#L80 */
 
 /* selection */
 ::-moz-selection {
