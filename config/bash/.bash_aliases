@@ -237,5 +237,8 @@ alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
 alias ob="$EDITOR $HOME/.config/openbox/rc.xml"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
 
+# xfce reload theme
+# alias xf="sassc -M -t expanded $HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss $HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css && xfconf-query -c xsettings -p /Net/ThemeName -r && xfconf-query -c xsettings -p /Net/ThemeName -s Lightly"
+
 # References
 # https://dev.to/robertcoopercode/using-aliases-to-speed-up-your-git-workflow-2f5a

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=8;x=704;y=1066"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="size" type="uint" value="26"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="4"/>
+        <value type="int" value="15"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="8"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+      </property>
+      <property name="mode" type="uint" value="0"/>
+      <property name="enable-struts" type="bool" value="true"/>
+      <property name="nrows" type="uint" value="1"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.11764705882352941"/>
+        <value type="double" value="0.1333333333333333"/>
+        <value type="double" value="0.15294117647058825"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="applicationsmenu">
+      <property name="button-icon" type="string" value="applications-system"/>
+      <property name="show-button-title" type="bool" value="false"/>
+      <property name="show-menu-icons" type="bool" value="false"/>
+      <property name="custom-menu" type="bool" value="false"/>
+    </property>
+    <property name="plugin-2" type="string" value="tasklist">
+      <property name="grouping" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="show-tooltips" type="bool" value="false"/>
+      <property name="sort-order" type="uint" value="1"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="true"/>
+      <property name="window-scrolling" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+    </property>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="false"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
+      <property name="numbering" type="bool" value="false"/>
+    </property>
+    <property name="plugin-8" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
+      <property name="known-players" type="string" value="firefox"/>
+    </property>
+    <property name="plugin-10" type="string" value="notification-plugin"/>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-12" type="string" value="clock">
+      <property name="mode" type="uint" value="2"/>
+      <property name="tooltip-format" type="string" value=""/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-font" type="string" value="Segoe Semibold, Semi-Bold 10"/>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="actions">
+      <property name="button-title" type="uint" value="3"/>
+      <property name="appearance" type="uint" value="1"/>
+      <property name="items" type="array">
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-hybrid-sleep"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="+separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+      <property name="ask-confirmation" type="bool" value="true"/>
+      <property name="custom-title" type="string" value="Sair"/>
+    </property>
+    <property name="plugin-15" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+  </property>
+</channel>
