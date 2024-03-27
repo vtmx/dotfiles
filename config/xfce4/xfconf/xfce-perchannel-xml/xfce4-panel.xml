@@ -12,7 +12,7 @@
       <property name="icon-size" type="uint" value="0"/>
       <property name="size" type="uint" value="26"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="1"/>
+        <value type="int" value="5"/>
         <value type="int" value="4"/>
         <value type="int" value="15"/>
         <value type="int" value="2"/>
@@ -40,12 +40,6 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu">
-      <property name="button-icon" type="string" value="applications-system"/>
-      <property name="show-button-title" type="bool" value="false"/>
-      <property name="show-menu-icons" type="bool" value="false"/>
-      <property name="custom-menu" type="bool" value="false"/>
-    </property>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="bool" value="false"/>
       <property name="show-labels" type="bool" value="false"/>
@@ -108,6 +102,13 @@
     <property name="plugin-15" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-5" type="string" value="whiskermenu">
+      <property name="view-mode" type="int" value="1"/>
+      <property name="category-show-name" type="bool" value="true"/>
+      <property name="launcher-show-tooltip" type="bool" value="false"/>
+      <property name="launcher-show-description" type="bool" value="false"/>
+      <property name="button-icon" type="string" value="pack-less"/>
     </property>
   </property>
 </channel>
