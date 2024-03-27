@@ -109,6 +109,9 @@
       <property name="launcher-show-tooltip" type="bool" value="false"/>
       <property name="launcher-show-description" type="bool" value="false"/>
       <property name="button-icon" type="string" value="pack-less"/>
+      <property name="recent" type="array">
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+      </property>
     </property>
   </property>
 </channel>
