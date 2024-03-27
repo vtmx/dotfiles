@@ -62,6 +62,7 @@
       <property name="&lt;Primary&gt;&lt;Super&gt;l" type="string" value="xdotool set_desktop --relative 1"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;h" type="string" value="xdotool set_desktop --relative -- -1"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;less" type="string" value="xfce4-settings-editor"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;greater" type="string" value="xfwm4-settings"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
