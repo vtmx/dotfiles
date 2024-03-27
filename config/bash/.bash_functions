@@ -196,4 +196,17 @@ wa() {
   fi
 }
 
+xf() {
+  local sassdir="${HOME}/.local/share/themes/Lightly/gtk-3.0/src"
+  local mainsass="${HOME}/.local/share/themes/Lightly/gtk-3.0/src/main.scss"
+  local gtkcss="${HOME}/.local/share/themes/Lightly/gtk-3.0/gtk.css"
+
+  while true; do
+    inotifywait -m $sassdir/** | \
+    sassc -M -t expanded $mainsass $gtkcss && \
+    xfconf-query -c xsettings -p /Net/ThemeName -r && \
+    xfconf-query -c xsettings -p /Net/ThemeName -s Lightly
+  done
+}
+
 # vim:ft=sh
