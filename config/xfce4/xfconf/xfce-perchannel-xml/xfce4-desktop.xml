@@ -63,6 +63,11 @@
           <property name="image-style" type="int" value="5"/>
           <property name="last-image" type="string" value="/home/vitor/Pictures/wallpapers/meus/wave.png"/>
         </property>
+        <property name="workspace4" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-shapes.svg"/>
+        </property>
       </property>
     </property>
     <property name="single-workspace-mode" type="bool" value="true"/>

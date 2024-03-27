@@ -5,6 +5,7 @@
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "toggle",
+  "window.title": "${activeEditorShort}",
   "window.titleBarStyle": "custom",
   "window.restoreWindows": "none",
 
@@ -104,7 +105,7 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
-  "workbench.editor.labelFormat": "short",
+  "workbench.editor.labelFormat": "default",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
