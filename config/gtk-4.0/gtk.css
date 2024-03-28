@@ -1,0 +1,21 @@
+@import 'colors.css';
+
+/* Pamac */
+
+window, row, button {
+  border-radius: 4px;
+}
+
+entry {
+  border-radius: 4px;
+}
+
+window {
+  background: #1e2227;
+  color: #abb2bf;
+}
+
+list {
+  background: #23272e;
+  color: #abb2bf;
+}
