@@ -963,21 +963,19 @@ map(
 )
 
 -- nvim-tree
-if vim.fn.exists(':NvimTreeToggle') then
-  map(
-    'n',
-    '<leader>e',
-    '<cmd>NvimTreeToggle<cr>',
-    { desc = 'NvimTree' }
-  )
-else
-  map(
-    'n',
-    '<leader>e',
-    '<cmd>15Lex<cr>',
-    { desc = 'Lex' }
-  )
-end
+map(
+  'n',
+  '<leader>e',
+  '<cmd>NvimTreeToggle<cr>',
+  { desc = 'NvimTree' }
+)
+
+-- map(
+--   'n',
+--   '<leader>e',
+--   '<cmd>15Lex<cr>',
+--   { desc = 'Lex' }
+-- )
 
 -- oil
 map(

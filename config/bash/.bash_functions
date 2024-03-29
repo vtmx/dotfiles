@@ -178,7 +178,8 @@ ssa() {
   ssh-add -k
 }
 
-# Watch file
+# Watch files
+
 wa() {
   if type -P entr >& /dev/null; then
     if [[ -n "$1" ]]; then
@@ -206,6 +207,19 @@ xf() {
     sassc -Mt expanded $mainsass $gtkcss && \
     xfconf-query -c xsettings -p /Net/ThemeName -r && \
     xfconf-query -c xsettings -p /Net/ThemeName -s Lightly
+  done
+}
+
+wkde() {
+  local colorfile; read -p "Enter a filename of color: " colorfile
+  colorfile="${HOME}/.local/share/color-schemes/${colorfile}.colors"
+
+  [[ -f "$colorfile" ]] || echo "file not exist"; return
+
+  while true; do
+    plasma-apply-colorscheme BreezeDark > /dev/null
+    inotifywait -m $colorfile | \
+    plasma-apply-colorscheme AOneDark > /dev/null
   done
 }
 
