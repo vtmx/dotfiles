@@ -380,7 +380,7 @@
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd></td>
-      <td>Reset config</td>
+      <td>Reload config</td>
     </tr>
     <tr>
       <td><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
