@@ -46,8 +46,8 @@ alias chx="chmod +x"
 # clear
 alias cls="clear"
 
-# cmus
-alias cm="cmus"
+# code
+alias code="GTK_USE_PORTAL=1 code"
 
 # copy
 alias cp="cp -i"
