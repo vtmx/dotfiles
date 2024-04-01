@@ -327,84 +327,376 @@
   <img src="images/screenshots/desktop.png" alt="Dolphin">
 </details>
 
-<!-- ## Shortcuts
 
-### System
-
-<details>
-  <summary>Click to expand</summary>
-  <table>
-    <thead>
-      <tr>
-        <th>Shortcut</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>Super + {h,j,k,l}</code></td>
-        <td>Focus window</td>
-      </tr>
-      <tr>
-        <td><code>Super + Shift + {h,j,k,l}</code></td>
-        <td>Move</td>
-      </tr>
-      <tr>
-        <td><code>Super + Alt + {h,j,k,l}</code></td>
-        <td>Resize</td>
-      </tr>
-      <tr>
-        <td><code>Super + c</code></td>
-        <td>Close</td>
-      </tr>
-      <tr>
-        <td><code>Super + Ctrl + {h,l}</code></td>
-        <td>Go to {next,prev} workspace</td>
-      </tr>
-      <tr>
-        <td><code>Super + Ctrl + Shit + {h,l}</code></td>
-        <td>Move window to {next,prev} workspace</td>
-      </tr>
-    <tbody>
-  </table>
-</details> -->
-
-<!-- ### Apps
+## Shortcuts
 
 <details>
   <summary>Click to expand</summary>
+  <h3>System</h3>
   <table>
-    <thead>
-      <tr>
-        <th>Shortcut</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>Super + a</code></td>
-        <td>Pamac manager</td>
-      </tr>
-      <tr>
-        <td><code>Super + b</code></td>
-        <td>Browser</td>
-      </tr>
-      <tr>
-        <td><code>Super + p</code></td>
-        <td>Color picker</td>
-      </tr>
-      <tr>
-        <td><code>Super + s</code></td>
-        <td>Screenshot</td>
-      </tr>
-      <tr>
-        <td><code>Super + v</code></td>
-        <td>VS Code</td>
-      </tr>
-      <tr>
-        <td><code>Super + w</code></td>
-        <td>Bitwarden</td>
-      </tr>
-    <tbody>
+    <tr>
+      <th>Key</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>} || {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}</td>
+      <td>Focus window to {left,down,up,right} direction</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>} || {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}</td>
+      <td>Move window to {left,down,up,right} direction</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + {<kbd>⯇</kbd>,<kbd>⯈</kbd>},{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td>Go to {next,prev} workspace</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + {<kbd>1</kbd>..<kbd>9</kbd>}</td>
+      <td>Go to workspace number {1..9}</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd>  + {<kbd>⯇</kbd>,<kbd>⯈</kbd>},{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td>Move window to {next,prev} workspace</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + {<kbd>1</kbd>..<kbd>9</kbd>}</td>
+      <td>Move window to workspace number {1..9}</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Alt</kbd> + {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>} || {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}</td>
+      <td>Resize window in {left,down,up,right} direction</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>c</kbd></td>
+      <td>Close window</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>d</kbd></td>
+      <td>Hide all window</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>f</kbd></td>
+      <td>Fullscreen</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd></td>
+      <td>Reset config</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
+      <td>Circle all windows</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td>
+      <td>Circle all windows in reverse</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Left Click</kbd> (Hold)</td>
+      <td>Move window</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Right Click</kbd> (Hold)</td>
+      <td>Resize window</td>
+    </tr>
   </table>
-</details> -->
+
+  <h3>Apps</h3>
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Space</kbd></td>
+      <td>Launcher</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Enter</kbd></td>
+      <td>Terminal</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>,</kbd></td>
+      <td>System</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>,</kbd></td>
+      <td>Themes</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>.</kbd></td>
+      <td>Shortcuts</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>a</kbd></td>
+      <td>Package manager</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>b</kbd></td>
+      <td>Browser</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>e</kbd></td>
+      <td>File manager</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>g</kbd></td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>p</kbd></td>
+      <td>Color picker</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>s</kbd></td>
+      <td>Screenshot</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>v</kbd></td>
+      <td>VSCode</td>
+    </tr>
+  </table>
+
+  <h3>Browser</h3>
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td><kbd>F3</kbd></td>
+      <td>Find next</td>
+    </tr>
+    <tr>
+      <td><kbd>Shift</kbd> + <kbd>F3</kbd></td>
+      <td>Find prev</td>
+    </tr>
+    <tr>
+      <td><kbd>F5</kbd></td>
+      <td>Reload</td>
+    </tr>
+    <tr>
+      <td><kbd>F6</kbd></td>
+      <td>Go to adressbar</td>
+    </tr>
+    <tr>
+      <td><kbd>F12</kbd></td>
+      <td>Devtoos</td>
+    </tr>
+    <tr>
+      <td><kbd>F11</kbd></td>
+      <td>Fullscreen</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>b</kbd></td>
+      <td>Toogle bookmarks sidebar</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd></td>
+      <td>Toogle bookmarks topbar</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>d</kbd></td>
+      <td>Add to bookmarks</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>f</kbd></td>
+      <td>Find</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>h</kbd></td>
+      <td>Toogle history sidebar</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>h</kbd></td>
+      <td>Open history page</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>l</kbd></td>
+      <td>Select adress bar</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>n</kbd></td>
+      <td>New window</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Ctrl</kbd> + <kbd>n</kbd></td>
+      <td>New window in private</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Ctrl</kbd> + <kbd>o</kbd></td>
+      <td>Open bookmarks page</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>t</kbd></td>
+      <td>New tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>t</kbd></td>
+      <td>Reopen last tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>w</kbd></td>
+      <td>Close tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>w</kbd></td>
+      <td>Close current window</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgDn</kbd></td>
+      <td>Next tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgUp</kbd></td>
+      <td>Prev tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + {<kbd>1</kbd>..<kbd>9</kbd>}</td>
+      <td>Go to tab number {1..9}</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + {<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td>Move to {next,prev} tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + <kbd>Home</kbd></td>
+      <td>Go home</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + {<kbd>⯇</kbd>,<kbd>⯈</kbd>}</td>
+      <td>Go to {back,next} in history</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + {<kbd>+</kbd>,<kbd>-</kbd>}</td>
+      <td>Zoom {in,out}</td>
+    </tr>
+  </table>
+
+  <h3>File manager</h3>
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td><kbd>F2</kbd></td>
+      <td>Rename</td>
+    </tr>
+    <tr>
+      <td><kbd>F3</kbd></td>
+      <td>Split || Find next</td>
+    </tr>
+    <tr>
+      <td><kbd>Shift</kbd> + <kbd>F3</kbd></td>
+      <td>Find prev</td>
+    </tr>
+    <tr>
+      <td><kbd>F4</kbd></td>
+      <td>Toggle Terminal</td>
+    </tr>
+    <tr>
+      <td><kbd>Shift</kbd> + <kbd>F4</kbd></td>
+      <td>Open Terminal</td>
+    </tr>
+    <tr>
+      <td><kbd>F5</kbd></td>
+      <td>Reload</td>
+    </tr>
+    <tr>
+      <td><kbd>F6</kbd></td>
+      <td>Go to adressbar</td>
+    </tr>
+    <tr>
+      <td><kbd>F11</kbd></td>
+      <td>Fullscreen</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd></td>
+      <td>Toggle places</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>d</kbd></td>
+      <td>Add to places</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>d</kbd></td>
+      <td>Duplicate file</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>f</kbd></td>
+      <td>Find</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd></td>
+      <td>Open find system</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>i</kbd></td>
+      <td>Filter</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>l</kbd></td>
+      <td>Select adress bar</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>n</kbd></td>
+      <td>New window</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>m</kbd></td>
+      <td>Toggle menubar</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>t</kbd></td>
+      <td>New tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>w</kbd></td>
+      <td>Close tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgDn</kbd></td>
+      <td>Next tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgUp</kbd></td>
+      <td>Prev tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + {<kbd>1</kbd>..<kbd>3</kbd>}</td>
+      <td>Show {icon,compact,details} mode</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + {<kbd>1</kbd>..<kbd>9</kbd>}</td>
+      <td>Go to tab number {1..9}</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + {<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td>Move to {next,prev} tab</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + <kbd>Home</kbd> || <kbd>Ctrl</kbd> + <kbd>Space</kbd></td>
+      <td>Go home</td>
+    </tr>
+    <tr>
+      <td><kbd>Alt</kbd> + {<kbd>⯇</kbd>,<kbd>⯈</kbd>} || <kbd>⯅</kbd></td>
+      <td>Go to {back,next} in history or up dir</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + {<kbd>+</kbd>,<kbd>-</kbd>}</td>
+      <td>Zoom {in,out}</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>,</kbd></td>
+      <td>Config page</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>.</kbd></td>
+      <td>Shortcut page</td>
+    </tr>
+  </table>
+</details>
+
+<!-- ## References -->
+<!-- https://defkey.com/xfce-shortcuts -->
+<!-- https://github.com/owl4ce/dotfiles -->
