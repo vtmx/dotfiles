@@ -335,7 +335,7 @@
   <h3>System</h3>
   <table>
     <tr>
-      <th>Key</th>
+      <th>Shortcut</th>
       <th>Action</th>
     </tr>
     <tr>
@@ -403,7 +403,7 @@
   <h3>Apps</h3>
   <table>
     <tr>
-      <th>Key</th>
+      <th>Shortcut</th>
       <th>Action</th>
     </tr>
     <tr>
@@ -459,7 +459,7 @@
   <h3>Browser</h3>
   <table>
     <tr>
-      <th>Key</th>
+      <th>Shortcut</th>
       <th>Action</th>
     </tr>
     <tr>
@@ -575,7 +575,7 @@
   <h3>File manager</h3>
   <table>
     <tr>
-      <th>Key</th>
+      <th>Shortcut</th>
       <th>Action</th>
     </tr>
     <tr>
