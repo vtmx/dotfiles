@@ -492,7 +492,7 @@
     </tr>
     <tr>
       <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd></td>
-      <td>Toogle bookmarks topbar</td>
+      <td>Toogle bookmarks tollbar</td>
     </tr>
     <tr>
       <td><kbd>Ctrl</kbd> + <kbd>d</kbd></td>
