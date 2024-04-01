@@ -34,14 +34,14 @@ ViewPropsTimestamp=2022,3,14,8,51,38.73
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
-Recent Files[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/dolphin.shortcuts,file:$HOME/Dev/dotfiles/config/kde/dolphin/shortcuts.shortcuts,file:$HOME/Softwares/linux/subtitle/subtitlecomposer-latest-x86_64.appimage
-Recent URLs[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/,file:$HOME/Dev/dotfiles/config/kde/,file:$HOME/Softwares/linux/subtitle/,file:$HOME/Dev/dotfiles/config/kde/dolphin/
+Recent Files[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/dolphin.shortcuts,file:$HOME/Dev/dotfiles/config/kde/dolphin/dolphin.shortcuts,file:$HOME/Softwares/linux/subtitle/subtitlecomposer-latest-x86_64.appimage
+Recent URLs[$e]=file:$HOME/Dev/dotfiles/config/kde/shortcuts/,file:$HOME/Dev/dotfiles/config/kde/,file:$HOME/Softwares/linux/subtitle/,file:$HOME/Dev/dotfiles/config/kde/dolphin/,file:$HOME/Dev/dotfiles/config/
 detailViewIconSize=16
 iconViewIconSize=64
 
 [KPropertiesDialog]
-1920x1080 screen: Height=647
-1920x1080 screen: Width=472
+1920x1080 screen: Height=543
+1920x1080 screen: Width=446
 HDMI-0 Height 1920x1080=543
 HDMI-0 Height 1920x1080 HDMI-0=575
 HDMI-0 Width 1920x1080=430
@@ -66,3 +66,6 @@ History=fire,inks,mp,mpv,kate,vlc,qbi
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[Search]
+Location=Everywhere
