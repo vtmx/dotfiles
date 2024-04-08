@@ -118,7 +118,7 @@ mksh() {
 }
 
 # Move and go to the directory
-mvcd () {
+mvcd() {
 	if [[ -d "$2" ]];then
 		mv "$1" "$2" && cd "$2"
 	else
@@ -144,16 +144,16 @@ mvext() {
 play() {
   if type mpv >& /dev/null; then
     local music="$HOME/Music"
-    local args="--no-video --display-tags-clr"
+    local args="--no-video"
 
     # If subdir play like playlist
     to_play() {
       if [[ -d "$1" ]]; then
-        mpv $args --playlist=- <<< ls "$1"/** 2>&-
+        mpv $args --playlist=- <<< ls "$1"/* 2>/dev/null
       elif [[ "$1" =~ ^"http" ]]; then
         mpv $args "$1"
       else
-        mpv $args *
+        mpv $args **/*.mp3
       fi
     }
 
@@ -161,7 +161,7 @@ play() {
       @(ani?(me)))        to_play "$music/j-music/anime"                        ;;
       @(brian|bc))        to_play "$music/jazz/brian-cullberston"               ;;
       @(jaz?(z)))         to_play "$music/jazz"                                 ;;
-      @(hiro|sawa))       to_play "$music/j-music/hiroyuki-sawano"              ;;
+      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"              ;;
       lofi)               to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
       @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
       ost)                to_play "$music/ost"                                  ;;
@@ -179,7 +179,6 @@ ssa() {
 }
 
 # Watch files
-
 wa() {
   if type -P entr >& /dev/null; then
     if [[ -n "$1" ]]; then
