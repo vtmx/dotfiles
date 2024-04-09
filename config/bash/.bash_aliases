@@ -17,22 +17,16 @@ alias cddev="cd $HOME/Dev"
 alias cddoc="cd $HOME/Documents"
 alias cddow="cd $HOME/Downloads"
 alias cdgame="cd $HOME/Games"
-alias cdf="cd $HOME/Dev/projects/fraseologia"
-alias cdh="cd $HOME"
 alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdmus="cd $HOME/Music"
+alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
 alias cdpic="cd $HOME/Pictures"
 alias cdpkg="cd $HOME/packages"
-alias cds="cd $HOME/Dev/shortcuts"
 alias cdsc="cd $HOME/Dev/doffiles/sripts"
 alias cdsof="cd $HOME/Softwares"
 alias cdt="cd $HOME/Downloads/temp"
-alias cdv="cd $HOME/Dev/projects/vitormelo"
 alias cdvid="cd $HOME/Videos"
-
-# bash
-alias b="bash"
 
 # clear
 alias c="clear"
@@ -68,9 +62,6 @@ alias dnfu="sudo dnf upgrade --refresh"
 
 # editor
 alias e="$EDITOR"
-
-# fish
-alias f="fish"
 
 # exa
 alias ezaa="eza -a | grep '^\.'"
@@ -227,14 +218,17 @@ alias ba="$EDITOR $HOME/.bash_aliases"
 alias br="$EDITOR $HOME/.bashrc"
 alias brc="$EDITOR $HOME/.bashrc"
 alias brl="source $HOME/.bashrc; echo Reload bashrc"
+# alias brl="exec bash; echo Reload bashrc"
 alias bf="$EDITOR $HOME/.bash_functions"
+alias bsc="$EDITOR $HOME/.config/bspwm/bspwmrc"
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
+alias ob="$EDITOR $HOME/.config/openbox/rc.xml"
+alias sxc="$EDITOR $HOME/.config/sxhkd/sxhkdrc"
 alias tc="$EDITOR $HOME/.config/tmux/tmux.conf"
 alias vc="$EDITOR $HOME/.config/nvim/init.lua"
 alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
-alias ob="$EDITOR $HOME/.config/openbox/rc.xml"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
 
 # xfce reload theme

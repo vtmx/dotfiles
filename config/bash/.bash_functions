@@ -144,12 +144,13 @@ mvext() {
 play() {
   if type mpv >& /dev/null; then
     local music="$HOME/Music"
-    local args="--no-video"
+    local args="--no-video --display-tags=Title,Artist"
+    # local args="--no-video --display-tags=Title,Artist --quiet=yes"
 
     # If subdir play like playlist
     to_play() {
       if [[ -d "$1" ]]; then
-        mpv $args --playlist=- <<< ls "$1"/* 2>/dev/null
+        find "$1" -type f -name "*.mp3" -exec mpv $args {} +
       elif [[ "$1" =~ ^"http" ]]; then
         mpv $args "$1"
       else
@@ -170,6 +171,26 @@ play() {
       *)                  to_play $1                                            ;;
     esac
   fi
+}
+
+# Open rc configs
+rc() {
+  local rcfiles=(\
+    "$HOME/.bashrc" \
+    "$HOME/.bash_functions" \
+    "$HOME/.bash_aliases" \
+    "$HOME/.bashrc" \
+    "$HOME/.bash_functions" \
+    "$HOME/.config/bspwm/bspwmrc" \
+    "$HOME/.config/kitty/kitty.conf" \
+    "$HOME/.config/nvim/init.lua" \
+    "$HOME/.config/openbox/rc.xml" \
+    "$HOME/.config/sxhkd/sxhkdrc" \
+    "$HOME/.config/tmux/tmux.conf" \
+  )
+
+  $EDITOR $(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
+  # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
 }
 
 # SSH Add Agent
