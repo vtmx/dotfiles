@@ -140,6 +140,37 @@ mvext() {
   return 0
 }
 
+# Rename files to lower case and replace spaces to - 
+mvlower() {
+  for file in *; do
+    newname="${file,,}"
+    newname="${file//[áãâ]/a}"
+    newname="${file//[é]/e}"
+    newname="${file//[í]/i}"
+    newname="${file//[ó]/o}"
+    newname="${file//[ú]/u}"
+    newname="${file//[ç]/c}"
+    newname="${newname// /-}"
+    mv "$file" "$newname"
+  done
+}
+
+# Rename files to upper case and replace spaces to - 
+mvupper() {
+  for file in *; do
+    newname="${file^^}"
+    newname="${file//[ÁÃÂ]/A}"
+    newname="${file//[É]/E}"
+    newname="${file//[Í]/I}"
+    newname="${file//[Ó]/O}"
+    newname="${file//[Ú]/U}"
+    newname="${file//[Ç]/C}"
+    newname="${newname// /-}"
+    mv "$file" "$newname"
+  done
+}
+
+
 # Play
 play() {
   if type mpv >& /dev/null; then
@@ -163,7 +194,7 @@ play() {
       @(brian|bc))        to_play "$music/jazz/brian-cullberston"               ;;
       @(jaz?(z)))         to_play "$music/jazz"                                 ;;
       @(hiro))            to_play "$music/j-music/hiroyuki-sawano"              ;;
-      lofi)               to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
+      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
       @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
       ost)                to_play "$music/ost"                                  ;;
       @(retro?(wave)))    to_play "$music/retrowave"                            ;;
@@ -191,15 +222,6 @@ rc() {
 
   $EDITOR $(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
   # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
-}
-
-# Rename convert lower case and replace spaces to - 
-rena() {
-for file in *; do
-  newname="${file,,}"
-  newname="${newname// /-}"
-  mv "$file" "$newname"
-done
 }
 
 # List only hidden files
