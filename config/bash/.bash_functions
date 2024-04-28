@@ -193,6 +193,20 @@ rc() {
   # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
 }
 
+# Rename convert lower case and replace spaces to - 
+rena() {
+for file in *; do
+  newname="${file,,}"
+  newname="${newname// /-}"
+  mv "$file" "$newname"
+done
+}
+
+# List only hidden files
+lsa() {
+  for file in .*; do echo "$file"; done | column
+}
+
 # SSH Add Agent
 ssa() {
   eval "$(ssh-agent -s)"
