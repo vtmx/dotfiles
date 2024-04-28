@@ -1,14 +1,3 @@
--- local c = require('../config.colors')
---
--- vim.api.nvim_create_autocmd('FileType', {
---   pattern = 'oil',
---   callback = function()
---     vim.opt_local.colorcolumn = ''
---     vim.api.nvim_set_hl(0, 'NormalFloat', { bg = c.bg })
---     vim.api.nvim_set_hl(0, 'FloatBorder', { bg = c.bg, fg = c.fgd })
---   end
--- })
-
 return {
   {
     'stevearc/oil.nvim',
