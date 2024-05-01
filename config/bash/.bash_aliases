@@ -202,6 +202,9 @@ alias yayi="yay -S"
 alias yayr="yay -R"
 alias yayu="yay -Syu"
 
+# yt-dlp
+alias ytp="yt-dlp -x"
+
 # vlang
 alias vl="$HOME/.v/vl"
 alias vf="$HOME/.v/vl fmt -w"
