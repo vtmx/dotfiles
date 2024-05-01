@@ -208,7 +208,7 @@ alias vf="$HOME/.v/vl fmt -w"
 alias vh="$HOME/.v/vl help"
 alias vr="$HOME/.v/vl run"
 alias vu="$HOME/.v/vl up"
-alias vw="$HOME/.v/vl watch"
+alias vw="$HOME/.v/vl watch run"
 
 # weather
 alias wt="curl wttr.in/?format=3"

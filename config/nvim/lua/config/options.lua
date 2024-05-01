@@ -44,9 +44,9 @@ local opts = {
   -- indent
   expandtab = true,
   smartindent = true,
-  shiftwidth = indent ,
-  tabstop = indent ,
-  softtabstop = indent ,
+  shiftwidth = indent,
+  tabstop = indent,
+  softtabstop = indent,
 
   -- list char
   listchars = 'tab:›-,space:·,trail:⋯,eol:↲',
