@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+[[ $1 ]] && stock="$1" || stock="ibov"
+url="https://www.google.com/search?q=${stock^^}"
+
+read value var varpercent <<< $(\
+  lynx -dump -display_charset=utf-8 "$url" | \
+  grep -E '[^\(][[:digit:]].+ [+-].+ \(.+%\)$' | \
+  awk '{print $1, $2, $3}')
+
+# Format output
+if [[ $var =~ \++ ]]; then
+  varformat="$(tput setaf 2)$var ${varpercent}$(tput sgr0)"
+elif [[ $var =~ \-+ ]]; then
+  varformat="$(tput setaf 1)$var ${varpercent}$(tput sgr0)"
+else
+  echo 'stock not exist'
+  exit 1
+fi
+
+echo -e "$value $varformat"
