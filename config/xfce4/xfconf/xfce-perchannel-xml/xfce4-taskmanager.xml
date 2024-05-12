@@ -2,6 +2,24 @@
 
 <channel name="xfce4-taskmanager" version="1.0">
   <property name="window-maximized" type="bool" value="false"/>
-  <property name="window-width" type="int" value="410"/>
-  <property name="window-height" type="int" value="600"/>
+  <property name="window-width" type="int" value="997"/>
+  <property name="window-height" type="int" value="791"/>
+  <property name="columns" type="empty">
+    <property name="sort-type" type="uint" value="1"/>
+    <property name="sort-id" type="uint" value="7"/>
+    <property name="column-vsz" type="bool" value="true"/>
+    <property name="column-rss" type="bool" value="true"/>
+    <property name="column-pid" type="bool" value="false"/>
+    <property name="column-ppid" type="bool" value="false"/>
+    <property name="column-state" type="bool" value="false"/>
+    <property name="column-uid" type="bool" value="false"/>
+    <property name="column-priority" type="bool" value="false"/>
+  </property>
+  <property name="interface" type="empty">
+    <property name="show-all-processes" type="bool" value="false"/>
+    <property name="show-application-icons" type="bool" value="false"/>
+    <property name="show-legend" type="bool" value="false"/>
+  </property>
+  <property name="prompt-terminate-task" type="bool" value="true"/>
+  <property name="show-status-icon" type="bool" value="false"/>
 </channel>

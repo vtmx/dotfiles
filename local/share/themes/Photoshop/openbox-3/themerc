@@ -5,6 +5,7 @@
 
 ! General
 border.width: 1
+padding.width: 2
 
 ! Menu background
 menu.items.bg: flat
@@ -32,28 +33,30 @@ menu.items.active.bg.colorTo: #444
 menu.items.active.text.color: #dddddd
 
 ! Window
+window.client.padding.width: 0
+window.client.padding.height: 0
+
+! Window active
+window.active.border.color: #181818
 window.active.button.*.hover.bg.color: #e18a51
 window.active.button.*.hover.bg.colorTo: #e1621d
-window.active.border.color: #181818
 window.active.button.*.hover.bg.border.color: #ab5d20
 window.active.client.color: #181818
 
-window.inactive.title.separator.color: #eeeee6
+! Window inactive
 window.inactive.border.color: #404040
 window.inactive.client.color: #CACAB6
+window.inactive.title.separator.color: #181818
 
 window.handle.width: 0
-window.client.padding.width: 1
-window.client.padding.height: 1
 
-! Window Titlebar
+! Window titlebar
 window.active.title.bg: vertical gradient
 window.active.title.bg.color: #373737
 window.active.title.bg.colorTo: #181818
 window.inactive.title.bg: gradient flat
 window.inactive.title.bg.color: #373737
 window.inactive.title.bg.colorTo: #181818
-padding.width: 2
 
 ! Titlebar text
 window.label.text.justify: center

@@ -32,7 +32,7 @@ super + ctrl + shift + b
 
 # Toggle fullscreen and floating
 super + {_,shift + }f
-	bspc node -t "~"{fullscreen,floating}
+	bspc node -t "~"{floating,fullscreen}
 
 # Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
@@ -93,11 +93,14 @@ ctrl + alt + {h,Left,j,Down,k,Up,l,Right}
 # 	bspvolume{ --toggle, --toggle-mic}
 
 # Apps
-super + {a,b,g,m,p,t,s,v}
-	{pamac-manager,firefox,steam,vlc,color-picker,qbittorrent,flameshot gui,code}
+super + {a,b,g,m,p,t,s,v,w}
+	{pamac-manager,firefox,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code,bitwarden}
 
 super + shift + {g}
 	{lutris}
+
+super + shift + p
+	bspc node -g sticky
 
 # Mouse
 # ~button3
