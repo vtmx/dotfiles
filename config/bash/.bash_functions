@@ -144,12 +144,14 @@ mvext() {
 mvlower() {
   for file in *; do
     newname="${file,,}"
-    newname="${file//[áãâ]/a}"
-    newname="${file//[é]/e}"
-    newname="${file//[í]/i}"
-    newname="${file//[ó]/o}"
-    newname="${file//[ú]/u}"
-    newname="${file//[ç]/c}"
+    newname="${newname//[áãâ]/a}"
+    newname="${newname//[é]/e}"
+    newname="${newname//[í]/i}"
+    newname="${newname//[ó]/o}"
+    newname="${newname//[ú]/u}"
+    newname="${newname//[ç]/c}"
+    newname="${newname//\(/}"
+    newname="${newname//\)/}"
     newname="${newname// /-}"
     mv "$file" "$newname"
   done
