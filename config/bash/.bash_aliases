@@ -203,7 +203,7 @@ alias yayr="yay -R"
 alias yayu="yay -Syu"
 
 # yt-dlp
-alias ytp='yt-dlp -x --audio-format mp3 --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
+alias ytp='yt-dlp -x --audio-format mp3 --replace-in-metadata title " " "-" --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
 
 # vlang
 alias vl="$HOME/.v/vl"
