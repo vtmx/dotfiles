@@ -103,6 +103,7 @@ alias grep="grep --color=auto"
 
 # history
 alias hi="history"
+alias hf="history | fzf"
 
 # helix
 alias hx="helix"
