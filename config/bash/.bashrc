@@ -38,7 +38,7 @@ fi
 if [[ -f $HOME/.fzf.bash ]]; then
   source $HOME/.fzf.bash
   export FZF_DEFAULT_OPTS="--height 50% --reverse \
-  --prompt '❯ ' --pointer '❯ ' --marker '❯ ' \
+  --prompt '❯' --pointer '❯' --marker '❯' \
   --color=bg:-1,fg:-1 \
   --color=bg+:bright-black,fg+:-1 \
   --color=hl:blue,hl+:blue \
@@ -46,7 +46,7 @@ if [[ -f $HOME/.fzf.bash ]]; then
   --color=prompt:green,spinner:green \
   --color=pointer:-1,header:-1 \
   --color=gutter:-1,border:black \
-  --border none"
+  --border=none --preview-window='' --separator=''"
 fi
 
 # nvm

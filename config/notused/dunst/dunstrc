@@ -1,10 +1,11 @@
 [global]
-origin = bottom-right
-offset = 8x64
 alignment = left
-vertical_alignment = center
 font = JetBrains Mono 10
 frame_width = 1
+origin = bottom-right
+offset = 8x64
+vertical_alignment = center
+
 # always_run_script = true
 # browser = x-www-browser -new-tab
 # class = Dunst
@@ -43,6 +44,7 @@ frame_width = 1
 
 [urgency_low]
 timeout = 2
+icon = off
 background  = "#1e2227"
 foreground  = "#abb2bf"
 frame_color = "#3d4556"
