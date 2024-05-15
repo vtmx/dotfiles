@@ -26,6 +26,10 @@ super + @space
 super + Return
 	kitty
 
+# Terminal float
+super + shift + Return
+	kitty -float
+
 # Toggle polybar
 super + ctrl + shift + b
 	polybar bspwm
