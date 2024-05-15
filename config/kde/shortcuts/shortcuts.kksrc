@@ -5,16 +5,17 @@ switch-to-activity-dc10ea50-5766-403f-825b-8e0326aac23e=
 
 [KDE Keyboard Layout Switcher][Global Shortcuts]
 Switch keyboard layout to Portuguese (Brazil)=
+Switch to Last-Used Keyboard Layout=Meta+Alt+L
 Switch to Next Keyboard Layout=
 
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
 Activate Next Tab=Ctrl+PgDown; Ctrl+]
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
-Back=Back; Alt+Left
+Back=Alt+Left; Back
 BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
@@ -22,8 +23,8 @@ Clear=
 Close=Ctrl+Esc; Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+Ins; Ctrl+C
-CreateFolder=Ctrl+Shift+N; F10
+Copy=Ctrl+C; Ctrl+Ins
+CreateFolder=F10; Ctrl+Shift+N
 Cut=Ctrl+X; Shift+Del
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
@@ -41,14 +42,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Alt+Right; Forward
+Forward=Forward; Alt+Right
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Alt+Home; Home Page
+Home=Home Page; Alt+Home
 KeyBindings=Ctrl+.
 Mail=
 MoveToTrash=Del
@@ -56,6 +57,8 @@ New=Ctrl+N
 Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
+OpenContextMenu=Menu; Shift+F10
+OpenMainMenu=F10
 OpenRecent=
 Paste=Ctrl+V; Shift+Ins
 Paste Selection=Ctrl+Shift+Ins
@@ -66,7 +69,7 @@ PrintPreview=
 Prior=PgUp
 Quit=
 Redo=Ctrl+Shift+Z
-Reload=F5; Refresh
+Reload=Refresh; F5
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -90,7 +93,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl++; Ctrl+=
+ZoomIn=Ctrl+=; Ctrl++
 ZoomOut=Ctrl+-
 
 [bismuth][Global Shortcuts]
@@ -201,8 +204,10 @@ _launch=Meta+Return
 [kmix][Global Shortcuts]
 decrease_microphone_volume=Microphone Volume Down
 decrease_volume=Ctrl+Shift+F2; Volume Down
+decrease_volume_small=Shift+Volume Down
 increase_microphone_volume=Microphone Volume Up
-increase_volume=Volume Up; Ctrl+Shift+F3
+increase_volume=Ctrl+Shift+F3; Volume Up
+increase_volume_small=Shift+Volume Up
 mic_mute=Microphone Mute
 mute=Volume Mute
 
@@ -211,7 +216,9 @@ Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
 Lock Session=
 Log Out=
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
+Reboot=
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
+Shut Down=
 
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=Ctrl+Alt+A
@@ -245,7 +252,7 @@ Switch Window Down=
 Switch Window Left=
 Switch Window Right=
 Switch Window Up=
-Switch to Desktop 1=Meta+1; Ctrl+F1
+Switch to Desktop 1=Ctrl+F1; Meta+1
 Switch to Desktop 10=Meta+0
 Switch to Desktop 11=
 Switch to Desktop 12=
@@ -256,9 +263,9 @@ Switch to Desktop 16=
 Switch to Desktop 17=
 Switch to Desktop 18=
 Switch to Desktop 19=
-Switch to Desktop 2=Meta+2; Ctrl+F2
+Switch to Desktop 2=Ctrl+F2; Meta+2
 Switch to Desktop 20=
-Switch to Desktop 3=Ctrl+F3; Meta+3
+Switch to Desktop 3=Meta+3; Ctrl+F3
 Switch to Desktop 4=Meta+4; Ctrl+F4
 Switch to Desktop 5=Meta+5
 Switch to Desktop 6=Meta+6
@@ -267,7 +274,7 @@ Switch to Desktop 8=Meta+8
 Switch to Desktop 9=Meta+9
 Switch to Next Desktop=Meta+Ctrl+L; Meta+Ctrl+Right
 Switch to Next Screen=
-Switch to Previous Desktop=Meta+Ctrl+H; Meta+Ctrl+Left
+Switch to Previous Desktop=Meta+Ctrl+Left; Meta+Ctrl+H
 Switch to Previous Screen=
 Switch to Screen 0=
 Switch to Screen 1=
@@ -296,9 +303,9 @@ Walk Through Windows of Current Application=Alt+`
 Walk Through Windows of Current Application (Reverse)=Alt+~
 Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
-Window Above Other Windows=
+Window Above Other Windows=Meta+PgUp
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+C; Ctrl+Q; Meta+Q
+Window Close=Ctrl+Q; Meta+C; Meta+Q; Alt+F4
 Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
@@ -306,7 +313,7 @@ Window Lower=
 Window Maximize=Meta+Up
 Window Maximize Horizontal=
 Window Maximize Vertical=
-Window Minimize=Meta+PgDown; Meta+Down
+Window Minimize=Meta+Down
 Window Move=
 Window Move Center=
 Window No Border=
@@ -359,7 +366,7 @@ Window to Desktop 8=Meta+*
 Window to Desktop 9=Meta+(
 Window to Next Desktop=Meta+Ctrl+Shift+Right; Meta+Ctrl+Shift+L
 Window to Next Screen=
-Window to Previous Desktop=Meta+Ctrl+Shift+Left; Meta+Ctrl+Shift+H
+Window to Previous Desktop=Meta+Ctrl+Shift+H; Meta+Ctrl+Shift+Left
 Window to Previous Screen=
 Window to Screen 0=
 Window to Screen 1=
@@ -417,8 +424,14 @@ _launch=Ctrl+Alt+T
 RunClipboard=Alt+Shift+F2
 _launch=Alt+F2; Search; Alt+Space
 
+[org.kde.kscreen.desktop][Global Shortcuts]
+ShowOSD=Display; Meta+Shift+P
+
 [org.kde.ksysguard.desktop][Global Shortcuts]
 _launch=Ctrl+Shift+Esc
+
+[org.kde.plasma-systemmonitor.desktop][Global Shortcuts]
+_launch=Ctrl+Shift+Esc; Meta+Esc
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=Meta+Ctrl+Alt+Shift+Space
@@ -428,6 +441,9 @@ ActiveWindowScreenShot=Meta+Print
 CurrentMonitorScreenShot=
 FullScreenScreenShot=Shift+Print
 OpenWithoutScreenshot=
+RecordRegion=Meta+R; Meta+Shift+R
+RecordScreen=Meta+Alt+R
+RecordWindow=Meta+Ctrl+R
 RectangularRegionScreenShot=Meta+Shift+Print
 WindowUnderCursorScreenShot=
 _launch=
@@ -442,14 +458,17 @@ _launch=Meta+T
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
 Decrease Screen Brightness=Monitor Brightness Down
+Decrease Screen Brightness Small=Shift+Monitor Brightness Down
 Hibernate=Hibernate
 Increase Keyboard Brightness=Keyboard Brightness Up
 Increase Screen Brightness=Monitor Brightness Up
+Increase Screen Brightness Small=Shift+Monitor Brightness Up
 PowerDown=Power Down
 PowerOff=Power Off
 Sleep=Sleep
 Toggle Keyboard Backlight=Keyboard Light On/Off
 Turn Off Screen=
+powerProfile=Battery
 
 [plasmashell][Global Shortcuts]
 activate task manager entry 1=
@@ -476,7 +495,7 @@ cyclePrevAction=
 edit_clipboard=
 manage activities=
 next activity=
-previous activity=
+previous activity=Meta+Shift+A
 repeat_action=Ctrl+Alt+R
 show dashboard=Ctrl+F12
 show-barcode=
@@ -485,6 +504,12 @@ stop current activity=
 switch to next activity=
 switch to previous activity=
 toggle do not disturb=
+
+[powermenu.desktop][Global Shortcuts]
+_launch=Ctrl+Alt+Del
+
+[rofi.desktop][Global Shortcuts]
+_launch=Meta+Space
 
 [steam.desktop][Global Shortcuts]
 BigPicture=
@@ -498,10 +523,15 @@ Settings=
 Store=
 _launch=Meta+G
 
+[systemsettings-2.desktop][Global Shortcuts]
+_launch=Meta+.
+
 [systemsettings.desktop][Global Shortcuts]
-_launch=Meta+I; Meta+,; Tools
+_launch=Meta+,
 kcm-kscreen=
 kcm-lookandfeel=
+kcm-powerdevilprofilesconfig=
+kcm-screenlocker=
 kcm-users=
 powerdevilprofilesconfig=
 screenlocker=
