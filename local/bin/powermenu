@@ -4,7 +4,6 @@
 shutdown=' Shutdown'
 reboot=' Reboot'
 lock=' Lock'
-suspend=' Suspend'
 logout=' Logout'
 yes=' Yes'
 no=' No'
@@ -13,16 +12,12 @@ no=' No'
 rofi_cmd() {
 	rofi -dmenu \
        -p "" \
-       -theme-str 'listview { lines: 5; }'
+       -theme-str 'listview { lines: 4; }'
 }
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo "$shutdown
-$reboot
-$lock
-$suspend
-$logout" | rofi_cmd
+	echo -e "$shutdown\n$reboot\n$lock\n$logout" | rofi_cmd
 }
 
 # Execute Command
@@ -31,10 +26,6 @@ run_cmd() {
     systemctl poweroff
   elif [[ $1 == '--reboot' ]]; then
     systemctl reboot
-  elif [[ $1 == '--suspend' ]]; then
-    mpc -q pause
-    amixer set Master mute
-    systemctl suspend
   elif [[ $1 == '--logout' ]]; then
     if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
       openbox --exit
@@ -43,7 +34,7 @@ run_cmd() {
     elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
       i3-msg exit
     elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-      qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+      qdbus org.kde.ksmserver /KSMServer logout 0 0 1
     fi
   fi
 }
@@ -51,7 +42,7 @@ run_cmd() {
 # Actions
 chosen="$(run_rofi)"
 
-case ${chosen} in
+case $chosen in
   $shutdown)
     run_cmd --shutdown
   ;;
@@ -64,9 +55,6 @@ case ${chosen} in
     elif [[ -x '/usr/bin/i3lock' ]]; then
       i3lock
     fi
-  ;;
-  $suspend)
-    run_cmd --suspend
   ;;
   $logout)
     run_cmd --logout
