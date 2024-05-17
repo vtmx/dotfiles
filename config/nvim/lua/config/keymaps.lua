@@ -684,36 +684,6 @@ map(
   { desc = 'Split vertical' }
 )
 
--- Tmux Navigate
-
-map(
-  'n',
-  '<a-l>',
-  '<cmd>TmuxNavigateRight<cr>',
-  { desc = 'Tmux navigate right' }
-)
-
-map(
-  'n',
-  '<a-h>',
-  '<cmd>TmuxNavigateLeft<cr>',
-  { desc = 'Tmux navigate left' }
-)
-
-map(
-  'n',
-  '<a-j>',
-  '<cmd>TmuxNavigateDown<cr>',
-  { desc = 'Tmux navigate down' }
-)
-
-map(
-  'n',
-  '<a-k>',
-  '<cmd>TmuxNavigateUp<cr>',
-  { desc = 'Tmux navigate up' }
-)
-
 -- Resize Window
 
 map(
@@ -807,13 +777,6 @@ map(
 )
 
 map(
-  'n',
-  '<leader>x',
-  '<cmd>!chmod +x %<cr>',
-  { desc = 'Make file executable' }
-)
-
-map(
   {'n', 'i', 'v'},
   '<c-s>',
   '<cmd>up!<cr><esc>',
@@ -832,6 +795,36 @@ map(
   '<leader>Q',
   '<cmd>qa!<cr>',
   { desc = 'Quit all' }
+)
+
+-- Executable
+
+map(
+  'n',
+  '<leader>!x',
+  '<cmd>!chmod +x %<cr>',
+  { desc = 'Make file executable' }
+)
+
+map(
+  'n',
+  '<leader>x',
+  '<cmd>!bash %<cr>',
+  { desc = 'Execute file' }
+)
+
+map(
+  'n',
+  '<leader>X',
+  '<cmd>w !bash<cr>',
+  { desc = 'Execute current line' }
+)
+
+map(
+  'v',
+  '<leader>x',
+  "<cmd>w !bash<cr>",
+  { desc = 'Execute select line(s)' }
 )
 
 map(
