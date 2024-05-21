@@ -2,4 +2,4 @@
 
 yad --color \
 --posx -1 --posy -1 \
---button="Select"\!gtk-ok\! --on-top
+--button="Select"\!gtk-ok\! --on-top --fixed

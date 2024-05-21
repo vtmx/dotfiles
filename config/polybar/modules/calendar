@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-yad --calendar \
---posx -1 --posy -1 \
---no-buttons --on-top --undecorated --close-on-unfocus
