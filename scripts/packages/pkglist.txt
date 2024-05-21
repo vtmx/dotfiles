@@ -21,6 +21,7 @@ firefox
 fish
 flameshot
 flex
+font-manager
 fwupd
 gum
 helix

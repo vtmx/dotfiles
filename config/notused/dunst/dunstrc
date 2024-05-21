@@ -2,6 +2,7 @@
 alignment = left
 font = JetBrains Mono 10
 frame_width = 1
+icon_position = off
 origin = bottom-right
 offset = 8x64
 vertical_alignment = center
