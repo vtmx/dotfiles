@@ -1,10 +1,10 @@
 [global]
 alignment = left
 font = JetBrains Mono 10
-frame_width = 1
+frame_width = 3
 icon_position = off
 origin = bottom-right
-offset = 8x64
+offset = 8x40
 vertical_alignment = center
 
 # always_run_script = true
@@ -48,17 +48,17 @@ timeout = 2
 icon = off
 background  = "#1e2227"
 foreground  = "#abb2bf"
-frame_color = "#3d4556"
+frame_color = "#5c6370"
 
 [urgency_normal]
 timeout = 2
 background  = "#1e2227"
 foreground  = "#abb2bf"
-frame_color = "#3d4556"
+frame_color = "#5c6370"
 
 [urgency_critical]
 timeout = 0
 background  = "#1e2227"
 foreground  = "#abb2bf"
-frame_color = "#e06c75"
+frame_color = "#5c6370"
 
