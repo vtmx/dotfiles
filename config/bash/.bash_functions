@@ -153,7 +153,7 @@ mvlower() {
     newname="${newname//\(/}"
     newname="${newname//\)/}"
     newname="${newname// /-}"
-    mv "$file" "$newname"
+    mv "$file" "$newname" >/dev/null
   done
 }
 
@@ -168,7 +168,7 @@ mvupper() {
     newname="${file//[Ú]/U}"
     newname="${file//[Ç]/C}"
     newname="${newname// /-}"
-    mv "$file" "$newname"
+    mv "$file" "$newname" >/dev/null
   done
 }
 

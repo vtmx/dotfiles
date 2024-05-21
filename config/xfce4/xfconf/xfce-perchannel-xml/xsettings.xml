@@ -3,7 +3,7 @@
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
     <property name="ThemeName" type="string" value="Kali-Dark"/>
-    <property name="IconThemeName" type="string" value="Flat-Remix-Blue-Dark"/>
+    <property name="IconThemeName" type="string" value="Sensual-Breeze-Dark"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="empty"/>
     <property name="DndDragThreshold" type="empty"/>
@@ -29,8 +29,8 @@
     <property name="KeyThemeName" type="empty"/>
     <property name="ToolbarStyle" type="empty"/>
     <property name="ToolbarIconSize" type="empty"/>
-    <property name="MenuImages" type="bool" value="true"/>
-    <property name="ButtonImages" type="bool" value="true"/>
+    <property name="MenuImages" type="bool" value="false"/>
+    <property name="ButtonImages" type="bool" value="false"/>
     <property name="MenuBarAccel" type="empty"/>
     <property name="CursorThemeName" type="string" value="We10XOS-cursors"/>
     <property name="CursorThemeSize" type="empty"/>
