@@ -215,9 +215,11 @@ rc() {
     "$HOME/.bashrc" \
     "$HOME/.bash_functions" \
     "$HOME/.config/bspwm/bspwmrc" \
+    "$HOME/.config/dunst/dunstrc" \
     "$HOME/.config/kitty/kitty.conf" \
     "$HOME/.config/nvim/init.lua" \
     "$HOME/.config/openbox/rc.xml" \
+    "$HOME/.config/polybar/config.ini" \
     "$HOME/.config/sxhkd/sxhkdrc" \
     "$HOME/.config/tmux/tmux.conf" \
   )
