@@ -6,7 +6,7 @@
   <property name="window-height" type="int" value="791"/>
   <property name="columns" type="empty">
     <property name="sort-type" type="uint" value="1"/>
-    <property name="sort-id" type="uint" value="7"/>
+    <property name="sort-id" type="uint" value="0"/>
     <property name="column-vsz" type="bool" value="true"/>
     <property name="column-rss" type="bool" value="true"/>
     <property name="column-pid" type="bool" value="false"/>
