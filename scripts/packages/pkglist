@@ -48,8 +48,8 @@ neofetch
 neovim
 nodejs
 npm
-openbox
 obconf
+openbox
 pandoc
 polybar
 qtile
@@ -66,7 +66,9 @@ vifm
 virtualbox
 vivaldi
 vlc
+wmctrl
 xclip
+xdotool
 yay
 zellij
 zoxide
@@ -74,4 +76,3 @@ zoxide
 # References
 # https://gist.github.com/albertguedes/314819ad5c84c1d2a3d6298233ad0d5e#file-rust-command-line-utilities-markdown
 # https://github.com/TaKO8Ki/awesome-alternatives-in-rust
-
