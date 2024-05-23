@@ -54,6 +54,12 @@ gP() {
   git push
 }
 
+gpa() {
+  git add -A
+  if ! gc $1; then return 1; fi
+  git push
+}
+
 # Extract
 ex() {
   if [[ -f "$1" ]]; then
