@@ -81,6 +81,8 @@
       <property name="launcher-show-description" type="bool" value="false"/>
       <property name="button-icon" type="string" value="im-msn"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce4-taskmanager.desktop"/>
+        <value type="string" value="org.kde.plasma-systemmonitor.desktop"/>
         <value type="string" value="xfce4-settings-editor.desktop"/>
       </property>
     </property>

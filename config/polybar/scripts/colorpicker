@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-yad --color \
---posx -1 --posy -1 \
+yad --color --picker \
+--posx -1 --posy -32 \
 --button="Select"\!gtk-ok\! --on-top --fixed
