@@ -50,9 +50,6 @@ if [[ -f $HOME/.fzf.bash ]]; then
   --color=gutter:-1,border:black"
 fi
 
-# --no-separator
-# --separator=''
-
 # nvm
 [[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
 
@@ -76,3 +73,4 @@ fi
 # References
 # https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
 # https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
+
