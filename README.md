@@ -324,7 +324,7 @@
 
 <details>
   <summary>Click to expand</summary>
-  <img src="images/screenshots/desktop.png" alt="Dolphin">
+  <img src="assets/screenshots/desktop.png" alt="Dolphin">
 </details>
 
 

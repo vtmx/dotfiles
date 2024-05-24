@@ -1,5 +1,9 @@
 @import 'colors.css';
 
+@define-color bg #23272e;
+@define-color bgd #1e2227;
+@define-color fg #abb2bf;
+
 /* Pamac */
 
 window, row, button {
@@ -11,11 +15,11 @@ entry {
 }
 
 window {
-  background: #1e2227;
-  color: #abb2bf;
+  background: @bgd;
+  color: @fg;
 }
 
 list {
-  background: #23272e;
-  color: #abb2bf;
+  background: @bg;
+  color: @fg;
 }

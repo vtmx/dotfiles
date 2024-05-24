@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 yad --calendar \
---posx -1 --posy -1 \
+--posx -1 --posy -32 \
 --no-buttons --on-top --fixed --undecorated --close-on-unfocus
