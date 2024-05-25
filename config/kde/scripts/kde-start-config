@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+kwinrc=$HOME/.config/kwinrc
+kdeglobals=$HOME/.config/kdeglobals
+kdecoration2=org.kde.kdecoration2
+
+# Kdecoration2
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key BorderSize "None"
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key BorderSizeAuto "false"
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key ButtonsOnLeft=""
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key ButtonsOnRight=""
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key ShowToolTips "false"  
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key library "org.kde.breeze"
+kwriteconfig6 --file $kwinrc --group $kdecoration2 --key theme "Breeze"
+
+# Plugins
+kwriteconfig6 --file $kwinrc --group Plugins --key blurEnabled "false"
+kwriteconfig6 --file $kwinrc --group Plugins --key overviewEnabled "false"
+kwriteconfig6 --file $kwinrc --group Plugins --key screenedgeEnabled "false"
+kwriteconfig6 --file $kwinrc --group Plugins --key slideEnabled "false"
+
+# TabBox
+kwriteconfig6 --file $kwinrc --group TabBox --key LayoutName "thumbnail_grid"
+
+# Window
+kwriteconfig6 --file $kwinrc --group Window --key ElectricBorderMaximize "false"
+kwriteconfig6 --file $kwinrc --group Window --key ElectricBorderTiling "false"
+kwriteconfig6 --file $kwinrc --group Window --key FocusStealingPreventionLevel "0"
+
+# General
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key ElectricBorderMaximize "false"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key fixed "Segoe,10,-1,5,63,0,0,0,0,0,Semibold"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key font "Segoe,10,-1,5,63,0,0,0,0,0,Semibold"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key menuFont "Segoe,10,-1,5,63,0,0,0,0,0,Semibold"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key shadeSortColumn "true"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key smallestReadableFont "Segoe,10,-1,5,63,0,0,0,0,0,Semibold"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key toolBarFont "Segoe,10,-1,5,63,0,0,0,0,0,Semibold"
+kwriteconfig6 --file $kdeglobals --group $kdedecoration2 --key widgetStyle "Breeze"
+
+# Icons
+kwriteconfig6 --file $kdeglobals --group Icons --key Theme "Sensual-Breeze-Dark"
+
+# KDE
+kwriteconfig6 --file $kdeglobals --group KDE --key AnimationDurationFactor "0.125"
+kwriteconfig6 --file $kdeglobals --group KDE --key LookAndFeelPackage "org.kde.breezedark.desktop"
+kwriteconfig6 --file $kdeglobals --group KDE --key ShowDeleteCommand "false"
+kwriteconfig6 --file $kdeglobals --group KDE --key ShowIconsOnPushButtons "false"
+kwriteconfig6 --file $kdeglobals --group KDE --key contrast "4"
+kwriteconfig6 --file $kdeglobals --group KDE --key widgetStyle "Oxygen"
