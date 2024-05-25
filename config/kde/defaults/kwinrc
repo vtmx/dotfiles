@@ -1,19 +1,22 @@
 [$Version]
-update_info=kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup
+update_info=kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
 
 [Compositing]
+Enabled=false
+HiddenPreviews=4
+LatencyPolicy=Medium
 OpenGLIsUnsafe=false
 
 [Desktops]
 Id_1=9bcf2a9f-926f-4d9a-a46b-8086d4a9c6fc
-Id_2=eb365eeb-1c0a-4f88-800a-f5f6d0d3eeb5
-Id_3=95683234-a196-4fd2-9528-1c224c4c202b
-Id_4=d14d5d6d-ddf3-4553-b9f4-541133e08e3e
-Id_5=652b2576-0482-4db3-9521-810e83c5117c
-Id_6=73462343-ccb2-4f47-a857-66a7ba387881
-Id_7=7edd5bc3-0a02-484c-a391-74928a04d8f9
-Id_8=766c0081-ab21-46de-8559-32bd717e4ed5
-Id_9=ce4bbc81-7b35-4640-985c-2ea1e04bd43f
+Id_2=eeb68f6c-4533-486e-a22e-9a6e76c7a72f
+Id_3=997e2c3d-796c-4301-bca2-1c1232eed9ca
+Id_4=ccd79e8f-e4e7-4dcb-a145-0b17f3668e8b
+Id_5=bc45c18f-0957-4f46-9c4c-4778f083b4f5
+Id_6=77001c20-1469-4724-865e-5db96a9ca139
+Id_7=e416b6fe-aa09-4d42-b717-453602440b46
+Id_8=25843026-7cdd-4ee7-a260-676530977e56
+Id_9=84bc8888-6340-4760-9afb-bb898c1fde12
 Name_1=Desktop
 Name_2=Desktop
 Name_3=Desktop
@@ -39,30 +42,24 @@ BorderActivateAll=9
 BorderActivateAll=9
 
 [Plugins]
-bismuthEnabled=true
 blurEnabled=false
 overviewEnabled=false
 screenedgeEnabled=false
 slideEnabled=false
 
-[Script-bismuth]
-floatingClass=vlc,steam,mpv
-maximizeSoleTile=true
-preventMinimize=true
-
-[Script-desktopchangeosd]
-TextOnly=true
-
 [TabBox]
-LayoutName=small_icons
+LayoutName=thumbnail_grid
 
 [Windows]
 ElectricBorderMaximize=false
 ElectricBorderTiling=false
+FocusStealingPreventionLevel=0
 
 [org.kde.kdecoration2]
+BorderSize=None
+BorderSizeAuto=false
 ButtonsOnLeft=
-ButtonsOnRight=IAX
+ButtonsOnRight=
 ShowToolTips=false
-library=org.kde.bismuth.decoration
-theme=Bismuth
+library=org.kde.breeze
+theme=Breeze
