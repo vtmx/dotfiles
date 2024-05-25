@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" src="images/logos/vitormelo.png" alt="Vitor Melo logo">
+  <img width="250" src="assets/logos/vitormelo.png" alt="Vitor Melo logo">
 </p>
 
 ## Configuration
@@ -19,27 +19,19 @@
   </tr>
   <tr>
     <th align="left">Shell</th>
-    <td><a href="https://fishshell.com">Fish</a> + <a href="https://starship.rs">Starship</a></td>
-  </tr>
-  <tr>
-    <th align="left">Terminal Font</th>
-    <td><a href="https://github.com/IBM/plex">BlexMono Nerd Font Medium 11</a></td>
+    <td><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash</a> + <a href="https://starship.rs">Starship</a></td>
   </tr>
   <tr>
     <th align="left">System Font</th>
     <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
   </tr>
   <tr>
+    <th align="left">Terminal Font</th>
+    <td><a href="https://github.com/IBM/plex">BlexMono Nerd Font Medium 11</a></td>
+  </tr>
+  <tr>
     <th align="left">Panel</th>
-    <td><a href="https://userbase.kde.org/Plasma/Panels">Plasma Panel 28</a></td>
-  </tr>
-  <tr>
-    <th align="left">Panel Widgets</th>
-    <td><a href="https://github.com/wsdfhjxc/virtual-desktop-bar">Virtual Desktop Bar</a></td>
-  </tr>
-  <tr>
-    <th align="left">TWM</th>
-    <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
+    <td><a href="https://userbase.kde.org/Plasma/Panels">Plasma Panel 32</a></td>
   </tr>
 </table>
 
@@ -48,7 +40,7 @@
 <table>
   <tr>
     <th align="left" width="180">Application Style</th>
-    <td width="360"><a href="https://github.com/Luwx/Lightly">Lightly</a></td>
+    <td width="360"><a href="https://store.kde.org/p/1162362">Oxygen</a></td>
   </tr>
   <tr>
     <th align="left">Plasma Style</th>
@@ -60,7 +52,7 @@
   </tr>
   <tr>
     <th align="left">Window Decorations</th>
-    <td><a href="https://github.com/Bismuth-Forge/bismuth">Bismuth</a></td>
+    <td><a href="https://archlinux.org/packages/extra/x86_64/breeze">Breeze</a></td>
   </tr>
   <tr>
     <th align="left">Icons</th>
@@ -92,21 +84,14 @@
     <td width="360"><a href="https://apps.kde.org/dolphin">Dolphin</a></td>
   </tr>
   <tr>
-    <th align="left">File Syncronizer</th>
-    <td>
-      <a href="https://freefilesync.org">FreeFileSync</a>,
-      <a href="https://krusader.org">Krusader</a>
-    </td>
-  </tr>
-  <tr>
     <th align="left">Editor</th>
     <td><a href="https://code.visualstudio.com">VS Code</a></td>
   </tr>
   <tr>
     <th align="left">Browser</th>
     <td>
-      <a href="https://vivaldi.com/pt-br">Vivaldi</a>,
       <a href="https://www.mozilla.org">Firefox</a>
+      <a href="https://vivaldi.com/pt-br">Vivaldi</a>
     </td>
   </tr>
   <tr>
@@ -120,6 +105,7 @@
   </tr>
   <tr>
     <th align="left">Video Player</th>
+    <td><a href="https://mpv.io/">MPV</a></td>
     <td><a href="https://www.videolan.org/vlc">VLC</a></td>
   </tr>
   <tr>
@@ -137,6 +123,7 @@
   <tr>
     <th align="left">Password Manager</th>
     <td><a href="https://bitwarden.com">Bitwarden</a></td>
+    <td><a href="https://keepassxc.org">KeepassXC</a></td>
   </tr>
   <tr>
     <th align="left">Batch Rename</th>
@@ -152,10 +139,6 @@
 
 <table>
   <tr>
-    <th align="left" width="180">File Manager</th>
-    <td width="360"><a href="https://vifm.info">vifm</a></td>
-  </tr>
-  <tr>
     <th align="left">File Syncronizer</th>
     <td><a href="https://github.com/WayneD/rsync">rsync</a></dd>
   </tr>
@@ -164,12 +147,17 @@
     <td><a href="https://neovim.io">neovim</a></td>
   </tr>
   <tr>
-    <th align="left">Music Player</th>
-    <td><a href="https://cmus.github.io">cmus</a></td>
+    <th align="left">Jump Dir</th>
+    <td><a href="https://github.com/ajeetdsouza/zoxide">zoxide</a></dd>
   </tr>
   <tr>
-    <th align="left">Video Player</th>
-    <td><a href="https://mpv.io">mpv</a></td>
+    <th align="left">Fuzzy Finder</th>
+    <td><a href="https://github.com/junegunn/fzf">fzf</a></dd>
+  </tr>
+  <tr>
+    <th align="left">Watch File</th>
+    <td><a href="https://github.com/eradman/entr">entr</a></dd>
+    <td><a href="https://linux.die.net/man/1/inotifywait">inotifywait</a></dd>
   </tr>
 </table>
 
