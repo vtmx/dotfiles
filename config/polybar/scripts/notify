@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+notify-send teste  
+echo  

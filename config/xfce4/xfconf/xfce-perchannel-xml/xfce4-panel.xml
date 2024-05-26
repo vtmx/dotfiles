@@ -83,7 +83,8 @@
       <property name="recent" type="array">
         <value type="string" value="xfce4-taskmanager.desktop"/>
         <value type="string" value="org.kde.plasma-systemmonitor.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
+      </property>
+      <property name="favorites" type="array">
       </property>
     </property>
     <property name="plugin-1" type="string" value="separator">
