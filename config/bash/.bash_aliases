@@ -149,8 +149,8 @@ alias paciy="sudo pacman -S --noconfirm"  # install no confirm
 alias pacl="pacman -Q"                    # list
 alias paclq="pacman -Qqe"                 # filter
 alias paclo="pacman -Qdt"                 # list orphans
-alias pacr="sudo pacman -R"               # remove
-alias pacry="sudo pacman --noconfirm  -R" # remove no confirm
+alias pacr="sudo pacman -Rs"              # remove
+alias pacry="sudo pacman --noconfirm -Rs" # remove no confirm
 alias pacs="sudo pacman -Ss"              # search
 alias pacu="sudo pacman -Syu"             # update
 
