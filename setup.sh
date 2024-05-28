@@ -82,14 +82,14 @@ create_link() {
 }
 
 create_links() {
-  local config_src="${current_dir}/config"
-  local config_dist="${HOME}/.config/"
+  local config_src="$current_dir/config"
+  local config_dist="$HOME/.config/"
    
   # bash
-  # name="bash"
-  # target="$config_src/bash/."*
-  # link="$HOME"
-  # create_link "$name" "$target" "$link"
+  name="bash"
+  target="$config_src/bash/."*
+  link="$HOME"
+  create_link "$name" "$target" "$link"
 
   # bat
   name="bat"
@@ -106,12 +106,6 @@ create_links() {
   # kitty
   name="kitty"
   target="$config_src/kitty"
-  link="$config_dist"
-  create_link "$name" "$target" "$link"
-
-  # neofetch
-  name="neofetch"
-  target="$config_src/neofetch"
   link="$config_dist"
   create_link "$name" "$target" "$link"
 
