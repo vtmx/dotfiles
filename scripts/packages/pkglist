@@ -52,6 +52,7 @@ obconf
 openbox
 pandoc
 polybar
+qemu
 qtile
 ranger
 retroarch
@@ -63,7 +64,10 @@ timeshift
 tmux
 veracrypt
 vifm
+virsh
+virtmanager
 virtualbox
+virt-viewr
 vivaldi
 vlc
 wmctrl
