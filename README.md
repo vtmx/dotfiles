@@ -105,8 +105,7 @@
   </tr>
   <tr>
     <th align="left">Video Player</th>
-    <td><a href="https://mpv.io/">MPV</a></td>
-    <td><a href="https://www.videolan.org/vlc">VLC</a></td>
+    <td><a href="https://mpv.io/">MPV</a>, <a href="https://www.videolan.org/vlc">VLC</a></td>
   </tr>
   <tr>
     <th align="left">Screenshot</th>
@@ -122,8 +121,7 @@
   </tr>
   <tr>
     <th align="left">Password Manager</th>
-    <td><a href="https://bitwarden.com">Bitwarden</a></td>
-    <td><a href="https://keepassxc.org">KeepassXC</a></td>
+    <td><a href="https://bitwarden.com">Bitwarden</a>, <a href="https://keepassxc.org">KeepassXC</a></td>
   </tr>
   <tr>
     <th align="left">Batch Rename</th>
@@ -156,8 +154,7 @@
   </tr>
   <tr>
     <th align="left">Watch File</th>
-    <td><a href="https://github.com/eradman/entr">entr</a></dd>
-    <td><a href="https://linux.die.net/man/1/inotifywait">inotifywait</a></dd>
+    <td><a href="https://github.com/eradman/entr">entr</a>, <a href="https://linux.die.net/man/1/inotifywait">inotifywait</a></dd>
   </tr>
 </table>
 
@@ -168,7 +165,7 @@
 <table>
   <thead>
     <tr>
-      <th>Color</th>
+      <th>🔍</th>
       <th>Name</th>
       <th>Hex</th>
     </tr>
@@ -176,17 +173,12 @@
   <tbody>
     <tr>
       <td><img src="https://fakeimg.pl/32x32/23272e/?text=+" alt="Black"></td>
-      <td>Background</td>
+      <td>Black (BG)</td>
       <td><code>#23272e</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="White"></td>
-      <td>Foreground</td>
-      <td><code>#abb2bf</code></td>
-    </tr>
-    <tr>
       <td><img src="https://fakeimg.pl/32x32/2c313c/?text=+" alt="Black"></td>
-      <td>Black</td>
+      <td>Black Bright</td>
       <td><code>#2c313c</code></td>
     </tr>
     <tr>
@@ -224,6 +216,11 @@
       <td>White</td>
       <td><code>#5c6370</code></td>
     </tr>
+    <tr>
+      <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="White"></td>
+      <td>White Bright (FG)</td>
+      <td><code>#abb2bf</code></td>
+    </tr>
   <tbody>
 </table>
 
@@ -235,10 +232,10 @@
     <th align="left" colspan="4">Color</th>
   </tr>
   <tr>
-    <th align="left">Color</th>
+    <th align="left">🔍</th>
     <th align="left" width="180">Name</th>
     <th align="left">Hex</th>
-    <th align="left"></th>
+    <th align="left">🔍</th>
     <th align="left" width="180">Name</th>
     <th align="left">Hex</th>
   </tr>
@@ -260,7 +257,7 @@
   </tr>
   <tr>
     <td><img src="https://fakeimg.pl/32x32/2c313c/?text=+" alt="Line Hightlight"></td>
-    <td>Line Highlight</td>
+    <td>Current Line</td>
     <td><code>#2c313c</code></td>
     <td><img src="https://fakeimg.pl/32x32/e5c07b/?text=+" alt="Yellow"></td>
     <td>Yellow</td>
@@ -327,11 +324,11 @@
       <th>Action</th>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>} || {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}</td>
+      <td><kbd>Super</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} || {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
       <td>Focus window to {left,down,up,right} direction</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>} || {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} || {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
       <td>Move window to {left,down,up,right} direction</td>
     </tr>
     <tr>
@@ -343,7 +340,7 @@
       <td>Go to workspace number {1..9}</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd>  + {<kbd>⯇</kbd>,<kbd>⯈</kbd>},{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯈</kbd>}, {<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
       <td>Move window to {next,prev} workspace</td>
     </tr>
     <tr>
@@ -351,7 +348,7 @@
       <td>Move window to workspace number {1..9}</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Alt</kbd> + {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>} || {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Alt</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} || {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
       <td>Resize window in {left,down,up,right} direction</td>
     </tr>
     <tr>
