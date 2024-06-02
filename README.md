@@ -332,7 +332,7 @@
       <td>Move window to {left,down,up,right} direction</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + {<kbd>⯇</kbd>,<kbd>⯈</kbd>},{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + {<kbd>h</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯈</kbd>}, {<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
       <td>Go to {next,prev} workspace</td>
     </tr>
     <tr>
