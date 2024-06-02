@@ -16,7 +16,7 @@ menu() {
  f. Copy fonts 
  i. Install packages
  l. Create simbolic links
- s. Copy scripts
+ s. Sync
  q. Exit
 
 Option: " option
@@ -28,6 +28,7 @@ Option: " option
     i|I) install_packages ;;
     f|F) copy_fonts       ;;
     l|L) create_links     ;;
+    s|S) sync             ;;
     q|Q) exit 0           ;;
     *) pause_error "Invalid option" ;;
   esac
@@ -146,6 +147,104 @@ create_links() {
   # create_link "$name" "$target" "$link"
 
   pause_success "Links created"
+}
+
+makesync() {
+  local name="$1"
+  local url="$2"
+  local dist="$3"
+
+  echo "Sync $1..."
+  if ! wget -q $url -O "$dist"; then
+    pause_error "Fail sync $1"
+  fi
+}
+
+sync() {
+  local name
+  local dist
+  local confdir="$HOME/.config/"
+  local url="https://raw.githubusercontent.com/vtmx/dotfiles/main/config"
+   
+  # bash
+  name="bashrc"
+  dist="$HOME"
+  url="$url/$name/.bashrc"
+  makesync "$name" "$url" "$dist"
+  name="bash aliases"
+  url="$url/$name/.bash_aliases"
+  makesync "$name" "$url" "$dist"
+  name="bash functions"
+  url="$url/$name/.bash_functions"
+  makesync "$name" "$url" "$dist"
+
+  # bspwm
+  name="bspwm"
+  dist="$confdir/bspwm"
+  url="$url/bspwm/bspwmrc"
+  makesync "$name" "$url" "$dist"
+
+  # kitty
+  name="kitty"
+  dist="$confdir/kitty"
+  url="$url/kitty/kitty.conf"
+  makesync "$name" "$url" "$dist"
+
+  # nvim
+  name="nvim autocmds"
+  dist="$confdir/nvim/lua/config"
+  url="$url/nvim/lua/config/autocmds.lua"
+  makesync "$name" "$url" "$dist"
+  name="nvim colors"
+  url="$url/nvim/lua/config/colors.lua"
+  makesync "$name" "$url" "$dist"
+  name="nvim keymaps"
+  url="$url/nvim/lua/config/keymaps.lua"
+  makesync "$name" "$url" "$dist"
+  name="nvim options"
+  url="$url/nvim/lua/config/options.lua"
+  makesync "$name" "$url" "$dist"
+  name="nvim theme"
+  url="$url/nvim/lua/config/theme.lua"
+  makesync "$name" "$url" "$dist"
+  name="nvim utils"
+  url="$url/nvim/lua/config/utils.lua"
+  makesync "$name" "$url" "$dist"
+
+  # starship
+  name="starship"
+  dist="$confdir/starship"
+  url="$url/starship/starship.toml"
+  makesync "$name" "$url" "$dist"
+
+  # rofi
+  name="rofi"
+  dist="$confdir/rofi"
+  url="$url/rofi/config.rasi"
+  makesync "$name" "$url" "$dist"
+
+  # sxhkd
+  name="sxhkd"
+  dist="$confdir/sxhkd"
+  url="$url/sxhkd/sxhkdrc"
+  makesync "$name" "$url" "$dist"
+
+  # tmux
+  name="tmux"
+  dist="$confdir/tmux"
+  url="$url/tmux/tmux.conf"
+  makesync "$name" "$url" "$dist"
+
+  # vscode
+  name="vscode keybindings"
+  dist="$confdir/Code - OSS/user"
+  url="$url/vscode/keybindings.json"
+  makesync "$name" "$url" "$dist"
+  name="vscode settings"
+  url="$url/vscode/settings.json"
+  makesync "$name" "$url" "$dist"
+
+  pause_success "Sync maked"
 }
 
 # ------------------------------------------------------------------------------
