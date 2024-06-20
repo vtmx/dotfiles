@@ -995,6 +995,13 @@ map(
 
 map(
   'n',
+  's',
+  '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
+)
+
+map(
+  'n',
   '<leader>fc',
   '<cmd>HopChar1<cr>',
   { desc = 'Char' }

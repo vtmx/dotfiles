@@ -1,5 +1,5 @@
 return {
   { 'fladson/vim-kitty', ft = 'kitty' },
   { 'baskerville/vim-sxhkdrc', ft = 'sxhkdrc' },
-  { 'ollykel/v-vim', ft = 'v' }
+  { 'ollykel/v-vim', ft = 'vlang' }
 }

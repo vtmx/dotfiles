@@ -16,11 +16,6 @@ return {
     config = true
   },
   {
-    'echasnovski/mini.comment',
-    event = 'VeryLazy',
-    config = true
-  },
-  {
     'neovim/nvim-lspconfig',
     event = 'BufEnter'
   },

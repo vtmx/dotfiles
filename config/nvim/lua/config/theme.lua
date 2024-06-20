@@ -283,7 +283,7 @@ local hl_groups = {
 
   -- indent-line
   IblIndent = { fg = c.sel  },
-  IblScope =  { fg = c.red, bg = c.blue  },
+  -- IblScope =  { fg = c.fg  },
 
   -- bufferline
   BufferLineCloseButtonVisible = { bg = 'NONE' },
