@@ -75,13 +75,13 @@ gpdf() {
 # Git add, commit and push
 gP() {
   git add -A
-  if ! gc $1; then return 1; fi
+  git commit -m "$*"
   git push
 }
 
 gpa() {
   git add -A
-  if ! gc $1; then return 1; fi
+  git commit -m "$*"
   git push
 }
 
