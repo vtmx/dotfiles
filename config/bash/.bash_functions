@@ -45,6 +45,7 @@ ex() {
     return 1
   fi
 }
+
 # Simplified git commit
 gc() {
   if [[ -n "$1" ]]; then
@@ -53,6 +54,13 @@ gc() {
     echo "error: no commit message provided"
     return 1
   fi
+}
+
+# Git add, commit and push
+gpa() {
+  git add -A
+  git commit -m "$*"
+  git push
 }
 
 # Update doftiles
@@ -69,19 +77,6 @@ gpdf() {
   cd "$dotfiles_dir"
   git add -A
   git commit -m "$message"
-  git push
-}
-
-# Git add, commit and push
-gP() {
-  git add -A
-  git commit -m "$*"
-  git push
-}
-
-gpa() {
-  git add -A
-  git commit -m "$*"
   git push
 }
 

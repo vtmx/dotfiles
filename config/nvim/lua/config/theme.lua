@@ -283,7 +283,7 @@ local hl_groups = {
 
   -- indent-line
   IblIndent = { fg = c.sel  },
-  -- IblScope =  { fg = c.fg  },
+  ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- bufferline
   BufferLineCloseButtonVisible = { bg = 'NONE' },

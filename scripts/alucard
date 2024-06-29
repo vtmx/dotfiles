@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# Color converter using Dracula theme as base.
+# https://github.com/dracula/dracula-theme
+
+[[ $1 ]] || echo 'alucard: need a file'
+
+declare -A dracula
+dracula[background]='282a36'
+dracula[currentline]='44475a'
+dracula[selection]='44475a'
+dracula[foreground]='f8f8f2'
+dracula[comment]='6272a4'
+dracula[blue]='bd93f9'
+dracula[cyan]='8be9fd'
+dracula[green]='50fa7b'
+dracula[orange]='50fa7b'
+dracula[pink]='ff79c6'
+dracula[purple]='ff79c6'
+dracula[red]='ff5555'
+dracula[yellow]='f1fa8c'
+dracula[brightblack]='6272a4'
+dracula[brightblue]='d6acff'
+dracula[brightcyan]='a4ffff'
+dracula[brightgreen]='69ff94'
+dracula[brightpurple]='ff92df'
+dracula[brightred]='ff6e6e'
+dracula[brightwhite]='ffffff'
+dracula[brightyellow]='ffffa'
+
+declare -A custom
+custom[background]='23272e'
+custom[currentline]='2c313c'
+custom[selection]='3d4556'
+custom[foreground]='abb2bf'
+custom[comment]='5c6370'
+custom[blue]='61afef'
+custom[cyan]='56b6c2'
+custom[green]='98c379'
+custom[orange]='d19a66'
+custom[pink]='c678dd'
+custom[purple]='c678dd'
+custom[red]='e06c75'
+custom[yellow]='e5c07b'
+custom[brightblack]=${custom[background]}
+custom[brightblue]=${custom[blue]}
+custom[brightcyan]=${custom[cyan]}
+custom[brightgreen]=${custom[green]}
+custom[brightpurple]=${custom[purple]}
+custom[brightred]=${custom[red]}
+custom[brightwhite]=${custom[foreground]}
+custom[brightyellow]=${custom[yellow]}
+
+sed -e "s/${dracula[background]}/${custom[background]}/gI" \
+    -e "s/${dracula[currentline]}/${custom[currentline]}/gI" \
+    -e "s/${dracula[selection]}/${custom[selection]}/gI" \
+    -e "s/${dracula[foreground]}/${custom[foreground]}/gI" \
+    -e "s/${dracula[comment]}/${custom[comment]}/gI" \
+    -e "s/${dracula[blue]}/${custom[blue]}/gI" \
+    -e "s/${dracula[cyan]}/${custom[cyan]}/gI" \
+    -e "s/${dracula[green]}/${custom[green]}/gI" \
+    -e "s/${dracula[orange]}/${custom[orange]}/gI" \
+    -e "s/${dracula[pink]}/${custom[pink]}/gI" \
+    -e "s/${dracula[purple]}/${custom[purple]}/gI" \
+    -e "s/${dracula[red]}/${custom[red]}/gI" \
+    -e "s/${dracula[yellow]}/${custom[yellow]}/gI" \
+    -e "s/${dracula[brightblack]}/${custom[brightblack]}/gI" \
+    -e "s/${dracula[brightblue]}/${custom[brightblue]}/gI" \
+    -e "s/${dracula[brightcyan]}/${custom[brightcyan]}/gI" \
+    -e "s/${dracula[brightgreen]}/${custom[brightgreen]}/gI" \
+    -e "s/${dracula[brightpurple]}/${custom[brightpurple]}/gI" \
+    -e "s/${dracula[brightred]}/${custom[brightred]}/gI" \
+    -e "s/${dracula[brightwhite]}/${custom[brightwhite]}/gI" \
+    -e "s/${dracula[brightyellow]}/${custom[brightyellow]}/gI" \
+    $1
