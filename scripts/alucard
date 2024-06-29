@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Color converter using Dracula theme as base.
 # https://github.com/dracula/dracula-theme
+# Usage: ./alucard dracula.json > custom.json
 
 [[ $1 ]] || echo 'alucard: need a file'
 
