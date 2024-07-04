@@ -102,8 +102,8 @@ alias gtk="GTK_DEBUG=interactive"
 alias grep="grep --color=auto"
 
 # history
-alias hi="history"
-alias hf="history | fzf --reverse"
+alias hi="history | sort -rn"
+alias hf="history | fzf --tac"
 
 # helix
 alias hx="helix"
@@ -112,8 +112,8 @@ alias hx="helix"
 alias ip="ip -color=auto"
 
 # inotify
-alias iwait="inotifywait"
-alias iwatch="inotifywatch"
+alias iwai="inotifywait"
+alias iwat="inotifywatch"
 
 # ln
 alias lnf="ln -f"
