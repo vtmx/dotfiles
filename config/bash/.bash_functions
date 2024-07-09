@@ -226,11 +226,13 @@ rc() {
     "$HOME/.config/nvim/init.lua" \
     "$HOME/.config/openbox/rc.xml" \
     "$HOME/.config/polybar/config.ini" \
+    "$HOME/.config/rofi/config.rasi" \
     "$HOME/.config/sxhkd/sxhkdrc" \
     "$HOME/.config/tmux/tmux.conf" \
   )
 
-  $EDITOR $(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
+  local rcfile=$(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
+  [[ "$rcfile" ]] && $EDITOR "$rcfile"
   # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
 }
 
