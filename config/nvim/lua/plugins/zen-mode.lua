@@ -4,6 +4,7 @@ return {
   opts = {
     window = {
       width = 60,
+      height = 1,
       options = {
         cursorline = false,
         number = false,

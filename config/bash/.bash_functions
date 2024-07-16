@@ -59,7 +59,7 @@ gc() {
 # Git add, commit and push
 gpa() {
   git add -A
-  git commit -m "$*"
+  git commit -m "${*^}"
   git push
 }
 
