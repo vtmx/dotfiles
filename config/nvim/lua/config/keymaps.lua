@@ -46,7 +46,6 @@ map(
   { desc = 'Paste register' }
 )
 
-
 map(
   'n', 'j', 'gj',
   { desc = 'Ignore wordwrap jumpline' }
@@ -108,9 +107,7 @@ map(
 )
 
 map(
-  'n',
-  '}',
-  '}zz',
+  'n', '}', '}zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
@@ -208,62 +205,52 @@ map(
 -- Clipboard
 
 map(
-  'v', '<leader>y',
-  '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
+  'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
   { desc = 'Yanki selectted line to clipboard' }
 )
 
 map(
-  'n', '<leader>y',
-  '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
 )
 
 map(
-  'n', 'yl',
-  '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  'n', 'yl', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
 )
 
 map(
-  'n', 'ya',
-  '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  'n', 'ya', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
   { desc = 'Copy all content to clipboard' }
 )
 
 map(
-  'n', '<leader>d',
-  '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
+  'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
   { desc = 'Delete to clipboard' }
 )
 
 map(
-  'v', '<leader>d',
-  '"+x<cmd>echo "Cut to clipboard"<cr>',
+  'v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>',
   { desc = 'Cut to clipboard' }
 )
 
 map(
-  'n', '<leader>p',
-  '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  'n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
 map(
-  'n', '<leader>P',
-  'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
 
 map(
-  'v', '<leader>p',
-  'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  'v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
 map(
-  'v', '<leader>P',
-  'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  'v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
@@ -281,7 +268,6 @@ map(
   'n', '<del>', '"_x',
   { desc = 'Delete not copy' }
 )
-
 
 map(
   'n', '<c-a-j>', '<cmd>m .+1<cr>',
@@ -434,9 +420,7 @@ map(
 )
 
 map(
-  'n',
-  '<leader>bn',
-  '<cmd>ene<cr>',
+  'n', '<leader>bn', '<cmd>ene<cr>',
   { desc = 'Buffer new' }
 )
 
@@ -481,9 +465,7 @@ map(
 )
 
 map(
-  'n',
-  '<leader>bo',
-  '<cmd>BufOnly<cr>',
+  'n', '<leader>bo', '<cmd>BufOnly<cr>',
   { desc = 'Keep just current buffer' }
 )
 
