@@ -4,16 +4,12 @@ local utils = require('config.utils')
 vim.g.mapleader = ' '
 
 map(
-  'n',
-  '<leader>r',
-  '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
+  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
   { desc = 'Reload config file' }
 )
 
 map(
-  'n',
-  '<f1>',
-  function()
+  'n', '<f1>', function()
     local word = vim.fn.expand('<cword>')
     vim.cmd('help ' .. word)
   end,
@@ -21,125 +17,93 @@ map(
 )
 
 map(
-  'i',
-  'kj',
-  '<esc>',
+  'i', 'kj', '<esc>',
   { desc = 'Return to normal mode' }
 )
 
 map(
-  'v',
-  'ç',
-  '<esc>',
+  'v', 'ç', '<esc>',
   { desc = 'Return to normal mode' }
 )
 
 map(
-  'v',
-  '<leader>kj',
-  '<esc>',
+  'v', '<leader>kj', '<esc>',
   { desc = 'Return to normal mode' }
 )
 
 map(
-  'i',
-  '<c-h>',
-  '<left>',
+  'i', '<c-h>', '<left>',
   { desc = 'Go left in insert mode' }
 )
 
 map(
-  'i',
-  '<c-l>',
-  '<right>',
+  'i', '<c-l>', '<right>',
   { desc = 'Go right in insert mode' }
 )
 
 map(
-  'i',
-  '<c-v>',
-  '<c-r>"',
+  'i', '<c-v>', '<c-r>"',
   { desc = 'Paste register' }
 )
 
 
 map(
-  'n',
-  'j',
-  'gj',
+  'n', 'j', 'gj',
   { desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
-  'n',
-  'k',
-  'gk',
+  'n', 'k', 'gk',
   { desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
-  'n',
-  'Y',
-  'y$',
+  'n', 'Y', 'y$',
   { desc = 'Like C and D' }
 )
 
 map(
-  {'n', 'v'},
-  'L', 'g_',
+  {'n', 'v'}, 'L', 'g_',
   { desc = 'Go to end line' }
 )
 
 map(
-  {'n', 'v'},
-  'H', '^',
+  {'n', 'v'}, 'H', '^',
   { desc = 'Go to begin line' }
 )
 
 map(
-  {'n', 'v' },
-  'J', '5j',
+  {'n', 'v' }, 'J', '5j',
   { desc = 'Jump 5 line to down' }
 )
 
 map(
-  {'n', 'v'},
-  'K', '5k',
+  {'n', 'v'}, 'K', '5k',
   { desc = 'Jump 5 line to up' }
 )
 
 map(
-  'n',
-  '<c-d>',
-  '<c-d>zz',
+  'n', '<c-d>', '<c-d>zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
 map(
-  'n',
-  '<c-u>',
-  '<c-u>zz',
+  'n', '<c-u>', '<c-u>zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
 map(
-  'n',
-  '<c-i>',
-  '<c-i>zz',
+  'n', '<c-i>', '<c-i>zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
 map(
-  'n',
-  '<c-o>',
-  '<c-o>zz',
+  'n', '<c-o>', '<c-o>zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
 map(
-  'n',
-  '{',
-  '{zz',
+  'n', '{', '{zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
@@ -151,328 +115,245 @@ map(
 )
 
 map(
-  'n',
-  '*',
-  '*zz',
+  'n', '*', '*zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
 map(
-  'n',
-  '#',
-  '#zz',
+  'n', '#', '#zz',
   { desc = 'Maintain cursor in the middle screen' }
 )
 
 map(
-  {'n', 'x'},
-  'c', '"_c',
+  {'n', 'x'}, 'c', '"_c',
   { desc = 'Change text without putting it into register' }
 )
 
 map(
-  'n',
-  'C',
-  '"_C',
+  'n', 'C', '"_C',
   { desc = 'Change aborve cursor without putting it into register' }
 )
 
 map(
-  'n',
-  'cc',
-  '"_cc',
+  'n', 'cc', '"_cc',
   { desc = 'Change line without putting it into register' }
 )
 
 map(
-  'n',
-  '<leader>o',
-  'm`o<esc>``',
+  'n', '<leader>o', 'm`o<esc>``',
   { desc = 'Add new line in normal mode' }
 )
 
 map(
-  'n',
-  '<leader>O',
-  'm`O<esc>``',
+  'n', '<leader>O', 'm`O<esc>``',
   { desc = 'Add new line in normal mode' }
 )
 
 map(
-  'n',
-  '=',
-  '<c-a>',
+  'n', '=', '<c-a>',
   { desc = 'Incrase number' }
 )
 
 map(
-  'n',
-  '-',
-  '<c-x>',
+  'n', '-', '<c-x>',
   { desc = 'Decrease number' }
 )
 
 map(
-  'n',
-  '<leader>a',
-  'G<s-v>gg',
+  'n', '<leader>a', 'G<s-v>gg',
   { desc = 'Select all text' }
 )
 
 map(
-  'n',
-  'U',
-  '<c-r>',
+  'n', 'U', '<c-r>',
   { desc = 'Redo' }
 )
 
 -- Mark
 
 map(
-  'n',
-  'm',
-  '`',
+  'n', 'm', '`',
   { desc = 'Go to mark' }
 )
 
 map(
-  'n',
-  'M',
-  'm',
+  'n', 'M', 'm',
   { desc = 'Create mark' }
 )
 
 -- Register
 
 map(
-  'n',
-  "'",
-  '"',
+  'n', "'", '"',
   { desc = 'Create register' }
 )
 
 map(
-  'v',
-  "'",
-  '"',
+  'v', "'", '"',
   { desc = 'Create register' }
 )
 
 -- Surround add
 
 map(
-   'n',
-   '<leader>"',
-   function() vim.cmd.normal('saiw"') end,
+   'n', '<leader>"', function() vim.cmd.normal('saiw"') end,
    { desc = 'Add double quote' }
 )
 
 map(
-   'n',
-   "<leader>'",
-   function() vim.cmd.normal("saiw'") end,
+   'n', "<leader>'", function() vim.cmd.normal("saiw'") end,
    { desc = 'Add single quote' }
 )
 
 -- Clipboard
 
 map(
-  'v',
-  '<leader>y',
+  'v', '<leader>y',
   '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
   { desc = 'Yanki selectted line to clipboard' }
 )
 
 map(
-  'n',
-  '<leader>y',
+  'n', '<leader>y',
   '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
 )
 
 map(
-  'n',
-  'yl',
+  'n', 'yl',
   '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
 )
 
 map(
-  'n',
-  'ya',
+  'n', 'ya',
   '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
   { desc = 'Copy all content to clipboard' }
 )
 
--- map(
---   {'n', 'x'},
---   'p',
---   '"0p',
---   { desc = 'Register not change on paste' }
--- )
-
 map(
-  'n',
-  '<leader>d',
+  'n', '<leader>d',
   '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
   { desc = 'Delete to clipboard' }
 )
 
 map(
-  'v',
-  '<leader>d',
+  'v', '<leader>d',
   '"+x<cmd>echo "Cut to clipboard"<cr>',
   { desc = 'Cut to clipboard' }
 )
 
 map(
-  'n',
-  '<leader>p',
+  'n', '<leader>p',
   '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
 map(
-  'n',
-  '<leader>P',
+  'n', '<leader>P',
   'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
 
 map(
-  'v',
-  '<leader>p',
+  'v', '<leader>p',
   'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
 map(
-  'v',
-  '<leader>P',
+  'v', '<leader>P',
   'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
 map(
-  'n',
-  '<leader>j',
-  'mzJ`z',
+  'n', '<leader>j', 'mzJ`z',
   { desc = 'Join lines' }
 )
 
 map(
-  'n',
-  'x',
-  '"_x',
+  'n', 'x', '"_x',
   { desc = 'Delete not copy' }
 )
 
 map(
-  'n',
-  '<del>',
-  '"_x',
+  'n', '<del>', '"_x',
   { desc = 'Delete not copy' }
 )
 
 
 map(
-  'n',
-  '<c-a-j>',
-  '<cmd>m .+1<cr>',
+  'n', '<c-a-j>', '<cmd>m .+1<cr>',
   { desc = 'Move line to down' }
 )
 
 map(
-  'n',
-  '<c-a-k>',
-  '<cmd>m .-2<cr>',
+  'n', '<c-a-k>', '<cmd>m .-2<cr>',
   { desc = 'Move line to up' }
 )
 
 map(
-  'i',
-  '<c-a-j>',
-  '<esc><cmd>m .+1<cr>==gi',
+  'i', '<c-a-j>', '<esc><cmd>m .+1<cr>==gi',
   { desc = 'Move line to down' }
 )
 
 map(
-  'i',
-  '<c-a-k>',
-  '<esc><cmd>m .-2<cr>==gi',
+  'i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi',
   { desc = 'Move line to up' }
 )
 
 map(
-  'v',
-  '<c-a-j>',
-  ":m '>+1<cr>gv=gv",
+  'v', '<c-a-j>', ":m '>+1<cr>gv=gv",
   { desc = 'Move select line(s) to down' }
 )
 
 map(
-  'v',
-  '<c-a-k>',
-  ":m '<-2<cr>gv=gv",
+  'v', '<c-a-k>', ":m '<-2<cr>gv=gv",
   { desc = 'Move select line(s) to up' }
 )
 
 -- Move and clone line(s)
 
 map(
-  'n',
-  '<c-s-a-j>',
-  'yyp',
+  'n', '<c-s-a-j>', 'yyp',
   { desc = 'Clone line to down' }
 )
 
 map(
-  'n',
-  '<c-s-a-k>',
-  'yyP',
+  'n', '<c-s-a-k>', 'yyP',
   { desc = 'Clone line to up' }
 )
 
 map(
-  'i',
-  '<c-s-a-j>',
-  '<esc>yypi',
+  'i', '<c-s-a-j>', '<esc>yypi',
   { desc = 'Clone line down' }
 )
 
 map(
-  'i',
-  '<c-s-a-k>',
-  '<esc>yyPi',
+  'i', '<c-s-a-k>', '<esc>yyPi',
   { desc = 'Clone line up' }
 )
 
 map(
-  'v',
-  '<c-s-a-j>',
-  ":'<,'>copy '><cr>",
+  'v', '<c-s-a-j>', ":'<,'>copy '><cr>",
   { desc = 'Clone select line(s) down' }
 )
 
 map(
-  'v',
-  '<c-s-a-k>',
-  'ygvO<esc>P',
+  'v', '<c-s-a-k>', 'ygvO<esc>P',
   { desc = 'Clone select line(s) up' }
 )
 
 map(
-  'v',
-  'y',
-  'ygv<esc>',
+  'v', 'y', 'ygv<esc>',
   { desc = 'Keep cursor end select when visual copy' }
 )
 
 -- Substitute
 
 map(
-  'n',
-  '<leader>s',
+  'n', '<leader>s',
   function()
     local cmd = ':%s/<C-r><C-w>//g<Left><Left>'
     local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
@@ -484,166 +365,118 @@ map(
 -- Searching and replace
 
 map(
-  {'n', 'i'},
-  '<esc>', '<cmd>noh<cr><esc>',
+  {'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>',
   { desc = 'Remove highlight' }
 )
 
 map(
-  'n',
-  'ç',
-  '<cmd>noh<cr>',
+  'n', 'ç', '<cmd>noh<cr>',
   { desc = 'Remove highlight' }
 )
 
 map(
-  'n',
-  '<leader>R',
-  ':%s/<c-r><c-w>//g<left><left>',
+  'n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>',
   { desc = 'Replace word in cursor' }
 )
 
 map(
-  'v',
-  '<leader>r',
-  '"hy:%s/<c-r>h//g<left><left>',
+  'v', '<leader>r', '"hy:%s/<c-r>h//g<left><left>',
   { desc = 'Replace selected' }
 )
 
 map(
-  'v',
-  '<leader>R',
-  ':s/<c-r><c-w>/<c-r>+/<cr>e',
+  'v', '<leader>R', ':s/<c-r><c-w>/<c-r>+/<cr>e',
   { desc = 'Replace select to clipboard and keep cursor' }
 )
 
 map(
-  'n',
-  'n',
-  'nzzzv',
+  'n', 'n', 'nzzzv',
   { desc = 'Keep next result centred' }
 )
 
 map(
-  'n',
-  'N',
-  'Nzzzv',
+  'n', 'N', 'Nzzzv',
   { desc = 'Keep prev result centred' }
 )
 
 map(
-  'v',
-  'y',
-  'ygv<esc>',
+  'v', 'y', 'ygv<esc>',
   { desc = 'Stop copy in last char' }
 )
 
 -- Indent
 
 map(
-  'n',
-  '>',
-  '>>',
+  'n', '>', '>>',
   { desc = 'Add indent' }
 )
 
 map(
-  'n',
-  '<',
-  '<<',
+  'n', '<', '<<',
   { desc = 'Remove indent' }
 )
 
 map(
-  'v',
-  '>',
-  '>gv',
+  'v', '>', '>gv',
   { desc = 'Add indent' }
 )
 
 map(
-  'v',
-  '<',
-  '<gv',
+  'v', '<', '<gv',
   { desc = 'Remove indent' }
 )
 
 -- Buffer
 
 map(
-  'n',
-  '<leader>n',
-  '<cmd>ene<cr>',
+  'n', '<leader>n', '<cmd>ene<cr>',
   { desc = 'Buffer new' }
-)
-
--- map(
---   'n',
---   '<leader>bn',
---   '<cmd>ene<cr>',
---   { desc = 'Buffer new' }
--- )
-
-map(
-  'n',
-  '<leader>w',
-  '<cmd>bd<cr>',
-  { desc = 'Buffer delete' }
-)
-
-map(
-  'n',
-  '<leader>bd',
-  '<cmd>bd<cr>',
-  { desc = 'Buffer delete' }
-)
-
-map(
-  'n',
-  '<leader>bc',
-  '<cmd>bd<cr>',
-  { desc = 'Belete close' }
 )
 
 map(
   'n',
   '<leader>bn',
-  '<cmd>bn<cr>',
+  '<cmd>ene<cr>',
+  { desc = 'Buffer new' }
+)
+
+map(
+  'n', '<leader>bd', '<cmd>bd<cr>',
+  { desc = 'Buffer delete' }
+)
+
+map(
+  'n', '<leader>bc', '<cmd>bd<cr>',
+  { desc = 'Belete close' }
+)
+
+map(
+  'n', '<leader>bn', '<cmd>bn<cr>',
   { desc = 'Buffer next' }
 )
 
 map(
-  'n',
-  '<leader>bp',
-  '<cmd>bp<cr>',
+  'n', '<leader>bp', '<cmd>bp<cr>',
   { desc = 'Buffer prev' }
 )
 
 map(
-  'n',
-  '<leader>bl',
-  '<cmd>bn<cr>',
+  'n', '<leader>bl', '<cmd>bn<cr>',
   { desc = 'Buffer next' }
 )
 
 map(
-  'n',
-  '<leader>bh',
-  '<cmd>bp<cr>',
+  'n', '<leader>bh', '<cmd>bp<cr>',
   { desc = 'Buffer prev' }
 )
 
 map(
-  'n',
-  '<tab>',
-  '<cmd>bn<cr>',
+  'n', '<tab>', '<cmd>bn<cr>',
   { desc = 'Buffer next' }
 )
 
 map(
-  'n',
-  '<s-tab>',
-  '<cmd>bp<cr>',
+  'n', '<s-tab>', '<cmd>bp<cr>',
   { desc = 'Buffer prev' }
 )
 
@@ -655,238 +488,174 @@ map(
 )
 
 map(
-  'n',
-  '<leader>by',
-  '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  'n', '<leader>by', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
   { desc = 'Buffer yank' }
 )
 
 map(
-  'n',
-  '<leader>bu',
-  function() vim.cmd('update') end,
+  'n', '<leader>bu', function() vim.cmd('update') end,
   { desc = 'Buffer :update' }
 )
 
 -- Split window
 
 map(
-  'n',
-  'ss',
-  '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
+  'n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
   { desc = 'Split' }
 )
 
 map(
-  'n',
-  'vv',
-  '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
+  'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
   { desc = 'Split vertical' }
 )
 
 -- Resize Window
 
 map(
-  'n',
-  '<up>',
-  '<cmd>resize +2<cr>',
+  'n', '<up>', '<cmd>resize +2<cr>',
   { desc = 'Resize height taller' }
 )
 
 map(
-  'n',
-  '<down>',
-  '<cmd>resize -2<cr>',
+  'n', '<down>', '<cmd>resize -2<cr>',
   { desc = 'Resize height shorter' }
 )
 
 map(
-  'n',
-  '<left>',
-  '<cmd>vertical resize +2<cr>',
+  'n', '<left>', '<cmd>vertical resize +2<cr>',
   { desc = 'Resize height left' }
 )
 
 map(
-  'n',
-  '<right>',
-  '<cmd>vertical resize -2<cr>',
+  'n', '<right>', '<cmd>vertical resize -2<cr>',
   { desc = 'Resize height right' }
 )
 
 -- Auto-complete
 
 map(
-  'n',
-  '<c-k>',
-  '<cmd>cnext<cr>zz',
+  'n', '<c-k>', '<cmd>cnext<cr>zz',
   { desc = 'Next item' }
 )
 
 map(
-  'n',
-  '<c-j>',
-  '<cmd>cprev<cr>zz',
+  'n', '<c-j>', '<cmd>cprev<cr>zz',
   { desc = 'Prev item' }
 )
 
 -- Menu
 
 map(
-  'i',
-  '<c-space>',
-  '<c-n>',
+  'i', '<c-space>', '<c-n>',
   { desc = 'Show menu' }
 )
 
 map(
-  {'i', 'c'},
-  '<c-j>',
-  'pumvisible() ? "\\<c-n>" : "\\<c-j>"',
+  {'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"',
   { desc = 'Next item', expr = true }
 )
 
 map(
-  {'i', 'c'},
-  'pumvisible<c-k>',
-  'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
+  {'i', 'c'}, 'pumvisible<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
   { desc = 'Prev item', expr = true }
 )
 
 map(
-  {'i', 'c'},
-  '<c-c>',
-  'pumvisible() ? "\\<c-e>" : "\\<c-c>"',
+  {'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"',
   { desc= "Close menu", expr = true }
 )
 
 -- In command mode (not working)
 
 map(
-  'c',
-  '<c-a>',
-  '<home>',
+  'c', '<c-a>', '<home>',
   { desc = 'Beginner of line' }
 )
 
 map(
-  'c',
-  '<c-e>',
-  '<end>',
+  'c', '<c-e>', '<end>',
   { desc = 'End of line' }
 )
 
 map(
-  {'n', 'i', 'v'},
-  '<c-s>',
-  '<cmd>up!<cr><esc>',
+  {'n', 'i', 'v'}, '<c-s>', '<cmd>up!<cr><esc>',
   { desc = 'Save file if file is change', silent = false }
 )
 
 map(
-  'n',
-  '<leader>q',
-  '<cmd>q<cr>',
+  'n', '<leader>q', '<cmd>q<cr>',
   { desc = 'Quit' }
 )
 
 map(
-  'n',
-  '<leader>Q',
-  '<cmd>qa!<cr>',
+  'n', '<leader>Q', '<cmd>qa!<cr>',
   { desc = 'Quit all' }
 )
 
 -- Executable
 
 map(
-  'n',
-  '<leader>!x',
-  '<cmd>!chmod +x %<cr>',
+  'n', '<leader>!x', '<cmd>!chmod +x %<cr>',
   { desc = 'Make file executable' }
 )
 
 map(
-  'n',
-  '<leader>x',
-  '<cmd>!bash %<cr>',
+  'n', '<leader>x', '<cmd>!bash %<cr>',
   { desc = 'Execute file' }
 )
 
 map(
-  'n',
-  '<leader>X',
-  '<cmd>w !bash<cr>',
+  'n', '<leader>X', '<cmd>w !bash<cr>',
   { desc = 'Execute current line' }
 )
 
 map(
-  'v',
-  '<leader>x',
-  "<cmd>w !bash<cr>",
+  'v', '<leader>x', "<cmd>w !bash<cr>",
   { desc = 'Execute select line(s)' }
 )
 
 map(
-  {'n', 'i'},
-  '<c-;>',
-  function() utils.toggle_comment_line() end,
+  {'n', 'i'}, '<c-;>', function() utils.toggle_comment_line() end,
   { desc = 'Comment line' }
 )
 
 map(
-  'n',
-  '<leader>uc',
-  function() utils.toggle_cmdheight() end,
+  'n', '<leader>uc', function() utils.toggle_cmdheight() end,
   { desc = 'Toggle cmd height' }
 )
 
 map(
-  'n',
-  '<leader>ui',
-  function() utils.toggle_ia() end,
+  'n', '<leader>ui', function() utils.toggle_ia() end,
   { desc = 'Toggle IA' }
 )
 
 map(
-  'n',
-  '<leader>uk',
-  '<cmd>WhichKey<cr>',
+  'n', '<leader>uk', '<cmd>WhichKey<cr>',
   { desc = 'Active WhichKey' }
 )
 
 map(
-  'n',
-  '<leader>un',
-  function() utils.toggle_number() end,
+  'n', '<leader>un', function() utils.toggle_number() end,
   { desc = 'Toggle line number', }
 )
 
 map(
-  'n',
-  '<leader>ur',
-  function() utils.toggle_relativenumber() end,
+  'n', '<leader>ur', function() utils.toggle_relativenumber() end,
   { desc = 'Toggle relative number', }
 )
 
 map(
-  'n',
-  '<leader>us',
-  function() utils.toggle_spell() end,
+  'n', '<leader>us', function() utils.toggle_spell() end,
   { desc = 'Toggle spell' }
 )
 
 map(
-  'n',
-  '<leader>uw',
-  function() utils.toggle_wrap() end,
+  'n', '<leader>uw', function() utils.toggle_wrap() end,
   { desc = 'Toggle wrap' }
 )
 
 map(
-  'n',
-  '<leader>uz',
-  '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
+  'n', '<leader>uz', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
   { desc = 'Toggle ZenMode' }
 )
 
@@ -895,51 +664,37 @@ map(
 ------------------------------------------------------------
 
 map(
-  'n',
-  '<leader>fm',
-  function() vim.lsp.buf.format { async = true } end,
+  'n', '<leader>fm', function() vim.lsp.buf.format { async = true } end,
   { desc = 'LSP formatting' }
 )
 
 map(
-  'n',
-  'gd',
-  function() vim.lsp.buf.declaration() end,
+  'n', 'gd', function() vim.lsp.buf.declaration() end,
   { desc = 'Go definition' }
 )
 
 map(
-  'n',
-  'gD',
-  function() vim.lsp.buf.definition() end,
+  'n', 'gD', function() vim.lsp.buf.definition() end,
   { desc = 'Go declaration' }
 )
 
 map(
-  'n',
-  'gi',
-  function() vim.lsp.buf.implementation() end,
+  'n', 'gi', function() vim.lsp.buf.implementation() end,
   { desc = 'Go declaration' }
 )
 
 map(
-  'n',
-  'gK',
-  function() vim.lsp.buf.hover() end,
+  'n', 'gK', function() vim.lsp.buf.hover() end,
   { desc = 'Hover definition' }
 )
 
 map(
-  'n',
-  ']d',
-  function() vim.diagnostic.goto_next() end,
+  'n', ']d', function() vim.diagnostic.goto_next() end,
   { desc = 'Next diagnostic' }
 )
 
 map(
-  'n',
-  '[d',
-  function() vim.diagnostic.goto_prev() end,
+  'n', '[d', function() vim.diagnostic.goto_prev() end,
   { desc = 'Prev diagnostic' }
 )
 
@@ -949,17 +704,13 @@ map(
 
 -- lazy
 map(
-  'n',
-  '<leader><leader>p',
-  '<cmd>Lazy<cr>',
+  'n', '<leader><leader>p', '<cmd>Lazy<cr>',
   { desc = 'Lazy' }
 )
 
 -- nvim-tree
 map(
-  'n',
-  '<leader>e',
-  '<cmd>NvimTreeToggle<cr>',
+  'n', '<leader>e', '<cmd>NvimTreeToggle<cr>',
   { desc = 'NvimTree' }
 )
 
@@ -972,167 +723,133 @@ map(
 
 -- oil
 map(
-  'n',
-  '<leader>E',
-  '<cmd>lua require("oil").toggle_float()<cr>',
+  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
   { desc = 'Oil' }
 )
 
 -- telescope
 map(
-  'n',
-  '<c-p>',
-  '<cmd>Telescope git_files<cr>',
+  'n', '<c-p>', '<cmd>Telescope git_files<cr>',
   { desc = 'Files' }
 )
 
 map(
-  'n',
-  '<leader>fa',
-  '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>',
+  'n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>',
   { desc = 'Files with hidden' }
 )
 
 map(
-  'n',
-  's',
-  '<cmd>HopChar1<cr>',
+  'n', 's', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
 )
 
 map(
-  'n',
-  '<leader>fc',
-  '<cmd>HopChar1<cr>',
+  'n', '<leader>fc', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
 )
 
 map(
-  'n',
-  '<leader>fb',
-  '<cmd>Telescope buffers<cr>',
+  'n', '<leader>fb', '<cmd>Telescope buffers<cr>',
   { desc = 'Buffers' }
 )
 
 map(
-  'n',
-  '<leader>fC',
-  '<cmd>Telescope commands<cr>',
+  'n', '<leader>fC', '<cmd>Telescope commands<cr>',
   { desc = 'Commands' }
 )
 
 map(
-  'n',
-  '<leader>ff',
-  '<cmd>Telescope file_browser<cr>',
+  'n', '<leader>ff', '<cmd>Telescope file_browser<cr>',
   { desc = 'Files browser' }
 )
 
 map(
-  'n',
-  '<leader>fF',
-  '<cmd>Telescope find_files<cr>',
+  'n', '<leader>fF', '<cmd>Telescope find_files<cr>',
   { desc = 'Files' }
 )
 
-map(
-  'n',
-  '<leader>fg',
-  '<cmd>Telescope git_files<cr>',
-  { desc = 'Git files' }
-)
+-- map(
+--   'n', '<leader>fg', '<cmd>Telescope git_files<cr>',
+--   { desc = 'Git files' }
+-- )
+--
+-- map(
+--   'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
+--   { desc = '' }
+-- )
+--
+-- map(
+--   'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
+--   { desc = '' }
+-- )
+--
+-- map(
+--   'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
+--   { desc = '' }
+-- )
 
--- map(
---   'n',
---   '<leader>fgb',
---   '<cmd>Telescope git_branches<cr>',
---   { desc = '' }
--- )
---
--- map(
---   'n',
---   '<leader>fgc',
---   '<cmd>Telescope git_commits<cr>',
---   { desc = '' }
--- )
---
--- map(
---   'n',
---   '<leader>fgs',
---   '<cmd>Telescope git_status<cr>',
---   { desc = '' }
--- )
---
 map(
-  'n',
-  '<leader>fh',
-  '<cmd>Telescope highlights<cr>',
+  'n', '<leader>fh', '<cmd>Telescope highlights<cr>',
   { desc = 'Highlights' }
 )
 
 map(
-  'n',
-  '<leader>fH',
-  '<cmd>Telescope help_tags<cr>',
+  'n', '<leader>fH', '<cmd>Telescope help_tags<cr>',
   { desc = 'Help' }
 )
 
 map(
-  'n',
-  '<leader>fk',
-  '<cmd>Telescope keymaps<cr>',
+  'n', '<leader>fk', '<cmd>Telescope keymaps<cr>',
   { desc = 'Keymaps' }
 )
 
 map(
-  'n',
-  '<leader>fl',
-  '<cmd>Telescope live_grep<cr>',
+  'n', '<leader>fl', '<cmd>Telescope live_grep<cr>',
   { desc = 'Live grep' }
 )
 
 map(
-  'n',
-  '<leader>fm',
-  '<cmd>Telescope marks<cr>',
+  'n', '<leader>fm', '<cmd>Telescope marks<cr>',
   { desc = 'Marks' }
 )
 
 map(
-  'n',
-  '<leader>ft',
-  '<cmd>Telescope filetypes<cr>',
+  'n', '<leader>ft', '<cmd>Telescope filetypes<cr>',
   { desc = 'File types' }
 )
 
 map(
-  'n',
-  '<leader>fo',
-  '<cmd>Telescope oldfiles<cr>',
+  'n', '<leader>fo', '<cmd>Telescope oldfiles<cr>',
   { desc = 'Old files' }
 )
 
 map(
-  'n',
-  '<leader>fO',
-  '<cmd>Telescope vim_options<cr>',
+  'n', '<leader>fO', '<cmd>Telescope vim_options<cr>',
   { desc = 'Options' }
 )
 
 map(
-  'n',
-  '<leader>fz',
-  '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  'n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
   { desc = 'Fuzzy' }
 )
 
 -- zen mode
 map(
-  'n',
-  '<leader>z',
-  '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
+  'n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
 )
+
+-- Future
+-- local mappings = {
+--   {
+--     'i', 'kj', '<esc>',
+--     { desc = 'Return to normal mode' }
+--   }
+-- }
+--
+-- for _, val in pairs(mappings) do
+--   vim.keymap.set(unpack(val))
+-- end
 
 -- References
 -- https://github.com/NvChad
