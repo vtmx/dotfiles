@@ -1,13 +1,17 @@
 # Shell options
 shopt -s checkwinsize
+shopt -s histappend
 
 # Environment variables
+export CDPATH=".:..:~"
 export BROWSER="firefox"
 export EDITOR="nvim"
 export HISTCONTROL="ignoredups:ignorespace"
 export HISTTIMEFORMAT="%F %T "
+export HISTSIZE=5000
+export HISTFILESIZE=$HISTSIZE
 export PATH="$PATH:$HOME/.local/bin"
-export CDPATH=".:..:~"
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # Man
 export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
@@ -70,7 +74,7 @@ if type -P zoxide > /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
-# References
+# Links
 # https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
 # https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
 
