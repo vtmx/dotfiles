@@ -6,27 +6,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias .3="cd ../../.."
 alias .4="cd ../../../.."
-alias .5="cd ../../../../.."
-alias cdbig="cd $HOME/Dev/projects/biglinux"
-alias cdbin="cd $HOME/Dev/dotfiles/local/bin"
 alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
-alias cddesi="cd $HOME/Design"
-alias cddesk="cd $HOME/Desktop"
-alias cddev="cd $HOME/Dev"
-alias cddoc="cd $HOME/Documents"
 alias cddow="cd $HOME/Downloads"
-alias cdgame="cd $HOME/Games"
 alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
-alias cdmus="cd $HOME/Music"
 alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
-alias cdpic="cd $HOME/Pictures"
-alias cdpkg="cd $HOME/packages"
-alias cdsc="cd $HOME/Dev/doffiles/sripts"
-alias cdsof="cd $HOME/Softwares"
 alias cdt="cd $HOME/Downloads/temp"
-alias cdvid="cd $HOME/Videos"
 
 # clear
 alias c="clear"
@@ -164,10 +150,6 @@ alias rmy="rm -f"
 alias rmdy="rm -rf"
 
 # live-server
-# https://www.npmjs.com/package/live-server
-# https://github.com/Browsersync/browser-sync
-# alias live="live-server"
-# alias live=" python -m http.server -b 127.0.0.1 8000 
 alias live="browser-sync start --server "." --files *"
 
 # source
@@ -222,7 +204,6 @@ alias ba="$EDITOR $HOME/.bash_aliases"
 alias br="$EDITOR $HOME/.bashrc"
 alias brc="$EDITOR $HOME/.bashrc"
 alias brl="source $HOME/.bashrc; echo Reload bashrc"
-# alias brl="exec bash; echo Reload bashrc"
 alias bf="$EDITOR $HOME/.bash_functions"
 alias bsc="$EDITOR $HOME/.config/bspwm/bspwmrc"
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
@@ -240,3 +221,8 @@ alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
 # $HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css && \
 # xfconf-query -c xsettings -p /Net/ThemeName -r && \
 # xfconf-query -c xsettings -p /Net/ThemeName -s Lightly"
+# alias live="live-server"
+# alias live=" python -m http.server -b 127.0.0.1 8000 
+# Links
+# https://www.npmjs.com/package/live-server
+# https://github.com/Browsersync/browser-sync

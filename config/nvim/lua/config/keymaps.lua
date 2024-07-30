@@ -9,10 +9,7 @@ map(
 )
 
 map(
-  'n', '<f1>', function()
-    local word = vim.fn.expand('<cword>')
-    vim.cmd('help ' .. word)
-  end,
+  'n', '<f1>', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
   { desc = 'Help for current word' }
 )
 
@@ -23,11 +20,6 @@ map(
 
 map(
   'v', 'ç', '<esc>',
-  { desc = 'Return to normal mode' }
-)
-
-map(
-  'v', '<leader>kj', '<esc>',
   { desc = 'Return to normal mode' }
 )
 
@@ -181,25 +173,8 @@ map(
 -- Register
 
 map(
-  'n', "'", '"',
-  { desc = 'Create register' }
-)
-
-map(
   'v', "'", '"',
   { desc = 'Create register' }
-)
-
--- Surround add
-
-map(
-   'n', '<leader>"', function() vim.cmd.normal('saiw"') end,
-   { desc = 'Add double quote' }
-)
-
-map(
-   'n', "<leader>'", function() vim.cmd.normal("saiw'") end,
-   { desc = 'Add single quote' }
 )
 
 -- Clipboard

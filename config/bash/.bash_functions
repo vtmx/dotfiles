@@ -20,7 +20,7 @@ cheat() {
   fi
 }
 
-# Extract
+# Extract files
 ex() {
   if [[ -f "$1" ]]; then
     case $1 in
@@ -38,7 +38,7 @@ ex() {
       *.deb)     ar x $1      ;;
       *.tar.xz)  tar xf $1    ;;
       *.tar.zst) unzstd $1    ;;
-      *)         echo "'$1' cannot be extracted.";;
+      *) echo "'$1' cannot be extracted.";;
     esac
   else
     echo "error: $1 is not a valid file"
@@ -65,8 +65,6 @@ gpa() {
 
 # Update doftiles
 gpdf() {
-  echo
-
   local message="$*"
   local dotfiles_dir="$HOME/Dev/dotfiles"
 
@@ -184,7 +182,6 @@ play() {
   if type mpv >& /dev/null; then
     local music="$HOME/Music"
     local args="--no-video --display-tags=Title,Artist"
-    # local args="--no-video --display-tags=Title,Artist --quiet=yes"
 
     # If subdir play like playlist
     to_play() {
@@ -279,14 +276,14 @@ xf() {
 }
 
 wkde() {
-  local colorfile; read -p "Enter a filename of color: " colorfile
-  colorfile="${HOME}/.local/share/color-schemes/${colorfile}.colors"
+  local file; read -p "Enter a filename of color: " file
+  file="$HOME/.local/share/color-schemes/$file.colors"
 
-  [[ -f "$colorfile" ]] || echo "file not exist"; return
+  [[ -f "$file" ]] || echo "file not exist"; return
 
   while true; do
     plasma-apply-colorscheme BreezeDark > /dev/null
-    inotifywait -m $colorfile | \
+    inotifywait -m $file | \
     plasma-apply-colorscheme AOneDark > /dev/null
   done
 }
