@@ -145,7 +145,7 @@ mvext() {
 }
 
 # Rename files to lower case and replace spaces to - 
-mvlower() {
+mvlo() {
   for file in *; do
     newname="${file,,}"
     newname="${newname//[áãâ]/a}"
@@ -157,12 +157,14 @@ mvlower() {
     newname="${newname//\(/}"
     newname="${newname//\)/}"
     newname="${newname// /-}"
-    mv "$file" "$newname" >/dev/null
+    if mv "$file" "$newname" 2>/dev/null; then
+      echo 'renamed to lower-case'
+    fi
   done
 }
 
 # Rename files to upper case and replace spaces to - 
-mvupper() {
+mvup() {
   for file in *; do
     newname="${file^^}"
     newname="${file//[ÁÃÂ]/A}"
@@ -172,7 +174,9 @@ mvupper() {
     newname="${file//[Ú]/U}"
     newname="${file//[Ç]/C}"
     newname="${newname// /-}"
-    mv "$file" "$newname" >/dev/null
+    if mv "$file" "$newname" 2>/dev/null; then
+      echo 'renamed to upper-case'
+    fi
   done
 }
 
@@ -288,4 +292,4 @@ wkde() {
   done
 }
 
-# vim:ft=sh
+# vim:ft=bash
