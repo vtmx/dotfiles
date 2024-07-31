@@ -1,4 +1,5 @@
 # Shell options
+shopt -s cmdhist
 shopt -s checkwinsize
 shopt -s histappend
 
@@ -6,12 +7,13 @@ shopt -s histappend
 export CDPATH=".:..:~"
 export BROWSER="firefox"
 export EDITOR="nvim"
-export HISTCONTROL="ignoredups:ignorespace"
+export HISTCONTROL="ignoreboth:ignorespace"
+export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'
 export HISTTIMEFORMAT="%F %T "
 export HISTSIZE=5000
 export HISTFILESIZE=$HISTSIZE
 export PATH="$PATH:$HOME/.local/bin"
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+export PROMPT_COMMAND=('history -a' 'history -r')
 
 # Man
 export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
@@ -77,4 +79,5 @@ fi
 # Links
 # https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
 # https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
+# https://github.com/meleu/.dotfiles/blob/master/.bashrc
 
