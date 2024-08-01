@@ -1,7 +1,3 @@
--- Vars
-local g = vim.g
-local opt = vim.opt
-
 local opts = {
   termguicolors = true,
   title = true,
@@ -54,16 +50,16 @@ local plugins = {
 
 -- Set options
 for key, value in pairs(opts) do
-  opt[key] = value
+  vim.opt[key] = value
 end
 
--- Disable plugins
+-- Set native plugins
 for key, value in pairs(plugins) do
-  g[key] = value
+  vim.g[key] = value
 end
 
 -- Ignore node_modules
-opt.wildignore:append { '*/node_modules/*' }
+vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- Search current directory recursively
 vim.cmd('set path+=**')
