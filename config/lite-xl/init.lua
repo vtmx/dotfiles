@@ -1,6 +1,7 @@
 require('config')
+require('keymap')
 require('style')
-require('keymaps')
+require('colors')
 
 local keymap = require 'core.keymap'
 
@@ -24,7 +25,7 @@ local keymaps = {
   ['alt+shift+k'] = 'root:split-up',
   ['alt+shift+l'] = 'root:split-right',
 
-  -- Find Replace
+  -- Find replace
   ['ctrl+h'] = 'find-replace:replace',
 
   -- Line
@@ -33,6 +34,12 @@ local keymaps = {
   
   -- Comment
   ['ctrl+;'] = 'doc:toggle-line-comments',
+
+  -- Comment
+  ['ctrl+;'] = 'doc:toggle-line-comments',
+
+  -- Toggle whitespace
+  ['f8'] = 'draw-whitespace:toggle',
 }
 
 keymap.add(keymaps, true)

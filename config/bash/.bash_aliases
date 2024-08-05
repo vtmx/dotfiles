@@ -1,6 +1,3 @@
-# Environment variables
-export EDITOR="nvim"
-
 # Change directories
 alias ..="cd .."
 alias ...="cd ../.."
@@ -13,9 +10,6 @@ alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
 alias cdt="cd $HOME/Downloads/temp"
-
-# clear
-alias c="clear"
 
 # canvas-sketch-cli
 alias canva="canvas-sketch-cli"
@@ -46,9 +40,6 @@ alias dnfrepo="sudo dnf repoquery"
 alias dnfs="sudo dnf search"
 alias dnfu="sudo dnf upgrade --refresh"
 
-# editor
-alias e="$EDITOR"
-
 # exa
 alias ezaa="eza -a | grep '^\.'"
 alias ezal="eza -l --color=auto --group-directories-first"
@@ -61,7 +52,6 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"
 alias gbd="git branch -d"
-# alias gc="git commit -m"
 alias gcb="git checkout -b"
 alias gcl="git clone"
 alias gcld="git clone --depth 1"
@@ -91,9 +81,6 @@ alias grep="grep --color=auto"
 alias hi="history | sort -rn"
 alias hf="history | fzf --tac"
 
-# helix
-alias hx="helix"
-
 # ip
 alias ip="ip -color=auto"
 
@@ -109,6 +96,9 @@ alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 alias lls="ls -ltra | grep --color=never '\->'"
+
+# lite-xl
+alias lt="lite-xl"
 
 # man
 alias m="man -L pt_BR.UTF-8"
@@ -201,14 +191,10 @@ alias wt="curl wttr.in/?format=3"
 
 # config
 alias ba="$EDITOR $HOME/.bash_aliases"
-alias br="$EDITOR $HOME/.bashrc"
+alias bf="$EDITOR $HOME/.bash_functions"
 alias brc="$EDITOR $HOME/.bashrc"
 alias brl="source $HOME/.bashrc; echo Reload bashrc"
-alias bf="$EDITOR $HOME/.bash_functions"
-alias bsc="$EDITOR $HOME/.config/bspwm/bspwmrc"
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
-alias ob="$EDITOR $HOME/.config/openbox/rc.xml"
-alias sxc="$EDITOR $HOME/.config/sxhkd/sxhkdrc"
 alias tc="$EDITOR $HOME/.config/tmux/tmux.conf"
 alias vc="$EDITOR $HOME/.config/nvim/init.lua"
 alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
@@ -216,13 +202,15 @@ alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
 
-# xfce reload theme
-# alias xf="sassc -M -t expanded $HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss \
-# $HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css && \
-# xfconf-query -c xsettings -p /Net/ThemeName -r && \
-# xfconf-query -c xsettings -p /Net/ThemeName -s Lightly"
+# Alias
 # alias live="live-server"
 # alias live=" python -m http.server -b 127.0.0.1 8000 
+# alias xf="sassc -M -t expanded $HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss \
+# Config
+# $HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css && \
+# xfce reload theme
+# xfconf-query -c xsettings -p /Net/ThemeName -r && \
+# xfconf-query -c xsettings -p /Net/ThemeName -s Lightly"
 # Links
 # https://www.npmjs.com/package/live-server
 # https://github.com/Browsersync/browser-sync
