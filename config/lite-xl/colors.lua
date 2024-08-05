@@ -1,7 +1,5 @@
-local core = require 'core'
 local style = require 'core.style'
 local common = require 'core.common'
-core.reload_module('colors')
 
 style.background = { common.color '#23272e' }
 style.background2 = { common.color '#1e2227' }

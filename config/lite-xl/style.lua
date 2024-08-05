@@ -1,7 +1,7 @@
 local style = require 'core.style'
 local HOMEDIR = os.getenv('HOME')
--- DATADIR is the location of the installed Lite XL Lua code, default color schemes and fonts.
--- USERDIR is the location of the Lite XL configuration directory.
+-- DATADIR is the location of the installed Lite XL Lua code, default color schemes and fonts
+-- USERDIR is the location of the Lite XL configuration directory
 
 -- Fonts
 -- style.font          : user interface
