@@ -58,23 +58,28 @@ gc() {
 
 # Git add, commit and push
 gpa() {
+  local msg="$*"
+  if [[ -z "$msg" ]]; then
+    echo "error: no commit message provided"
+    return 1
+  fi
   git add -A
-  git commit -m "${*^}"
+  git commit -m "${msg^}"
   git push
 }
 
 # Update doftiles
 gpdf() {
-  local message="$*"
-  local dotfiles_dir="$HOME/Dev/dotfiles"
+  local msg="$*"
+  local dotdir="$HOME/Dev/dotfiles"
 
   # If empty string
-  [[ -z "$message" ]] && message="update dotfiles"
+  [[ -z "$msg" ]] && msg="update dotfiles"
 
   # Git commands
-  cd "$dotfiles_dir"
+  cd "$dotdir"
   git add -A
-  git commit -m "$message"
+  git commit -m "$msg"
   git push
   cd -
 }
