@@ -170,6 +170,13 @@ map(
   { desc = 'Create mark' }
 )
 
+-- Macro
+
+map(
+  'n', 'Q', 'Qzz',
+  { desc = 'Play macro' }
+)
+
 -- Register
 
 map(
