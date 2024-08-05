@@ -72,14 +72,12 @@ gpa() {
 gpdf() {
   local msg="$*"
   local dotdir="$HOME/Dev/dotfiles"
-
-  # If empty string
-  [[ -z "$msg" ]] && msg="update dotfiles"
+  [[ -z "$msg" ]] && msg="Update dotfiles"
 
   # Git commands
   cd "$dotdir"
   git add -A
-  git commit -m "$msg"
+  git commit -m "${msg^}"
   git push
   cd -
 }
