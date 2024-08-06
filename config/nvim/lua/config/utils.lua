@@ -1,16 +1,5 @@
 local M = {}
 
--- Function for mapping
-function M.map(mode, lhs, rhs, opts)
-  local opts = opts or { silent = true }
-  vim.keymap.set(mode, lhs, rhs, opts)
-end
-
--- Toggle comment line
-function M.toggle_comment_line()
-  require('mini.comment').toggle_lines(vim.fn.line('.'), vim.fn.line('.'))
-end
-
 -- Toggle line command
 function M.toggle_cmdheight()
   if vim.o.cmdheight == 1 then

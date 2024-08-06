@@ -3,7 +3,7 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     event = 'VeryLazy',
-    config = true
+    opts = { scope = { enabled = false } }
   },
   {
     'phaazon/hop.nvim',
@@ -30,10 +30,6 @@ return {
   },
   {
     'junegunn/vim-slash',
-    event = 'BufEnter'
-  },
-  {
-    'christoomey/vim-tmux-navigator',
-    event = 'VeryLazy'
+    event = 'InsertEnter'
   }
 }

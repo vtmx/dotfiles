@@ -1,6 +1,10 @@
-local map = require('config.utils').map
-local utils = require('config.utils')
+-- Function for mapping
+-- local function map(mode, lhs, rhs, opts)
+--   local opts = opts or { silent = true }
+--   vim.keymap.set(mode, lhs, rhs, opts)
+-- end
 
+local map = vim.keymap.set
 vim.g.mapleader = ' '
 
 map(
@@ -186,14 +190,14 @@ map(
 
 -- Clipboard
 
-map(
-  'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
-  { desc = 'Yanki selectted line to clipboard' }
-)
+-- map(
+--   'v', 'y', 'ygv<esc>',
+--   { desc = 'Keep cursor end select when visual copy' }
+-- )
 
 map(
-  'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
-  { desc = 'Yank current line to clipboard' }
+  'n', 'ya', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  { desc = 'Copy all content to clipboard' }
 )
 
 map(
@@ -202,8 +206,13 @@ map(
 )
 
 map(
-  'n', 'ya', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
-  { desc = 'Copy all content to clipboard' }
+  'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  { desc = 'Yank current line to clipboard' }
+)
+
+map(
+  'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
+  { desc = 'Yanki selectted line to clipboard' }
 )
 
 map(
@@ -222,13 +231,13 @@ map(
 )
 
 map(
-  'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
-  { desc = 'Paste from clipboard in new line' }
+  'v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
 )
 
 map(
-  'v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
+  'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  { desc = 'Paste from clipboard in new line' }
 )
 
 map(
@@ -313,11 +322,6 @@ map(
   { desc = 'Clone select line(s) up' }
 )
 
-map(
-  'v', 'y', 'ygv<esc>',
-  { desc = 'Keep cursor end select when visual copy' }
-)
-
 -- Substitute
 
 map(
@@ -365,11 +369,6 @@ map(
 map(
   'n', 'N', 'Nzzzv',
   { desc = 'Keep prev result centred' }
-)
-
-map(
-  'v', 'y', 'ygv<esc>',
-  { desc = 'Stop copy in last char' }
 )
 
 -- Indent
@@ -449,11 +448,6 @@ map(
 map(
   'n', '<leader>bo', '<cmd>BufOnly<cr>',
   { desc = 'Keep just current buffer' }
-)
-
-map(
-  'n', '<leader>by', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
-  { desc = 'Buffer yank' }
 )
 
 map(
@@ -579,7 +573,7 @@ map(
 )
 
 map(
-  {'n', 'i'}, '<c-;>', function() utils.toggle_comment_line() end,
+  'i', '<c-;>', '<esc>:normal gcc<cr>i',
   { desc = 'Comment line' }
 )
 
@@ -666,6 +660,12 @@ map(
 -- Plugins
 ------------------------------------------------------------
 
+-- hop
+map(
+  'n', 's', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
+)
+
 -- lazy
 map(
   'n', '<leader><leader>p', '<cmd>Lazy<cr>',
@@ -703,18 +703,13 @@ map(
 )
 
 map(
-  'n', 's', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
+  'n', '<leader>fb', '<cmd>Telescope buffers<cr>',
+  { desc = 'Buffers' }
 )
 
 map(
   'n', '<leader>fc', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
-)
-
-map(
-  'n', '<leader>fb', '<cmd>Telescope buffers<cr>',
-  { desc = 'Buffers' }
 )
 
 map(
@@ -760,6 +755,11 @@ map(
 map(
   'n', '<leader>fH', '<cmd>Telescope help_tags<cr>',
   { desc = 'Help' }
+)
+
+map(
+  'n', '<leader>fj', '<cmd>Telescope jumplist<cr>',
+  { desc = 'Jump list' }
 )
 
 map(
