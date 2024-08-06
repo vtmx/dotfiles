@@ -11,6 +11,7 @@ local opts = {
   mouse = 'a',
   backup = false,
   swapfile = false,
+  scrolloff = 10,
   number = true,
   relativenumber = true,
   wrap = false,
@@ -41,7 +42,7 @@ local plugins = {
   loaded_zip = 1,
   netrw_altv = 1,
   netrw_banner = 0,
-  netrw_browse_split=4,
+  netrw_browse_split = 4,
   netrw_hide = 1,
   netrw_keepdir = 0,
   netrw_liststyle = 3,
@@ -57,6 +58,8 @@ end
 for key, value in pairs(plugins) do
   vim.g[key] = value
 end
+
+vim.g.loaded_shada_plugin = 0
 
 -- Ignore node_modules
 vim.opt.wildignore:append { '*/node_modules/*' }
