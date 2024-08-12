@@ -59,7 +59,7 @@ alias gco="git checkout"
 alias gd="git diff --color-words"
 alias gh="git help"
 alias gl="git pull"
-alias glog="git log -5 --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(cyan)%ai%C(reset) - %C(normal)%an%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n %C(normal)%s%C(reset)'"
+alias glg="git log -5 --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(cyan)%ai%C(reset) - %C(normal)%an%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n %C(normal)%s%C(reset)'"
 alias gm="git merge"
 alias gmv="git mv"
 alias gp="git push"
@@ -96,9 +96,6 @@ alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 alias lls="ls -ltra | grep --color=never '\->'"
-
-# lite-xl
-alias lt="lite-xl"
 
 # man
 alias m="man -L pt_BR.UTF-8"
@@ -186,6 +183,9 @@ alias vr="$HOME/.v/vl run"
 alias vu="$HOME/.v/vl up"
 alias vw="$HOME/.v/vl watch run"
 
+# lite-xl
+alias xl="lite-xl"
+
 # weather
 alias wt="curl wttr.in/?format=3"
 
@@ -201,16 +201,19 @@ alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/init.lua"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
+alias xc="lite-xl $HOME/.config/lite-xl"
 
 # Alias
 # alias live="live-server"
 # alias live=" python -m http.server -b 127.0.0.1 8000 
 # alias xf="sassc -M -t expanded $HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss \
+#
 # Config
 # $HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css && \
 # xfce reload theme
 # xfconf-query -c xsettings -p /Net/ThemeName -r && \
 # xfconf-query -c xsettings -p /Net/ThemeName -s Lightly"
+#
 # Links
 # https://www.npmjs.com/package/live-server
 # https://github.com/Browsersync/browser-sync
