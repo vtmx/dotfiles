@@ -569,7 +569,7 @@ map(
 
 map(
   'v', '<leader>x', "<cmd>w !bash<cr>",
-  { desc = 'Execute select line(s)' }
+  { desc = 'Execute selected line' }
 )
 
 map(

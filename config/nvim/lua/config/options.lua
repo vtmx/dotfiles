@@ -14,10 +14,13 @@ local opts = {
   scrolloff = 10,
   number = true,
   relativenumber = true,
-  wrap = false,
+  autoindent = true,
+  expandtab = true,
+  wrap = true,
+  breakindent = true,
+  linebreak = true,
   textwidth = 0,
   wrapmargin = 0,
-  expandtab = true,
   smartindent = true,
   shiftwidth = 2,
   tabstop = 2,
@@ -26,6 +29,7 @@ local opts = {
   splitbelow = true,
   splitright = true,
   listchars = 'tab:›-,space:·,trail:⋯,eol:↲',
+  spelllang = 'pt-BR',
 }
 
 local plugins = {
@@ -71,3 +75,4 @@ vim.cmd('set path+=**')
 -- https://shapeshed.com/vim-netrw
 -- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
 -- https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer
+-- https://github.com/echasnovski/nvim/blob/a3916554cb3cada94b7c4a1f7a1c4d6ab4e8b558/src/settings.lua
