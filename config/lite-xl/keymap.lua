@@ -4,6 +4,9 @@ local keymaps = {
   -- Treeview
   ['ctrl+shift+b'] = 'treeview:toggle',
 
+  -- Doc
+  ['ctrl+shift+z'] = 'doc:redo',
+
   -- Tab
   ['ctrl+pageup'] = 'root:switch-to-next-tab',
   ['ctrl+pagedown'] = 'root:switch-to-previous-tab',
@@ -29,6 +32,10 @@ local keymaps = {
   
   -- Comment
   ['ctrl+;'] = 'doc:toggle-line-comments',
+  
+  -- Centerdoc
+  ['alt+z'] = 'center-doc:toggle',
+  ['ctrl+alt+z'] = 'center-doc:zen-mode-toggle',
 }
 
 keymap.add(keymaps, true)
