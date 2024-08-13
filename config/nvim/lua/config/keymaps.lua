@@ -4,6 +4,7 @@
 --   vim.keymap.set(mode, lhs, rhs, opts)
 -- end
 
+local utils = require('config.utils')
 local map = vim.keymap.set
 vim.g.mapleader = ' '
 

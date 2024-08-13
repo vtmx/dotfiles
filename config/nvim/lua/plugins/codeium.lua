@@ -1,7 +1,7 @@
 return {
   'Exafunction/codeium.vim',
-  cmd = 'Codium',
-  -- event = 'InsertEnter',
+  -- cmd = 'Codeium',
+  event = 'InsertEnter',
 
   config = function ()
     vim.keymap.set('i', '<c-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
