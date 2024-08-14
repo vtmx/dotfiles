@@ -69,10 +69,12 @@ function M.toggle_wrap()
   if vim.wo.wrap then
     vim.wo.wrap = false
     vim.wo.linebreak = false
+    vim.wo.breakindent = false
     print('Disable wrap')
   else
     vim.wo.wrap = true
     vim.wo.linebreak = true
+    vim.wo.breakindent = true
     print('Enable wrap')
   end
 end
