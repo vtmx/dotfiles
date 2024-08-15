@@ -9,6 +9,7 @@ alias cddow="cd $HOME/Downloads"
 alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
+alias cdpkg="cd $HOME/packages"
 alias cdt="cd $HOME/Downloads/temp"
 
 # canvas-sketch-cli
@@ -81,15 +82,9 @@ alias grep="grep --color=auto"
 alias hi="history | sort -rn"
 alias hf="history | fzf --tac"
 
-# ip
-alias ip="ip -color=auto"
-
 # inotify
 alias iwai="inotifywait"
 alias iwat="inotifywatch"
-
-# ln
-alias lnf="ln -f"
 
 # ls
 alias la="ls -A | grep '^\.'"
@@ -138,6 +133,9 @@ alias rmdy="rm -rf"
 
 # live-server
 alias live="browser-sync start --server "." --files *"
+
+# sleep
+alias sl="sleep"
 
 # source
 alias so="source"
