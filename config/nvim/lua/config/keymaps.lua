@@ -191,10 +191,10 @@ map(
 
 -- Clipboard
 
--- map(
---   'v', 'y', 'ygv<esc>',
---   { desc = 'Keep cursor end select when visual copy' }
--- )
+map(
+  'v', 'y', 'ygv<esc>',
+  { desc = 'Keep cursor end select when visual copy' }
+)
 
 map(
   'n', 'ya', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
@@ -675,16 +675,23 @@ map(
 
 -- nvim-tree
 map(
-  'n', '<leader>e', '<cmd>NvimTreeToggle<cr>',
+  'n', '<leader><leader>e', '<cmd>NvimTreeToggle<cr>',
   { desc = 'NvimTree' }
 )
 
--- map(
---   'n',
---   '<leader>e',
---   '<cmd>15Lex<cr>',
---   { desc = 'Lex' }
--- )
+-- treesitter
+map(
+  'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
+  { desc = 'Inspect Tree' }
+)
+
+-- netrw
+map(
+  'n',
+  '<leader>e',
+  '<cmd>15Lex<cr>',
+  { desc = 'Lex' }
+)
 
 -- oil
 map(
