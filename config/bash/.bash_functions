@@ -216,6 +216,12 @@ play() {
   fi
 }
 
+# History find command
+hfc() {
+  local cmd=$(history | fzf --tac | awk '{ print $4 }')
+  $cmd
+}
+
 # Open rc configs
 rc() {
   local rcfiles=(\

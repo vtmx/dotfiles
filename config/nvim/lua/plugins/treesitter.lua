@@ -6,7 +6,6 @@ return {
     autotag = { enable = true },
     highlight = { enable = true },
     indent = { enable = true },
-    playground = { enable = true },
     ensure_installed = { 
       'bash',
       'css',
