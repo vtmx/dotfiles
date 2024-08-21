@@ -542,6 +542,11 @@ map(
 )
 
 map(
+  'n', '<leader>S', '<cmd>w !sudo tee %<cr>',
+  { desc = 'Save file with sudo', silent = false }
+)
+
+map(
   'n', '<leader>q', '<cmd>q<cr>',
   { desc = 'Quit' }
 )

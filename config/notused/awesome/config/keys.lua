@@ -1,12 +1,9 @@
-local M = {}
-
 local awful = require('awful')
 local gears = require('gears')
 local hotkeys_popup = require('awful.hotkeys_popup')
 
 -- Key bindings
-local modkey = 'Mod4'
-local super  = 'Mod4'
+local mod    = 'Mod4'
 local ctrl   = 'Control'
 local shift  = 'Shift'
 local alt    = 'Mod1'
@@ -21,89 +18,106 @@ local down   = 'Down'
 
 globalkeys = gears.table.join(
   -- Tags
+
   awful.key(
-    { super, ctrl }, 'h',
-    awful.tag.viewprev,
-    { description = 'Prev tag', group = 'Tag'}
+    { mod, ctrl }, 'h', awful.tag.viewprev,
+    { description = 'Prev tag', group = 'Tag' }
   ),
 
   awful.key(
-    { super, ctrl }, 'l',
-    awful.tag.viewnext,
-    { description = 'Next tag', group = 'Tag'}
+    { mod, ctrl }, 'l', awful.tag.viewnext,
+    { description = 'Next tag', group = 'Tag' }
   ),
 
   awful.key(
-    { super, ctrl }, left,
-    awful.tag.viewprev,
-    { description = 'Prev tag', group = 'Tag'}
+    { mod, ctrl }, left, awful.tag.viewprev,
+    { description = 'Prev tag', group = 'Tag' }
   ),
 
   awful.key(
-    { super, ctrl }, right,
-    awful.tag.viewnext,
-    { description = 'Next tag', group = 'Tag'}
+    { mod, ctrl }, right, awful.tag.viewnext,
+    { description = 'Next tag', group = 'Tag' }
   ),
+
+  awful.key({ mod, ctrl, shift }, 'l', function()
+    local screen = awful.screen.focused()
+    local current_tag = screen.selected_tag
+    if current_tag then
+      local index = current_tag.index + 1
+      if index > #screen.tags then index = 1 end
+      if client.focus then
+        client.focus:move_to_tag(screen.tags[index])
+        screen.tags[index]:view_only()
+      end
+    end
+  end,
+  { description = 'Move focused client to next tag and view tag', group = 'Tag' }),
+
+  awful.key({ mod, ctrl, shift }, 'h', function()
+    local screen = awful.screen.focused()
+    local current_tag = screen.selected_tag
+    if current_tag then
+      local index = current_tag.index - 1
+      if index == 0 then index = #screen.tags end
+      if client.focus then
+        client.focus:move_to_tag(screen.tags[index])
+        screen.tags[index]:view_only()
+      end
+    end
+  end,
+  { description = 'Move focused client to previous tag and view tag', group = 'Tag' }),
 
   -- Client
+
   awful.key(
-    { super }, 'l',
-    function() awful.client.focus.bydirection('right') end,
+    { mod }, 'l', function() awful.client.focus.bydirection('right') end,
     { description = 'Focus next by index', group = 'Client' }
   ),
 
   awful.key(
-    { super }, 'h',
-    function() awful.client.focus.bydirection('left') end,
+    { mod }, 'h', function() awful.client.focus.bydirection('left') end,
     { description = 'Focus previous by index', group = 'Client' }
   ),
 
   awful.key(
-    { super }, 'j',
-    function() awful.client.focus.bydirection('down') end,
+    { mod }, 'j', function() awful.client.focus.bydirection('down') end,
     { description = 'Focus next by index', group = 'Client' }
   ),
 
   awful.key(
-    { super }, 'k',
-    function() awful.client.focus.bydirection('up') end,
+    { mod }, 'k', function() awful.client.focus.bydirection('up') end,
     { description = 'Focus previous by index', group = 'Client' }
   ),
 
   awful.key(
-    { super, shift }, 'j',
-    function() awful.client.swap.byidx(1) end,
+    { mod, shift }, 'j', function() awful.client.swap.byidx(1) end,
     { description = 'Swap with next client by index', group = 'Client' }
   ),
 
   awful.key(
-    { super, shift }, 'k',
-    function() awful.client.swap.byidx(1) end,
+    { mod, shift }, 'k', function() awful.client.swap.byidx(1) end,
     { description = 'Swap with previous client by index', group = 'Client' }
   ),
 
   -- Resize
+
   awful.key(
-    { super, alt }, 'h',
-    function() awful.tag.incmwfact(-0.02) end,
+    { mod, alt }, 'h', function() awful.tag.incmwfact(-0.02) end,
     { description = 'Decrease master width factor', group = 'Client' }
   ),
 
   awful.key(
-    { super, alt }, 'l',
-    function() awful.tag.incmwfact(0.02) end,
+    { mod, alt }, 'l', function() awful.tag.incmwfact(0.02) end,
     { description = 'Increase master width factor', group = 'Client' }
   ),
 
   awful.key(
-    { super, alt }, left,
-    function() awful.tag.incmwfact(-0.02) end,
+    { mod, alt }, left, function() awful.tag.incmwfact(-0.02) end,
     { description = 'Decrease master width factor', group = 'Client' }
   ),
 
   awful.key(
-    { super, alt }, right,
-    function() awful.tag.incmwfact(0.02) end,
+    { mod, alt }, right, function() awful.tag.incmwfact(0.02) end,
     { description = 'Increase master width factor', group = 'Client' }
   ),
 
@@ -117,74 +131,77 @@ globalkeys = gears.table.join(
   ),
 
   -- Awesome
+
   awful.key(
-    { super }, '.',
-    function() hotkeys_popup.show_help() end,
+    { mod }, '.', function() hotkeys_popup.show_help() end,
     { description='Show hotkeys', group='Awesome' }
   ),
 
   awful.key(
-    { super, shift }, 'r',
-    awesome.restart,
+    { mod, shift }, 'r', awesome.restart,
     { description = 'Reload awesome', group = 'Awesome' }
   ),
 
   awful.key(
-    { super }, 'w',
-    function() mymainmenu:show() end,
+    { mod }, 'w', function() mymainmenu:show() end,
     { description = 'Show menu', group = 'Awesome' }
   ),
 
   awful.key(
-    { super }, 'r',
-    function() awful.screen.focused().mypromptbox:run() end,
+    { mod }, 'r', function() awful.screen.focused().mypromptbox:run() end,
     { description = 'Run prompt', group = 'Awesome' }
   ),
 
   awful.key(
-    { super, shift }, 'q',
-    awesome.quit,
+    { mod, shift }, 'q', awesome.quit,
     { description = 'Quit awesome', group = 'Awesome' }
   ),
 
   -- Layout manipulation
+
   awful.key(
-    { super, control }, 'j',
-    function() awful.screen.focus_relative() end,
-    { description = 'Focus the next screen', group = 'screen' }
+    { mod, control }, 'j', function() awful.screen.focus_relative() end,
+    { description = 'Focus the next screen', group = 'Screen' }
   ),
 
   awful.key(
-    { super, control }, 'k',
-    function() awful.screen.focus_relative() end,
-    { description = 'Focus the previous screen', group = 'screen' }
+    { mod, control }, 'k', function() awful.screen.focus_relative() end,
+    { description = 'Focus the previous screen', group = 'Screen' }
   ),
 
   -- Terminal
+
   awful.key(
-    { super, }, enter,
-    function() awful.spawn(terminal) end,
+    { mod }, enter, function() awful.spawn(terminal) end,
     { description = 'Terminal', group = 'Apps' }
   ),
 
-  -- Layout
+  -- Browser
+
   awful.key(
-    { super, shift }, space,
-    function() awful.layout.inc(1) end,
-    { description = 'next layout', group = 'Awesome' }
+    { mod }, 'b', function() awful.spawn('firefox') end,
+    { description = 'Browser', group = 'Apps' }
+  ),
+
+  -- Layout
+
+  awful.key(
+    { mod, shift }, space, function() awful.layout.inc(1) end,
+    { description = 'Next layout', group = 'Awesome' }
   )
 )
+
 
 --------------------------------------------------------------------------
 
 clientkeys = gears.table.join(
   awful.key(
-    { super }, 'c',
+    { mod }, 'c',
     function(c) c:kill() end,
     { description = 'Close', group = 'Client' }
   ),
 
-  awful.key({ super }, 'f',
+  awful.key({ mod }, 'f',
     function(c)
       c.fullscreen = not c.fullscreen
       c:raise()
@@ -193,8 +210,7 @@ clientkeys = gears.table.join(
   ),
 
   awful.key(
-    { super, shift }, 'f',
-    awful.client.floating.toggle,
+    { mod, shift }, 'f', awful.client.floating.toggle,
     { description = 'Toggle floating', group = 'Client' }
   )
 )
@@ -202,7 +218,7 @@ clientkeys = gears.table.join(
 for i = 1, 9 do
   globalkeys = gears.table.join(globalkeys,
     awful.key(
-      { super }, '#' .. i + 9,
+      { mod }, '#' .. i + 9,
       function()
         local screen = awful.screen.focused()
         local tag = screen.tags[i]
@@ -212,7 +228,7 @@ for i = 1, 9 do
     ),
 
     awful.key(
-      { super, ctrl }, '#' .. i + 9,
+      { mod, ctrl }, '#' .. i + 9,
       function()
         local screen = awful.screen.focused()
         local tag = screen.tags[i]
@@ -222,18 +238,21 @@ for i = 1, 9 do
     ),
 
     awful.key(
-      { super, shift }, '#' .. i + 9,
+      { mod, shift }, '#' .. i + 9,
       function()
         if client.focus then
           local tag = client.focus.screen.tags[i]
-          if tag then client.focus:move_to_tag(tag) end
+          if tag then
+            client.focus:move_to_tag(tag)
+            tag:view_only()
+          end
         end
       end,
       { description = 'Move focused client to tag #'..i, group = 'Tag' }
     ),
 
     awful.key(
-      { super, ctrl, shift }, '#' .. i + 9,
+      { mod, ctrl, shift }, '#' .. i + 9,
       function()
         if client.focus then
           local tag = client.focus.screen.tags[i]
@@ -244,5 +263,3 @@ for i = 1, 9 do
     )
   )
 end
-
-return M
