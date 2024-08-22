@@ -217,7 +217,7 @@ play() {
 }
 
 # History find command
-hfc() {
+hf() {
   local cmd=$(history | fzf --tac | awk '{ print $4 }')
   $cmd
 }
