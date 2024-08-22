@@ -43,7 +43,6 @@ do
 end
 
 -- Theme
--- beautiful.init(gears.filesystem.get_themes_dir() .. 'default/theme.lua')
 beautiful.init(gears.filesystem.get_configuration_dir() .. 'theme/init.lua')
 
 -- Apps
@@ -53,9 +52,9 @@ editor_cmd = terminal .. ' -e ' .. editor
 
 -- Table of layouts
 awful.layout.layouts = {
-  awful.layout.suit.tile,
   awful.layout.suit.floating,
-  awful.layout.suit.tile.left,
+  awful.layout.suit.tile,
+  -- awful.layout.suit.tile.left,
   -- awful.layout.suit.tile.bottom,
   -- awful.layout.suit.tile.top,
   -- awful.layout.suit.fair,
@@ -93,7 +92,6 @@ mylauncher = awful.widget.launcher({
 })
 
 -- Menubar configuration
--- Set the terminal for applications that require it
 menubar.utils.terminal = terminal
 
 -- Keyboard map indicator and switcher
@@ -142,8 +140,7 @@ awful.screen.connect_for_each_screen(function(s)
   -- Create a promptbox for each screen
   s.mypromptbox = awful.widget.prompt()
 
-  -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-  -- We need one layoutbox per screen.
+  -- Create an imagebox widget which will contain an icon indicating which layout we're using
   s.mylayoutbox = awful.widget.layoutbox(s)
 
   s.mylayoutbox:buttons(
@@ -255,12 +252,7 @@ clientbuttons = gears.table.join(
 root.keys(globalkeys)
 
 -- Signals
--- Signal function to execute when a new client appears.
 client.connect_signal('manage', function(c)
-  -- Set the windows at the slave,
-  -- i.e. put it at the end of others instead of setting it master.
-  -- if not awesome.startup then awful.client.setslave(c) end
-
   if awesome.startup
     and not c.size_hints.user_position
     and not c.size_hints.program_position then
@@ -338,3 +330,11 @@ client.connect_signal('unfocus', function(c)
   c.border_width = 0
 end)
 
+-- Links
+-- Git version
+-- https://awesomewm.org/apidoc/sample%20files/rc.lua.html
+-- https://awesomewm.org/apidoc/sample%20files/theme.lua.html
+-- Stable version
+-- https://awesomewm.org/doc/api/sample%20files/rc.lua.html
+-- https://awesomewm.org/doc/api/sample%20files/theme.lua.html
+-- http://epsi-rns.github.io/desktop/2019/12/02/awesome-presentation-theme.html

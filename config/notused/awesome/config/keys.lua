@@ -16,6 +16,13 @@ local right  = 'Right'
 local up     = 'Up'
 local down   = 'Down'
 
+-- awful.keyboard.append_global_keybindings(
+--   awful.key(
+--     { mod, ctrl }, 'h', awful.tag.viewprev,
+--     { description = 'Prev tag', group = 'Tag' }
+--   )
+-- )
+
 globalkeys = gears.table.join(
   -- Tags
 
@@ -51,7 +58,7 @@ globalkeys = gears.table.join(
       end
     end
   end,
-  { description = 'Move focused client to next tag and view tag', group = 'Tag' }),
+  { description = 'Move client to next tag', group = 'Tag' }),
 
   awful.key({ mod, ctrl, shift }, 'h', function()
     local screen = awful.screen.focused()
@@ -65,7 +72,7 @@ globalkeys = gears.table.join(
       end
     end
   end,
-  { description = 'Move focused client to previous tag and view tag', group = 'Tag' }),
+  { description = 'Move client to prev tag', group = 'Tag' }),
 
   -- Client
 
@@ -191,8 +198,35 @@ globalkeys = gears.table.join(
   )
 )
 
+for i = 1, 9 do
+  globalkeys = gears.table.join(globalkeys,
+    awful.key(
+      { mod }, '#' .. i + 9,
+      function()
+        local screen = awful.screen.focused()
+        local tag = screen.tags[i]
+        if tag then tag:view_only() end
+      end,
+      { description = 'Go tag '..i, group = 'Tag' }
+    ),
 
---------------------------------------------------------------------------
+    awful.key(
+      { mod, shift }, '#' .. i + 9,
+      function()
+        if client.focus then
+          local tag = client.focus.screen.tags[i]
+          if tag then
+            client.focus:move_to_tag(tag)
+            tag:view_only()
+          end
+        end
+      end,
+      { description = 'Move client to tag '..i, group = 'Tag' }
+    )
+  )
+end
+
+-- Client
 
 clientkeys = gears.table.join(
   awful.key(
@@ -214,52 +248,3 @@ clientkeys = gears.table.join(
     { description = 'Toggle floating', group = 'Client' }
   )
 )
-
-for i = 1, 9 do
-  globalkeys = gears.table.join(globalkeys,
-    awful.key(
-      { mod }, '#' .. i + 9,
-      function()
-        local screen = awful.screen.focused()
-        local tag = screen.tags[i]
-        if tag then tag:view_only() end
-      end,
-      { description = 'Go tag #'..i, group = 'Tag' }
-    ),
-
-    awful.key(
-      { mod, ctrl }, '#' .. i + 9,
-      function()
-        local screen = awful.screen.focused()
-        local tag = screen.tags[i]
-        if tag then awful.tag.viewtoggle(tag) end
-      end,
-      { description = 'Toggle tag #' .. i, group = 'Tag' }
-    ),
-
-    awful.key(
-      { mod, shift }, '#' .. i + 9,
-      function()
-        if client.focus then
-          local tag = client.focus.screen.tags[i]
-          if tag then
-            client.focus:move_to_tag(tag)
-            tag:view_only()
-          end
-        end
-      end,
-      { description = 'Move focused client to tag #'..i, group = 'Tag' }
-    ),
-
-    awful.key(
-      { mod, ctrl, shift }, '#' .. i + 9,
-      function()
-        if client.focus then
-          local tag = client.focus.screen.tags[i]
-          if tag then client.focus:toggle_tag(tag) end
-        end
-      end,
-      { description = 'Toggle focused client on tag #' .. i, group = 'Tag' }
-    )
-  )
-end
