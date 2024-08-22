@@ -80,7 +80,6 @@ alias grep="grep --color=auto"
 
 # history
 alias hi="history | sort -rn"
-alias hf="history | fzf --tac"
 
 # inotify
 alias iwai="inotifywait"
