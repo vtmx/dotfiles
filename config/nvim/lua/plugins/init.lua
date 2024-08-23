@@ -21,6 +21,11 @@ return {
     config = true
   },
   {
+    'echasnovski/mini.files',
+    cmd = 'MiniFiles',
+    config = true
+  },
+  {
     'neovim/nvim-lspconfig',
     event = 'BufEnter'
   },
