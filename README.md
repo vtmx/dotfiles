@@ -368,6 +368,10 @@
       <td>Reload window manager</td>
     </tr>
     <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>q</kbd></td>
+      <td>Quit window manager</td>
+    </tr>
+    <tr>
       <td><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
       <td>Circle all windows</td>
     </tr>
