@@ -87,6 +87,11 @@ hex() {
   printf "#%02x%02x%02x" ${*//','/' '}
 }
 
+# List only hidden files
+lsa() {
+  for file in .*; do echo "$file"; done | column
+}
+
 # Create dir and enter
 mkcd() {
   if [[ -n $1 ]]; then
@@ -183,7 +188,6 @@ mvup() {
   done
 }
 
-
 # Play
 play() {
   if type mpv >& /dev/null; then
@@ -246,9 +250,18 @@ rc() {
   # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
 }
 
-# List only hidden files
-lsa() {
-  for file in .*; do echo "$file"; done | column
+# Remove extension
+rmext() {
+  [[ $1 ]] || {
+    echo 'usage: rmext [extension]'
+    return 1
+  }
+
+  for file in *.$1; do
+    mv "$file" "${file%.$1}"
+  done
+
+  return 0
 }
 
 # SSH Add Agent
