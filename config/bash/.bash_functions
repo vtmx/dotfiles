@@ -216,11 +216,11 @@ play() {
   fi
 }
 
-# History find command
-hf() {
-  local cmd=$(history | fzf --tac | awk '{ print $4 }')
-  $cmd
-}
+# History find command use: ctrl+r
+# hf() {
+#   local cmd=$(history | fzf --tac | awk '{ print $4 }')
+#   $cmd
+# }
 
 # Open rc configs
 rc() {
