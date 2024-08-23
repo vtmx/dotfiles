@@ -404,16 +404,8 @@
       <td>System</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>,</kbd></td>
-      <td>Themes</td>
-    </tr>
-    <tr>
       <td><kbd>Super</kbd> + <kbd>.</kbd></td>
       <td>Shortcuts</td>
-    </tr>
-    <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd></td>
-      <td>Help shortcuts</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>a</kbd></td>
@@ -446,6 +438,14 @@
     <tr>
       <td><kbd>Super</kbd> + <kbd>s</kbd></td>
       <td>Screenshot</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>t</kbd></td>
+      <td>Torrent</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>u</kbd></td>
+      <td>UI</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>v</kbd></td>
