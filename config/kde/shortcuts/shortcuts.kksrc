@@ -11,11 +11,11 @@ Switch to Next Keyboard Layout=
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+PgDown; Ctrl+]
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Next Tab=Ctrl+]; Ctrl+PgDown
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
-Back=Alt+Left; Back
+Back=Back; Alt+Left
 BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
@@ -23,8 +23,8 @@ Clear=
 Close=Ctrl+W; Ctrl+Esc
 ConfigureNotifications=
 ConfigureToolbars=
-Copy=Ctrl+C; Ctrl+Ins
-CreateFolder=Ctrl+Shift+N; F10
+Copy=Ctrl+Ins; Ctrl+C
+CreateFolder=F10; Ctrl+Shift+N
 Cut=Shift+Del; Ctrl+X
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
@@ -42,14 +42,14 @@ FindPrev=Shift+F3
 FitToHeight=
 FitToPage=
 FitToWidth=
-Forward=Forward; Alt+Right
+Forward=Alt+Right; Forward
 ForwardWord=Ctrl+Right
 FullScreen=Ctrl+Shift+F
 Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Alt+Home; Home Page
+Home=Home Page; Alt+Home
 KeyBindings=Ctrl+.
 Mail=
 MoveToTrash=Del
@@ -60,7 +60,7 @@ Open=Ctrl+O
 OpenContextMenu=Shift+F10; Menu
 OpenMainMenu=F10
 OpenRecent=
-Paste=Shift+Ins; Ctrl+V
+Paste=Ctrl+V; Shift+Ins
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+,
 PrevCompletion=Ctrl+Up
@@ -69,7 +69,7 @@ PrintPreview=
 Prior=PgUp
 Quit=
 Redo=Ctrl+Shift+Z
-Reload=F5; Refresh
+Reload=Refresh; F5
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -80,7 +80,7 @@ Save=Ctrl+S
 SaveAs=Ctrl+Shift+S
 SaveOptions=
 SelectAll=Ctrl+A
-ShowHideHiddenFiles=Alt+.; Ctrl+H
+ShowHideHiddenFiles=Ctrl+H; Alt+.
 ShowMenubar=Ctrl+M
 ShowStatusbar=
 ShowToolbar=
@@ -134,7 +134,7 @@ toggle_tile_layout=
 toggle_window_floating=
 
 [bitwarden.desktop][Global Shortcuts]
-_launch=Meta+W
+_launch=Meta+Alt+P
 
 [code-oss.desktop][Global Shortcuts]
 _launch=Meta+V
@@ -203,7 +203,7 @@ _launch=Meta+Return
 
 [kmix][Global Shortcuts]
 decrease_microphone_volume=Microphone Volume Down
-decrease_volume=Volume Down; Ctrl+Shift+F2
+decrease_volume=Ctrl+Shift+F2; Volume Down
 decrease_volume_small=Shift+Volume Down
 increase_microphone_volume=Microphone Volume Up
 increase_volume=Ctrl+Shift+F3; Volume Up
@@ -225,7 +225,7 @@ Activate Window Demanding Attention=Ctrl+Alt+A
 Decrease Opacity=
 Edit Tiles=
 Expose=Ctrl+F9
-ExposeAll=Launch (C); Ctrl+F10
+ExposeAll=Ctrl+F10; Launch (C)
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 FlipSwitchAll=
@@ -252,7 +252,7 @@ Switch Window Down=
 Switch Window Left=
 Switch Window Right=
 Switch Window Up=
-Switch to Desktop 1=Meta+1; Ctrl+F1
+Switch to Desktop 1=Ctrl+F1; Meta+1
 Switch to Desktop 10=Meta+0
 Switch to Desktop 11=
 Switch to Desktop 12=
@@ -263,18 +263,18 @@ Switch to Desktop 16=
 Switch to Desktop 17=
 Switch to Desktop 18=
 Switch to Desktop 19=
-Switch to Desktop 2=Meta+2; Ctrl+F2
+Switch to Desktop 2=Ctrl+F2; Meta+2
 Switch to Desktop 20=
-Switch to Desktop 3=Meta+3; Ctrl+F3
+Switch to Desktop 3=Ctrl+F3; Meta+3
 Switch to Desktop 4=Meta+4; Ctrl+F4
 Switch to Desktop 5=Meta+5
 Switch to Desktop 6=Meta+6
 Switch to Desktop 7=Meta+7
 Switch to Desktop 8=Meta+8
 Switch to Desktop 9=Meta+9
-Switch to Next Desktop=Meta+Ctrl+Right; Meta+Ctrl+L
+Switch to Next Desktop=Meta+Ctrl+L; Meta+Ctrl+Right
 Switch to Next Screen=
-Switch to Previous Desktop=Meta+Ctrl+H; Meta+Ctrl+Left
+Switch to Previous Desktop=Meta+Ctrl+Left; Meta+Ctrl+H
 Switch to Previous Screen=
 Switch to Screen 0=
 Switch to Screen 1=
@@ -304,8 +304,8 @@ Walk Through Windows of Current Application (Reverse)=Alt+~
 Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=Meta+PgUp
-Window Below Other Windows=
-Window Close=Ctrl+Q; Meta+C; Meta+Q; Alt+F4
+Window Below Other Windows=Meta+PgDown
+Window Close=Ctrl+Q; Meta+C; Alt+F4; Meta+Q
 Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
@@ -366,7 +366,7 @@ Window to Desktop 8=Meta+*
 Window to Desktop 9=Meta+(
 Window to Next Desktop=Meta+Ctrl+Shift+Right; Meta+Ctrl+Shift+L
 Window to Next Screen=
-Window to Previous Desktop=Meta+Ctrl+Shift+Left; Meta+Ctrl+Shift+H
+Window to Previous Desktop=Meta+Ctrl+Shift+H; Meta+Ctrl+Shift+Left
 Window to Previous Screen=
 Window to Screen 0=
 Window to Screen 1=
@@ -410,7 +410,7 @@ _launch=
 _launch=Meta+E
 
 [org.kde.kcalc.desktop][Global Shortcuts]
-_launch=Launch (1)
+_launch=Calculator
 
 [org.kde.kcolorchooser.desktop][Global Shortcuts]
 _launch=Meta+P
@@ -421,17 +421,17 @@ NewWindow=
 _launch=Ctrl+Alt+T
 
 [org.kde.krunner.desktop][Global Shortcuts]
-RunClipboard=Alt+Shift+F2
+RunClipboard=Meta+R
 _launch=Alt+Space; Alt+F2; Search
 
 [org.kde.kscreen.desktop][Global Shortcuts]
-ShowOSD=Meta+Shift+P; Display
+ShowOSD=Display
 
 [org.kde.ksysguard.desktop][Global Shortcuts]
 _launch=Ctrl+Shift+Esc
 
 [org.kde.plasma-systemmonitor.desktop][Global Shortcuts]
-_launch=Ctrl+Shift+Esc; Meta+Esc
+_launch=Meta+Esc; Ctrl+Shift+Esc
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=Meta+Ctrl+Alt+Shift+Space
@@ -441,12 +441,15 @@ ActiveWindowScreenShot=Meta+Print
 CurrentMonitorScreenShot=
 FullScreenScreenShot=Shift+Print
 OpenWithoutScreenshot=
-RecordRegion=Meta+R; Meta+Shift+R
+RecordRegion=Meta+Shift+R
 RecordScreen=Meta+Alt+R
 RecordWindow=Meta+Ctrl+R
 RectangularRegionScreenShot=Meta+Shift+Print
 WindowUnderCursorScreenShot=
 _launch=
+
+[org.keepassxc.KeePassXC.desktop][Global Shortcuts]
+_launch=Meta+Shift+W
 
 [org.manjaro.pamac.manager.desktop][Global Shortcuts]
 _launch=Meta+A
@@ -489,7 +492,7 @@ activate widget 5=
 activate widget 8=
 clear-history=
 clipboard_action=Ctrl+Alt+X
-cycle-panels=Meta+Alt+P
+cycle-panels=
 cycleNextAction=
 cyclePrevAction=
 edit_clipboard=
