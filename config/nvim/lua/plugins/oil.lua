@@ -17,7 +17,7 @@ return {
           -- Padding around the floating window
           padding = 3,
           max_width = 70,
-          max_height = 60,
+          max_height = 30,
           border = 'rounded',
           -- This is the config that will be passed to nvim_open_win.
           -- Change values here to customize the layout
@@ -28,8 +28,8 @@ return {
         keymaps = {
           ['g?'] = 'actions.show_help',
           ['<cr>'] = 'actions.select',
-          ['<c-\\>'] = 'actions.select_vsplit',
-          ['<c-enter>'] = 'actions.select_split', -- this is used to navigate left
+          ['<c-enter>'] = 'actions.select_vsplit',
+          ['<c-\\>'] = 'actions.select_split', -- this is used to navigate left
           ['<c-t>'] = 'actions.select_tab',
           ['<c-p>'] = 'actions.preview',
           ['q'] = 'actions.close',

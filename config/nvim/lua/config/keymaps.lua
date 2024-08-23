@@ -412,8 +412,8 @@ map(
 )
 
 map(
-  'n', '<leader>bc', '<cmd>bd<cr>',
-  { desc = 'Belete close' }
+  'n', '<leader>bD', '<cmd>%bd|e#<cr><cmd>bn<cr><cmd>bd<cr>',
+  { desc = 'Delete all buffers' }
 )
 
 map(
@@ -678,30 +678,36 @@ map(
   { desc = 'Lazy' }
 )
 
--- nvim-tree
-map(
-  'n', '<leader><leader>e', '<cmd>NvimTreeToggle<cr>',
-  { desc = 'NvimTree' }
-)
-
 -- treesitter
 map(
   'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
   { desc = 'Inspect Tree' }
 )
 
+-- oil
+map(
+  'n', '<leader>e', '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
+)
+
+-- mini.files
+map(
+  'n', '<leader>E', '<cmd>lua require("mini.files").open()<cr>',
+  { desc = 'MiniFiles' }
+)
+
+-- nvim-tree
+map(
+  'n', '<leader><leader>e', '<cmd>NvimTreeToggle<cr>',
+  { desc = 'NvimTree' }
+)
+
 -- netrw
 map(
   'n',
-  '<leader>e',
+  '<leader><leader>E',
   '<cmd>15Lex<cr>',
   { desc = 'Lex' }
-)
-
--- oil
-map(
-  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
-  { desc = 'Oil' }
 )
 
 -- telescope
