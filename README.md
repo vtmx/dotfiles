@@ -340,7 +340,7 @@
       <td>Go to workspace number {1..9}</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>}|{<kbd>⯇</kbd>,<kbd>⯈</kbd>}|{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>⯇</kbd>,<kbd>⯈</kbd>},{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
       <td>Move window to {next,prev} workspace</td>
     </tr>
     <tr>
@@ -540,11 +540,11 @@
       <td>Close current window</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgDn</kbd></td>
+      <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd>, <kbd>Ctrl</kbd> + <kbd>PgDn</kbd></td>
       <td>Next tab</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgUp</kbd></td>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>, <kbd>Ctrl</kbd> + <kbd>PgUp</kbd></td>
       <td>Prev tab</td>
     </tr>
     <tr>
@@ -581,7 +581,7 @@
     </tr>
     <tr>
       <td><kbd>F3</kbd></td>
-      <td>Split || Find next</td>
+      <td>Split, Find next</td>
     </tr>
     <tr>
       <td><kbd>Shift</kbd> + <kbd>F3</kbd></td>
@@ -652,11 +652,11 @@
       <td>Close tab</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgDn</kbd></td>
+      <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd>, <kbd>Ctrl</kbd> + <kbd>PgDn</kbd></td>
       <td>Next tab</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> || <kbd>Ctrl</kbd> + <kbd>PgUp</kbd></td>
+      <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>, <kbd>Ctrl</kbd> + <kbd>PgUp</kbd></td>
       <td>Prev tab</td>
     </tr>
     <tr>
@@ -672,11 +672,11 @@
       <td>Move to {next,prev} tab</td>
     </tr>
     <tr>
-      <td><kbd>Alt</kbd> + <kbd>Home</kbd> || <kbd>Ctrl</kbd> + <kbd>Space</kbd></td>
+      <td><kbd>Alt</kbd> + <kbd>Home</kbd>, <kbd>Ctrl</kbd> + <kbd>Space</kbd></td>
       <td>Go home</td>
     </tr>
     <tr>
-      <td><kbd>Alt</kbd> + {<kbd>⯇</kbd>,<kbd>⯈</kbd>} || <kbd>⯅</kbd></td>
+      <td><kbd>Alt</kbd> + {<kbd>⯇</kbd>,<kbd>⯈</kbd>}, <kbd>⯅</kbd></td>
       <td>Go to {back,next} in history or up dir</td>
     </tr>
     <tr>
