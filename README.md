@@ -324,11 +324,11 @@
       <th>Action</th>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} || {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
-      <td>Focus window to {left,down,up,right} direction</td>
+      <td><kbd>Super</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
+      <td>Focus window {left,down,up,right} direction</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} || {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
       <td>Move window to {left,down,up,right} direction</td>
     </tr>
     <tr>
@@ -340,7 +340,7 @@
       <td>Go to workspace number {1..9}</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯈</kbd>}, {<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>}|{<kbd>⯇</kbd>,<kbd>⯈</kbd>}|{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
       <td>Move window to {next,prev} workspace</td>
     </tr>
     <tr>
@@ -348,7 +348,7 @@
       <td>Move window to workspace number {1..9}</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Alt</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} || {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Alt</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
       <td>Resize window in {left,down,up,right} direction</td>
     </tr>
     <tr>
@@ -365,7 +365,7 @@
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd></td>
-      <td>Reload config</td>
+      <td>Reload window manager</td>
     </tr>
     <tr>
       <td><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
@@ -412,8 +412,12 @@
       <td>Shortcuts</td>
     </tr>
     <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd></td>
+      <td>Help shortcuts</td>
+    </tr>
+    <tr>
       <td><kbd>Super</kbd> + <kbd>a</kbd></td>
-      <td>Package manager</td>
+      <td>Package</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>b</kbd></td>
@@ -421,7 +425,7 @@
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>e</kbd></td>
-      <td>File manager</td>
+      <td>File</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>g</kbd></td>
@@ -429,7 +433,15 @@
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>p</kbd></td>
-      <td>Color picker</td>
+      <td>Picker</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>p</kbd></td>
+      <td>Password</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>r</kbd></td>
+      <td>Run</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>s</kbd></td>
