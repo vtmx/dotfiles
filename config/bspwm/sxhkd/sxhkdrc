@@ -14,6 +14,10 @@ ctrl + alt + Delete
 super + shift + q
 	bspc quit
 
+# Help
+super + f1
+	$HOME/.config/bspwm/conky/toggle
+
 # Reload sxhkd
 super + r
   pkill -USR1 -x sxhkd && notify-send 'sxhkd reloaded'
@@ -124,9 +128,9 @@ super + shift + p
 # systemctl poweroff
 # systemctl reboot
 # systemctl suspend
-# dunst
-# jgmenu
 
-# Change wallpaper
+# Links
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm
+# https://github.com/Exodia-OS/exodia-bspwm/tree/master/src/config/bspwm
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofi
+# https://github.com/Exodia-OS/exodia-bspwm/blob/b40fef1045a3485d08966cf92a966599b292abff/src/PKGBUILD#L21

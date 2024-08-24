@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo pacman --no-confirm -S bspwm conky dunst sxhkd feh picom polybar sxhkd
