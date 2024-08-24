@@ -1,4 +1,3 @@
-bash
 bat
 bitwarden
 breeze-gtk
@@ -8,8 +7,6 @@ cmatrix-git
 code
 conky-lua-nv
 discord
-dolphin
-dolphin-plugins
 entr
 exa
 fd
@@ -18,14 +15,10 @@ figlet
 filelight
 filesystem
 firefox
-fish
 flameshot
-flex
 font-manager
 fwupd
 gum
-helix
-htop
 hyperfine
 inkscape
 inotify-tools
@@ -44,17 +37,15 @@ lynx
 mkvtoolnix-cli
 mkvtoolnix-gui
 mpv
-neofetch
 neovim
 nodejs
 npm
 obconf
 openbox
 pandoc
+pastel
 polybar
 qemu
-qtile
-ranger
 retroarch
 ripgrep
 rofi
@@ -63,18 +54,16 @@ tesseract
 timeshift
 tmux
 veracrypt
-vifm
 virsh
 virtmanager
-virtualbox
 virt-viewr
 vivaldi
 vlc
 wmctrl
 xclip
 xdotool
+xev
 yay
-zellij
 zoxide
 
 # References

@@ -11,15 +11,6 @@ cpcd() {
 	fi
 }
 
-# Cheat curl cht.sh/:styles-demo
-cheat() {
-  if [[ "$1" ]]; then 
-    curl "https://cheat.sh/$1"
-  else
-    echo 'command not exit'
-  fi
-}
-
 # Extract files
 ex() {
   if [[ -f "$1" ]]; then
@@ -144,11 +135,9 @@ mvext() {
     echo 'usage: mvext [old extension] [new extension]'
     return 1
   }
-
   for file in *.$1; do
     mv "$file" "${file%.$1}.$2"
   done
-
   return 0
 }
 
@@ -245,22 +234,17 @@ rc() {
     "$HOME/.config/tmux/tmux.conf" \
   )
 
-  local rcfile=$(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
+  rcfile=$(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
   [[ "$rcfile" ]] && $EDITOR "$rcfile"
   # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
 }
 
 # Remove extension
 rmext() {
-  [[ $1 ]] || {
-    echo 'usage: rmext [extension]'
-    return 1
-  }
-
+  [[ $1 ]] || { echo 'usage: rmext [extension]'; return 1; }
   for file in *.$1; do
     mv "$file" "${file%.$1}"
   done
-
   return 0
 }
 
@@ -276,7 +260,6 @@ wa() {
     if [[ -n "$1" ]]; then
       local file=$1
       local ext=$(echo $1 | awk -F . '{print $NF}')
-
       if [[ $ext = 'sh' ]]; then
         find $file | entr -cr ./$file 
       elif [[ $ext = 'js' ]]; then
@@ -289,10 +272,9 @@ wa() {
 }
 
 xf() {
-  local sassdir="${HOME}/.local/share/themes/Lightly/gtk-3.0/src"
-  local mainsass="${HOME}/.local/share/themes/Lightly/gtk-3.0/src/main.scss"
-  local gtkcss="${HOME}/.local/share/themes/Lightly/gtk-3.0/gtk.css"
-
+  local sassdir="$HOME/.local/share/themes/Lightly/gtk-3.0/src"
+  local mainsass="$HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss"
+  local gtkcss="$HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css"
   while true; do
     inotifywait -m -e modify $sassdir/** | \
     sassc -Mt expanded $mainsass $gtkcss && \
@@ -305,7 +287,10 @@ wkde() {
   local file; read -p "Enter a filename of color: " file
   file="$HOME/.local/share/color-schemes/$file.colors"
 
-  [[ -f "$file" ]] || echo "file not exist"; return
+  [[ -f "$file" ]] || { 
+    echo "file not exist"
+    return 1
+  }
 
   while true; do
     plasma-apply-colorscheme BreezeDark > /dev/null

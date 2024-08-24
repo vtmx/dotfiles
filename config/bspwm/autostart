@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+shopt -s globstar
+
+bspdir=$HOME/.config/bspwm
+
+xsetroot -cursor_name left_ptr &
+pgrep -x sxhkd   > /dev/null || sxhkd -c $bspdir/sxhkd/sxhkdrc &
+pgrep -x polybar > /dev/null || polybar bspwm -c $bspdir/polybar/config.ini &
+pgrep -x dunst   > /dev/null || dunst -conf $bspdir/dunst/dunstrc &
+pgrep -x feh     > /dev/null || feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/** &
+# pgrep -x conky   > /dev/null || conky -c $bspdir/conky/conky.conf &
+# pgrep -x picom   > /dev/null || picom --config $bspdir/picom/picom.conf &

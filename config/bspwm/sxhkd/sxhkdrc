@@ -22,21 +22,25 @@ super + r
 super + @space
 	rofi -show drun
 
+# Toggle floating
+super + shift + space
+	bspc node -t floating
+
 # Terminal
 super + Return
 	kitty
 
 # Terminal float
-super + shift + Return
+super + alt + Return
 	kitty -float
 
 # Toggle polybar
 super + ctrl + shift + b
 	polybar bspwm
 
-# Toggle fullscreen and floating
-super + {_,shift + }f
-	bspc node -t "~"{fullscreen,floating}
+# Toggle fullscreen
+super + f
+	bspc node -t fullscreen
 
 # Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
@@ -98,11 +102,11 @@ ctrl + alt + {h,Left,j,Down,k,Up,l,Right}
 # 	bspvolume{ --toggle, --toggle-mic}
 
 # Apps
-super + {a,b,g,m,p,t,s,v,w}
-	{pamac-manager,firefox,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code,bitwarden}
+super + {a,b,g,m,p,t,s,v}
+	{pamac-manager,firefox,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
-super + shift + {g}
-	{lutris}
+super + alt + {p}
+	{bitwarden}
 
 super + shift + p
 	bspc node -g sticky

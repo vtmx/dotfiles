@@ -18,9 +18,6 @@ alias canva="canvas-sketch-cli"
 # chmod
 alias chx="chmod +x"
 
-# clear
-alias cls="clear"
-
 # code
 alias code="GTK_USE_PORTAL=1 code"
 
