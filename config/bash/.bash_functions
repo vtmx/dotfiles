@@ -177,6 +177,18 @@ mvup() {
   done
 }
 
+# Rename substitute word
+mvs() {
+  [[ $1 && $2 ]] || {
+    echo 'usage: mvs [old word] [new word]'
+    return 1
+  }
+  for file in *; do
+    mv "$file" "${file/$1/$2}"
+  done
+  return 0
+}
+
 # Play
 play() {
   if type mpv >& /dev/null; then

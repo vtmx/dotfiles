@@ -19,7 +19,7 @@ super + f1
 	$HOME/.config/bspwm/conky/toggle
 
 # Reload sxhkd
-super + r
+super + shift + r
   pkill -USR1 -x sxhkd && notify-send 'sxhkd reloaded'
 
 # Laucnher
