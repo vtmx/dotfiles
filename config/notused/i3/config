@@ -1,3 +1,0 @@
-include ~/.config/i3/*.conf
-# exec_always ~/autostart.sh
-exec --no-startup-id feh --no-fehbg --bg-scale --randomize ~/Pictures/wallpapers/wallhaven/valorant/*
