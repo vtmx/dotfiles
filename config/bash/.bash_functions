@@ -78,6 +78,21 @@ hex() {
   printf "#%02x%02x%02x" ${*//','/' '}
 }
 
+# Return text of htmlq
+htm() {
+  if ! type htmlq >& /dev/null; then
+    echo 'htmlq not exist'
+    return 1
+  fi
+
+  [[ "$1"  && "$2" ]] || {
+    echo 'usage: htm [link] [element]'
+    return 1
+  }
+
+  curl -s $1 | htmlq -t $2
+}
+
 # List only hidden files
 lsa() {
   for file in .*; do echo "$file"; done | column
@@ -154,10 +169,9 @@ mvlo() {
     newname="${newname//\(/}"
     newname="${newname//\)/}"
     newname="${newname// /-}"
-    if mv "$file" "$newname" 2>/dev/null; then
-      echo 'renamed to lower-case'
-    fi
+    mv "$file" "$newname" 2>/dev/null
   done
+  echo 'finished'
 }
 
 # Rename files to upper case and replace spaces to - 
@@ -171,10 +185,8 @@ mvup() {
     newname="${file//[Ú]/U}"
     newname="${file//[Ç]/C}"
     newname="${newname// /-}"
-    if mv "$file" "$newname" 2>/dev/null; then
-      echo 'renamed to upper-case'
-    fi
   done
+  echo 'finished'
 }
 
 # Rename substitute word
