@@ -2,38 +2,24 @@ bat
 bitwarden
 breeze-gtk
 bspwm
-btop
-cmatrix-git
 code
 conky-lua-nv
-discord
 entr
 exa
 fd
 feh
 figlet
-filelight
-filesystem
 firefox
 flameshot
-font-manager
-fwupd
 gum
 hyperfine
 inkscape
 inotify-tools
 jgmenu
 jq
-kate
-kcalc
-kcolorchooser
-kde-gtk-config
-kdialog
 kitty
 konsole
 krename
-krita
-krusader
 lynx
 mkvtoolnix-cli
 mkvtoolnix-gui
@@ -47,18 +33,14 @@ pandoc
 pastel
 polybar
 qemu
-retroarch
-ripgrep
 rofi
 rsync
-tesseract
 timeshift
 tmux
 veracrypt
 virsh
 virtmanager
 virt-viewr
-vivaldi
 vlc
 wmctrl
 xclip
@@ -70,3 +52,4 @@ zoxide
 # References
 # https://gist.github.com/albertguedes/314819ad5c84c1d2a3d6298233ad0d5e#file-rust-command-line-utilities-markdown
 # https://github.com/TaKO8Ki/awesome-alternatives-in-rust
+# https://itsfoss.com/rust-cli-tools/

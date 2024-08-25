@@ -122,10 +122,10 @@ alias pacu="sudo pacman -Syu"             # update
 alias pstree="pstree -npTC age"
 
 # remove
-alias rd="rm -rf"
+alias rd="rm -ir"
+alias rdy="rm -rf"
 alias rm="rm -i"
 alias rmy="rm -f"
-alias rmdy="rm -rf"
 
 # live-server
 alias live="browser-sync start --server "." --files *"

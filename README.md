@@ -177,9 +177,9 @@
       <td><code>#23272e</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.pl/32x32/2c313c/?text=+" alt="Black"></td>
+      <td><img src="https://fakeimg.pl/32x32/5c6370/?text=+" alt="Black"></td>
       <td>Black Bright</td>
-      <td><code>#2c313c</code></td>
+      <td><code>#5c6370</code></td>
     </tr>
     <tr>
       <td><img src="https://fakeimg.pl/32x32/e06c75/?text=+" alt="Red"></td>
