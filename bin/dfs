@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# export HTTP_PROXY="$HTTP_PROXY"
+# export HTTPS_PROXY="$HTTPS_PROXY"
+# bash < <(curl https://raw.githubusercontent.com/vtmx/dotfiles/main/bin/dfs)
+# curl -L https://raw.githubusercontent.com/vtmx/dotfiles/main/bin/dfs | bash
+
+wget_files() {
+  [[ -d "$1" ]] || mkdir -p "$1"
+  if ! wget -q -N "$1" -P "$2"; then
+    echo "error: fail download"
+    exit 1
+  fi
+}
+
+echo "Update bash..."
+wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/bash/.bashrc" $HOME 
+wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/bash/.bash_aliases" $HOME
+wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/bash/.bash_functions" $HOME 
+
+echo "Update kitty..."
+wget_files "https://raw.githubusercontent.com/vtmx/dotfiles/main/config/kitty/kitty.conf" "$HOME/.config/kitty" 
