@@ -2,7 +2,7 @@
 
 # export HTTP_PROXY="$HTTP_PROXY"
 # export HTTPS_PROXY="$HTTPS_PROXY"
-# bash < <(curl https://raw.githubusercontent.com/vtmx/dotfiles/main/bin/dfs)
+# bash <(curl https://raw.githubusercontent.com/vtmx/dotfiles/main/bin/dfs)
 # curl -L https://raw.githubusercontent.com/vtmx/dotfiles/main/bin/dfs | bash
 
 wget_files() {
