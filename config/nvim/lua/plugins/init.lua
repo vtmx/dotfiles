@@ -34,6 +34,10 @@ return {
     event = 'VeryLazy'
   },
   {
+    'christoomey/vim-tmux-navigator',
+    event = 'VeryLazy'
+  },
+  {
     'junegunn/vim-slash',
     event = 'InsertEnter'
   }

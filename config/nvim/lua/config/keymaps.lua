@@ -816,23 +816,32 @@ map(
   { desc = 'Fuzzy' }
 )
 
+-- tmux
+map(
+  'n', '<a-l>', '<cmd>TmuxNavigateLeft<cr>',
+  { desc = 'TmuxNavigateLeft' }
+)
+
+map(
+  'n', '<a-h>', '<cmd>TmuxNavigateRight<cr>',
+  { desc = 'TmuxNavigateRight' }
+)
+
+map(
+  'n', '<a-j>', '<cmd>TmuxNavigateDown<cr>',
+  { desc = 'TmuxNavigateDown' }
+)
+
+map(
+  'n', '<a-k>', '<cmd>TmuxNavigateUp<cr>',
+  { desc = 'TmuxNavigateUp' }
+)
+
 -- zen mode
 map(
   'n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
 )
-
--- Future
--- local mappings = {
---   {
---     'i', 'kj', '<esc>',
---     { desc = 'Return to normal mode' }
---   }
--- }
---
--- for _, val in pairs(mappings) do
---   vim.keymap.set(unpack(val))
--- end
 
 -- References
 -- https://github.com/NvChad
