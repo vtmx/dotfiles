@@ -161,9 +161,9 @@ mvlo() {
   for file in *; do
     newname="${file,,}"
     newname="${newname//[áãâ]/a}"
-    newname="${newname//[é]/e}"
+    newname="${newname//[éê\&]/e}"
     newname="${newname//[í]/i}"
-    newname="${newname//[ó]/o}"
+    newname="${newname//[óõô]/o}"
     newname="${newname//[ú]/u}"
     newname="${newname//[ç]/c}"
     newname="${newname//\(/}"
