@@ -1,4 +1,10 @@
-# Change directories
+# bash
+alias ba="$EDITOR $HOME/.bash_aliases"
+alias bf="$EDITOR $HOME/.bash_functions"
+alias brc="$EDITOR $HOME/.bashrc"
+alias brl="source $HOME/.bashrc; echo Reload bashrc"
+
+# directories
 alias ..="cd .."
 alias ...="cd ../.."
 alias .3="cd ../../.."
@@ -82,24 +88,26 @@ alias hi="history | sort -rn"
 alias iwai="inotifywait"
 alias iwat="inotifywatch"
 
+# kitty
+alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
+
 # ls
 alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
-alias ls="ls --color=auto --group-directories-first --sort=extension"
 alias lls="ls -ltra | grep --color=never '\->'"
+alias ls="ls --color=auto --group-directories-first --sort=extension"
 
-# man
-alias m="man -L pt_BR.UTF-8"
+# live-server
+alias live="browser-sync start --server "." --files *"
+
+# man pt-br
 alias man="man -L pt_BR.UTF-8"
 
-# make
+# create dir
 alias md="mkdir -p"
 
 # move
 alias mv="mv -i"
-
-# nvim
-alias v="nvim"
 
 # pip
 alias pipi="pip install"
@@ -110,9 +118,9 @@ alias pac="sudo pacman"                   # pacman
 alias pacc="sudo pacman -Sc"              # clean old from cache
 alias paci="sudo pacman -S"               # install
 alias paciy="sudo pacman -S --noconfirm"  # install no confirm
+alias paclo="pacman -Qdt"                 # list orphans
 alias pacl="pacman -Q"                    # list
 alias paclq="pacman -Qqe"                 # filter
-alias paclo="pacman -Qdt"                 # list orphans
 alias pacr="sudo pacman -Rs"              # remove
 alias pacry="sudo pacman --noconfirm -Rs" # remove no confirm
 alias pacs="sudo pacman -Ss"              # search
@@ -127,9 +135,6 @@ alias rdy="rm -rf"
 alias rm="rm -i"
 alias rmy="rm -f"
 
-# live-server
-alias live="browser-sync start --server "." --files *"
-
 # sleep
 alias sl="sleep"
 
@@ -142,9 +147,26 @@ alias su="su - "
 # tmux
 alias t="tmux -f $HOME/.config/tmux/tmux.conf"
 alias ta="tmux attach -t"
+alias tc="$EDITOR $HOME/.config/tmux/tmux.conf"
 alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
+
+# vlang
+alias vl="$HOME/.v/vl"
+alias vf="$HOME/.v/vl fmt -w"
+alias vh="$HOME/.v/vl help"
+alias vr="$HOME/.v/vl run"
+alias vu="$HOME/.v/vl up"
+alias vw="$HOME/.v/vl watch run"
+
+# vim
+alias v="nvim"
+alias vc="$EDITOR $HOME/.config/nvim/init.lua"
+alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
+alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
+alias vp="$EDITOR $HOME/.config/nvim/lua/plugins"
+alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
 
 # yarn
 alias ya="yarn add"
@@ -169,32 +191,11 @@ alias yayu="yay -Syu"
 # yt-dlp
 alias ytp='yt-dlp -x --audio-format mp3 --replace-in-metadata title " " "-" --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
 
-# vlang
-alias vl="$HOME/.v/vl"
-alias vf="$HOME/.v/vl fmt -w"
-alias vh="$HOME/.v/vl help"
-alias vr="$HOME/.v/vl run"
-alias vu="$HOME/.v/vl up"
-alias vw="$HOME/.v/vl watch run"
-
-# lite-xl
-alias xl="lite-xl"
-
 # weather
 alias wt="curl wttr.in/?format=3"
 
-# config
-alias ba="$EDITOR $HOME/.bash_aliases"
-alias bf="$EDITOR $HOME/.bash_functions"
-alias brc="$EDITOR $HOME/.bashrc"
-alias brl="source $HOME/.bashrc; echo Reload bashrc"
-alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
-alias tc="$EDITOR $HOME/.config/tmux/tmux.conf"
-alias vc="$EDITOR $HOME/.config/nvim/init.lua"
-alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
-alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
-alias vp="$EDITOR $HOME/.config/nvim/lua/plugins/"
-alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
+# lite-xl
+alias xl="lite-xl"
 alias xc="lite-xl $HOME/.config/lite-xl"
 
 # Alias
