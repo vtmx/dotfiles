@@ -113,7 +113,7 @@ mkdia() {
   local file=$(date +'%Y-%m-%d').md
   [[ -n $1 ]] && title=$1 || title="Título"
   echo -e "# ${title^}\n$(date +'%d-%m-%Y')\n\n" > $file
-  $EDITOR +4 $file
+  $EDITOR +1 $file
 }
 
 # Create shell file

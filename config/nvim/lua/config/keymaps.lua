@@ -29,6 +29,11 @@ map(
 )
 
 map(
+  'i', '<c-backspace>', '<c-w>',
+  { desc = 'Delete word back' }
+)
+
+map(
   'i', '<c-h>', '<left>',
   { desc = 'Go left in insert mode' }
 )
