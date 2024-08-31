@@ -91,14 +91,14 @@ alias iwat="inotifywatch"
 # kitty
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
 
+# live-server
+alias live="browser-sync start --server "." --files *"
+
 # ls
 alias la="ls -A | grep '^\.'"
 alias ll="ls -Fal"
 alias lls="ls -ltra | grep --color=never '\->'"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
-
-# live-server
-alias live="browser-sync start --server "." --files *"
 
 # man pt-br
 alias man="man -L pt_BR.UTF-8"

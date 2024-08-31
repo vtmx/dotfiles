@@ -8,7 +8,7 @@ super + {_,shift + }c
 
 # Powermenu
 ctrl + alt + Delete
-  powermenu
+  $HOME/.local/bin/powermenu.sh
 
 # Quit
 super + shift + q
@@ -106,8 +106,8 @@ ctrl + alt + {h,Left,j,Down,k,Up,l,Right}
 # 	bspvolume{ --toggle, --toggle-mic}
 
 # Apps
-super + {a,b,g,m,p,t,s,v}
-	{pamac-manager,firefox,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
+super + {a,b,e,g,m,p,t,s,v}
+	{pamac-manager,firefox,thunar,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
 super + alt + {p}
 	{bitwarden}
@@ -116,8 +116,8 @@ super + shift + p
 	bspc node -g sticky
 
 # Mouse
-~button3
-  jgmenu_run
+#~button3
+#  jgmenu_run
 
 # Return current desktop
 # bspc query -D -d --names

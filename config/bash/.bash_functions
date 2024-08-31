@@ -86,7 +86,7 @@ htm() {
   fi
 
   [[ "$1"  && "$2" ]] || {
-    echo 'usage: htm [link] [element]'
+    echo 'usage: htm <link> <element>'
     return 1
   }
 
@@ -147,7 +147,7 @@ mvcd() {
 # Rename extension
 mvext() {
   [[ $1 && $2 ]] || {
-    echo 'usage: mvext [old extension] [new extension]'
+    echo 'usage: mvext <old extension> <new extension>'
     return 1
   }
   for file in *.$1; do
@@ -192,13 +192,22 @@ mvup() {
 # Rename substitute word
 mvs() {
   [[ $1 && $2 ]] || {
-    echo 'usage: mvs [old word] [new word]'
+    echo 'usage: mvs <old word> <new word>'
     return 1
   }
   for file in *; do
     mv "$file" "${file/$1/$2}"
   done
   return 0
+}
+
+# Link in working dir
+lwd() {
+  [[ $1 && $2 ]] || {
+    echo 'usage: lwd <file-or-dir> <path>'
+    return 1
+  }
+  ln -sf "$(pwd)/$1" $2
 }
 
 # Play
@@ -265,7 +274,7 @@ rc() {
 
 # Remove extension
 rmext() {
-  [[ $1 ]] || { echo 'usage: rmext [extension]'; return 1; }
+  [[ $1 ]] || { echo 'usage: rmext <extension>'; return 1; }
   for file in *.$1; do
     mv "$file" "${file%.$1}"
   done
