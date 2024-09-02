@@ -2,7 +2,6 @@ app=gwenview
 custom_action_command=/usr/lib/xfce4/screenshooter/scripts/imgur-upload.sh %f %imgur_client_id
 last_user=
 last_extension=png
-enable_imgur_upload=true
 show_in_folder=false
 screenshot_dir=file:/home/vitor/Downloads
 action=1

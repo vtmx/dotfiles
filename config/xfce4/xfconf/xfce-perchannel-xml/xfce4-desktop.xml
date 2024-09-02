@@ -61,7 +61,7 @@
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/vitor/Pictures/wallpapers/meus/wave.png"/>
+          <property name="last-image" type="string" value="/home/vitor/Dev/dotfiles/assets/wallpapers/bash.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>

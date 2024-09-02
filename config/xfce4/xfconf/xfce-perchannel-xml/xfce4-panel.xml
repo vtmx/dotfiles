@@ -12,7 +12,6 @@
       <property name="icon-size" type="uint" value="0"/>
       <property name="size" type="uint" value="26"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="5"/>
         <value type="int" value="7"/>
         <value type="int" value="6"/>
         <value type="int" value="15"/>
@@ -73,20 +72,6 @@
     <property name="plugin-15" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-5" type="string" value="whiskermenu">
-      <property name="view-mode" type="int" value="1"/>
-      <property name="category-show-name" type="bool" value="true"/>
-      <property name="launcher-show-tooltip" type="bool" value="false"/>
-      <property name="launcher-show-description" type="bool" value="false"/>
-      <property name="button-icon" type="string" value="im-msn"/>
-      <property name="recent" type="array">
-        <value type="string" value="firefox.desktop"/>
-        <value type="string" value="xfce4-taskmanager.desktop"/>
-        <value type="string" value="org.kde.plasma-systemmonitor.desktop"/>
-      </property>
-      <property name="favorites" type="array">
-      </property>
     </property>
     <property name="plugin-1" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
