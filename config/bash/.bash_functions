@@ -202,9 +202,9 @@ mvs() {
 }
 
 # Link in working dir
-lwd() {
+lnwd() {
   [[ $1 && $2 ]] || {
-    echo 'usage: lwd <file-or-dir> <path>'
+    echo 'usage: lnwd <file-or-dir> <path>'
     return 1
   }
   ln -sf "$(pwd)/$1" $2

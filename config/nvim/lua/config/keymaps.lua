@@ -49,6 +49,11 @@ map(
 )
 
 map(
+  'i', '<c-,>', '```bash<cr>```<esc>O',
+  { desc = 'Add bash code' }
+)
+
+map(
   'n', 'j', 'gj',
   { desc = 'Ignore wordwrap jumpline' }
 )

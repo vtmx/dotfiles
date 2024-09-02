@@ -5,6 +5,7 @@
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
       <value type="string" value="org.manjaro.pamac.tray"/>
+      <value type="string" value="org.xfce.Thunar"/>
     </property>
   </property>
 </channel>

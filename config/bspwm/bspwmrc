@@ -26,6 +26,7 @@ $bc active_border_color   "#be5046"
 $bc presel_feedback_color "#98c379"
 
 # Rules
+$br dolphin desktop="^3" focus=on follow=on
 $br firefox desktop="^1" focus=on follow=on
 $br code    desktop="^2" focus=on follow=on
 $br kitty   desktop="^2" focus=on follow=on
@@ -34,3 +35,4 @@ $br nemo    desktop="^3" focus=on follow=on
 $br thunar  desktop="^3" focus=on follow=on
 $br mpv     desktop="^4" focus=on follow=on state=floating 
 $br vlc     desktop="^4" focus=on follow=on
+$br polybar layer=above

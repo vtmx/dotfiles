@@ -1,2 +1,22 @@
 @import 'colors.css';
 @import 'xfce4-panel.css';
+
+/* Thunar */
+
+.thunar entry,
+.thunar separator,
+.thunar .sidebar,
+.thunar .standard-view {
+  border: none;
+}
+
+.thunar separator {
+  background: #2c313c;
+}
+
+/* Tooltip */
+
+tooltip {
+  visibility: hidden;
+  opacity: 0;
+}
