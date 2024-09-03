@@ -593,11 +593,11 @@
     </tr>
     <tr>
       <td><kbd>F4</kbd></td>
-      <td>Toggle Terminal</td>
+      <td>Toggle terminal</td>
     </tr>
     <tr>
       <td><kbd>Shift</kbd> + <kbd>F4</kbd></td>
-      <td>Open Terminal</td>
+      <td>Open terminal</td>
     </tr>
     <tr>
       <td><kbd>F5</kbd></td>
@@ -606,6 +606,10 @@
     <tr>
       <td><kbd>F6</kbd></td>
       <td>Go to adressbar</td>
+    </tr>
+    <tr>
+      <td><kbd>F9</kbd></td>
+      <td>Toggle sidebar</td>
     </tr>
     <tr>
       <td><kbd>F11</kbd></td>
