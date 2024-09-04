@@ -13,11 +13,11 @@ local lualine_map = {
 }
 
 local lualine_theme = ({
-  normal = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fgd }, z = { fg = c.fgd }, },
-  insert = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fgd }, z = { fg = c.fgd }, },
-  visual = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fgd }, z = { fg = c.fgd }, },
-  replace = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fgd }, z = { fg = c.fgd }, },
-  inactive = { a = { fg = c.fgd, bg = 'NONE' }, b = { fg = c.fgd }, z = { fg = c.fgd }, },
+  normal   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
+  insert   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
+  visual   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
+  replace  = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
+  inactive = { a = { fg = c.fd, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
 })
 
 return {
@@ -41,9 +41,9 @@ return {
         tab_size = 30,
       },
       highlights = {
-        background = { fg = c.fgd, bg = 'NONE' },
-        buffer = { bg = 'NONE', fg = c.fgd },
-        buffer_visible = { bg = 'NONE', fg = c.fgd },
+        background = { fg = c.fd, bg = 'NONE' },
+        buffer = { bg = 'NONE', fg = c.fd },
+        buffer_visible = { bg = 'NONE', fg = c.fd },
         buffer_selected = { bg = 'NONE', fg = c.fg, bold = false, italic = false },
         close_button = { fg = 'NONE', bg = 'NONE' },
         close_button_visible = { fg = 'NONE', bg = 'NONE' },
@@ -53,7 +53,7 @@ return {
         group_label = { bg = 'NONE' },
         indicator_selected = { bg = 'NONE', fg = 'NONE' },
         indicator_visible = { bg = 'NONE', fg = 'NONE' },
-        modified = { bg = 'NONE', fg = c.fgd },
+        modified = { bg = 'NONE', fg = c.fd },
         modified_selected = { bg = 'NONE', fg = c.fg },
         separator = { bg = 'NONE', fg = 'NONE' },
         separator_selected = { bg = 'NONE', fg = 'NONE' },

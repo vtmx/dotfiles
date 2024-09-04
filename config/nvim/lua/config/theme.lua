@@ -3,9 +3,9 @@ local c = require('config.colors')
 local hl_groups = {
   -- General
   Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
-  Comment        = { fg = c.fgd, ctermfg = 7, italic = true },
+  Comment        = { fg = c.fd, ctermfg = 7, italic = true },
   Title          = { fg = c.purple  },
-  Twilight       = { fg = c.fgd },
+  Twilight       = { fg = c.fd },
 
   -- Sintaxy
   Boolean        = { fg = c.orange },
@@ -40,31 +40,31 @@ local hl_groups = {
   -- Extras
   Debug          = { fg = c.yellow  },
   Directory      = { fg = c.blue    },
-  EndOfBuffer    = { fg = c.fgd     },
-  NonText        = { fg = c.fgd     },
+  EndOfBuffer    = { fg = c.fd     },
+  NonText        = { fg = c.fd     },
   Special        = { fg = c.blue    },
   SpecialChar    = { fg = c.yellow  },
-  SpecialComment = { fg = c.fgd     },
+  SpecialComment = { fg = c.fd     },
   SpecialKey     = { fg = c.cyan    },
   TermCursor     = { fg = c.fg      },
 
   -- Float popup
   NormalFloat        = { bg = c.bg },
-  FloatBorder        = { bg = c.bg, fg = c.fgd },
-  FloatShadow        = { bg = c.bgd },
-  FloatShadowThrough = { bg = c.bgd },
+  FloatBorder        = { bg = c.bg, fg = c.fd },
+  FloatShadow        = { bg = c.bd },
+  FloatShadowThrough = { bg = c.bd },
 
   -- Search
   Delimiter      = { fg = c.purple },
-  IncSearch      = { bg = c.sel    },
+  IncSearch      = { bg = c.ac    },
   MatchParen     = { fg = c.yellow },
-  Search         = { bg = c.sel    },
-  CurSearch      = { bg = c.sel    },
-  Conceal        = { bg = c.sel    },
+  Search         = { bg = c.ac    },
+  CurSearch      = { bg = c.ac    },
+  Conceal        = { bg = c.ac    },
 
   -- Messages
-  ModeMsg        = { fg = c.fgd     },
-  MoreMsg        = { fg = c.fgd     },
+  ModeMsg        = { fg = c.fd     },
+  MoreMsg        = { fg = c.fd     },
   Question       = { fg = c.fg      },
   WarningMsg     = { fg = c.yellow  },
 
@@ -77,49 +77,49 @@ local hl_groups = {
   EndOfBuffer    = { fg = c.bg },
 
   -- Line highlight
-  CursorLine     = { bg = c.bgl },
+  CursorLine     = { bg = c.bl },
 
-  -- Select text
-  Visual         = { bg = c.sel },
+  -- acect text
+  Visual         = { bg = c.ac },
 
   -- Line number column
   CursorLineFold = { fg = c.fg  },
   CursorLineNr   = { fg = c.fg  },
   CursorLineSign = { fg = c.fg  },
-  LineNr         = { fg = c.sel },
-  LineNrAbove    = { fg = c.sel },
-  LineNrBelow    = { fg = c.sel },
+  LineNr         = { fg = c.ac },
+  LineNrAbove    = { fg = c.ac },
+  LineNrBelow    = { fg = c.ac },
 
   -- Pmenu
-  Pmenu          = { bg = c.bgd },
-  PmenuSbar      = { bg = c.bgd },
-  PmenuSel       = { bg = c.bgl },
-  PmenuThumb     = { bg = c.bgl },
+  Pmenu          = { bg = c.bd },
+  PmenuSbar      = { bg = c.bd },
+  Pmenuac       = { bg = c.bl },
+  PmenuThumb     = { bg = c.bl },
 
   -- Pmenu coc
-  CocFloating       = { bg = c.bgd  },
-  CocFloatSbar      = { bg = c.bgd  },
-  CocFloatThumb     = { bg = c.bgl  },
-  CocMenuSel        = { bg = c.bgl  },
-  CocPumDetail      = { fg = c.fgd  },
-  CocPumMenu        = { bg = c.bgd  },
-  CocPumShortcut    = { fg = c.fgd  },
-  CocPumVirtualText = { fg = c.fgd  },
+  CocFloating       = { bg = c.bd  },
+  CocFloatSbar      = { bg = c.bd  },
+  CocFloatThumb     = { bg = c.bl  },
+  CocMenuac        = { bg = c.bl  },
+  CocPumDetail      = { fg = c.fd  },
+  CocPumMenu        = { bg = c.bd  },
+  CocPumShortcut    = { fg = c.fd  },
+  CocPumVirtualText = { fg = c.fd  },
   CocSearch         = { fg = c.blue },
 
   -- Tab bar
-  WinbarNC          = { fg = c.fgd },
+  WinbarNC          = { fg = c.fd },
 
   -- Line win separator split
   StatusLine        = { bg = 'NONE' },
   StatusLineNC      = { fg = c.fg   },
-  WinSeparator      = { fg = c.sel  },
+  WinSeparator      = { fg = c.ac  },
 
   --Diff
-  DiffAdd           = { fg = c.fgd },
-  DiffDelete        = { fg = c.fgd },
-  DiffChange        = { fg = c.fgd },
-  DiffText          = { fg = c.fgd },
+  DiffAdd           = { fg = c.fd },
+  DiffDelete        = { fg = c.fd },
+  DiffChange        = { fg = c.fd },
+  DiffText          = { fg = c.fd },
 
   -- Languages
 
@@ -189,12 +189,12 @@ local hl_groups = {
   DiffText     = { fg = c.fg },
 
   -- Float
-  FoldColumn   = { bg = c.sel, fg = c.cyan },
-  Folder       = { bg = c.sel, fg = c.cyan },
+  FoldColumn   = { bg = c.ac, fg = c.cyan },
+  Folder       = { bg = c.ac, fg = c.cyan },
 
   -- I dont know
   ColorColumn  = { bg = c.red, fg = c.bg },
-  CursorColumn = { fg = c.sel },
+  CursorColumn = { fg = c.ac },
 
   -- Tree-sitter
 
@@ -279,10 +279,10 @@ local hl_groups = {
 
   -- codium
   CodiumAnnotation = { fg = c.fg },
-  CodiumSuggestion = { fg = c.fgd },
+  CodiumSuggestion = { fg = c.fd },
 
   -- indent-line
-  IblIndent = { fg = c.sel  },
+  IblIndent = { fg = c.ac  },
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- bufferline
@@ -295,14 +295,14 @@ local hl_groups = {
   HopNextKey1              = { fg = c.blue   },
   HopNextKey2              = { fg = c.orange },
   HopNextKey3              = { fg = c.purple },
-  HopUnmatched             = { fg = c.fgd    },
+  HopUnmatched             = { fg = c.fd    },
 
   -- lazy
-  LazyNormal               = { bg = c.bgd },
-  LazyProp                 = { bg = c.sel },
+  LazyNormal               = { bg = c.bd },
+  LazyProp                 = { bg = c.ac },
 
   -- nvim-tree
-  NvimTreeCursorLine       = { bg = c.bgl },
+  NvimTreeCursorLine       = { bg = c.bl },
   NvimTreeFolder           = { fg = c.fg  },
   NvimTreeFolderIcon       = { fg = c.fg  },
   NvimTreeFolderName       = { fg = c.fg  },
@@ -312,36 +312,36 @@ local hl_groups = {
   NvimTreeNormalNC         = { bg = c.bg  },
   NvimTreeRootFolder       = { fg = c.fg  },
   NvimTreeOpenedFile       = { fg = c.fg  },
-  NvimTreeVertSplit        = { fg = c.sel },
+  NvimTreeVertSplit        = { fg = c.ac },
   NvimTreeWindowPicker     = { fg = c.fg  },
 
   -- mini-jump
   MiniJump                 = { fg = c.red  },
 
   -- telescope
-  TelescopeMultiSelection  = { fg = c.fg   },
+  TelescopeMultiacection   = { fg = c.fg   },
   TelescopeMultiIcon       = { fg = c.fg   },
   TelescopeNormal          = { fg = c.fg   },
   TelescopePreviewNormal   = { fg = c.fg   },
   TelescopePromptNormal    = { fg = c.fg   },
   TelescopeResultsNormal   = { fg = c.fg   },
-  TelescopePromptBorder    = { fg = c.fgd  },
-  TelescopeResultsBorder   = { fg = c.fgd  },
-  TelescopePreviewBorder   = { fg = c.fgd  },
-  TelescopeSelection       = { bg = c.bgl  },
-  TelescopeSelectionCaret  = { fg = c.fg, bg = c.bgl },
+  TelescopePromptBorder    = { fg = c.fd  },
+  TelescopeResultsBorder   = { fg = c.fd  },
+  TelescopePreviewBorder   = { fg = c.fd  },
+  Telescopeacection        = { bg = c.bl  },
+  TelescopeacectionCaret   = { fg = c.fg, bg = c.bl },
   TelescopeTitle           = { fg = c.fg   },
   TelescopePromptTitle     = { fg = c.fg   },
   TelescopeResultsTitle    = { fg = c.fg   },
   TelescopePreviewTitle    = { fg = c.fg   },
-  TelescopePromptCounter   = { fg = c.fgd  },
+  TelescopePromptCounter   = { fg = c.fd  },
   TelescopeMatching        = { fg = c.blue },
   TelescopePromptPrefix    = { fg = c.fg   },
 
   -- which-key
   WhichKey                 = { fg = c.blue   },
   WhichKeyDesc             = { fg = c.fg     },
-  WhichKeyFloat            = { bg = c.bgd    },
+  WhichKeyFloat            = { bg = c.bd    },
   WhichKeyGroup            = { fg = c.purple },
   WhichKeySeparator        = { fg = c.fg     },
 }
