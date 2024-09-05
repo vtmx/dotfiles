@@ -46,7 +46,7 @@ configuration {
 * {
 	font: "BlexMono Nerd Font 11";
 	bg:  #1e2227;
-	bgl: #2c313c;
+	bl: #2c313c;
 	fg:  #abb2bf;
 }
 
@@ -55,7 +55,7 @@ window {
 	padding: 0;
 	background-color: @bg;
 	border: 1px;
-	border-color: @bgl;
+	border-color: @bl;
 }
 
 mainbox {
@@ -80,7 +80,7 @@ inputbar {
 	padding: 14px 16px;
 	background-color: transparent;
   border: 0 0 1px 0;
-  border-color: @bgl;
+  border-color: @bl;
 }
  
 // icon
@@ -113,7 +113,7 @@ element {
 // hover
 element selected.normal,
 element selected.active {
-	background-color: @bgl;
+	background-color: @bl;
 	text-color: @fg;
 }
 
