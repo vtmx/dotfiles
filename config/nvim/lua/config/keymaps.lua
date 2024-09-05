@@ -188,7 +188,7 @@ map(
 -- Macro
 
 map(
-  'n', 'Q', 'Qzz',
+  'n', 'Q', 'Q',
   { desc = 'Play macro' }
 )
 
