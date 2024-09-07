@@ -1,1 +1,327 @@
-/home/vitor/.mozilla/firefox/ph8r9j57.default-release/chrome/custom.css
+:root {
+  --neutral0: #23272e;
+  --neutral1: #1e2227;
+  --neutral2: #3d4556;
+  --neutral3: #5c6370;
+  --neutral4: #2d333b;
+  --neutral5: #828997;
+  --neutral7: #abb2bf;
+  --accent: #61afef;
+  --radius: 4px;
+}
+
+body {
+  font-family: Segoe, sans-serif !important;
+  font-size: 13px !important;
+}
+
+#sidebar-box {
+  background: var(--neutral0) !important;
+  color: var(--neutral7) !important;
+}
+
+/* preferences page */
+@-moz-document url-prefix(about:preferences) {
+  #preferences-stack {
+    max-width: 1200px !important;
+    margin-inline: auto !important;
+  }
+}
+
+/* hidens element */
+#import-button,
+#nav-bar #identity-box,
+#nav-bar #identity-permission-box,
+#nav-bar #tracking-protection-icon-container,
+#nav-bar-overflow-button,
+#picture-in-picture-button,
+#reader-mode-button,
+#titlebar #alltabs-button,
+#titlebar #firefox-view-button,
+#titlebar .titlebar-buttonbox-container,
+#titlebar .titlebar-spacer,
+#unified-extensions-button,
+#urlbar .search-one-offs:not([hidden]),
+#urlbar-zoom-button {
+ display: none !important;
+}
+
+/* titlebar */
+#navigator-toolbox,
+#tabbrowser-arrowscrollbox {
+  background: var(--neutral1) !important;
+}
+
+#navigator-toolbox {
+  border: none !important;
+}
+
+/* bookmarks toolbar */
+#personal-bookmarks {
+  background: var(--neutral1) !important;
+}
+
+/* bookmarks toolbar remove space */
+:root[uidensity="compact"] #PersonalToolbar {
+  padding-inline: 0 !important;
+}
+
+/* bookmark height */
+#editBMPanel_folderTree,
+#editBMPanel_tagsSelector {
+  height: 55vh !important;
+}
+
+/* colors of github dimmed */
+#nav-bar:before {
+  background: var(--neutral4) !important;
+  border-radius: var(--radius) !important;
+}
+
+/* navigator-toolbox remobe border bottom */
+#navigator-toolbox {
+  border: none !important;
+}
+
+/* remove space to start toolbar */
+#back-button {
+  padding-inline-start: 0 !important;
+}
+
+/* padding menu button */
+#PanelUI-menu-button {
+  padding-right: 4px !important;
+}
+
+/* tab hide favicons */
+.tabbrowser-tab .tab-icon-stack {
+  filter: grayscale(50%) !important;
+  transition: all .2s;
+}
+
+/* tab show favicons on hover */
+.tabbrowser-tab[visuallyselected="true"] .tab-icon-stack,
+.tabbrowser-tab:hover .tab-icon-stack {
+  filter: grayscale(0) !important;
+}
+
+/* tab inactive foreground */
+.tabbrowser-tab .tab-content {
+  color: var(--neutral3) !important;
+}
+
+/* tab hover background necessário hbox */
+.tabbrowser-tab:hover .tab-background hbox {
+  background: var(--neutral4) !important;
+  transition: all .05s !important;
+}
+
+/* tab hover foreground */
+.tabbrowser-tab:hover .tab-content {
+  color: var(--neutral7) !important;
+}
+
+/* tab active background necessário hbox */
+.tabbrowser-tab[visuallyselected] .tab-background hbox {
+  background: var(--neutral4);
+}
+
+/* tab active foreground */
+.tabbrowser-tab[visuallyselected] .tab-content {
+  color: var(--neutral7) !important;
+}
+
+/* tab hide icon close */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  opacity: 0 !important;
+  color: var(--neutral5) !important;
+  transition: all .2s !imporntat;
+}
+
+/* tab show close on hover */
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 1 !important;
+}
+
+/* tab new tab button */
+#tabs-newtab-button .toolbarbutton-icon {
+  fill: var(--neutral3) !important;
+}
+
+/* tab new tab button on hover */
+#tabs-newtab-button:hover .toolbarbutton-icon {
+  background: var(--neutral4) !important;
+  fill: var(--neutral7) !important;
+}
+
+/* tab remove preview */
+#tab-preview-panel {
+  display: none !important;
+}
+
+/* tab remove margin first */
+#TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label) {
+  margin-inline-start: 0 !important;
+}
+
+/* urlbar remove outline and box-shadow of children */
+#urlbar, #urlbar * {
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+}
+
+/* urlbar-input-box prevent gtk colors */
+#urlbar .urlbar-input-box {
+  color: var(--neutral7) !important;
+  padding: 0 4px !important;
+}
+
+/* urlbar add background on hover */
+#urlbar:not([focused]) #urlbar-background {
+  background: var(--neutral1) !important;
+}
+
+/* urlbar add transition when hover */
+#urlbar #urlbar-background {
+  background: var(--neutral1) !important;
+  border: none !important;
+  transition: all .2s !important;
+}
+
+/* urlbar show border when active */
+#urlbar[breakout] #urlbar-background,
+#urlbar[breakout][breakout-extend] #urlbar-background {
+  border: none;
+}
+
+/* urlbar selection color when window active */
+#urlbar[breakout][breakout-extend] ::selection {
+  background: var(--accent);
+  color: var(--neutral0);
+}
+
+/* urlbar selection color when window inactive */
+#urlbar ::selection {
+  background: transparent;
+  color: var(--neutral7);
+}
+
+/* urlbar font-size url */
+#urlbar .urlbarView-url {
+  font-size: inherit !important;
+}
+
+/* urlbar item list */
+#urlbar .urlbarView-row {
+  padding: 0 8px !important;
+  border-radius: 0 !important;
+  transition: all .1s !important;
+}
+
+/* result links prevent gtk colors */
+
+/* urlbar item list url */
+#urlbar .urlbarView-title {
+  color: var(--neutral7) !important;
+}
+
+#urlbar .urlbarView-url {
+  color: var(--neutral5) !important;
+}
+
+/* urlbar list */
+.urlbarView {
+  width: 100% !important;
+  margin-inline: 0 !important;
+}
+
+/* urlbar item list on hover */
+#urlbar .urlbarView-row:hover {
+  /* cursor: pointer !important; */
+  background: var(--neutral2) !important;
+  color: #dadfe9 !important;
+}
+
+.urlbarView-results {
+  padding-block: 0 !important;
+}
+
+/* hide search end site list */
+#urlbar .search-one-offs:not([hidden]) {
+  display: none !important;
+}
+
+/* urlbar Search with... */
+#urlbar *|input::placeholder {
+ color: transparent !important;
+ opacity: 0 !important;
+}
+
+/* change color bookmarks icon */
+#urlbar-container #star-button[starred] {
+ fill: var(--neutral3) !important;
+}
+
+/* findbar */
+findbar {
+  background: var(--neutral1) !important;
+  border: none !important;
+}
+
+/* prevent gtk color */
+.toolbarbutton-animatable-box, .toolbarbutton-1 {
+  fill: var(--neutral7) !important;
+}
+
+/* disable tooltip */
+tooltip {
+  background-color: transparent; !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  border-color: transparent; !important;
+  font-size: 0px !important; 
+  font-family: tahoma, verdana !important;
+  color: transparent; !important;
+  -moz-appearance: none !important;
+}
+
+/* sidebar */
+.sidebar-panel {
+  background: var(--neutral1) !important;
+  color: var(--neutral7) !important;
+}
+
+/* sidebar history */
+.sidebar-splitter {
+  width: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-right: 1px solid var(--neutral2) !important;
+}
+
+#sidebar-header {
+  background: var(--neutral1) !important;
+  border-bottom: 0 !important;
+}
+
+/* sidebar bookmarks */
+.sidebar-placesTreechildren {
+  color: var(--neutral7) !important;
+}
+
+/* private icon */
+#private-browsing-indicator-with-label {
+  border: none !important;
+}
+
+.scrollbar-topmost {
+  background: transparent !important;
+}
+
+/* private icon */
+findbar {
+  border-top: 1px solid #2c313c !important;
+}
+
