@@ -11,7 +11,7 @@ br="bspc rule -a"
 $bm 1 2 3 4 5 6 7 8 9
 
 # Config
-$bc border_width          3
+$bc border_width          1
 $bc window_gap            8
 $bc split_ratio           0.50
 $bc single_monocle        true
@@ -20,19 +20,20 @@ $bc gapless_monocle       true
 $bc paddingless_monocle   true
 
 # Theme
-$bc focused_border_color  "#5c6370"  
-$bc normal_border_color   "#23272e"
-$bc active_border_color   "#be5046"
-$bc presel_feedback_color "#98c379"
+$bc focused_border_color  "#3d4556"  
+$bc normal_border_color   "#2c313c"
+# $bc active_border_color   "#be5046"
+# $bc presel_feedback_color "#98c379"
 
 # Rules
-$br dolphin desktop="^3" focus=on follow=on
-$br firefox desktop="^1" focus=on follow=on
-$br code    desktop="^2" focus=on follow=on
-$br kitty   desktop="^2" focus=on follow=on
-$br dolphin desktop="^3" focus=on follow=on
-$br nemo    desktop="^3" focus=on follow=on
-$br thunar  desktop="^3" focus=on follow=on
-$br mpv     desktop="^4" focus=on follow=on state=floating 
-$br vlc     desktop="^4" focus=on follow=on
-$br polybar layer=above
+$br bitwarden-desktop desktop="^3" focus=on follow=on
+$br code              desktop="^2" focus=on follow=on
+$br dolphin           desktop="^3" focus=on follow=on
+$br firefox           desktop="^1" focus=on follow=on
+$br kitty             desktop="^2" focus=on follow=on
+$br mpv               desktop="^4" focus=on follow=on state=floating 
+$br polybar           layer=above
+$br qbittorrent       desktop="^5" focus=on follow=on
+$br steam             desktop="^4"
+$br thunar            desktop="^3" focus=on follow=on
+$br vlc               desktop="^4" focus=on follow=on
