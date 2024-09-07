@@ -5,7 +5,7 @@ shopt -s globstar
 bspdir=$HOME/.config/bspwm
 
 xsetroot -cursor_name left_ptr &
-pgrep -x dunst   > /dev/null || dunst -conf $bspdir/dunst/dunstrc &
+pgrep -x dunst   > /dev/null || dunst -config $bspdir/dunst/dunstrc &
 pgrep -x feh     > /dev/null || feh --no-fehbg --bg-scale --randomize $bspdir/wall/** &
 # pgrep -x jgmenu  > /dev/null || jgmenu --simple --config-file=$bspdir/jgmenu/jgmenurc --csv-file=$bspdir/jgmenu/menu.csv
 # pgrep -x picom   > /dev/null || picom --config $bspdir/picom/picom.conf &
