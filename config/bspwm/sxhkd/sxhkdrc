@@ -109,8 +109,8 @@ ctrl + alt + {h,Left,j,Down,k,Up,l,Right}
 super + {a,b,e,g,m,p,t,s,v}
 	{pamac-manager,firefox,thunar,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
-super + alt + {p}
-	{bitwarden-desktop}
+super + alt + {e,p}
+	{dolphin,bitwarden-desktop}
 
 super + shift + p
 	bspc node -g sticky
