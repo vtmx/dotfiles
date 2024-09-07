@@ -23,12 +23,12 @@ super + shift + r
   pkill -USR1 -x sxhkd && notify-send 'sxhkd reloaded'
 
 # Laucnher
-super + @space
+super + space
 	rofi -show drun
 
 # Toggle floating
 super + shift + space
-	bspc node -t floating
+	bspc node -t "~"{floating,tiled}
 
 # Terminal
 super + Return
@@ -44,7 +44,7 @@ super + ctrl + shift + b
 
 # Toggle fullscreen
 super + f
-	bspc node -t fullscreen
+	bspc node -t "~"{tiled,fullscreen}
 
 # Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
@@ -110,7 +110,7 @@ super + {a,b,e,g,m,p,t,s,v}
 	{pamac-manager,firefox,thunar,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
 super + alt + {p}
-	{bitwarden}
+	{bitwarden-desktop}
 
 super + shift + p
 	bspc node -g sticky
