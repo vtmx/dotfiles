@@ -252,15 +252,16 @@ play() {
 rc() {
   local rcfiles=(\
     "$HOME/.bashrc" \
-    "$HOME/.bash_functions" \
     "$HOME/.bash_aliases" \
-    "$HOME/.bashrc" \
     "$HOME/.bash_functions" \
     "$HOME/.config/bspwm/autostart" \
-    "$HOME/.config/bspwm/bspwmrc" \
+    "$HOME/.config/bspwm/config" \
+    "$HOME/.config/bspwm/rules" \
+    "$HOME/.config/bspwm/shortcuts" \
     "$HOME/.config/bspwm/dunst/dunstrc" \
+    "$HOME/.config/bspwm/jgmenu/jgmenurc" \
+    "$HOME/.config/bspwm/picom/picom.conf" \
     "$HOME/.config/bspwm/polybar/config.ini" \
-    "$HOME/.config/bspwm/sxhkd/sxhkdrc" \
     "$HOME/.config/kitty/kitty.conf" \
     "$HOME/.config/nvim/init.lua" \
     "$HOME/.config/openbox/rc.xml" \
@@ -303,6 +304,10 @@ wa() {
       fi
     fi
   fi
+}
+
+xevk() {
+  xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
 
 xf() {
