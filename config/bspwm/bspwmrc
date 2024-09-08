@@ -28,7 +28,7 @@ $bc presel_feedback_color "#61afef"
 # Rules
 $br bitwarden-desktop desktop="^3" focus=on follow=on
 $br code              desktop="^2" focus=on follow=on
-$br conky             state=floating border=off 
+$br conky             border=off   state=floating 
 $br dolphin           desktop="^3" focus=on follow=on
 $br firefox           desktop="^1" focus=on follow=on
 $br kitty             desktop="^2" focus=on follow=on
