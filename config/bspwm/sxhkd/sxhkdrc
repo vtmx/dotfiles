@@ -67,6 +67,15 @@ super + r : {h,j,k,l}
 ctrl + shift + m : {h,Left,j,Down,k,Up,l,Right}
 	bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
 
+# Change volume
+super + shift + v : {Up,Down,m}
+  {amixer -q set Master 10%+ && notify-send Volume '10% up',\
+   amixer -q set Master 10%- && notify-send Volume '10% down', \
+   amixer -q set Master toggle && notify-send Volume 'Toggle mute'}
+
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+  amixer -q set Master {10%+,10%-,toggle}
+
 # Config
 super + {comma,period}
 	{kitty -e nvim $HOME/.config/bspwm/bspwmrc, \
@@ -96,60 +105,12 @@ super + alt + {e,p}
 ~button3
   if ! bspc query -N -d focused; then jgmenu; fi
 
-# Exodia os ref
-# xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
-
-# Return current desktop
-# bspc query -D -d --names
-# DESKTOP = ${bspc query -D -d --names}
-# bspc rule -a \* -o desktop="$DESKTOP && inkspace
-
-# Brighness control
-# XF86MonBrightness{Up,Down}
-# 	bspbrightness{ --inc, --dec}
-	
-# Volume control
-# XF86Audio{RaiseVolume,LowerVolume}
-# 	bspvolume{ --inc, --dec}
-
-# Volume Mute
-# XF86AudioMute
-	# bspvolume --toggle
-
-# Music control
-# XF86Audio{Next,Prev,Play,Stop}
-# 	mpc {next,prev,toggle,stop}
-
-# Mic Volume control
-# XF86Audio{Mute,MicMute}
-# 	bspvolume{ --toggle, --toggle-mic}
-
-
-# Exit commands
-# systemctl poweroff
-# systemctl reboot
-# systemctl suspend
-
 # Links
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm
 # https://github.com/Exodia-OS/exodia-bspwm/tree/master/src/config/bspwm
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofi
 # https://github.com/Exodia-OS/exodia-bspwm/blob/b40fef1045a3485d08966cf92a966599b292abff/src/PKGBUILD#L21
-#https://fedorabr.org/discussion/242/tutorial-sxhkd-atalhos-de-teclado-independentes-de-de-ou-wm
-#$ xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-#110 Home
-#112 Prior
-#117 Next
-#115 End
-#59  comma
-#60  period
-#61  semicolon
-#49  apostrophe
-#62  Shift_R
-#49  quotedbl
-#34  dead_acute
-#35  bracketleft
-#48  dead_tilde
-#51  bracketright
-#135 Menu
-#133 Super_L
+# https://fedorabr.org/discussion/242/tutorial-sxhkd-atalhos-de-teclado-independentes-de-de-ou-wm
+# xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+# 110 Home 112 Prior 117 Next 115 End 59  comma 60  period 61  semicolon 49  apostrophe
+# 49  quotedbl 34  dead_acute 35  bracketleft 48  dead_tilde 51  bracketright 135 Menu 133 Super_L

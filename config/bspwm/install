@@ -1,3 +1,16 @@
 #!/usr/bin/env bash
 
-sudo pacman --noconfirm -S bspwm conky dunst feh yad jgmenu picom polybar sxhkd
+sudo pacman --noconfirm -S \
+  breeze-gtk \
+  bspwm \
+  conky \
+  dunst \
+  feh \
+  yad \
+  jgmenu \
+  picom \
+  qt5ct \
+  qt6ct \
+  polybar \
+  sxhkd \
+  xfce4-power-manager
