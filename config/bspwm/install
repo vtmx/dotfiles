@@ -8,6 +8,7 @@ sudo pacman --noconfirm -S \
   feh \
   yad \
   jgmenu \
+  pavucontrol \
   picom \
   qt5ct \
   qt6ct \
