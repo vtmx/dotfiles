@@ -1,0 +1,15 @@
+Terminal,kitty,xfce4-terminal,utilities-terminal
+Browser,firefox
+File manager,thunar,system-file-manager
+
+^sep()
+
+Reset sxhkd,pgrep -x sxhkd >/dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrcbak && notify-send sxkd Reset
+
+^sep()
+
+Exit,^checkout(exit),system-shutdown
+^tag(exit)
+Logout,bspc quit
+Reboot,systemctl -i reboot,system-reboot
+Poweroff,systemctl -i poweroff,system-shutdown

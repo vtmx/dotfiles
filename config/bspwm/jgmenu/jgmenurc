@@ -1,7 +1,7 @@
-csv_name_format     = %n
+csv_cmd             = cat $HOME/.config/bspwm/jgmenu/menu.csv
 font                = Segoe UI Semibold 10
 position_mode       = pointer
-stay_alive          = 1
+stay_alive          = 0
 terminal_exec       = kitty
 terminal_args       = -e
 
@@ -47,4 +47,4 @@ hover_delay         = 10
 sub_hover_action    = 1
 sub_spacing         = 4
 
-# vim:ft=conf
+# vim:ft=dosini

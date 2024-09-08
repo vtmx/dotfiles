@@ -79,7 +79,7 @@ local hl_groups = {
   -- Line highlight
   CursorLine     = { bg = c.bl },
 
-  -- acect text
+  -- Acect text
   Visual         = { bg = c.ac },
 
   -- Line number column
@@ -100,7 +100,7 @@ local hl_groups = {
   CocFloating       = { bg = c.bd  },
   CocFloatSbar      = { bg = c.bd  },
   CocFloatThumb     = { bg = c.bl  },
-  CocMenuac        = { bg = c.bl  },
+  CocMenuac         = { bg = c.bl  },
   CocPumDetail      = { fg = c.fd  },
   CocPumMenu        = { bg = c.bd  },
   CocPumShortcut    = { fg = c.fd  },
@@ -113,7 +113,7 @@ local hl_groups = {
   -- Line win separator split
   StatusLine        = { bg = 'NONE' },
   StatusLineNC      = { fg = c.fg   },
-  WinSeparator      = { fg = c.ac  },
+  WinSeparator      = { fg = c.ac   },
 
   --Diff
   DiffAdd           = { fg = c.fd },
