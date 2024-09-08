@@ -1,0 +1,62 @@
+# Close, kill window
+super + {_,shift + }c
+	bspc node -{c,k}
+
+# Toggle fullscreen
+super + shift + f
+	bspc node -t "~"{tiled,fullscreen}
+
+# Stick window always top
+super + shift + p
+	bspc node -g sticky
+
+# Quit
+super + shift + q
+	bspc quit
+
+# Reload
+super + shift + r
+	bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'reloaded'
+
+super + shift + comma
+	bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'reloaded'
+
+# Reload sxhkd
+super + shift + period
+  pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'reloaded'
+
+# Help
+super + shift + f1
+	$HOME/.config/bspwm/conky/toggle
+
+# Toggle floating
+super + shift + space
+	bspc node -t "~"{floating,tiled}
+
+# Focus and move window
+super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
+	bspc node -{f,s} {west,west,south,south,north,north,east,east}
+
+# Focus next, prev window
+super + bracket{left,right}
+	bspc node -f {prev,next}
+
+# Focus next, prev local window
+alt + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
+# Switch workspace or send window to other workspace
+super + ctrl + {_,shift + }{h,Left,l,Right}
+	bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
+
+# Switch and send window to other workspace
+super {_,shift + }{1-9}
+	bspc {desktop -f,node -d} "^{1-9}" --follow
+
+# Terminal
+super + {_,alt + }Return
+  {kitty,bspc rule -a \* -o state=floating && kitty}
+
+# Mouse
+~button3
+  if ! bspc query -N -d focused; then jgmenu --csv-file=$HOME/.config/bspwm/jgmenu/menu.csv; fi

@@ -93,8 +93,11 @@ super + alt + {e,p}
 	{thunar,bitwarden-desktop}
 
 # Mouse
-#~button3
-#  jgmenu_run
+~button3
+  if ! bspc query -N -d focused; then jgmenu; fi
+
+# Exodia os ref
+# xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
 
 # Return current desktop
 # bspc query -D -d --names
