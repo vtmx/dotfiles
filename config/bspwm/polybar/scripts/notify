@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-notify-send teste  
-echo  
+notify-send Título Texto

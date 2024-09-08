@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [[ -z $(pgrep -a polybar) ]]; then
+  polybar bottom -c $HOME/.config/bspwm/polybar/config.ini && \
+  bspc config bottom_padding 32
+else
+  killall polybar
+  while pgrep polybar >/dev/null; do sleep 1; done
+  bspc config bottom_padding 0
+fi  

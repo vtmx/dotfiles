@@ -4,4 +4,4 @@ if [[ -z $(pgrep -a conky) ]]; then
   conky &
 else
   killall conky
-fi
+fi  
