@@ -22,12 +22,13 @@ $bc paddingless_monocle   true
 # Theme
 $bc focused_border_color  "#3d4556"  
 $bc normal_border_color   "#2c313c"
-# $bc active_border_color   "#be5046"
-# $bc presel_feedback_color "#98c379"
+$bc active_border_color   "#abb2bf"
+$bc presel_feedback_color "#61afef"
 
 # Rules
 $br bitwarden-desktop desktop="^3" focus=on follow=on
 $br code              desktop="^2" focus=on follow=on
+$br conky             state=floating border=off 
 $br dolphin           desktop="^3" focus=on follow=on
 $br firefox           desktop="^1" focus=on follow=on
 $br kitty             desktop="^2" focus=on follow=on
@@ -37,3 +38,4 @@ $br qbittorrent       desktop="^5" focus=on follow=on
 $br steam             desktop="^4"
 $br thunar            desktop="^3" focus=on follow=on
 $br vlc               desktop="^4" focus=on follow=on
+$br yad               border=off 

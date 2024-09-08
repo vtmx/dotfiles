@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 if [[ -z $(pgrep -a conky) ]]; then
-  conky &
+  conky -c $HOME/.config/bspwm/conky/conky.conf &
 else
   killall conky
+  while pgrep conky >/dev/null; do sleep 1; done
 fi  
