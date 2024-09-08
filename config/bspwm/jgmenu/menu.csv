@@ -4,7 +4,7 @@ File manager,thunar,system-file-manager
 
 ^sep()
 
-Reset sxhkd,pgrep -x sxhkd >/dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrcbak && notify-send sxkd Reset
+Reset sxhkd,pgrep -x sxhkd >/dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc.bak && notify-send sxkd Reset
 
 ^sep()
 
