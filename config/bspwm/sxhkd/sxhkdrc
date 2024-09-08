@@ -30,7 +30,7 @@ super + shift + period
   pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'reloaded'
 
 # Help
-super + shift + f1
+super + shift + F1
 	$HOME/.config/bspwm/conky/toggle
 
 # Toggle floating

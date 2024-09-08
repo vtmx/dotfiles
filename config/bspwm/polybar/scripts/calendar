@@ -2,4 +2,4 @@
 
 yad --calendar \
 --posx -1 --posy -32 \
---no-buttons --on-top --fixed --undecorated --close-on-unfocus
+--no-buttons --on-top --fixed --undecorated --close-on-unfocus --borders=0
