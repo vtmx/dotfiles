@@ -1,6 +1,6 @@
 # Toggle polybar
 super + shift + b
-	polybar bspwm
+	$HOME/.config/bspwm/polybar/scripts/toggle
 
 # Close, kill window
 super + {_,shift + }c
@@ -37,18 +37,6 @@ super + shift + f1
 super + shift + space
 	bspc node -t "~"{floating,tiled}
 
-# Powermenu
-ctrl + alt + Delete
-  $HOME/.local/bin/powermenu.sh
-
-# Laucnher
-super + space
-	rofi -show drun
-
-# Terminal
-super + {_,alt + }Return
-  {kitty,bspc rule -a \* -o state=floating && kitty}
-
 # Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
 	bspc node -{f,s} {west,west,south,south,north,north,east,east}
@@ -84,12 +72,25 @@ super + {comma,period}
 	{kitty -e nvim $HOME/.config/bspwm/bspwmrc, \
 	 kitty -e nvim $HOME/.config/bspwm/sxhkd/sxhkdrc}
 
+# Powermenu
+ctrl + alt + Delete
+  $HOME/.local/bin/powermenu.sh
+
+# Laucnher
+super + space
+	rofi -show drun
+
+# Terminal
+super + {_,alt + }Return
+  {kitty,bspc rule -a \* -o state=floating && kitty}
+
 # Apps
 super + {a,b,e,g,m,p,t,s,v}
-	{pamac-manager,firefox,thunar,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
+	{pamac-manager,firefox,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
+# Alternate apps
 super + alt + {e,p}
-	{dolphin,bitwarden-desktop}
+	{thunar,bitwarden-desktop}
 
 # Mouse
 #~button3

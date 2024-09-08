@@ -256,6 +256,7 @@ rc() {
     "$HOME/.bash_aliases" \
     "$HOME/.bashrc" \
     "$HOME/.bash_functions" \
+    "$HOME/.config/bspwm/autostart" \
     "$HOME/.config/bspwm/bspwmrc" \
     "$HOME/.config/bspwm/dunst/dunstrc" \
     "$HOME/.config/bspwm/polybar/config.ini" \
