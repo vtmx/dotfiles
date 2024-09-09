@@ -113,6 +113,9 @@ super + {a,b,e,g,m,p,t,s,v}
 super + alt + {e,p}
 	{thunar,bitwarden-desktop}
 
+Print
+	{flameshot gui}
+
 # Mouse
 ~button3
   if ! bspc query -N -d focused; then jgmenu; fi
