@@ -12,6 +12,7 @@ $br thunar            desktop="^3" focus=on follow=on
 $br mpv               desktop="^4" focus=on follow=on state=floating 
 $br steam             desktop="^4"
 $br vlc               desktop="^5" focus=on follow=on
-$br qbittorrent       desktop="^6" focus=on follow=on
+$br qBittorrent       desktop="^6" focus=on follow=on
 $br conky             border=off   state=floating 
 $br pavucontrol       state=floating
+$br Screenkey         manager=off

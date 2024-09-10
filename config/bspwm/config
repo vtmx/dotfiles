@@ -8,15 +8,14 @@ bc="bspc config"
 
 $bc border_width          1
 $bc window_gap            8
-$bc split_ratio           0.50
+$bc split_ratio           0.52
 $bc single_monocle        true
 $bc borderless_monocle    true
 $bc gapless_monocle       true
 $bc paddingless_monocle   true
 
 # Theme
-$bc focused_border_color  "#3d4556"  
 $bc normal_border_color   "#2c313c"
-$bc active_border_color   "#abb2bf"
+$bc active_border_color   "#2c313c"
+$bc focused_border_color  "#3d4556"  
 $bc presel_feedback_color "#61afef"
-
