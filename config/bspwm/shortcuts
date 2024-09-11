@@ -19,15 +19,12 @@ super + shift + q
 	bspc quit
 
 # Reload
-super + shift + r
-	bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'reloaded'
-
-super + shift + comma
-	bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'reloaded'
+super + shift + {r,comma}
+	bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'Reloaded'
 
 # Reload sxhkd
 super + shift + period
-  pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'reloaded'
+  pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'Reloaded'
 
 # Help
 super + shift + F1
@@ -68,14 +65,9 @@ ctrl + shift + m : {h,Left,j,Down,k,Up,l,Right}
 	bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
 
 # Change volume
-super + shift + v : {Up,Down,m}
-  {amixer -q set Master 10%+ && notify-send Volume '10% up',\
-   amixer -q set Master 10%- && notify-send Volume '10% down', \
-   amixer -q set Master toggle && notify-send Volume 'Toggle mute'}
-
-super + {equal,minus}
-  {amixer -q set Master 10%+ && notify-send Volume '10% up',\
-   amixer -q set Master 10%- && notify-send Volume '10% down'}
+super + {equal,minus,0}
+  amixer -q set Master {'10%+','10%-',toggle} && notify-send 'Volume' "$(amixer sget Master | grep -o -m1 '\[[[:digit:]][[:digit:]]\%\]' | tr -d '\[\]')"
+  #awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master)
 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
   amixer -q set Master {10%+,10%-,toggle}
@@ -90,8 +82,8 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 # Edit config and shortcuts
 super + {comma,period}
-	{kitty -e nvim $HOME/.config/bspwm/bspwmrc, \
-	 kitty -e nvim $HOME/.config/bspwm/sxhkd/sxhkdrc}
+  {kitty -e nvim $HOME/.config/bspwm/bspwmrc, \
+   kitty -e nvim $HOME/.config/bspwm/shortcuts}
 
 # Powermenu
 ctrl + alt + Delete
@@ -99,7 +91,7 @@ ctrl + alt + Delete
 
 # Laucnher
 super + space
-	rofi -show drun
+  rofi -show drun
 
 # Terminal
 super + {_,alt + }Return
@@ -107,14 +99,14 @@ super + {_,alt + }Return
 
 # Apps
 super + {a,b,e,g,m,p,t,s,v}
-	{pamac-manager,firefox,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
+  {pamac-manager,firefox,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
 # Alternate apps
 super + alt + {e,p}
-	{thunar,bitwarden-desktop}
+  {thunar,bitwarden-desktop}
 
 Print
-	{flameshot gui}
+  flameshot gui
 
 # Mouse
 ~button3
@@ -123,11 +115,5 @@ Print
 # Links
 # https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm
 # https://github.com/Exodia-OS/exodia-bspwm/tree/master/src/config/bspwm
-# https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofi
-# https://github.com/Exodia-OS/exodia-bspwm/blob/b40fef1045a3485d08966cf92a966599b292abff/src/PKGBUILD#L21
-# https://fedorabr.org/discussion/242/tutorial-sxhkd-atalhos-de-teclado-independentes-de-de-ou-wm
-# xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-# 110 Home 112 Prior 117 Next 115 End 59  comma 60  period 61  semicolon 49  apostrophe
-# 49  quotedbl 34  dead_acute 35  bracketleft 48  dead_tilde 51  bracketright 135 Menu 133 Super_L
 
 # vim:ft=sxhkdrc

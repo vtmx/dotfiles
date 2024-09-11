@@ -6,12 +6,13 @@ sudo pacman --noconfirm -S \
   conky \
   dunst \
   feh \
-  yad \
   jgmenu \
   pavucontrol \
   picom \
+  polkit-gnome \
+  polybar \
   qt5ct \
   qt6ct \
-  polybar \
   sxhkd \
+  yad \
   xfce4-power-manager
