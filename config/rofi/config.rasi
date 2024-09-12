@@ -1,9 +1,6 @@
 // clear default theme
 @theme "/dev/null"
 
-// import
-// @import "onedarkv.rasi"
-
 configuration {
   modi: "drun,window";
 
@@ -14,9 +11,9 @@ configuration {
   display-run: "󰆍";
   display-window: "";
 
-  // display
+  // format
   drun-display-format: "{name}";
-  window-format: "{name} {title}";
+  window-format: "{name}";
 
   // config
   disable-history: false;
@@ -43,16 +40,14 @@ configuration {
   kb-cancel: "Escape,Control+c";
 }
 
+// import
+// @import "onedarkv.rasi"
+
 * {
   font: "BlexMono Nerd Font 11";
   bg: #1e2227;
   bl: #2c313c;
   fg: #abb2bf;
-
-  // background-color: @bg;
-  // text-color: @fg;
-  // border-color: @bl;
-  // normal-foreground: @fg;
 }
 
 window {
@@ -64,14 +59,14 @@ window {
 }
 
 mainbox {
-  spacing: 0px;
+  spacing: 0;
 }
 
 message {
 	background-color: transparent;
 }
 
-// File browser
+// filebrowser
 textbox {
   padding: 8px 16px;
   background-color: @bg;
@@ -89,7 +84,6 @@ inputbar {
  
 // icon
 prompt {
-  margin: 0 16px 0 0;
   background-color: transparent;
   text-color: @fg;
 }
@@ -98,6 +92,7 @@ prompt {
 entry {
   placeholder: "";
   background-color: transparent;
+  margin: 0 0 0 16px;
   text-color: @fg;
 }
 
@@ -136,7 +131,8 @@ element selected.active {
   text-color: inherit;
 }
 
-// references:
+// References:
+// rofi -no-config -dump-theme
 // /usr/share/rofi/themes/default.rasi
 // https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
 // vim:ft=scss
