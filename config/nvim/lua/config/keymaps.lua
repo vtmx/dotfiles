@@ -604,6 +604,11 @@ map(
 )
 
 map(
+  'n', '<leader>ul', function() utils.toggle_listchars() end,
+  { desc = 'Toggle list chars' }
+)
+
+map(
   'n', '<leader>uk', '<cmd>WhichKey<cr>',
   { desc = 'Active WhichKey' }
 )
