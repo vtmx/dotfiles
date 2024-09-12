@@ -1,11 +1,17 @@
+// clear default theme
+@theme "/dev/null"
+
+// import
+// @import "onedarkv.rasi"
+
 configuration {
-	modi: "drun,window,keys";
+  modi: "drun,window";
 
   // icons
-	display-drun: "";
+  display-drun: "";
   display-filebrowser: "";
   display-keys: "";
-	display-run: "";
+  display-run: "󰆍";
   display-window: "";
 
   // display
@@ -13,54 +19,52 @@ configuration {
   window-format: "{name} {title}";
 
   // config
-	disable-history: false;
-	max-history-size: 25;
-	terminal: "kitty";
-	show-icons: false;
+  disable-history: false;
+  max-history-size: 25;
+  terminal: "kitty";
+  show-icons: false;
 
-	// keybindis
-	kb-remove-char-back: "BackSpace";
-	kb-remove-word-forward: "Control+Delete";
+  // keybindis
+  kb-remove-char-back: "BackSpace";
+  kb-remove-word-forward: "Control+Delete";
 
   // up and down
-	kb-remove-to-eol: "";
-	kb-row-down: "Control+j,Control+n,Down";
-	kb-row-up: "Control+k,Control+p,Up";
+  kb-remove-to-eol: "";
+  kb-row-down: "Control+j,Control+n,Down";
+  kb-row-up: "Control+k,Control+p,Up";
 
   // next prev tab
-	kb-mode-complete: "";
-	kb-mode-next: "Control+l";
-	kb-mode-previous: "Control+h";
+  kb-mode-complete: "";
+  kb-mode-next: "Control+l";
+  kb-mode-previous: "Control+h";
 
   // confirm and cancel
-	kb-accept-entry: "Return";
-	kb-cancel: "Escape,Control+c";
+  kb-accept-entry: "Return";
+  kb-cancel: "Escape,Control+c";
 }
 
-// clear default theme
-@theme "/dev/null"
-
-// general
-// @import "onedarkv.rasi"
-
 * {
-	font: "BlexMono Nerd Font 11";
-	bg:  #1e2227;
-	bl: #2c313c;
-	fg:  #abb2bf;
+  font: "BlexMono Nerd Font 11";
+  bg: #1e2227;
+  bl: #2c313c;
+  fg: #abb2bf;
+
+  // background-color: @bg;
+  // text-color: @fg;
+  // border-color: @bl;
+  // normal-foreground: @fg;
 }
 
 window {
-	width: 600;
-	padding: 0;
-	background-color: @bg;
-	border: 1px;
-	border-color: @bl;
+  width: 600px;
+  padding: 0;
+  background-color: @bg;
+  border: 1px;
+  border-color: @bl;
 }
 
 mainbox {
   spacing: 0px;
-	background-color: transparent;
 }
 
 message {
@@ -70,15 +74,15 @@ message {
 // File browser
 textbox {
   padding: 8px 16px;
-	background-color: transparent;
-	text-color: @fg;
+  background-color: @bg;
+  text-color: @fg;
 }
 
 // input
 inputbar {
-	children: [prompt, entry];
-	padding: 14px 16px;
-	background-color: transparent;
+  children: [prompt, entry];
+  padding: 14px 16px;
+  background-color: @bg;
   border: 0 0 1px 0;
   border-color: @bl;
 }
@@ -86,42 +90,53 @@ inputbar {
 // icon
 prompt {
   margin: 0 16px 0 0;
-	background-color: transparent;
-	text-color: @fg;
+  background-color: transparent;
+  text-color: @fg;
 }
 
 // input
 entry {
-	placeholder: "";
-	background-color: transparent;
-	text-color: @fg;
+  placeholder: "";
+  background-color: transparent;
+  text-color: @fg;
 }
 
 // item
 listview {
-	lines: 6;
-	background-color: transparent;
+  lines: 5;
+  margin: 0;
+  padding: 0;
+  background-color: @bg;
+  border: 0;
   spacing: 0;
+  scrollbar: false;
 }
 
 element {
-	padding: 8px 16px;
-	background-color: transparent;
-	text-color: @fg;
+  padding: 8px 16px;
+  text-color: @fg;
 }
 
-// hover
+element-text{
+  background-color: transparent;
+  text-color: @fg;
+}
+
+element normal.normal,
+element normal.active,
+element alternate.normal,
+element alternate.active {
+  background-color: inherit;
+  text-color: inherit;
+}
+
 element selected.normal,
 element selected.active {
-	background-color: @bl;
-	text-color: @fg;
-}
-
-element-text {
-	background-color: inherit;
-	text-color: inherit;
+  background-color: @bl;
+  text-color: inherit;
 }
 
 // references:
+// /usr/share/rofi/themes/default.rasi
 // https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
 // vim:ft=scss

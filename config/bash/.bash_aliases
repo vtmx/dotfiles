@@ -4,6 +4,9 @@ alias bf="$EDITOR $HOME/.bash_functions"
 alias brc="$EDITOR $HOME/.bashrc"
 alias brl="source $HOME/.bashrc; echo Reload bashrc"
 
+# bat
+alias bat="bat --theme=ansi --style=numbers,changes,header --italic-text=always"
+
 # directories
 alias ..="cd .."
 alias ...="cd ../.."
