@@ -14,7 +14,7 @@ end
 -- Toggle IA
 function M.toggle_ia()
   if vim.cmd('CodeiumToggle') then
-    print('Toggle Codeium')
+    print('Toggle ia')
   end
 end
 
@@ -56,7 +56,6 @@ end
 -- Toggle list spell
 function M.toggle_spell()
   vim.wo.spell = not vim.wo.spell
-
   if vim.wo.spell then
     print('Enable spell')
   else

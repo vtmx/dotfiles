@@ -298,7 +298,7 @@ tooltip {
   width: 0 !important;
   background: transparent !important;
   border: 0 !important;
-  border-right: 1px solid var(--neutral2) !important;
+  border-right: 1px solid var(--neutral4) !important;
 }
 
 #sidebar-header {
