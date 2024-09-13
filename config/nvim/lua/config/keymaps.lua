@@ -600,7 +600,7 @@ map(
 
 map(
   'n', '<leader>ui', function() utils.toggle_ia() end,
-  { desc = 'Toggle IA' }
+  { desc = 'Toggle ia' }
 )
 
 map(
@@ -610,7 +610,7 @@ map(
 
 map(
   'n', '<leader>uk', '<cmd>WhichKey<cr>',
-  { desc = 'Active WhichKey' }
+  { desc = 'Active whichkey' }
 )
 
 map(
@@ -635,7 +635,7 @@ map(
 
 map(
   'n', '<leader>uz', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
-  { desc = 'Toggle ZenMode' }
+  { desc = 'Toggle zenMode' }
 )
 
 ------------------------------------------------------------

@@ -92,8 +92,9 @@ local hl_groups = {
 
   -- Pmenu
   Pmenu          = { bg = c.bd },
+  PmenuSel       = { bg = c.bl },
   PmenuSbar      = { bg = c.bd },
-  Pmenuac       = { bg = c.bl },
+  Pmenuac        = { bg = c.bl },
   PmenuThumb     = { bg = c.bl },
 
   -- Pmenu coc
