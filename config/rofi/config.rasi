@@ -63,7 +63,7 @@ mainbox {
 }
 
 message {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 // filebrowser
