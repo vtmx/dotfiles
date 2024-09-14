@@ -284,9 +284,16 @@ rmext() {
 }
 
 # SSH Add Agent
-ssa() {
+ssha() {
   eval "$(ssh-agent -s)"
   ssh-add -k
+}
+
+# Start starship
+starship() {
+  if type -P starship > /dev/null; then
+    eval "$(starship init bash)"
+  fi
 }
 
 # Watch files

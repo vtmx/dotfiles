@@ -44,7 +44,7 @@ copy_bin() {
   bindir=${HOME}/.local/bin
   [[ ! -d $bindir ]] && echo Create bin dir...; mkdir -p $bindir
   echo Create simolic link of bin...
-  if cp -r "${current_dir}/bin/"* $fontdir; then
+  if cp -r "$current_dir/bin/"* $bindir; then
     pause_success "Bin copied"
   else
     pause_error "Bin not copied"
@@ -55,7 +55,7 @@ copy_fonts() {
   fontdir=${HOME}/.local/share/fonts
   [[ ! -d $fontdir ]] && echo Create font dir...; mkdir -p $fontdir
   echo Copying fonts...
-  if cp -r "${current_dir}/fonts/"* $fontdir; then
+  if cp -r "$current_dir/fonts/"* $fontdir; then
     pause_success "Fonts copied"
   else
     pause_error "Fonts not copied"
@@ -213,8 +213,8 @@ sync() {
 
   # starship
   name="starship"
-  dist="$confdir/starship"
-  url="$url/starship/starship.toml"
+  dist="$confdir"
+  url="$url/bash/starship.toml"
   makesync "$name" "$url" "$dist"
 
   # rofi

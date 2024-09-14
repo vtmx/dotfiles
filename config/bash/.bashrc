@@ -40,6 +40,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Prompt
+if [[ -n "$DISPLAY" ]]; then
+  PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]❯\\[\E[0m\\] '
+else
+  PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]>\\[\E[0m\\] '
+fi
+
 # fzf
 if [[ -f $HOME/.fzf.bash ]]; then
   source $HOME/.fzf.bash
@@ -59,24 +66,9 @@ fi
 # nvm
 [[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
 
-# starship
-if type -P starship > /dev/null; then
-  eval "$(starship init bash)"
-else
-  if [[ -n "$DISPLAY" ]]; then
-    PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]❯\\[\E[0m\\] '
-  else
-    PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]>\\[\E[0m\\] '
-  fi
-fi
-
 # zoxide
 if type -P zoxide > /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
-# Links
-# https://sobrelinux.info/questions/771395/documentation-on-less-termcap-variables
-# https://www.howtogeek.com/683134/how-to-display-man-pages-in-color-on-linux
-# https://github.com/meleu/.dotfiles/blob/master/.bashrc
-
+# vim:ft=bash
