@@ -50,17 +50,31 @@ fi
 # fzf
 if [[ -f $HOME/.fzf.bash ]]; then
   source $HOME/.fzf.bash
-  export FZF_DEFAULT_OPTS="\
-  --height 50% --reverse \
-  --border=none --preview-window=''\
-  --prompt '❯ ' --marker '❯' --pointer '❯' \
-  --color=bg:-1,fg:-1 \
-  --color=bg+:bright-black,fg+:-1 \
-  --color=hl:blue,hl+:blue \
-  --color=info:-1,marker:blue \
-  --color=prompt:green,spinner:-1 \
-  --color=pointer:-1,header:-1 \
-  --color=gutter:-1,border:black"
+  if [[ -n "$DISPLAY" ]]; then
+    export FZF_DEFAULT_OPTS="\
+    --height 50% --reverse \
+    --border=none --preview-window=''\
+    --prompt '❯ ' --marker '❯' --pointer '❯' \
+    --color=bg:-1,fg:-1 \
+    --color=bg+:#3d4556,fg+:-1 \
+    --color=hl:blue,hl+:blue \
+    --color=info:-1,marker:blue \
+    --color=prompt:green,spinner:-1 \
+    --color=pointer:-1,header:-1 \
+    --color=gutter:-1,border:black"
+  else
+    export FZF_DEFAULT_OPTS="\
+    --height 50% --reverse \
+    --border=none --preview-window=''\
+    --prompt '❯ ' --marker '❯' --pointer '❯' \
+    --color=bg:-1,fg:-1 \
+    --color=bg+:bright-black,fg+:-1 \
+    --color=hl:blue,hl+:blue \
+    --color=info:-1,marker:blue \
+    --color=prompt:green,spinner:-1 \
+    --color=pointer:-1,header:-1 \
+    --color=gutter:-1,border:black"
+  fi
 fi
 
 # nvm
