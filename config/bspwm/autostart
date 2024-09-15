@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-shopt -s globstar
-
 bspdir=$HOME/.config/bspwm
 
 xsetroot -cursor_name left_ptr &
 pgrep -x dunst               > /dev/null || dunst -config $bspdir/dunst/dunstrc &
-pgrep -x feh                 > /dev/null || feh --no-fehbg --bg-fill --randomize $bspdir/wall/** &
+pgrep -x feh                 > /dev/null || feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/** &
 pgrep -x picom               > /dev/null || picom --config $bspdir/picom/picom.conf &
 pgrep -x polkit-gnome        > /dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 pgrep -x polybar             > /dev/null || polybar bottom -c $bspdir/polybar/config.ini &
 pgrep -x sxhkd               > /dev/null || sxhkd -c $bspdir/shortcuts &
-pgrep -x xfce4-power-manager > /dev/null || xfce4-power-manager --daemon &
+pgrep -x xset                > /dev/null || xset -dpms &

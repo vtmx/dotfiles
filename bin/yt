@@ -12,7 +12,7 @@ main() {
   fi
 
   # Transform filename
-  filename=$(transform_filename $filename)
+  filename=$(transform_filename "$filename")
 
   # Download file
   yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
