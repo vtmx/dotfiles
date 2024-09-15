@@ -9,4 +9,4 @@ pgrep -x picom               > /dev/null || picom --config $bspdir/picom/picom.c
 pgrep -x polkit-gnome        > /dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 pgrep -x polybar             > /dev/null || polybar bottom -c $bspdir/polybar/config.ini &
 pgrep -x sxhkd               > /dev/null || sxhkd -c $bspdir/shortcuts &
-pgrep -x xset                > /dev/null || xset -dpms &
+pgrep -x xfce4-power-manager > /dev/null || xfce4-power-manager --daemon &
