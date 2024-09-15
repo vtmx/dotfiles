@@ -38,63 +38,67 @@ super + shift + F1
 super + shift + space
   bspc node -t "~"{floating,tiled}
 
-# Focus and move window
+# Focus and swap selected node
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
   bspc node -{f,s} {west,west,south,south,north,north,east,east}
 
-# Focus next, prev window
+# Focus next, prev node
 super + bracket{left,right}
   bspc node -f {prev,next}
 
-# Focus next, prev local window
+# Focus next, prev local node
 alt + {_,shift + }Tab
   bspc node -f {next,prev}.local
 
-# Switch workspace or send window to other workspace
+# Focus and send selected node to next, prev desktop
 super + ctrl + {_,shift + }{h,Left,l,Right}
   bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
 
-# Switch and send window to other workspace
-super {_,shift + }{1-9}
+# Focus n desktop and send selected node to n desktop
+super + {_,shift + }{1-9}
   bspc {desktop -f,node -d} "^{1-9}" --follow
 
-# Resize window
+# Send selected node to n desktop
+super + ctrl + {1-9}
+  bspc node -d "^{1-9}"
+
+# Resize selected node
 super + shift + r : {h,j,k,l}
   STEP=20; SELECTION={1,2,3,4}; \
   bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
   bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
-# Move floating window
+# Move floating node
 super + shift + m : {h,Left,j,Down,k,Up,l,Right}
   bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
 
+# User interface
+super + u ; {f,o,r,s}
+  pkill -x picom || \
+  picom --config $HOME/.config/bspwm/picom/picom.conf \
+  {--fading,--inactive-opacity 0.8,--corner-radius 8,--shadow}
+
+# Toggle compositor
+super + shift + u
+  pkill -x picom || picom --config $HOME/.config/bspwm/picom/picom.conf
+
 # Change volume
 super + {equal,minus,0}
-  amixer -q set Master {'10%+','10%-',toggle} && notify-send 'Volume' $(awk -F"[][]" '/Left:/ \{print $2\}' <(amixer sget Master))
-
-# Change audio controls
-#XF86Audio{RaiseVolume,LowerVolume,Mute}
-#  amixer -q set Master {10%+,10%-,toggle}
-
-#XF86Audio{Play,Prev,Next,Stop}
-  #$HOME/.config/bspwm/scripts/mediacontrolkeys {PlayPause,Previous,Next,Stop}
-
-# Change brightness
-#XF86MonBrightness{Up,Down}
-  #xbacklight -{inc,dec} 5
+  amixer -q set Master {'10%+','10%-',toggle} && \
+  notify-send 'Volume' $(awk -F"[][]" '/Left:/ \{print $2\}' <(amixer sget Master))
 
 # Edit config and shortcuts
 super + {comma,period}
   {kitty -e nvim $HOME/.config/bspwm/bspwmrc, \
    kitty -e nvim $HOME/.config/bspwm/shortcuts}
 
+# Launcher and run
+super + {space,r}
+  rofi -show {drun,run}
+
 # Powermenu
 ctrl + alt + Delete
   $HOME/.local/bin/powermenu.sh
-
-# Laucnher and run
-super + {space,r}
-  rofi -show {drun,run}
 
 # Terminal
 super + {_,alt + }Return
@@ -104,7 +108,7 @@ super + {_,alt + }Return
 super + {a,b,e,g,m,p,t,s,v}
   {pamac-manager,firefox,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
-# Alternate apps
+# Apps alternate
 super + alt + {e,p}
   {thunar,bitwarden-desktop}
 
