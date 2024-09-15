@@ -46,10 +46,6 @@ super + shift + space
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
   bspc node -{f,s} {west,west,south,south,north,north,east,east}
 
-# Focus next, prev node
-super + bracket{left,right}
-  bspc node -f {prev,next}
-
 # Focus next, prev local node
 alt + {_,shift + }Tab
   bspc node -f {next,prev}.local
