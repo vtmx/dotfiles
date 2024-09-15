@@ -325,3 +325,9 @@ findbar {
   border-top: 1px solid #2c313c !important;
 }
 
+/* statuspanel */
+#statuspanel-label {
+  border-top: 1px solid var(--neutral4) !important;
+  border-right: 1px solid var(--neutral4) !important;
+}
+

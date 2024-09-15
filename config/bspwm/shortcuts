@@ -18,6 +18,10 @@ super + shift + p
 super + shift + q
   bspc quit
 
+# Toggle compositor
+super + shift + u
+  pkill -x picom || picom --config $HOME/.config/bspwm/picom/picom.conf
+
 # Change wallpaper
 super + shift + w
   feh --no-fehbg --bg-fill --recursive --randomize $HOME/.config/bspwm/wall/**
@@ -72,15 +76,11 @@ super + shift + r : {h,j,k,l}
 super + shift + m : {h,Left,j,Down,k,Up,l,Right}
   bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
 
-# User interface
-super + u ; {f,o,r,s}
+# Ux compositor
+super + u ; {b,f,o,r,s}
   pkill -x picom || \
   picom --config $HOME/.config/bspwm/picom/picom.conf \
-  {--fading,--inactive-opacity 0.8,--corner-radius 8,--shadow}
-
-# Toggle compositor
-super + shift + u
-  pkill -x picom || picom --config $HOME/.config/bspwm/picom/picom.conf
+  {--blur-method gaussian --blur-strength 8,--fading,--inactive-opacity 0.8,--corner-radius 8,--shadow}
 
 # Change volume
 super + {equal,minus,0}
@@ -118,9 +118,5 @@ Print
 # Mouse
 ~button3
   if ! bspc query -N -d focused; then jgmenu; fi
-
-# Links
-# https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm
-# https://github.com/Exodia-OS/exodia-bspwm/tree/master/src/config/bspwm
 
 # vim:ft=sxhkdrc
