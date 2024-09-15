@@ -18,6 +18,10 @@ super + shift + p
 super + shift + q
   bspc quit
 
+# Change wallpaper
+super + shift + w
+  feh --no-fehbg --bg-fill --recursive --randomize $HOME/.config/bspwm/wall/**
+
 # Reload
 super + shift + comma
   bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'Reloaded'
