@@ -264,7 +264,6 @@ rc() {
     "$HOME/.config/bspwm/polybar/config.ini" \
     "$HOME/.config/kitty/kitty.conf" \
     "$HOME/.config/nvim/init.lua" \
-    "$HOME/.config/openbox/rc.xml" \
     "$HOME/.config/rofi/config.rasi" \
     "$HOME/.config/tmux/tmux.conf" \
   )
