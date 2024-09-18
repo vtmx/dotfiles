@@ -364,8 +364,12 @@
       <td>Fullscreen</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd></td>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>,</kbd></td>
       <td>Reload window manager</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd></td>
+      <td>Reload shortcuts</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>q</kbd></td>
