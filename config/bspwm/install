@@ -1,18 +1,22 @@
 #!/usr/bin/env bash
 
-sudo pacman --noconfirm -S \
-  breeze-gtk \
-  bspwm \
-  conky \
-  dunst \
-  feh \
-  jgmenu \
-  pavucontrol \
-  picom \
-  polkit-gnome \
-  polybar \
-  qt5ct \
-  qt6ct \
-  sxhkd \
-  yad \
+pkgs=(
+  breeze-gtk
+  bspwm
+  conky
+  dunst
+  feh
+  jgmenu
+  numlockx
+  pavucontrol
+  picom
+  polkit-gnome
+  polybar
+  qt5ct
+  qt6ct
+  sxhkd
   xfce4-power-manager
+  yad
+)
+
+sudo pacman --noconfirm -S "${pkgs[@]}"
