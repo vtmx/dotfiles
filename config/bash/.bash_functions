@@ -235,11 +235,19 @@ play() {
       lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
       @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
       ost)                to_play "$music/ost"                                  ;;
+      @(r?(ecent)?(s)))   ls "$music"/** -t | head -n 30 | xargs mpv $args      ;;
       @(retro?(wave)))    to_play "$music/retrowave"                            ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"    ;;
       *)                  to_play $1                                            ;;
     esac
   fi
+}
+
+# Play recents
+playr() {
+  local number=30
+  [[ $1  =~ ^[0-9]+$ ]] && number=$1
+  ls $HOME/Music/** -t | head -n $number | xargs mpv --no-video --display-tags=Title,Artist
 }
 
 # History find command use: ctrl+r
