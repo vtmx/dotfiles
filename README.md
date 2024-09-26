@@ -228,8 +228,8 @@
 
 <table>
   <tr>
-    <th align="left" colspan="4">Shade</th>
-    <th align="left" colspan="4">Color</th>
+    <th align="left" colspan="3">Shade</th>
+    <th align="left" colspan="3">Color</th>
   </tr>
   <tr>
     <th align="left">🔍</th>
