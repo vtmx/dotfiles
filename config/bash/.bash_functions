@@ -15,21 +15,19 @@ cpcd() {
 ex() {
   if [[ -f "$1" ]]; then
     case $1 in
-      *.tar.bz2) tar xjf $1   ;;
-      *.tar.gz)  tar xzf $1   ;;
-      *.bz2)     bunzip2 $1   ;;
-      *.rar)     unrar x $1   ;;
-      *.gz)      gunzip $1    ;;
-      *.tar)     tar xf $1    ;;
-      *.tbz2)    tar xjf $1   ;;
-      *.tgz)     tar xzf $1   ;;
-      *.zip)     unzip $1     ;;
-      *.Z)       uncompress $1;;
-      *.7z)      7z x $1      ;;
-      *.deb)     ar x $1      ;;
-      *.tar.xz)  tar xf $1    ;;
-      *.tar.zst) unzstd $1    ;;
-      *) echo "'$1' cannot be extracted.";;
+      *.7z)   7z x $1       ;;
+      *.bz2)  bunzip2 $1    ;;
+      *.deb)  ar x $1       ;;
+      *.gz)   gunzip $1     ;;
+      *.rar)  unrar x $1    ;;
+      *.tar)  tar xf $1     ;;
+      *.tbz2) tar xjf $1    ;;
+      *.tgz)  tar xzf $1    ;;
+      *.xz)   tar xf $1     ;;
+      *.zip)  unzip $1      ;;
+      *.zst)  unzstd $1     ;;
+      *.Z)    uncompress $1 ;;
+      *)      echo "'$1' cannot be extracted" ;;
     esac
   else
     echo "error: $1 is not a valid file"
@@ -216,7 +214,10 @@ play() {
     local music="$HOME/Music"
     local args="--no-video --display-tags=Title,Artist"
 
-    # If subdir play like playlist
+    usage() {
+      echo -e "\nr  Recents\ns  Search"; return 1
+    }
+
     to_play() {
       if [[ -d "$1" ]]; then
         # find "$1" -type f -name "*.mp3" -exec mpv $args {} +
@@ -229,17 +230,19 @@ play() {
     }
 
     case "$1" in
-      @(ani?(me)))        to_play "$music/j-music/anime"                        ;;
-      @(brian|bc))        to_play "$music/jazz/brian-cullberston"               ;;
-      @(jaz?(z)))         to_play "$music/jazz"                                 ;;
-      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"              ;;
-      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"    ;;
-      @(mj|michael))      to_play "$music/lentas/michael-jackson"               ;;
-      ost)                to_play "$music/ost"                                  ;;
-      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 30 | xargs mpv $args      ;;
-      @(retro?(wave)))    to_play "$music/retrowave"                            ;;
-      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"    ;;
-      *)                  to_play $1                                            ;;
+      @(ani?(me)))        to_play "$music/j-music/anime"                          ;;
+      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                 ;;
+      @(jaz?(z)))         to_play "$music/jazz"                                   ;;
+      h)                  usage                                                   ;;
+      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"                ;;
+      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"      ;;
+      @(mj|michael))      to_play "$music/lentas/michael-jackson"                 ;;
+      ost)                to_play "$music/ost"                                    ;;
+      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 30 | xargs mpv $args        ;;
+      @(retro?(wave)))    to_play "$music/retrowave"                              ;;
+      @(s?(earch)))       find "$music" -iname *"$2"*.mp3 | fzf | xargs mpv $args ;;
+      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"      ;;
+      *)                  to_play $1                                              ;;
     esac
   fi
 }
