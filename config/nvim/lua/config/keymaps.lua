@@ -1,61 +1,27 @@
--- Function for mapping
--- local function map(mode, lhs, rhs, opts)
---   local opts = opts or { silent = true }
---   vim.keymap.set(mode, lhs, rhs, opts)
--- end
-
 local utils = require('config.utils')
 local map = vim.keymap.set
 vim.g.mapleader = ' '
 
+-- Normal
+
 map(
-  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
-  { desc = 'Reload config file' }
+  'n', 'gd', function() vim.lsp.buf.declaration() end,
+  { desc = 'Go definition' }
 )
 
 map(
-  'n', '<f1>', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
-  { desc = 'Help for current word' }
+  'n', 'gD', function() vim.lsp.buf.definition() end,
+  { desc = 'Go declaration' }
 )
 
 map(
-  'i', 'kj', '<esc>',
-  { desc = 'Return to normal mode' }
+  'n', 'gi', function() vim.lsp.buf.implementation() end,
+  { desc = 'Go declaration' }
 )
 
 map(
-  'v', 'ç', '<esc>',
-  { desc = 'Return to normal mode' }
-)
-
-map(
-  'i', '<c-backspace>', '<c-w>',
-  { desc = 'Delete word back' }
-)
-
-map(
-  'i', '<c-h>', '<left>',
-  { desc = 'Go left in insert mode' }
-)
-
-map(
-  'i', '<c-l>', '<right>',
-  { desc = 'Go right in insert mode' }
-)
-
-map(
-  'i', '<c-v>', '<c-r>"',
-  { desc = 'Paste register' }
-)
-
-map(
-  'i', '<c-,>', '```bash<cr>```<esc>O',
-  { desc = 'Add bash code' }
-)
-
-map(
-  'n', 'j', 'gj',
-  { desc = 'Ignore wordwrap jumpline' }
+  'n', 'gK', function() vim.lsp.buf.hover() end,
+  { desc = 'Hover definition' }
 )
 
 map(
@@ -64,18 +30,13 @@ map(
 )
 
 map(
-  'n', 'Y', 'y$',
-  { desc = 'Like C and D' }
-)
-
-map(
-  {'n', 'v'}, 'L', 'g_',
-  { desc = 'Go to end line' }
-)
-
-map(
   {'n', 'v'}, 'H', '^',
   { desc = 'Go to begin line' }
+)
+
+map(
+  'n', 'j', 'gj',
+  { desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
@@ -89,91 +50,9 @@ map(
 )
 
 map(
-  'n', '<c-d>', '<c-d>zz',
-  { desc = 'Maintain cursor in the middle screen' }
+  {'n', 'v'}, 'L', 'g_',
+  { desc = 'Go to end line' }
 )
-
-map(
-  'n', '<c-u>', '<c-u>zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n', '<c-i>', '<c-i>zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n', '<c-o>', '<c-o>zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n', '{', '{zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n', '}', '}zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n', '*', '*zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  'n', '#', '#zz',
-  { desc = 'Maintain cursor in the middle screen' }
-)
-
-map(
-  {'n', 'x'}, 'c', '"_c',
-  { desc = 'Change text without putting it into register' }
-)
-
-map(
-  'n', 'C', '"_C',
-  { desc = 'Change aborve cursor without putting it into register' }
-)
-
-map(
-  'n', 'cc', '"_cc',
-  { desc = 'Change line without putting it into register' }
-)
-
-map(
-  'n', '<leader>o', 'm`o<esc>``',
-  { desc = 'Add new line in normal mode' }
-)
-
-map(
-  'n', '<leader>O', 'm`O<esc>``',
-  { desc = 'Add new line in normal mode' }
-)
-
-map(
-  'n', '=', '<c-a>',
-  { desc = 'Incrase number' }
-)
-
-map(
-  'n', '-', '<c-x>',
-  { desc = 'Decrease number' }
-)
-
-map(
-  'n', '<leader>a', 'G<s-v>gg',
-  { desc = 'Select all text' }
-)
-
-map(
-  'n', 'U', '<c-r>',
-  { desc = 'Redo' }
-)
-
--- Mark
 
 map(
   'n', 'm', '`',
@@ -185,25 +64,29 @@ map(
   { desc = 'Create mark' }
 )
 
--- Macro
-
 map(
   'n', 'Q', 'Q',
   { desc = 'Play macro' }
 )
 
--- Register
-
 map(
-  'v', "'", '"',
-  { desc = 'Create register' }
+  'n', 's', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
 )
 
--- Clipboard
+map(
+  'n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
+  { desc = 'Split' }
+)
 
 map(
-  'v', 'y', 'ygv<esc>',
-  { desc = 'Keep cursor end select when visual copy' }
+  'n', 'U', '<c-r>',
+  { desc = 'Redo' }
+)
+
+map(
+  'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
+  { desc = 'Split vertical' }
 )
 
 map(
@@ -217,58 +100,88 @@ map(
 )
 
 map(
-  'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
-  { desc = 'Yank current line to clipboard' }
+  'n', 'Y', 'y$',
+  { desc = 'Like C and D' }
 )
 
 map(
-  'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
-  { desc = 'Yanki selectted line to clipboard' }
+  'n', 'ç', '<cmd>noh<cr>',
+  { desc = 'Remove highlight' }
 )
 
 map(
-  'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
-  { desc = 'Delete to clipboard' }
+  'n', ']d', function() vim.diagnostic.goto_next() end,
+  { desc = 'Next diagnostic' }
 )
 
 map(
-  'v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>',
-  { desc = 'Cut to clipboard' }
+  'n', '[d', function() vim.diagnostic.goto_prev() end,
+  { desc = 'Prev diagnostic' }
 )
 
 map(
-  'n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
+  {'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>',
+  { desc = 'Remove highlight' }
 )
 
 map(
-  'v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
+  'n', '>', '>>',
+  { desc = 'Add indent' }
 )
 
 map(
-  'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
-  { desc = 'Paste from clipboard in new line' }
-)
-
-map(
-  'v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
-)
-
-map(
-  'n', '<leader>j', 'mzJ`z',
-  { desc = 'Join lines' }
-)
-
-map(
-  'n', 'x', '"_x',
-  { desc = 'Delete not copy' }
+  'n', '<', '<<',
+  { desc = 'Remove indent' }
 )
 
 map(
   'n', '<del>', '"_x',
   { desc = 'Delete not copy' }
+)
+
+map(
+  'n', '<f1>', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
+  { desc = 'Help for current word' }
+)
+
+map(
+  'n', '<up>', '<cmd>resize +2<cr>',
+  { desc = 'Resize height taller' }
+)
+
+map(
+  'n', '<down>', '<cmd>resize -2<cr>',
+  { desc = 'Resize height shorter' }
+)
+
+map(
+  'n', '<left>', '<cmd>vertical resize +2<cr>',
+  { desc = 'Resize height left' }
+)
+
+map(
+  'n', '<right>', '<cmd>vertical resize -2<cr>',
+  { desc = 'Resize height right' }
+)
+
+map(
+  'n', '<tab>', '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
+)
+
+map(
+  'n', '<s-tab>', '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
+)
+
+map(
+  'n', '<c-p>', '<cmd>Telescope git_files<cr>',
+  { desc = 'Files' }
+)
+
+map(
+  {'n', 'i', 'v'}, '<c-s>', '<cmd>up!<cr><esc>',
+  { desc = 'Save file if file is change', silent = false }
 )
 
 map(
@@ -282,28 +195,6 @@ map(
 )
 
 map(
-  'i', '<c-a-j>', '<esc><cmd>m .+1<cr>==gi',
-  { desc = 'Move line to down' }
-)
-
-map(
-  'i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi',
-  { desc = 'Move line to up' }
-)
-
-map(
-  'v', '<c-a-j>', ":m '>+1<cr>gv=gv",
-  { desc = 'Move select line(s) to down' }
-)
-
-map(
-  'v', '<c-a-k>', ":m '<-2<cr>gv=gv",
-  { desc = 'Move select line(s) to up' }
-)
-
--- Move and clone line(s)
-
-map(
   'n', '<c-s-a-j>', 'yyp',
   { desc = 'Clone line to down' }
 )
@@ -311,6 +202,68 @@ map(
 map(
   'n', '<c-s-a-k>', 'yyP',
   { desc = 'Clone line to up' }
+)
+
+map(
+  'n', '<a-l>', '<cmd>TmuxNavigateLeft<cr>',
+  { desc = 'TmuxNavigateLeft' }
+)
+
+map(
+  'n', '<a-h>', '<cmd>TmuxNavigateRight<cr>',
+  { desc = 'TmuxNavigateRight' }
+)
+
+map(
+  'n', '<a-j>', '<cmd>TmuxNavigateDown<cr>',
+  { desc = 'TmuxNavigateDown' }
+)
+
+map(
+  'n', '<a-k>', '<cmd>TmuxNavigateUp<cr>',
+  { desc = 'TmuxNavigateUp' }
+)
+
+-- Insert
+
+map(
+  'i', 'kj', '<esc>',
+  { desc = 'Return to normal mode' }
+)
+
+map(
+  'i', '<c-h>', '<left>',
+  { desc = 'Go left in insert mode' }
+)
+
+map(
+  'i', '<c-l>', '<right>',
+  { desc = 'Go right in insert mode' }
+)
+
+map(
+  'i', '<c-,>', '```bash<cr>```<esc>O',
+  { desc = 'Add bash code' }
+)
+
+map(
+  'i', '<c-backspace>', '<c-w>',
+  { desc = 'Delete word back' }
+)
+
+map(
+  'i', '<c-;>', '<esc>:normal gcc<cr>i',
+  { desc = 'Comment line' }
+)
+
+map(
+  'i', '<c-a-j>', '<esc><cmd>m .+1<cr>==gi',
+  { desc = 'Move line to down' }
+)
+
+map(
+  'i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi',
+  { desc = 'Move line to up' }
 )
 
 map(
@@ -323,75 +276,21 @@ map(
   { desc = 'Clone line up' }
 )
 
+-- Select
+
 map(
-  'v', '<c-s-a-j>', ":'<,'>copy '><cr>",
-  { desc = 'Clone select line(s) down' }
+  'v', 'y', 'ygv<esc>',
+  { desc = 'Keep cursor end select when visual copy' }
 )
 
 map(
-  'v', '<c-s-a-k>', 'ygvO<esc>P',
-  { desc = 'Clone select line(s) up' }
-)
-
--- Substitute
-
-map(
-  'n', '<leader>s',
-  function()
-    local cmd = ':%s/<C-r><C-w>//g<Left><Left>'
-    local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-    vim.api.nvim_feedkeys(keys, 'n', false)
-  end,
-  { desc = 'Substitute current word' }
-)
-
--- Searching and replace
-
-map(
-  {'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>',
-  { desc = 'Remove highlight' }
+  'v', 'ç', '<esc>',
+  { desc = 'Return to normal mode' }
 )
 
 map(
-  'n', 'ç', '<cmd>noh<cr>',
-  { desc = 'Remove highlight' }
-)
-
-map(
-  'n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>',
-  { desc = 'Replace word in cursor' }
-)
-
-map(
-  'v', '<leader>r', '"hy:%s/<c-r>h//g<left><left>',
-  { desc = 'Replace selected' }
-)
-
-map(
-  'v', '<leader>R', ':s/<c-r><c-w>/<c-r>+/<cr>e',
-  { desc = 'Replace select to clipboard and keep cursor' }
-)
-
-map(
-  'n', 'n', 'nzzzv',
-  { desc = 'Keep next result centred' }
-)
-
-map(
-  'n', 'N', 'Nzzzv',
-  { desc = 'Keep prev result centred' }
-)
-
--- Indent
-
-map(
-  'n', '>', '>>',
-  { desc = 'Add indent' }
-)
-
-map(
-  'n', '<', '<<',
-  { desc = 'Remove indent' }
+  'v', "'", '"',
+  { desc = 'Create register' }
 )
 
 map(
@@ -404,16 +303,50 @@ map(
   { desc = 'Remove indent' }
 )
 
--- Buffer
-
 map(
-  'n', '<leader>n', '<cmd>ene<cr>',
-  { desc = 'Buffer new' }
+  'v', '<c-a-j>', ":m '>+1<cr>gv=gv",
+  { desc = 'Move select line(s) to down' }
 )
 
 map(
-  'n', '<leader>bn', '<cmd>ene<cr>',
-  { desc = 'Buffer new' }
+  'v', '<c-a-k>', ":m '<-2<cr>gv=gv",
+  { desc = 'Move select line(s) to up' }
+)
+
+map(
+  'v', '<c-s-a-j>', ":'<,'>copy '><cr>",
+  { desc = 'Clone select line(s) down' }
+)
+
+map(
+  'v', '<c-s-a-k>', 'ygvO<esc>P',
+  { desc = 'Clone select line(s) up' }
+)
+
+-- Command
+
+map(
+  'c', '<c-a>', '<home>',
+  { desc = 'Beginner of line' }
+)
+
+map(
+  'c', '<c-e>', '<end>',
+  { desc = 'End of line' }
+)
+
+-- Execute
+
+map(
+  'x', 'c', '"_c',
+  { desc = 'Change text without putting it into register' }
+)
+
+-- Leader
+
+map(
+  'n', '<leader>a', 'G<s-v>gg',
+  { desc = 'Select all text' }
 )
 
 map(
@@ -437,26 +370,6 @@ map(
 )
 
 map(
-  'n', '<leader>bl', '<cmd>bn<cr>',
-  { desc = 'Buffer next' }
-)
-
-map(
-  'n', '<leader>bh', '<cmd>bp<cr>',
-  { desc = 'Buffer prev' }
-)
-
-map(
-  'n', '<tab>', '<cmd>bn<cr>',
-  { desc = 'Buffer next' }
-)
-
-map(
-  'n', '<s-tab>', '<cmd>bp<cr>',
-  { desc = 'Buffer prev' }
-)
-
-map(
   'n', '<leader>bo', '<cmd>BufOnly<cr>',
   { desc = 'Keep just current buffer' }
 )
@@ -466,94 +379,169 @@ map(
   { desc = 'Buffer :update' }
 )
 
--- Split window
-
 map(
-  'n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
-  { desc = 'Split' }
+  'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
+  { desc = 'Delete to clipboard' }
 )
 
 map(
-  'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
-  { desc = 'Split vertical' }
-)
-
--- Resize Window
-
-map(
-  'n', '<up>', '<cmd>resize +2<cr>',
-  { desc = 'Resize height taller' }
+  'v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>',
+  { desc = 'Cut to clipboard' }
 )
 
 map(
-  'n', '<down>', '<cmd>resize -2<cr>',
-  { desc = 'Resize height shorter' }
+  'n', '<leader>e', '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
 )
 
 map(
-  'n', '<left>', '<cmd>vertical resize +2<cr>',
-  { desc = 'Resize height left' }
+  'n', '<leader>E', '<cmd>lua require("mini.files").open()<cr>',
+  { desc = 'MiniFiles' }
 )
 
 map(
-  'n', '<right>', '<cmd>vertical resize -2<cr>',
-  { desc = 'Resize height right' }
-)
-
--- Auto-complete
-
-map(
-  'n', '<c-k>', '<cmd>cnext<cr>zz',
-  { desc = 'Next item' }
+  'n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>',
+  { desc = 'Files with hidden' }
 )
 
 map(
-  'n', '<c-j>', '<cmd>cprev<cr>zz',
-  { desc = 'Prev item' }
-)
-
--- Menu
-
-map(
-  'i', '<c-space>', '<c-n>',
-  { desc = 'Show menu' }
+  'n', '<leader>fb', '<cmd>Telescope buffers<cr>',
+  { desc = 'Buffers' }
 )
 
 map(
-  {'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"',
-  { desc = 'Next item', expr = true }
+  'n', '<leader>fc', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
 )
 
 map(
-  {'i', 'c'}, 'pumvisible<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
-  { desc = 'Prev item', expr = true }
+  'n', '<leader>fC', '<cmd>Telescope commands<cr>',
+  { desc = 'Commands' }
 )
 
 map(
-  {'i', 'c'}, '<c-c>', 'pumvisible() ? "\\<c-e>" : "\\<c-c>"',
-  { desc= "Close menu", expr = true }
-)
-
--- In command mode (not working)
-
-map(
-  'c', '<c-a>', '<home>',
-  { desc = 'Beginner of line' }
+  'n', '<leader>ff', '<cmd>Telescope file_browser<cr>',
+  { desc = 'Files browser' }
 )
 
 map(
-  'c', '<c-e>', '<end>',
-  { desc = 'End of line' }
+  'n', '<leader>fF', '<cmd>Telescope find_files<cr>',
+  { desc = 'Files' }
 )
 
 map(
-  {'n', 'i', 'v'}, '<c-s>', '<cmd>up!<cr><esc>',
-  { desc = 'Save file if file is change', silent = false }
+  'n', '<leader>fg', '<cmd>Telescope git_files<cr>',
+  { desc = 'Git files' }
 )
 
 map(
-  'n', '<leader>S', '<cmd>w !sudo tee %<cr>',
-  { desc = 'Save file with sudo', silent = false }
+  'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
+  { desc = '' }
+)
+
+map(
+  'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
+  { desc = '' }
+)
+
+map(
+  'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
+  { desc = '' }
+)
+
+map(
+  'n', '<leader>fh', '<cmd>Telescope highlights<cr>',
+  { desc = 'Highlights' }
+)
+
+map(
+  'n', '<leader>fH', '<cmd>Telescope help_tags<cr>',
+  { desc = 'Help' }
+)
+
+map(
+  'n', '<leader>fj', '<cmd>Telescope jumplist<cr>',
+  { desc = 'Jump list' }
+)
+
+map(
+  'n', '<leader>fk', '<cmd>Telescope keymaps<cr>',
+  { desc = 'Keymaps' }
+)
+
+map(
+  'n', '<leader>fl', '<cmd>Telescope live_grep<cr>',
+  { desc = 'Live grep' }
+)
+
+map(
+  'n', '<leader>fm', function() vim.lsp.buf.format { async = true } end,
+  { desc = 'LSP formatting' }
+)
+
+map(
+  'n', '<leader>fM', '<cmd>Telescope marks<cr>',
+  { desc = 'Marks' }
+)
+
+map(
+  'n', '<leader>fo', '<cmd>Telescope oldfiles<cr>',
+  { desc = 'Old files' }
+)
+
+map(
+  'n', '<leader>fO', '<cmd>Telescope vim_options<cr>',
+  { desc = 'Options' }
+)
+
+map(
+  'n', '<leader>ft', '<cmd>Telescope filetypes<cr>',
+  { desc = 'File types' }
+)
+
+map(
+  'n', '<leader>j', 'mzJ`z',
+  { desc = 'Join lines' }
+)
+
+map(
+  'n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  { desc = 'Fuzzy' }
+)
+
+map(
+  'n', '<leader>n', '<cmd>ene<cr>',
+  { desc = 'Buffer new' }
+)
+
+map(
+  'n', '<leader>o', 'm`o<esc>``',
+  { desc = 'Add new line in normal mode' }
+)
+
+map(
+  'n', '<leader>O', 'm`O<esc>``',
+  { desc = 'Add new line in normal mode' }
+)
+
+map(
+  'n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
+)
+
+map(
+  'v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
+)
+
+map(
+  'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  { desc = 'Paste from clipboard in new line' }
+)
+
+map(
+  'v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
 )
 
 map(
@@ -565,32 +553,39 @@ map(
   'n', '<leader>Q', '<cmd>qa!<cr>',
   { desc = 'Quit all' }
 )
-
--- Executable
-
 map(
-  'n', '<leader>!x', '<cmd>!chmod +x %<cr>',
-  { desc = 'Make file executable' }
+  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
+  { desc = 'Reload config file' }
 )
 
 map(
-  'n', '<leader>x', '<cmd>!bash %<cr>',
-  { desc = 'Execute file' }
+  'v', '<leader>r', '"hy:%s/<c-r>h//g<left><left>',
+  { desc = 'Replace selected' }
 )
 
 map(
-  'n', '<leader>X', '<cmd>w !bash<cr>',
-  { desc = 'Execute current line' }
+  'n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>',
+  { desc = 'Replace word in cursor' }
 )
 
 map(
-  'v', '<leader>x', "<cmd>w !bash<cr>",
-  { desc = 'Execute selected line' }
+  'v', '<leader>R', ':s/<c-r><c-w>/<c-r>+/<cr>e',
+  { desc = 'Replace select to clipboard and keep cursor' }
 )
 
 map(
-  'i', '<c-;>', '<esc>:normal gcc<cr>i',
-  { desc = 'Comment line' }
+  'n', '<leader>s',
+  function()
+    local cmd = ':%s/<C-r><C-w>//g<Left><Left>'
+    local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+    vim.api.nvim_feedkeys(keys, 'n', false)
+  end,
+  { desc = 'Substitute current word' }
+)
+
+map(
+  'n', '<leader>S', '<cmd>w !sudo tee %<cr>',
+  { desc = 'Save file with sudo', silent = false }
 )
 
 map(
@@ -638,231 +633,56 @@ map(
   { desc = 'Toggle zenMode' }
 )
 
-------------------------------------------------------------
--- LSP
-------------------------------------------------------------
-
 map(
-  'n', '<leader>fm', function() vim.lsp.buf.format { async = true } end,
-  { desc = 'LSP formatting' }
+  'n', '<leader>x', '<cmd>!bash %<cr>',
+  { desc = 'Execute file' }
 )
 
 map(
-  'n', 'gd', function() vim.lsp.buf.declaration() end,
-  { desc = 'Go definition' }
+  'v', '<leader>x', "<cmd>w !bash<cr>",
+  { desc = 'Execute selected line' }
 )
 
 map(
-  'n', 'gD', function() vim.lsp.buf.definition() end,
-  { desc = 'Go declaration' }
+  'n', '<leader>!x', '<cmd>!chmod +x %<cr>',
+  { desc = 'Make file executable' }
 )
 
 map(
-  'n', 'gi', function() vim.lsp.buf.implementation() end,
-  { desc = 'Go declaration' }
+  'n', '<leader>X', '<cmd>w !bash<cr>',
+  { desc = 'Execute current line' }
 )
 
 map(
-  'n', 'gK', function() vim.lsp.buf.hover() end,
-  { desc = 'Hover definition' }
+  'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  { desc = 'Yank current line to clipboard' }
 )
 
 map(
-  'n', ']d', function() vim.diagnostic.goto_next() end,
-  { desc = 'Next diagnostic' }
+  'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
+  { desc = 'Yanki selectted line to clipboard' }
 )
 
-map(
-  'n', '[d', function() vim.diagnostic.goto_prev() end,
-  { desc = 'Prev diagnostic' }
-)
-
-------------------------------------------------------------
--- Plugins
-------------------------------------------------------------
-
--- hop
-map(
-  'n', 's', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
-)
-
--- lazy
-map(
-  'n', '<leader><leader>p', '<cmd>Lazy<cr>',
-  { desc = 'Lazy' }
-)
-
--- treesitter
-map(
-  'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
-  { desc = 'Inspect Tree' }
-)
-
--- oil
-map(
-  'n', '<leader>e', '<cmd>lua require("oil").toggle_float()<cr>',
-  { desc = 'Oil' }
-)
-
--- mini.files
-map(
-  'n', '<leader>E', '<cmd>lua require("mini.files").open()<cr>',
-  { desc = 'MiniFiles' }
-)
-
--- nvim-tree
-map(
-  'n', '<leader><leader>e', '<cmd>NvimTreeToggle<cr>',
-  { desc = 'NvimTree' }
-)
-
--- netrw
-map(
-  'n',
-  '<leader><leader>E',
-  '<cmd>15Lex<cr>',
-  { desc = 'Lex' }
-)
-
--- telescope
-map(
-  'n', '<c-p>', '<cmd>Telescope git_files<cr>',
-  { desc = 'Files' }
-)
-
-map(
-  'n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>',
-  { desc = 'Files with hidden' }
-)
-
-map(
-  'n', '<leader>fb', '<cmd>Telescope buffers<cr>',
-  { desc = 'Buffers' }
-)
-
-map(
-  'n', '<leader>fc', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
-)
-
-map(
-  'n', '<leader>fC', '<cmd>Telescope commands<cr>',
-  { desc = 'Commands' }
-)
-
-map(
-  'n', '<leader>ff', '<cmd>Telescope file_browser<cr>',
-  { desc = 'Files browser' }
-)
-
-map(
-  'n', '<leader>fF', '<cmd>Telescope find_files<cr>',
-  { desc = 'Files' }
-)
-
--- map(
---   'n', '<leader>fg', '<cmd>Telescope git_files<cr>',
---   { desc = 'Git files' }
--- )
---
--- map(
---   'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
---   { desc = '' }
--- )
---
--- map(
---   'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
---   { desc = '' }
--- )
---
--- map(
---   'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
---   { desc = '' }
--- )
-
-map(
-  'n', '<leader>fh', '<cmd>Telescope highlights<cr>',
-  { desc = 'Highlights' }
-)
-
-map(
-  'n', '<leader>fH', '<cmd>Telescope help_tags<cr>',
-  { desc = 'Help' }
-)
-
-map(
-  'n', '<leader>fj', '<cmd>Telescope jumplist<cr>',
-  { desc = 'Jump list' }
-)
-
-map(
-  'n', '<leader>fk', '<cmd>Telescope keymaps<cr>',
-  { desc = 'Keymaps' }
-)
-
-map(
-  'n', '<leader>fl', '<cmd>Telescope live_grep<cr>',
-  { desc = 'Live grep' }
-)
-
-map(
-  'n', '<leader>fm', '<cmd>Telescope marks<cr>',
-  { desc = 'Marks' }
-)
-
-map(
-  'n', '<leader>ft', '<cmd>Telescope filetypes<cr>',
-  { desc = 'File types' }
-)
-
-map(
-  'n', '<leader>fo', '<cmd>Telescope oldfiles<cr>',
-  { desc = 'Old files' }
-)
-
-map(
-  'n', '<leader>fO', '<cmd>Telescope vim_options<cr>',
-  { desc = 'Options' }
-)
-
-map(
-  'n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
-  { desc = 'Fuzzy' }
-)
-
--- tmux
-map(
-  'n', '<a-l>', '<cmd>TmuxNavigateLeft<cr>',
-  { desc = 'TmuxNavigateLeft' }
-)
-
-map(
-  'n', '<a-h>', '<cmd>TmuxNavigateRight<cr>',
-  { desc = 'TmuxNavigateRight' }
-)
-
-map(
-  'n', '<a-j>', '<cmd>TmuxNavigateDown<cr>',
-  { desc = 'TmuxNavigateDown' }
-)
-
-map(
-  'n', '<a-k>', '<cmd>TmuxNavigateUp<cr>',
-  { desc = 'TmuxNavigateUp' }
-)
-
--- zen mode
 map(
   'n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
 )
 
--- References
--- https://github.com/NvChad
--- https://github.com/LazyVim/LazyVim
--- https://github.com/LunarVim/LunarVim
--- https://github.com/AstroNvim/AstroNvim
--- https://bitbucket.org/sergio/mylazy-nvim
--- https://stackoverflow.com/questions/18948491/running-python-code-in-vim
--- https://github.com/jdhao/nvim-config/blob/fc144e08957c39954927ae1f48ce70d8b464d258/core/mappings.lua
+map(
+  'n', '<leader><leader>e', '<cmd>NvimTreeToggle<cr>',
+  { desc = 'NvimTree' }
+)
+
+map(
+  'n', '<leader><leader>E', '<cmd>15Lex<cr>',
+  { desc = 'Lex' }
+)
+map(
+  'n', '<leader><leader>p', '<cmd>Lazy<cr>',
+  { desc = 'Lazy' }
+)
+
+map(
+  'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
+  { desc = 'Inspect Tree' }
+)
