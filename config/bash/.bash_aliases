@@ -15,6 +15,7 @@ alias .4="cd ../../../.."
 alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
 alias cddow="cd $HOME/Downloads"
+alias cdhd="cd /media/hda1"
 alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
@@ -104,6 +105,7 @@ alias lls="ls -ltra | grep --color=never '\->'"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 
 # man pt-br
+alias m="man -L pt_BR.UTF-8"
 alias man="man -L pt_BR.UTF-8"
 
 # create dir

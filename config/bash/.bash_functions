@@ -35,6 +35,11 @@ ex() {
   fi
 }
 
+# Find
+f() {
+  find . -iname *$1*
+}
+
 # Simplified git commit
 gc() {
   if [[ -n "$1" ]]; then
