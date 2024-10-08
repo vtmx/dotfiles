@@ -10,21 +10,6 @@ map(
 )
 
 map(
-  'n', 'gd', function() vim.lsp.buf.declaration() end,
-  { desc = 'Go definition' }
-)
-
-map(
-  'n', 'gD', function() vim.lsp.buf.definition() end,
-  { desc = 'Go declaration' }
-)
-
-map(
-  'n', 'gi', function() vim.lsp.buf.implementation() end,
-  { desc = 'Go declaration' }
-)
-
-map(
   'n', 'gK', function() vim.lsp.buf.hover() end,
   { desc = 'Hover definition' }
 )
@@ -70,11 +55,6 @@ map(
 )
 
 map(
-  'n', 'Q', 'Q',
-  { desc = 'Play macro' }
-)
-
-map(
   'n', 's', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
 )
@@ -105,23 +85,8 @@ map(
 )
 
 map(
-  'n', 'Y', 'y$',
-  { desc = 'Like C and D' }
-)
-
-map(
   'n', 'ç', '<cmd>noh<cr>',
   { desc = 'Remove highlight' }
-)
-
-map(
-  'n', ']d', function() vim.diagnostic.goto_next() end,
-  { desc = 'Next diagnostic' }
-)
-
-map(
-  'n', '[d', function() vim.diagnostic.goto_prev() end,
-  { desc = 'Prev diagnostic' }
 )
 
 map(
