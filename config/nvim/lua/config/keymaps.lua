@@ -5,6 +5,11 @@ vim.g.mapleader = ' '
 -- Normal
 
 map(
+  'x', 'c', '"_c',
+  { desc = 'Change text without putting it into register' }
+)
+
+map(
   'n', 'gd', function() vim.lsp.buf.declaration() end,
   { desc = 'Go definition' }
 )
@@ -120,7 +125,7 @@ map(
 )
 
 map(
-  {'n', 'i'}, '<esc>', '<cmd>noh<cr><esc>',
+  'n', '<esc>', '<cmd>noh<cr><esc>',
   { desc = 'Remove highlight' }
 )
 
@@ -132,11 +137,6 @@ map(
 map(
   'n', '<', '<<',
   { desc = 'Remove indent' }
-)
-
-map(
-  'n', '<del>', '"_x',
-  { desc = 'Delete not copy' }
 )
 
 map(
@@ -180,7 +180,7 @@ map(
 )
 
 map(
-  {'n', 'i', 'v'}, '<c-s>', '<cmd>up!<cr><esc>',
+  'n', '<c-s>', '<cmd>w<cr>',
   { desc = 'Save file if file is change', silent = false }
 )
 
@@ -242,6 +242,11 @@ map(
 )
 
 map(
+  'i', '<c-s>', '<cmd>up!<cr><esc>',
+  { desc = 'Save file if file is change', silent = false }
+)
+
+map(
   'i', '<c-,>', '```bash<cr>```<esc>O',
   { desc = 'Add bash code' }
 )
@@ -276,7 +281,7 @@ map(
   { desc = 'Clone line up' }
 )
 
--- Select
+-- Visual
 
 map(
   'v', 'y', 'ygv<esc>',
@@ -333,13 +338,6 @@ map(
 map(
   'c', '<c-e>', '<end>',
   { desc = 'End of line' }
-)
-
--- Execute
-
-map(
-  'x', 'c', '"_c',
-  { desc = 'Change text without putting it into register' }
 )
 
 -- Leader
@@ -634,13 +632,13 @@ map(
 )
 
 map(
-  'n', '<leader>x', '<cmd>!bash %<cr>',
-  { desc = 'Execute file' }
+  'n', '<leader>x', '<cmd>w !bash<cr>',
+  { desc = 'Execute current line' }
 )
 
 map(
-  'v', '<leader>x', "<cmd>w !bash<cr>",
-  { desc = 'Execute selected line' }
+  'n', '<leader>X', '<cmd>!bash %<cr>',
+  { desc = 'Execute file' }
 )
 
 map(
@@ -649,8 +647,8 @@ map(
 )
 
 map(
-  'n', '<leader>X', '<cmd>w !bash<cr>',
-  { desc = 'Execute current line' }
+  'v', '<leader>x', "<cmd>w !bash<cr>",
+  { desc = 'Execute selected line' }
 )
 
 map(
