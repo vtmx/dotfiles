@@ -40,6 +40,11 @@ f() {
   find . -iname *$1*
 }
 
+# Font list
+fl() {
+  fc-list | awk -F: '{print $2}' | sort | uniq
+}
+
 # Simplified git commit
 gc() {
   if [[ -n "$1" ]]; then
