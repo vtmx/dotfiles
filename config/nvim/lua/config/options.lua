@@ -1,34 +1,22 @@
 local opts = {
   termguicolors = true,
-  title = true,
   autochdir = true,
-  cmdheight = 1,
   cursorline = true,
-  shell = 'bash',
   exrc = true,
   ignorecase = true,
   smartcase = true,
   lazyredraw = true,
-  mouse = 'a',
-  backup = false,
   swapfile = false,
   scrolloff = 10,
   number = true,
   relativenumber = true,
-  autoindent = true,
   expandtab = true,
-  wrap = false,
-  textwidth = 0,
-  wrapmargin = 0,
-  smartindent = true,
   shiftwidth = 2,
   tabstop = 2,
   softtabstop = 2,
-  smoothscroll = true,
-  laststatus = 3,
   splitbelow = true,
   splitright = true,
-  listchars = 'tab:›-,space:·,trail:⋯,eol:↲',
+  listchars = {eol = '↲', space = '.', tab = '›-', trail = '⋯'},
   spelllang = 'pt-BR',
 }
 
@@ -58,21 +46,14 @@ for key, value in pairs(opts) do
   vim.opt[key] = value
 end
 
--- Set native plugins
+-- Set plugins
 for key, value in pairs(plugins) do
   vim.g[key] = value
 end
 
-vim.g.loaded_shada_plugin = 0
-
 -- Ignore node_modules
 vim.opt.wildignore:append { '*/node_modules/*' }
 
--- Search current directory recursively
+-- Search recursively in current directory 
 vim.cmd('set path+=**')
 
--- Links
--- https://shapeshed.com/vim-netrw
--- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua
--- https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer
--- https://github.com/echasnovski/nvim/blob/a3916554cb3cada94b7c4a1f7a1c4d6ab4e8b558/src/settings.lua
