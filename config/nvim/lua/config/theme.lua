@@ -97,24 +97,13 @@ local hl_groups = {
   Pmenuac        = { bg = c.bl },
   PmenuThumb     = { bg = c.bl },
 
-  -- Pmenu coc
-  CocFloating       = { bg = c.bd  },
-  CocFloatSbar      = { bg = c.bd  },
-  CocFloatThumb     = { bg = c.bl  },
-  CocMenuac         = { bg = c.bl  },
-  CocPumDetail      = { fg = c.fd  },
-  CocPumMenu        = { bg = c.bd  },
-  CocPumShortcut    = { fg = c.fd  },
-  CocPumVirtualText = { fg = c.fd  },
-  CocSearch         = { fg = c.blue },
-
   -- Tab bar
   WinbarNC          = { fg = c.fd },
+  WinSeparator      = { fg = c.ac },
 
   -- Line win separator split
   StatusLine        = { bg = 'NONE' },
   StatusLineNC      = { fg = c.fg   },
-  WinSeparator      = { fg = c.ac   },
 
   --Diff
   DiffAdd           = { fg = c.fd },
@@ -192,10 +181,6 @@ local hl_groups = {
   -- Float
   FoldColumn   = { bg = c.ac, fg = c.cyan },
   Folder       = { bg = c.ac, fg = c.cyan },
-
-  -- I dont know
-  ColorColumn  = { bg = c.red, fg = c.bg },
-  CursorColumn = { fg = c.ac },
 
   -- Tree-sitter
 
@@ -296,14 +281,14 @@ local hl_groups = {
   HopNextKey1              = { fg = c.blue   },
   HopNextKey2              = { fg = c.orange },
   HopNextKey3              = { fg = c.purple },
-  HopUnmatched             = { fg = c.fd    },
+  HopUnmatched             = { fg = c.fd     },
 
   -- lazy
   LazyNormal               = { bg = c.bd },
   LazyProp                 = { bg = c.ac },
 
   -- nvim-tree
-  NvimTreeCursorLine       = { bg = c.bl },
+  NvimTreeCursorLine       = { bg = c.bl  },
   NvimTreeFolder           = { fg = c.fg  },
   NvimTreeFolderIcon       = { fg = c.fg  },
   NvimTreeFolderName       = { fg = c.fg  },
@@ -313,7 +298,7 @@ local hl_groups = {
   NvimTreeNormalNC         = { bg = c.bg  },
   NvimTreeRootFolder       = { fg = c.fg  },
   NvimTreeOpenedFile       = { fg = c.fg  },
-  NvimTreeVertSplit        = { fg = c.ac },
+  NvimTreeVertSplit        = { fg = c.ac  },
   NvimTreeWindowPicker     = { fg = c.fg  },
 
   -- mini-jump
@@ -326,23 +311,23 @@ local hl_groups = {
   TelescopePreviewNormal   = { fg = c.fg   },
   TelescopePromptNormal    = { fg = c.fg   },
   TelescopeResultsNormal   = { fg = c.fg   },
-  TelescopePromptBorder    = { fg = c.fd  },
-  TelescopeResultsBorder   = { fg = c.fd  },
-  TelescopePreviewBorder   = { fg = c.fd  },
-  Telescopeacection        = { bg = c.bl  },
+  TelescopePromptBorder    = { fg = c.fd   },
+  TelescopeResultsBorder   = { fg = c.fd   },
+  TelescopePreviewBorder   = { fg = c.fd   },
+  Telescopeacection        = { bg = c.bl   },
   TelescopeacectionCaret   = { fg = c.fg, bg = c.bl },
   TelescopeTitle           = { fg = c.fg   },
   TelescopePromptTitle     = { fg = c.fg   },
   TelescopeResultsTitle    = { fg = c.fg   },
   TelescopePreviewTitle    = { fg = c.fg   },
-  TelescopePromptCounter   = { fg = c.fd  },
+  TelescopePromptCounter   = { fg = c.fd   },
   TelescopeMatching        = { fg = c.blue },
   TelescopePromptPrefix    = { fg = c.fg   },
 
   -- which-key
   WhichKey                 = { fg = c.blue   },
   WhichKeyDesc             = { fg = c.fg     },
-  WhichKeyFloat            = { bg = c.bd    },
+  WhichKeyFloat            = { bg = c.bd     },
   WhichKeyGroup            = { fg = c.purple },
   WhichKeySeparator        = { fg = c.fg     },
 }
