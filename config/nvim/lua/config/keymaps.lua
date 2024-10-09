@@ -85,11 +85,6 @@ map(
 )
 
 map(
-  'n', 'ç', '<cmd>noh<cr>',
-  { desc = 'Remove highlight' }
-)
-
-map(
   'n', '<esc>', '<cmd>noh<cr><esc>',
   { desc = 'Remove highlight' }
 )
@@ -110,22 +105,22 @@ map(
 )
 
 map(
-  'n', '<up>', '<cmd>resize +2<cr>',
+  'n', '<c-w>-', '<cmd>resize +10<cr>',
   { desc = 'Resize height taller' }
 )
 
 map(
-  'n', '<down>', '<cmd>resize -2<cr>',
+  'n', '<c-w>=', '<cmd>resize -10<cr>',
   { desc = 'Resize height shorter' }
 )
 
 map(
-  'n', '<left>', '<cmd>vertical resize +2<cr>',
+  'n', '<c-w><', '<cmd>vertical resize -15<cr>',
   { desc = 'Resize height left' }
 )
 
 map(
-  'n', '<right>', '<cmd>vertical resize -2<cr>',
+  'n', '<c-w>>', '<cmd>vertical resize +15<cr>',
   { desc = 'Resize height right' }
 )
 
@@ -157,16 +152,6 @@ map(
 map(
   'n', '<c-a-k>', '<cmd>m .-2<cr>',
   { desc = 'Move line to up' }
-)
-
-map(
-  'n', '<c-s-a-j>', 'yyp',
-  { desc = 'Clone line to down' }
-)
-
-map(
-  'n', '<c-s-a-k>', 'yyP',
-  { desc = 'Clone line to up' }
 )
 
 map(
@@ -226,36 +211,11 @@ map(
   { desc = 'Comment line' }
 )
 
-map(
-  'i', '<c-a-j>', '<esc><cmd>m .+1<cr>==gi',
-  { desc = 'Move line to down' }
-)
-
-map(
-  'i', '<c-a-k>', '<esc><cmd>m .-2<cr>==gi',
-  { desc = 'Move line to up' }
-)
-
-map(
-  'i', '<c-s-a-j>', '<esc>yypi',
-  { desc = 'Clone line down' }
-)
-
-map(
-  'i', '<c-s-a-k>', '<esc>yyPi',
-  { desc = 'Clone line up' }
-)
-
 -- Visual
 
 map(
   'v', 'y', 'ygv<esc>',
   { desc = 'Keep cursor end select when visual copy' }
-)
-
-map(
-  'v', 'ç', '<esc>',
-  { desc = 'Return to normal mode' }
 )
 
 map(
@@ -281,16 +241,6 @@ map(
 map(
   'v', '<c-a-k>', ":m '<-2<cr>gv=gv",
   { desc = 'Move select line(s) to up' }
-)
-
-map(
-  'v', '<c-s-a-j>', ":'<,'>copy '><cr>",
-  { desc = 'Clone select line(s) down' }
-)
-
-map(
-  'v', '<c-s-a-k>', 'ygvO<esc>P',
-  { desc = 'Clone select line(s) up' }
 )
 
 -- Command
@@ -516,44 +466,30 @@ map(
   'n', '<leader>Q', '<cmd>qa!<cr>',
   { desc = 'Quit all' }
 )
+
 map(
   'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
   { desc = 'Reload config file' }
 )
 
 map(
-  'v', '<leader>r', '"hy:%s/<c-r>h//g<left><left>',
-  { desc = 'Replace selected' }
-)
-
-map(
-  'n', '<leader>R', ':%s/<c-r><c-w>//g<left><left>',
-  { desc = 'Replace word in cursor' }
-)
-
-map(
-  'v', '<leader>R', ':s/<c-r><c-w>/<c-r>+/<cr>e',
-  { desc = 'Replace select to clipboard and keep cursor' }
-)
-
-map(
-  'n', '<leader>s',
-  function()
-    local cmd = ':%s/<C-r><C-w>//g<Left><Left>'
-    local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-    vim.api.nvim_feedkeys(keys, 'n', false)
-  end,
+  'n', '<leader>s', ':%s/<C-r><C-w>//g<Left><Left>',
   { desc = 'Substitute current word' }
 )
 
 map(
-  'n', '<leader>S', '<cmd>w !sudo tee %<cr>',
-  { desc = 'Save file with sudo', silent = false }
+  'n', '<leader>S', ':%s/<C-r><C-w>/<c-r>+/g<Left><Left>',
+  { desc = 'Substitute current word to clipboard' }
 )
 
 map(
-  'n', '<leader>uc', function() utils.toggle_cmdheight() end,
-  { desc = 'Toggle cmd height' }
+  'v', '<leader>s', '"hy:%s/<c-r>h//g<left><left>',
+  { desc = 'Substitute selected word' }
+)
+
+map(
+  'v', '<leader>S', '"hy:%s/<c-r><c-w>/<c-r>+/g<left><left>',
+  { desc = 'Substitute selected word to clipboard' }
 )
 
 map(
@@ -563,7 +499,7 @@ map(
 
 map(
   'n', '<leader>ul', function() utils.toggle_listchars() end,
-  { desc = 'Toggle list chars' }
+  { desc = 'Toggle listchars' }
 )
 
 map(
@@ -578,7 +514,7 @@ map(
 
 map(
   'n', '<leader>ur', function() utils.toggle_relativenumber() end,
-  { desc = 'Toggle relative number', }
+  { desc = 'Toggle relativenumber', }
 )
 
 map(
@@ -592,8 +528,8 @@ map(
 )
 
 map(
-  'n', '<leader>uz', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
-  { desc = 'Toggle zenMode' }
+  'n', '<leader>W', '<cmd>w !sudo -S tee %<cr>',
+  { desc = 'Save file with sudo', silent = false }
 )
 
 map(
@@ -627,7 +563,7 @@ map(
 )
 
 map(
-  'n', '<leader>z', '<cmd>set wrap<cr> <cmd>set linebreak<cr> <cmd>ZenMode<cr>',
+  'n', '<leader>z', '<cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
 )
 
