@@ -26,7 +26,10 @@ for key, value in pairs(opts) do
   vim.opt[key] = value
 end
 
-local plugins = {
+-- Ignore node_modules
+vim.opt.wildignore:append { '*/node_modules/*' }
+
+local g = {
   netrw_altv = 1,
   netrw_banner = 0,
   netrw_browse_split = 4,
@@ -36,13 +39,10 @@ local plugins = {
   netrw_winsize = 20,
 }
 
--- Set config plugin
-for key, value in pairs(plugins) do
+-- Set global variables
+for key, value in pairs(g) do
   vim.g[key] = value
 end
-
--- Ignore node_modules
-vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- Search recursively in current directory 
 vim.cmd('set path+=**')
