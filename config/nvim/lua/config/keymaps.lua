@@ -5,13 +5,13 @@ vim.g.mapleader = ' '
 -- Normal
 
 map(
-  'x', 'c', '"_c',
-  { desc = 'Change text without putting it into register' }
+  'n', 'ç', '<cmd>noh<cr>',
+  { desc = 'Remove highlight' }
 )
 
 map(
-  'n', 'gK', function() vim.lsp.buf.hover() end,
-  { desc = 'Hover definition' }
+  'x', 'c', '"_c',
+  { desc = 'Change text without putting it into register' }
 )
 
 map(
@@ -202,16 +202,16 @@ map(
 )
 
 map(
-  'i', '<c-backspace>', '<c-w>',
-  { desc = 'Delete word back' }
-)
-
-map(
   'i', '<c-;>', '<esc>:normal gcc<cr>i',
   { desc = 'Comment line' }
 )
 
 -- Visual
+
+map(
+  'v', 'ç', '<esc>',
+  { desc = 'Return to normal mode' }
+)
 
 map(
   'v', 'y', 'ygv<esc>',
@@ -294,7 +294,7 @@ map(
 
 map(
   'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
-  { desc = 'Delete to clipboard' }
+  { desc = 'Cut to clipboard' }
 )
 
 map(
@@ -349,17 +349,17 @@ map(
 
 map(
   'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
-  { desc = '' }
+  { desc = 'Git branches' }
 )
 
 map(
   'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
-  { desc = '' }
+  { desc = 'Git commits' }
 )
 
 map(
   'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
-  { desc = '' }
+  { desc = 'Git status' }
 )
 
 map(
@@ -429,12 +429,12 @@ map(
 
 map(
   'n', '<leader>o', 'm`o<esc>``',
-  { desc = 'Add new line in normal mode' }
+  { desc = 'Add new line bottom in normal mode' }
 )
 
 map(
   'n', '<leader>O', 'm`O<esc>``',
-  { desc = 'Add new line in normal mode' }
+  { desc = 'Add new line up in normal mode' }
 )
 
 map(
@@ -554,13 +554,13 @@ map(
 
 map(
   'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
-  { desc = 'Yank current line to clipboard' }
+  { desc = 'Copy line to clipboard' }
 )
 
 map(
   'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
-  { desc = 'Yanki selectted line to clipboard' }
-)
+  { desc = 'Copy to clipboard' }
+) 
 
 map(
   'n', '<leader>z', '<cmd>ZenMode<cr>',
@@ -576,6 +576,7 @@ map(
   'n', '<leader><leader>E', '<cmd>15Lex<cr>',
   { desc = 'Lex' }
 )
+
 map(
   'n', '<leader><leader>p', '<cmd>Lazy<cr>',
   { desc = 'Lazy' }
