@@ -303,13 +303,13 @@ map(
 )
 
 map(
-  'n', '<leader>e', '<cmd>lua require("oil").toggle_float()<cr>',
-  { desc = 'Oil' }
+  'n', '<leader>e', '<cmd>Ex<cr>',
+  { desc = 'Netrw' }
 )
 
 map(
-  'n', '<leader>E', '<cmd>lua require("mini.files").open()<cr>',
-  { desc = 'MiniFiles' }
+  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
 )
 
 map(
@@ -568,12 +568,7 @@ map(
 )
 
 map(
-  'n', '<leader><leader>e', '<cmd>NvimTreeToggle<cr>',
-  { desc = 'NvimTree' }
-)
-
-map(
-  'n', '<leader><leader>E', '<cmd>15Lex<cr>',
+  'n', '<leader><leader>e', '<cmd>15Lex<cr>',
   { desc = 'Lex' }
 )
 
