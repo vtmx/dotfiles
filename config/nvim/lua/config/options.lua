@@ -32,7 +32,6 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 local g = {
   netrw_altv = 1,
   netrw_banner = 0,
-  netrw_browse_split = 4,
   netrw_hide = 1,
   netrw_keepdir = 0,
   netrw_liststyle = 3,

@@ -4,18 +4,8 @@ return {
     event = 'VeryLazy'
   },
   {
-    'echasnovski/mini.ai',
-    event = 'VeryLazy',
-    config = true
-  },
-  {
     'echasnovski/mini.align',
     event = 'VeryLazy',
-    config = true
-  },
-  {
-    'echasnovski/mini.files',
-    cmd = 'MiniFiles',
     config = true
   },
   {
@@ -42,16 +32,11 @@ return {
     cmd = 'ZenMode',
     opts = {
       window = {
-        width = 50,
-        height = 1,
+        width = 50, height = 1,
         options = { cursorline = false, number = false, relativenumber = false }
       },
       plugins = { twilight = { enabled = true }, kitty = { enabled = true, font = "+4" } }
     }
-  },
-  {
-    'junegunn/vim-slash',
-    event = 'InsertEnter'
   },
   {
     'neovim/nvim-lspconfig',

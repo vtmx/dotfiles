@@ -9,7 +9,6 @@ return {
     ensure_installed = { 
       'bash',
       'css',
-      'fish',
       'help',
       'html',
       'javascript',
@@ -17,8 +16,9 @@ return {
       'lua',
       'markdown',
       'python',
-      'typescript',
       'scss',
+      'toml',
+      'typescript',
       'v',
       'vue',
       'yaml'

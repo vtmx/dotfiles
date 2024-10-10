@@ -284,8 +284,9 @@ local hl_groups = {
   HopUnmatched             = { fg = c.fd     },
 
   -- lazy
-  LazyNormal               = { bg = c.bd },
-  LazyProp                 = { bg = c.ac },
+  LazyNormal               = { bg = c.bd    },
+  LazyProgressDone         = { fg = c.blue  },
+  LazyProp                 = { bg = c.ac    },
 
   -- nvim-tree
   NvimTreeCursorLine       = { bg = c.bl  },
@@ -300,9 +301,6 @@ local hl_groups = {
   NvimTreeOpenedFile       = { fg = c.fg  },
   NvimTreeVertSplit        = { fg = c.ac  },
   NvimTreeWindowPicker     = { fg = c.fg  },
-
-  -- mini-jump
-  MiniJump                 = { fg = c.red  },
 
   -- telescope
   TelescopeMultiacection   = { fg = c.fg   },
