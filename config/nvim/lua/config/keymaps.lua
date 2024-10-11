@@ -493,6 +493,11 @@ map(
 )
 
 map(
+  'n', '<leader>ug', function() utils.toggle_spelllang() end,
+  { desc = 'Toggle spelllang' }
+)
+
+map(
   'n', '<leader>ui', function() utils.toggle_ia() end,
   { desc = 'Toggle ia' }
 )
