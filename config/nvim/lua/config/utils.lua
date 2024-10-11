@@ -47,6 +47,16 @@ function M.toggle_spell()
   end
 end
 
+function M.toggle_spelllang()
+  if vim.o.spelllang == 'en' then
+    vim.o.spelllang = 'pt-BR'
+    print('Enable spell')
+  else
+    vim.o.spelllang = 'en'
+    print('Disable spell')
+  end
+end
+
 function M.toggle_wrap()
   if vim.wo.wrap then
     vim.wo.wrap = false
