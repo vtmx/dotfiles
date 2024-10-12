@@ -42,7 +42,7 @@ f() {
 
 # Font list
 fl() {
-  fc-list | awk -F: '{print $2}' | sort | uniq
+  fc-list | awk -F: '{print $2}' | sort | uniq | grep -v Noto
 }
 
 # Simplified git commit
