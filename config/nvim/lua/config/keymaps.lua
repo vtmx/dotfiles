@@ -15,11 +15,6 @@ map(
 )
 
 map(
-  'n', 'k', 'gk',
-  { desc = 'Ignore wordwrap jumpline' }
-)
-
-map(
   {'n', 'v'}, 'H', '^',
   { desc = 'Go to begin line' }
 )
@@ -32,6 +27,11 @@ map(
 map(
   {'n', 'v' }, 'J', '5j',
   { desc = 'Jump 5 line to down' }
+)
+
+map(
+  'n', 'k', 'gk',
+  { desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
