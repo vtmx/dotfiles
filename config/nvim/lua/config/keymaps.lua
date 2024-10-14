@@ -219,11 +219,6 @@ map(
 )
 
 map(
-  'v', "'", '"',
-  { desc = 'Create register' }
-)
-
-map(
   'v', '>', '>gv',
   { desc = 'Add indent' }
 )
@@ -443,18 +438,8 @@ map(
 )
 
 map(
-  'v', '<leader>p', 'c<esc>"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
-)
-
-map(
   'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
   { desc = 'Paste from clipboard in new line' }
-)
-
-map(
-  'v', '<leader>P', 'D"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
 )
 
 map(

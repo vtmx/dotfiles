@@ -101,11 +101,6 @@ htm() {
   curl -s $1 | htmlq -t $2
 }
 
-# List only hidden files
-lsa() {
-  for file in .*; do echo "$file"; done | column
-}
-
 # Create dir and enter
 mkcd() {
   if [[ -n $1 ]]; then
