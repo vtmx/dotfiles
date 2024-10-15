@@ -1,6 +1,7 @@
 return {
-  { 'fladson/vim-kitty', ft = 'kitty' },
   { 'baskerville/vim-sxhkdrc', ft = 'sxhkdrc' },
   { 'cespare/vim-toml', ft = 'toml' },
-  { 'ollykel/v-vim', ft = 'vlang' }
+  { 'fladson/vim-kitty', ft = 'kitty' },
+  { 'ollykel/v-vim', ft = 'vlang' },
+  { 'plasticboy/vim-markdown', ft = 'markdown' },
 }

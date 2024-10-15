@@ -291,6 +291,10 @@ local hl_groups = {
   LazyProgressDone         = { fg = c.blue   },
   LazyProp                 = { bg = c.ac     },
 
+  --markdown
+  mkdCodeStart             = { fg = c.fg     },
+  mkdCodeEnd               = { fg = c.fg     },
+
   -- nvim-tree
   NvimTreeCursorLine       = { bg = c.bl     },
   NvimTreeFolder           = { fg = c.fg     },
