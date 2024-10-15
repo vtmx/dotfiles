@@ -272,12 +272,12 @@ local hl_groups = {
 
   -- indent-line
   IblIndent = { fg = c.ac  },
+  IblScope = { fg = c.fg  },
   ['@ibl.scope.underline.1']   = { link = 'NowText' },
 
-  -- bufferline
-  BufferLineCloseButtonVisible = { bg = 'NONE' },
-  BufferLineIndicatorVisible   = { bg = 'NONE' },
-  BufferLineModified           = { bg = 'NONE' },
+  -- mini-tabline
+  TabLine                  = { fg = c.fd     },
+  TabLineSel               = { fg = c.fg     },
 
   -- hop
   HopNextKey               = { fg = c.red    },
