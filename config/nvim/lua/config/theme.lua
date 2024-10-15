@@ -79,7 +79,7 @@ local hl_groups = {
   -- Line highlight
   CursorLine     = { bg = c.bl },
 
-  -- Acect text
+  -- Select text
   Visual         = { bg = c.ac },
 
   -- Line number column
@@ -90,6 +90,9 @@ local hl_groups = {
   LineNrAbove    = { fg = c.ac },
   LineNrBelow    = { fg = c.ac },
 
+  -- ColorColumn
+  ColorColumn    = { bg = c.bl },
+
   -- Pmenu
   Pmenu          = { bg = c.bd },
   PmenuSel       = { bg = c.bl },
@@ -97,7 +100,7 @@ local hl_groups = {
   Pmenuac        = { bg = c.bl },
   PmenuThumb     = { bg = c.bl },
 
-  -- Tab bar
+  -- Tabbar
   WinbarNC       = { fg = c.fd },
   WinSeparator   = { fg = c.ac },
 

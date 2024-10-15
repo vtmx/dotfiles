@@ -18,6 +18,16 @@ function M.toggle_number()
   end
 end
 
+function M.toggle_colorcolumn()
+  if vim.o.colorcolumn == '' then
+    vim.o.colorcolumn = '80'
+    print('Enable colorcolumn')
+  else
+    vim.o.colorcolumn = ''
+    print('Disable colorcolumn')
+  end
+end
+
 function M.toggle_relativenumber()
   if vim.o.relativenumber then
     vim.o.relativenumber = false
@@ -38,22 +48,15 @@ function M.toggle_listchars()
   end
 end
 
-function M.toggle_spell()
-  vim.wo.spell = not vim.wo.spell
-  if vim.wo.spell then
-    print('Enable spell')
-  else
-    print('Disable spell')
-  end
-end
-
 function M.toggle_spelllang()
   if vim.o.spelllang == 'en' then
-    vim.o.spelllang = 'pt-BR'
-    print('Enable spell')
+    vim.o.spelllang = 'pt'
+    vim.o.spell = true
+    print('Enable spelllang pt')
   else
     vim.o.spelllang = 'en'
-    print('Disable spell')
+    vim.o.spell = false
+    print('Disable spellang')
   end
 end
 
