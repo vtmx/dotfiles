@@ -5,8 +5,8 @@ vim.g.mapleader = ' '
 -- Normal
 
 map(
-  'n', 'ç', '<cmd>noh<cr>',
-  { desc = 'Remove highlight' }
+  'n', 'ç', ':',
+  { desc = 'Fast command line' }
 )
 
 map(
@@ -102,6 +102,16 @@ map(
 map(
   'n', '<f1>', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
   { desc = 'Help for current word' }
+)
+
+map(
+  'n', '<c-w>s', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
+  { desc = 'Split' }
+)
+
+map(
+  'n', '<c-w>v', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
+  { desc = 'Split vertical' }
 )
 
 map(
@@ -216,6 +226,11 @@ map(
 map(
   'v', 'y', 'ygv<esc>',
   { desc = 'Keep cursor end select when visual copy' }
+)
+
+map(
+  'v', "'", '"',
+  { desc = 'Create register' }
 )
 
 map(
@@ -478,8 +493,8 @@ map(
 )
 
 map(
-  'n', '<leader>ug', function() utils.toggle_spelllang() end,
-  { desc = 'Toggle spelllang' }
+  'n', '<leader>uc', function() utils.toggle_colorcolumn() end,
+  { desc = 'Toggle colorcolumn' }
 )
 
 map(
@@ -508,8 +523,8 @@ map(
 )
 
 map(
-  'n', '<leader>us', function() utils.toggle_spell() end,
-  { desc = 'Toggle spell' }
+  'n', '<leader>us', function() utils.toggle_spelllang() end,
+  { desc = 'Toggle spelllang' }
 )
 
 map(
