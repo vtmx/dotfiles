@@ -201,6 +201,11 @@ map(
   { desc = 'Comment line' }
 )
 
+map(
+  'i', '<c-space>', '<c-n>',
+  { desc = 'Show menu' }
+)
+
 -- Visual
 
 map(
@@ -245,6 +250,15 @@ map(
   { desc = 'End of line' }
 )
 
+map(
+  {'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"',
+  { desc = 'Next item', expr = true }
+)
+
+map(
+  {'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
+  { desc = 'Prev item', expr = true }
+)
 
 -- Terminal
 
@@ -544,3 +558,4 @@ map(
   'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
   { desc = 'Inspect Tree' }
 )
+

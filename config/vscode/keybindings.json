@@ -292,6 +292,26 @@
 
   // Auto-sugestion in quick naviction
   {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "vim.active && inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "vim.active && inQuickOpen"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "vim.active && inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "vim.active && inQuickOpen"
+  },
+  {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "vim.active && inQuickOpen"
