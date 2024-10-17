@@ -37,20 +37,6 @@
     "command": "editor.action.formatDocument"
   },
 
-  // Disable shortcut to Markdown view
-  {
-    "key": "ctrl+shift+v",
-    "command": "-markdown.showPreview",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-  },
-
-  // Disable ctrl+shift+m
-  {
-    "key": "ctrl+shift+m",
-    "command": "-workbench.actions.view.problems",
-    "when": "workbench.panel.markers.view.active"
-  },
-
   // Enable ctrl+shift+m
   {
     "key": "ctrl+shift+m",
@@ -84,27 +70,11 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "alt+.",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "alt+,",
-    "command": "workbench.action.previousEditor"
-  },
-  {
     "key": "ctrl+shift+alt+l",
     "command": "workbench.action.moveEditorRightInGroup"
   },
   {
     "key": "ctrl+shift+alt+h",
-    "command": "workbench.action.moveEditorLeftInGroup"
-  },
-  {
-    "key": "alt+shift+.",
-    "command": "workbench.action.moveEditorRightInGroup"
-  },
-  {
-    "key": "alt+shift+,",
     "command": "workbench.action.moveEditorLeftInGroup"
   },
 
@@ -117,11 +87,6 @@
     "key": "ctrl+shift+e",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus"
   },
   {
     "key": "ctrl+shift+n",
@@ -226,9 +191,7 @@
   {
     "key": "ctrl+s",
     "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["workbench.action.files.save", "extension.vim_escape"]
-    },
+    "args": { "sequence": ["workbench.action.files.save", "extension.vim_escape"] },
     "when": "editorTextFocus && !editorReadonly"
   },
 
@@ -296,40 +259,13 @@
 
   // Plugins
   // Align
-  { "key": "ctrl+shift+a", "command": "wwm.aligncode", "when": "editorTextFocus && !editorReadonly" },
+  { 
+    "key": "ctrl+shift+a",
+    "command": "wwm.aligncode",
+    "when": "editorTextFocus && !editorReadonly"
+  },
 
   // Vim
-  // Format document
-  // VSCode attempt to emulate https://github.com/terryma/vim-multiple-cursors
-
-  // Disable ctrl+a in search
-  {
-    "key": "ctrl+a",
-    "command": "-extension.vim_ctrl+a",
-    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
-  },
-
-  // Use built in VSCode pattern matcher for entire word search (ctrl + n)
-  {
-    "key": "ctrl+n",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "vim.active && editorFocus && vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
-  },
-
-  // Skip current match (ctrl + x)
-  {
-    "key": "ctrl+x",
-    "command": "editor.action.moveSelectionToNextFindMatch",
-    "when": "vim.active && editorFocus && vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
-  },
-
-  // Go back to previous match (ctrl + p)
-  {
-    "key": "ctrl+p",
-    "command": "editor.action.moveSelectionToPreviousFindMatch",
-    "when": "vim.active && editorFocus && vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
-  },
-
   // Move lines
   {
     "key": "ctrl+alt+j",
@@ -354,26 +290,26 @@
     "when": "vim.active && editorTextFocus && !editorReadonly"
   },
 
-  // Auto-sugestion in navigation
+  // Auto-sugestion in quick naviction
   {
-    "key": "ctrl+j",
+    "key": "ctrl+n",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "vim.active && inQuickOpen"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+p",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "vim.active && inQuickOpen"
   },
 
   // Auto-sugestion in editor
   {
-    "key": "ctrl+j",
+    "key": "ctrl+n",
     "command": "selectNextSuggestion",
     "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+p",
     "command": "selectPrevSuggestion",
     "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
@@ -382,25 +318,48 @@
   {
     "key": "ctrl+enter",
     "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["extension.vim_escape", "extension.runScript"]
-    },
+    "args": { "sequence": ["extension.vim_escape", "extension.runScript"] },
     "when": "editorTextFocus && editorLangId == autoit"
   },
   {
     "key": "alt+enter",
     "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["extension.vim_escape", "extension.check"]
-    },
+    "args": { "sequence": ["extension.vim_escape", "extension.check"] },
     "when": "editorTextFocus && editorLangId == autoit"
   },
   {
     "key": "ctrl+shift+enter",
     "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["extension.vim_escape", "extension.compile"]
-    },
+    "args": { "sequence": ["extension.vim_escape", "extension.compile"] },
     "when": "editorTextFocus && editorLangId == autoit"
+  },
+
+  // Disables
+
+  // In search
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+  },
+
+  // New file
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+
+  // Markdown view
+  {
+    "key": "ctrl+shift+v",
+    "command": "-markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+
+  // Markers
+  {
+    "key": "ctrl+shift+m",
+    "command": "-workbench.actions.view.problems",
+    "when": "workbench.panel.markers.view.active"
   },
 ]

@@ -2,13 +2,12 @@ local opts = {
   autochdir = true,
   cursorline = true,
   expandtab = true,
-  exrc = true,
   ignorecase = true,
   lazyredraw = true,
   listchars = { eol = '↲', space = '.', tab = '›-', trail = '⋯' },
   number = true,
   relativenumber = true,
-  scrolloff = 10,
+  scrolloff = 8,
   shiftwidth = 2,
   smartcase = true,
   softtabstop = 2,
@@ -53,4 +52,7 @@ end
 
 -- Search recursively in current directory 
 vim.cmd('set path+=**')
+
+-- Using for plugin markdown
+vim.g.vim_markdown_folding_disabled = true
 

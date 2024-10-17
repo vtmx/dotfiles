@@ -16,10 +16,10 @@ alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
 alias cddow="cd $HOME/Downloads"
 alias cdhd="cd /media/hda1"
+alias cdk="cd $HOME/pkgs"
 alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
-alias cdpkg="cd $HOME/packages"
 alias cdt="cd $HOME/Downloads/temp"
 
 # canvas-sketch-cli
@@ -33,7 +33,6 @@ alias code="GTK_USE_PORTAL=1 code"
 
 # copy
 alias cp="cp -i"
-alias cpr="cp -r"
 alias cpv="rsync -ah --info=progress2"
 
 # diff
@@ -202,18 +201,3 @@ alias wt="curl wttr.in/?format=3"
 # lite-xl
 alias xl="lite-xl"
 alias xc="lite-xl $HOME/.config/lite-xl"
-
-# Alias
-# alias live="live-server"
-# alias live=" python -m http.server -b 127.0.0.1 8000 
-# alias xf="sassc -M -t expanded $HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss \
-#
-# Config
-# $HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css && \
-# xfce reload theme
-# xfconf-query -c xsettings -p /Net/ThemeName -r && \
-# xfconf-query -c xsettings -p /Net/ThemeName -s Lightly"
-#
-# Links
-# https://www.npmjs.com/package/live-server
-# https://github.com/Browsersync/browser-sync

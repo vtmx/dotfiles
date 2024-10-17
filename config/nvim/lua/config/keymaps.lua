@@ -55,11 +55,6 @@ map(
 )
 
 map(
-  'n', 's', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
-)
-
-map(
   'n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
   { desc = 'Split' }
 )
@@ -105,32 +100,22 @@ map(
 )
 
 map(
-  'n', '<c-w>s', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
-  { desc = 'Split' }
-)
-
-map(
-  'n', '<c-w>v', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
-  { desc = 'Split vertical' }
-)
-
-map(
-  'n', '<c-w>-', '<cmd>resize +10<cr>',
+  'n', '<c-a-down>', '<cmd>resize +2<cr>',
   { desc = 'Resize height taller' }
 )
 
 map(
-  'n', '<c-w>=', '<cmd>resize -10<cr>',
+  'n', '<c-a-up>', '<cmd>resize -2<cr>',
   { desc = 'Resize height shorter' }
 )
 
 map(
-  'n', '<c-w><', '<cmd>vertical resize -15<cr>',
+  'n', '<left>', '<cmd>vertical resize -2<cr>',
   { desc = 'Resize height left' }
 )
 
 map(
-  'n', '<c-w>>', '<cmd>vertical resize +15<cr>',
+  'n', '<right>', '<cmd>vertical resize +2<cr>',
   { desc = 'Resize height right' }
 )
 
@@ -229,11 +214,6 @@ map(
 )
 
 map(
-  'v', "'", '"',
-  { desc = 'Create register' }
-)
-
-map(
   'v', '>', '>gv',
   { desc = 'Add indent' }
 )
@@ -265,41 +245,19 @@ map(
   { desc = 'End of line' }
 )
 
+
+-- Terminal
+
+map(
+  't', '<c-w>N', '<c-\\><c-n>',
+  { desc = 'Return normal mode in terminal' }
+)
+
 -- Leader
 
 map(
   'n', '<leader>a', 'G<s-v>gg',
   { desc = 'Select all text' }
-)
-
-map(
-  'n', '<leader>bd', '<cmd>bd<cr>',
-  { desc = 'Buffer delete' }
-)
-
-map(
-  'n', '<leader>bD', '<cmd>%bd|e#<cr><cmd>bn<cr><cmd>bd<cr>',
-  { desc = 'Delete all buffers' }
-)
-
-map(
-  'n', '<leader>bn', '<cmd>bn<cr>',
-  { desc = 'Buffer next' }
-)
-
-map(
-  'n', '<leader>bp', '<cmd>bp<cr>',
-  { desc = 'Buffer prev' }
-)
-
-map(
-  'n', '<leader>bo', '<cmd>BufOnly<cr>',
-  { desc = 'Keep just current buffer' }
-)
-
-map(
-  'n', '<leader>bu', function() vim.cmd('update') end,
-  { desc = 'Buffer :update' }
 )
 
 map(
@@ -458,16 +416,6 @@ map(
 )
 
 map(
-  'n', '<leader>q', '<cmd>q<cr>',
-  { desc = 'Quit' }
-)
-
-map(
-  'n', '<leader>Q', '<cmd>qa!<cr>',
-  { desc = 'Quit all' }
-)
-
-map(
   'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
   { desc = 'Reload config file' }
 )
@@ -490,6 +438,16 @@ map(
 map(
   'v', '<leader>S', '"hy:%s/<c-r><c-w>/<c-r>+/g<left><left>',
   { desc = 'Substitute selected word to clipboard' }
+)
+
+map(
+  'n', '<leader>t', '<cmd>below term<cr>',
+  { desc = 'Open terminal' }
+)
+
+map(
+  'n', '<leader>T', '<cmd>vert term<cr>',
+  { desc = 'Open vertical terminal' }
 )
 
 map(

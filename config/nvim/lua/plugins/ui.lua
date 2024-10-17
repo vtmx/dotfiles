@@ -22,13 +22,13 @@ local lualine_theme = ({
 
 return {
   {
+    'kyazdani42/nvim-web-devicons',
+    event = 'VeryLazy'
+  },
+  {
     'echasnovski/mini.tabline',
     event = 'BufAdd',
     opts = { show_icons = false }
-  },
-  {
-    'kyazdani42/nvim-web-devicons',
-    event = 'VeryLazy'
   },
   {
     'lukas-reineke/indent-blankline.nvim',

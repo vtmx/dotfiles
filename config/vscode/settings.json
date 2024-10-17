@@ -250,28 +250,12 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["'"],
-      "after": ["\""]
+      "before": ["ç"],
+      "after": [":"]
     },
     {
-      "before": [">"],
-      "after": [">", ">"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "<"]
-    },
-    {
-      "before": ["="],
-      "after": ["<c-a>"]
-    },
-    {
-      "before": ["-"],
-      "after": ["<c-x>"]
-    },
-    {
-      "before": ["%"],
-      "after": ["G", "V", "g", "g"]
+      "before": ["H"],
+      "after": ["^"]
     },
     {
       "before": ["J"],
@@ -282,47 +266,23 @@
       "after": ["5", "k"]
     },
     {
-      "before": ["Q"],
-      "after": ["@", "q"]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
       "before": ["M"],
       "after": ["`"]
     },
     {
-      "before": ["L"],
-      "after": ["$"]
-    },
-    {
-      "before": ["H"],
-      "after": ["^"]
-    },
-    {
-      "before": ["Y"],
-      "after": ["y", "$"]
+      "before": ["Q"],
+      "after": ["@", "q"]
     },
     {
       "before": ["R"],
       "after": ["\"", "0", "p"]
     },
     {
-      "before": ["ç"],
-      "commands": [":noh"]
-    },
-    {
-      "before": ["u"],
-      "commands": ["undo"]
-    },
-    {
-      "before": ["x"],
-      "after": ["\"", "_", "x"]
-    },
-    {
-      "before": ["v", "v"],
-      "commands": ["workbench.action.moveEditorToNextGroup"]
-    },
-    {
-      "before": ["s", "s"],
+     "before": ["s", "s"],
       "commands": ["workbench.action.moveEditorToBelowGroup"]
     },
     {
@@ -338,6 +298,34 @@
       "after": ["<plugcs>"]
     },
     {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["v", "v"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
+      "before": ["'"],
+      "after": ["\""]
+    },
+    {
+      "before": [">"],
+      "after": [">", ">"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "<"]
+    },
+    {
       "before": ["<c-d>"],
       "after": ["<c-d>", "z", "z"]
     },
@@ -346,16 +334,16 @@
       "commands": ["actions.find"]
     },
     {
+      "before": ["<c-l>"],
+      "commands": [":noh"]
+    },
+    {
       "before": ["<c-h>"],
       "commands": ["editor.action.startFindReplaceAction"]
     },
     {
       "before": ["<c-r>"],
       "commands": ["redo"]
-    },
-    {
-      "before": ["<c-u>"],
-      "after": ["<c-u>", "z", "z"]
     },
     {
       "before": ["<c-s-e>"],
@@ -369,13 +357,30 @@
       "before": ["<c-s-h>"],
       "commands": ["workbench.action.replaceAllInFolder"]
     },
+    // Leader
     {
       "before": ["<leader>", "a"],
       "after": ["G", "V", "g", "g"]
     },
     {
+      "before": ["<leader>", "d"],
+      "after": ["V", "\"", "+", "x"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "c"],
+      "commands": ["EasymotionTrigger"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
     },
     {
       "before": ["<leader>", "j"],
@@ -395,7 +400,7 @@
     },
     {
       "before": ["<leader>", "p"],
-      "after": ["\"", "+", "g", "p", "<esc>"]
+      "after": ["\"", "+", "g", "p"]
     },
     {
       "before": ["<leader>", "P"],
@@ -418,32 +423,12 @@
       "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o"]
     },
     {
-      "before": ["<leader>", "d"],
-      "after": ["V", "\"", "+", "x"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "g", "p"]
-    },
-    {
-      "before": ["<leader>", "P"],
-      "after": ["o", "<esc>", "\"", "+", "g", "p", "<esc>"]
-    },
-    {
       "before": ["<leader>", "z"],
       "commands": ["workbench.action.toggleZenMode"]
     },
     {
       "before": ["<leader>", "<esc>"],
       "commands": [":noh"]
-    },
-    {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["<leader>", "f", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -452,16 +437,12 @@
       "after": ["<esc>"]
     },
     {
-      "before": [">"],
-      "after": [">", "g", "v"]
+      "before": ["ç"],
+      "after": ["<esc>"]
     },
     {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    },
-    {
-      "before": ["L"],
-      "after": ["$", "h"]
+      "before": ["y"],
+      "after": ["y", "g", "v", "<esc>"]
     },
     {
       "before": ["H"],
@@ -476,16 +457,25 @@
       "after": ["5", "k"]
     },
     {
-      "before": ["ç"],
-      "after": ["<esc>"]
+      "before": ["L"],
+      "after": ["$", "h"]
     },
     {
-      "before": ["y"],
-      "after": ["y", "g", "v", "<esc>"]
+      "before": [">"],
+      "after": [">", "g", "v"]
     },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    // Leader
     {
       "before": ["<leader>", "d"],
       "after": ["\"", "+", "x"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "_", "d", "P"]
     },
     {
       "before": ["<leader>", "R"],
@@ -495,13 +485,5 @@
       "before": ["<leader>", "y"],
       "after": ["\"", "+", "y", "g", "v", "<esc>"]
     },
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "_", "d", "P"]
-    },
-    {
-      "before": ["<leader>", "'"],
-      "after": ["c", "'", "'", "<esc>", "P"]
-    }
   ],
 }

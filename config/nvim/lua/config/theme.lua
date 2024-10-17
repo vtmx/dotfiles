@@ -32,10 +32,11 @@ local hl_groups = {
   String         = { fg = c.green  },
 
   -- Keys [] {} ()
-  Type           = { fg = c.purple },
-  Typedef        = { fg = c.purple },
+  MatchParen     = { fg = c.yellow },
   StorageClass   = { fg = c.purple },
   Structure      = { fg = c.purple },
+  Typedef        = { fg = c.purple },
+  Type           = { fg = c.purple },
 
   -- Extras
   Debug          = { fg = c.yellow },
@@ -57,7 +58,6 @@ local hl_groups = {
   -- Search
   Delimiter      = { fg = c.purple },
   IncSearch      = { bg = c.ac     },
-  MatchParen     = { fg = c.yellow },
   Search         = { bg = c.ac     },
   CurSearch      = { bg = c.ac     },
   Conceal        = { bg = c.ac     },
@@ -147,8 +147,8 @@ local hl_groups = {
   markdownUrl              = { fg = c.fg     },
 
   -- css
-  cssClassNameDot = { fg = c.orange },
   cssClassName    = { fg = c.orange },
+  cssClassNameDot = { fg = c.orange },
   cssHacks        = { fg = c.fg     },
   cssTagName      = { fg = c.red    },
   cssVendor       = { fg = c.fg     },
@@ -277,7 +277,6 @@ local hl_groups = {
 
   -- mini-tabline
   TabLine                  = { fg = c.fd     },
-  TabLineSel               = { fg = c.fg     },
 
   -- hop
   HopNextKey               = { fg = c.red    },
@@ -294,20 +293,6 @@ local hl_groups = {
   --markdown
   mkdCodeStart             = { fg = c.fg     },
   mkdCodeEnd               = { fg = c.fg     },
-
-  -- nvim-tree
-  NvimTreeCursorLine       = { bg = c.bl     },
-  NvimTreeFolder           = { fg = c.fg     },
-  NvimTreeFolderIcon       = { fg = c.fg     },
-  NvimTreeFolderName       = { fg = c.fg     },
-  NvimTreeEmptyFolderName  = { fg = c.fg     },
-  NvimTreeOpenedFolderName = { fg = c.fg     },
-  NvimTreeNormal           = { bg = c.bg     },
-  NvimTreeNormalNC         = { bg = c.bg     },
-  NvimTreeRootFolder       = { fg = c.fg     },
-  NvimTreeOpenedFile       = { fg = c.fg     },
-  NvimTreeVertSplit        = { fg = c.ac     },
-  NvimTreeWindowPicker     = { fg = c.fg     },
 
   -- telescope
   TelescopeMultiacection   = { fg = c.fg     },

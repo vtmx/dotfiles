@@ -37,7 +37,7 @@ ex() {
 
 # Find
 f() {
-  find . -iname *$1*
+  ls *"$1"*
 }
 
 # Font list
