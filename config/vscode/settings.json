@@ -251,7 +251,7 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["ç"],
-      "after": [":"]
+      "commands": [":noh"]
     },
     {
       "before": ["H"],
@@ -467,6 +467,10 @@
     {
       "before": ["<"],
       "after": ["<", "g", "v"]
+    },
+    {
+      "before": ["<c-c>"],
+      "after": ["esc"]
     },
     // Leader
     {

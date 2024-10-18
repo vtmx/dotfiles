@@ -40,6 +40,17 @@ autocmd('FileType', {
   end
 })
 
+-- Set opts in terminal
+autocmd('TermOpen', {
+  command = 'setlocal listchars= nonumber norelativenumber nocursorline',
+})
+
+-- Open terminal in insert mode
+autocmd('TermOpen', {
+  pattern = '',
+  command = 'startinsert'
+})
+
 -- Run by file
 exec([[
   autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>

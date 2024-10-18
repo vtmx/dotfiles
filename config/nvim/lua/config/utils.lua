@@ -74,4 +74,32 @@ function M.toggle_wrap()
   end
 end
 
+function M.is_netrw_open()
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
+      return true
+    end
+  end
+  return false
+end
+
+function M.close_netrw()
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
+      vim.api.nvim_buf_delete(buf, { force = true })
+      print('Netrw has been closed.')
+      return
+    end
+  end
+  print('Netrw is not open.')
+end
+
+function M.toggle_netrw()
+  if M.is_netrw_open() then
+    M.close_netrw() 
+  else
+    vim.cmd('Lex')
+  end
+end
+
 return M

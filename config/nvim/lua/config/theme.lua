@@ -59,7 +59,7 @@ local hl_groups = {
   Delimiter      = { fg = c.purple },
   IncSearch      = { bg = c.ac     },
   Search         = { bg = c.ac     },
-  CurSearch      = { bg = c.ac     },
+  CurSearch      = { bg = c.fg, fg = c.bg },
   Conceal        = { bg = c.ac     },
 
   -- Messages
@@ -117,7 +117,7 @@ local hl_groups = {
   -- Languages
 
   -- html
-  htmlArg            = { fg = c.yellow }, -- attr
+  htmlArg            = { fg = c.yellow },
   htmlH1             = { fg = c.fg     },
   htmlH2             = { fg = c.fg     },
   htmlH3             = { fg = c.fg     },
@@ -273,7 +273,7 @@ local hl_groups = {
   -- indent-line
   IblIndent = { fg = c.ac  },
   IblScope = { fg = c.fg  },
-  ['@ibl.scope.underline.1']   = { link = 'NowText' },
+  ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- mini-tabline
   TabLine                  = { fg = c.fd     },

@@ -5,8 +5,8 @@ vim.g.mapleader = ' '
 -- Normal
 
 map(
-  'n', 'ç', ':',
-  { desc = 'Fast command line' }
+  'n', 'ç', '<cmd>nohl<cr>',
+  { desc = 'Remove highlight' }
 )
 
 map(
@@ -127,6 +127,11 @@ map(
 map(
   'n', '<s-tab>', '<cmd>bp<cr>',
   { desc = 'Buffer prev' }
+)
+
+map(
+  'n', '<c-l>', '<cmd>nohl<cr>',
+  { desc = 'Remove highlight' }
 )
 
 map(
@@ -460,7 +465,7 @@ map(
 )
 
 map(
-  'n', '<leader>T', '<cmd>vert term<cr>',
+  'n', '<leader>T', '<cmd>vert term',
   { desc = 'Open vertical terminal' }
 )
 
@@ -544,9 +549,14 @@ map(
   { desc = 'ZenMode' }
 )
 
+-- map(
+--   'n', '<leader><leader>e', '<cmd>15Lex<cr>',
+--   { desc = 'Lex' }
+-- )
+
 map(
-  'n', '<leader><leader>e', '<cmd>15Lex<cr>',
-  { desc = 'Lex' }
+  'n', '<leader><leader>e', function() utils.toggle_netrw() end,
+  { desc = 'File browser' }
 )
 
 map(
