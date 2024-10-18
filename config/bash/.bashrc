@@ -1,17 +1,17 @@
 # Shell options
-shopt -s cmdhist
 shopt -s checkwinsize
+shopt -s cmdhist
 shopt -s histappend
 
 # Environment variables
-export CDPATH=".:..:~"
 export BROWSER="firefox"
+export CDPATH=".:..:~"
 export EDITOR="nvim"
 export HISTCONTROL="ignoreboth:ignorespace"
-export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'
-export HISTTIMEFORMAT="%F %T "
-export HISTSIZE=5000
 export HISTFILESIZE=$HISTSIZE
+export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'
+export HISTSIZE=5000
+export HISTTIMEFORMAT="%F %T "
 export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
