@@ -47,16 +47,16 @@ fi
 
 # Prompt
 if [[ -n "$DISPLAY" ]]; then
-  PS1=$"\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)❯$(sgr0) "
+  PS1=$'\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)❯$(sgr0) '
 else
-  PS1=$"\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)>$(sgr0) "
+  PS1=$'\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)>$(sgr0) '
 fi
 
 # fzf
 [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
 
 if type fzf &> /dev/null; then
-  if [[ -n "$DISPLAY" ]]; then
+  if [[ $DISPLAY ]]; then
     export FZF_DEFAULT_OPTS="\
     --height 50% --reverse \
     --border=none --preview-window=''\
@@ -89,10 +89,6 @@ fi
 # zoxide
 if type zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
-fi
-
-if type zoxide2 &> /dev/null; then
-  echo epa
 fi
 
 # vim:ft=bash
