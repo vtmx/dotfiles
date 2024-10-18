@@ -214,11 +214,6 @@
     <tr>
       <td><img src="https://fakeimg.pl/32x32/5c6370/?text=+" alt="White"></td>
       <td>White</td>
-      <td><code>#5c6370</code></td>
-    </tr>
-    <tr>
-      <td><img src="https://fakeimg.pl/32x32/abb2bf/?text=+" alt="White"></td>
-      <td>White Bright (FG)</td>
       <td><code>#abb2bf</code></td>
     </tr>
   <tbody>
