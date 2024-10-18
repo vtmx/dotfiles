@@ -53,8 +53,9 @@ else
 fi
 
 # fzf
-if type -P fzf > /dev/null; then
-  [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+[[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+
+if type fzf &> /dev/null; then
   if [[ -n "$DISPLAY" ]]; then
     export FZF_DEFAULT_OPTS="\
     --height 50% --reverse \
@@ -86,8 +87,12 @@ fi
 [[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
 
 # zoxide
-if type -P zoxide > /dev/null; then
+if type zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
+fi
+
+if type zoxide2 &> /dev/null; then
+  echo epa
 fi
 
 # vim:ft=bash
