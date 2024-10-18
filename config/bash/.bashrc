@@ -15,24 +15,20 @@ export HISTFILESIZE=$HISTSIZE
 export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
-# Man
-# export LESS_TERMCAP_mb=$'\e[0m'
-# export LESS_TERMCAP_md=$'\e[0;34m'
-# export LESS_TERMCAP_me=$'\e[0m'
-# export LESS_TERMCAP_se=$'\e[0m'
-# export LESS_TERMCAP_so=$'\e[47;30m'
-# export LESS_TERMCAP_ue=$'\e[0m'
-# export LESS_TERMCAP_us=$'\e[0;35m'
-# export GROFF_NO_SGR=1 # for konsole and gnome-terminal
+# Set colors
+setab(){ tput setab $1 }
+setaf(){ tput setaf $1 }
+sgr0() { tput sgr0     }
 
-export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
-export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
-export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect
-export LESS_TERMCAP_se=$(tput sgr0)                   # statusbar space and type
-export LESS_TERMCAP_so=$(tput setab 7; tput setaf 0) # statusbar and search active
-export LESS_TERMCAP_ue=$(tput sgr0)                   # end underline effect
-export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
-export GROFF_NO_SGR=1                                 # for konsole and gnome-terminal
+# Man
+export LESS_TERMCAP_mb=$(sgr0)                  # begin blinking
+export LESS_TERMCAP_md=$(setaf 4)               # parameters
+export LESS_TERMCAP_me=$(sgr0)                  # end bold effect
+export LESS_TERMCAP_se=$(sgr0)                  # statusbar space and type
+export LESS_TERMCAP_so=$(setab 7; tput setaf 0) # statusbar and search active
+export LESS_TERMCAP_ue=$(sgr0)                  # end underline effect
+export LESS_TERMCAP_us=$(setaf 5)               # header and attr
+export GROFF_NO_SGR=1                           # for konsole and gnome-terminal
 
 # Aliases
 [[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases 
@@ -51,9 +47,9 @@ fi
 
 # Prompt
 if [[ -n "$DISPLAY" ]]; then
-  PS1=$"\n$(tput setaf 6)$(pwd)$(tput sgr0) \n$(tput setaf 2)❯$(tput sgr0) "
+  PS1=$"\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)❯$(sgr0) "
 else
-  PS1=$"\n$(tput setaf 6)$(pwd)$(tput sgr0) \n$(tput setaf 2)>$(tput sgr0) "
+  PS1=$"\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)>$(sgr0) "
 fi
 
 # fzf
