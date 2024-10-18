@@ -16,6 +16,7 @@ local opts = {
   swapfile = false,
   tabstop = 2,
   termguicolors = true,
+  updatetime = 250,
   wrap = false,
 }
 

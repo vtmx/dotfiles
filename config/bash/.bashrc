@@ -16,14 +16,32 @@ export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
 # Man
+# export LESS_TERMCAP_mb=$'\e[0m'
+# export LESS_TERMCAP_md=$'\e[0;34m'
+# export LESS_TERMCAP_me=$'\e[0m'
+# export LESS_TERMCAP_se=$'\e[0m'
+# export LESS_TERMCAP_so=$'\e[107;30m'
+# export LESS_TERMCAP_ue=$'\e[0m'
+# export LESS_TERMCAP_us=$'\e[0;35m'
+# export GROFF_NO_SGR=1 # for konsole and gnome-terminal
+
 export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
 export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
 export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect
+export LESS_TERMCAP_se=$(tput sgr0)                   # statusbar space and type
 export LESS_TERMCAP_so=$(tput setab 15; tput setaf 0) # statusbar and search active
-export LESS_TERMCAP_se=$(tput setab 0; tput setaf 15) # statusbar space and type
-export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
 export LESS_TERMCAP_ue=$(tput sgr0)                   # end underline effect
+export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
 export GROFF_NO_SGR=1                                 # for konsole and gnome-terminal
+
+# export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
+# export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
+# export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect
+# export LESS_TERMCAP_se=$(tput setab 0; tput setaf 15) # statusbar space and type
+# export LESS_TERMCAP_so=$(tput setab 15; tput setaf 0) # statusbar and search active
+# export LESS_TERMCAP_ue=$(tput sgr0)                   # end underline effect
+# export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
+# export GROFF_NO_SGR=1                                 # for konsole and gnome-terminal
 
 # Aliases
 [[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases 
