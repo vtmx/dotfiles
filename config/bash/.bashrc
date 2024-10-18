@@ -16,9 +16,9 @@ export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
 # Colors
-setab() { tput setab $1; }
-setaf() { tput setaf $1; }
-sgr0()  { tput sgr0;     }
+setab() { echo -en "\e[4$1m";   }
+setaf() { echo -en "\e[0;3$1m"; }
+sgr0()  { echo -en "\e[0m";     }
 
 # Man
 export LESS_TERMCAP_mb=$(sgr0)                  # begin blinking
