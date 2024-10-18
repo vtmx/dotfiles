@@ -20,7 +20,7 @@ export PROMPT_COMMAND=('history -a' 'history -r')
 # export LESS_TERMCAP_md=$'\e[0;34m'
 # export LESS_TERMCAP_me=$'\e[0m'
 # export LESS_TERMCAP_se=$'\e[0m'
-# export LESS_TERMCAP_so=$'\e[107;30m'
+# export LESS_TERMCAP_so=$'\e[47;30m'
 # export LESS_TERMCAP_ue=$'\e[0m'
 # export LESS_TERMCAP_us=$'\e[0;35m'
 # export GROFF_NO_SGR=1 # for konsole and gnome-terminal
@@ -29,19 +29,10 @@ export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
 export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
 export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect
 export LESS_TERMCAP_se=$(tput sgr0)                   # statusbar space and type
-export LESS_TERMCAP_so=$(tput setab 15; tput setaf 0) # statusbar and search active
+export LESS_TERMCAP_so=$(tput setab 7; tput setaf 0) # statusbar and search active
 export LESS_TERMCAP_ue=$(tput sgr0)                   # end underline effect
 export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
 export GROFF_NO_SGR=1                                 # for konsole and gnome-terminal
-
-# export LESS_TERMCAP_mb=$(tput sgr0)                   # begin blinking
-# export LESS_TERMCAP_md=$(tput setaf 4)                # parameters
-# export LESS_TERMCAP_me=$(tput sgr0)                   # end bold effect
-# export LESS_TERMCAP_se=$(tput setab 0; tput setaf 15) # statusbar space and type
-# export LESS_TERMCAP_so=$(tput setab 15; tput setaf 0) # statusbar and search active
-# export LESS_TERMCAP_ue=$(tput sgr0)                   # end underline effect
-# export LESS_TERMCAP_us=$(tput setaf 5)                # header and attr
-# export GROFF_NO_SGR=1                                 # for konsole and gnome-terminal
 
 # Aliases
 [[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases 
@@ -60,14 +51,14 @@ fi
 
 # Prompt
 if [[ -n "$DISPLAY" ]]; then
-  PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]❯\\[\E[0m\\] '
+  PS1=$"\n$(tput setaf 6)$(pwd)$(tput sgr0) \n$(tput setaf 2)❯$(tput sgr0) "
 else
-  PS1=$'\n\\[\E[1;36m\\]$(pwd)\\[\E[0m\\] \n\\[\E[1;32m\\]>\\[\E[0m\\] '
+  PS1=$"\n$(tput setaf 6)$(pwd)$(tput sgr0) \n$(tput setaf 2)>$(tput sgr0) "
 fi
 
 # fzf
-if [[ -f $HOME/.fzf.bash ]]; then
-  source $HOME/.fzf.bash
+if type -P fzf > /dev/null; then
+  [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
   if [[ -n "$DISPLAY" ]]; then
     export FZF_DEFAULT_OPTS="\
     --height 50% --reverse \
