@@ -15,10 +15,10 @@ export HISTTIMEFORMAT="%F %T "
 export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
-# Set colors
-setab(){ tput setab $1 }
-setaf(){ tput setaf $1 }
-sgr0() { tput sgr0     }
+# Colors
+setab() { tput setab $1; }
+setaf() { tput setaf $1; }
+sgr0()  { tput sgr0;     }
 
 # Man
 export LESS_TERMCAP_mb=$(sgr0)                  # begin blinking
