@@ -549,11 +549,6 @@ map(
   { desc = 'ZenMode' }
 )
 
--- map(
---   'n', '<leader><leader>e', '<cmd>15Lex<cr>',
---   { desc = 'Lex' }
--- )
-
 map(
   'n', '<leader><leader>e', function() utils.toggle_netrw() end,
   { desc = 'File browser' }
