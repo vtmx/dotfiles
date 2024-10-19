@@ -90,8 +90,7 @@
   <tr>
     <th align="left">Browser</th>
     <td>
-      <a href="https://www.mozilla.org">Firefox</a>
-      <a href="https://vivaldi.com/pt-br">Vivaldi</a>
+      <a href="https://www.mozilla.org">Firefox</a>, <a href="https://vivaldi.com/pt-br">Vivaldi</a>
     </td>
   </tr>
   <tr>
