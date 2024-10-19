@@ -45,9 +45,9 @@ fi
 
 # Prompt
 if [[ -n "$DISPLAY" ]]; then
-  PS1=$'\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)❯$(sgr0) '
+  PS1=$'\n\\[\e[0;36m\\]$(pwd)\\[\e[0m\\] \n\\[\e[0;32m\\]❯\\[\e[0m\\] '
 else
-  PS1=$'\n$(setaf 6)$(pwd)$(sgr0) \n$(setaf 2)>$(sgr0) '
+  PS1=$'\n\\[\e[0;36m\\]$(pwd)\\[\e[0m\\] \n\\[\e[0;32m\\]>\\[\e[0m\\] '
 fi
 
 # fzf
