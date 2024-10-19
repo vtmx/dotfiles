@@ -568,4 +568,3 @@ map(
   'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
   { desc = 'Inspect Tree' }
 )
-

@@ -1,5 +1,12 @@
 local M = {}
 
+function M.map(mode, lhs, rhs, opts)
+  if opts.silent == nil then
+    opts.silent = true
+  end
+  vim.keymap.set(mode, lhs, rhs, opts)
+end
+
 function M.toggle_ia()
   if vim.cmd('CodeiumToggle') then
     print('Toggle ia')
