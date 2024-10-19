@@ -1,5 +1,6 @@
 local opts = {
   autochdir = true,
+  clipboard = 'unnamedplus',
   cursorline = true,
   expandtab = true,
   ignorecase = true,
@@ -44,6 +45,7 @@ local g = {
   netrw_keepdir = 0,
   netrw_liststyle = 3,
   netrw_winsize = 20,
+  vim_markdown_folding_disabled = true
 }
 
 -- Set global variables
@@ -53,7 +55,3 @@ end
 
 -- Search recursively in current directory 
 vim.cmd('set path+=**')
-
--- Using for plugin markdown
-vim.g.vim_markdown_folding_disabled = true
-

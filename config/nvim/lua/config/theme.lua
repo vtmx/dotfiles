@@ -263,20 +263,14 @@ local hl_groups = {
   -- Plugins
 ------------------------------------------------------------
 
-  -- netrw
-  netrwTreeBar = { fg = c.fg },
-
   -- codium
   CodiumAnnotation = { fg = c.fg },
   CodiumSuggestion = { fg = c.fd },
 
   -- indent-line
   IblIndent = { fg = c.ac  },
-  IblScope = { fg = c.fg  },
+  IblScope  = { fg = c.fg  },
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
-
-  -- mini-tabline
-  TabLine                  = { fg = c.fd     },
 
   -- hop
   HopNextKey               = { fg = c.red    },
@@ -290,9 +284,15 @@ local hl_groups = {
   LazyProgressDone         = { fg = c.blue   },
   LazyProp                 = { bg = c.ac     },
 
-  --markdown
+ --markdown
   mkdCodeStart             = { fg = c.fg     },
   mkdCodeEnd               = { fg = c.fg     },
+
+  -- mini-tabline
+  TabLine                  = { fg = c.fd     },
+
+  -- netrw
+  netrwTreeBar = { fg = c.fg },
 
   -- telescope
   TelescopeMultiacection   = { fg = c.fg     },
