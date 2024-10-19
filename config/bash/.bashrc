@@ -1,7 +1,5 @@
 # Shell options
-shopt -s checkwinsize
-shopt -s cmdhist
-shopt -s histappend
+shopt -s checkwinsize cmdhist histappend
 
 # Environment variables
 export BROWSER="firefox"
@@ -16,9 +14,9 @@ export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
 # Colors
-setab() { echo -en "\e[4$1m";   }
+setab() { echo -en "\e[4$1m"; }
 setaf() { echo -en "\e[0;3$1m"; }
-sgr0()  { echo -en "\e[0m";     }
+sgr0() { echo -en "\e[0m"; }
 
 # Man
 export LESS_TERMCAP_mb=$(sgr0)                  # begin blinking
