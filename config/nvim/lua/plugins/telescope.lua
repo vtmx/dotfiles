@@ -10,7 +10,17 @@ return {
           sorting_strategy = 'ascending',
           prompt_prefix = '   ',
           layout_config = { horizontal = { prompt_position = 'top' } },
-        }
+          mappings = {
+            n = {
+              ['<c-c>'] = function(...) return require('telescope.actions').close(...) end
+            },
+            i = {
+              ['<c-j>'] = function(...) return require('telescope.actions').move_selection_next(...) end,
+              ['<c-k>'] = function(...) return require('telescope.actions').move_selection_previous(...) end,
+              ['<c-c>'] = function(...) return require('telescope.actions').close(...) end
+            }
+          }
+        },
       })
       require('telescope').load_extension('file_browser')
     end
