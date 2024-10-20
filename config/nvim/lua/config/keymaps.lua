@@ -334,20 +334,20 @@ map(
   { desc = 'Git files' }
 )
 
-map(
-  'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
-  { desc = 'Git branches' }
-)
-
-map(
-  'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
-  { desc = 'Git commits' }
-)
-
-map(
-  'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
-  { desc = 'Git status' }
-)
+-- map(
+--   'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
+--   { desc = 'Git branches' }
+-- )
+--
+-- map(
+--   'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
+--   { desc = 'Git commits' }
+-- )
+--
+-- map(
+--   'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
+--   { desc = 'Git status' }
+-- )
 
 map(
   'n', '<leader>fh', '<cmd>Telescope highlights<cr>',
@@ -552,6 +552,11 @@ map(
 map(
   'n', '<leader><leader>e', function() utils.toggle_netrw() end,
   { desc = 'File browser' }
+)
+
+map(
+  'n', '<leader><leader>i', '<cmd>Inspect<cr>',
+  { desc = 'Inspect' }
 )
 
 map(
