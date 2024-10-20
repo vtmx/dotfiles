@@ -57,5 +57,5 @@ end
 -- Search recursively in current directory 
 vim.cmd('set path+=**')
 
--- Loading tmux navitator
+-- Loading tmux navigator
 vim.cmd('source ' .. os.getenv('HOME') .. '/.config/nvim/lua/plugins/tmux-navigator.vim')
