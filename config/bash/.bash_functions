@@ -225,8 +225,8 @@ play() {
 
     to_play() {
       if [[ -d "$1" ]]; then
-        # find "$1" -type f -name "*.mp3" -exec mpv $args {} +
-        ls -R "$1" | awk '!/:$/ && !/^$/ {print $NF}' | xargs mpv $args
+        find "$1" -type f -name "*.mp3" -exec mpv $args {} +
+        # ls -R "$1" | awk '!/:$/ && !/^$/ {print $NF}' | xargs mpv $args
       elif [[ "$1" =~ ^"http" ]]; then
         mpv $args "$1"
       else
