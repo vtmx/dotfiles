@@ -1,8 +1,8 @@
 return {
-  {
-    'christoomey/vim-tmux-navigator',
-    event = 'VeryLazy'
-  },
+  -- {
+  --   'christoomey/vim-tmux-navigator',
+  --   event = 'VeryLazy'
+  -- },
   {
     'echasnovski/mini.align',
     event = 'VeryLazy',

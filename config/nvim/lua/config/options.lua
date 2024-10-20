@@ -1,6 +1,5 @@
 local opts = {
   autochdir = true,
-  clipboard = 'unnamedplus',
   cursorline = true,
   expandtab = true,
   ignorecase = true,
@@ -40,6 +39,7 @@ local g = {
   loaded_tohtml = 1,
   loaded_tutor = 1,
   loaded_zipPlugin = 1,
+  mapleader = ' ',
   netrw_altv = 1,
   netrw_banner = 0,
   netrw_hide = 1,
@@ -56,3 +56,6 @@ end
 
 -- Search recursively in current directory 
 vim.cmd('set path+=**')
+
+-- Loading tmux navitator
+vim.cmd('source ' .. os.getenv('HOME') .. '/.config/nvim/lua/plugins/tmux-navigator.vim')

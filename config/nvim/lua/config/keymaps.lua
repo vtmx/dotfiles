@@ -1,6 +1,5 @@
 local utils = require('config.utils')
 local map = vim.keymap.set
-vim.g.mapleader = ' '
 
 -- Normal
 
