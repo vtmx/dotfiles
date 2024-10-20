@@ -9,7 +9,7 @@
   <property name="misc-tab-close-middle-click" type="bool" value="false"/>
   <property name="misc-hyperlinks-enabled" type="bool" value="false"/>
   <property name="misc-cursor-blinks" type="bool" value="true"/>
-  <property name="font-allow-bold" type="bool" value="true"/>
+  <property name="font-allow-bold" type="bool" value="false"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
   <property name="misc-borders-default" type="bool" value="false"/>
   <property name="scrolling-on-keystroke" type="bool" value="false"/>
@@ -18,4 +18,7 @@
   <property name="cell-width-scale" type="double" value="1"/>
   <property name="cell-height-scale" type="double" value="1"/>
   <property name="misc-confirm-close" type="bool" value="false"/>
+  <property name="command-login-shell" type="bool" value="false"/>
+  <property name="run-custom-command" type="bool" value="true"/>
+  <property name="custom-command" type="string" value="tmux"/>
 </channel>
