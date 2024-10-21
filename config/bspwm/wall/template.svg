@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xml:space="preserve"
-   inkscape:export-filename="apperture.png"
+   inkscape:export-filename="konami.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    sodipodi:docname="template.svg"
@@ -30,9 +30,9 @@
      showguides="false"
      showborder="true"
      showgrid="false"
-     inkscape:zoom="0.479"
-     inkscape:cx="1302.714"
-     inkscape:cy="580.37578"
+     inkscape:zoom="0.55769286"
+     inkscape:cx="1647.8604"
+     inkscape:cy="765.65442"
      inkscape:window-width="1920"
      inkscape:window-height="1047"
      inkscape:window-x="0"
@@ -58,9 +58,9 @@
      inkscape:label="bg"
      inkscape:groupmode="layer"
      id="layer1"
-     sodipodi:insensitive="true"
-     style="display:inline"><rect
-       style="fill:#1c1f26;fill-opacity:1;stroke-width:0.499999;paint-order:stroke fill markers"
+     style="display:inline"
+     sodipodi:insensitive="true"><rect
+       style="fill:#23272e;fill-opacity:1;stroke-width:0.499999;paint-order:stroke fill markers"
        id="rect3"
        width="507.61603"
        height="285.62903"
@@ -81,5 +81,5 @@
        y="225.68956" /></g><g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="sness"
+     inkscape:label="logo"
      style="display:inline" /></svg>
