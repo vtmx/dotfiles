@@ -79,11 +79,6 @@ map(
 )
 
 map(
-  'n', '<esc>', '<cmd>noh<cr><esc>',
-  { desc = 'Remove highlight' }
-)
-
-map(
   'n', '>', '>>',
   { desc = 'Add indent' }
 )
@@ -96,26 +91,6 @@ map(
 map(
   'n', '<f1>', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
   { desc = 'Help for current word' }
-)
-
-map(
-  'n', '<c-a-down>', '<cmd>resize +2<cr>',
-  { desc = 'Resize height taller' }
-)
-
-map(
-  'n', '<c-a-up>', '<cmd>resize -2<cr>',
-  { desc = 'Resize height shorter' }
-)
-
-map(
-  'n', '<left>', '<cmd>vertical resize -2<cr>',
-  { desc = 'Resize height left' }
-)
-
-map(
-  'n', '<right>', '<cmd>vertical resize +2<cr>',
-  { desc = 'Resize height right' }
 )
 
 map(
@@ -134,11 +109,6 @@ map(
 )
 
 map(
-  'n', '<c-p>', '<cmd>Telescope git_files<cr>',
-  { desc = 'Files' }
-)
-
-map(
   'n', '<c-s>', '<cmd>w<cr>',
   { desc = 'Save file if file is change', silent = false }
 )
@@ -151,11 +121,6 @@ map(
 map(
   'n', '<c-a-k>', '<cmd>m .-2<cr>',
   { desc = 'Move line to up' }
-)
-
-map(
-  'n', '<a-l>', '<cmd>TmuxNavigateLeft<cr>',
-  { desc = 'TmuxNavigateLeft' }
 )
 
 map(
@@ -173,21 +138,16 @@ map(
   { desc = 'TmuxNavigateUp' }
 )
 
+map(
+  'n', '<a-l>', '<cmd>TmuxNavigateLeft<cr>',
+  { desc = 'TmuxNavigateLeft' }
+)
+
 -- Insert
 
 map(
   'i', 'kj', '<esc>',
   { desc = 'Return to normal mode' }
-)
-
-map(
-  'i', '<c-h>', '<left>',
-  { desc = 'Go left in insert mode' }
-)
-
-map(
-  'i', '<c-l>', '<right>',
-  { desc = 'Go right in insert mode' }
 )
 
 map(
@@ -279,6 +239,11 @@ map(
 )
 
 map(
+  'n', '<leader>b', '<cmd>Telescope buffers<cr>',
+  { desc = 'Buffers' }
+)
+
+map(
   'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
   { desc = 'Cut to clipboard' }
 )
@@ -304,11 +269,6 @@ map(
 )
 
 map(
-  'n', '<leader>fb', '<cmd>Telescope buffers<cr>',
-  { desc = 'Buffers' }
-)
-
-map(
   'n', '<leader>fc', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
 )
@@ -319,53 +279,8 @@ map(
 )
 
 map(
-  'n', '<leader>ff', '<cmd>Telescope file_browser<cr>',
+  'n', '<leader>f', '<cmd>Telescope file_browser<cr>',
   { desc = 'Files browser' }
-)
-
-map(
-  'n', '<leader>fF', '<cmd>Telescope find_files<cr>',
-  { desc = 'Files' }
-)
-
-map(
-  'n', '<leader>fg', '<cmd>Telescope git_files<cr>',
-  { desc = 'Git files' }
-)
-
--- map(
---   'n', '<leader>fgb', '<cmd>Telescope git_branches<cr>',
---   { desc = 'Git branches' }
--- )
---
--- map(
---   'n', '<leader>fgc', '<cmd>Telescope git_commits<cr>',
---   { desc = 'Git commits' }
--- )
---
--- map(
---   'n', '<leader>fgs', '<cmd>Telescope git_status<cr>',
---   { desc = 'Git status' }
--- )
-
-map(
-  'n', '<leader>fh', '<cmd>Telescope highlights<cr>',
-  { desc = 'Highlights' }
-)
-
-map(
-  'n', '<leader>fH', '<cmd>Telescope help_tags<cr>',
-  { desc = 'Help' }
-)
-
-map(
-  'n', '<leader>fj', '<cmd>Telescope jumplist<cr>',
-  { desc = 'Jump list' }
-)
-
-map(
-  'n', '<leader>fk', '<cmd>Telescope keymaps<cr>',
-  { desc = 'Keymaps' }
 )
 
 map(
@@ -374,23 +289,8 @@ map(
 )
 
 map(
-  'n', '<leader>fm', function() vim.lsp.buf.format { async = true } end,
-  { desc = 'LSP formatting' }
-)
-
-map(
-  'n', '<leader>fM', '<cmd>Telescope marks<cr>',
-  { desc = 'Marks' }
-)
-
-map(
   'n', '<leader>fo', '<cmd>Telescope oldfiles<cr>',
   { desc = 'Old files' }
-)
-
-map(
-  'n', '<leader>fO', '<cmd>Telescope vim_options<cr>',
-  { desc = 'Options' }
 )
 
 map(
@@ -399,13 +299,43 @@ map(
 )
 
 map(
+  'n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  { desc = 'Fuzzy' }
+)
+
+map(
+  'n', '<leader>g', '<cmd>Telescope git_files<cr>',
+  { desc = 'Git files' }
+)
+
+map(
+  'n', '<leader>h', '<cmd>Telescope highlights<cr>',
+  { desc = 'Highlights' }
+)
+
+map(
+  'n', '<leader>H', '<cmd>Telescope help_tags<cr>',
+  { desc = 'Help' }
+)
+
+map(
   'n', '<leader>j', 'mzJ`z',
   { desc = 'Join lines' }
 )
 
 map(
-  'n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
-  { desc = 'Fuzzy' }
+  'n', '<leader>J', '<cmd>Telescope jumplist<cr>',
+  { desc = 'Jump list' }
+)
+
+map(
+  'n', '<leader>k', '<cmd>Telescope keymaps<cr>',
+  { desc = 'Keymaps' }
+)
+
+map(
+  'n', '<leader>m', '<cmd>Telescope marks<cr>',
+  { desc = 'Marks' }
 )
 
 map(
@@ -504,6 +434,11 @@ map(
 )
 
 map(
+  'n', '<leader>v', '<cmd>Telescope vim_options<cr>',
+  { desc = 'Vim options' }
+)
+
+map(
   'n', '<leader>uw', function() utils.toggle_wrap() end,
   { desc = 'Toggle wrap' }
 )
@@ -547,6 +482,8 @@ map(
   'n', '<leader>z', '<cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
 )
+
+-- Leader leader
 
 map(
   'n', '<leader><leader>e', function() utils.toggle_netrw() end,

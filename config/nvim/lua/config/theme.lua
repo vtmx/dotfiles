@@ -39,6 +39,7 @@ local hl_groups = {
   Type           = { fg = c.purple },
 
   -- Extras
+  Added          = { fg = c.green  },
   Debug          = { fg = c.yellow },
   Directory      = { fg = c.blue   },
   EndOfBuffer    = { fg = c.fd     },
@@ -301,6 +302,7 @@ local hl_groups = {
   TelescopePreviewNormal   = { fg = c.fg     },
   TelescopePromptNormal    = { fg = c.fg     },
   TelescopeResultsNormal   = { fg = c.fg     },
+  TelescopeResultsNumber   = { fg = c.fg     },
   TelescopePromptBorder    = { fg = c.fd     },
   TelescopeResultsBorder   = { fg = c.fd     },
   TelescopePreviewBorder   = { fg = c.fd     },

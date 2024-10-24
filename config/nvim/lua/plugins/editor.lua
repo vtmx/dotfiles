@@ -1,12 +1,7 @@
 return {
-  -- {
-  --   'christoomey/vim-tmux-navigator',
-  --   event = 'VeryLazy'
-  -- },
   {
     'echasnovski/mini.align',
-    event = 'VeryLazy',
-    config = true
+    event = 'VeryLazy', config = true
   },
   {
     'echasnovski/mini.surround',
@@ -30,7 +25,6 @@ return {
   },
   {
     'phaazon/hop.nvim',
-    cmd = 'HopChar1',
-    config = true
+    cmd = 'HopChar1', config = true
   }
 }
