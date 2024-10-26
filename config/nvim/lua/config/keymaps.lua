@@ -264,11 +264,6 @@ map(
 )
 
 map(
-  'n', '<leader>fa', '<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>',
-  { desc = 'Files with hidden' }
-)
-
-map(
   'n', '<leader>fc', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
 )
