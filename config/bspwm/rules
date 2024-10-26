@@ -7,6 +7,7 @@ $br code              desktop="^2" focus=on follow=on
 $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^3" focus=on follow=on
 $br dolphin           desktop="^3" focus=on follow=on
+$br godot             desktop="^3" focus=on follow=on state=floating 
 $br keepassxc         desktop="^3" focus=on follow=on
 $br thunar            desktop="^3" focus=on follow=on
 $br steam             desktop="^4"
