@@ -6,8 +6,12 @@ super + shift + b
 super + {_,shift + }c
   bspc node -{c,k}
 
-# Toggle fullscreen
+# Toggle floating
 super + shift + f
+  bspc node -t "~"{floating,tiled}
+
+# Toggle fullscreen
+super + shift + F
   bspc node -t "~"{tiled,fullscreen}
 
 # Stick window always top
@@ -37,10 +41,6 @@ super + shift + period
 # Help
 super + shift + F1
   $HOME/.config/bspwm/conky/toggle
-
-# Toggle floating
-super + shift + space
-  bspc node -t "~"{floating,tiled}
 
 # Focus and swap selected node
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}

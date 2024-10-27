@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+lynx -dump -display_charset=utf-8 \
+  'https://www.google.com/search?q=btcusd' | \
+  awk '/ Dólar americano$/ {print $1}'

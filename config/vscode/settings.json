@@ -371,15 +371,11 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": ["<leader>", "f", "f"],
+      "before": ["<leader>", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "f", "c"],
-      "commands": ["EasymotionTrigger"]
-    },
-    {
-      "before": ["<leader>", "f", "s"],
+      "before": ["<leader>", "s"],
       "commands": ["workbench.action.gotoSymbol"]
     },
     {
@@ -425,10 +421,6 @@
     {
       "before": ["<leader>", "z"],
       "commands": ["workbench.action.toggleZenMode"]
-    },
-    {
-      "before": ["<leader>", "<esc>"],
-      "commands": [":noh"]
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
