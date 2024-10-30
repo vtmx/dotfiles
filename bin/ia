@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+if [[ -f $HOME/.groq.key ]]; then
+  groqkey=$(<$HOME/.groq.key)
+else
+  echo 'error: need apikey in ~/.groq.key'
+  exit 1
+fi
+
+reqs=(glow gum jq)
+type "${reqs[@]}" &>/dev/null || { echo 'error: need gum, glow and jq'; exit 1; }
+
+if [[ "$*" ]]; then
+  msg="$*"
+else
+  msg=$(gum input --cursor.foreground=7 --placeholder='' --prompt='❯ ')
+  echo "$msg"
+fi
+
+[[ "$msg" ]] || { echo 'error: no message'; exit 1; }
+
+curl -s -X POST "https://api.groq.com/openai/v1/chat/completions" \
+  -H "Authorization: Bearer $groqkey" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"messages\": [
+      {
+        \"role\": \"user\",
+        \"content\": \"$msg\"
+      }
+    ],
+    \"model\": \"llama3-70b-8192\"
+  }" | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"
+
