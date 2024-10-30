@@ -6,13 +6,13 @@ super + shift + b
 super + {_,shift + }c
   bspc node -{c,k}
 
+# Toggle fullscreen
+super + F11
+  bspc node -t "~"{tiled,fullscreen}
+
 # Toggle floating
 super + shift + f
   bspc node -t "~"{floating,tiled}
-
-# Toggle fullscreen
-super + shift + F
-  bspc node -t "~"{tiled,fullscreen}
 
 # Stick window always top
 super + shift + p

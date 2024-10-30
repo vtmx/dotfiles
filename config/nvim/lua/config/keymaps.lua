@@ -244,6 +244,11 @@ map(
 )
 
 map(
+  'n', '<leader>c', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
+)
+
+map(
   'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
   { desc = 'Cut to clipboard' }
 )
@@ -261,11 +266,6 @@ map(
 map(
   'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
   { desc = 'Oil' }
-)
-
-map(
-  'n', '<leader>fc', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
 )
 
 map(
