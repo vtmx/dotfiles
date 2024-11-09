@@ -56,11 +56,17 @@ super + ctrl + {_,shift + }{h,Left,l,Right}
 
 # Focus n desktop and send selected node to n desktop
 super + {_,shift + }{1-9}
-  bspc {desktop -f,node -d} "^{1-9}" --follow
+  bspc {desktop -f,node -d} '^{1-9}' --follow
+
+super + {_,shift + }KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
+  bspc {desktop -f,node -d} '^{1,2,3,4,5,6,7,8,9}' --follow
 
 # Send selected node to n desktop
 super + ctrl + {1-9}
-  bspc node -d "^{1-9}"
+  bspc node -d '^{1-9}'
+
+super + ctrl + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
+  bspc node -d '^{1,2,3,4,5,6,7,8,9}'
 
 # Resize selected node
 super + shift + r : {h,j,k,l}
