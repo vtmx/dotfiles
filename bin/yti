@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+[[ $1 ]] || { echo 'error: no url-id'; exit 1; }  
+
+urlpre='https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v='
+urlpos='&format=json'
+url="${urlpre}${1}${urlpos}"
+
+curl -s $url | jq -r '"Title: " + .title,"Author: " + .author_name,"Thumb: " + .thumbnail_url'
