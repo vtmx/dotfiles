@@ -193,6 +193,7 @@ alias yayr="yay -R"
 alias yayu="yay -Syu"
 
 # yt-dlp
+alias ytdlp='yt-dlp'
 alias ytp='yt-dlp -x --audio-format mp3 --replace-in-metadata title " " "-" --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
 
 # weather
@@ -201,3 +202,6 @@ alias wt="curl wttr.in/?format=3"
 # lite-xl
 alias xl="lite-xl"
 alias xc="lite-xl $HOME/.config/lite-xl"
+
+# temp
+alias dai='yt-dlp -f hls-720'

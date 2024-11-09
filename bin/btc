@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 lynx -dump -display_charset=utf-8 \
-  'https://www.google.com/search?q=btcusd' | \
-  awk '/ Dólar americano$/ {print $1}'
+  'https://www.google.com/finance/quote/BTC-USD' | \
+  grep -A1 '\bShare\b'| tail -n1 | tr -d '[[:space:]]'
