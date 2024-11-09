@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Transform all svg in current dir to wallpaper
+
+for file in *.svg; do
+  filename="${file%.svg}"
+  echo "Creating $filename..."
+  inkscape "$filename.svg" --export-filename="$filename.png" 2>/dev/null && \
+  magick -size 1920x1080 xc:'#23272e' \
+    -gravity center \( "$filename.png" -resize 320x \) \
+    -composite "$filename.png"
+done

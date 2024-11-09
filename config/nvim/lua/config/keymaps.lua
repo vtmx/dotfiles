@@ -14,6 +14,11 @@ map(
 )
 
 map(
+  'n', 'dl', '"+dd<cmd>echo "Cut line to clipboard"<cr>',
+  { desc = 'Cut current line to clipboard' }
+)
+
+map(
   {'n', 'v'}, 'H', '^',
   { desc = 'Go to begin line' }
 )

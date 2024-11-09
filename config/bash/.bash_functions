@@ -205,7 +205,7 @@ mvs() {
 }
 
 # Link in working dir
-lnw() {
+lnwd() {
   [[ $1 && $2 ]] || {
     echo 'usage: lnwd <file-or-dir> <path>'
     return 1
