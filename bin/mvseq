@@ -1,17 +1,23 @@
 #!/usr/bin/env bash
 
-# Get dir
-if [[ "$1" ]]; then
-  mapfile -t files < <(find "$1" -type f)
-else
-  mapfile -t files < <(find . -type f)
+# Check if inverse i or -i
+if [[ "$1" =~ ^-?i$ ]]; then
+  inverse="true"
+  shift
 fi
 
-# Get name
-[[ "$2" ]] && filename="$2"
+# Get dir and file
+if [[ -d "$2" ]]; then
+  dir="$2"
+  pattern="$1"
+elif [[ "$1" ]]; then
+  dir="."
+  pattern="$1" 
+else
+  dir="."
+fi
 
-# Get name
-[[ $3 == 'i' ]] && inverse="true"
+mapfile -t files < <(find "$dir" -type f)
 
 # Count total files
 numberfiles=${#files[@]}
@@ -23,17 +29,25 @@ digit=${#numberfiles}
 listfiles() {
   count=1
   for file in "${files[@]}"; do
+    # Remove path
+    filename="${file##*/}"
+    # Remove ext
+    filename="${filename%*.*}"
+
     ext="${file##*.}"
 
-    if [[ "$filename" ]]; then
+    if [[ "$pattern" ]]; then
+      if [[ $inverse ]]; then
+        newfile=$(printf "$(dirname "$file")/%0${digit}d-$pattern.$ext\n" "$count")
+      else
+        newfile=$(printf "$(dirname "$file")/$pattern-%0${digit}d.$ext\n" "$count")
+      fi
+    else
       if [[ $inverse ]]; then
         newfile=$(printf "$(dirname "$file")/%0${digit}d-$filename.$ext\n" "$count")
       else
         newfile=$(printf "$(dirname "$file")/$filename-%0${digit}d.$ext\n" "$count")
       fi
-    else
-      echo 'error: need filename. ex: mvseq dir/ teste'
-      exit 1
     fi
 
     case $1 in
