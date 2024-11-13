@@ -104,7 +104,7 @@ imgc() {
     old_file_size=$(du -h "$file" | awk '{print $1}')
     magick "$file" -quality 85 -gaussian-blur 0.05 "$file" 2>/dev/null
     new_file_size=$(du -h "$file" | awk '{print $1}')
-    echo "Compressed $file $old_file_size >> $new_file_size" | column -t
+    echo "$file $old_file_size >> $new_file_size" | column -t
   done
 
   new_dir_size=$(du . -sh | awk '{print $1}')

@@ -9,10 +9,10 @@ fi
 
 # Count total files
 numberfiles=${#files[@]}
-digit=${#numberfiles}
+digit=$(printf "%d" "$numberfiles" | wc -c)
 
 # Default 2 digits
-[[ $digit == 1 ]] && digit=2
+[[ $numberfiles -eq 1 ]] && digit=2
 
 listfiles() {
   count=1
