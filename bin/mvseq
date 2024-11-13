@@ -10,6 +10,9 @@ fi
 # Get name
 [[ "$2" ]] && filename="$2"
 
+# Get name
+[[ $3 == 'i' ]] && inverse="true"
+
 # Count total files
 numberfiles=${#files[@]}
 digit=${#numberfiles}
@@ -23,9 +26,14 @@ listfiles() {
     ext="${file##*.}"
 
     if [[ "$filename" ]]; then
-     newfile=$(printf "$(dirname "$file")/$filename-%0${digit}d.$ext\n" "$count")
+      if [[ $inverse ]]; then
+        newfile=$(printf "$(dirname "$file")/%0${digit}d-$filename.$ext\n" "$count")
+      else
+        newfile=$(printf "$(dirname "$file")/$filename-%0${digit}d.$ext\n" "$count")
+      fi
     else
-      newfile=$(printf "$file-%0${digit}d.$ext\n" "$count")
+      echo 'error: need filename. ex: mvseq dir/ teste'
+      exit 1
     fi
 
     case $1 in
