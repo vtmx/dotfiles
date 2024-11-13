@@ -214,11 +214,6 @@ mvs() {
   return 0
 }
 
-# Renomear sequenciando arquivos
-mvseq() {
-  seq -w 01 10
-}
-
 # Link in working dir
 lnwd() {
   [[ $1 && $2 ]] || {
