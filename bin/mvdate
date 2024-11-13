@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+if [[ $1 ]]; then
+  case $1 in
+    [1-9]) digit=$1 ;;
+        *) echo 'error: digit invalid'; exit 1 ;;
+  esac
+else
+  digit=2
+fi
+
+listfiles() {
+  count=1
+  for file in *; do
+    if [[ -f "$file" ]]; then
+      ext="${file##*.}"
+      newfile=$(printf "$(date -r $file +%Y-%m-%d)-%0${digit}d.$ext\n" "$count")
+
+      case $1 in
+        'mv') mv "$file" "$newfile" ;;
+           *) echo "$file >> $newfile" | column -t ;;
+      esac
+
+      ((count++))
+    fi
+  done
+}
+
+listfiles
+echo
+read -p "Rename? [y/N]: " rename
+
+case ${rename,,} in
+  'y') listfiles mv ;;
+    *) exit 0       ;;
+esac

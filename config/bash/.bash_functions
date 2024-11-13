@@ -35,11 +35,6 @@ ex() {
   fi
 }
 
-# Find
-f() {
-  find . -iname *$1*
-}
-
 # Font list
 fl() {
   fc-list | awk -F: '{print $2}' | sort | uniq | grep -v Noto
@@ -99,6 +94,21 @@ htm() {
   }
 
   curl -s $1 | htmlq -t $2
+}
+
+# Compress img
+imgc() {
+  old_dir_size=$(du . -sh | awk '{print $1}')
+
+  for file in *.@(jpg|png); do
+    old_file_size=$(du -h "$file" | awk '{print $1}')
+    magick "$file" -quality 85 -gaussian-blur 0.05 "$file" 2>/dev/null
+    new_file_size=$(du -h "$file" | awk '{print $1}')
+    echo "Compressed $file $old_file_size >> $new_file_size" | column -t
+  done
+
+  new_dir_size=$(du . -sh | awk '{print $1}')
+  echo -e "\nTotal compressed: $old_dir_size >> $new_dir_size"
 }
 
 # Create dir and enter
@@ -202,6 +212,11 @@ mvs() {
     mv "$file" "${file/$1/$2}"
   done
   return 0
+}
+
+# Renomear sequenciando arquivos
+mvseq() {
+  seq -w 01 10
 }
 
 # Link in working dir
