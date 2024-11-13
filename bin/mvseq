@@ -38,15 +38,15 @@ listfiles() {
 
     if [[ "$pattern" ]]; then
       if [[ $inverse ]]; then
-        newfile=$(printf "$(dirname "$file")/%0${digit}d-$pattern.$ext\n" "$count")
+        newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$pattern" "$ext")
       else
-        newfile=$(printf "$(dirname "$file")/$pattern-%0${digit}d.$ext\n" "$count")
+        newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$pattern" "$count" "$ext")
       fi
     else
       if [[ $inverse ]]; then
-        newfile=$(printf "$(dirname "$file")/%0${digit}d-$filename.$ext\n" "$count")
+        newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$filename" "$ext")
       else
-        newfile=$(printf "$(dirname "$file")/$filename-%0${digit}d.$ext\n" "$count")
+        newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$filename" "$count" "$ext")
       fi
     fi
 
