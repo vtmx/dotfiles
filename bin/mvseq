@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# Get dir
+if [[ "$1" ]]; then
+  mapfile -t files < <(find "$1" -type f)
+else
+  mapfile -t files < <(find . -type f)
+fi
+
+# Get name
+[[ "$2" ]] && filename="$2"
+
+# Count total files
+numberfiles=${#files[@]}
+digit=${#numberfiles}
+
+# Default 2 digits
+[[ $digit == 1 ]] && digit=2
+
+listfiles() {
+  count=1
+  for file in "${files[@]}"; do
+    ext="${file##*.}"
+
+    if [[ "$filename" ]]; then
+     newfile=$(printf "$(dirname "$file")/$filename-%0${digit}d.$ext\n" "$count")
+    else
+      newfile=$(printf "$file-%0${digit}d.$ext\n" "$count")
+    fi
+
+    case $1 in
+      mv) mv "$file" "$newfile" ;;
+       *) echo "$file >> $newfile" ;;
+    esac
+
+    ((count++))
+  done
+}
+
+# List files
+listfiles
+echo
+read -p "Rename? [y/N]: " rename
+
+case $rename in
+  [yY]) listfiles mv ;;
+     *) exit 0       ;;
+esac
