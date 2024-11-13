@@ -1,36 +1,40 @@
 #!/usr/bin/env bash
 
-if [[ $1 ]]; then
-  case $1 in
-    [1-9]) digit=$1 ;;
-        *) echo 'error: digit invalid'; exit 1 ;;
-  esac
+# Get dir
+if [[ "$1" ]]; then
+  mapfile -t files < <(find "$1" -type f)
 else
-  digit=2
+  mapfile -t files < <(find . -type f)
 fi
+
+# Count total files
+numberfiles=${#files[@]}
+digit=${#numberfiles}
+
+# Default 2 digits
+[[ $digit == 1 ]] && digit=2
 
 listfiles() {
   count=1
-  for file in *; do
-    if [[ -f "$file" ]]; then
-      ext="${file##*.}"
-      newfile=$(printf "$(date -r $file +%Y-%m-%d)-%0${digit}d.$ext\n" "$count")
+  for file in "${files[@]}"; do
+    ext="${file##*.}"
+    newfile=$(printf "$(dirname "$file")/$(date -r "$file" +%Y-%m-%d)-%0${digit}d.$ext\n" "$count")
 
-      case $1 in
-        'mv') mv "$file" "$newfile" ;;
-           *) echo "$file >> $newfile" | column -t ;;
-      esac
+    case $1 in
+      mv) mv "$file" "$newfile" ;;
+       *) echo "$file >> $newfile" ;;
+    esac
 
-      ((count++))
-    fi
+    ((count++))
   done
 }
 
+# List files
 listfiles
 echo
 read -p "Rename? [y/N]: " rename
 
-case ${rename,,} in
-  'y') listfiles mv ;;
-    *) exit 0       ;;
+case $rename in
+  [yY]) listfiles mv ;;
+     *) exit 0       ;;
 esac

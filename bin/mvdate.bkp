@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+files=$(find . -type f | wc -l)
+digit=${#files}
+[[ $digit == '1' ]] && digit='2'
+
+listfiles() {
+  count=1
+  for file in *; do
+    if [[ -f "$file" ]]; then
+      ext="${file##*.}"
+      newfile=$(printf "$(date -r "$file" +%Y-%m-%d)-%0${digit}d.$ext\n" "$count")
+
+      case $1 in
+        mv) mv "$file" "$newfile" ;;
+         *) echo "$file >> $newfile" | column -t ;;
+      esac
+
+      ((count++))
+    fi
+  done
+}
+
+listfiles
+echo
+read -p "Rename? [y/N]: " rename
+
+case $rename in
+  [yY]) listfiles mv ;;
+     *) exit 0       ;;
+esac
