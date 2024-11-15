@@ -96,21 +96,6 @@ htm() {
   curl -s $1 | htmlq -t $2
 }
 
-# Compress img
-imgc() {
-  old_dir_size=$(du . -sh | awk '{print $1}')
-
-  for file in *.@(jpg|png); do
-    old_file_size=$(du -h "$file" | awk '{print $1}')
-    magick "$file" -quality 85 -gaussian-blur 0.05 "$file" 2>/dev/null
-    new_file_size=$(du -h "$file" | awk '{print $1}')
-    echo "$file $old_file_size >> $new_file_size" | column -t
-  done
-
-  new_dir_size=$(du . -sh | awk '{print $1}')
-  echo -e "\nTotal compressed: $old_dir_size >> $new_dir_size"
-}
-
 # Create dir and enter
 mkcd() {
   if [[ -n $1 ]]; then
