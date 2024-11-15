@@ -17,7 +17,7 @@ for file in *.@(jpg|png); do
     cjxl "$file" "$file.jxl" 2>/dev/null && rm "$file"
     new_file_size=$(du -h "$file.jxl" | awk '{print $1}')
   else
-    magick "$file" -quality 85 -gaussian-blur 0.05 "$file" 2>/dev/null
+    magick "$file" -quality 85 "$file" 2>/dev/null
     new_file_size=$(du -h "$file" | awk '{print $1}')
   fi
 
