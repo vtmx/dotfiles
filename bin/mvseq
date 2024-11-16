@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-# Check if inverse i or -i
-if [[ "$1" =~ ^-?i$ ]]; then
-  inverse="true"
-  shift
-fi
+# Get arguments
+case "$1" in
+  d|-d) date="true"; shift ;;
+  i|-i) inverse="true"; shift ;;
+  di|-di) date="true"; inverse="true"; shift ;;
+  id|-id) inverse="true"; date="true"; shift ;;
+esac
 
-# Get dir and file
+# Get dir and pattern
 if [[ -d "$2" ]]; then
   dir="$2"
   pattern="$1"
@@ -17,7 +19,8 @@ else
   dir="."
 fi
 
-mapfile -t files < <(find "$dir" -type f)
+# Get list of files
+mapfile -t files < <(find "$dir" -maxdepth 1 -type f)
 
 # Count total files
 numberfiles=${#files[@]}
@@ -28,14 +31,18 @@ digit=${#numberfiles}
 
 listfiles() {
   count=1
+
   for file in "${files[@]}"; do
     # Remove path
     filename="${file##*/}"
+
     # Remove ext
     filename="${filename%*.*}"
 
+    # Get extension
     ext="${file##*.}"
 
+    # If pattern
     if [[ "$pattern" ]]; then
       if [[ $inverse ]]; then
         newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$pattern" "$ext")
@@ -47,6 +54,15 @@ listfiles() {
         newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$filename" "$ext")
       else
         newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$filename" "$count" "$ext")
+      fi
+    fi
+
+    # If date and not pattern
+    if [[ -z "$pattern" && -n $date ]]; then
+      if [[ $inverse ]]; then
+        newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$(date -r "$file" +%Y-%m-%d)" "$ext")
+      else
+        newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$(date -r "$file" +%Y-%m-%d)" "$count" "$ext")
       fi
     fi
 
