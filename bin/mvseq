@@ -42,27 +42,29 @@ listfiles() {
     # Get extension
     ext="${file##*.}"
 
-    # If pattern
-    if [[ "$pattern" ]]; then
+    if [[ -n "$pattern" && -n $date ]]; then
+      if [[ $inverse ]]; then
+        newfile=$(printf "%s/%0${digit}d-%s-%s.%s\n" "$(dirname "$file")" "$count" "$(date -r "$file" +%Y-%m-%d)" "$pattern" "$ext")
+      else
+        newfile=$(printf "%s/%s-%s-%0${digit}d.%s\n" "$(dirname "$file")" "$pattern" "$(date -r "$file" +%Y-%m-%d)" "$count" "$ext")
+      fi
+    elif [[ -n "$pattern" && -z $date ]]; then
       if [[ $inverse ]]; then
         newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$pattern" "$ext")
       else
         newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$pattern" "$count" "$ext")
+      fi
+    elif [[ -z "$pattern" && -n $date ]]; then
+      if [[ $inverse ]]; then
+        newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$(date -r "$file" +%Y-%m-%d)" "$ext")
+      else
+        newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$(date -r "$file" +%Y-%m-%d)" "$count" "$ext")
       fi
     else
       if [[ $inverse ]]; then
         newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$filename" "$ext")
       else
         newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$filename" "$count" "$ext")
-      fi
-    fi
-
-    # If date and not pattern
-    if [[ -z "$pattern" && -n $date ]]; then
-      if [[ $inverse ]]; then
-        newfile=$(printf "%s/%0${digit}d-%s.%s\n" "$(dirname "$file")" "$count" "$(date -r "$file" +%Y-%m-%d)" "$ext")
-      else
-        newfile=$(printf "%s/%s-%0${digit}d.%s\n" "$(dirname "$file")" "$(date -r "$file" +%Y-%m-%d)" "$count" "$ext")
       fi
     fi
 
