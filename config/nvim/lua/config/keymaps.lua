@@ -79,6 +79,11 @@ map(
 )
 
 map(
+  'n', 'yc', 'yypk:normal gcc<cr>jautocmds.lua',
+  { desc = 'Duplicate line and comment' }
+)
+
+map(
   'n', 'yl', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
 )
@@ -354,13 +359,13 @@ map(
 )
 
 map(
-  'n', '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  {'n', 'v'}, '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
 map(
-  'n', '<leader>P', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
-  { desc = 'Paste from clipboard in new line' }
+  'n', '<leader>P', '"+gP<esc><cmd>echo "Paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
 )
 
 map(
@@ -496,8 +501,18 @@ map(
 )
 
 map(
-  'n', '<leader><leader>p', '<cmd>Lazy<cr>',
+  'n', '<leader><leader>l', '<cmd>Lazy<cr>',
   { desc = 'Lazy' }
+)
+
+map(
+  'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  { desc = 'Paste from clipboard in new line' }
+)
+
+map(
+  'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  { desc = 'Paste from clipboard in new line' }
 )
 
 map(

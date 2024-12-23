@@ -404,7 +404,7 @@
     },
     {
       "before": ["<leader>", "P"],
-      "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
+      "after": ["\"", "+", "g", "P"]
     },
     {
       "before": ["<leader>", "q"],
@@ -425,6 +425,14 @@
     {
       "before": ["<leader>", "z"],
       "commands": ["workbench.action.toggleZenMode"]
+    },
+    {
+      "before": ["<leader><leader>", "p"],
+      "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
+    },
+    {
+      "before": ["<leader><leader>", "P"],
+      "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"]
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -475,7 +483,7 @@
     },
     {
       "before": ["<leader>", "p"],
-      "after": ["\"", "_", "d", "P"]
+      "after": ["\"", "+", "g", "p"]
     },
     {
       "before": ["<leader>", "R"],

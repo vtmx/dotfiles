@@ -331,3 +331,15 @@ findbar {
   border-right: 1px solid var(--neutral4) !important;
 }
 
+/* places */
+#placesView {
+  color: var(--neutral7) !important;
+}
+
+#placesList {
+  border: none !important;
+}
+
+#detailsPane {
+  background: var(--neutral0) !important;
+}
