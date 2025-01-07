@@ -13,6 +13,15 @@ function M.toggle_ia()
   end
 end
 
+function M.toggle_diary()
+  M.toggle_colorcolumn()
+  M.toggle_number()
+  M.toggle_spelllang()
+  M.toggle_wrap()
+  vim.cmd('highlight CursorLine NONE')
+  print('Toggle diary')
+end
+
 function M.toggle_number()
   if vim.o.number then
     vim.o.number = false

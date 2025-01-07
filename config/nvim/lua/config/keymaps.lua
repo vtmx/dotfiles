@@ -449,6 +449,11 @@ map(
 )
 
 map(
+  'n', '<leader>uz', function() utils.toggle_diary() end,
+  { desc = 'Toggle diary mode' }
+)
+
+map(
   'n', '<leader>W', '<cmd>w !sudo -S tee %<cr>',
   { desc = 'Save file with sudo', silent = false }
 )
