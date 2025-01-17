@@ -14,7 +14,6 @@ menu() {
  b. Copy bin
  c. Clone repository
  f. Copy fonts 
- i. Install packages
  l. Create simbolic links
  s. Sync
  q. Exit
@@ -60,11 +59,6 @@ copy_fonts() {
   else
     pause_error "Fonts not copied"
   fi
-}
-
-install_packages() {
-  echo "Install packages..."
-  pause_success "Installed"
 }
 
 # Links need the complete path

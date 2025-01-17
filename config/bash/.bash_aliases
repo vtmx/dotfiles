@@ -7,6 +7,11 @@ alias brl="source $HOME/.bashrc; echo Reload bashrc"
 # bat
 alias bat="bat --theme=ansi --style=numbers,changes,header --italic-text=always"
 
+# bun
+alias buni="bun install"
+alias bunr="bun remove"
+alias bunl="bun pm ls"
+
 # directories
 alias ..="cd .."
 alias ...="cd ../.."
