@@ -284,7 +284,7 @@ map(
 )
 
 map(
-  'n', '<leader>f', '<cmd>Telescope file_browser<cr>',
+  'n', '<leader>ff', '<cmd>Telescope file_browser<cr>',
   { desc = 'Files browser' }
 )
 
