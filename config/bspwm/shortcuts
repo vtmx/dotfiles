@@ -111,8 +111,8 @@ super + {a,b,e,g,m,p,t,s,v}
   {pamac-manager,zen,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
 # Apps alternate
-super + alt + {e,p}
-  {thunar,bitwarden-desktop}
+super + alt + {b,e,p}
+  {firefox,thunar,bitwarden-desktop}
 
 Print
   flameshot gui
