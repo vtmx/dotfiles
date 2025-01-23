@@ -699,7 +699,3 @@
     </tr>
   </table>
 </details>
-
-<!-- ## References -->
-<!-- https://defkey.com/xfce-shortcuts -->
-<!-- https://github.com/owl4ce/dotfiles -->

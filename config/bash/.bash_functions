@@ -83,7 +83,7 @@ gpdf() {
   git add -A
   git commit -m "${msg^}"
   git push
-  cd -
+  cd - >/dev/null
 }
 
 # Convert rgb to hex
