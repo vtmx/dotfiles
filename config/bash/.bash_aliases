@@ -30,6 +30,9 @@ alias cdt="cd $HOME/Downloads/temp"
 # canvas-sketch-cli
 alias canva="canvas-sketch-cli"
 
+# du list size files
+alias dus="du -h --max-depth=1 | sort -hr"
+
 # chmod
 alias chx="chmod +x"
 
