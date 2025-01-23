@@ -20,7 +20,7 @@ body {
   color: var(--neutral7) !important;
 }
 
-/* preferences page */
+/* Preferences page */
 @-moz-document url-prefix(about:preferences) {
   #preferences-stack {
     max-width: 1200px !important;
@@ -28,7 +28,7 @@ body {
   }
 }
 
-/* hidens element */
+/* Hidens element */
 #import-button,
 #nav-bar #identity-box,
 #nav-bar #identity-permission-box,
@@ -42,11 +42,12 @@ body {
 #titlebar .titlebar-spacer,
 #unified-extensions-button,
 #urlbar .search-one-offs:not([hidden]),
-#urlbar-zoom-button {
+#urlbar-zoom-button,
+#statuspanel {
  display: none !important;
 }
 
-/* titlebar */
+/* Titlebar */
 #navigator-toolbox,
 #tabbrowser-arrowscrollbox {
   background: var(--neutral1) !important;
@@ -56,172 +57,179 @@ body {
   border: none !important;
 }
 
-/* bookmarks toolbar */
+/* Bookmarks toolbar */
 #personal-bookmarks {
   background: var(--neutral1) !important;
 }
 
-/* bookmarks toolbar remove space */
+/* Bookmarks toolbar remove space */
 :root[uidensity="compact"] #PersonalToolbar {
   padding-inline: 0 !important;
 }
 
-/* bookmark height */
+/* Bookmark height */
 #editBMPanel_folderTree,
 #editBMPanel_tagsSelector {
   height: 55vh !important;
 }
 
-/* colors of github dimmed */
+/* Colors of github dimmed */
 #nav-bar:before {
   background: var(--neutral4) !important;
   border-radius: var(--radius) !important;
 }
 
-/* navigator-toolbox remobe border bottom */
+/* Navigator-toolbox remobe border bottom */
 #navigator-toolbox {
   border: none !important;
 }
 
-/* remove space to start toolbar */
+/* Remove space to start toolbar */
 #back-button {
   padding-inline-start: 0 !important;
 }
 
-/* padding menu button */
+/* Padding menu button */
 #PanelUI-menu-button {
   padding-right: 4px !important;
 }
 
-/* tab hide favicons */
+/* Tab hide favicons */
 .tabbrowser-tab .tab-icon-stack {
   filter: grayscale(50%) !important;
   transition: all .2s;
 }
 
-/* tab show favicons on hover */
+/* Tab show favicons on hover */
 .tabbrowser-tab[visuallyselected="true"] .tab-icon-stack,
 .tabbrowser-tab:hover .tab-icon-stack {
   filter: grayscale(0) !important;
 }
 
-/* tab inactive foreground */
+/* Tab inactive foreground */
 .tabbrowser-tab .tab-content {
   color: var(--neutral3) !important;
 }
 
-/* tab hover background necessário hbox */
+/* Tab hover background necessário hbox */
 .tabbrowser-tab:hover .tab-background hbox {
   background: var(--neutral4) !important;
   transition: all .05s !important;
 }
 
-/* tab hover foreground */
+/* Tab hover foreground */
 .tabbrowser-tab:hover .tab-content {
   color: var(--neutral7) !important;
 }
 
-/* tab active background necessário hbox */
+/* Tab active background necessário hbox */
 .tabbrowser-tab[visuallyselected] .tab-background hbox {
   background: var(--neutral4);
 }
 
-/* tab active foreground */
+/* Tab active foreground */
 .tabbrowser-tab[visuallyselected] .tab-content {
   color: var(--neutral7) !important;
 }
 
-/* tab hide icon close */
+/* Tab hide icon close */
 .tabbrowser-tab:not([pinned]) .tab-close-button {
   opacity: 0 !important;
   color: var(--neutral5) !important;
   transition: all .2s !imporntat;
 }
 
-/* tab show close on hover */
+/* Tab show close on hover */
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   opacity: 1 !important;
 }
 
-/* tab new tab button */
+/* Tab new tab button */
 #tabs-newtab-button .toolbarbutton-icon {
   fill: var(--neutral3) !important;
 }
 
-/* tab new tab button on hover */
+/* Arrow and settins icon */
+/*.toolbarbutton-1 {*/
+/*  > .toolbarbutton-icon, > .toolbarbutton-badge-stack > .toolbarbutton-icon {*/
+/*    fill: var(--neutral4) !important;*/
+/*  }*/
+/*}*/
+
+/* Tab new tab button on hover */
 #tabs-newtab-button:hover .toolbarbutton-icon {
   background: var(--neutral4) !important;
   fill: var(--neutral7) !important;
 }
 
-/* tab remove preview */
+/* Tab remove preview */
 #tab-preview-panel {
   display: none !important;
 }
 
-/* tab remove margin first */
+/* Tab remove margin first */
 #TabsToolbar :is(.tabbrowser-tab, .toolbarbutton-1, separator, #personal-bookmarks, #search-container, .accessibility-indicator, .private-browsing-indicator, #private-browsing-indicator-with-label) {
   margin-inline-start: 0 !important;
 }
 
-/* urlbar remove outline and box-shadow of children */
+/* Urlbar remove outline and box-shadow of children */
 #urlbar, #urlbar * {
   outline: none !important;
   box-shadow: none !important;
   border-radius: 4px !important;
 }
 
-/* urlbar-input-box prevent gtk colors */
+/* Urlbar-input-box prevent gtk colors */
 #urlbar .urlbar-input-box {
   color: var(--neutral7) !important;
   padding: 0 4px !important;
 }
 
-/* urlbar add background on hover */
+/* Urlbar add background on hover */
 #urlbar:not([focused]) #urlbar-background {
   background: var(--neutral1) !important;
 }
 
-/* urlbar add transition when hover */
+/* Urlbar add transition when hover */
 #urlbar #urlbar-background {
   background: var(--neutral1) !important;
   border: none !important;
   transition: all .2s !important;
 }
 
-/* urlbar show border when active */
+/* Urlbar show border when active */
 #urlbar[breakout] #urlbar-background,
 #urlbar[breakout][breakout-extend] #urlbar-background {
   border: none;
 }
 
-/* urlbar selection color when window active */
+/* Urlbar selection color when window active */
 #urlbar[breakout][breakout-extend] ::selection {
   background: var(--accent);
   color: var(--neutral0);
 }
 
-/* urlbar selection color when window inactive */
+/* Urlbar selection color when window inactive */
 #urlbar ::selection {
   background: transparent;
   color: var(--neutral7);
 }
 
-/* urlbar font-size url */
+/* Urlbar font-size url */
 #urlbar .urlbarView-url {
   font-size: inherit !important;
 }
 
-/* urlbar item list */
+/* Urlbar item list */
 #urlbar .urlbarView-row {
   padding: 0 8px !important;
   border-radius: 0 !important;
   transition: all .1s !important;
 }
 
-/* result links prevent gtk colors */
+/* Result links prevent gtk colors */
 
-/* urlbar item list url */
+/* Urlbar item list url */
 #urlbar .urlbarView-title {
   color: var(--neutral7) !important;
 }
@@ -230,13 +238,13 @@ body {
   color: var(--neutral5) !important;
 }
 
-/* urlbar list */
+/* Urlbar list */
 .urlbarView {
   width: 100% !important;
   margin-inline: 0 !important;
 }
 
-/* urlbar item list on hover */
+/* Urlbar item list on hover */
 #urlbar .urlbarView-row:hover {
   /* cursor: pointer !important; */
   background: var(--neutral2) !important;
@@ -247,34 +255,34 @@ body {
   padding-block: 0 !important;
 }
 
-/* hide search end site list */
+/* Hide search end site list */
 #urlbar .search-one-offs:not([hidden]) {
   display: none !important;
 }
 
-/* urlbar Search with... */
+/* Urlbar Search with... */
 #urlbar *|input::placeholder {
  color: transparent !important;
  opacity: 0 !important;
 }
 
-/* change color bookmarks icon */
+/* Change color bookmarks icon */
 #urlbar-container #star-button[starred] {
  fill: var(--neutral3) !important;
 }
 
-/* findbar */
+/* Findbar */
 findbar {
   background: var(--neutral1) !important;
   border: none !important;
 }
 
-/* prevent gtk color */
+/* Prevent gtk color */
 .toolbarbutton-animatable-box, .toolbarbutton-1 {
   fill: var(--neutral7) !important;
 }
 
-/* disable tooltip */
+/* Disable tooltip */
 tooltip {
   background-color: transparent; !important;
   background-position: center center !important;
@@ -287,13 +295,13 @@ tooltip {
   -moz-appearance: none !important;
 }
 
-/* sidebar */
+/* Sidebar */
 .sidebar-panel {
   background: var(--neutral1) !important;
   color: var(--neutral7) !important;
 }
 
-/* sidebar history */
+/* Sidebar history */
 .sidebar-splitter {
   width: 0 !important;
   background: transparent !important;
@@ -306,12 +314,12 @@ tooltip {
   border-bottom: 0 !important;
 }
 
-/* sidebar bookmarks */
+/* Sidebar bookmarks */
 .sidebar-placesTreechildren {
   color: var(--neutral7) !important;
 }
 
-/* private icon */
+/* Private icon */
 #private-browsing-indicator-with-label {
   border: none !important;
 }
@@ -320,18 +328,18 @@ tooltip {
   background: transparent !important;
 }
 
-/* private icon */
+/* Private icon */
 findbar {
   border-top: 1px solid #2c313c !important;
 }
 
-/* statuspanel */
+/* Statuspanel */
 #statuspanel-label {
   border-top: 1px solid var(--neutral4) !important;
   border-right: 1px solid var(--neutral4) !important;
 }
 
-/* places */
+/* Places */
 #placesView {
   color: var(--neutral7) !important;
 }

@@ -1,0 +1,29 @@
+
+@-moz-document url-prefix("chrome:") {
+  body {
+    font-family: Segoe, system-ui, sans-serif !important;
+    font-size: 13px !important;
+  }
+
+  #identity-box,
+  #identity-icon-label,
+  #reader-mode-button,
+  #tracking-protection-icon-container,
+  #unified-extensions-button,
+  #zen-current-workspace-indicator,
+  #zen-sidebar-icons-wrapper {
+    display: none !important;
+  }
+
+  #urlbar #urlbar-background {
+    background: Canvas !important;
+  }
+
+  .toolbarbutton-1 {
+    fill: CurrentColor !important;
+  }
+
+  tooltip {
+    display: none;
+  }
+}
