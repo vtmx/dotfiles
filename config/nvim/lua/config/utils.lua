@@ -110,7 +110,15 @@ function M.close_netrw()
   print('Netrw is not open.')
 end
 
-function M.toggle_netrw()
+function M.toggle_netrw_ex()
+  if M.is_netrw_open() then
+    M.close_netrw() 
+  else
+    vim.cmd('Ex')
+  end
+end
+
+function M.toggle_netrw_lex()
   if M.is_netrw_open() then
     M.close_netrw() 
   else
