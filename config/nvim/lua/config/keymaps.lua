@@ -269,43 +269,18 @@ map(
 )
 
 map(
-  'n', '<leader>e', '<cmd>Ex<cr>',
-  { desc = 'Netrw' }
+  'n', '<leader>e', function() utils.toggle_netrw_ex() end,
+  { desc = 'Toggle Netrw Ex' }
 )
 
 map(
-  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
-  { desc = 'Oil' }
+  'n', '<leader>E', function() utils.toggle_netrw_lex() end,
+  { desc = 'Toggle Netrw Lex' }
 )
 
 map(
-  'n', '<leader>fC', '<cmd>Telescope commands<cr>',
-  { desc = 'Commands' }
-)
-
-map(
-  'n', '<leader>ff', '<cmd>Telescope file_browser<cr>',
+  'n', '<leader>f', '<cmd>Telescope file_browser<cr>',
   { desc = 'Files browser' }
-)
-
-map(
-  'n', '<leader>fl', '<cmd>Telescope live_grep<cr>',
-  { desc = 'Live grep' }
-)
-
-map(
-  'n', '<leader>fo', '<cmd>Telescope oldfiles<cr>',
-  { desc = 'Old files' }
-)
-
-map(
-  'n', '<leader>ft', '<cmd>Telescope filetypes<cr>',
-  { desc = 'File types' }
-)
-
-map(
-  'n', '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
-  { desc = 'Fuzzy' }
 )
 
 map(
@@ -324,6 +299,16 @@ map(
 )
 
 map(
+  'n', '<leader>i', '<cmd>Inspect<cr>',
+  { desc = 'Inspect' }
+)
+
+map(
+  'n', '<leader>I', '<cmd>InspectTree<cr>',
+  { desc = 'Inspect Tree' }
+)
+
+map(
   'n', '<leader>j', 'mzJ`z',
   { desc = 'Join lines' }
 )
@@ -336,6 +321,11 @@ map(
 map(
   'n', '<leader>k', '<cmd>Telescope keymaps<cr>',
   { desc = 'Keymaps' }
+)
+
+map(
+  'n', '<leader>l', '<cmd>Lazy<cr>',
+  { desc = 'Lazy' }
 )
 
 map(
@@ -354,7 +344,7 @@ map(
 )
 
 map(
-  'n', '<leader>O', 'm`O<esc>``',
+  'n', '<leader>O', 'm`O<esc>``k',
   { desc = 'Add new line up in normal mode' }
 )
 
@@ -399,7 +389,7 @@ map(
 )
 
 map(
-  'n', '<leader>T', '<cmd>vert term',
+  'n', '<leader>T', '<cmd>vert term<cr>',
   { desc = 'Open vertical terminal' }
 )
 
@@ -414,13 +404,13 @@ map(
 )
 
 map(
-  'n', '<leader>ul', function() utils.toggle_listchars() end,
-  { desc = 'Toggle listchars' }
+  'n', '<leader>uk', '<cmd>WhichKey<cr>',
+  { desc = 'Active whichkey' }
 )
 
 map(
-  'n', '<leader>uk', '<cmd>WhichKey<cr>',
-  { desc = 'Active whichkey' }
+  'n', '<leader>ul', function() utils.toggle_listchars() end,
+  { desc = 'Toggle listchars' }
 )
 
 map(
@@ -439,11 +429,6 @@ map(
 )
 
 map(
-  'n', '<leader>v', '<cmd>Telescope vim_options<cr>',
-  { desc = 'Vim options' }
-)
-
-map(
   'n', '<leader>uw', function() utils.toggle_wrap() end,
   { desc = 'Toggle wrap' }
 )
@@ -459,23 +444,18 @@ map(
 )
 
 map(
-  'n', '<leader>x', '<cmd>w !bash<cr>',
+  'n', '<leader>x', '<cmd>.w !bash<cr>',
   { desc = 'Execute current line' }
 )
 
 map(
-  'n', '<leader>X', '<cmd>!bash %<cr>',
+  'n', '<leader>X', '<cmd>%w !bash %<cr>',
   { desc = 'Execute file' }
 )
 
 map(
-  'n', '<leader>!x', '<cmd>!chmod +x %<cr>',
-  { desc = 'Make file executable' }
-)
-
-map(
-  'v', '<leader>x', "<cmd>w !bash<cr>",
-  { desc = 'Execute selected line' }
+  'v', '<leader>x', ":'<,'>w !bash<cr>",
+  { desc = 'Execute selected line(s)' }
 )
 
 map(
@@ -493,21 +473,21 @@ map(
   { desc = 'ZenMode' }
 )
 
+map(
+  'n', '<leader>!', '<cmd>w !chmod +x %<cr>',
+  { desc = 'Make file executable' }
+)
+
+map(
+  'n', '<leader>/', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  { desc = 'Fuzzy' }
+)
+
 -- Leader leader
 
 map(
-  'n', '<leader><leader>e', function() utils.toggle_netrw() end,
-  { desc = 'File browser' }
-)
-
-map(
-  'n', '<leader><leader>i', '<cmd>Inspect<cr>',
-  { desc = 'Inspect' }
-)
-
-map(
-  'n', '<leader><leader>l', '<cmd>Lazy<cr>',
-  { desc = 'Lazy' }
+  'n', '<leader><leader>e', '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
 )
 
 map(
@@ -518,9 +498,4 @@ map(
 map(
   'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
   { desc = 'Paste from clipboard in new line' }
-)
-
-map(
-  'n', '<leader><leader>t', '<cmd>InspectTree<cr>',
-  { desc = 'Inspect Tree' }
 )
