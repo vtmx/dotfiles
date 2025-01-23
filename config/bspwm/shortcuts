@@ -108,7 +108,7 @@ super + {_,alt + }Return
 
 # Apps
 super + {a,b,e,g,m,p,t,s,v}
-  {pamac-manager,firefox,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
+  {pamac-manager,zen,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
 
 # Apps alternate
 super + alt + {e,p}
