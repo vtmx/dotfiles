@@ -2,6 +2,16 @@
 shopt -s extglob
 shopt -s globstar
 
+# Copy file content to clipboard
+clip() {
+  if [[ ! -f "$1" ]]; then
+    xclip -selection clipboard -i "$1"
+  else
+    echo 'error: no file selected'
+    return 1
+  fi
+}
+
 # Copy and go to the directory
 cpcd() {
 	if [[ -d "$2" ]]; then
