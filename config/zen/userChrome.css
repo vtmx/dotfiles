@@ -5,9 +5,11 @@
     font-size: 13px !important;
   }
 
+  tooltip,
   #identity-box,
   #identity-icon-label,
   #reader-mode-button,
+  #tab-preview-panel,
   #tracking-protection-icon-container,
   #unified-extensions-button,
   #zen-current-workspace-indicator,
@@ -21,9 +23,5 @@
 
   .toolbarbutton-1 {
     fill: CurrentColor !important;
-  }
-
-  tooltip {
-    display: none;
   }
 }
