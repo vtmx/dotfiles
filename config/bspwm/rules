@@ -3,6 +3,7 @@
 br="bspc rule -a"
 
 $br firefox           desktop="^1" focus=on follow=on
+$br zen               desktop="^1" focus=on follow=on
 $br code              desktop="^2" focus=on follow=on
 $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^3" focus=on follow=on

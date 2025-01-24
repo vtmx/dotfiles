@@ -317,6 +317,21 @@ starship() {
   fi
 }
 
+# Move to trash
+trash() {
+  local trash_dir="$HOME/.local/share/Trash/files"
+  mkdir -p "$trash_dir"
+
+  for file in "$@"; do
+    if [[ -e "$file" ]]; then
+      mv -f "$file" "$trash_dir"
+      echo "file moved to trash"
+    else
+      echo "error: file not found"
+    fi
+  done
+}
+
 # Watch files
 wa() {
   if type -P entr >& /dev/null; then

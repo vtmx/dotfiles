@@ -14,9 +14,9 @@ export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
 
 # Colors
-setab() { echo -en "\e[4$1m"; }
+setab() { echo -en "\e[4$1m";   }
 setaf() { echo -en "\e[0;3$1m"; }
-sgr0() { echo -en "\e[0m"; }
+sgr0()  { echo -en "\e[0m";     }
 
 # Man
 export LESS_TERMCAP_mb=$(sgr0)                  # begin blinking
@@ -49,6 +49,10 @@ if [[ -n "$DISPLAY" ]]; then
 else
   PS1=$'\n\\[\e[0;36m\\]$(pwd)\\[\e[0m\\] \n\\[\e[0;32m\\]>\\[\e[0m\\] '
 fi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # fzf
 [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
@@ -90,7 +94,3 @@ if type zoxide &> /dev/null; then
 fi
 
 # vim:ft=bash
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
