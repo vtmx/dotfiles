@@ -18,9 +18,9 @@ inkscape
 inotify-tools
 jgmenu
 jq
+keepassxc
 kitty
 konsole
-krename
 lynx
 mkvtoolnix-cli
 mkvtoolnix-gui
@@ -28,11 +28,10 @@ mpv
 neovim
 nodejs
 npm
-obconf
-openbox
+nvm
 pandoc
 pastel
-perl-rename
+# perl-rename
 polybar
 qemu
 rofi
@@ -48,6 +47,7 @@ wmctrl
 xclip
 xdotool
 xev
+xprop
 yay
 zoxide
 
