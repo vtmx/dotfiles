@@ -1,5 +1,6 @@
 return {
   'saghen/blink.cmp',
+  event = 'InsertEnter',
   dependencies = 'rafamadriz/friendly-snippets',
   version = '*',
   opts = {
@@ -7,7 +8,7 @@ return {
       preset = 'default',
       ['<c-j>'] = { 'select_next', 'fallback' },
       ['<c-k>'] = { 'select_prev', 'fallback' },
-      ['<tab>'] = { 'select_and_accept' },
+      -- ['<tab>'] = { 'select_and_accept' },
     },
     appearance = {
       use_nvim_cmp_as_default = true,

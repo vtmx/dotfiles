@@ -19,6 +19,16 @@ map(
 )
 
 map(
+  'n', 'gco', 'o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
+  { desc = 'Add a comment below current line' }
+)
+
+map(
+  'n', 'gcO', 'O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
+  { desc = 'Add a comment above current line' }
+)
+
+map(
   {'n', 'v'}, 'H', '^',
   { desc = 'Go to begin line' }
 )
@@ -79,7 +89,7 @@ map(
 )
 
 map(
-  'n', 'yc', 'yypk:normal gcc<cr>jautocmds.lua',
+  'n', 'yc', 'yypk:normal gcc<cr>j$',
   { desc = 'Duplicate line and comment' }
 )
 
@@ -119,8 +129,8 @@ map(
 )
 
 map(
-  'n', '<c-s>', '<cmd>w<cr>',
-  { desc = 'Save file if file is change', silent = false }
+  {'n', 'i', 's', 'x'}, '<c-s>', '<cmd>w<cr><esc>',
+  { desc = 'Save file if file is change' }
 )
 
 map(
@@ -161,17 +171,12 @@ map(
 )
 
 map(
-  'i', '<c-s>', '<cmd>up!<cr><esc>',
-  { desc = 'Save file if file is change', silent = false }
-)
-
-map(
   'i', '<c-,>', '```bash<cr>```<esc>O',
   { desc = 'Add bash code' }
 )
 
 map(
-  'i', '<c-;>', '<esc>:normal gcc<cr>i',
+  'i', '<c-;>', '<esc><cmd>normal Ax <cr><esc><cmd>normal gcc<cr>A<bs><bs>',
   { desc = 'Comment line' }
 )
 
@@ -242,11 +247,6 @@ map(
 )
 
 -- Leader
-
-map(
-  'n', '<leader>a', 'G<s-v>gg',
-  { desc = 'Select all text' }
-)
 
 map(
   'n', '<leader>b', '<cmd>Telescope buffers<cr>',
