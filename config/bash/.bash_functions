@@ -2,6 +2,15 @@
 shopt -s extglob
 shopt -s globstar
 
+# Cat
+cat() {
+  if type bat &> /dev/null; then
+    bat "$1"
+  else
+    cat "$1"
+  fi
+}
+
 # Copy file content to clipboard
 clip() {
   if [[ ! -f "$1" ]]; then
@@ -93,7 +102,7 @@ hex() {
 
 # Return text of htmlq
 htm() {
-  if ! type htmlq >& /dev/null; then
+  if ! type htmlq &> /dev/null; then
     echo 'htmlq not exist'
     return 1
   fi
@@ -220,7 +229,7 @@ lnwd() {
 
 # Play
 play() {
-  if type mpv >& /dev/null; then
+  if type mpv &> /dev/null; then
     local music="$HOME/Music"
     local args="--no-video --display-tags=Title,Artist"
 
@@ -312,7 +321,7 @@ ssha() {
 
 # Start starship
 starship() {
-  if type -P starship > /dev/null; then
+  if type -P starship &> /dev/null; then
     eval "$(starship init bash)"
   fi
 }
@@ -334,7 +343,7 @@ trash() {
 
 # Watch files
 wa() {
-  if type -P entr >& /dev/null; then
+  if type -P entr &> /dev/null; then
     if [[ -n "$1" ]]; then
       local file=$1
       local ext=$(echo $1 | awk -F . '{print $NF}')

@@ -265,8 +265,8 @@ local hl_groups = {
 ------------------------------------------------------------
 
   -- codium
-  CodiumAnnotation = { fg = c.fg },
-  CodiumSuggestion = { fg = c.fd },
+  CodeiumAnnotation = { fg = c.fg },
+  CodeiumSuggestion = { fg = c.fd },
 
   -- indent-line
   IblIndent = { fg = c.ac  },

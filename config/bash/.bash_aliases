@@ -106,9 +106,9 @@ alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
 alias live="browser-sync start --server "." --files *"
 
 # ls
+alias l="ls --color=auto --group-directories-first --sort=extension"
 alias la="ls -A | grep '^\.' | column"
 alias ll="ls -Fal"
-alias lls="ls -ltra | grep --color=never '\->'"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 
 # man pt-br

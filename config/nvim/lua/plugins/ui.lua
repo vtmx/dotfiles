@@ -22,10 +22,6 @@ local lualine_theme = ({
 
 return {
   {
-    'kyazdani42/nvim-web-devicons',
-    event = 'VeryLazy'
-  },
-  {
     'echasnovski/mini.tabline',
     event = 'BufAdd',
     opts = { show_icons = false }
@@ -38,8 +34,8 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
-    event = 'BufEnter',
     dependencies = 'kyazdani42/nvim-web-devicons',
+    event = 'ModeChanged',
     opts = {
       options = {
         always_divide_middle = true,

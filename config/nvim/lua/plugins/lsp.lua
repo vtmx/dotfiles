@@ -1,6 +1,6 @@
 return {
   {
     'neovim/nvim-lspconfig',
-    event = 'BufEnter'
+    event = 'InsertEnter'
   },
 }

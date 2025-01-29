@@ -1,11 +1,11 @@
 return {
   {
     'echasnovski/mini.align',
-    event = 'VeryLazy', config = true
+    event = 'ModeChanged', config = true
   },
   {
     'echasnovski/mini.surround',
-    event = 'VeryLazy',
+    event = 'ModeChanged',
     config = function()
       require('mini.surround').setup({
          mappings = { add = 'sa', delete = 'ds', replace = 'cs', highlight = 'sh', }
