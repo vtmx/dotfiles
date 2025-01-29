@@ -259,6 +259,11 @@ map(
 -- Leader
 
 map(
+  'n', '<leader>a', 'G<s-v>gg',
+  { desc = 'Select all text' }
+)
+
+map(
   'n', '<leader>b', '<cmd>Telescope buffers<cr>',
   { desc = 'Buffers' }
 )
