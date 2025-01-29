@@ -171,12 +171,22 @@ map(
 )
 
 map(
+  'i', '<c-a>', '<esc><cmd>normal ^<cr>i',
+  { desc = 'Move to begin line' }
+)
+
+map(
+  'i', '<c-e>', '<esc><cmd>normal $<cr>a',
+  { desc = 'Move to end line' }
+)
+
+map(
   'i', '<c-,>', '```bash<cr>```<esc>O',
   { desc = 'Add bash code' }
 )
 
 map(
-  'i', '<c-;>', '<esc><cmd>normal Ax <cr><esc><cmd>normal gcc<cr>A<bs><bs>',
+  'i', '<c-;>', '<esc><cmd>normal Ax<cr><esc><cmd>normal gcc<cr>A<bs><bs>',
   { desc = 'Comment line' }
 )
 
