@@ -1,11 +1,8 @@
 # bash
 alias ba="$EDITOR $HOME/.bash_aliases"
 alias bf="$EDITOR $HOME/.bash_functions"
+alias br="source $HOME/.bashrc; echo Reload bashrc"
 alias brc="$EDITOR $HOME/.bashrc"
-alias brl="source $HOME/.bashrc; echo Reload bashrc"
-
-# bat
-alias bat="bat --theme=ansi --style=numbers,changes,header --italic-text=always"
 
 # bun
 alias buni="bun install"
@@ -15,8 +12,6 @@ alias bunl="bun pm ls"
 # directories
 alias ..="cd .."
 alias ...="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
 alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
 alias cddow="cd $HOME/Downloads"
@@ -31,13 +26,10 @@ alias cdt="cd $HOME/Downloads/temp"
 alias canva="canvas-sketch-cli"
 
 # du list size files
-alias dus="du -h --max-depth=1 | sort -hr"
+alias dush="du -h --max-depth=1 | sort -hr"
 
 # chmod
 alias chx="chmod +x"
-
-# code
-alias code="GTK_USE_PORTAL=1 code"
 
 # copy
 alias cp="cp -i"
@@ -50,16 +42,10 @@ alias diff="diff --color=auto"
 alias dnfi="sudo dnf install"
 alias dnfiy="sudo dnf install -y"
 alias dnfl="sudo dnf list"
-alias dnfr="sudo dnf remove -y"
 alias dnfrepo="sudo dnf repoquery"
+alias dnfr="sudo dnf remove -y"
 alias dnfs="sudo dnf search"
 alias dnfu="sudo dnf upgrade --refresh"
-
-# exa
-alias ezaa="eza -a | grep '^\.'"
-alias ezal="eza -l --color=auto --group-directories-first"
-alias ezas="eza --color=auto --group-directories-first"
-alias tree="eza -T"
 
 # git
 alias g="git"
@@ -88,9 +74,6 @@ alias gs="git status -sb"
 
 # gtk
 alias gtk="GTK_DEBUG=interactive"
-
-# grep
-alias grep="grep --color=auto"
 
 # history
 alias hi="history | sort -rn"
@@ -126,7 +109,6 @@ alias pipi="pip install"
 alias pipr="pip uninstall"
 
 # pacman
-alias pac="sudo pacman"                   # pacman
 alias pacc="sudo pacman -Sc"              # clean old from cache
 alias paci="sudo pacman -S"               # install
 alias paciy="sudo pacman -S --noconfirm"  # install no confirm
@@ -136,6 +118,7 @@ alias paclq="pacman -Qqe"                 # filter
 alias pacr="sudo pacman -Rs"              # remove
 alias pacry="sudo pacman --noconfirm -Rs" # remove no confirm
 alias pacs="sudo pacman -Ss"              # search
+alias pac="sudo pacman"                   # pacman
 alias pacu="sudo pacman -Syu"             # update
 
 # ps
@@ -143,12 +126,13 @@ alias pstree="pstree -npTC age"
 
 # remove
 alias rd="rm -ir"
-alias rdy="rm -rf"
+alias rdy="rm -fr"
 alias rm="rm -i"
 alias rmy="rm -f"
 
-# sleep
-alias sl="sleep"
+# rename
+alias rn="perl-rename"
+alias rename="perl-rename"
 
 # source
 alias so="source"
@@ -164,13 +148,8 @@ alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 
-# vlang
-alias vl="$HOME/.v/vl"
-alias vf="$HOME/.v/vl fmt -w"
-alias vh="$HOME/.v/vl help"
-alias vr="$HOME/.v/vl run"
-alias vu="$HOME/.v/vl up"
-alias vw="$HOME/.v/vl watch run"
+# tree
+alias tree="eza -T"
 
 # vim
 alias v="nvim"
@@ -179,6 +158,14 @@ alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins"
 alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
+
+# vlang
+alias vl="$HOME/.v/vl"
+alias vf="$HOME/.v/vl fmt -w"
+alias vh="$HOME/.v/vl help"
+alias vr="$HOME/.v/vl run"
+alias vu="$HOME/.v/vl up"
+alias vw="$HOME/.v/vl watch run"
 
 # yarn
 alias ya="yarn add"
@@ -195,13 +182,12 @@ alias yu="yarn upgrade"
 alias yv="yarn version"
 
 # yay
-alias yayc='yay -Sc'
 alias yayi="yay -S"
+alias yayc='yay -Sc'
 alias yayr="yay -R"
 alias yayu="yay -Syu"
 
 # yt-dlp
-alias ytdlp='yt-dlp'
 alias ytp='yt-dlp -x --audio-format mp3 --replace-in-metadata title " " "-" --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
 
 # weather
@@ -210,6 +196,3 @@ alias wt="curl wttr.in/?format=3"
 # lite-xl
 alias xl="lite-xl"
 alias xc="lite-xl $HOME/.config/lite-xl"
-
-# temp
-alias dai='yt-dlp -f hls-720'

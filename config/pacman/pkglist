@@ -25,13 +25,14 @@ lynx
 mkvtoolnix-cli
 mkvtoolnix-gui
 mpv
+ncdu
 neovim
 nodejs
 npm
 nvm
 pandoc
 pastel
-# perl-rename
+perl-rename
 polybar
 qemu
 rofi
