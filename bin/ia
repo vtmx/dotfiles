@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -f $HOME/.groq.key ]]; then
-  groqkey=$(<$HOME/.groq.key)
+  groq_key=$(<$HOME/.groq.key)
 else
   echo 'error: need apikey in ~/.groq.key'
   exit 1
@@ -20,7 +20,7 @@ fi
 [[ "$msg" ]] || { echo 'error: no message'; exit 1; }
 
 curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
-  -H "Authorization: Bearer $groqkey" \
+  -H "Authorization: Bearer $groq_key" \
   -H 'Content-Type: application/json' \
   -d '{
     "messages": [
@@ -32,3 +32,17 @@ curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
     "model": "llama3-70b-8192"
   }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"
 
+
+# curl https://api.deepseek.com/chat/completions \
+# -H "Authorization: Bearer $deepseek_key" \
+# -H "Content-Type: application/json" \
+# -d '{
+#       "model": "deepseek-chat",
+#       "messages": [
+#         {
+          #   "role": "user",
+          #   "content": "'"$msg"'"
+          # }
+#       ],
+#       "stream": false
+#     }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"

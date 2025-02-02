@@ -5,7 +5,7 @@ shopt -s globstar
 # Cat
 cat() {
   if type bat &> /dev/null; then
-    bat "$1"
+    bat --theme=ansi --style=numbers,changes,header --italic-text=always "$1"
   else
     cat "$1"
   fi
@@ -257,7 +257,7 @@ play() {
       lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"      ;;
       @(mj|michael))      to_play "$music/lentas/michael-jackson"                 ;;
       ost)                to_play "$music/ost"                                    ;;
-      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 30 | xargs mpv $args        ;;
+      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 250 | xargs mpv $args       ;;
       @(retro?(wave)))    to_play "$music/retrowave"                              ;;
       @(s?(earch)))       find "$music" -iname *"$2"*.mp3 | fzf | xargs mpv $args ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"      ;;
