@@ -8,13 +8,14 @@ $br code              desktop="^2" focus=on follow=on
 $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^3" focus=on follow=on
 $br dolphin           desktop="^3" focus=on follow=on
-$br godot             desktop="^3" focus=on follow=on state=floating 
 $br keepassxc         desktop="^3" focus=on follow=on
 $br thunar            desktop="^3" focus=on follow=on
-$br steam             desktop="^4"
+$br steam             desktop="^4" state=floating
+$br pamac-manager     desktop="^5" focus=on follow=on
 $br vlc               desktop="^5" focus=on follow=on
 $br qBittorrent       desktop="^6" focus=on follow=on
-$br conky             border=off   state=floating 
-$br mpv               follow=on    state=floating 
-$br pavucontrol       state=floating
-$br Screenkey         manager=off
+$br conky                          border=off state=floating 
+$br godot                          state=floating 
+$br mpv                            state=floating 
+$br pavucontrol                    state=floating
+$br Screenkey                      manager=off
