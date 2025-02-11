@@ -22,4 +22,5 @@
   <property name="run-custom-command" type="bool" value="true"/>
   <property name="title-mode" type="string" value="TERMINAL_TITLE_HIDE"/>
   <property name="custom-command" type="string" value="tmux"/>
+  <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
 </channel>
