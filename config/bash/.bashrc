@@ -62,8 +62,9 @@ if [[ -f $HOME/.local/bin/fd ]]; then
 fi
 
 # fzf
+[[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+
 if type fzf &> /dev/null; then
-  [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
 
   if [[ $DISPLAY ]]; then
     export FZF_DEFAULT_OPTS="\
