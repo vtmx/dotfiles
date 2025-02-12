@@ -56,10 +56,15 @@ if [[ -f $HOME/.bun/bin/bun ]]; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# fzf
-[[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+# fd
+if [[ -f $HOME/.local/bin/fd ]]; then
+  export LS_COLORS=''
+fi
 
+# fzf
 if type fzf &> /dev/null; then
+  [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+
   if [[ $DISPLAY ]]; then
     export FZF_DEFAULT_OPTS="\
     --height 50% --reverse \

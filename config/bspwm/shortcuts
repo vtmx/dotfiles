@@ -106,6 +106,9 @@ ctrl + alt + Delete
 super + {_,alt + }Return
   {kitty,bspc rule -a \* -o state=floating && kitty}
 
+super + {_,alt + }KP_Enter
+  {kitty,bspc rule -a \* -o state=floating && kitty}
+
 # Apps
 super + {a,b,e,g,m,p,t,s,v}
   {pamac-manager,zen,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
