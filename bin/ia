@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
+# Check ia key
 if [[ -f $HOME/.groq.key ]]; then
-  groq_key=$(<$HOME/.groq.key)
+  iakey=$(<$HOME/.groq.key)
 else
   echo 'error: need apikey in ~/.groq.key'
   exit 1
 fi
 
-reqs=(glow gum jq)
-type "${reqs[@]}" &>/dev/null || { echo 'error: need gum, glow and jq'; exit 1; }
+# Check prereq
+prereqs=(glow gum jq)
+type "${prereqs[@]}" &>/dev/null || { echo 'error: need gum, glow and jq'; exit 1; }
 
 if [[ "$*" ]]; then
   msg="$*"
@@ -17,10 +19,11 @@ else
   echo "  $msg"
 fi
 
+# Check msg
 [[ "$msg" ]] || { echo 'error: no message'; exit 1; }
 
 curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
-  -H "Authorization: Bearer $groq_key" \
+  -H "Authorization: Bearer $iakey" \
   -H 'Content-Type: application/json' \
   -d '{
     "messages": [
@@ -31,18 +34,3 @@ curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
     ],
     "model": "llama3-70b-8192"
   }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"
-
-
-# curl 'https://api.deepseek.com/chat/completions' \
-# -H "Authorization: Bearer $deepseek_key" \
-# -H "Content-Type: application/json" \
-# -d '{
-#       "model": "deepseek-chat",
-#       "messages": [
-#         {
-          #   "role": "user",
-          #   "content": "'"$msg"'"
-          # }
-#       ],
-#       "stream": false
-#     }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"

@@ -13,8 +13,8 @@ cat() {
 
 # Copy file content to clipboard
 clip() {
-  if [[ ! -f "$1" ]]; then
-    xclip -selection clipboard -i "$1"
+  if [[ -f "$1" ]]; then
+    xclip -sel clip < "$1"
   else
     echo 'error: no file selected'
     return 1
@@ -185,6 +185,7 @@ mvlo() {
     newname="${newname//[ç]/c}"
     newname="${newname//\(/}"
     newname="${newname//\)/}"
+    newname="${newname//\'/}"
     newname="${newname// /-}"
     mv "$file" "$newname" 2>/dev/null
   done
