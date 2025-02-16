@@ -22,6 +22,9 @@ transform_filename() {
   # Replace spaces with dashes
   filename="${filename// /-}"
 
+  # Replace spaces '
+  filename="${filename//\'/}"
+
   # Convert to lowercase
   filename="${filename,,}"
 
