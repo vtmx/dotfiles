@@ -268,6 +268,10 @@ local hl_groups = {
   CodeiumAnnotation = { fg = c.fg },
   CodeiumSuggestion = { fg = c.fd },
 
+  -- fzf-lua
+  FzfLuaBorder        = { fg = c.fd },
+  FzfLuaPreviewBorder = { fg = c.fd },
+
   -- indent-line
   IblIndent = { fg = c.ac  },
   IblScope  = { fg = c.fg  },
