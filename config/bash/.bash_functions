@@ -219,6 +219,24 @@ mvs() {
   return 0
 }
 
+# Rename
+rn() {
+  [[ "$1" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
+  local pattern="$1"
+  shift
+  [[ "$@" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
+  local files="$@"
+
+  perl-rename -n "$pattern" $files
+
+  read -p "Rename? [y/N]: " choice
+
+  case $choice in
+    [yY]) perl-rename "$pattern" $files; return 0 ;;
+       *) return 0 ;;
+  esac
+}
+
 # Link in working dir
 lnwd() {
   [[ $1 && $2 ]] || {
