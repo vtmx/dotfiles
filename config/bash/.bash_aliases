@@ -131,7 +131,6 @@ alias rm="rm -i"
 alias rmy="rm -f"
 
 # rename
-alias rn="perl-rename"
 alias rename="perl-rename"
 
 # source
