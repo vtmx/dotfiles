@@ -45,9 +45,12 @@ fi
 
 # Prompt
 if [[ -n "$DISPLAY" ]]; then
-  PS1=$'\n\\[\e[0;36m\\]$(pwd)\\[\e[0m\\] \n\\[\e[0;32m\\]❯\\[\e[0m\\] '
+  PS1=$'
+\[\e[0;36m\]${PWD##*/}\[\e[0m\] \
+\[\e[0;35m\]$(git branch --show-current 2>/dev/null)\[\e[0m\]
+\[\e[0;32m\]❯\[\e[0m\] '
 else
-  PS1=$'\n\\[\e[0;36m\\]$(pwd)\\[\e[0m\\] \n\\[\e[0;32m\\]>\\[\e[0m\\] '
+  PS1=$'\n\[\e[0;36m\]$(pwd)\[\e[0m\] \n\[\e[0;32m\]>\[\e[0m\] '
 fi
 
 # bun
