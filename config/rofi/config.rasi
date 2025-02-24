@@ -21,7 +21,7 @@ configuration {
   terminal: "kitty";
   show-icons: false;
 
-  // keybindis
+  // keybindis: rofi -show keys
   kb-remove-char-back: "BackSpace";
   kb-remove-word-forward: "Control+Delete";
 
@@ -37,6 +37,7 @@ configuration {
 
   // confirm and cancel
   kb-accept-entry: "Return";
+  kb-secondary-copy: "";
   kb-cancel: "Escape,Control+c";
 }
 
@@ -84,6 +85,7 @@ inputbar {
  
 // icon
 prompt {
+  padding: 0 4px 0 0;
   background-color: transparent;
   text-color: @fg;
 }
