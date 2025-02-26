@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="thunar" version="1.0">
   <property name="last-view" type="string" value="ThunarIconView"/>
@@ -28,4 +28,5 @@
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
   <property name="last-details-view-column-widths" type="string" value="50,50,119,50,50,83,50,50,1505,50,50,63,50,59"/>
   <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
+  <property name="last-toolbar-items" type="string" value="menu:1,back:0,forward:0,open-parent:0,open-home:0,undo:0,redo:0,zoom-in:0,zoom-out:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,toggle-split-view:0,location-bar:1,reload:0,search:0,uca-action-1711476010168813-1:0,new-tab:0,new-window:0,view-switcher:0"/>
 </channel>
