@@ -84,7 +84,7 @@ map(
 )
 
 map(
-  'n', 'ya', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  'n', 'y%', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
   { desc = 'Copy all content to clipboard' }
 )
 

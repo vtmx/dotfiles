@@ -207,6 +207,14 @@ mvup() {
   echo 'finished'
 }
 
+# Create dir and move file the same name
+mvmd() {
+  for file in *; do
+    mkdir "${file%%.*}"
+    mv "$file" "${file%%.*}"
+  done
+}
+
 # Rename substitute word
 mvs() {
   [[ $1 && $2 ]] || {
@@ -229,6 +237,7 @@ rn() {
 
   perl-rename -n "$pattern" $files
 
+  echo
   read -p "Rename? [y/N]: " choice
 
   case $choice in
@@ -247,6 +256,10 @@ lnwd() {
 }
 
 # Play
+p() {
+  play
+}
+
 play() {
   if type mpv &> /dev/null; then
     local music="$HOME/Music"
