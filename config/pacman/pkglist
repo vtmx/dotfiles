@@ -8,6 +8,7 @@ conky-lua-nv
 entr
 exa
 fd
+fdupes
 feh
 figlet
 firefox
@@ -38,6 +39,7 @@ qemu
 rofi
 rsync
 timeshift
+tldr
 tmux
 veracrypt
 virsh
