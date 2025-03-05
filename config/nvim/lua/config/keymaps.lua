@@ -84,11 +84,6 @@ map(
 )
 
 map(
-  'n', 'y%', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
-  { desc = 'Copy all content to clipboard' }
-)
-
-map(
   'n', 'yc', 'yypk:normal gcc<cr>j$',
   { desc = 'Duplicate line and comment' }
 )
@@ -96,6 +91,11 @@ map(
 map(
   'n', 'yl', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
+)
+
+map(
+  'n', 'y%', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  { desc = 'Copy all content to clipboard' }
 )
 
 map(
@@ -471,11 +471,6 @@ map(
 map(
   'v', '<leader>x', ":'<,'>w !bash<cr>",
   { desc = 'Execute selected line(s)' }
-)
-
-map(
-  'n', '<leader>y', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
-  { desc = 'Copy line to clipboard' }
 )
 
 map(

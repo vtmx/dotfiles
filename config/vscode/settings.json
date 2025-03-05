@@ -310,6 +310,14 @@
       "after": ["\"", "_", "x"]
     },
     {
+      "before": ["y", "l"],
+      "after": ["V", "\"", "+", "y"]
+    },
+    {
+      "before": ["y", "%"],
+      "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o"]
+    },
+    {
       "before": ["Y"],
       "after": ["y", "$"]
     },
@@ -413,14 +421,6 @@
     {
       "before": ["<leader>", "w"],
       "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<leader>", "y"],
-      "after": ["V", "\"", "+", "y"]
-    },
-    {
-      "before": ["<leader>", "y", "a"],
-      "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o"]
     },
     {
       "before": ["<leader>", "z"],
