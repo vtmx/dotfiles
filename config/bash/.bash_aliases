@@ -47,6 +47,9 @@ alias dnfr="sudo dnf remove -y"
 alias dnfs="sudo dnf search"
 alias dnfu="sudo dnf upgrade --refresh"
 
+# ghostty
+alias gho="$EDITOR $HOME/.config/ghostty/config"
+
 # git
 alias g="git"
 alias ga="git add"
@@ -74,6 +77,10 @@ alias gs="git status -sb"
 
 # gtk
 alias gtk="GTK_DEBUG=interactive"
+
+# helix
+alias hc="helix $HOME/.config/helix/config.toml"
+alias hx="helix"
 
 # history
 alias hi="history | sort -rn"

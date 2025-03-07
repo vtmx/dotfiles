@@ -1,0 +1,62 @@
+# Shell
+shell-integration = bash
+shell-integration-features = no-cursor
+confirm-close-surface = false
+
+# Window
+window-decoration = none
+window-padding-x = 8
+window-padding-y = 0
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
+# Font
+font-family = BlexMono Nerd Font Medium
+font-family-bold = BlexMono Nerd Font Medium
+font-family-italic = BlexMono Nerd Font Medium
+font-family-bold-italic = BlexMono Nerd Font Medium
+font-size = 11
+font-feature = +zero, +ss02
+
+# Colors
+background = #23272e
+foreground = #abb2bf
+cursor-color = #abb2bf
+
+# Selection
+selection-background = #61afef
+selection-foreground = #23272e
+
+# Black
+palette = 0=#23272e
+palette = 8=#5c6370
+
+# Red 
+palette = 1=#e06c75
+palette = 9=#e06c75
+
+# Green
+palette = 2=#98c379
+palette = 10=#98c379
+
+# Yellow
+palette = 3=#e5c07b
+palette = 11=#e5c07b
+
+# Blue
+palette = 4=#61afef
+palette = 12=#61afef
+
+# Magenta
+palette = 5=#c678dd
+palette = 13=#c678dd
+
+# Cyan
+palette = 6=#56b6c2
+palette = 14=#56b6c2
+
+# White
+palette = 7=#abb2bf
+palette = 15=#abb2bf
