@@ -18,6 +18,8 @@ inherits = "onedark"
 "ui.statusline" = { bg = "bg" }
 "ui.statusline.inactive" = { fg = "fd" }
 "ui.text.focus" = { bg = "ac" }
+"ui.virtual.jump-label" = { fg = "red" }
+"ui.virtual.whitespace" = { fg = "fl" }
 
 [palette]
 bd = "#1e2227"
