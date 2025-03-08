@@ -27,7 +27,7 @@ local hl_groups = {
   PreCondit      = { fg = c.purple },
   PreProc        = { fg = c.purple },
   Repeat         = { fg = c.purple },
-  Tag            = { fg = c.green  },
+  Tag            = { fg = c.red    },
   Statement      = { fg = c.purple },
   String         = { fg = c.green  },
 
@@ -42,7 +42,7 @@ local hl_groups = {
   Added          = { fg = c.green  },
   Debug          = { fg = c.yellow },
   Directory      = { fg = c.blue   },
-  EndOfBuffer    = { fg = c.fd     }, -- Line tilde blank
+  EndOfBuffer    = { fg = c.bg     }, -- Line tilde blank
   NonText        = { fg = c.fd     },
   Special        = { fg = c.blue   },
   SpecialChar    = { fg = c.yellow },
