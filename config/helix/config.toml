@@ -5,7 +5,8 @@ auto-pairs = false
 bufferline = "multiple"
 cursorline = true
 end-of-line-diagnostics = "hint"
-gutters = ["diff", "line-numbers", "spacer"]
+# gutters = ["diff", "line-numbers", "spacer"]
+gutters = ["line-numbers", "spacer"]
 line-number = "relative"
 shell = ["bash", "-c"]
 
