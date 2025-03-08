@@ -1,15 +1,28 @@
-theme = "onedark"
+theme = "onedarkv"
 
 [editor]
 auto-pairs = false
 bufferline = "multiple"
 cursorline = true
-cursor-shape.insert = "bar"
+end-of-line-diagnostics = "hint"
 gutters = ["diff", "line-numbers", "spacer"]
-indent-guides.render = true
-indent-guides.character = "▎" 
 line-number = "relative"
 shell = ["bash", "-c"]
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+character = "▎" 
+
+[editor.statusline]
+left = ["mode", "file-name"]
+center = []
+right = ["diagnostics", "position", "file-encoding"]
+
+[editor.lsp]
+# display-inlay-hints = true
 
 [keys.normal]
 C-s = ":write"

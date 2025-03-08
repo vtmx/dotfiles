@@ -42,7 +42,7 @@ local hl_groups = {
   Added          = { fg = c.green  },
   Debug          = { fg = c.yellow },
   Directory      = { fg = c.blue   },
-  EndOfBuffer    = { fg = c.fd     },
+  EndOfBuffer    = { fg = c.fd     }, -- Line tilde blank
   NonText        = { fg = c.fd     },
   Special        = { fg = c.blue   },
   SpecialChar    = { fg = c.yellow },
@@ -73,9 +73,6 @@ local hl_groups = {
   Ignore         = { fg = c.fg     },
   Error          = { fg = c.red    },
   Todo           = { fg = c.purple },
-
-  -- Line tilde blank
-  EndOfBuffer    = { fg = c.bg },
 
   -- Line highlight
   CursorLine     = { bg = c.bl },
@@ -108,12 +105,6 @@ local hl_groups = {
   -- Line win separator split
   StatusLine     = { bg = 'NONE' },
   StatusLineNC   = { fg = c.fg   },
-
-  --Diff
-  DiffAdd        = { fg = c.fd },
-  DiffDelete     = { fg = c.fd },
-  DiffChange     = { fg = c.fd },
-  DiffText       = { fg = c.fd },
 
   -- Languages
 
@@ -338,4 +329,3 @@ vim.cmd('highlight SpellBad guisp=' .. c.red)
 vim.cmd('highlight SpellCap guisp=' .. c.blue)
 vim.cmd('highlight SpellRare guisp=' .. c.purple)
 vim.cmd('highlight SpellLocal guisp=' .. c.cyan)
-
