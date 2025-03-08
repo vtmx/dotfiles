@@ -81,6 +81,7 @@ alias gtk="GTK_DEBUG=interactive"
 # helix
 alias h="helix"
 alias hc="helix $HOME/.config/helix/config.toml"
+alias ht="helix $HOME/.config/helix/themes/onedarkv.toml"
 
 # history
 alias hi="history | sort -rn"

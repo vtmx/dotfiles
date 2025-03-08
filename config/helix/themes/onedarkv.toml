@@ -20,8 +20,9 @@ theme = "onedarkv"
 "label" = { fg = "red" }
 "namespace" = { fg = "red" }
 "operator" = { fg = "cyan" }
-"special" = { fg = "red" }
+"special" = { fg = "blue" }
 "string" = { fg = "green" }
+"string.regexp" = { fg = "yellow" }
 "tag" = { fg = "green" }
 "type" = { fg = "purple" }
 "variable.builtin" = { fg = "blue" }
@@ -31,8 +32,8 @@ theme = "onedarkv"
 
 # Diagnostic
 "diagnostic" = { bg = "bd", fg = "default", modifiers = ["italic"] }
-"diagnostic.unnecessary" = { bg = "bd" }
 "diagnostic.deprecated" = { fg = "red" }
+"diagnostic.unnecessary" = { bg = "bd" }
 "info" = { fg = "blue" }
 "hint" = { fg = "cyan" }
 "warning" = { fg = "yellow" }
@@ -40,8 +41,8 @@ theme = "onedarkv"
 
 # Diff
 "diff.delta" = { fg = "cyan" }
-"diff.minus" = { fg = "yellow" }
 "diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "yellow" }
 
 # Markup
 "markup.heading" = { fg = "purple" }
@@ -59,7 +60,7 @@ theme = "onedarkv"
 # General
 "ui.background"= { bg = "bg" }
 "ui.text" = { fg = "fg" }
-"ui.text.focus" = { fg = "ac" } # Select item
+"ui.text.focus" = { bg = "ac" } # Select item
 
 # Bufferline
 "ui.bufferline" = { fg = "fd" }
@@ -68,6 +69,7 @@ theme = "onedarkv"
 # Cursor
 "ui.cursor" = { fg = "fg", modifiers = ["reversed"] }
 "ui.cursor.match" = { fg = "yellow" }
+"ui.cursor.primary" = { fg = "fg", modifiers = ["reversed"] }
 
 # Debug
 "ui.debug" = { fg = "red" }
@@ -78,7 +80,7 @@ theme = "onedarkv"
 
 # Hightlight
 "ui.highlight" = { bg = "fd" }
-"ui.highlight.frameline" = { bg = "dl" }
+"ui.highlight.frameline" = { bg = "fd" }
 
 # Line number
 "ui.linenr" = { fg = "ac" }
@@ -88,6 +90,11 @@ theme = "onedarkv"
 "ui.menu" = { bg = "bg",  fg = "fg" }
 "ui.menu.scroll" = { bg = "bg",  fg = "ac" }
 "ui.menu.selected" = { bg = "ac",  fg = "fg" }
+
+# Picker
+"ui.picker.header" = { fg = "fd" }
+"ui.picker.header.column" = { fg = "fd" }
+"ui.picker.header.column.active" = { fg = "fg" }
 
 # Selction
 "ui.selection" = { bg = "ac" }
@@ -104,7 +111,7 @@ theme = "onedarkv"
 "ui.virtual.inlay-hint" = { fg = "fd" }
 "ui.virtual.jump-label" = { fg = "red" }
 "ui.virtual.ruler" = { bg = "dl" }
-"ui.virtual.whitespace" = { fg = "fl" }
+"ui.virtual.whitespace" = { fg = "fd" }
 
 # Window
 "ui.window" = { fg = "fd" }

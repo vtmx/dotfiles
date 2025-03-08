@@ -16,6 +16,16 @@ insert = "bar"
 render = true
 character = "▎" 
 
+[editor.whitespace]
+# render = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "↲"
+
 [editor.statusline]
 left = ["mode", "file-name"]
 center = []
@@ -44,3 +54,6 @@ C-s = [":w", "normal_mode"]
 
 [keys.select]
 "ç" = "normal_mode"
+
+# References
+# https://docs.helix-editor.com/themes.html
