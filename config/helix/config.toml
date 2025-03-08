@@ -1,0 +1,33 @@
+theme = "onedark"
+
+[editor]
+auto-pairs = false
+bufferline = "multiple"
+cursorline = true
+cursor-shape.insert = "bar"
+gutters = ["diff", "line-numbers", "spacer"]
+indent-guides.render = true
+indent-guides.character = "▎" 
+line-number = "relative"
+shell = ["bash", "-c"]
+
+[keys.normal]
+C-s = ":write"
+C-r = [":w", ":config-reload"]
+H = "goto_line_start"
+L = "goto_line_end"
+J = ["move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down"]
+K = ["move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up"]
+X = "extend_line_above"
+Z = { Z = ":wq" }
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.insert]
+k = { j = "normal_mode" }
+C-c = "normal_mode"
+C-h = "move_char_left"
+C-l = "move_char_right"
+C-s = [":w", "normal_mode"]
+
+[keys.select]
+"ç" = "normal_mode"
