@@ -1,22 +1,40 @@
 inherits = "onedark"
 
-"comment" = { fg = "gray", modifiers = ["italic"] }
+"comment" = { fg = "fd", modifiers = ["italic"] }
 "markup.link.url" = { fg = "cyan" }
+"operator" = { fg = "fg" }
+"ui.background"= { bg = "bg" }
+"ui.cursorline.primary" = { bg = "bl" }
 "ui.cursor.match" = { fg = "yellow" }
-"ui.help" = { fg = "white", bg = "black" }
-"ui.linenr" = { fg = "#3d4556" }
-"ui.menu" = { fg = "white", bg = "black" }
-"ui.menu.selected" = { fg = "white", bg = "gray" }
-"ui.menu.scroll" = { fg = "white", bg = "black" }
-"ui.popup" = { bg = "black" }
-"ui.selection" = { bg = "#3d4556" }
-"ui.selection.primary" = { bg = "#3d4556" }
-"ui.statusline" = { fg = "white", bg = "black" }
-"ui.statusline.inactive" = { fg = "light-gray", bg = "black" }
-"ui.virtual.indent-guide" = { fg = "#3d4556" }
+"ui.help" = { bg = "bg", fg = "fg" }
+"ui.linenr" = { fg = "ac" }
+"ui.linenr.selected" = { fg = "fg" }
+"ui.menu" = { bg = "bg",  fg = "fg" }
+"ui.menu.scroll" = { bg = "bg",  fg = "ac" }
+"ui.menu.selected" = { bg = "ac",  fg = "fg" }
+"ui.popup" = { bg = "bg" }
+"ui.selection" = { bg = "ac" }
+"ui.selection.primary" = { bg = "ac" }
+"ui.statusline" = { bg = "bg" }
+"ui.statusline.inactive" = { fg = "fd" }
+"ui.text.focus" = { bg = "ac" }
 
 [palette]
-black = "gray"
+bd = "#1e2227"
+bg = "#23272e"
+bl = "#2c313c" # cursorline and sel
+fd = "#5c6370" # comment
+fg = "#abb2bf"
+fl = "#0000ff"
+ac = "#3d4556" # selection and accent
+
+red    = "#e06c75"
+orange = "#d19a66"
+yellow = "#e5c07b"
+green  = "#98c379"
+cyan   = "#56b6c2"
+blue   = "#61afef"
+purple = "#c678dd"
  
 # References
 # https://github.com/helix-editor/helix/tree/master/runtime/themes
