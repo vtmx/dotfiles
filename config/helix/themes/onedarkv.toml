@@ -58,7 +58,8 @@ theme = "onedarkv"
 # UI
 
 # General
-"ui.background"= { bg = "bg" }
+"ui.background" = { bg = "bg" }
+"ui.background.separator" = { bg = "bg" }
 "ui.text" = { fg = "fg" }
 "ui.text.focus" = { bg = "ac" } # Select item
 
