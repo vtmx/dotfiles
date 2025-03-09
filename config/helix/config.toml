@@ -51,5 +51,8 @@ C-h = "move_char_left"
 C-l = "move_char_right"
 C-s = [":w", "normal_mode"]
 
+[keys.select]
+"ç" = "normal_mode"
+
 # References
 # https://docs.helix-editor.com/themes.html
