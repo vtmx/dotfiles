@@ -17,7 +17,7 @@ insert = "bar"
 render = true
 character = "▎" 
 
-[editor.whitespace]
+# [editor.whitespace]
 # render = "all"
 
 [editor.whitespace.characters]
@@ -32,19 +32,17 @@ left = ["mode", "file-name"]
 center = []
 right = ["diagnostics", "position", "file-encoding"]
 
-[editor.lsp]
-# display-inlay-hints = true
+# [editor.lsp]
+# display-inlay-hints = true Show tip in code
 
 [keys.normal]
 C-s = ":write"
 C-r = [":w", ":config-reload"]
-H = "goto_line_start"
-L = "goto_line_end"
-J = ["move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down"]
-K = ["move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up"]
 X = "extend_line_above"
-Z = { Z = ":wq" }
 esc = ["collapse_selection", "keep_primary_selection"]
+
+# [keys.normal.space.u]
+# l = ":toggle-option whitespace-render" Works only true or false
 
 [keys.insert]
 k = { j = "normal_mode" }
@@ -52,9 +50,6 @@ C-c = "normal_mode"
 C-h = "move_char_left"
 C-l = "move_char_right"
 C-s = [":w", "normal_mode"]
-
-[keys.select]
-"ç" = "normal_mode"
 
 # References
 # https://docs.helix-editor.com/themes.html

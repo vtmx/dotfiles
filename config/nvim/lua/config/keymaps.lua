@@ -481,7 +481,7 @@ map(
 map(
   'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
   { desc = 'Copy to clipboard' }
-) 
+)
 
 map(
   'n', '<leader>z', '<cmd>ZenMode<cr>',
