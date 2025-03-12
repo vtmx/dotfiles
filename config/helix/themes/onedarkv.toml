@@ -31,7 +31,7 @@ theme = "onedarkv"
 "variable.parameter" = { fg = "red" }
 
 # Diagnostic
-"diagnostic" = { bg = "bd", fg = "default", modifiers = ["italic"] }
+"diagnostic" = { fg = "default", bg = "bd", modifiers = ["italic"] }
 "diagnostic.deprecated" = { fg = "red" }
 "diagnostic.unnecessary" = { bg = "bd" }
 "info" = { fg = "blue" }
@@ -88,9 +88,9 @@ theme = "onedarkv"
 "ui.linenr.selected" = { fg = "fg" }
 
 # Menu
-"ui.menu" = { bg = "bg",  fg = "fg" }
-"ui.menu.scroll" = { bg = "bg",  fg = "ac" }
-"ui.menu.selected" = { bg = "ac",  fg = "fg" }
+"ui.menu" = { fg = "fg", bg = "bg" }
+"ui.menu.scroll" = { fg = "ac", bg = "bg" }
+"ui.menu.selected" = { fg = "fg", bg = "ac" }
 
 # Picker
 "ui.picker.header" = { fg = "fd" }

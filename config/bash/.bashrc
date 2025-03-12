@@ -1,5 +1,8 @@
 # Shell options
-shopt -s checkwinsize cmdhist histappend
+shopt -s cdspell checkwinsize cmdhist histappend 
+
+# Bindings
+bind -s 'set completion-ignore-case on' # Show fzf message in reload
 
 # Environment variables
 export BROWSER="firefox"
