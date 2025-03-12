@@ -36,7 +36,6 @@ right = ["diagnostics", "position", "file-encoding"]
 # display-inlay-hints = true Show tip in code
 
 [keys.normal]
-C-s = ":write"
 C-r = [":w", ":config-reload"]
 X = "extend_line_above"
 esc = ["collapse_selection", "keep_primary_selection"]
