@@ -36,12 +36,12 @@ right = ["diagnostics", "position", "file-encoding"]
 # display-inlay-hints = true Show tip in code
 
 [keys.normal]
+"ç" = "command_mode"
 C-r = [":w", ":config-reload"]
 X = "extend_line_above"
-esc = ["collapse_selection", "keep_primary_selection"]
 
 # [keys.normal.space.u]
-# l = ":toggle-option whitespace-render" Works only true or false
+# l = ":toggle whitespace-render" Works only true or false
 
 [keys.insert]
 k = { j = "normal_mode" }
