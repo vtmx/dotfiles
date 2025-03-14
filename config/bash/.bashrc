@@ -7,7 +7,7 @@ bind -s 'set completion-ignore-case on' # Show fzf message in reload
 # Environment variables
 export BROWSER="firefox"
 export CDPATH=".:..:~"
-export EDITOR="nvim"
+export EDITOR="helix"
 export HISTCONTROL="ignoreboth:ignorespace"
 export HISTFILESIZE=$HISTSIZE
 export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'

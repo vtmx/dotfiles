@@ -4,7 +4,7 @@ local map = vim.keymap.set
 -- Normal
 
 map(
-  'n', 'ç', '<cmd>nohl<cr>',
+  'n', 'ç', ':',
   { desc = 'Remove highlight' }
 )
 
