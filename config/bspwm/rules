@@ -10,7 +10,7 @@ $br dolphin           desktop="^3" focus=on follow=on
 $br thunar            desktop="^3" focus=on follow=on
 $br bitwarden-desktop desktop="^4" focus=on follow=on
 $br keepassxc         desktop="^4" focus=on follow=on
-$br steam             desktop="^4" state=floating
+$br steam             desktop="^4" state=floating follow=on
 $br pamac-manager     desktop="^5" focus=on follow=on
 $br vlc               desktop="^5" focus=on follow=on
 $br qBittorrent       desktop="^6" focus=on follow=on
