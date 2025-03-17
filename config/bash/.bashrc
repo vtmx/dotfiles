@@ -5,7 +5,6 @@ shopt -s cdspell checkwinsize cmdhist histappend
 bind -s 'set completion-ignore-case on' # Show fzf message in reload
 
 # Environment variables
-export BROWSER="firefox"
 export CDPATH=".:..:~"
 export EDITOR="helix"
 export HISTCONTROL="ignoreboth:ignorespace"
