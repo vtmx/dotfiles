@@ -69,14 +69,15 @@ super + ctrl + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
   bspc node -d '^{1,2,3,4,5,6,7,8,9}'
 
 # Resize selected node
-super + shift + r : {h,j,k,l}
-  STEP=20; SELECTION={1,2,3,4}; \
-  bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
-  bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+super + shift + r : {h,Left,j,Down,k,Up,l,Right}
+  select={1,1,2,2,3,3,4,4}; step=20;  \
+  bspc node -z $(echo "left -$step 0, bottom 0 $step, top 0 -$step, right $step 0" | cut -d',' -f $select) || \
+  bspc node -z $(echo "right -$step 0, top 0 $step, bottom 0 -$step, left $step 0" | cut -d',' -f $select)
 
 # Move floating node
 super + shift + m : {h,Left,j,Down,k,Up,l,Right}
-  bspc node -v {-20 0,-20 0,0 20,0 20,0 -20,0 -20,20 0,20 0}
+  step=20; \
+  bspc node -v {-$step 0, -$step 0, 0 $step, 0 $step, 0 -$step, 0 -$step, $step 0, $step 0}
 
 # Ux compositor
 super + u ; {b,f,o,r,s}
@@ -86,7 +87,8 @@ super + u ; {b,f,o,r,s}
 
 # Change volume
 super + {equal,minus,0}
-  amixer -q set Master {'10%+','10%-',toggle} && \
+  step=10; \
+  amixer -q set Master {"$step%+", "$step%-", toggle} && \
   notify-send 'Volume' $(awk -F"[][]" '/Left:/ \{print $2\}' <(amixer sget Master))
 
 # Edit config and shortcuts
