@@ -2,7 +2,7 @@
   "document": {
     "block_prefix": "\n",
     "block_suffix": "\n",
-    "color": "7",
+    "color": "default",
     "margin": 2
   },
   "block_quote": {
@@ -67,19 +67,37 @@
     "color": "5"
   },
   "code_block": {
-    "color": "7",
+    "color": "default",
     "margin": 2,
     "chroma": {
       "text": {
         "color": "#abb2bf"
       },
-      "error": {
-        "color": "#e06c75"
+      "background": {
+        "background_color": "#23272e"
       },
       "comment": {
         "color": "#5c6370"
       },
       "comment_preproc": {
+        "color": "#5c6370"
+      },
+      "error": {
+        "color": "#e06c75"
+      },
+      "generic_deleted": {
+        "color": "#e06c75"
+      },
+      "generic_emph": {
+
+      },
+      "generic_inserted": {
+        "color": "#c678dd"
+      },
+      "generic_strong": {
+
+      },
+      "generic_subheading": {
         "color": "#5c6370"
       },
       "keyword": {
@@ -94,11 +112,20 @@
       "keyword_type": {
         "color": "#c678dd"
       },
-      "operator": {
-        "color": "#56b6c2"
+      "literal": {
+
       },
-      "punctuation": {
-        "color": "#c678dd"
+      "literal_number": {
+        "color": "#e5c07b"
+      },
+      "literal_date": {
+
+      },
+      "literal_string": {
+        "color": "#98c379"
+      },
+      "literal_string_escape": {
+        "color": "#56b6c2"
       },
       "name": {
         "color": "#e06c75"
@@ -115,39 +142,26 @@
       "name_class": {
         "color": "#c678dd"
       },
-      "name_constant": {},
+      "name_constant": {
+
+      },
       "name_decorator": {
         "color": "#61afef"
       },
-      "name_exception": {},
+      "name_exception": {
+
+      },
       "name_function": {
         "color": "#61afef"
       },
-      "name_other": {},
-      "literal": {},
-      "literal_number": {
-        "color": "#e5c07b"
+      "name_other": {
+
       },
-      "literal_date": {},
-      "literal_string": {
-        "color": "#98c379"
-      },
-      "literal_string_escape": {
+      "operator": {
         "color": "#56b6c2"
       },
-      "generic_deleted": {
-        "color": "#e06c75"
-      },
-      "generic_emph": {},
-      "generic_inserted": {
+      "punctuation": {
         "color": "#c678dd"
-      },
-      "generic_strong": {},
-      "generic_subheading": {
-        "color": "#5c6370"
-      },
-      "background": {
-        "background_color": "#23272e"
       }
     }
   },

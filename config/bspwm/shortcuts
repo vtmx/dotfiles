@@ -93,8 +93,9 @@ super + {equal,minus,0}
 
 # Edit config and shortcuts
 super + {comma,period}
-  {$TERM -e $EDITOR $HOME/.config/bspwm/bspwmrc, \
-   $TERM -e $EDITOR $HOME/.config/bspwm/shortcuts}
+  term=kitty; editor=helix; \
+  {$term -e $editor $HOME/.config/bspwm/bspwmrc, \
+   $term -e $editor $HOME/.config/bspwm/shortcuts}
 
 # Launcher and run
 super + space
@@ -106,10 +107,12 @@ ctrl + alt + Delete
 
 # Terminal
 super + {_,alt + }Return
-  {$EDITOR,bspc rule -a \* -o state=floating && $EDITOR}
+  term=kitty; \
+  {$term,bspc rule -a \* -o state=floating && $term}
 
 super + {_,alt + }KP_Enter
-  {$EDITOR,bspc rule -a \* -o state=floating && $EDITOR}
+  term=kitty; \
+  {$term,bspc rule -a \* -o state=floating && $term}
 
 # Apps
 super + {a,b,e,g,m,p,t,s,v}
