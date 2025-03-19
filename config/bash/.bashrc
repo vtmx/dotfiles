@@ -14,6 +14,7 @@ export HISTSIZE=5000
 export HISTTIMEFORMAT="%F %T "
 export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
+export TERM="kitty"
 
 # Colors
 setab() { echo -en "\e[4$1m";   }

@@ -69,7 +69,7 @@ super + ctrl + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
   bspc node -d '^{1,2,3,4,5,6,7,8,9}'
 
 # Resize selected node
-super + shift + r : {h,Left,j,Down,k,Up,l,Right}
+super + r : {h,Left,j,Down,k,Up,l,Right}
   select={1,1,2,2,3,3,4,4}; step=20;  \
   bspc node -z $(echo "left -$step 0, bottom 0 $step, top 0 -$step, right $step 0" | cut -d',' -f $select) || \
   bspc node -z $(echo "right -$step 0, top 0 $step, bottom 0 -$step, left $step 0" | cut -d',' -f $select)
@@ -88,17 +88,17 @@ super + u ; {b,f,o,r,s}
 # Change volume
 super + {equal,minus,0}
   step=10; \
-  amixer -q set Master {"$step%+", "$step%-", toggle} && \
-  notify-send 'Volume' $(awk -F"[][]" '/Left:/ \{print $2\}' <(amixer sget Master))
+  amixer -q set Master {$step%+, $step%-, toggle} && \
+  notify-send 'Volume' $(awk -F'[][]' '/Left:/ \{print $2\}' <(amixer sget Master))
 
 # Edit config and shortcuts
 super + {comma,period}
-  {kitty -e nvim $HOME/.config/bspwm/bspwmrc, \
-   kitty -e nvim $HOME/.config/bspwm/shortcuts}
+  {$TERM -e $EDITOR $HOME/.config/bspwm/bspwmrc, \
+   $TERM -e $EDITOR $HOME/.config/bspwm/shortcuts}
 
 # Launcher and run
-super + {space,r}
-  rofi -show {drun,run}
+super + space
+  rofi -show drun
 
 # Powermenu
 ctrl + alt + Delete
@@ -106,10 +106,10 @@ ctrl + alt + Delete
 
 # Terminal
 super + {_,alt + }Return
-  {kitty,bspc rule -a \* -o state=floating && kitty}
+  {$EDITOR,bspc rule -a \* -o state=floating && $EDITOR}
 
 super + {_,alt + }KP_Enter
-  {kitty,bspc rule -a \* -o state=floating && kitty}
+  {$EDITOR,bspc rule -a \* -o state=floating && $EDITOR}
 
 # Apps
 super + {a,b,e,g,m,p,t,s,v}
