@@ -6,10 +6,6 @@ super + shift + b
 super + {_,shift + }c
   bspc node -{c,k}
 
-# Toggle fullscreen
-super + F11
-  bspc node -t "~"{tiled,fullscreen}
-
 # Toggle floating
 super + shift + f
   bspc node -t "~"{floating,tiled}
@@ -38,10 +34,6 @@ super + shift + comma
 super + shift + period
   pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'Reloaded'
 
-# Help
-super + shift + F1
-  $HOME/.config/bspwm/conky/toggle
-
 # Focus and swap selected node
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
   bspc node -{f,s} {west,west,south,south,north,north,east,east}
@@ -49,6 +41,17 @@ super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
 # Focus next, prev local node
 alt + {_,shift + }Tab
   bspc node -f {next,prev}.local
+
+# Resize selected node
+super + r : {h,Left,j,Down,k,Up,l,Right}
+  select={1,1,2,2,3,3,4,4}; step=20;  \
+  bspc node -z $(echo "left -$step 0, bottom 0 $step, top 0 -$step, right $step 0" | cut -d',' -f $select) || \
+  bspc node -z $(echo "right -$step 0, top 0 $step, bottom 0 -$step, left $step 0" | cut -d',' -f $select)
+
+# Move floating node
+super + shift + m : {h,Left,j,Down,k,Up,l,Right}
+  step=20; \
+  bspc node -v {-$step 0, -$step 0, 0 $step, 0 $step, 0 -$step, 0 -$step, $step 0, $step 0}
 
 # Focus and send selected node to next, prev desktop
 super + ctrl + {_,shift + }{h,Left,l,Right}
@@ -68,22 +71,32 @@ super + ctrl + {1-9}
 super + ctrl + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
   bspc node -d '^{1,2,3,4,5,6,7,8,9}'
 
-# Resize selected node
-super + r : {h,Left,j,Down,k,Up,l,Right}
-  select={1,1,2,2,3,3,4,4}; step=20;  \
-  bspc node -z $(echo "left -$step 0, bottom 0 $step, top 0 -$step, right $step 0" | cut -d',' -f $select) || \
-  bspc node -z $(echo "right -$step 0, top 0 $step, bottom 0 -$step, left $step 0" | cut -d',' -f $select)
-
-# Move floating node
-super + shift + m : {h,Left,j,Down,k,Up,l,Right}
-  step=20; \
-  bspc node -v {-$step 0, -$step 0, 0 $step, 0 $step, 0 -$step, 0 -$step, $step 0, $step 0}
-
 # Ux compositor
 super + u ; {b,f,o,r,s}
   pkill -x picom || \
   picom --config $HOME/.config/bspwm/picom/picom.conf \
   {--blur-method gaussian --blur-strength 8,--fading,--inactive-opacity 0.8,--corner-radius 8,--shadow}
+
+# Apps
+super + {a,b,e,g,m,p,t,s,v}
+  {pamac-manager,zen,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
+
+# Apps alternate
+super + alt + {b,e,p}
+  {firefox,thunar,bitwarden-desktop}
+
+# Terminal
+super + {_,alt + }Return
+  term=kitty; \
+  {$term,bspc rule -a \* -o state=floating && $term}
+
+super + {_,alt + }KP_Enter
+  term=kitty; \
+  {$term,bspc rule -a \* -o state=floating && $term}
+
+# Launcher and run
+super + space
+  rofi -show drun
 
 # Change volume
 super + {equal,minus,0}
@@ -97,30 +110,13 @@ super + {comma,period}
   {$term -e $editor $HOME/.config/bspwm/bspwmrc, \
    $term -e $editor $HOME/.config/bspwm/shortcuts}
 
-# Launcher and run
-super + space
-  rofi -show drun
+# Toggle fullscreen
+super + F11
+  bspc node -t "~"{tiled,fullscreen}
 
 # Powermenu
 ctrl + alt + Delete
   $HOME/.local/bin/powermenu.sh
-
-# Terminal
-super + {_,alt + }Return
-  term=kitty; \
-  {$term,bspc rule -a \* -o state=floating && $term}
-
-super + {_,alt + }KP_Enter
-  term=kitty; \
-  {$term,bspc rule -a \* -o state=floating && $term}
-
-# Apps
-super + {a,b,e,g,m,p,t,s,v}
-  {pamac-manager,zen,dolphin,steam,vlc,kcolorchooser,qbittorrent,flameshot gui,code}
-
-# Apps alternate
-super + alt + {b,e,p}
-  {firefox,thunar,bitwarden-desktop}
 
 Print
   flameshot gui

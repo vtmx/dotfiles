@@ -80,7 +80,7 @@ theme = "onedarkv"
 "ui.popup" = { bg = "bg" }
 
 # Hightlight
-"ui.highlight" = { bg = "fd" }
+"ui.highlight" = { bg = "ac" }
 "ui.highlight.frameline" = { bg = "fd" }
 
 # Line number
