@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-desktop" version="1.0">
   <property name="backdrop" type="empty">
@@ -62,6 +62,12 @@
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
           <property name="last-image" type="string" value="/home/vitor/Dev/dotfiles/assets/wallpapers/bash.png"/>
+          <property name="rgba1" type="array">
+            <value type="double" value="0.5"/>
+            <value type="double" value="0.5"/>
+            <value type="double" value="0.5"/>
+            <value type="double" value="1"/>
+          </property>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -116,4 +122,5 @@
     <property name="window-width" type="int" value="709"/>
     <property name="window-height" type="int" value="566"/>
   </property>
+  <property name="last-settings-migration-version" type="uint" value="1"/>
 </channel>
