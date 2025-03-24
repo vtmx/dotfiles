@@ -6,7 +6,7 @@ bind -s 'set completion-ignore-case on' # Show fzf message in reload
 
 # Environment variables
 export CDPATH=".:..:~"
-export EDITOR="helix"
+export EDITOR="nvim"
 export HISTCONTROL="ignoreboth:ignorespace"
 export HISTFILESIZE=$HISTSIZE
 export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'
@@ -14,7 +14,6 @@ export HISTSIZE=5000
 export HISTTIMEFORMAT="%F %T "
 export PATH="$PATH:$HOME/.local/bin"
 export PROMPT_COMMAND=('history -a' 'history -r')
-export TERM="kitty"
 
 # Colors
 setab() { echo -en "\e[4$1m";   }

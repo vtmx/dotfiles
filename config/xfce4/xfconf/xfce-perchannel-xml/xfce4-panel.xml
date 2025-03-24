@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
@@ -17,7 +17,6 @@
         <value type="int" value="15"/>
         <value type="int" value="2"/>
         <value type="int" value="3"/>
-        <value type="int" value="8"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="12"/>
@@ -53,11 +52,6 @@
     <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-8" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="show-notifications" type="bool" value="true"/>
-      <property name="known-players" type="string" value="firefox"/>
     </property>
     <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
