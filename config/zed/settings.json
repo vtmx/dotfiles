@@ -1,0 +1,132 @@
+{
+  "buffer_font_family": "BlexMono Nerd Font",
+  "buffer_font_features": { "ss02": true, "zero": true },
+  "buffer_font_size": 15,
+  "restore_on_startup": "none",
+  "tab_size": 2,
+  "theme": { "mode": "system", "dark": "One Dark", "light": "One Dark" },
+  "ui_font_family": "BlexMono Nerd Font",
+  "ui_font_size": 15,
+  // "vim_mode": true,
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "tabs": {
+    "activate_on_close": "history",
+    "close_position": "right",
+    "file_icons": false,
+    "git_status": false,
+    "show_close_button": "hover"
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "project_panel": {
+    "auto_fold_dirs": true,
+    "auto_reveal_entries": true,
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "file_icons": true,
+    "folder_icons": false,
+    "git_status": true,
+    "indent_size": 20,
+    "indent_guides": { "show": "always" },
+    "scrollbar": { "show": null }
+  },
+  "outline_panel": {
+    "button": true,
+    "file_icons": false,
+    "folder_icons": true
+  },
+  "assistant": {
+    "enabled": false,
+    "button": false,
+    "version": "1"
+  },
+  "chat_panel": {
+    "button": null
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "diagnostics": {
+    "include_warnings": false
+  },
+  "features": {
+    "edit_prediction_provider": "none",
+    "copilot": false
+  },
+  "language_models": {
+    "copilot_chat": null
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "terminal": {
+    "blinking": "on",
+    "button": false,
+    "dock": "bottom",
+    "font_family": "BlexMono Nerd Font",
+    "font_features": { "ss02": true, "zero": true },
+    "font_size": 16,
+    "shell": { "program": "/usr/bin/bash" },
+    "working_directory": "current_project_directory"
+  },
+  "experimental.theme_overrides": {
+    "text": "#abb2bf",
+    "text.accent": "#5c6370",
+    "border": "#2c313c",
+    "border.focused": "#00000000",
+    "icon.muted": "#f00",
+    "elevated_surface.background": "#1e2227",
+    "ghost_element.hover": "#2c313c",
+    "ghost_element.active": "#5c6370",
+    "ghost_element.selected": "#2c313c",
+    "title_bar.background": "#1e2227",
+    "tab_bar.background": "#1e2227",
+    "tab.inactive_background": "#1e2227",
+    "tab.active_background": "#23272e",
+    "toolbar.background": "#1e2227",
+    "panel.background": "#1e2227",
+    "panel.focused_border": "#00000000",
+    "panel.indent_guide": "#2c313c",
+    "panel.indent_guide_hover": "#2c313c",
+    "panel.indent_guide_active": "#5c6370",
+    "status_bar.background": "#1e2227",
+    "scrollbar.thumb.background": "#2c313c",
+    "scrollbar.thumb.border": "#00000000",
+    "scrollbar.track.background": "#00000000",
+    "scrollbar.track.border": "#00000000",
+    "editor.foreground": "#abb2bf",
+    "editor.background": "#23272e",
+    "editor.document_highlight.bracket_background": "#3d4556",
+    "editor.gutter.background": "#23272e",
+    "editor.indent_guide": "#2c313c",
+    "editor.indent_guide_hover": "#2c313c",
+    "editor.indent_guide_active": "#5c6370",
+    "editor.active_line.background": "#2c313c",
+    "editor.highlighted_line.background": "#2c313c",
+    "editor.line_number": "#3d4556",
+    "editor.active_line_number": "#abb2bf",
+    "editor.hover_line_number": "#abb2bf",
+    "search.match_background": "#3d4556",
+    "syntax": { "comment": { "font_style": "italic" } },
+    "terminal.foreground": "#abb2bf",
+    "terminal.background": "#1e2227"
+  },
+  "players": [
+    {
+      "cursor": "#abb2bf",
+      "selection": "#2c313c"
+    }
+  ]
+}
+
+// References
+// https://zed.dev/docs/configuring-zed
+// https://zed.dev/docs/themes
+// https://github.com/zed-industries/zed/blob/main/assets/themes/one/one.json

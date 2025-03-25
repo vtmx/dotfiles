@@ -1,0 +1,15 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-'": "terminal_panel::ToggleFocus"
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  }
+]
