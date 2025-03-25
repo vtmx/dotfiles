@@ -1,15 +1,31 @@
 [
   {
-    "context": "Workspace",
+    "context": "Editor",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "ctrl-'": "terminal_panel::ToggleFocus",
+      "ctrl-.": "zed::OpenKeymap"
     }
   },
   {
-    "context": "Editor",
+    "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
-      "ctrl-'": "terminal_panel::ToggleFocus"
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "ç": "command_palette::Toggle",
+      "shift-h": "vim::FirstNonWhitespace",
+      "shift-l": "vim::EndOfLine",
+      "space f": "file_finder::Toggle",
+      "space s": "outline::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "k j": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "ç": "vim::ToggleVisual"
     }
   }
 ]
