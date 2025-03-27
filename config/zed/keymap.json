@@ -3,7 +3,8 @@
     "context": "Editor",
     "bindings": {
       "ctrl-'": "terminal_panel::ToggleFocus",
-      "ctrl-.": "zed::OpenKeymap"
+      "ctrl-.": "zed::OpenKeymap",
+      "ctrl-shift-m": "markdown::OpenPreviewToTheSide"
     }
   },
   {
@@ -19,7 +20,8 @@
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "k j": ["workspace::SendKeystrokes", "escape"]
+      "k j": ["workspace::SendKeystrokes", "escape"],
+      "ctrl-shift-v": "editor::Paste"
     }
   },
   {

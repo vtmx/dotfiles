@@ -230,8 +230,7 @@ mvs() {
 # Rename
 rn() {
   [[ "$1" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
-  local pattern="$1"
-  shift
+  local pattern="$1"; shift
   [[ "$@" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
   local files="$@"
 
@@ -240,10 +239,11 @@ rn() {
   echo
   read -p "Rename? [y/N]: " choice
 
-  case $choice in
-    [yY]) perl-rename "$pattern" $files; return 0 ;;
-       *) return 0 ;;
-  esac
+  if [[ $choice =~ ^[yY] ]]; then
+    perl-rename "$pattern" $files
+  else
+    return 0
+  fi
 }
 
 # Link in working dir
