@@ -255,11 +255,6 @@ lwd() {
   ln -sf "$(pwd)/$1" $2
 }
 
-# Play
-p() {
-  play
-}
-
 play() {
   if type mpv &> /dev/null; then
     local music="$HOME/Music"
