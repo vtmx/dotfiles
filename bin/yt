@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 
+# Used to remove repetitives dashes
+shopt -s extglob
+
 main() {
-  url="$1"
+  if ! command -v yt-dlp &>/dev/null ; then 
+    echo 'yt-dlp not found'
+    exit 127
+  fi
+
+  [[ "$1" ]] || { echo 'no url'; exit; }
+
+  local url="$1"
+  local filename=""
 
   # Make url $1 and all words $2
   shift; filename="$*"
@@ -19,16 +30,19 @@ main() {
 }
 
 transform_filename() {
+  # Remove chars
+  filename="${filename//[\'\"\“\”\[\]\(\)]/}"
+
   # Replace spaces with dashes
   filename="${filename// /-}"
 
-  # Replace spaces '
-  filename="${filename//\'/}"
+  # Replace repetitives dashes for one
+  filename="${filename//+(-)/-}"
 
   # Convert to lowercase
   filename="${filename,,}"
 
-  echo $filename
+  echo "$filename"
 }
 
 main "$@"
