@@ -40,6 +40,7 @@ local hl_groups = {
 
   -- Extras
   Added          = { fg = c.green  },
+  Changed        = { fg = c.blue   },
   Debug          = { fg = c.yellow },
   Directory      = { fg = c.blue   },
   EndOfBuffer    = { fg = c.bg     }, -- Line tilde blank
@@ -139,8 +140,8 @@ local hl_groups = {
   markdownUrl              = { fg = c.fg     },
 
   -- css
-  cssClassNameDot = { fg   = c.orange },
   cssClassName    = { fg   = c.red    },
+  cssClassNameDot = { fg   = c.orange },
   cssDefinition   = { link = 'cssClassName' },
   cssHacks        = { fg   = c.fg     },
   cssTagName      = { fg   = c.red    },
@@ -178,9 +179,14 @@ local hl_groups = {
   FoldColumn   = { bg = c.ac, fg = c.cyan },
   Folder       = { bg = c.ac, fg = c.cyan },
 
+  -- Help
+  healthHeadingChar   = { fg = c.fg  },
+  helpHeader          = { fg = c.blue },
+  helpSectionDelim    = { fg = c.blue },
+
   -- tree-sitter
 
-  -- - Text
+  -- Text
   ['@text.literal']      = { link = 'Comment'         },
   ['@text.reference']    = { link = 'Identifier'      },
   ['@text.title']        = { link = 'Title'           },
@@ -188,11 +194,11 @@ local hl_groups = {
   ['@text.underline']    = { link = 'Underlined'      },
   ['@text.todo']         = { link = 'Todo'            },
 
-  -- - Miscs
+  -- Miscs
   ['@comment']           = { link = 'Comment'         },
   ['@punctuation']       = { link = 'Delimiter'       },
 
-  -- - Constants
+  -- Constants
   ['@constant']          = { link = 'Constant'        },
   ['@constant.builtin']  = { link = 'Special'         },
   ['@constant.macro']    = { link = 'Define'          },
@@ -207,7 +213,7 @@ local hl_groups = {
   ['@boolean']           = { link = 'Boolean'         },
   ['@float']             = { link = 'Float'           },
 
-  -- - Functions
+  -- Functions
   ['@function']          = { link = 'Function'        },
   ['@function.builtin']  = { link = 'Special'         },
   ['@function.macro']    = { link = 'Macro'           },
@@ -217,7 +223,7 @@ local hl_groups = {
   ['@property']          = { link = 'Identifier'      },
   ['@constructor']       = { link = 'Special'         },
 
-  -- - Keywords
+  -- Keywords
   ['@conditional']       = { link = 'Conditional'     },
   ['@repeat']            = { link = 'Repeat'          },
   ['@label']             = { link = 'Label'           },
@@ -234,7 +240,12 @@ local hl_groups = {
   ['@debug']             = { link = 'Debug'           },
   ['@tag']               = { link = 'Tag'             },
 
-  -- - LSP semantic tokens
+  -- Diff
+  ['@diff.plus']         = { link = 'DiffAdd'         },
+  ['@diff.delta']        = { link = 'DiffChange'      },
+  ['@diff.minus']        = { link = 'DiffDelete'      },
+
+  -- LSP semantic tokens
   ['@lsp.type.class']         = { link = 'Structure'  },
   ['@lsp.type.comment']       = { link = 'Comment'    },
   ['@lsp.type.decorator']     = { link = 'Function'   },
