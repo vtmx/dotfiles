@@ -44,7 +44,7 @@ local hl_groups = {
   Directory      = { fg = c.blue   },
   EndOfBuffer    = { fg = c.bg     }, -- Line tilde blank
   NonText        = { fg = c.fd     },
-  Special        = { fg = c.blue   },
+  Special        = { fg = c.fg     },
   SpecialChar    = { fg = c.yellow },
   SpecialComment = { fg = c.fd     },
   SpecialKey     = { fg = c.cyan   },
@@ -57,7 +57,7 @@ local hl_groups = {
   FloatShadowThrough = { bg = c.bd },
 
   -- Search
-  Delimiter      = { fg = c.purple },
+  Delimiter      = { fg = c.fg     },
   IncSearch      = { bg = c.ac     },
   Search         = { bg = c.ac     },
   CurSearch      = { bg = c.fg, fg = c.bg },
@@ -139,11 +139,12 @@ local hl_groups = {
   markdownUrl              = { fg = c.fg     },
 
   -- css
-  cssClassName    = { fg = c.orange },
-  cssClassNameDot = { fg = c.orange },
-  cssHacks        = { fg = c.fg     },
-  cssTagName      = { fg = c.red    },
-  cssVendor       = { fg = c.fg     },
+  cssClassNameDot = { fg   = c.orange },
+  cssClassName    = { fg   = c.red    },
+  cssDefinition   = { link = 'cssClassName' },
+  cssHacks        = { fg   = c.fg     },
+  cssTagName      = { fg   = c.red    },
+  cssVendor       = { fg   = c.fg     },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red                    },
