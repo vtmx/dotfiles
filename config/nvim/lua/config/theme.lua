@@ -292,7 +292,7 @@ local hl_groups = {
   LazyProgressDone         = { fg = c.blue   },
   LazyProp                 = { bg = c.ac     },
 
- --markdown
+  --markdown
   mkdCodeStart             = { fg = c.fg     },
   mkdCodeEnd               = { fg = c.fg     },
 

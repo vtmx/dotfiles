@@ -1,5 +1,6 @@
 {
   // "vim_mode": true,
+  "vim_mode": true,
   "buffer_font_family": "BlexMono Nerd Font",
   "buffer_font_features": {
     "ss02": true,

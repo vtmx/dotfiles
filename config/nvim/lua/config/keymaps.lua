@@ -4,7 +4,7 @@ local map = vim.keymap.set
 -- Normal
 
 map(
-  'n', 'ç', ':',
+  'n', 'ç', '<cmd>nohl<cr>',
   { desc = 'Remove highlight' }
 )
 
@@ -178,6 +178,16 @@ map(
 map(
   'i', '<c-e>', '<esc><cmd>normal $<cr>a',
   { desc = 'Move to end line' }
+)
+
+map(
+  'i', '<c-h>', '<left>',
+  { desc = 'Move cursor char left' }
+)
+
+map(
+  'i', '<c-l>', '<right>',
+  { desc = 'Move cursor char right' }
 )
 
 map(

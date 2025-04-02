@@ -22,11 +22,6 @@ local lualine_theme = ({
 
 return {
   {
-    'echasnovski/mini.tabline',
-    event = 'BufAdd',
-    opts = { show_icons = false }
-  },
-  {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     event = 'VeryLazy',
