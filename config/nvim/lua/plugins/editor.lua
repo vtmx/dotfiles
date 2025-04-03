@@ -8,10 +8,6 @@ return {
     event = 'ModeChanged', config = true
   },
   {
-    'echasnovski/mini.snippets',
-    event = 'ModeChanged', config = true
-  },
-  {
     'echasnovski/mini.surround',
     event = 'ModeChanged',
     config = function()
