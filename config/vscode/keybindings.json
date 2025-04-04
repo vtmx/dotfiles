@@ -251,7 +251,7 @@
 
   // Plugins
   // Align
-  { 
+  {
     "key": "ctrl+shift+a",
     "command": "wwm.aligncode",
     "when": "editorTextFocus && !editorReadonly"
@@ -294,16 +294,6 @@
     "when": "vim.active && inQuickOpen"
   },
   {
-    "key": "ctrl+j",
-    "command": "workbench.action.quickOpenNavigateNext",
-    "when": "vim.active && inQuickOpen"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "vim.active && inQuickOpen"
-  },
-  {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "vim.active && inQuickOpen"
@@ -313,7 +303,6 @@
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "vim.active && inQuickOpen"
   },
-
   // Auto-sugestion in editor
   {
     "key": "ctrl+n",
@@ -325,6 +314,12 @@
     "command": "selectPrevSuggestion",
     "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "vim.active && editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+
 
   // Run AutoIT
   {
@@ -373,5 +368,5 @@
     "key": "ctrl+shift+m",
     "command": "-workbench.actions.view.problems",
     "when": "workbench.panel.markers.view.active"
-  },
+  }
 ]

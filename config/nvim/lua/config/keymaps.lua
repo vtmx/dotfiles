@@ -19,6 +19,11 @@ map(
 )
 
 map(
+  'n', 'gcd', 'yypk:normal gcc<cr>j$',
+  { desc = 'Duplicate line and comment' }
+)
+
+map(
   'n', 'gco', 'o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
   { desc = 'Add a comment below current line' }
 )
@@ -81,11 +86,6 @@ map(
 map(
   'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
   { desc = 'Split vertical' }
-)
-
-map(
-  'n', 'yc', 'yypk:normal gcc<cr>j$',
-  { desc = 'Duplicate line and comment' }
 )
 
 map(
@@ -201,7 +201,7 @@ map(
 )
 
 map(
-  'i', '<c-space>', '<c-n>',
+  'i', '<c-space>', '<c-n>', -- vim.lsp.completion.get()
   { desc = 'Show menu' }
 )
 
