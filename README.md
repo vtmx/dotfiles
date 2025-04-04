@@ -85,12 +85,12 @@
   </tr>
   <tr>
     <th align="left">Editor</th>
-    <td><a href="https://code.visualstudio.com">VS Code</a></td>
+    <td><a href="https://code.visualstudio.com">VS Code</a>, <a href="https://zed.dev">Zed</a>, <a href="https://lite-xl.com/">Lite XL</a></td>
   </tr>
   <tr>
     <th align="left">Browser</th>
     <td>
-      <a href="https://www.mozilla.org">Firefox</a>, <a href="https://vivaldi.com/pt-br">Vivaldi</a>
+      <a href="https://zen-browser.app">Zen</a>, <a href="https://www.mozilla.org">Firefox</a>, <a href="https://vivaldi.com/pt-br">Vivaldi</a>
     </td>
   </tr>
   <tr>
@@ -123,10 +123,6 @@
     <td><a href="https://bitwarden.com">Bitwarden</a>, <a href="https://keepassxc.org">KeepassXC</a></td>
   </tr>
   <tr>
-    <th align="left">Batch Rename</th>
-    <td><a href="https://apps.kde.org/krename">KRename</a></td>
-  </tr>
-  <tr>
     <th align="left">Subtitle</th>
     <td><a href="https://subtitlecomposer.kde.org">Subtitle Composer</a></td>
   </tr>
@@ -141,7 +137,7 @@
   </tr>
   <tr>
     <th align="left">Editor</th>
-    <td><a href="https://neovim.io">neovim</a></td>
+    <td><a href="https://neovim.io">NeoVim</a>, <a href="https://helix-editor.com">Helix</a></td>
   </tr>
   <tr>
     <th align="left">Jump Dir</th>
