@@ -25,7 +25,10 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     event = 'VeryLazy',
-    opts = { scope = { enabled = false } }
+    opts = {
+      indent = { priority = 2 },
+      scope = { enabled = false, priority = 1 }
+    }
   },
   {
     'nvim-lualine/lualine.nvim',

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for file in *.png; do
+  if avifenc -q 85 "$file" "${file%.*}.avif"; then
+    rm -f "$file"
+  fi
+done
