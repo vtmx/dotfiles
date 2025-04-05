@@ -3,10 +3,10 @@ return {
     'echasnovski/mini.align',
     event = 'ModeChanged', config = true
   },
-  {
-    'echasnovski/mini.pairs',
-    event = 'ModeChanged', config = true
-  },
+  -- {
+  --   'echasnovski/mini.pairs',
+  --   event = 'ModeChanged', config = true
+  -- },
   {
     'echasnovski/mini.surround',
     event = 'ModeChanged',
