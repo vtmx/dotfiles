@@ -27,3 +27,8 @@ done
 new_dir_size=$(du . -sh | awk '{print $1}')
 echo -e "\nTotal compressed: $old_dir_size >> $new_dir_size"
 
+# for file in *.@(gif/jpg|png); do
+#   if cjxl "$file" "${file%.*}.jxl"; then
+#     rm -f "$file"
+#   fi
+# done

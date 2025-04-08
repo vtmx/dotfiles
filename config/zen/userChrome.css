@@ -34,4 +34,14 @@
   .toolbarbutton-1 {
     fill: CurrentColor !important;
   }
+
+  .findbar-textbox {
+    background: hsl(0 0 0 / .05) !important;
+    border: 1px solid hsl(100 100 100 / .1) !important;
+
+    &:focus {
+      background: hsl(0 0 0 / .05) !important;
+      border: 1px solid hsl(100 100 100 / .15) !important;
+    }
+  }
 }
