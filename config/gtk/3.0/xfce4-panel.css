@@ -1,0 +1,37 @@
+.panel {
+  background: #23272e;
+  border-top: 1px solid rgba(255, 255, 255, .05);
+}
+
+.panel button {
+  background: transparent;
+  margin: 1px 0;
+  border: none;
+  border-radius: 0;
+}
+
+.panel button:hover,
+.panel button:checked {
+  background: rgba(255, 255, 255, .05);
+}
+
+.panel #xfce-panel-toggle-button {
+  border-top: 3px solid transparent;
+  border-top: 3px solid transparent;
+  padding: 0 4px;
+  color: rgba(255, 255, 255, .4);
+}
+
+.panel #xfce-panel-toggle-button:hover {
+  background: rgba(255, 255, 255, .05);
+}
+
+.panel #xfce-panel-toggle-button:checked {
+  border-top: 3px solid rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .05);
+  color: rgba(255, 255, 255, .6);
+}
+
+.panel #clock-button {
+  padding: 0 8px;
+}

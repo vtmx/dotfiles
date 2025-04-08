@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-appfinder" version="1.0">
   <property name="actions" type="array">
@@ -46,6 +46,9 @@
   <property name="always-center" type="bool" value="true"/>
   <property name="hide-category-pane" type="bool" value="true"/>
   <property name="hide-window-decorations" type="bool" value="true"/>
-  <property name="enable-service" type="bool" value="true"/>
+  <property name="enable-service" type="bool" value="false"/>
   <property name="single-window" type="bool" value="true"/>
+  <property name="icon-view" type="bool" value="false"/>
+  <property name="text-beside-icons" type="bool" value="true"/>
+  <property name="item-icon-size" type="uint" value="2"/>
 </channel>
