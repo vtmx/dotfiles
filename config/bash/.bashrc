@@ -8,7 +8,7 @@ bind -s 'set completion-ignore-case on' # Show fzf message in reload
 export CDPATH=".:..:~"
 export EDITOR="nvim"
 export HISTCONTROL="ignoreboth:ignorespace"
-export HISTFILESIZE=$HISTSIZE
+export HISTFILESIZE=5000
 export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'
 export HISTSIZE=5000
 export HISTTIMEFORMAT="%F %T "

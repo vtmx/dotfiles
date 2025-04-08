@@ -14,6 +14,7 @@
       <property name="plugin-ids" type="array">
         <value type="int" value="7"/>
         <value type="int" value="6"/>
+        <value type="int" value="4"/>
         <value type="int" value="15"/>
         <value type="int" value="2"/>
         <value type="int" value="3"/>
@@ -80,6 +81,12 @@
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="false"/>
+      <property name="numbering" type="bool" value="false"/>
+      <property name="workspace-scrolling" type="bool" value="false"/>
     </property>
   </property>
 </channel>
