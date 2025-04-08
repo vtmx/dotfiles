@@ -30,13 +30,14 @@ local hl_groups = {
   Tag            = { fg = c.red    },
   Statement      = { fg = c.purple },
   String         = { fg = c.green  },
-
-  -- Keys [] {} ()
-  MatchParen     = { fg = c.yellow },
   StorageClass   = { fg = c.purple },
   Structure      = { fg = c.purple },
   Typedef        = { fg = c.purple },
   Type           = { fg = c.purple },
+
+  -- Keys [] {} ()
+  Delimiter      = { fg = c.fg     },
+  MatchParen     = { fg = c.fg     }, -- when inner block
 
   -- Extras
   Added          = { fg = c.green  },
@@ -51,14 +52,7 @@ local hl_groups = {
   SpecialKey     = { fg = c.cyan   },
   TermCursor     = { fg = c.fg     },
 
-  -- Popup
-  NormalFloat        = { bg = c.bg },
-  FloatBorder        = { bg = c.bg, fg = c.fd },
-  FloatShadow        = { bg = c.bd },
-  FloatShadowThrough = { bg = c.bd },
-
   -- Search
-  Delimiter      = { fg = c.fg     },
   IncSearch      = { bg = c.ac     },
   Search         = { bg = c.ac     },
   CurSearch      = { bg = c.fg, fg = c.bg },
@@ -98,6 +92,12 @@ local hl_groups = {
   PmenuSbar      = { bg = c.bd },
   Pmenuac        = { bg = c.bl },
   PmenuThumb     = { bg = c.bl },
+
+  -- Popup
+  NormalFloat        = { bg = c.bg },
+  FloatBorder        = { bg = c.bg, fg = c.fd },
+  FloatShadow        = { bg = c.bd },
+  FloatShadowThrough = { bg = c.bd },
 
   -- Tabbar
   WinbarNC       = { fg = c.fd },
@@ -146,6 +146,10 @@ local hl_groups = {
   cssHacks        = { fg   = c.fg     },
   cssTagName      = { fg   = c.red    },
   cssVendor       = { fg   = c.fg     },
+
+  -- js
+  javaScriptBraces   = { link = 'Delimiter'  },
+  javaScriptFunction = { fg = c.purple       },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red                    },
@@ -278,6 +282,7 @@ local hl_groups = {
   -- indent-line
   IblIndent = { fg = c.ac  },
   IblScope  = { fg = c.fg  },
+  ['@ibl.scope.char.1'] = { link = 'IblScope' },
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- hop
