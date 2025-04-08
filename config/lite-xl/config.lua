@@ -12,6 +12,9 @@ core.add_thread(function()
   end)
 end)
 
+-- Hide statusbar
+--core.status_view:hide()
+
 -- Ingnore file in projects
 config.ignore_files = {
   -- folders

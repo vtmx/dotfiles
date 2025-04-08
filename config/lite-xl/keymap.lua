@@ -36,6 +36,7 @@ local keymaps = {
   -- Centerdoc
   ['alt+z'] = 'center-doc:toggle',
   ['ctrl+alt+z'] = 'center-doc:zen-mode-toggle',
+  ['f11'] = { 'core:toggle-fullscreen', 'center-doc:zen-mode-toggle' },
 }
 
 keymap.add(keymaps, true)
