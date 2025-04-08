@@ -28,14 +28,14 @@ theme = "onedarkv"
 "variable.builtin" = { fg = "blue" }
 "variable" = { fg = "blue" }
 "variable.other.member" = { fg = "red" }
-"variable.parameter" = { fg = "red" }
+"variable.parameter" = { fg = "fg" }
 
 # Diagnostic
 "diagnostic" = { fg = "default", bg = "bd", modifiers = ["italic"] }
 "diagnostic.deprecated" = { fg = "red" }
 "diagnostic.unnecessary" = { bg = "bd" }
 "info" = { fg = "blue" }
-"hint" = { fg = "cyan" }
+"hint" = { fg = "fd" }
 "warning" = { fg = "yellow" }
 "error" = { fg = "red" }
 
