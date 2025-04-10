@@ -5,7 +5,7 @@
 
 .panel button {
   background: transparent;
-  margin: 1px 0;
+  margin-top: 1px;
   border: none;
   border-radius: 0;
 }
@@ -18,6 +18,7 @@
 .panel #xfce-panel-toggle-button {
   border-top: 3px solid transparent;
   border-top: 3px solid transparent;
+  margin-right: 1px;
   padding: 0 4px;
   color: rgba(255, 255, 255, .4);
 }

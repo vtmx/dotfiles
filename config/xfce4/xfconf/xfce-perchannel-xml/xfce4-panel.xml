@@ -17,6 +17,7 @@
         <value type="int" value="1"/>
         <value type="int" value="15"/>
         <value type="int" value="5"/>
+        <value type="int" value="2"/>
         <value type="int" value="12"/>
       </property>
       <property name="mode" type="uint" value="0"/>
@@ -65,6 +66,22 @@
       <property name="show-tooltips" type="bool" value="false"/>
       <property name="window-scrolling" type="bool" value="false"/>
       <property name="include-all-monitors" type="bool" value="false"/>
+    </property>
+    <property name="plugin-2" type="string" value="systray">
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="steam"/>
+        <value type="string" value="pamac-tray"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="steam"/>
+      </property>
+      <property name="single-row" type="bool" value="false"/>
+      <property name="hide-new-items" type="bool" value="false"/>
+      <property name="square-icons" type="bool" value="false"/>
+      <property name="hidden-legacy-items" type="array">
+        <value type="string" value="pamac-tray"/>
+      </property>
+      <property name="icon-size" type="int" value="22"/>
     </property>
   </property>
 </channel>
