@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-shopt -s extglob
-
-for file in *.@(jpg|png); do
-  if avifenc -q 85 "$file" "${file%.*}.avif"; then
-    rm -f "$file"
-  fi
-done
