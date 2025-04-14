@@ -1,15 +1,16 @@
 Terminal,kitty,xfce4-terminal,utilities-terminal
-Browser,firefox
-File manager,thunar,system-file-manager
+Browser,zen,firefox
+File,dolphin,thunar,system-file-manager
 Steam, steam
 
 ^sep()
 
-Reset sxhkd,pgrep -x sxhkd >/dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc.bak && notify-send sxkd Reset
+Reset shkd,pgrep -x sxhkd >/dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc.bak && notify-send sxkd Reset
 
 ^sep()
 
 Exit,^checkout(exit),system-shutdown
+
 ^tag(exit)
 Logout,bspc quit
 Reboot,systemctl -i reboot,system-reboot

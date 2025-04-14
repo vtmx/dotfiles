@@ -21,16 +21,17 @@ menu_halign         = left
 menu_width          = 200
 menu_margin_x       = 0
 menu_margin_y       = 0
-menu_padding_top    = 4
-menu_padding_right  = 4
-menu_padding_left   = 4
-menu_padding_bottom = 4
+menu_padding_top    = 0
+menu_padding_right  = 0
+menu_padding_left   = 0
+menu_padding_bottom = 0
 menu_border         = 1
 menu_radius         = 0
 
 item_height         = 32
-item_margin_x       = 4
-item_margin_y       = 4
+item_margin_x       = 0
+item_margin_y       = 0
+item_padding_x      = 16 
 item_border         = 0
 item_radius         = 0
 

@@ -27,6 +27,13 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
+  // Suggestion
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.triggerSuggest",
+    "when": "vim.active && editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+
   // Format document
   {
     "key": "shift+alt+f",
