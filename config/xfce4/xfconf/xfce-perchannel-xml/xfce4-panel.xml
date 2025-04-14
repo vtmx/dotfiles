@@ -54,7 +54,7 @@
     </property>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="zen"/>
+      <property name="known-players" type="string" value="firefox;zen"/>
     </property>
     <property name="plugin-9" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -77,11 +77,11 @@
       </property>
       <property name="single-row" type="bool" value="false"/>
       <property name="hide-new-items" type="bool" value="false"/>
-      <property name="square-icons" type="bool" value="false"/>
+      <property name="square-icons" type="bool" value="true"/>
       <property name="hidden-legacy-items" type="array">
         <value type="string" value="pamac-tray"/>
       </property>
-      <property name="icon-size" type="int" value="22"/>
+      <property name="icon-size" type="int" value="16"/>
     </property>
   </property>
 </channel>

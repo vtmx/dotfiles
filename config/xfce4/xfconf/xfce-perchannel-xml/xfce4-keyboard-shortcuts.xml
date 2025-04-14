@@ -67,6 +67,7 @@
       <property name="&lt;Super&gt;a" type="string" value="pamac-manager"/>
       <property name="&lt;Super&gt;s" type="string" value="flameshot gui"/>
       <property name="Print" type="string" value="flameshot gui"/>
+      <property name="&lt;Alt&gt;F4" type="string" value="xdotool getactivewindow windowclose"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

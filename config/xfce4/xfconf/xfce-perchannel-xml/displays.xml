@@ -1,43 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="displays" version="1.0">
   <property name="ActiveProfile" type="string" value="Default"/>
-  <property name="Default" type="empty">
-    <property name="Virtual1" type="string" value="Virtual1">
-      <property name="Active" type="bool" value="true"/>
-      <property name="EDID" type="string" value=""/>
-      <property name="Resolution" type="string" value="1920x1080"/>
-      <property name="RefreshRate" type="double" value="60"/>
-      <property name="Rotation" type="int" value="0"/>
-      <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="true"/>
-      <property name="Scale" type="empty">
-        <property name="X" type="double" value="1"/>
-        <property name="Y" type="double" value="1"/>
-      </property>
-      <property name="Position" type="empty">
-        <property name="X" type="int" value="0"/>
-        <property name="Y" type="int" value="0"/>
-      </property>
-    </property>
-    <property name="HDMI-0" type="string" value="Samsung Electric Company 24&quot;">
-      <property name="Active" type="bool" value="true"/>
-      <property name="EDID" type="string" value="1892e5e50026e568552572696ee82f7cb9f9bab2"/>
-      <property name="Resolution" type="string" value="1920x1080"/>
-      <property name="RefreshRate" type="double" value="60"/>
-      <property name="Rotation" type="int" value="0"/>
-      <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="false"/>
-      <property name="Scale" type="empty">
-        <property name="X" type="double" value="1"/>
-        <property name="Y" type="double" value="1"/>
-      </property>
-      <property name="Position" type="empty">
-        <property name="X" type="int" value="0"/>
-        <property name="Y" type="int" value="0"/>
-      </property>
-    </property>
-  </property>
   <property name="Fallback" type="empty">
     <property name="Virtual1" type="string" value="Virtual1">
       <property name="Active" type="bool" value="true"/>
@@ -75,4 +39,21 @@
     </property>
   </property>
   <property name="Notify" type="int" value="1"/>
+  <property name="AutoEnableProfiles" type="int" value="3"/>
+  <property name="Default" type="empty">
+    <property name="HDMI-0" type="string" value="LG Electronics 72&quot;">
+      <property name="Active" type="bool" value="true"/>
+      <property name="EDID" type="string" value="202673ff34d675b3bd5f196486a5456ccf276dc5"/>
+      <property name="Resolution" type="string" value="1920x1080"/>
+      <property name="RefreshRate" type="double" value="60"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="false"/>
+      <property name="Scale" type="double" value="1"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
+  </property>
 </channel>
