@@ -8,22 +8,11 @@ config.tab_close_button = true
 -- Wait Lite XL to execute command treeview:toggle
 core.add_thread(function()
   core.root_view:defer_draw(function()
+    command.perform('line-wrapping:enable')
     command.perform('treeview:toggle')
   end)
 end)
 
 -- Hide statusbar
 --core.status_view:hide()
-
--- Ingnore file in projects
-config.ignore_files = {
-  -- folders
-  '^%.svn/',        '^%.git/',   '^%.hg/',        '^CVS/', '^%.Trash/', '^%.Trash%-.*/',
-  '^node_modules/', '^%.cache/', '^__pycache__/',
-  -- files
-  '%.pyc$',         '%.pyo$',       '%.exe$',        '%.dll$',   '%.obj$', '%.o$',
-  '%.a$',           '%.lib$',       '%.so$',         '%.dylib$', '%.ncb$', '%.sdf$',
-  '%.suo$',         '%.pdb$',       '%.idb$',        '%.class$', '%.psd$', '%.db$',
-  '^desktop%.ini$', '^%.DS_Store$', '^%.directory$',
-}
 

@@ -48,6 +48,7 @@ body {
 #titlebar .titlebar-spacer,
 #unified-extensions-button,
 #urlbar .search-one-offs:not([hidden]),
+#urlbar-searchmode-switcher,
 #urlbar-zoom-button,
 #statuspanel {
  display: none !important;
