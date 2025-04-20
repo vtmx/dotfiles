@@ -6,6 +6,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="Manjaro Settings Manager"/>
       <value type="string" value="notify-send"/>
+      <value type="string" value="org.manjaro.pamac.manager"/>
       <value type="string" value="org.manjaro.pamac.tray"/>
       <value type="string" value="org.xfce.Thunar"/>
       <value type="string" value="Xfce volume control"/>
