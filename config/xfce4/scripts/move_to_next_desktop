@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Obter área de trabalho atual
+current_workspace=$(wmctrl -d | awk '/\*/ {print $1}')
+
+# Próxima área de trabalho
+next_workspace=$((current_workspace + 1))
+
+# Mover janela ativa para a próxima área de trabalho
+wmctrl -r :ACTIVE: -t $next_workspace
+
+# Alterar o foco para a próxima área de trabalho
+wmctrl -s $next_workspace
