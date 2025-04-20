@@ -4,9 +4,8 @@ breeze-gtk
 bspwm
 cjxl
 code
-conky-lua-nv
 entr
-exa
+eza
 fd
 fdupes
 feh
@@ -21,22 +20,17 @@ jgmenu
 jq
 keepassxc
 kitty
-konsole
 loc
 lynx
-mkvtoolnix-cli
-mkvtoolnix-gui
 mpv
 ncdu
 neovim
-nodejs
-npm
-nvm
 pandoc
 pastel
 perl-rename
 polybar
 qemu
+qrencode
 rofi
 rsync
 timeshift
@@ -54,6 +48,7 @@ xdotool
 xev
 xprop
 yay
+zbar
 zoxide
 
 # References

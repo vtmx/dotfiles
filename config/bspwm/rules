@@ -11,8 +11,6 @@ $br thunar            desktop="^3" focus=on
 $br bitwarden-desktop desktop="^4" focus=on
 $br keepassxc         desktop="^4" focus=on
 $br steam             desktop="^4" state=floating
-$br pamac-manager     desktop="^5" focus=on follow=on
-$br vlc               desktop="^5" focus=on follow=on
 $br qBittorrent       desktop="^6" focus=on
 $br conky                          border=off state=floating 
 $br godot                          state=floating 
