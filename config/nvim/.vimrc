@@ -7,9 +7,7 @@
 " Options
 " ------------------------------------------------------------------------------
 
-" Sets
 set autochdir
-set autoindent smartindent autoread
 set bg=dark
 set clipboard=unnamedplus
 set cmdheight=1 showcmd
@@ -30,29 +28,20 @@ set scrolloff=8
 set splitbelow splitright
 set termguicolors
 set timeoutlen=3000 updatetime=250
-set wildmenu
+"set wildmenu wildmode=list:longest
 
 " ------------------------------------------------------------------------------
 " Autocmds
 " ------------------------------------------------------------------------------
 
+" No continue coments
 autocmd FileType * setlocal formatoptions-=o
 
 " ------------------------------------------------------------------------------
 " Functions
 " ------------------------------------------------------------------------------
 
-" Clear all styles
-function! ClearAllHighlights()
-  for group in split(execute('highlight'), '\n')
-    let group_name = matchstr(group, '^\S\+')
-    if group_name != ''
-      execute 'highlight ' . group_name . ' NONE'
-    endif
-  endfor
-endfunction
-
-" Function to apply hightlight colors
+" Apply hightlight colors
 function! s:h(group, attrs)
   let l:cmd = 'highlight ' . a:group
   if has_key(a:attrs, 'fg')
@@ -65,6 +54,16 @@ function! s:h(group, attrs)
     let l:cmd .= ' gui=' . a:attrs['gui']
   endif
   execute l:cmd
+endfunction
+
+" Clear all styles
+function! ClearAllHighlights()
+  for group in split(execute('highlight'), '\n')
+    let group_name = matchstr(group, '^\S\+')
+    if group_name != ''
+      execute 'highlight ' . group_name . ' NONE'
+    endif
+  endfor
 endfunction
 
 " Toggle Lex
@@ -90,6 +89,16 @@ function! GetCurrentMode()
 		\ 'OTH'
 endfunction
 
+" Toggle zen
+function! ToggleZen()
+	if &number
+		set nonumber
+		set cmdheight=1
+	else
+		set number
+		set cmdheight=2
+	endif
+endfunction
 
 " ------------------------------------------------------------------------------
 " Mappings 
@@ -104,10 +113,6 @@ let mapleader="\<space>"
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
-" Delete dot copy
-nnoremap x "_x
-nnoremap <del> "_x
-
 " Remove highlight search
 nnoremap ç :nohl<cr>
 nnoremap <c-l> :nohl<cr>
@@ -116,8 +121,9 @@ nnoremap <c-l> :nohl<cr>
 nnoremap ss :sp<cr>
 nnoremap vv :vsp<cr>
 
-" Toggle Lex
-nnoremap <silent> <leader>e :call ToggleLex()<CR>
+" Delete dot copy
+nnoremap x "_x
+nnoremap <del> "_x
 
 " Save
 nnoremap <c-s> :w!<cr>
@@ -172,6 +178,9 @@ nnoremap <silent> <leader>n :ene<cr>
 " Select all
 nmap <leader>a G<s-v>gg
 
+" Toggle Lex
+nnoremap <silent> <leader>e :call ToggleLex()<CR>
+
 " Format
 nnoremap <leader>f :retab<cr>
 
@@ -189,8 +198,17 @@ nnoremap <leader>p "+gp<esc><cmd>echo "Paste from clipboard"<cr>
 " Reload
 nnoremap <leader>r :w<cr>:so $MYVIMRC<cr>:nohl<cr>:echo 'Reload'<cr>
 
+" Substitute current word
+nnoremap <leader>s :%s/<C-r><C-w>//g<Left><Left>
+
 " Remove all spaces at eol
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<cr>
+
+" Open terminal
+nnoremap <leader>t <cmd>below term<cr>
+
+" Open vertical terminal
+nnoremap <leader>T <cmd>vert term<cr>
 
 " Clipboard
 nnoremap <leader>y "+ygv<esc><cmd>echo "Copy to clipboard"<cr>
@@ -207,6 +225,10 @@ nnoremap <leader>ul :set list!<cr>
 
 " Toggle spell
 nnoremap <leader>us :setlocal spell! spelllang=pt_br<cr>
+
+" Toggle zen
+nnoremap <leader>z :call ToggleLineNumberAndCmdHeight()<cr>
+
 
 " Copy all
 nmap <leader>% G<s-v>gg y
@@ -364,8 +386,11 @@ call s:h("FloatShadowThrough", { "bg": g:bd })
 call s:h("WinbarNC",       { "fg": g:fd })
 call s:h("WinSeparator",   { "fg": g:ac })
 
-" Line win separator split
-call s:h("StatusLineNC",   { "fg": g:fg   })
+" Statusline
+call s:h("StatusLine",     { "fg": g:fd   })
+
+" Line win separator split e statusline inativa
+call s:h("StatusLineNC",   { "fg": g:fd   })
 
 " ------------------------------------------------------------------------------
 " Plugins
