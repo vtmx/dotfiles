@@ -81,24 +81,62 @@ endfunction
 function! GetCurrentMode()
 	let l:mode = mode()
 	return 
+    \ l:mode ==# 'c'  ? 'CMD' :
     \ l:mode ==# 'n'  ? 'NOR' :
 		\ l:mode ==# 'i'  ? 'INS' :
+		\ l:mode ==# 'R'  ? 'REP' :
 		\ l:mode ==# 'v'  ? 'VIS' :
 		\ l:mode ==# 'V'  ? 'VIS' :
-		\ l:mode ==# 'R'  ? 'REP' :
-		\ 'OTH'
+		\ ''
 endfunction
 
 " Toggle zen
+
+let g:is_zen = 0
+
 function! ToggleZen()
-	if &number
-		set nonumber
-		set cmdheight=1
-	else
+	if g:is_zen ==# 1
 		set number
-		set cmdheight=2
+		set relativenumber
+		set nowrap
+		set nolinebreak
+		set nobreakindent
+		set laststatus=2
+		let g:is_zen = 0
+	else
+		set nonumber
+		set norelativenumber
+		set wrap
+		set linebreak
+		set breakindent
+		set laststatus=0
+		let g:is_zen = 1
 	endif
 endfunction
+
+
+" ------------------------------------------------------------------------------
+" Plugins
+" ------------------------------------------------------------------------------
+
+" Cursor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" Netrw
+let g:netrw_altv = 1
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_hide = 1
+let g:netrw_liststyle = 4
+let g:netrw_list_hide = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
+let g:netrw_winsize = 24
+
+set statusline=
+set statusline+=%{GetCurrentMode()}\ %F\ %M
+set statusline+=%=
+set statusline+=\%l,%c
+set laststatus=2
 
 " ------------------------------------------------------------------------------
 " Mappings 
@@ -114,31 +152,27 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 
 " Remove highlight search
-nnoremap ç :nohl<cr>
-nnoremap <c-l> :nohl<cr>
+nnoremap ç <cmd>nohl<cr>
 
 " Split
-nnoremap ss :sp<cr>
-nnoremap vv :vsp<cr>
+nnoremap ss <cmd>sp<cr>
+nnoremap vv <cmd>vsp<cr>
 
 " Delete dot copy
 nnoremap x "_x
 nnoremap <del> "_x
-
-" Save
-nnoremap <c-s> :w!<cr>
-
-" qq to record in q, Q to play q
-nnoremap Q @q
-
-" mm to mark in m, M to jump m
-nnoremap M `m
 
 " Jump 5 lines
 nnoremap J 5j
 nnoremap K 5k
 vnoremap J 5j
 vnoremap K 5k
+
+" mm to mark in m, M to jump m
+nnoremap M `m
+
+" qq to record in q, Q to play q
+nnoremap Q @q
 
 " Copy like C and D
 nnoremap Y y$
@@ -152,17 +186,23 @@ vnoremap L $
 " Undo
 nnoremap U <c-r>
 
+" Save
+nnoremap <c-s> <cmd>w!<cr>
+
+" Remove highlight search
+nnoremap <c-l> <cmd>nohlsearch<bar>diffupdate<cr><c-l>
+
 " Move line
-nnoremap <silent> <a-j> :m+<cr> 
-nnoremap <silent> <a-k> :m-2<cr>
-vnoremap <silent> <a-j> :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap <silent> <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nnoremap <silent> <a-j> <cmd>m+<cr> 
+nnoremap <silent> <a-k> <cmd>m-2<cr>
+vnoremap <silent> <a-j> <cmd>m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <silent> <a-k> <cmd>m'<-2<cr>`>my`<mzgv`yo`z
 
 " Clone line
-" nnoremap <silent> <s-j> :t.<cr>
-" nnoremap <silent> <s-k> :t-<cr>
-" vnoremap <silent> <s-j> :copy '><cr>
-" vnoremap <silent> <s-k> :copy -'><cr>
+" nnoremap <silent> <s-j> <cmd>t.<cr>
+" nnoremap <silent> <s-k> <cmd>t-<cr>
+" vnoremap <silent> <s-j> <cmd>copy '><cr>
+" vnoremap <silent> <s-k> <cmd>copy -'><cr>
 
 " Indent
 nnoremap > >>
@@ -171,7 +211,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Buffer navigation
-nnoremap <silent> <leader>n :ene<cr>
+nnoremap <silent> <leader>n <cmd>ene<cr>
 
 " Leader
 
@@ -179,10 +219,10 @@ nnoremap <silent> <leader>n :ene<cr>
 nmap <leader>a G<s-v>gg
 
 " Toggle Lex
-nnoremap <silent> <leader>e :call ToggleLex()<CR>
+nnoremap <silent> <leader>e <cmd>call ToggleLex()<CR>
 
 " Format
-nnoremap <leader>f :retab<cr>
+nnoremap <leader>f <cmd>retab<cr>
 
 " Join lines
 nnoremap <leader>j J
@@ -196,13 +236,13 @@ nnoremap <leader>y "+ygv<esc><cmd>echo "Copy to clipboard"<cr>
 nnoremap <leader>p "+gp<esc><cmd>echo "Paste from clipboard"<cr>
 
 " Reload
-nnoremap <leader>r :w<cr>:so $MYVIMRC<cr>:nohl<cr>:echo 'Reload'<cr>
+nnoremap <leader>r <cmd>w<cr><cmd>so $MYVIMRC<cr><cmd>nohl<cr><cmd>echo 'Reload'<cr>
 
 " Substitute current word
-nnoremap <leader>s :%s/<C-r><C-w>//g<Left><Left>
+nnoremap <leader>s <cmd>s/<C-r><C-w>//g<Left><Left>
 
 " Remove all spaces at eol
-nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <leader>S <cmd>s/\s\+$//<cr>:let @/=''<cr>
 
 " Open terminal
 nnoremap <leader>t <cmd>below term<cr>
@@ -215,20 +255,22 @@ nnoremap <leader>y "+ygv<esc><cmd>echo "Copy to clipboard"<cr>
 nnoremap <leader>p "+gp<esc><cmd>echo "Paste from clipboard"<cr>
 
 " Toggle relative number
-nnoremap <leader>ur :set relativenumber!<cr>
+nnoremap <leader>ur <cmd>set relativenumber!<cr>
 
 " Toggle show number
-nnoremap <leader>un :set number!<cr>
+nnoremap <leader>un <cmd>set number!<cr>
 
 " Show tabs and trailing spaces
-nnoremap <leader>ul :set list!<cr>
+nnoremap <leader>ul <cmd>set list!<cr>
 
 " Toggle spell
-nnoremap <leader>us :setlocal spell! spelllang=pt_br<cr>
+nnoremap <leader>us <cmd>set spell! spelllang=pt_br<cr>
+
+" Toggle wrap
+nnoremap <leader>uw <cmd>set wrap!<cr>
 
 " Toggle zen
-nnoremap <leader>z :call ToggleLineNumberAndCmdHeight()<cr>
-
+nnoremap <leader>z <cmd>call ToggleZen()<cr>
 
 " Copy all
 nmap <leader>% G<s-v>gg y
@@ -249,7 +291,11 @@ inoremap <c-h> <left>
 inoremap <c-l> <right>
 
 " Save
-inoremap <c-s> <esc>:w!<cr>
+inoremap <c-s> <esc><cmd>w!<cr>
+
+" Default nvim
+inoremap <c-u> <c-g>u<c-u>
+inoremap <c-w> <c-g>u<c-w>
 
 " Visual
 
@@ -264,7 +310,6 @@ vnoremap y ygv<esc>
 " ------------------------------------------------------------------------------
 
 syntax on
-
 call ClearAllHighlights()
 
 " Colors
@@ -392,25 +437,3 @@ call s:h("StatusLine",     { "fg": g:fd   })
 " Line win separator split e statusline inativa
 call s:h("StatusLineNC",   { "fg": g:fd   })
 
-" ------------------------------------------------------------------------------
-" Plugins
-" ------------------------------------------------------------------------------
-
-" Cursor
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
-" Netrw
-let g:netrw_altv = 1
-let g:netrw_banner = 0
-let g:netrw_browse_split = 4
-let g:netrw_hide = 1
-let g:netrw_liststyle = 4
-let g:netrw_list_hide = '^\.\.\=/\=$,.git,__pycache__,venv,node_modules,*\.o,*\.pyc,.*\.swp'
-let g:netrw_winsize = 24
-
-set statusline=
-set statusline+=%{GetCurrentMode()}\ %F\ %M
-set statusline+=%=
-set statusline+=\%l,%c
-set laststatus=2
