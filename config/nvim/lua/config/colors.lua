@@ -1,12 +1,11 @@
 local colors = {
-  bd = '#1e2227',
-  bg = '#23272e',
-  bl = '#2c313c', -- cursorline and sel
-  fd = '#5c6370', -- comment
-  fg = '#abb2bf',
-  fl = '#0000ff',
-  ac = '#3d4556', -- selection and accent
-
+  bd     = '#1e2227',
+  bg     = '#23272e',
+  bl     = '#2c313c', -- cursorline and sel
+  fd     = '#5c6370', -- comment
+  fg     = '#abb2bf',
+  fl     = '#0000ff',
+  ac     = '#3d4556', -- selection and accent
   red    = '#e06c75',
   orange = '#d19a66',
   yellow = '#e5c07b',

@@ -342,7 +342,7 @@ for name, val in pairs(hl_groups) do
 end
 
 -- Spell
-vim.cmd('highlight SpellBad guisp=' .. c.red)
-vim.cmd('highlight SpellCap guisp=' .. c.blue)
-vim.cmd('highlight SpellRare guisp=' .. c.purple)
-vim.cmd('highlight SpellLocal guisp=' .. c.cyan)
+vim.cmd('hi SpellBad guisp=' .. c.red)
+vim.cmd('hi SpellCap guisp=' .. c.blue)
+vim.cmd('hi SpellRare guisp=' .. c.purple)
+vim.cmd('hi SpellLocal guisp=' .. c.cyan)
