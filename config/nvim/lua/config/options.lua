@@ -4,7 +4,7 @@ local opts = {
   expandtab = true,
   ignorecase = true,
   lazyredraw = true,
-  listchars = { eol = '↲', space = '.', tab = '›-', trail = '⋯' },
+  listchars = { eol = '↲', nbsp = '+', space = '.', tab = '›-', trail = '⋯' },
   number = true,
   relativenumber = true,
   scrolloff = 8,
@@ -16,7 +16,6 @@ local opts = {
   swapfile = false,
   tabstop = 2,
   termguicolors = true,
-  timeoutlen = 3000,
   updatetime = 250,
   wrap = false,
 }

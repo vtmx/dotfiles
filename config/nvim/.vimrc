@@ -8,6 +8,7 @@
 " ------------------------------------------------------------------------------
 
 set autochdir
+set autoread
 set bg=dark
 set clipboard=unnamedplus
 set cmdheight=1 showcmd
@@ -17,7 +18,7 @@ set exrc
 set hidden history=1000
 set hlsearch ignorecase smartcase
 set lazyredraw
-set listchars=eol:↲,space:.,tab:›-,trail:⋯
+set listchars=eol:↲,nbsp:+,space:.,tab:›-,trail:⋯
 set tabstop=2 softtabstop=2 shiftwidth=2
 set mouse=a
 set nobackup noswapfile
@@ -27,8 +28,9 @@ set number relativenumber
 set scrolloff=8
 set splitbelow splitright
 set termguicolors
-set timeoutlen=3000 updatetime=250
-"set wildmenu wildmode=list:longest
+set ttimeout ttimeoutlen=100 updatetime=250
+set wildmenu
+" wildmode=list:longest
 
 " ------------------------------------------------------------------------------
 " Autocmds
@@ -232,7 +234,6 @@ nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
 
 " Clipboard
-nnoremap <leader>y "+ygv<esc><cmd>echo "Copy to clipboard"<cr>
 nnoremap <leader>p "+gp<esc><cmd>echo "Paste from clipboard"<cr>
 
 " Reload
@@ -249,10 +250,6 @@ nnoremap <leader>t <cmd>below term<cr>
 
 " Open vertical terminal
 nnoremap <leader>T <cmd>vert term<cr>
-
-" Clipboard
-nnoremap <leader>y "+ygv<esc><cmd>echo "Copy to clipboard"<cr>
-nnoremap <leader>p "+gp<esc><cmd>echo "Paste from clipboard"<cr>
 
 " Toggle relative number
 nnoremap <leader>ur <cmd>set relativenumber!<cr>
@@ -280,27 +277,24 @@ nmap <leader>% G<s-v>gg y
 " Scape 
 inoremap kj <esc>
 
-" Auto completion
-inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
-inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
-
 " Insert mode move
 inoremap <c-a> <home>
 inoremap <c-e> <end>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
+inoremap <c-u> <c-g>u<c-u>
+inoremap <c-w> <c-g>u<c-w>
 
 " Save
 inoremap <c-s> <esc><cmd>w!<cr>
-
-" Default nvim
-inoremap <c-u> <c-g>u<c-u>
-inoremap <c-w> <c-g>u<c-w>
 
 " Visual
 
 " Back normal mode
 vnoremap ç <esc>
+
+" Clipboard
+vnoremap <leader>y "+ygv<esc><cmd>echo "Copy to clipboard"<cr>
 
 " Keep cursor end select when visual copy
 vnoremap y ygv<esc>
