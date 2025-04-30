@@ -1,4 +1,3 @@
-
 @-moz-document url-prefix("chrome:") {
   body {
     font-family: Segoe, system-ui, sans-serif !important;
@@ -29,6 +28,7 @@
 
   #urlbar #urlbar-background {
     background: Canvas !important;
+    box-shadow: none !important;
   }
 
   .toolbarbutton-1 {
