@@ -161,6 +161,20 @@ mvcd() {
 	fi
 }
 
+# Remane duplicate
+mvd() {
+  [[ $1 ]] || {
+    echo 'usage: mvd <char-duplicate>'
+    return 1
+  }
+  local newfile=''
+  for file in *; do
+    newfile=$(tr -s "$1" <<< "$file")
+    mv "$file" "$newfile" 2>/dev/null
+  done
+  return 0
+}
+
 # Rename extension
 mvext() {
   [[ $1 && $2 ]] || {
