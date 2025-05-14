@@ -90,6 +90,9 @@ alias hi="history | sort -rn"
 alias iwai="inotifywait"
 alias iwat="inotifywatch"
 
+# killall
+alias k=killall
+
 # kitty
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
 
