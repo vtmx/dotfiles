@@ -5,7 +5,6 @@
     "prefix": "var",
     "body": ["var(--$1)"]
   },
-
   // Javascript
   "console.log()": {
     "scope": "javascript, typescript, svelte, vue",

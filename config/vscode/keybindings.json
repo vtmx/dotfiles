@@ -1,4 +1,11 @@
 [
+  // Enable increase number
+  {
+    "key": "ctrl+a",
+    "command": "extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+  },
+
   // New file
   {
     "key": "alt+n",

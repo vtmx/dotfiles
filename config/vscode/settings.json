@@ -1,6 +1,7 @@
 {
   // Window
   "breadcrumbs.enabled": false,
+  "chat.commandCenter.enabled": false,
   "window.commandCenter": false,
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
