@@ -12,7 +12,8 @@ return {
     event = 'ModeChanged',
     config = function()
       require('mini.surround').setup({
-         mappings = { add = 'sa', delete = 'ds', replace = 'cs', highlight = 'sh' }
+        search_method = 'cover_or_nearest',
+        mappings = { add = 'sa', delete = 'ds', replace = 'cs', highlight = 'sh' }
       })
     end
   },

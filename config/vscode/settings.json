@@ -311,6 +311,10 @@
       "after": ["\"", "_", "x"]
     },
     {
+      "before": ["y", "a"],
+      "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o"]
+    },
+    {
       "before": ["y", "l"],
       "after": ["V", "\"", "+", "y"]
     },
@@ -388,10 +392,6 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
       "before": ["<leader>", "j"],
       "after": ["m", "z", "J", "`", "z"]
     },
@@ -418,6 +418,10 @@
     {
       "before": ["<leader>", "q"],
       "commands": ["workbench.action.quit"]
+    },
+    {
+      "before": ["<leader>", "S"],
+      "commands": ["workbench.action.gotoSymbol"]
     },
     {
       "before": ["<leader>", "w"],
