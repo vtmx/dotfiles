@@ -7,6 +7,16 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
+function M.toggle_pairs()
+  if vim.g.minipairs_disable then
+    vim.g.minipairs_disable = false
+    print('Enable pairs')
+  else
+    vim.g.minipairs_disable = true
+    print('Disable pairs')
+  end
+end
+
 function M.toggle_ia()
   if vim.cmd('CodeiumToggle') then
     print('Toggle ia')

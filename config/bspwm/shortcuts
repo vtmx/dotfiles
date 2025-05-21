@@ -106,7 +106,7 @@ super + {equal,minus,0}
 
 # Edit config and shortcuts
 super + {comma,period}
-  term=kitty; editor=helix; \
+  term=kitty; editor=nvim; \
   {$term -e $editor $HOME/.config/bspwm/bspwmrc, \
    $term -e $editor $HOME/.config/bspwm/shortcuts}
 

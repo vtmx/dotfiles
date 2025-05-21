@@ -444,6 +444,11 @@ map(
 )
 
 map(
+  'n', '<leader>up', function() utils.toggle_pairs() end,
+  { desc = 'Toggle pairs' }
+)
+
+map(
   'n', '<leader>ur', function() utils.toggle_relativenumber() end,
   { desc = 'Toggle relativenumber', }
 )
