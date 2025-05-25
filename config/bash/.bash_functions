@@ -6,8 +6,6 @@ shopt -s globstar
 cat() {
   if type bat &> /dev/null; then
     bat --theme=ansi --style=numbers,changes,header --italic-text=always "$1"
-  else
-    cat "$1"
   fi
 }
 
