@@ -2,3 +2,8 @@
   background: #61afef !important;
   color: #23272e !important;
 }
+
+.tag-line, .devtools-monospace {
+  font-family: 'BlexMono Nerd Font', monospace !important;
+  font-size: 13px !important;
+}
