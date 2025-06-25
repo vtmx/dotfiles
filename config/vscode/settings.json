@@ -259,14 +259,6 @@
       "after": ["^"]
     },
     {
-      "before": ["J"],
-      "after": ["5", "j"]
-    },
-    {
-      "before": ["K"],
-      "after": ["5", "k"]
-    },
-    {
       "before": ["L"],
       "after": ["$"]
     },
@@ -392,7 +384,7 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "j"],
+      "before": ["J"],
       "after": ["m", "z", "J", "`", "z"]
     },
     {
@@ -456,14 +448,6 @@
     {
       "before": ["H"],
       "after": ["^"]
-    },
-    {
-      "before": ["J"],
-      "after": ["5", "j"]
-    },
-    {
-      "before": ["K"],
-      "after": ["5", "k"]
     },
     {
       "before": ["L"],

@@ -298,8 +298,13 @@ local hl_groups = {
   LazyProp                 = { bg = c.ac     },
 
   --markdown
-  mkdCodeStart             = { fg = c.fg     },
   mkdCodeEnd               = { fg = c.fg     },
+  mkdCodeStart             = { fg = c.fg     },
+  mkdHeading               = { fg = c.red    },
+  mkdInlineURL             = { fg = c.blue   },
+  mkdLineBreak             = { link = 'NONE' },
+  mkdLink                  = { fg = c.blue   },
+  mkdURL                   = { fg = c.purple },
 
   -- mini-tabline
   TabLine                  = { fg = c.fd     },
