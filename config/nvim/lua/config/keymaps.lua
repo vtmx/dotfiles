@@ -44,18 +44,8 @@ map(
 )
 
 map(
-  {'n', 'v' }, 'J', '5j',
-  { desc = 'Jump 5 line to down' }
-)
-
-map(
   'n', 'k', 'gk',
   { desc = 'Ignore wordwrap jumpline' }
-)
-
-map(
-  {'n', 'v'}, 'K', '5k',
-  { desc = 'Jump 5 line to up' }
 )
 
 map(
@@ -249,16 +239,6 @@ map(
   { desc = 'End of line' }
 )
 
-map(
-  {'i', 'c'}, '<c-j>', 'pumvisible() ? "\\<c-n>" : "\\<c-j>"',
-  { desc = 'Next item', expr = true }
-)
-
-map(
-  {'i', 'c'}, '<c-k>', 'pumvisible() ? "\\<c-p>" : "\\<c-k>"',
-  { desc = 'Prev item', expr = true }
-)
-
 -- Terminal
 
 map(
@@ -334,12 +314,12 @@ map(
 )
 
 map(
-  'n', '<leader>j', 'mzJ`z',
+  'n', 'J', 'mzJ`z',
   { desc = 'Join lines' }
 )
 
 map(
-  'n', '<leader>J', '<cmd>Telescope jumplist<cr>',
+  'n', '<leader>j', '<cmd>Telescope jumplist<cr>',
   { desc = 'Jump list' }
 )
 
@@ -464,8 +444,8 @@ map(
 )
 
 map(
-  'n', '<leader>uz', function() utils.toggle_diary() end,
-  { desc = 'Toggle diary mode' }
+  'n', '<leader>uz', '<cmd>ZenMode<cr>',
+  { desc = 'ZenMode' }
 )
 
 map(
@@ -494,8 +474,8 @@ map(
 )
 
 map(
-  'n', '<leader>z', '<cmd>ZenMode<cr>',
-  { desc = 'ZenMode' }
+  'n', '<leader>z', function() utils.toggle_diary(); vim.cmd('ZenMode') end,
+  { desc = 'Toggle diary mode' }
 )
 
 map(

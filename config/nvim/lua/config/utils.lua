@@ -24,11 +24,14 @@ function M.toggle_ia()
 end
 
 function M.toggle_diary()
-  M.toggle_colorcolumn()
   M.toggle_number()
   M.toggle_spelllang()
   M.toggle_wrap()
   vim.cmd('highlight CursorLine NONE')
+  vim.keymap.set({'v'}, 'j', 'gj')
+  vim.keymap.set({'v'}, 'k', 'gk')
+  vim.keymap.set({'n', 'v'}, 'H', 'g^')
+  vim.keymap.set({'n', 'v'}, 'L', 'g$')
   print('Toggle diary')
 end
 
