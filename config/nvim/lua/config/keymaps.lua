@@ -39,13 +39,13 @@ map(
 )
 
 map(
-  'n', 'j', 'gj',
-  { desc = 'Ignore wordwrap jumpline' }
+  'n', 'j', 'v:count == 0 ? "gj" : "j"',
+  { expr = true, desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
-  'n', 'k', 'gk',
-  { desc = 'Ignore wordwrap jumpline' }
+  'n', 'k', 'v:count == 0 ? "gk" : "k"',
+  { expr = true, desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
