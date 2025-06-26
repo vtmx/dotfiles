@@ -1,5 +1,5 @@
 # Shell options
-shopt -s cdspell checkwinsize
+shopt -s cdspell checkwinsize histappend
 
 # Bindings
 bind -s 'set completion-ignore-case on' # Show fzf message in reload
@@ -13,7 +13,6 @@ export HISTIGNORE='ls:ls -lah:history:pwd:htop:bg:fg:clear'
 export HISTSIZE=5000
 export HISTTIMEFORMAT="%F %T "
 export PATH="$PATH:$HOME/.local/bin"
-export PROMPT_COMMAND=('history -a' 'history -r')
 
 # Colors
 setab() { echo -en "\e[4$1m";   }
@@ -61,16 +60,10 @@ if [[ -f $HOME/.bun/bin/bun ]]; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# fd
-if [[ -f $HOME/.local/bin/fd ]]; then
-  export LS_COLORS=''
-fi
-
 # fzf
 [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
 
 if type fzf &> /dev/null; then
-
   if [[ $DISPLAY ]]; then
     export FZF_DEFAULT_OPTS="\
     --height 50% --reverse \
