@@ -1,5 +1,5 @@
 # Shell options
-shopt -s cdspell checkwinsize cmdhist histappend 
+shopt -s cdspell checkwinsize
 
 # Bindings
 bind -s 'set completion-ignore-case on' # Show fzf message in reload
