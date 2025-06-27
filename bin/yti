@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Get youtube url info
+
 [[ $1 ]] || { echo 'error: no url-id'; exit 1; }  
 
 urlpre='https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v='

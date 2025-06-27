@@ -52,6 +52,63 @@ ex() {
   fi
 }
 
+# Add extension
+addext() {
+  [[ $1 ]] || { echo 'usage: addext <extension>'; return 1; }
+
+  for file in *; do
+    echo "$file >> $file.$1"
+  done
+
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    for file in *; do
+      mv "$file" "$file.$1"
+    done
+  fi
+}
+
+# Rename extension
+mvext() {
+  [[ $1 && $2 ]] || {
+    echo 'usage: mvext <old extension> <new extension>'
+    return 1
+  }
+
+  for file in *.$1; do
+    echo "$file >> ${file%.$1}.$2"
+  done
+
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    for file in *.$1; do
+      mv "$file" "${file%.$1}.$2"
+    done
+  fi
+}
+
+# Remove extension
+rmext() {
+  [[ $1 ]] || { echo 'usage: rmext <extension>'; return 1; }
+
+  for file in *.$1; do
+    echo "$file >> ${file%.$1}"
+  done
+
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    for file in *.$1; do
+      mv "$file" "${file%.$1}"
+    done
+  fi
+}
+
 # Font list
 fl() {
   fc-list | awk -F: '{print $2}' | sort | uniq | grep -v Noto
@@ -159,6 +216,25 @@ mvcd() {
 	fi
 }
 
+# Cut
+mvcut() {
+  [[ $1 ]] || { echo 'error: mvcut <word>'; return 1; }
+
+  for file in *; do
+    newname=$(sed "s/$1//" <<< $file)
+    echo "$file >> $newname"
+  done
+
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    for file in *; do
+      mv "$file" "$newname"
+    done
+  fi
+}
+
 # Remane duplicate
 mvd() {
   [[ $1 ]] || {
@@ -169,18 +245,6 @@ mvd() {
   for file in *; do
     newfile=$(tr -s "$1" <<< "$file")
     mv "$file" "$newfile" 2>/dev/null
-  done
-  return 0
-}
-
-# Rename extension
-mvext() {
-  [[ $1 && $2 ]] || {
-    echo 'usage: mvext <old extension> <new extension>'
-    return 1
-  }
-  for file in *.$1; do
-    mv "$file" "${file%.$1}.$2"
   done
   return 0
 }
@@ -227,20 +291,27 @@ mvmd() {
   done
 }
 
-# Rename substitute word
+# Substitute words
 mvs() {
-  [[ $1 && $2 ]] || {
-    echo 'usage: mvs <old word> <new word>'
-    return 1
-  }
+  [[ $1 && $2 ]] || { echo 'error: need two words'; return 1; }
+
   for file in *; do
-    mv "$file" "${file/$1/$2}"
+    newname="${file/$1/$2}"
+    echo "$file >> $newname"
   done
-  return 0
+
+  echo
+  read -p 'Substitute [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    for file in *; do
+      mv "$file" "$newname"
+    done
+  fi
 }
 
 # Rename
-rn() {
+ren() {
   [[ "$1" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
   local pattern="$1"; shift
   [[ "$@" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
@@ -316,12 +387,6 @@ playr() {
   ls $HOME/Music/** -t | head -n $number | xargs mpv --no-video --display-tags=Title,Artist
 }
 
-# History find command use: ctrl+r
-# hf() {
-#   local cmd=$(history | fzf --tac | awk '{ print $4 }')
-#   $cmd
-# }
-
 # Open rc configs
 rc() {
   local rcfiles=(\
@@ -347,15 +412,6 @@ rc() {
   # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
 }
 
-# Remove extension
-rmext() {
-  [[ $1 ]] || { echo 'usage: rmext <extension>'; return 1; }
-  for file in *.$1; do
-    mv "$file" "${file%.$1}"
-  done
-  return 0
-}
-
 # SSH Add Agent
 ssha() {
   eval "$(ssh-agent -s)"
@@ -377,7 +433,7 @@ trash() {
   for file in "$@"; do
     if [[ -e "$file" ]]; then
       mv -f "$file" "$trash_dir"
-      echo "file moved to trash"
+      echo "moved to trash: $file"
     else
       echo "error: file not found"
     fi
@@ -403,34 +459,6 @@ wa() {
 
 xevk() {
   xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-}
-
-xf() {
-  local sassdir="$HOME/.local/share/themes/Lightly/gtk-3.0/src"
-  local mainsass="$HOME/.local/share/themes/Lightly/gtk-3.0/src/main.scss"
-  local gtkcss="$HOME/.local/share/themes/Lightly/gtk-3.0/gtk.css"
-  while true; do
-    inotifywait -m -e modify $sassdir/** | \
-    sassc -Mt expanded $mainsass $gtkcss && \
-    xfconf-query -c xsettings -p /Net/ThemeName -r && \
-    xfconf-query -c xsettings -p /Net/ThemeName -s Lightly
-  done
-}
-
-wkde() {
-  local file; read -p "Enter a filename of color: " file
-  file="$HOME/.local/share/color-schemes/$file.colors"
-
-  [[ -f "$file" ]] || { 
-    echo "file not exist"
-    return 1
-  }
-
-  while true; do
-    plasma-apply-colorscheme BreezeDark > /dev/null
-    inotifywait -m $file | \
-    plasma-apply-colorscheme AOneDark > /dev/null
-  done
 }
 
 # vim:ft=bash

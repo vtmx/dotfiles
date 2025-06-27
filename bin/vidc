@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+  
+shopt -s extglob
+
+for file in *.@(avi|m4v|mp4|mpg|wmv); do
+  old_files+=("$file")
+  file_size=$(du -h "$file" | awk '{print $1}')
+  newfile="${file%.*}.mp4"
+  ffmpeg -i "$file" -c:v libx264 "$newfile" 2>/dev/null
+  new_file_size=$(du -h "$newfile" | awk '{print $1}')
+  echo "$file_size >> $new_file_size $file" | column -t
+done
+
+echo
+read -p 'Deseja remover antigos? (y/N): ' confirm
+
+if [[ $confirm =~ [yY] ]]; then
+  for file in "${old_files[@]}"; do
+    rm "$file"
+  done
+fi
