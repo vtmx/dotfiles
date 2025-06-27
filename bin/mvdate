@@ -32,9 +32,9 @@ listfiles() {
 # List files
 listfiles
 echo
-read -p "Rename? [y/N]: " rename
+read -p "Rename? [y/N]: " confirm
 
-case $rename in
+case $confirm in
   [yY]) listfiles mv ;;
      *) exit 0       ;;
 esac
