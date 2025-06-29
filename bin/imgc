@@ -23,7 +23,7 @@ for file in *.@(jpg|png); do
   esac
 
   new_file_size=$(du -h "$newfile" | awk '{print $1}')
-  echo "$file_size >> $new_file_size $file" | column -t
+  echo "$file_size -> $new_file_size $file"
 done
 
 echo

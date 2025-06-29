@@ -57,7 +57,7 @@ addext() {
   [[ $1 ]] || { echo 'usage: addext <extension>'; return 1; }
 
   for file in *; do
-    echo "$file >> $file.$1"
+    echo "$file -> $file.$1"
   done
 
   echo
@@ -78,7 +78,7 @@ mvext() {
   }
 
   for file in *.$1; do
-    echo "$file >> ${file%.$1}.$2"
+    echo "$file -> ${file%.$1}.$2"
   done
 
   echo
@@ -96,7 +96,7 @@ rmext() {
   [[ $1 ]] || { echo 'usage: rmext <extension>'; return 1; }
 
   for file in *.$1; do
-    echo "$file >> ${file%.$1}"
+    echo "$file -> ${file%.$1}"
   done
 
   echo
@@ -222,7 +222,7 @@ mvcut() {
 
   for file in *; do
     newname=$(sed "s/$1//" <<< $file)
-    echo "$file >> $newname"
+    echo "$file -> $newname"
   done
 
   echo
@@ -297,7 +297,7 @@ mvs() {
 
   for file in *; do
     newname="${file/$1/$2}"
-    echo "$file >> $newname"
+    echo "$file -> $newname"
   done
 
   echo
