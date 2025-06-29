@@ -70,7 +70,7 @@ listfiles() {
 
     case $1 in
       mv) mv "$file" "$newfile" ;;
-       *) echo "$file >> $newfile" ;;
+       *) echo "$file -> $newfile" ;;
     esac
 
     ((count++))
