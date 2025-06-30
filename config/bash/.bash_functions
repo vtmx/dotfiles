@@ -253,16 +253,16 @@ mvd() {
 mvlo() {
   for file in *; do
     newname="${file,,}"
-    newname="${newname//[áãâ]/a}"
-    newname="${newname//[éê\&]/e}"
-    newname="${newname//[í]/i}"
-    newname="${newname//[óõô]/o}"
+    newname="${newname//[áãâàª]/a}"
+    newname="${newname//[éêèë\&]/e}"
+    newname="${newname//[íî]/i}"
+    newname="${newname//[óõô°]/o}"
     newname="${newname//[ú]/u}"
     newname="${newname//[ç]/c}"
-    newname="${newname//\(/}"
-    newname="${newname//\)/}"
-    newname="${newname//\'/}"
-    newname="${newname// /-}"
+    newname="${newname//[,;:?!+\'\’\(\)\[\]\{\}]/}"
+    newname="${newname//[ _]/-}"
+    newname="${newname//--/-}"
+    newname="${newname//-\./}"
     mv "$file" "$newname" 2>/dev/null
   done
   echo 'finished'
@@ -278,7 +278,10 @@ mvup() {
     newname="${file//[Ó]/O}"
     newname="${file//[Ú]/U}"
     newname="${file//[Ç]/C}"
-    newname="${newname// /-}"
+    newname="${newname//[,;:?!+\'\’\(\)\[\]\{\}]/}"
+    newname="${newname//[ _]/-}"
+    newname="${newname//--/-}"
+    newname="${newname//-\./}"
   done
   echo 'finished'
 }
