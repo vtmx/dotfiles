@@ -2,26 +2,11 @@
   
 shopt -s extglob
 
-case "$1" in
-  avif) format=avif ;;
-  *   ) format=jxl  ;;
-esac
-
-for file in *.@(jpg|png); do
+for file in *.@(m4a|wav); do
   old_files+=("$file")
   file_size=$(du -h "$file" | awk '{print $1}')
-
-  case $format in
-    avif)
-      newfile="${file%.*}.avif"
-      avifenc --lossless "$file" "$newfile" &>/dev/null
-      ;;
-    *)
-      newfile="${file%.*}.jxl"
-      cjxl "$file" "$newfile" &>/dev/null
-      ;;
-  esac
-
+  newfile="${file%.*}.mp3"
+  ffmpeg -i "$file" -c:a libmp3lame "$newfile" 2>/dev/null
   new_file_size=$(du -h "$newfile" | awk '{print $1}')
   echo "$file_size -> $new_file_size ${file%.*}"
 done
