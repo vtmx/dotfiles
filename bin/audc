@@ -2,11 +2,13 @@
   
 shopt -s extglob
 
-for file in *.@(m4a|wav); do
+for file in *.@(m4a|wav|wma); do
   old_files+=("$file")
   file_size=$(du -h "$file" | awk '{print $1}')
   newfile="${file%.*}.mp3"
-  ffmpeg -i "$file" -c:a libmp3lame "$newfile" 2>/dev/null
+  if ! ffmpeg -i "$file" -c:a libmp3lame "$newfile" 2>/dev/null; then
+    echo error; exit 1
+  fi
   new_file_size=$(du -h "$newfile" | awk '{print $1}')
   echo "$file_size -> $new_file_size ${file%.*}"
 done
