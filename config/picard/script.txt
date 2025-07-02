@@ -1,0 +1,12 @@
+$set(title,$lower(%title%))
+$set(title,$rreplace(%title%,[áãâàäª],a))
+$set(title,$rreplace(%title%,[éêèë&],e))
+$set(title,$rreplace(%title%,[íîï],i))
+$set(title,$rreplace(%title%,[óõôö°],o))
+$set(title,$rreplace(%title%,[ú],u))
+$set(title,$rreplace(%title%,[ç],c))
+$set(title,$rreplace(%title%,[ _],-))
+$set(title,$rreplace(%title%,-{2\,},-))
+$set(title,$rreplace(%title%,[^a-zA-Z0-9.]+,-))
+$if($eq($right(%title%,1),-),$set(title,$left(%title%,$sub($len(%title%),1))))
+$if($gt(%totaldiscs%,1),%discnumber%-,)$num(%tracknumber%,2)-%title%

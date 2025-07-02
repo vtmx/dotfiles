@@ -12,6 +12,7 @@ alias bunl="bun pm ls"
 # directories
 alias ..="cd .."
 alias ...="cd ../.."
+alias cdb="cd $HOME/Dev/dotfiles/bin"
 alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
 alias cddoc="cd $HOME/Documents"
@@ -36,6 +37,9 @@ alias chx="chmod +x"
 alias cp="cp -i"
 alias cpv="rsync -ah --info=progress2"
 
+# dir
+alias dir="dir --color=auto"
+
 # diff
 alias diff="diff --color=auto"
 
@@ -48,8 +52,11 @@ alias dnfr="sudo dnf remove -y"
 alias dnfs="sudo dnf search"
 alias dnfu="sudo dnf upgrade --refresh"
 
-# ghostty
-alias gho="$EDITOR $HOME/.config/ghostty/config"
+# egrep
+alias egrep="egrep --color=auto"
+
+# fgrep
+alias fgrep="fgrep --color=auto"
 
 # git
 alias g="git"
@@ -75,6 +82,12 @@ alias grrm="git remote remove"
 alias grmv="git remote move"
 alias gru="git remote update"
 alias gs="git status -sb"
+
+# ghostty
+alias gho="$EDITOR $HOME/.config/ghostty/config"
+
+# grep
+alias grep="grep --color=auto"
 
 # gtk
 alias gtk="GTK_DEBUG=interactive"
@@ -161,6 +174,9 @@ alias tn="tmux new -s"
 
 # tree
 alias tree="eza -T"
+
+# vdir
+alias vdir="vdir --color=auto"
 
 # vim
 alias v="nvim"

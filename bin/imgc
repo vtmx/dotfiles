@@ -14,11 +14,15 @@ for file in *.@(jpg|png); do
   case $format in
     avif)
       newfile="${file%.*}.avif"
-      avifenc --lossless "$file" "$newfile" &>/dev/null
+      if ! avifenc --lossless "$file" "$newfile" &>/dev/null; then
+        echo error; exit 1
+      fi
       ;;
     *)
       newfile="${file%.*}.jxl"
-      cjxl "$file" "$newfile" &>/dev/null
+      if ! cjxl "$file" "$newfile" &>/dev/null; then
+        echo error; exit 1
+      fi
       ;;
   esac
 
