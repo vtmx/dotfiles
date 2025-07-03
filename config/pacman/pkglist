@@ -12,6 +12,8 @@ feh
 figlet
 firefox
 flameshot
+fzf
+glow
 gum
 hyperfine
 id3v2
@@ -21,7 +23,7 @@ jgmenu
 jq
 keepassxc
 kitty
-loc
+localsend-bin
 lynx
 mpv
 ncdu
@@ -34,6 +36,7 @@ polybar
 poppler
 qemu
 qrencode
+rg
 rofi
 rsync
 timeshift
@@ -50,8 +53,8 @@ xclip
 xdotool
 xev
 xprop
+yad
 yay
-zbar
 zoxide
 
 # References

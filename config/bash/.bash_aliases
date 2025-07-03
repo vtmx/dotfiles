@@ -111,7 +111,7 @@ alias k=killall
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
 
 # live-server
-alias live="browser-sync start --server "." --files *"
+alias live="browser-sync start --no-open --server "." --files *"
 
 # ls
 alias l="ls --color=auto --group-directories-first --sort=extension"
