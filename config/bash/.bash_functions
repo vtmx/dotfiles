@@ -21,53 +21,42 @@ clip() {
 
 # Copy and go to the directory
 cpcd() {
-	if [[ -d "$2" ]]; then
-		cp "$1" "$2" && cd "$2"
-	else
-		cp "$1" "$2"
-	fi
+  if [[ -d "$2" ]]; then
+    cp "$1" "$2" && cd "$2"
+  else
+    cp "$1" "$2"
+  fi
 }
 
 # Extract files
 ex() {
-  if [[ -f "$1" ]]; then
-    case $1 in
-      *.7z)   7z x $1       ;;
-      *.bz2)  bunzip2 $1    ;;
-      *.deb)  ar x $1       ;;
-      *.gz)   gunzip $1     ;;
-      *.rar)  unrar x $1    ;;
-      *.tar)  tar xf $1     ;;
-      *.tbz2) tar xjf $1    ;;
-      *.tgz)  tar xzf $1    ;;
-      *.xz)   tar xf $1     ;;
-      *.zip)  unzip $1      ;;
-      *.zst)  unzstd $1     ;;
-      *.Z)    uncompress $1 ;;
-      *)      echo "'$1' cannot be extracted" ;;
-    esac
-  else
-    echo "error: $1 is not a valid file"
-    return 1
+  if [[ ! -f "$1" ]]; then
+    echo "error: $1 is not a valid file"; return 1
   fi
+
+  case $1 in
+    *.7z)   7z x $1       ;;
+    *.bz2)  bunzip2 $1    ;;
+    *.deb)  ar x $1       ;;
+    *.gz)   gunzip $1     ;;
+    *.rar)  unrar x $1    ;;
+    *.tar)  tar xf $1     ;;
+    *.tbz2) tar xjf $1    ;;
+    *.tgz)  tar xzf $1    ;;
+    *.xz)   tar xf $1     ;;
+    *.zip)  unzip $1      ;;
+    *.zst)  unzstd $1     ;;
+    *.Z)    uncompress $1 ;;
+    *)      echo "'$1' cannot be extracted" ;;
+  esac
 }
 
 # Add extension
 addext() {
   [[ $1 ]] || { echo 'usage: addext <extension>'; return 1; }
-
-  for file in *; do
-    echo "$file -> $file.$1"
-  done
-
-  echo
-  read -p 'Rename [y/N]: ' confirm
-
-  if [[ $confirm =~ [yY] ]]; then
-    for file in *; do
-      mv "$file" "$file.$1"
-    done
-  fi
+  rename -n "s/$/\.${1}/" *
+  echo; read -p 'Rename [y/N]: ' confirm
+  [[ $confirm =~ [yY] ]] && rename "s/$/\.${1}/" *
 }
 
 # Rename extension
@@ -76,37 +65,17 @@ mvext() {
     echo 'usage: mvext <old extension> <new extension>'
     return 1
   }
-
-  for file in *.$1; do
-    echo "$file -> ${file%.$1}.$2"
-  done
-
-  echo
-  read -p 'Rename [y/N]: ' confirm
-
-  if [[ $confirm =~ [yY] ]]; then
-    for file in *.$1; do
-      mv "$file" "${file%.$1}.$2"
-    done
-  fi
+  rename -n "s/\.${1}$/\.${2}/" *
+  echo; read -p 'Rename [y/N]: ' confirm
+  [[ $confirm =~ [yY] ]] && rename "s/\.${1}$/\.${2}/" *
 }
 
 # Remove extension
 rmext() {
   [[ $1 ]] || { echo 'usage: rmext <extension>'; return 1; }
-
-  for file in *.$1; do
-    echo "$file -> ${file%.$1}"
-  done
-
-  echo
-  read -p 'Rename [y/N]: ' confirm
-
-  if [[ $confirm =~ [yY] ]]; then
-    for file in *.$1; do
-      mv "$file" "${file%.$1}"
-    done
-  fi
+  rename -n "s/\.${1}//" *
+  echo; read -p 'Rename [y/N]: ' confirm
+  [[ $confirm =~ [yY] ]] && rename "s/\.${1}$/\.${2}/" *
 }
 
 # Font list
@@ -209,11 +178,11 @@ mksh() {
 
 # Move and go to the directory
 mvcd() {
-	if [[ -d "$2" ]];then
-		mv "$1" "$2" && cd "$2"
-	else
-		mv "$1" "$2"
-	fi
+  if [[ -d "$2" ]];then
+    mv "$1" "$2" && cd "$2"
+  else
+    mv "$1" "$2"
+  fi
 }
 
 # Cut
@@ -247,30 +216,31 @@ mvd() {
 mvlo() {
   rename -n \
     '$_=lc($_);
-     s/[áãâàäª]/a/g;
-     s/[éêèë&]/e/g;
-     s/[íîï]/i/g;
-     s/[óõôö°]/o/g;
-     s/[ú]/u/g;
-     s/[ñ]/n/g;
+     s/[àáâãäåāăąæª]/a/g;
+     s/[èéêëēėę&]/e/g;
+     s/[ìíîïīįı]/i/g;
+     s/[òóôõöøōœ°]/o/g;
+     s/[ùúûüūų]/u/g;
      s/[ç]/c/g;
+     s/[ñ]/n/g;
+     s/[ýÿ]/y/g;
      s/[ _]/-/g;
      s/--+/-/g;
      s/[^a-z0-9-.]//g;' *
 
-  echo
-  read -p 'Rename [y/N]: ' confirm
+  echo; read -p 'Rename [y/N]: ' confirm
 
   if [[ $confirm =~ [yY] ]]; then
     rename \
       '$_=lc($_);
-       s/[áãâàäª]/a/g;
-       s/[éêèë&]/e/g;
-       s/[íîï]/i/g;
-       s/[óõôö°]/o/g;
-       s/[ú]/u/g;
-       s/[ñ]/n/g;
+       s/[àáâãäåāăąæª]/a/g;
+       s/[èéêëēėę&]/e/g;
+       s/[ìíîïīįı]/i/g;
+       s/[òóôõöøōœ°]/o/g;
+       s/[ùúûüūų]/u/g;
        s/[ç]/c/g;
+       s/[ñ]/n/g;
+       s/[ýÿ]/y/g;
        s/[ _]/-/g;
        s/--+/-/g;
        s/[^a-z0-9-.]//g;' *
@@ -282,32 +252,33 @@ mvup() {
   rename -n \
   '($name, $ext) = $_ =~ /^(.+)\.([^.]+)$/;
     $name = uc($name);
-    $name =~ s/[ÁÃÂÀÄª]/A/g;
-    $name =~ s/[ÉÊÈË&]/E/g;
-    $name =~ s/[ÍÎÏ]/I/g;
-    $name =~ s/[ÓÕÔÖ°]/O/g;
-    $name =~ s/[Ú]/U/g;
-    $name =~ s/[Ñ]/N/g;
+    $name =~ s/[ÀÁÂÃÄÅĀĂĄÆª]/A/g;
+    $name =~ s/[ÈÉÊËĒĖĘ&]/E/g;
+    $name =~ s/[ÌÍÎÏĪĮİ]/I/g;
+    $name =~ s/[ÒÓÔÕÖØŌŒ°]/O/g;
+    $name =~ s/[ÙÚÛÜŪŲ]/U/g;
     $name =~ s/[Ç]/C/g;
+    $name =~ s/[Ñ]/N/g;
+    $name =~ s/[ÝŸ]/Y/g;
     $name =~ s/[ _]/-/g;
     $name =~ s/-{2,}/-/g;
     $name =~ s/[^A-Z0-9-.]//g;
     $_ = "$name." . lc($ext);' *
 
-  echo
-  read -p 'Rename [y/N]: ' confirm
+  echo; read -p 'Rename [y/N]: ' confirm
 
   if [[ $confirm =~ [yY] ]]; then
     rename \
     '($name, $ext) = $_ =~ /^(.+)\.([^.]+)$/;
       $name = uc($name);
-      $name =~ s/[ÁÃÂÀÄª]/A/g;
-      $name =~ s/[ÉÊÈË&]/E/g;
-      $name =~ s/[ÍÎÏ]/I/g;
-      $name =~ s/[ÓÕÔÖ°]/O/g;
-      $name =~ s/[Ú]/U/g;
-      $name =~ s/[Ñ]/N/g;
+      $name =~ s/[ÀÁÂÃÄÅĀĂĄÆª]/A/g;
+      $name =~ s/[ÈÉÊËĒĖĘ&]/E/g;
+      $name =~ s/[ÌÍÎÏĪĮİ]/I/g;
+      $name =~ s/[ÒÓÔÕÖØŌŒ°]/O/g;
+      $name =~ s/[ÙÚÛÜŪŲ]/U/g;
       $name =~ s/[Ç]/C/g;
+      $name =~ s/[Ñ]/N/g;
+      $name =~ s/[ÝŸ]/Y/g;
       $name =~ s/[ _]/-/g;
       $name =~ s/-{2,}/-/g;
       $name =~ s/[^A-Z0-9-.]//g;
@@ -326,15 +297,9 @@ mvmd() {
 # Substitute words
 mvs() {
   [[ "$1" && "$2" ]] || { echo 'error: need two words'; return 1; }
-
   rename -n "s/$1/$2/" *
-
-  echo
-  read -p 'Rename [y/N]: ' confirm
-
-  if [[ $confirm =~ [yY] ]]; then
-    rename "s/$1/$2/" *
-  fi
+  echo; read -p 'Rename [y/N]: ' confirm
+  [[ $confirm =~ [yY] ]] && rename "s/$1/$2/" *
 }
 
 # Rename
@@ -343,17 +308,9 @@ ren() {
   local pattern="$1"; shift
   [[ "$@" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
   local files="$@"
-
   rename -n "$pattern" $files
-
-  echo
-  read -p "Rename? [y/N]: " choice
-
-  if [[ $choice =~ ^[yY] ]]; then
-    rename "$pattern" $files
-  else
-    return 0
-  fi
+  echo; read -p "Rename? [y/N]: " choice
+  [[ $choice =~ ^[yY] ]] && rename "$pattern" $files
 }
 
 # Link in working dir
