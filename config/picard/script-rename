@@ -10,7 +10,7 @@ script: "$set(title,$lower(%title%))\n$set(title,$rreplace(%title%,[\xE1\xE3\xE2
   \xE4\xAA],a))\n$set(title,$rreplace(%title%,[\xE9\xEA\xE8\xEB&],e))\n$set(title,$rreplace(%title%,[\xED\
   \xEE\xEF],i))\n$set(title,$rreplace(%title%,[\xF3\xF5\xF4\xF6\xB0],o))\n$set(title,$rreplace(%title%,[\xFA\
   ],u))\n$set(title,$rreplace(%title%,[\xE7],c))\n$set(title,$rreplace(%title%,[ _],-))\n\
-  $set(title,$rreplace(%title%,-{2\\,},-))\n$set(title,$rreplace(%title%,[^a-zA-Z0-9.]+,-))\n\
+  $set(title,$rreplace(%title%,-{2\\,},-))\n$set(title,$rreplace(%title%,[^a-z0-9.]+,-))\n\
   $if($eq($right(%title%,1),-),$set(title,$left(%title%,$sub($len(%title%),1))))\n\
   $if($gt(%totaldiscs%,1),%discnumber%-,)$num(%tracknumber%,2)-%title%\n"
 id: Preset 3

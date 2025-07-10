@@ -2,7 +2,7 @@
   
 shopt -s extglob
 
-for file in *.@(m4a|wav|wma); do
+for file in *.@(flac|m4a|ogg|sfk|wav|wma); do
   old_files+=("$file")
   file_size=$(du -h "$file" | awk '{print $1}')
   newfile="${file%.*}.mp3"
@@ -17,7 +17,7 @@ echo
 read -p 'Deseja remover antigos? (y/N): ' confirm
 
 if [[ $confirm =~ [yY] ]]; then
-  for file in "${old_files[@]}"; do
+  for file in *.@(flac|m4a|ogg|sfk|wav|wma); do
     rm "$file"
   done
 fi

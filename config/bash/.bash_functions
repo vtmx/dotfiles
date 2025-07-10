@@ -220,18 +220,12 @@ mvcd() {
 mvcut() {
   [[ $1 ]] || { echo 'error: mvcut <word>'; return 1; }
 
-  for file in *; do
-    newname=$(sed "s/$1//" <<< $file)
-    echo "$file -> $newname"
-  done
-
+  rename -n "s/${1}//" *
   echo
   read -p 'Rename [y/N]: ' confirm
 
   if [[ $confirm =~ [yY] ]]; then
-    for file in *; do
-      mv "$file" "$newname"
-    done
+    rename -n "s/${1}//" *
   fi
 }
 
@@ -251,41 +245,74 @@ mvd() {
 
 # Rename files to lower case and replace spaces to - 
 mvlo() {
-  for file in *; do
-    newname="${file,,}"
-    newname="${newname//[áãâàäª]/a}"
-    newname="${newname//[éêèë\&]/e}"
-    newname="${newname//[íîï]/i}"
-    newname="${newname//[óõôö°]/o}"
-    newname="${newname//[ú]/u}"
-    newname="${newname//[ç]/c}"
-    newname="${newname//[ _]/-}"
-    newname="${newname//--/-}"
-    newname="${newname//---/-}"
-    newname="${newname//[^a-zA-Z0-9-.]/}"
-    mv "$file" "$newname" 2>/dev/null
-  done
-  echo 'finished'
+  rename -n \
+    '$_=lc($_);
+     s/[áãâàäª]/a/g;
+     s/[éêèë&]/e/g;
+     s/[íîï]/i/g;
+     s/[óõôö°]/o/g;
+     s/[ú]/u/g;
+     s/[ñ]/n/g;
+     s/[ç]/c/g;
+     s/[ _]/-/g;
+     s/--+/-/g;
+     s/[^a-z0-9-.]//g;' *
+
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    rename \
+      '$_=lc($_);
+       s/[áãâàäª]/a/g;
+       s/[éêèë&]/e/g;
+       s/[íîï]/i/g;
+       s/[óõôö°]/o/g;
+       s/[ú]/u/g;
+       s/[ñ]/n/g;
+       s/[ç]/c/g;
+       s/[ _]/-/g;
+       s/--+/-/g;
+       s/[^a-z0-9-.]//g;' *
+  fi
 }
 
 # Rename files to upper case and replace spaces to - 
 mvup() {
-  for file in *; do
-    newname="${file^^}"
-    newname="${file//[ÁÃÂ]/A}"
-    newname="${file//[É]/E}"
-    newname="${file//[Í]/I}"
-    newname="${file//[Ó]/O}"
-    newname="${file//[Ú]/U}"
-    newname="${file//[Ç]/C}"
-    newname="${newname//[ _]/-}"
-    newname="${newname//--/-}"
-    newname="${newname//---/-}"
-    newname="${newname//[^a-zA-Z0-9-.]/}"
-    newname="${newname//-\./}"
-    mv "$file" "$newname" 2>/dev/null
-  done
-  echo 'finished'
+  rename -n \
+  '($name, $ext) = $_ =~ /^(.+)\.([^.]+)$/;
+    $name = uc($name);
+    $name =~ s/[ÁÃÂÀÄª]/A/g;
+    $name =~ s/[ÉÊÈË&]/E/g;
+    $name =~ s/[ÍÎÏ]/I/g;
+    $name =~ s/[ÓÕÔÖ°]/O/g;
+    $name =~ s/[Ú]/U/g;
+    $name =~ s/[Ñ]/N/g;
+    $name =~ s/[Ç]/C/g;
+    $name =~ s/[ _]/-/g;
+    $name =~ s/-{2,}/-/g;
+    $name =~ s/[^A-Z0-9-.]//g;
+    $_ = "$name." . lc($ext);' *
+
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    rename \
+    '($name, $ext) = $_ =~ /^(.+)\.([^.]+)$/;
+      $name = uc($name);
+      $name =~ s/[ÁÃÂÀÄª]/A/g;
+      $name =~ s/[ÉÊÈË&]/E/g;
+      $name =~ s/[ÍÎÏ]/I/g;
+      $name =~ s/[ÓÕÔÖ°]/O/g;
+      $name =~ s/[Ú]/U/g;
+      $name =~ s/[Ñ]/N/g;
+      $name =~ s/[Ç]/C/g;
+      $name =~ s/[ _]/-/g;
+      $name =~ s/-{2,}/-/g;
+      $name =~ s/[^A-Z0-9-.]//g;
+      $_ = "$name." . lc($ext);' *
+  fi
 }
 
 # Create dir and move file the same name
@@ -298,20 +325,15 @@ mvmd() {
 
 # Substitute words
 mvs() {
-  [[ $1 && $2 ]] || { echo 'error: need two words'; return 1; }
+  [[ "$1" && "$2" ]] || { echo 'error: need two words'; return 1; }
 
-  for file in *; do
-    newname="${file/$1/$2}"
-    echo "$file -> $newname"
-  done
+  rename -n "s/$1/$2/" *
 
   echo
-  read -p 'Substitute [y/N]: ' confirm
+  read -p 'Rename [y/N]: ' confirm
 
   if [[ $confirm =~ [yY] ]]; then
-    for file in *; do
-      mv "$file" "$newname"
-    done
+    rename "s/$1/$2/" *
   fi
 }
 
@@ -322,13 +344,13 @@ ren() {
   [[ "$@" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
   local files="$@"
 
-  perl-rename -n "$pattern" $files
+  rename -n "$pattern" $files
 
   echo
   read -p "Rename? [y/N]: " choice
 
   if [[ $choice =~ ^[yY] ]]; then
-    perl-rename "$pattern" $files
+    rename "$pattern" $files
   else
     return 0
   fi
