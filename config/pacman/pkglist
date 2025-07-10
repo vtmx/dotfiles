@@ -30,6 +30,8 @@ ncdu
 neovim
 pandoc
 pastel
+perl-image-exiftool
+perl-io-compress-brotli
 perl-rename
 picard
 polybar

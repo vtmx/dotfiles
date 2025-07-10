@@ -2,7 +2,7 @@
   
 shopt -s extglob
 
-for file in *.@(avi|m4v|mp4|mpg|wmv); do
+for file in *.@(avi|m4v|mov|mp4|mpg|wmv); do
   old_files+=("$file")
   file_size=$(du -h "$file" | awk '{print $1}')
   newfile="${file%.*}.mp4"
@@ -17,7 +17,7 @@ echo
 read -p 'Deseja remover antigos? (y/N): ' confirm
 
 if [[ $confirm =~ [yY] ]]; then
-  for file in "${old_files[@]}"; do
+  for file in *.@(avi|m4v|mov|mp4|mpg|wmv); do
     rm "$file"
   done
 fi
