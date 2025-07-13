@@ -8,17 +8,20 @@ case "$1" in
 esac
 
 for file in *.@(gif|jpg|jpeg|png|tif); do
-  old_files+=("$file")
   file_size=$(du -h "$file" | awk '{print $1}')
 
   case $format in
     avif)
       newfile="${file%.*}.avif"
-      avifenc --lossless "$file" "$newfile" &>/dev/null
+      if avifenc --lossless "$file" "$newfile" &>/dev/null; then
+        old_files+=("$file")
+      fi
       ;;
     *)
       newfile="${file%.*}.jxl"
-      cjxl "$file" "$newfile" &>/dev/null
+      if cjxl "$file" "$newfile" &>/dev/null; then
+        old_files+=("$file")
+      fi
       ;;
   esac
 
@@ -30,7 +33,7 @@ echo
 read -p 'Deseja remover antigos? (y/N): ' confirm
 
 if [[ $confirm =~ [yY] ]]; then
-for file in *.@(gif|jpg|jpeg|png|tif); do
-    rm "$file"
+  for file in "${old_files[@]}"; do
+    mv "$file" "$HOME/.local/share/Trash/files"
   done
 fi

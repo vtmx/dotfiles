@@ -3,12 +3,13 @@
 shopt -s extglob
 
 for file in *.@(flac|m4a|ogg|sfk|wav|wma); do
-  old_files+=("$file")
   file_size=$(du -h "$file" | awk '{print $1}')
   newfile="${file%.*}.mp3"
-  if ! ffmpeg -i "$file" -c:a libmp3lame "$newfile" 2>/dev/null; then
-    echo error; exit 1
+
+  if ffmpeg -i "$file" -c:a libmp3lame "$newfile" 2>/dev/null; then
+    old_files+=("$file")
   fi
+
   new_file_size=$(du -h "$newfile" | awk '{print $1}')
   echo "$file_size -> $new_file_size ${file%.*}"
 done
@@ -17,7 +18,7 @@ echo
 read -p 'Deseja remover antigos? (y/N): ' confirm
 
 if [[ $confirm =~ [yY] ]]; then
-  for file in *.@(flac|m4a|ogg|sfk|wav|wma); do
-    rm "$file"
+  for file in "${old_files[@]}"; do
+    mv "$file" "$HOME/.local/share/Trash/files"
   done
 fi

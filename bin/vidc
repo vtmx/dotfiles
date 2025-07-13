@@ -2,13 +2,14 @@
   
 shopt -s extglob
 
-for file in *.@(avi|m4v|mov|mp4|mpg|wmv); do
-  old_files+=("$file")
+for file in *.@(avi|m4v|mov|mpg|wmv); do
   file_size=$(du -h "$file" | awk '{print $1}')
   newfile="${file%.*}.mp4"
-  if ! ffmpeg -i "$file" -c:v libx264 "$newfile" 2>/dev/null; then
-    echo error; exit 1
+
+  if ffmpeg -i "$file" -c:v libx264 "$newfile" 2>/dev/null; then
+    old_files=+("$file")
   fi
+
   new_file_size=$(du -h "$newfile" | awk '{print $1}')
   echo "$file_size -> $new_file_size ${file%.*}"
 done
@@ -17,7 +18,7 @@ echo
 read -p 'Deseja remover antigos? (y/N): ' confirm
 
 if [[ $confirm =~ [yY] ]]; then
-  for file in *.@(avi|m4v|mov|mp4|mpg|wmv); do
-    rm "$file"
+  for file in "${old_files[@]}"; do
+    mv "$file" "$HOME/.local/share/Trash/files"
   done
 fi
