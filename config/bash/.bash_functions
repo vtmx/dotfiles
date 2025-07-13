@@ -1,13 +1,5 @@
 # Enable options
-shopt -s extglob
-shopt -s globstar
-
-# Cat
-cat() {
-  if type bat &> /dev/null; then
-    bat --theme=ansi --style=numbers,changes,header --italic-text=always "$1"
-  fi
-}
+shopt -s extglob globstar
 
 # Copy file content to clipboard
 clip() {
@@ -226,6 +218,7 @@ mvlo() {
      s/[ýÿ]/y/g;
      s/[ _]/-/g;
      s/--+/-/g;
+     s/-+(\.\w+)$/$1/;
      s/[^a-z0-9-.]//g;' *
 
   echo; read -p 'Rename [y/N]: ' confirm
@@ -243,6 +236,7 @@ mvlo() {
        s/[ýÿ]/y/g;
        s/[ _]/-/g;
        s/--+/-/g;
+       s/-+(\.\w+)$/$1/;
        s/[^a-z0-9-.]//g;' *
   fi
 }
@@ -262,6 +256,7 @@ mvup() {
     $name =~ s/[ÝŸ]/Y/g;
     $name =~ s/[ _]/-/g;
     $name =~ s/-{2,}/-/g;
+    $name =~ s/-+(\.\w+)$/$1/;
     $name =~ s/[^A-Z0-9-.]//g;
     $_ = "$name." . lc($ext);' *
 
@@ -281,6 +276,7 @@ mvup() {
       $name =~ s/[ÝŸ]/Y/g;
       $name =~ s/[ _]/-/g;
       $name =~ s/-{2,}/-/g;
+      $name =~ s/-+(\.\w+)$/$1/;
       $name =~ s/[^A-Z0-9-.]//g;
       $_ = "$name." . lc($ext);' *
   fi
