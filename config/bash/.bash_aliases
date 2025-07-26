@@ -150,10 +150,7 @@ alias pacu="sudo pacman -Syu"             # update
 alias pstree="pstree -npTC age"
 
 # remove
-alias rd="rm -ir"
-alias rdy="rm -fr"
-alias rm="rm -i"
-alias rmy="rm -f"
+alias rm="mv -t $HOME/.local/share/Trash/"
 
 # rename
 alias rename="perl-rename"
