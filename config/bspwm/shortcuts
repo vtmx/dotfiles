@@ -79,7 +79,7 @@ super + u ; {b,f,o,r,s}
 
 # Apps
 super + {a,b,e,g,p,t,s,v}
-  {pamac-manager,zen,dolphin,steam,kcolorchooser,qbittorrent,flameshot gui,code}
+  {pamac-manager,zen-browser,dolphin,steam,kcolorchooser,qbittorrent,flameshot gui,code}
 
 # Apps alternate
 super + alt + {b,e,p}

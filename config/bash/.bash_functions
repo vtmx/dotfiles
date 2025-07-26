@@ -168,6 +168,32 @@ mksh() {
   chmod +x "$file" && $EDITOR +3 "$file"
 }
 
+# Add word beginer file
+mva() {
+  [[ $1 ]] || { echo 'error: mva <word>'; return 1; }
+
+  rename -n "s/^/${1}/" *
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    rename "s/^/${1}/" *
+  fi
+}
+
+# Add word end file
+mve() {
+  [[ $1 ]] || { echo 'error: mve <word>'; return 1; }
+
+  rename -n "s/(.*)(\..*$)/\1${1}\2/" *
+  echo
+  read -p 'Rename [y/N]: ' confirm
+
+  if [[ $confirm =~ [yY] ]]; then
+    rename "s/(.*)(\..*$)/\1${1}\2/" *
+  fi
+}
+
 # Move and go to the directory
 mvcd() {
   if [[ -d "$2" ]];then
@@ -292,7 +318,7 @@ mvmd() {
 
 # Substitute words
 mvs() {
-  [[ "$1" && "$2" ]] || { echo 'error: need two words'; return 1; }
+  [[ "$1" ]] || { echo 'error: need two words'; return 1; }
   rename -n "s/$1/$2/" *
   echo; read -p 'Rename [y/N]: ' confirm
   [[ $confirm =~ [yY] ]] && rename "s/$1/$2/" *

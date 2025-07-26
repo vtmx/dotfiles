@@ -1,4 +1,4 @@
-Error: /usr/share/lite-xl/plugins/detectindent.lua:244: /usr/share/lite-xl/core/regex.lua:23: regex matching error -22: UTF-8 error: isolated byte with 0x80 bit set
+Error: /usr/share/lite-xl/plugins/detectindent.lua:244: /usr/share/lite-xl/core/regex.lua:23: regex matching error -8: UTF-8 error: byte 2 top bits not 0x80
 
 stack traceback:
 	[C]: in for iterator 'for iterator'
