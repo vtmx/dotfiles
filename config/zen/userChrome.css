@@ -43,7 +43,7 @@
     fill: CurrentColor !important;
   }
 
-  .findbar-textbox {
+  .browserContainer > findbar {
     background: hsl(0 0 0 / .05) !important;
     border: 1px solid hsl(100 100 100 / .1) !important;
 
