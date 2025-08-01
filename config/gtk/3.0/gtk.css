@@ -32,7 +32,20 @@
   border-color: transparent;
 }
 
+/* Remove border frame */
+
+.thunar .frame  {
+   border: none;
+}
+
+/* Hidden menu button */
+
+.thunar toolbutton:first-child image {
+  opacity: 0;
+}
+
 .thunar toolbar entry {
+  margin-left: -36px;
   border-color: #2c313c;
 }
 
