@@ -10,8 +10,8 @@ brotli
 bspwm
 btop
 cjxl
-code
 cmatrix
+code
 code
 cool-retro-term
 discord
@@ -28,8 +28,8 @@ ffmpeg
 figlet
 firefox
 flameshot
-font-manager
 fontconfig
+font-manager
 fzf
 glow
 gum
@@ -49,9 +49,9 @@ mpv
 ncdu
 neovim
 npm
+oxygen
 pandoc
 pastel
-oxygen
 pavucontrol
 perl-image-exiftool
 perl-io-compress-brotli
@@ -63,8 +63,8 @@ poppler
 qbittorrent
 qca-qt6
 qemu
-qt6ct
 qrencode
+qt6ct
 ripgrep
 rofi
 rsync
@@ -72,11 +72,12 @@ sassc
 steam
 sxhkd
 telegram-desktop
-timeshift
 tesseract
+timeshift
 tldr
 tmux
 tokei
+unrar
 veracrypt
 vim
 virsh
