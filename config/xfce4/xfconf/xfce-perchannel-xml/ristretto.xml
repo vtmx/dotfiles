@@ -3,7 +3,7 @@
 <channel name="ristretto" version="1.0">
   <property name="window" type="empty">
     <property name="navigationbar" type="empty">
-      <property name="position" type="string" value="left"/>
+      <property name="position" type="string" value="bottom"/>
     </property>
     <property name="toolbar" type="empty">
       <property name="show" type="bool" value="false"/>
@@ -14,12 +14,22 @@
     <property name="thumbnails" type="empty">
       <property name="show" type="bool" value="false"/>
       <property name="hide-fullscreen" type="bool" value="false"/>
+      <property name="size" type="uint" value="3"/>
     </property>
     <property name="bgcolor-override" type="bool" value="true"/>
-    <property name="height" type="uint" value="1029"/>
-    <property name="width" type="uint" value="984"/>
+    <property name="height" type="uint" value="1047"/>
+    <property name="width" type="uint" value="1920"/>
+    <property name="bgcolor" type="array">
+      <value type="double" value="0.11764705882352941"/>
+      <value type="double" value="0.1333333333333333"/>
+      <value type="double" value="0.15294117647058825"/>
+      <value type="double" value="1"/>
+    </property>
   </property>
   <property name="file" type="empty">
     <property name="current-uri" type="string" value="file:///home/vitor/Dev/dotfiles/config/bspwm/wall"/>
+  </property>
+  <property name="image" type="empty">
+    <property name="enable-smoothing" type="bool" value="false"/>
   </property>
 </channel>

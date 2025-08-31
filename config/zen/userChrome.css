@@ -9,8 +9,63 @@
     color: #23272e !important;
   }
 
+  /* hidden */
   tooltip,
   .zen-current-workspace-indicator,
+
+  /* context blank */
+  #context-navigation,
+  #context-back,
+  #context-forward,
+  #context-reload,
+  #context-stop,
+  #context-bookmarkpage,
+  #context-sep-navigation,
+  #context-savepage,
+  #context-pocket,
+  #context-selectall,
+  #context-sep-selectall,
+  #context-take-screenshot,
+  #context-sep-screenshots,
+  #context-viewsource,
+  #context-media-eme-separator,
+  #context-inspect-a11y,
+  
+  /* context link */
+  #context-openlinkinusercontext-menu,
+  #context-openlink,
+  #context-openlinkprivate,
+  #context-sep-open,
+  #context-bookmarklink,
+  #context-savelink,
+  #context-savelinktopocket,
+  #context-copyemail,
+  #context-copylink,
+  #context-stripOnShareLink,
+  #context-sendlinktodevice,
+  #context-sep-sendlinktodevice,
+  #context-sep-copylink,
+  #context-searchselect,
+  #frame-sep,
+
+  /* context device */
+  #context-sendpagetodevice,
+  #context-sep-sendpagetodevice,
+  #context-sendlinktodevice,
+  #context-sep-sendlinktodevice,
+  #context_sendTabToDevice,
+  #context_sendTabToDevice_separator,
+
+  /* context select */
+  #context-openlinkincurrent,
+  #context-copy,
+  #context-selectall,
+  #context-sep-selectall,
+  #context-searchselect,
+  #context-translate-selection,
+  #frame-sep,
+  #context-viewpartialsource-selection,
+
   #identity-box,
   #identity-icon-label,
   #reader-mode-button,

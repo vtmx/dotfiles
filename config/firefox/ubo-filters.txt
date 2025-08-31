@@ -1,3 +1,7 @@
+! DuckDuckGo
+duckduckgo.com##.header--aside__item--hidden-lg.header--aside__item
+duckduckgo.com##.WktWJWUFfihMbuzAEqk2.hUUdRtuaOUx7mcSwc56s.ffON2NH02oMAcqyoh2UU
+
 ! Spotify
 open.spotify.com##._gB1lxCfXeR8_Wze5Cx9
 open.spotify.com##.ZzUvBwE6uj5CAU2pjlQX.NGSgqDuaOH2VDApkzoxN.HkbHLcqgUfXruL5xVi28
@@ -65,7 +69,7 @@ www.youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-rend
 ! Hide shorts category on homepage and search pages
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
+
 ! References
 ! https://github.com/gijsdev/ublock-hide-yt-shorts
 ! https://gist.github.com/Robleh/583165b8e3da40ad0f04154aefa75cb2
-

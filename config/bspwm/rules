@@ -13,7 +13,6 @@ $br keepassxc         desktop="^4" focus=on
 $br steam             desktop="^4" state=floating
 $br qBittorrent       desktop="^5" focus=on
 $br conky                          border=off state=floating 
-$br godot                          state=floating 
 $br mpv                            state=floating 
 $br pavucontrol                    state=floating
 $br Screenkey                      manager=off

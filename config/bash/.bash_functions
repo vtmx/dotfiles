@@ -344,6 +344,12 @@ lwd() {
   ln -sf "$(pwd)/$1" $2
 }
 
+# Open
+open() {
+  xdg-open "$@" >/dev/null 2>&1 &
+}
+
+# Play
 p() {
   play $@
 }

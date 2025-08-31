@@ -61,9 +61,17 @@ if [[ -f $HOME/.bun/bin/bun ]]; then
 fi
 
 # fzf
-[[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
+# [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
 
 if type fzf &> /dev/null; then
+  if [[ -f /usr/share/fzf/completion.bash ]]; then
+    source /usr/share/fzf/completion.bash
+  fi
+
+  if [[ -f /usr/share/fzf/key-bindings.bash ]]; then
+    source /usr/share/fzf/key-bindings.bash
+  fi
+
   if [[ $DISPLAY ]]; then
     export FZF_DEFAULT_OPTS="\
     --height 50% --reverse \
