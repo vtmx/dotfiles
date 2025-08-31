@@ -4,6 +4,9 @@ alias bf="$EDITOR $HOME/.bash_functions"
 alias br="source $HOME/.bashrc; echo Reload bashrc"
 alias brc="$EDITOR $HOME/.bashrc"
 
+# bat
+alias bat="bat --theme=ansi --style=numbers,changes,header --italic-text=always"
+
 # bun
 alias buni="bun install"
 alias bunr="bun remove"
@@ -12,6 +15,7 @@ alias bunl="bun pm ls"
 # directories
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias cdb="cd $HOME/Dev/dotfiles/bin"
 alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
@@ -19,13 +23,9 @@ alias cddoc="cd $HOME/Documents"
 alias cddow="cd $HOME/Downloads"
 alias cdhd="cd /media/hda1"
 alias cdk="cd $HOME/pkgs"
-alias cdmoz="cd $HOME/.mozilla/firefox/ph8r9j57.default-release/chrome"
 alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
 alias cdt="cd $HOME/Downloads/temp"
-
-# canvas-sketch-cli
-alias canva="canvas-sketch-cli"
 
 # du list size files
 alias dush="du -h --max-depth=1 | sort -hr"
@@ -55,6 +55,9 @@ alias dnfu="sudo dnf upgrade --refresh"
 # egrep
 alias egrep="egrep --color=auto"
 
+# fuzzy finder
+alias ff="fzf --preview 'bat --theme=ansi --style=numbers,changes,header --italic-text=always --color=always {}'"
+
 # fgrep
 alias fgrep="fgrep --color=auto"
 
@@ -64,23 +67,23 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"
 alias gbd="git branch -d"
-alias gcb="git checkout -b"
+alias gck="git checkout"
+alias gckb="git checkout -b"
 alias gcl="git clone"
 alias gcld="git clone --depth 1"
-alias gco="git checkout"
+alias gcm="git commit -m"
 alias gd="git diff --color-words"
-alias gh="git help"
-alias gl="git pull"
-alias glg="git log -5 --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(cyan)%ai%C(reset) - %C(normal)%an%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n %C(normal)%s%C(reset)'"
+alias gl="git log -5 --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(cyan)%ai%C(reset) - %C(normal)%an%C(reset) %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n %C(normal)%s%C(reset)'"
 alias gm="git merge"
 alias gmv="git mv"
-alias gp="git push"
+alias gp="git pull"
 alias gra="git remote add"
 alias grb="git rebase"
+alias grm="git remote move"
 alias grm="git rm"
-alias grrm="git remote remove"
-alias grmv="git remote move"
+alias grr="git remote remove"
 alias gru="git remote update"
+alias gs="git push"
 alias gs="git status -sb"
 
 # ghostty

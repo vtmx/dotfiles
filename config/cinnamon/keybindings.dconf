@@ -1,0 +1,103 @@
+[/]
+custom-list=['custom0', 'custom1', 'custom2', 'custom3', 'custom4', 'custom5', 'custom6', 'custom7', 'custom8', 'custom9', 'custom10', '__dummy__']
+show-desklets=@as []
+
+[custom-keybindings/custom0]
+binding=['<Super>g']
+command='steam'
+name='Steam'
+
+[custom-keybindings/custom1]
+binding=['<Super>v']
+command='code'
+name='Code'
+
+[custom-keybindings/custom10]
+binding=['<Shift><Super>q']
+command='cinnamon-session-quit'
+name='Logout'
+
+[custom-keybindings/custom2]
+binding=['<Super>a']
+command='pamac-manager'
+name='Pamac'
+
+[custom-keybindings/custom3]
+binding=['<Super>t']
+command='qbittorrent'
+name='QBitTorrent'
+
+[custom-keybindings/custom4]
+binding=['<Super>s']
+command='flameshot gui'
+name='Flameshot'
+
+[custom-keybindings/custom5]
+binding=['<Super>space']
+command='rofi -show drun'
+name='Laucher'
+
+[custom-keybindings/custom6]
+binding=['<Primary><Alt>Delete']
+command='/home/vitor/.local/bin/powermenu.sh'
+name='Powermenu'
+
+[custom-keybindings/custom7]
+binding=['<Super>period']
+command='cinnamon-settings keyboard -t shortcuts'
+name='Shortcuts'
+
+[custom-keybindings/custom8]
+binding=['<Super>comma']
+command='cinnamon-settings'
+name='Settings'
+
+[custom-keybindings/custom9]
+binding=['<Alt><Super>comma']
+command='cinnamon-settings themes'
+name='Themes'
+
+[media-keys]
+logout=@as []
+restart-cinnamon=['<Shift><Super>less']
+terminal=['<Primary><Alt>t', '<Super>Return']
+volume-down-quiet=['<Alt>XF86AudioLowerVolume', '<Super>minus']
+volume-up-quiet=['<Alt>XF86AudioRaiseVolume', '<Super>equal']
+www=['XF86WWW', '<Super>b']
+
+[wm]
+close=['<Alt>F4', '<Super>c']
+minimize=['<Super>Down']
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
+move-to-workspace-1=['<Shift><Super>exclam', '<Super>KP_1']
+move-to-workspace-10=@as []
+move-to-workspace-2=['<Shift><Super>at', '<Super>KP_2']
+move-to-workspace-3=['<Shift><Super>numbersign', '<Super>KP_3']
+move-to-workspace-4=['<Shift><Super>dollar', '<Super>KP_4']
+move-to-workspace-5=['<Shift><Super>percent', '<Super>KP_5']
+move-to-workspace-6=['<Shift><Super>dead_diaeresis', '<Super>KP_6']
+move-to-workspace-7=['<Shift><Super>ampersand', '<Super>KP_7']
+move-to-workspace-8=['<Shift><Super>asterisk', '<Super>KP_8']
+move-to-workspace-9=['<Shift><Super>parenleft', '<Super>KP_9']
+move-to-workspace-left=['<Shift><Super>h', '<Primary><Shift><Super>Left', '<Primary><Shift><Super>Page_Up']
+move-to-workspace-right=['<Shift><Super>l', '<Primary><Shift><Super>Right', '<Primary><Shift><Super>Page_Down']
+panel-run-dialog=['<Alt>F2', '<Super>r']
+push-tile-down=@as []
+push-tile-up=@as []
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-10=@as []
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+switch-to-workspace-5=['<Super>5']
+switch-to-workspace-6=['<Super>6']
+switch-to-workspace-7=['<Super>7']
+switch-to-workspace-8=['<Super>8']
+switch-to-workspace-9=['<Super>9']
+switch-to-workspace-left=['<Primary><Super>Page_Up', '<Primary><Super>h', '<Primary><Super>Left']
+switch-to-workspace-right=['<Primary><Super>Page_Down', '<Primary><Super>l', '<Primary><Super>Right']
+toggle-above=['<Shift><Super>p']
+toggle-maximized=['<Alt>F10', '<Super>Up']

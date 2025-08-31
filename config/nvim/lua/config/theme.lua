@@ -37,7 +37,7 @@ local hl_groups = {
 
   -- Keys [] {} ()
   Delimiter      = { fg = c.fg     },
-  MatchParen     = { fg = c.fg     }, -- when inner block
+  MatchParen     = { fg = c.yellow }, -- when inner block
 
   -- Extras
   Added          = { fg = c.green  },
