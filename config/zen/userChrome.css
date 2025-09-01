@@ -94,6 +94,11 @@
     box-shadow: none !important;
   }
 
+  .findbar-textbox {
+    background: #1e2227 !important;
+    border-color: #48546b !important;
+  }
+
   .toolbarbutton-1 {
     fill: CurrentColor !important;
   }
