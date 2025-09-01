@@ -37,6 +37,12 @@ local keymaps = {
   ['alt+z'] = 'center-doc:toggle',
   ['ctrl+alt+z'] = 'center-doc:zen-mode-toggle',
   ['f11'] = { 'core:toggle-fullscreen', 'center-doc:zen-mode-toggle' },
+
+  -- Open config
+  ['ctrl+,'] = 'doc:open-file "' .. USERDIR .. '/config.lua"',
+  
+  -- Open keymaps
+  ['ctrl+.'] = 'doc:open-file "' .. USERDIR .. '/keymap.lua"',
 }
 
 keymap.add(keymaps, true)

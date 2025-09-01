@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Time loop
+
 while true; do
   date +%H:%M
   sleep 60

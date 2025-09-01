@@ -9,6 +9,7 @@ style.caret = { common.color '#5c6370' }
 style.accent = { common.color '#dadfe9' }
 style.dim = { common.color '#5c6370' }
 style.divider = { common.color '#2c313c' }
+style.error = { common.color '#e06c75' }
 style.selection = { common.color '#3d4556' }
 style.line_number = { common.color '#3d4556' }
 style.line_number2 = { common.color '#abb2bf' }
