@@ -32,5 +32,5 @@ curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
         "content": "'"$msg"'"
       }
     ],
-    "model": "llama3-70b-8192"
+    "model": "llama-3.3-70b-versatile"
   }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+# Converte áudio para mp3
   
 shopt -s extglob
 
