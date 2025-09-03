@@ -1,54 +1,55 @@
 // clear default theme
-@theme "/dev/null"
+@theme '/dev/null'
 
 configuration {
-  modi: "drun,window";
+  modi: 'drun,window';
 
   // icons
-  display-drun: "";
-  display-filebrowser: "";
-  display-keys: "";
-  display-run: "󰆍";
-  display-window: "";
+  display-drun: '';
+  display-filebrowser: '';
+  display-keys: '';
+  display-run: '󰆍';
+  display-window: '';
 
   // format
-  drun-display-format: "{name}";
-  window-format: "{name}";
+  drun-display-format: '{name}';
+  window-format: '{name}';
 
   // config
   disable-history: false;
   max-history-size: 25;
-  terminal: "kitty";
+  terminal: 'kitty';
   show-icons: false;
 
-  // keybindis: rofi -show keys
-  kb-remove-char-back: "BackSpace";
-  kb-remove-word-forward: "Control+Delete";
+  // keybinds: rofi -show keys
+  kb-remove-char-back: 'BackSpace';
+  kb-remove-word-forward: 'Control+Delete';
 
   // up and down
-  kb-remove-to-eol: "";
-  kb-row-down: "Control+j,Control+n,Down";
-  kb-row-up: "Control+k,Control+p,Up";
+  kb-remove-to-eol: '';
+  kb-row-down: 'Control+j,Control+n,Down';
+  kb-row-up: 'Control+k,Control+p,Up';
 
   // next prev tab
-  kb-mode-complete: "";
-  kb-mode-next: "Control+l";
-  kb-mode-previous: "Control+h";
+  kb-mode-complete: '';
+  kb-mode-next: 'Control+l';
+  kb-mode-previous: 'Control+h';
 
   // confirm and cancel
-  kb-accept-entry: "Return";
-  kb-secondary-copy: "";
-  kb-cancel: "Escape,Control+c";
+  kb-accept-entry: 'Return';
+  kb-secondary-copy: '';
+  kb-cancel: 'Escape,Control+c';
 }
 
 // import
 // @import "onedarkv.rasi"
 
 * {
-  font: "BlexMono Nerd Font 11";
+  font: 'BlexMono Nerd Font 11';
   bg: #1e2227;
   bl: #2c313c;
   fg: #abb2bf;
+  blue: #61afef;
 }
 
 window {
@@ -92,7 +93,7 @@ prompt {
 
 // input
 entry {
-  placeholder: "";
+  placeholder: '';
   background-color: transparent;
   margin: 0 0 0 16px;
   text-color: @fg;
@@ -117,6 +118,7 @@ element {
 element-text{
   background-color: transparent;
   text-color: @fg;
+  highlight: @blue; // highlight
 }
 
 element normal.normal,

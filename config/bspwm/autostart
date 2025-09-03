@@ -6,7 +6,7 @@ xset -dpms &
 xset s off &
 xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd    > /dev/null || sxhkd -c $bspdir/shortcuts &
-pgrep -x numlockx > /dev/null || numlockx
+pgrep -x numlockx > /dev/null || numlockx &
 pgrep -x feh      > /dev/null || feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/** &
 pgrep -x polybar  > /dev/null || polybar bottom -c $bspdir/polybar/config.ini &
 pgrep -x dunst    > /dev/null || dunst -config $bspdir/dunst/dunstrc &
