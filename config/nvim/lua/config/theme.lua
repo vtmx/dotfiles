@@ -286,8 +286,8 @@ local hl_groups = {
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- hop
-  HopNextKey               = { fg = c.red    },
-  HopNextKey1              = { fg = c.blue   },
+  HopNextKey               = { fg = c.blue    },
+  HopNextKey1              = { fg = c.red   },
   HopNextKey2              = { fg = c.orange },
   HopNextKey3              = { fg = c.purple },
   HopUnmatched             = { fg = c.fd     },

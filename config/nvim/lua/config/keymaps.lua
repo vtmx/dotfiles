@@ -181,6 +181,11 @@ map(
 )
 
 map(
+  'n', '<c-p>', '<cmd>Telescope file_browser<cr>',
+  { desc = 'Files browser' }
+)
+
+map(
   'i', '<c-,>', '```bash<cr>```<esc>O',
   { desc = 'Add bash code' }
 )
@@ -259,11 +264,6 @@ map(
 )
 
 map(
-  'n', '<leader>c', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
-)
-
-map(
   'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
   { desc = 'Cut to clipboard' }
 )
@@ -284,8 +284,8 @@ map(
 )
 
 map(
-  'n', '<leader>f', '<cmd>Telescope file_browser<cr>',
-  { desc = 'Files browser' }
+  'n', '<leader>f', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
 )
 
 map(

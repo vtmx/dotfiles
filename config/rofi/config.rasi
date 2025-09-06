@@ -2,7 +2,7 @@
 @theme '/dev/null'
 
 configuration {
-  modi: 'drun,window';
+  modi: 'drun,run,window';
 
   // icons
   display-drun: '';
