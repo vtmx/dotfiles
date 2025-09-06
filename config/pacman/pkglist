@@ -18,6 +18,7 @@ discord
 dolphin
 dolphin-plugins
 dunst
+dmenu
 entr
 exiv2
 eza
@@ -66,6 +67,7 @@ qca-qt6
 qemu
 qrencode
 qt6ct
+qutebrowser
 ripgrep
 rofi
 rsync
