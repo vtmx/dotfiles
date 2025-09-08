@@ -286,8 +286,8 @@ local hl_groups = {
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- hop
-  HopNextKey               = { fg = c.blue    },
-  HopNextKey1              = { fg = c.red   },
+  HopNextKey               = { fg = c.blue   },
+  HopNextKey1              = { fg = c.red    },
   HopNextKey2              = { fg = c.orange },
   HopNextKey3              = { fg = c.purple },
   HopUnmatched             = { fg = c.fd     },
@@ -311,27 +311,6 @@ local hl_groups = {
 
   -- netrw
   netrwTreeBar = { fg = c.fg },
-
-  -- telescope
-  TelescopeMultiacection   = { fg = c.fg     },
-  TelescopeMultiIcon       = { fg = c.fg     },
-  TelescopeNormal          = { fg = c.fg     },
-  TelescopePreviewNormal   = { fg = c.fg     },
-  TelescopePromptNormal    = { fg = c.fg     },
-  TelescopeResultsNormal   = { fg = c.fg     },
-  TelescopeResultsNumber   = { fg = c.fg     },
-  TelescopePromptBorder    = { fg = c.fd     },
-  TelescopeResultsBorder   = { fg = c.fd     },
-  TelescopePreviewBorder   = { fg = c.fd     },
-  Telescopeacection        = { bg = c.bl     },
-  TelescopeacectionCaret   = { fg = c.fg, bg = c.bl },
-  TelescopeTitle           = { fg = c.fg     },
-  TelescopePromptTitle     = { fg = c.fg     },
-  TelescopeResultsTitle    = { fg = c.fg     },
-  TelescopePreviewTitle    = { fg = c.fg     },
-  TelescopePromptCounter   = { fg = c.fd     },
-  TelescopeMatching        = { fg = c.blue   },
-  TelescopePromptPrefix    = { fg = c.fg     },
 
   -- which-key
   WhichKey                 = { fg = c.blue   },

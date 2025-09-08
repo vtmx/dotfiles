@@ -64,18 +64,8 @@ map(
 )
 
 map(
-  'n', 'ss', '<cmd>sp<cr><c-w>k<cmd>bp<cr>',
-  { desc = 'Split' }
-)
-
-map(
   'n', 'U', '<c-r>',
   { desc = 'Redo' }
-)
-
-map(
-  'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
-  { desc = 'Split vertical' }
 )
 
 map(
@@ -181,7 +171,7 @@ map(
 )
 
 map(
-  'n', '<c-p>', '<cmd>Telescope file_browser<cr>',
+  'n', '<c-p>', '<cmd>FzfLua files<cr>',
   { desc = 'Files browser' }
 )
 
@@ -259,7 +249,7 @@ map(
 )
 
 map(
-  'n', '<leader>b', '<cmd>Telescope buffers<cr>',
+  'n', '<leader>b', '<cmd>FzfLua buffers<cr>',
   { desc = 'Buffers' }
 )
 
@@ -274,14 +264,24 @@ map(
 )
 
 map(
-  'n', '<leader>e', function() utils.toggle_netrw_ex() end,
-  { desc = 'Toggle Netrw Ex' }
+  'n', '<leader>e', ':lua MiniFiles.open()<cr>',
+  { desc = 'Explorer' }
 )
 
 map(
-  'n', '<leader>E', function() utils.toggle_netrw_lex() end,
-  { desc = 'Toggle Netrw Lex' }
+  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
 )
+
+-- map(
+--   'n', '<leader>e', function() utils.toggle_netrw_ex() end,
+--   { desc = 'Toggle Netrw Ex' }
+-- )
+
+-- map(
+--   'n', '<leader>E', function() utils.toggle_netrw_lex() end,
+--   { desc = 'Toggle Netrw Lex' }
+-- )
 
 map(
   'n', '<leader>f', '<cmd>HopChar1<cr>',
@@ -289,17 +289,17 @@ map(
 )
 
 map(
-  'n', '<leader>g', '<cmd>Telescope git_files<cr>',
+  'n', '<leader>g', '<cmd>FzfLua git_files<cr>',
   { desc = 'Git files' }
 )
 
 map(
-  'n', '<leader>h', '<cmd>Telescope highlights<cr>',
+  'n', '<leader>h', '<cmd>FzfLua highlights<cr>',
   { desc = 'Highlights' }
 )
 
 map(
-  'n', '<leader>H', '<cmd>Telescope help_tags<cr>',
+  'n', '<leader>H', '<cmd>FzfLua helptags<cr>',
   { desc = 'Help' }
 )
 
@@ -319,12 +319,12 @@ map(
 )
 
 map(
-  'n', '<leader>j', '<cmd>Telescope jumplist<cr>',
+  'n', '<leader>j', '<cmd>FzfLua jumps<cr>',
   { desc = 'Jump list' }
 )
 
 map(
-  'n', '<leader>k', '<cmd>Telescope keymaps<cr>',
+  'n', '<leader>k', '<cmd>FzfLua keymaps<cr>',
   { desc = 'Keymaps' }
 )
 
@@ -334,7 +334,7 @@ map(
 )
 
 map(
-  'n', '<leader>m', '<cmd>Telescope marks<cr>',
+  'n', '<leader>m', '<cmd>FzfLua marks<cr>',
   { desc = 'Marks' }
 )
 
@@ -484,16 +484,11 @@ map(
 )
 
 map(
-  'n', '<leader>/', '<cmd>Telescope current_buffer_fuzzy_find<cr>',
+  'n', '<leader>/', '<cmd>FzfLua live_grep<cr>',
   { desc = 'Fuzzy' }
 )
 
 -- Leader leader
-
-map(
-  'n', '<leader><leader>e', '<cmd>lua require("oil").toggle_float()<cr>',
-  { desc = 'Oil' }
-)
 
 map(
   'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',

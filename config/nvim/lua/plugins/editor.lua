@@ -1,14 +1,28 @@
 return {
   {
-    'echasnovski/mini.align',
+    'nvim-mini/mini.align',
     event = 'ModeChanged', config = true
   },
+  {
+    'nvim-mini/mini.files',
+    event = 'ModeChanged',
+    config = function()
+      require('mini.files').setup({
+        mappings = {
+          go_in_plus = '<cr>'
+        },
+        options = {
+          use_as_default_explorer = true,
+        }
+      })
+    end
+  },
   -- {
-  --   'echasnovski/mini.pairs',
+  --   'nvim-mini/mini.pairs',
   --   event = 'ModeChanged', config = true
   -- },
   {
-    'echasnovski/mini.surround',
+    'nvim-mini/mini.surround',
     event = 'ModeChanged',
     config = function()
       require('mini.surround').setup({

@@ -94,9 +94,12 @@ super + {_,alt + }KP_Enter
   term=kitty; \
   {$term,bspc rule -a \* -o state=floating && $term}
 
-# Launcher and run
+# Launcher
 super + space
   rofi -show drun
+
+super + alt + space
+  dmenu_run -b -fn 'BlexMono Nerd Font' -nb '#1e2227' -nf '#abb2bf' -sb '#3d4556' -sf '#abb2bf'
 
 # Change volume
 super + {equal,minus,0}
