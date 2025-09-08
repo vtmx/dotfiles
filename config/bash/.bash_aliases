@@ -23,7 +23,6 @@ alias cddoc="cd $HOME/Documents"
 alias cddow="cd $HOME/Downloads"
 alias cdhd="cd /media/hda1"
 alias cdk="cd $HOME/pkgs"
-alias cdn="cd $HOME/Dev/notes"
 alias cdp="cd $HOME/Dev/projects"
 alias cdt="cd $HOME/Downloads/temp"
 
@@ -42,6 +41,9 @@ alias dir="dir --color=auto"
 
 # diff
 alias diff="diff --color=auto"
+
+# demenu
+alias dmenu="dmenu -b -fn 'BlexMono Nerd Font' -nb '#1e2227' -nf '#abb2bf' -sb '#3d4556' -sf '#abb2bf'"
 
 # dnf
 alias dnfi="sudo dnf install"

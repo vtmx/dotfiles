@@ -9,8 +9,6 @@ return {
           buflisted = false,
           bufhidden = 'hide',
         },
-        delete_to_trash = true,
-        trash_command = 'trash-put',
         prompt_save_on_select_new_entry = true,
         skip_confirm_for_simple_edits = false,
         float = {
