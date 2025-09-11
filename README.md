@@ -197,8 +197,8 @@
       <td><code>#61afef</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.pl/32x32/c678dd/?text=+" alt="Purple"></td>
-      <td>Purple</td>
+      <td><img src="https://fakeimg.pl/32x32/c678dd/?text=+" alt="Magenta"></td>
+      <td>Magenta</td>
       <td><code>#c678dd</code></td>
     </tr>
     <tr>
@@ -281,8 +281,8 @@
     <td><img src="https://fakeimg.pl/32x32/dadfe9/?text=+" alt="Foreground Light"></td>
     <td>Foreground Light</td>
     <td><code>#dadfe9</code></td>
-    <td><img src="https://fakeimg.pl/32x32/c678dd/?text=+" alt="Purple"></td>
-    <td>Purple</td>
+    <td><img src="https://fakeimg.pl/32x32/c678dd/?text=+" alt="Magenta"></td>
+    <td>Magenta</td>
     <td><code>#c678dd</code></td>
   </tr>
 </table>
