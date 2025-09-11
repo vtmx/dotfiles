@@ -13,7 +13,7 @@
   --green: #98c379;
   --cyan: #56b6c2;
   --blue: #61afef;
-  --purple: #c678dd;
+  --magenta: #c678dd;
 
   --brand-color-accent: var(--blue) !important;
   --card-outline-color: var(--shade5) !important;
@@ -52,7 +52,7 @@
   /* https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html */ 
   --console-input-background: var(--shade1) !important;
   --markup-hidden-attr-name-color: var(--red) !important;
-  --markup-hidden-attr-value-color: var(--purple) !important;
+  --markup-hidden-attr-value-color: var(--magenta) !important;
   --markup-hidden-tag-color: var(--blue) !important;
   --monospace-font-family: 'BlexMono Nerd Font', monospace !important;
   --theme-code-font-size: 13px !important;
@@ -66,8 +66,8 @@
   --theme-highlight-green: var(--green) !important;
   --theme-highlight-bluegrey: var(--cyan) !important;
   --theme-highlight-blue: var(--blue) !important;
-  --theme-highlight-purple: var(--purple) !important;
-  --theme-highlight-pink: var(--purple) !important;
+  --theme-highlight-magenta: var(--magenta) !important;
+  --theme-highlight-pink: var(--magenta) !important;
   --theme-selection-background: var(--shade2) !important;
   --theme-sidebar-background: var(--shade1) !important; 
   --theme-splitter-color: #2c313c !important;

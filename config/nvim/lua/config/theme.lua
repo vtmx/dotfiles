@@ -4,36 +4,36 @@ local hl_groups = {
   -- General
   Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
   Comment        = { fg = c.fd, ctermfg = 7, italic = true   },
-  Title          = { fg = c.purple  },
+  Title          = { fg = c.magenta },
   Twilight       = { fg = c.fd      },
 
   -- Sintaxy
-  Boolean        = { fg = c.orange },
-  Character      = { fg = c.green  },
-  Conditional    = { fg = c.purple },
-  Constant       = { fg = c.orange },
-  Define         = { fg = c.purple },
-  ErrorMsg       = { fg = c.red    },
-  Exception      = { fg = c.purple },
-  Float          = { fg = c.orange },
-  Function       = { fg = c.blue   },
-  Identifier     = { fg = c.red    },
-  Include        = { fg = c.purple },
-  Keyword        = { fg = c.purple },
-  Label          = { fg = c.red    },
-  Macro          = { fg = c.red    },
-  Number         = { fg = c.orange },
-  Operator       = { fg = c.cyan   },
-  PreCondit      = { fg = c.purple },
-  PreProc        = { fg = c.purple },
-  Repeat         = { fg = c.purple },
-  Tag            = { fg = c.red    },
-  Statement      = { fg = c.purple },
-  String         = { fg = c.green  },
-  StorageClass   = { fg = c.purple },
-  Structure      = { fg = c.purple },
-  Typedef        = { fg = c.purple },
-  Type           = { fg = c.purple },
+  Boolean        = { fg = c.orange  },
+  Character      = { fg = c.green   },
+  Conditional    = { fg = c.magenta },
+  Constant       = { fg = c.orange  },
+  Define         = { fg = c.magenta },
+  ErrorMsg       = { fg = c.red     },
+  Exception      = { fg = c.magenta },
+  Float          = { fg = c.orange  },
+  Function       = { fg = c.blue    },
+  Identifier     = { fg = c.red     },
+  Include        = { fg = c.magenta },
+  Keyword        = { fg = c.magenta },
+  Label          = { fg = c.red     },
+  Macro          = { fg = c.red     },
+  Number         = { fg = c.orange  },
+  Operator       = { fg = c.cyan    },
+  PreCondit      = { fg = c.magenta },
+  PreProc        = { fg = c.magenta },
+  Repeat         = { fg = c.magenta },
+  Tag            = { fg = c.red     },
+  Statement      = { fg = c.magenta },
+  String         = { fg = c.green   },
+  StorageClass   = { fg = c.magenta },
+  Structure      = { fg = c.magenta },
+  Typedef        = { fg = c.magenta },
+  Type           = { fg = c.magenta },
 
   -- Keys [] {} ()
   Delimiter      = { fg = c.fg     },
@@ -65,9 +65,9 @@ local hl_groups = {
   WarningMsg     = { fg = c.yellow },
 
   -- Alerts
-  Ignore         = { fg = c.fg     },
-  Error          = { fg = c.red    },
-  Todo           = { fg = c.purple },
+  Ignore         = { fg = c.fg      },
+  Error          = { fg = c.red     },
+  Todo           = { fg = c.magenta },
 
   -- Line highlight
   CursorLine     = { bg = c.bl },
@@ -124,20 +124,20 @@ local hl_groups = {
   htmlLink           = { fg = c.fg     },
 
   -- markdown
-  markdownBlockquote       = { fg = c.fg     },
-  markdownCodeDelimiter    = { fg = c.fg     },
-  markdownId               = { fg = c.purple },
-  markdownH1               = { fg = c.purple },
-  markdownH2               = { fg = c.purple },
-  markdownH3               = { fg = c.purple },
-  markdownH4               = { fg = c.purple },
-  markdownH5               = { fg = c.purple },
-  markdownH6               = { fg = c.purple },
-  markdownHeadingDelimiter = { fg = c.purple },
-  markdownHeadingRule      = { fg = c.purple },
-  markdownListMarker       = { fg = c.yellow },
-  markdownRule             = { fg = c.purple },
-  markdownUrl              = { fg = c.fg     },
+  markdownBlockquote       = { fg = c.fg      },
+  markdownCodeDelimiter    = { fg = c.fg      },
+  markdownId               = { fg = c.magenta },
+  markdownH1               = { fg = c.magenta },
+  markdownH2               = { fg = c.magenta },
+  markdownH3               = { fg = c.magenta },
+  markdownH4               = { fg = c.magenta },
+  markdownH5               = { fg = c.magenta },
+  markdownH6               = { fg = c.magenta },
+  markdownHeadingDelimiter = { fg = c.magenta },
+  markdownHeadingRule      = { fg = c.magenta },
+  markdownListMarker       = { fg = c.yellow  },
+  markdownRule             = { fg = c.magenta },
+  markdownUrl              = { fg = c.fg      },
 
   -- css
   cssClassName    = { fg   = c.red    },
@@ -148,8 +148,8 @@ local hl_groups = {
   cssVendor       = { fg   = c.fg     },
 
   -- js
-  javaScriptBraces   = { link = 'Delimiter'  },
-  javaScriptFunction = { fg = c.purple       },
+  javaScriptBraces   = { link = 'Delimiter' },
+  javaScriptFunction = { fg = c.magenta     },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red                    },
@@ -286,11 +286,11 @@ local hl_groups = {
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- hop
-  HopNextKey               = { fg = c.blue   },
-  HopNextKey1              = { fg = c.red    },
-  HopNextKey2              = { fg = c.orange },
-  HopNextKey3              = { fg = c.purple },
-  HopUnmatched             = { fg = c.fd     },
+  HopNextKey               = { fg = c.blue    },
+  HopNextKey1              = { fg = c.red     },
+  HopNextKey2              = { fg = c.orange  },
+  HopNextKey3              = { fg = c.magenta },
+  HopUnmatched             = { fg = c.fd      },
 
   -- lazy
   LazyNormal               = { bg = c.bd     },
@@ -298,13 +298,13 @@ local hl_groups = {
   LazyProp                 = { bg = c.ac     },
 
   --markdown
-  mkdCodeEnd               = { fg = c.fg     },
-  mkdCodeStart             = { fg = c.fg     },
-  mkdHeading               = { fg = c.red    },
-  mkdInlineURL             = { fg = c.blue   },
-  mkdLineBreak             = { link = 'NONE' },
-  mkdLink                  = { fg = c.blue   },
-  mkdURL                   = { fg = c.purple },
+  mkdCodeEnd               = { fg = c.fg      },
+  mkdCodeStart             = { fg = c.fg      },
+  mkdHeading               = { fg = c.red     },
+  mkdInlineURL             = { fg = c.blue    },
+  mkdLineBreak             = { link = 'NONE'  },
+  mkdLink                  = { fg = c.blue    },
+  mkdURL                   = { fg = c.magenta },
 
   -- mini-tabline
   TabLine                  = { fg = c.fd     },
@@ -313,11 +313,11 @@ local hl_groups = {
   netrwTreeBar = { fg = c.fg },
 
   -- which-key
-  WhichKey                 = { fg = c.blue   },
-  WhichKeyDesc             = { fg = c.fg     },
-  WhichKeyFloat            = { bg = c.bd     },
-  WhichKeyGroup            = { fg = c.purple },
-  WhichKeySeparator        = { fg = c.fg     },
+  WhichKey                 = { fg = c.blue    },
+  WhichKeyDesc             = { fg = c.fg      },
+  WhichKeyFloat            = { bg = c.bd      },
+  WhichKeyGroup            = { fg = c.magenta },
+  WhichKeySeparator        = { fg = c.fg      },
 }
 
 -- Loop for colors
@@ -328,5 +328,5 @@ end
 -- Spell
 vim.cmd('hi SpellBad guisp=' .. c.red)
 vim.cmd('hi SpellCap guisp=' .. c.blue)
-vim.cmd('hi SpellRare guisp=' .. c.purple)
+vim.cmd('hi SpellRare guisp=' .. c.magenta)
 vim.cmd('hi SpellLocal guisp=' .. c.cyan)
