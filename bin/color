@@ -1,16 +1,10 @@
 #!/usr/bin/env bash
 
 echo
-for i in {0..7}; do
+for i in {0..15}; do
   tput setab $i
-  (($i == 0)) && tput setaf 7 || tput setaf 0
-  printf "%4d%1s" $i
-  tput sgr0
-done
-echo
-for i in {8..15}; do
-  tput setab $i
-  (($i == 8)) && tput setaf 7 || tput setaf 0
+  (($i == 0 || $i == 8)) && tput setaf 7 || tput setaf 0
+  (($i == 8)) && echo
   printf "%4d%1s" $i
   tput sgr0
 done
