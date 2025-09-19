@@ -9,3 +9,11 @@ for i in {0..15}; do
   tput sgr0
 done
 echo
+for i in {0..15}; do
+  tput setaf $i
+  (($i == 8)) && echo
+  (($i == 0 || $i == 8)) && tput setab 7 || tput setab 0
+  printf "%4d%1s" $i
+  tput sgr0
+done
+echo
