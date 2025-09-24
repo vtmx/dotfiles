@@ -69,6 +69,11 @@ map(
 )
 
 map(
+  'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
+  { desc = 'Split vertical' }
+)
+
+map(
   'n', 'yl', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
   { desc = 'Yank current line to clipboard' }
 )
@@ -124,8 +129,8 @@ map(
 )
 
 map(
-  'n', '<a-h>', '<cmd>TmuxNavigateRight<cr>',
-  { desc = 'TmuxNavigateRight' }
+  'n', '<a-h>', '<cmd>TmuxNavigateLeft<cr>',
+  { desc = 'TmuxNavigateLeft' }
 )
 
 map(
@@ -139,8 +144,8 @@ map(
 )
 
 map(
-  'n', '<a-l>', '<cmd>TmuxNavigateLeft<cr>',
-  { desc = 'TmuxNavigateLeft' }
+  'n', '<a-l>', '<cmd>TmuxNavigateRight<cr>',
+  { desc = 'TmuxNavigateRight' }
 )
 
 -- Insert
@@ -168,11 +173,6 @@ map(
 map(
   'i', '<c-l>', '<right>',
   { desc = 'Move cursor char right' }
-)
-
-map(
-  'n', '<c-p>', '<cmd>FzfLua files<cr>',
-  { desc = 'Files browser' }
 )
 
 map(
@@ -254,6 +254,11 @@ map(
 )
 
 map(
+  'n', '<leader>c', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
+)
+
+map(
   'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
   { desc = 'Cut to clipboard' }
 )
@@ -266,6 +271,11 @@ map(
 map(
   'n', '<leader>e', ':lua MiniFiles.open()<cr>',
   { desc = 'Explorer' }
+)
+
+map(
+  'n', '<leader>f', '<cmd>FzfLua files<cr>',
+  { desc = 'Files browser' }
 )
 
 map(
@@ -282,11 +292,6 @@ map(
 --   'n', '<leader>E', function() utils.toggle_netrw_lex() end,
 --   { desc = 'Toggle Netrw Lex' }
 -- )
-
-map(
-  'n', '<leader>f', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
-)
 
 map(
   'n', '<leader>g', '<cmd>FzfLua git_files<cr>',
@@ -361,6 +366,16 @@ map(
 map(
   'n', '<leader>P', '"+gP<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
+)
+
+map(
+  'n', '<leader>q', '<cmd>q<cr>',
+  { desc = 'Quit' }
+)
+
+map(
+  'n', '<leader>Q', '<cmd>!q<cr>',
+  { desc = 'Force quit' }
 )
 
 map(
