@@ -372,6 +372,10 @@
       "after": ["G", "V", "g", "g"]
     },
     {
+      "before": [ "<leader>", "c" ],
+      "after": [ "<leader>", "<leader>", "s" ]
+    },
+    {
       "before": ["<leader>", "d"],
       "after": ["V", "\"", "+", "x"]
     },
@@ -380,8 +384,8 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": [ "<leader>", "f" ],
-      "after": [ "<leader>", "<leader>", "s" ]
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"]
     },
     {
       "before": ["J"],
