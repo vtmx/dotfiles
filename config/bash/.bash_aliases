@@ -154,9 +154,6 @@ alias pacu="sudo pacman -Syu"             # update
 # ps
 alias pstree="pstree -npTC age"
 
-# remove
-alias rm="mv -t $HOME/.local/share/Trash/"
-
 # rename
 alias rename="perl-rename"
 

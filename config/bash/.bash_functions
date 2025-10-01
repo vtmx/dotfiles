@@ -439,17 +439,9 @@ starship() {
 
 # Move to trash
 trash() {
-  local trash_dir="$HOME/.local/share/Trash/files"
-  mkdir -p "$trash_dir"
-
-  for file in "$@"; do
-    if [[ -e "$file" ]]; then
-      mv -f "$file" "$trash_dir"
-      echo "moved to trash: $file"
-    else
-      echo "error: file not found"
-    fi
-  done
+  local trash_dir="$HOME/.local/share/Trash/"
+  [[ ! -d "$trash_dir" ]] && mkdir -p "$trash_dir"
+  mv -t "$trash_dir"
 }
 
 # Convert iso to utf8
