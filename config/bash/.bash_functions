@@ -20,6 +20,29 @@ cpcd() {
   fi
 }
 
+# Cut audio
+cuta() {
+  if [[ ! -f "$1" ]]; then
+    echo 'error: no first argument ex: file.mp3'; return 1
+  fi
+
+  if [[ ! "$2" =~ ^[0-9]{2}:[0-9]{2}$ ]]; then
+    echo 'error: no second argument time start ex: 00:00'; return 1
+  fi
+
+  if [[ ! "$3" =~ ^[0-9]{2}:[0-9]{2}$ ]]; then
+    echo 'error: no third argument time stop ex: 01:00'; return 1
+  fi
+
+  local file="$1"
+  local start="$2" 
+  local stop="$3" 
+  local name="${file%.*}"
+  local format="${file##*.}"
+
+  ffmpeg -i "$file" -ss "$start" -t "$stop" -c copy "$name".cut."$format"
+}
+
 # Extract files
 ex() {
   if [[ ! -f "$1" ]]; then
