@@ -176,12 +176,7 @@ map(
 )
 
 map(
-  'i', '<c-,>', '```bash<cr>```<esc>O',
-  { desc = 'Add bash code' }
-)
-
-map(
-  'i', '<c-;>', '<esc><cmd>normal Ax<cr><esc><cmd>normal gcc<cr>A<bs><bs>',
+  'i', '<c-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
   { desc = 'Comment line' }
 )
 

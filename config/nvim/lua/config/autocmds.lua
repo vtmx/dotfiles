@@ -41,13 +41,22 @@ autocmd('FileType', {
   }
 )
 
--- Force markdown to 2 spaces
+-- Emmet
+autocmd('FileType', {
+  pattern = { 'css', 'scss', 'html', 'vue' },
+  callback = function()
+    vim.keymap.set('i', '<c-e>', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
+  end
+})
+
+-- Markdown
 autocmd('FileType', {
   pattern = 'markdown',
   callback = function()
     vim.opt.shiftwidth = 2
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
+    vim.keymap.set('i', '<c-,>', '```bash<cr>```<esc>O', { desc = 'Add bashcode' })
   end
 })
 
