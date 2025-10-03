@@ -251,6 +251,10 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["g", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
       "before": ["ç"],
       "commands": [":noh"]
     },
@@ -416,16 +420,16 @@
       "commands": ["workbench.action.quit"]
     },
     {
-      "before": ["<leader>", "S"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
       "before": ["<leader>", "w"],
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
       "before": ["<leader>", "z"],
       "commands": ["workbench.action.toggleZenMode"]
+    },
+    {
+      "before": ["<leader>", "ctrl+o"],
+      "commands": ["workbench.action.files.openFileFolder"]
     },
     {
       "before": ["<leader><leader>", "p"],
