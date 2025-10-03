@@ -39,8 +39,11 @@ cuta() {
   local stop="$3" 
   local name="${file%.*}"
   local format="${file##*.}"
+  local cutfile="$name-cut.$format"
 
-  ffmpeg -i "$file" -ss "$start" -t "$stop" -c copy "$name".cut."$format"
+  ffmpeg -i "$file" -ss "$start" -t "$stop" -c copy "$cutfile" && \
+    rm "$file" && \
+    mv "$cutfile" "$file"
 }
 
 # Extract files
