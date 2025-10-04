@@ -4,8 +4,8 @@ local map = vim.keymap.set
 -- Normal
 
 map(
-  'n', 'ç', '<cmd>nohl<cr>',
-  { desc = 'Remove highlight' }
+  'n', 'ç', ':',
+  { desc = 'Enter in command mode' }
 )
 
 map(
@@ -34,7 +34,7 @@ map(
 )
 
 map(
-  {'n', 'v'}, 'H', '^',
+  { 'n', 'v' }, 'H', '^',
   { desc = 'Go to begin line' }
 )
 
@@ -44,12 +44,17 @@ map(
 )
 
 map(
+  'n', 'J', 'mzJ`z',
+  { desc = 'Join lines' }
+)
+
+map(
   'n', 'k', 'v:count == 0 ? "gk" : "k"',
   { expr = true, desc = 'Ignore wordwrap jumpline' }
 )
 
 map(
-  {'n', 'v'}, 'L', 'g_',
+  { 'n', 'v' }, 'L', 'g_',
   { desc = 'Go to end line' }
 )
 
@@ -109,12 +114,7 @@ map(
 )
 
 map(
-  'n', '<c-l>', '<cmd>nohl<cr>',
-  { desc = 'Remove highlight' }
-)
-
-map(
-  {'n', 'i', 's', 'x'}, '<c-s>', '<cmd>w<cr><esc>',
+  { 'n', 'i', 's', 'x' }, '<c-s>', '<cmd>w<cr><esc>',
   { desc = 'Save file if file is change' }
 )
 
@@ -176,13 +176,8 @@ map(
 )
 
 map(
-  'i', '<c-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
+  'i', '<m-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
   { desc = 'Comment line' }
-)
-
-map(
-  'i', '<c-space>', '<c-n>', -- vim.lsp.completion.get()
-  { desc = 'Show menu' }
 )
 
 -- Visual
@@ -254,8 +249,8 @@ map(
 )
 
 map(
-  'n', '<leader>d', '^vg_"+x<esc><cmd>echo "Cut line to clipboard"<cr>',
-  { desc = 'Cut to clipboard' }
+  'n', '<leader>d', 'mtviw"+y`t<cmd>echo "Copy to clipboard"<cr>',
+  { desc = 'Copy to clipboard' }
 )
 
 map(
@@ -314,11 +309,6 @@ map(
 )
 
 map(
-  'n', 'J', 'mzJ`z',
-  { desc = 'Join lines' }
-)
-
-map(
   'n', '<leader>j', '<cmd>FzfLua jumps<cr>',
   { desc = 'Jump list' }
 )
@@ -354,7 +344,7 @@ map(
 )
 
 map(
-  {'n', 'v'}, '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { 'n', 'v' }, '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
@@ -476,6 +466,11 @@ map(
 map(
   'v', '<leader>x', ":'<,'>w !bash<cr>",
   { desc = 'Execute selected line(s)' }
+)
+
+map(
+  'n', '<leader>y', 'mtviw"+y`t<cmd>echo "Copy to clipboard"<cr>',
+  { desc = 'Copy to clipboard' }
 )
 
 map(

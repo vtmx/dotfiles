@@ -250,13 +250,18 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // Enter in command mode
+    {
+      "before": ["ç"],
+      "after": [":"]
+    },
+    {
+      "before": ["d", "l"],
+      "after": ["\"", "+", "d", "d"]
+    },
     {
       "before": ["g", "s"],
       "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
-      "before": ["ç"],
-      "commands": [":noh"]
     },
     {
       "before": ["H"],
@@ -307,12 +312,8 @@
       "after": ["\"", "_", "x"]
     },
     {
-      "before": ["y", "a"],
-      "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o"]
-    },
-    {
       "before": ["y", "l"],
-      "after": ["V", "\"", "+", "y"]
+      "after": ["\"", "+", "y", "y"]
     },
     {
       "before": ["y", "%"],
@@ -381,7 +382,7 @@
     },
     {
       "before": ["<leader>", "d"],
-      "after": ["V", "\"", "+", "x"]
+      "after": ["m", "t", "v", "i", "w", "\"", "+", "d", "`", "t"]
     },
     {
       "before": ["<leader>", "e"],
@@ -424,6 +425,10 @@
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
+      "before": ["<leader>", "y"],
+      "after": ["m", "t", "v", "i", "w", "\"", "+", "y", "`", "t"]
+    },
+    {
       "before": ["<leader>", "z"],
       "commands": ["workbench.action.toggleZenMode"]
     },
@@ -438,13 +443,9 @@
     {
       "before": ["<leader><leader>", "P"],
       "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>", "k", "j"],
-      "after": ["<esc>"]
-    },
     {
       "before": ["ç"],
       "after": ["<esc>"]
