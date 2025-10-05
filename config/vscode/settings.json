@@ -284,20 +284,8 @@
       "after": ["\"", "0", "p"]
     },
     {
-     "before": ["s", "s"],
-      "commands": ["workbench.action.moveEditorToBelowGroup"]
-    },
-    {
-      "before": ["s", "a"],
-      "after": ["<plugys>"]
-    },
-    {
-      "before": ["s", "d"],
-      "after": ["<plugds>"]
-    },
-    {
-      "before": ["s", "r"],
-      "after": ["<plugcs>"]
+      "before": [ "s" ],
+      "after": [ "<leader>", "<leader>", "s" ]
     },
     {
       "before": ["u"],
@@ -375,10 +363,6 @@
     {
       "before": ["<leader>", "a"],
       "after": ["G", "V", "g", "g"]
-    },
-    {
-      "before": [ "<leader>", "c" ],
-      "after": [ "<leader>", "<leader>", "s" ]
     },
     {
       "before": ["<leader>", "d"],
