@@ -28,7 +28,7 @@ super + shift + w
 
 # Reload
 super + shift + comma
-  bspc wm -r && pkill -USR1 -x sxhkd && notify-send 'bspwm' 'Reloaded'
+  bspc wm -r && pkill -USR1 -x sxhkd && notify-send -u low -t 1500 'bspwm' 'Reloaded'
 
 # Reload sxhkd
 super + shift + period
@@ -53,7 +53,7 @@ super +  m : {h,Left,j,Down,k,Up,l,Right}
   step=20; \
   bspc node -v {-$step 0, -$step 0, 0 $step, 0 $step, 0 -$step, 0 -$step, $step 0, $step 0}
 
-# Focus and send selected node to next, prev desktop
+# Focus/send to prev/next desktop
 super + ctrl + {_,shift + }{h,Left,l,Right}
   bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
 
@@ -87,10 +87,6 @@ super + alt + {b,e,p}
 
 # Terminal
 super + {_,alt + }Return
-  term=kitty; \
-  {$term,bspc rule -a \* -o state=floating && $term}
-
-super + {_,alt + }KP_Enter
   term=kitty; \
   {$term,bspc rule -a \* -o state=floating && $term}
 

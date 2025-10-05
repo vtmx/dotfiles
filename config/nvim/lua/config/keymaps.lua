@@ -14,7 +14,7 @@ map(
 )
 
 map(
-  'n', 'dl', '"+dd<cmd>echo "Cut line to clipboard"<cr>',
+  'n', 'dl', '"+dd<cmd>:lua vim.notify("Cut line to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Cut current line to clipboard' }
 )
 
@@ -31,6 +31,11 @@ map(
 map(
   'n', 'gcO', 'O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
   { desc = 'Add a comment above current line' }
+)
+
+map(
+  'n', 'gd', vim.lsp.buf.definition,
+  { desc = 'Go to definition' }
 )
 
 map(
@@ -51,6 +56,11 @@ map(
 map(
   'n', 'k', 'v:count == 0 ? "gk" : "k"',
   { expr = true, desc = 'Ignore wordwrap jumpline' }
+)
+
+map(
+  'n', 'K',vim.lsp.buf.hover,
+  { desc = 'Hover documentation' }
 )
 
 map(
@@ -79,12 +89,12 @@ map(
 )
 
 map(
-  'n', 'yl', '"+yy<cmd>echo "Copy line to clipboard"<cr>',
+  'n', 'yl', '"+yy<cmd>:lua vim.notify("Copy line to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Yank current line to clipboard' }
 )
 
 map(
-  'n', 'y%', '<cmd>%y+<cr><cmd>echo "Copy all content to clipboard"<cr>',
+  'n', 'y%', '<cmd>%y+<cr><cmd>:lua vim.notify("Copy all content to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy all content to clipboard' }
 )
 
@@ -249,12 +259,12 @@ map(
 )
 
 map(
-  'n', '<leader>d', 'mtviw"+y`t<cmd>echo "Copy to clipboard"<cr>',
+  'n', '<leader>d', 'mtviw"+x`t<cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy to clipboard' }
 )
 
 map(
-  'v', '<leader>d', '"+x<cmd>echo "Cut to clipboard"<cr>',
+  'v', '<leader>d', '"+x<cmd>:lua vim.notify("Cut to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Cut to clipboard' }
 )
 
@@ -272,16 +282,6 @@ map(
   'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
   { desc = 'Oil' }
 )
-
--- map(
---   'n', '<leader>e', function() utils.toggle_netrw_ex() end,
---   { desc = 'Toggle Netrw Ex' }
--- )
-
--- map(
---   'n', '<leader>E', function() utils.toggle_netrw_lex() end,
---   { desc = 'Toggle Netrw Lex' }
--- )
 
 map(
   'n', '<leader>g', '<cmd>FzfLua git_files<cr>',
@@ -364,12 +364,12 @@ map(
 )
 
 map(
-  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
+  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr>:lua vim.notify("Source " .. vim.fn.bufname("%"), "info", { title = "Clipboard" })<cr>',
   { desc = 'Reload config file' }
 )
 
 map(
-  'n', '<leader>s', ':%s/<C-r><C-w>//g<Left><Left>',
+  'n', '<leader>s', ':%s/\\<C-r><C-w>\\>//g<Left><Left>',
   { desc = 'Substitute current word' }
 )
 
@@ -469,12 +469,12 @@ map(
 )
 
 map(
-  'n', '<leader>y', 'mtviw"+y`t<cmd>echo "Copy to clipboard"<cr>',
+  'n', '<leader>y', 'mtviw"+y`t<cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy to clipboard' }
 )
 
 map(
-  'v', '<leader>y', '"+ygv<esc><cmd>echo "Copy to clipboard"<cr>',
+  'v', '<leader>y', '"+ygv<esc><cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy to clipboard' }
 )
 
@@ -496,11 +496,11 @@ map(
 -- Leader leader
 
 map(
-  'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
 
 map(
-  'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>echo "Paste from clipboard in new line"<cr>',
+  'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
