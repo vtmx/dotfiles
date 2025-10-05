@@ -79,6 +79,11 @@ map(
 )
 
 map(
+  'n', 's', '<cmd>HopChar1<cr>',
+  { desc = 'Char' }
+)
+
+map(
   'n', 'U', '<c-r>',
   { desc = 'Redo' }
 )
@@ -251,11 +256,6 @@ map(
 map(
   'n', '<leader>b', '<cmd>FzfLua buffers<cr>',
   { desc = 'Buffers' }
-)
-
-map(
-  'n', '<leader>c', '<cmd>HopChar1<cr>',
-  { desc = 'Char' }
 )
 
 map(
