@@ -3,8 +3,6 @@
   "breadcrumbs.enabled": false,
   "chat.commandCenter.enabled": false,
   "window.commandCenter": false,
-  "window.customMenuBarAltFocus": false,
-  "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "toggle",
   "window.title": "${activeEditorShort}",
   "window.titleBarStyle": "custom",
@@ -15,7 +13,6 @@
   "editor.autoClosingDelete": "never",
   "editor.autoClosingQuotes": "never",
   "editor.autoClosingOvertype": "never",
-  "html.autoClosingTags": false,
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": false,
@@ -44,14 +41,7 @@
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "comments": "#5c6370",
-    "textMateRules": [
-      {
-        "scope": "comment",
-        "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
+    "textMateRules": [ { "scope": "comment", "settings": { "fontStyle": "italic" } } ]
   },
 
   // Explorer
@@ -65,8 +55,12 @@
   // Git
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
   "git.terminalAuthentication": false,
   "github.gitAuthentication": false,
+
+  // Html
+  "html.autoClosingTags": false,
 
   // Terminal
   "terminal.integrated.defaultProfile.linux": "bash",
@@ -76,49 +70,27 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontWeightBold": "500",
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "/usr/bin/bash"
-    }
-  },
-  "terminal.integrated.profiles.windows": {
-    "cmd": {
-      "path": "C:\\Windows\\System32\\cmd.exe"
-    }
-  },
+  "terminal.integrated.profiles.linux": { "bash": { "path": "/usr/bin/bash" } },
+  "terminal.integrated.profiles.windows": { "cmd": { "path": "C:\\Windows\\System32\\cmd.exe" } },
 
   // Search
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/bower_components": true,
-    "**/*.code-search": true
-  },
+  "search.exclude": { "**/node_modules": true, "**/dist": true },
 
   // Security
   "security.workspace.trust.untrustedFiles": "open",
 
-  // ZenMode
-  "zenMode.fullScreen": false,
-  "zenMode.hideLineNumbers": false,
-  "zenMode.hideStatusBar": false,
+  // Workbench
   "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.iconTheme": "vs-minimal",
   "workbench.editor.enablePreview": true,
   "workbench.editor.labelFormat": "default",
+  "workbench.iconTheme": "vs-minimal",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": false,
   "workbench.sideBar.location": "left",
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#1e2227",
-    "tab.border": "#21252b",
-    "tab.activeBorder": "#21252b",
-    "sideBar.background": "#1e2227",
-    "panel.border": "#393e48",
-    "panel.background": "#1e2227",
     "editor.background": "#23272e",
     "editor.selectionBackground": "#3d4556",
     "editor.selectionHighlightBorder": "#00000000",
@@ -137,20 +109,20 @@
     "editorGroup.border": "#323740",
     "editorGroupHeader.tabsBackground": "#1e2227",
     "editorOverviewRuler.border": "#00000000",
-    "terminal.background": "#1e2227",
-    "terminalCursor.background": "#abb2bf",
+    "panel.border": "#393e48",
+    "panel.background": "#1e2227",
+    "sideBar.background": "#1e2227",
     "statusBar.background": "#1e2227",
     "statusBar.noFolderBackground": "#1e2227",
-    "statusBar.debuggingBackground": "#1e2227"
+    "statusBar.debuggingBackground": "#1e2227",
+    "tab.activeBorder": "#21252b",
+    "tab.border": "#21252b",
+    "titleBar.activeBackground": "#1e2227",
+    "terminal.background": "#1e2227",
+    "terminalCursor.background": "#abb2bf"
   },
 
-  // Git
-  "git.openRepositoryInParentFolders": "never",
-
   // Plugins
-
-  // OneDark
-  "oneDarkPro.italic": false,
 
   // Code Runner
   "code-runner.runInTerminal": true,
@@ -160,47 +132,26 @@
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.CustomBrowser": "firefox",
 
+  // OneDark
+  "oneDarkPro.italic": false,
+
   // Prettier
   "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
   "html.format.wrapLineLength": 0,
-  "[autoit]": {
-    "editor.tabSize": 2,
-    "editor.detectIndentation": true
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": null,
-    "editor.formatOnSave": false,
-    "editor.wordWrap": "off"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
-  },
+  "[autoit]": { "editor.tabSize": 2, "editor.detectIndentation": true },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": null, "editor.formatOnSave": false, "editor.wordWrap": "off" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[vue]": { "editor.defaultFormatter": "octref.vetur" },
 
   // SpellCheck Bash
   "shellcheck.exclude": ["SC1091", "SC2154"],
-
-  // Svelte
-  "svelte.enable-ts-plugin": true,
 
   // Vetur
   "vetur.format.defaultFormatter.html": "js-beautify-html",
@@ -210,14 +161,14 @@
   "vetur.format.defaultFormatter.js": "vscode-typescript",
 
   "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "auto"
-    },
-    "prettier": {
-      "singleQuote": true,
-      "printWidth": 120
-    }
+    "js-beautify-html": { "wrap_attributes": "auto" },
+    "prettier": { "singleQuote": true, "printWidth": 120 }
   },
+
+  // ZenMode
+  "zenMode.fullScreen": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
 
   // Vim
   "vim.easymotion": true,
@@ -229,251 +180,181 @@
   "vim.useSystemClipboard": false,
   "vim.insertModeKeyBindingsNonRecursive": [
     // Go to normal mode
-    {
-      "before": ["k", "j"],
-      "after": ["<esc>"]
-    },
+    { "before": ["k", "j"], "after": ["<esc>"] },
+
     // Go to prev char
-    {
-      "before": ["<c-h>"],
-      "after": ["left"]
-    },
+    { "before": ["<c-h>"], "after": ["left"] },
+
     // Go to prev char
-    {
-      "before": ["<c-l>"],
-      "after": ["right"]
-    },
+    { "before": ["<c-l>"], "after": ["right"] },
+
     // Paste register
-    {
-      "before": ["<c-v>"],
-      "after": ["c-r", "\""]
-    }
+    { "before": ["<c-v>"], "after": ["c-r", "\""] }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     // Enter in command mode
-    {
-      "before": ["ç"],
-      "after": [":"]
-    },
-    {
-      "before": ["d", "l"],
-      "after": ["\"", "+", "d", "d"]
-    },
-    {
-      "before": ["g", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    {
-      "before": ["H"],
-      "after": ["^"]
-    },
-    {
-      "before": ["L"],
-      "after": ["$"]
-    },
-    {
-      "before": ["M"],
-      "after": ["`"]
-    },
-    {
-      "before": ["Q"],
-      "after": ["@", "q"]
-    },
-    {
-      "before": ["R"],
-      "after": ["\"", "0", "p"]
-    },
-    {
-      "before": [ "s" ],
-      "after": [ "<leader>", "<leader>", "s" ]
-    },
-    {
-      "before": ["u"],
-      "commands": ["undo"]
-    },
-    {
-      "before": ["v", "v"],
-      "commands": ["workbench.action.moveEditorToNextGroup"]
-    },
-    {
-      "before": ["x"],
-      "after": ["\"", "_", "x"]
-    },
-    {
-      "before": ["y", "l"],
-      "after": ["\"", "+", "y", "y"]
-    },
-    {
-      "before": ["y", "%"],
-      "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o", "z", "z"]
-    },
-    {
-      "before": ["Y"],
-      "after": ["y", "$"]
-    },
-    {
-      "before": ["'"],
-      "after": ["\""]
-    },
-    {
-      "before": [">"],
-      "after": [">", ">"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "<"]
-    },
-    {
-      "before": ["<c-d>"],
-      "after": ["<c-d>", "z", "z"]
-    },
-    {
-      "before": ["<c-f>"],
-      "commands": ["actions.find"]
-    },
-    {
-      "before": ["<c-l>"],
-      "commands": [":noh"]
-    },
-    {
-      "before": ["<c-h>"],
-      "commands": ["editor.action.startFindReplaceAction"]
-    },
-    {
-      "before": ["<c-p>"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["<c-r>"],
-      "commands": ["redo"]
-    },
-    {
-      "before": ["<c-s-e>"],
-      "commands": ["viewContainer.workbench.view.explorer.enabled"]
-    },
-    {
-      "before": ["<c-s-f>"],
-      "commands": ["workbench.action.findInFiles"]
-    },
-    {
-      "before": ["<c-s-h>"],
-      "commands": ["workbench.action.replaceAllInFolder"]
-    },
+    { "before": ["ç"], "after": [":"] },
+
+    // Cut to clipboard
+    { "before": ["d", "l"], "after": ["\"", "+", "d", "d"] },
+
+    // Go to symbol
+    { "before": ["g", "s"], "commands": ["workbench.action.gotoSymbol"] },
+
+    // Go to begin line
+    { "before": ["H"], "after": ["^"] },
+
+    // Go to end line
+    { "before": ["L"], "after": ["$"] },
+
+    // Create mark
+    { "before": ["M"], "after": ["`"] },
+
+    // Play macro
+    { "before": ["Q"], "after": ["@", "q"] },
+
+    // Sneak
+    { "before": [ "s" ], "after": [ "<leader>", "<leader>", "s" ] },
+
+    // Undo
+    { "before": ["u"], "commands": ["undo"] },
+
+    // Undo
+    { "before": ["U"], "commands": ["redo"] },
+
+    // Split vertical
+    { "before": ["v", "v"], "commands": ["workbench.action.moveEditorToNextGroup"] },
+
+    // Cut no register
+    { "before": ["x"], "after": ["\"", "_", "x"] },
+
+    // Yank line to clipboard
+    { "before": ["y", "l"], "after": ["\"", "+", "y", "y"] },
+
+    // Yank all content to clipboard
+    { "before": ["y", "%"], "after": ["G", "V", "g", "g", "\"", "+", "y", "c-o", "c-o", "z", "z"] },
+
+    // Yank until endline
+    { "before": ["Y"], "after": ["y", "$"] },
+
+    // Go to mark
+    { "before": ["'"], "after": ["\""] },
+
+    // Add indent
+    { "before": [">"], "after": [">", ">"] },
+
+    // Remove indent
+    { "before": ["<"], "after": ["<", "<"] },
+
+    // Down and middle page
+    { "before": ["<c-d>"], "after": ["<c-d>", "z", "z"] },
+
+    // Find
+    { "before": ["<c-f>"], "commands": ["actions.find"] },
+
+    // Remove hightlight search
+    { "before": ["<c-l>"], "commands": [":noh"] },
+
+    // Find and replace
+    { "before": ["<c-h>"], "commands": ["editor.action.startFindReplaceAction"] },
+
+    // Quick open
+    { "before": ["<c-p>"], "commands": ["workbench.action.quickOpen"] },
+
+    // Redo
+    { "before": ["<c-r>"], "commands": ["redo"] },
+
+    // Open explorer
+    { "before": ["<c-s-e>"], "commands": ["viewContainer.workbench.view.explorer.enabled"] },
+
+    // Open global find
+    { "before": ["<c-s-f>"], "commands": ["workbench.action.findInFiles"] },
+
+    // Open global replace
+    { "before": ["<c-s-h>"], "commands": ["workbench.action.replaceAllInFolder"] },
+
     // Leader
-    {
-      "before": ["<leader>", "a"],
-      "after": ["G", "V", "g", "g"]
-    },
-    {
-      "before": ["<leader>", "d"],
-      "after": ["m", "t", "v", "i", "w", "\"", "+", "d", "`", "t"]
-    },
-    {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["J"],
-      "after": ["m", "z", "J", "`", "z"]
-    },
-    {
-      "before": ["<leader>", "n"],
-      "commands": ["workbench.action.files.newUntitledFile"]
-    },
-    {
-      "before": ["<leader>", "o"],
-      "after": ["m", "`", "o", "<esc>", "`", "`"]
-    },
-    {
-      "before": ["<leader>", "O"],
-      "after": ["m", "`", "O", "<esc>", "`", "`"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "g", "p"]
-    },
-    {
-      "before": ["<leader>", "P"],
-      "after": ["\"", "+", "g", "P"]
-    },
-    {
-      "before": ["<leader>", "q"],
-      "commands": ["workbench.action.quit"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<leader>", "y"],
-      "after": ["m", "t", "v", "i", "w", "\"", "+", "y", "`", "t"]
-    },
-    {
-      "before": ["<leader>", "z"],
-      "commands": ["workbench.action.toggleZenMode"]
-    },
-    {
-      "before": ["<leader>", "ctrl+o"],
-      "commands": ["workbench.action.files.openFileFolder"]
-    },
-    {
-      "before": ["<leader><leader>", "p"],
-      "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"]
-    },
-    {
-      "before": ["<leader><leader>", "P"],
-      "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"]
-    }
+
+    // Select all text
+    { "before": ["<leader>", "a"], "after": ["G", "V", "g", "g"] },
+
+    // Cut to clipboard
+    { "before": ["<leader>", "d"], "after": ["m", "t", "v", "i", "w", "\"", "+", "d", "`", "t"] },
+
+    // Open explorer
+    { "before": ["<leader>", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+
+    // Open find files
+    { "before": ["<leader>", "f"], "commands": ["workbench.action.quickOpen"] },
+
+    // Join lines
+    { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
+
+    // Open new tab
+    { "before": ["<leader>", "n"], "commands": ["workbench.action.files.newUntitledFile"] },
+
+    // Add new line below in normal mode
+    { "before": ["<leader>", "o"], "after": ["m", "`", "o", "<esc>", "`", "`"] },
+
+    // Add new line above in normal mode
+    { "before": ["<leader>", "O"], "after": ["m", "`", "O", "<esc>", "`", "`"] },
+
+    // Paste clipboard after text
+    { "before": ["<leader>", "p"], "after": ["\"", "+", "g", "p"] },
+
+    // Pasta clipboard before text
+    { "before": ["<leader>", "P"], "after": ["\"", "+", "g", "P"] },
+
+    // Quit
+    { "before": ["<leader>", "q"], "commands": ["workbench.action.quit"] },
+
+    // Yank to clipboard
+    { "before": ["<leader>", "y"], "after": ["m", "t", "v", "i", "w", "\"", "+", "y", "`", "t"] },
+
+    // Enter in zen mode
+    { "before": ["<leader>", "z"], "commands": ["workbench.action.toggleZenMode"] },
+
+    // Open file
+    { "before": ["<leader>", "ctrl+o"], "commands": ["workbench.action.files.openFileFolder"] },
+
+    // Paste in new line above
+    { "before": ["<leader><leader>", "p"], "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"] },
+    
+    // Paste in new line below
+    { "before": ["<leader><leader>", "P"], "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["ç"],
-      "after": ["<esc>"]
-    },
-    {
-      "before": ["y"],
-      "after": ["y", "g", "v", "<esc>"]
-    },
-    {
-      "before": ["H"],
-      "after": ["^"]
-    },
-    {
-      "before": ["L"],
-      "after": ["$", "h"]
-    },
-    {
-      "before": [">"],
-      "after": [">", "g", "v"]
-    },
-    {
-      "before": ["<"],
-      "after": ["<", "g", "v"]
-    },
-    {
-      "before": ["<c-c>"],
-      "after": ["esc"]
-    },
+
+    // Exit to visual mode
+    { "before": ["ç"], "after": ["<esc>"] },
+
+    // Yank to clipboard
+    { "before": ["y"], "after": ["y", "g", "v", "<esc>"] },
+
+    // Go to begin text
+    { "before": ["H"], "after": ["^"] },
+
+    // Go to end text
+    { "before": ["L"], "after": ["$", "h"] },
+
+    // Add indent
+    { "before": [">"], "after": [">", "g", "v"] },
+
+    // Remove indent
+    { "before": ["<"], "after": ["<", "g", "v"] },
+    
+    // Exit visual mode
+    { "before": ["<c-c>"], "after": ["esc"] },
+
     // Leader
-    {
-      "before": ["<leader>", "d"],
-      "after": ["\"", "+", "x"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "after": ["\"", "+", "g", "p"]
-    },
-    {
-      "before": ["<leader>", "R"],
-      "after": ["d", "<esc>", "\"", "+", "p"]
-    },
-    {
-      "before": ["<leader>", "y"],
-      "after": ["\"", "+", "y", "g", "v", "<esc>"]
-    },
-  ],
+
+    // Cut to clipboard
+    { "before": ["<leader>", "d"], "after": ["\"", "+", "x"] },
+
+    // Paste clipboard
+    { "before": ["<leader>", "p"], "after": ["\"", "+", "g", "p"] },
+
+    // Yank to clipboard
+    { "before": ["<leader>", "y"], "after": ["\"", "+", "y", "g", "v", "<esc>"] }
+  ]
 }
