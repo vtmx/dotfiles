@@ -17,19 +17,6 @@ return {
       })
     end
   },
-  -- {
-  --   'nvim-mini/mini.pairs',
-  --   event = 'ModeChanged', config = true
-  -- },
-  -- {
-  --   'nvim-mini/mini.indentscope',
-  --   event = 'ModeChanged',
-  --   opts = {
-  --     priority = 2,
-  --     symbol = '│',
-  --     draw = { animation = function() return 0 end }
-  --   }
-  -- },
   {
     'nvim-mini/mini.surround',
     event = 'ModeChanged',
