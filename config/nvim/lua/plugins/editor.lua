@@ -21,6 +21,15 @@ return {
   --   'nvim-mini/mini.pairs',
   --   event = 'ModeChanged', config = true
   -- },
+  -- {
+  --   'nvim-mini/mini.indentscope',
+  --   event = 'ModeChanged',
+  --   opts = {
+  --     priority = 2,
+  --     symbol = '│',
+  --     draw = { animation = function() return 0 end }
+  --   }
+  -- },
   {
     'nvim-mini/mini.surround',
     event = 'ModeChanged',
@@ -30,6 +39,17 @@ return {
         mappings = { add = 'sa', delete = 'ds', replace = 'cs', highlight = 'sh' }
       })
     end
+  },
+  {
+    'folke/snacks.nvim',
+    event = 'ModeChanged',
+    opts = {
+      indent = {
+        enabled = true,
+        priority = 2,
+        animate = { enabled = false },
+      }
+    },
   },
   {
     'phaazon/hop.nvim',

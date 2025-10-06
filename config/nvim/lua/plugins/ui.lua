@@ -22,15 +22,6 @@ local lualine_theme = ({
 
 return {
   {
-    'lukas-reineke/indent-blankline.nvim',
-    main = 'ibl',
-    event = 'VeryLazy',
-    opts = {
-      indent = { priority = 2 },
-      scope = { enabled = false, priority = 1 }
-    }
-  },
-  {
     'nvim-lualine/lualine.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
     event = 'ModeChanged',

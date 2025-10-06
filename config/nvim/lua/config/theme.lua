@@ -273,18 +273,18 @@ local hl_groups = {
 ------------------------------------------------------------
 
   -- codium
-  CodeiumAnnotation = { fg = c.fg },
-  CodeiumSuggestion = { fg = c.fd },
+  CodeiumAnnotation        = { fg = c.fg },
+  CodeiumSuggestion        = { fg = c.fd },
 
   -- fzf-lua
-  FzfLuaBorder        = { fg = c.fd },
-  FzfLuaPreviewBorder = { fg = c.fd },
+  FzfLuaBorder             = { fg = c.fd },
+  FzfLuaPreviewBorder      = { fg = c.fd },
 
   -- indent-line
-  IblIndent = { fg = c.ac  },
-  IblScope  = { fg = c.fg  },
-  ['@ibl.scope.char.1'] = { link = 'IblScope' },
-  ['@ibl.scope.underline.1'] = { link = 'NowText' },
+  SnacksIndent             = { fg = c.ac  },
+  SnacksIndentScope        = { fg = c.ac  },
+  MiniIndentscopeSymbol    = { fg = c.ac  },
+  MiniIndentscopeSymbolOff    = { fg = c.ac  },
 
   -- hop
   HopNextKey               = { fg = c.blue    },
