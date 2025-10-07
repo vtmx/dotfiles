@@ -59,11 +59,6 @@ map(
 )
 
 map(
-  'n', 'K',vim.lsp.buf.hover,
-  { desc = 'Hover documentation' }
-)
-
-map(
   { 'n', 'v' }, 'L', 'g_',
   { desc = 'Go to end line' }
 )
