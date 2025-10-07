@@ -23,7 +23,7 @@ return {
     config = function()
       require('mini.surround').setup({
         search_method = 'cover_or_nearest',
-        mappings = { add = 'sa', delete = 'ds', replace = 'cs', highlight = 'sh' }
+        mappings = { add = 'gsa', delete = 'ds', replace = 'cs', highlight = 'sh' }
       })
     end
   },
