@@ -144,7 +144,7 @@ hex() {
 
 # Return text of htmlq
 htm() {
-  if ! type htmlq &> /dev/null; then
+  if ! type htmlq &>/dev/null; then
     echo 'htmlq not exist'
     return 1
   fi
@@ -401,28 +401,22 @@ play() {
     }
 
     case "$1" in
-      @(ani?(me)))        to_play "$music/j-music/anime"                          ;;
-      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                 ;;
-      @(jaz?(z)))         to_play "$music/jazz"                                   ;;
-      h)                  usage                                                   ;;
-      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"                ;;
-      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"      ;;
-      @(mj|michael))      to_play "$music/lentas/michael-jackson"                 ;;
-      ost)                to_play "$music/ost"                                    ;;
-      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 250 | xargs mpv $args       ;;
-      @(retro?(wave)))    to_play "$music/retrowave"                              ;;
-      @(s?(earch)))       find "$music" -iname *"$2"*.mp3 | fzf | xargs mpv $args ;;
-      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"      ;;
-      *)                  to_play $1                                              ;;
+      @(ani?(me)))        to_play "$music/j-music/anime"                                     ;;
+      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                            ;;
+      @(jaz?(z)))         to_play "$music/jazz"                                              ;;
+      h)                  usage                                                              ;;
+      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"                           ;;
+      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"                 ;;
+      @(mj|michael))      to_play "$music/lentas/michael-jackson"                            ;;
+      ost)                to_play "$music/ost"                                               ;;
+      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 250 | xargs mpv $args                  ;;
+      rd)                 find "$music" -type f -name "*.mp3" -exec mpv $args --shuffle {} + ;;
+      @(retro?(wave)))    to_play "$music/retrowave"                                         ;;
+      @(s?(earch)))       find "$music" -type f -iname *"$2"*.mp3 | fzf | xargs mpv $args    ;;
+      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"                 ;;
+      *)                  to_play $1                                                         ;;
     esac
   fi
-}
-
-# Play recents
-playr() {
-  local number=30
-  [[ $1  =~ ^[0-9]+$ ]] && number=$1
-  ls $HOME/Music/** -t | head -n $number | xargs mpv --no-video --display-tags=Title,Artist
 }
 
 # Open rc configs
@@ -477,7 +471,7 @@ utf() {
 
 # Watch files
 wa() {
-  if type -P entr &> /dev/null; then
+  if type -P entr &>/dev/null; then
     if [[ -n "$1" ]]; then
       local file=$1
       local ext=$(echo $1 | awk -F . '{print $NF}')
