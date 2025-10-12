@@ -1,125 +1,127 @@
-@-moz-document url-prefix("chrome:") {
-  body {
-    font-family: Segoe, system-ui, sans-serif !important;
-    font-size: 13px !important;
-  }
+:root {
+  background: #1e2227 !important;
+}
 
-  ::-moz-selection {
-    background: #61afef !important;
-    color: #23272e !important;
-  }
+body {
+  background: #1e2227 !important;
+  font: 13px Segoe, system-ui, sans-serif !important;
+}
 
-  /* hidden */
-  tooltip,
-  .zen-current-workspace-indicator,
+::-moz-selection {
+  background: #61afef !important;
+  color: #23272e !important;
+}
 
-  /* context blank */
-  #context-navigation,
-  #context-back,
-  #context-forward,
-  #context-reload,
-  #context-stop,
-  #context-bookmarkpage,
-  #context-sep-navigation,
-  #context-savepage,
-  #context-pocket,
-  #context-selectall,
-  #context-sep-selectall,
-  #context-take-screenshot,
-  #context-sep-screenshots,
-  #context-viewsource,
-  #context-media-eme-separator,
-  #context-inspect-a11y,
-  
-  /* context link */
-  #context-openlinkinusercontext-menu,
-  #context-openlink,
-  #context-openlinkprivate,
-  #context-sep-open,
-  #context-bookmarklink,
-  #context-savelink,
-  #context-savelinktopocket,
-  #context-copyemail,
-  #context-copylink,
-  #context-stripOnShareLink,
-  #context-sendlinktodevice,
-  #context-sep-sendlinktodevice,
-  #context-sep-copylink,
-  #context-searchselect,
-  #frame-sep,
+/* hidden */
+tooltip,
+.zen-current-workspace-indicator,
 
-  /* context device */
-  #context-sendpagetodevice,
-  #context-sep-sendpagetodevice,
-  #context-sendlinktodevice,
-  #context-sep-sendlinktodevice,
-  #context_sendTabToDevice,
-  #context_sendTabToDevice_separator,
+/* context blank */
+#context-navigation,
+#context-back,
+#context-forward,
+#context-reload,
+#context-stop,
+#context-bookmarkpage,
+#context-sep-navigation,
+#context-savepage,
+#context-pocket,
+#context-selectall,
+#context-sep-selectall,
+#context-take-screenshot,
+#context-sep-screenshots,
+#context-viewsource,
+#context-media-eme-separator,
+#context-inspect-a11y,
 
-  /* context select */
-  #context-openlinkincurrent,
-  #context-copy,
-  #context-selectall,
-  #context-sep-selectall,
-  #context-searchselect,
-  #context-translate-selection,
-  #frame-sep,
-  #context-viewpartialsource-selection,
+/* context link */
+#context-openlinkinusercontext-menu,
+#context-openlink,
+#context-openlinkprivate,
+#context-sep-open,
+#context-bookmarklink,
+#context-savelink,
+#context-savelinktopocket,
+#context-copyemail,
+#context-copylink,
+#context-stripOnShareLink,
+#context-sendlinktodevice,
+#context-sep-sendlinktodevice,
+#context-sep-copylink,
+#context-searchselect,
+#frame-sep,
 
-  #identity-icon-label,
-  #reader-mode-button,
-  #tab-preview-panel,
-  #tracking-protection-icon-container,
-  #zen-current-workspace-indicator,
-  #zen-current-workspace-indicator-container,
-  #zen-sidebar-bottom-buttons,
-  #zen-sidebar-foot-buttons,
-  #zen-sidebar-icons-wrapper,
-  #zen-workspaces-button {
-    display: none !important;
-  }
+/* context device */
+#context-sendpagetodevice,
+#context-sep-sendpagetodevice,
+#context-sendlinktodevice,
+#context-sep-sendlinktodevice,
+#context_sendTabToDevice,
+#context_sendTabToDevice_separator,
 
-  #tabbrowser-tabs[orient="vertical"] {
-    &:not([expanded]) {
-      & .tab-close-button {
-          display: none !important;
-      }
+/* context select */
+#context-openlinkincurrent,
+#context-copy,
+#context-selectall,
+#context-sep-selectall,
+#context-searchselect,
+#context-translate-selection,
+#frame-sep,
+#context-viewpartialsource-selection,
+
+#identity-icon-label,
+#reader-mode-button,
+#tab-preview-panel,
+#tracking-protection-icon-container,
+#zen-current-workspace-indicator,
+#zen-current-workspace-indicator-container,
+#zen-sidebar-bottom-buttons,
+#zen-sidebar-foot-buttons,
+#zen-sidebar-icons-wrapper,
+#zen-workspaces-button {
+  display: none !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tab-close-button {
+        display: none !important;
     }
   }
+}
 
-  /* icon url-bar - fix blink msgbox */
-  #identity-box {
-    opacity: 0 !important;
-  }
+/* icon url-bar - fix blink msgbox */
+#identity-box {
+  opacity: 0 !important;
+}
 
-  /* extension button */
-  #unified-extensions-button {
-    fill: #5c6370 !important;
-  }
+/* extension button */
+#unified-extensions-button {
+  fill: #5c6370 !important;
+}
 
-  #urlbar #urlbar-background {
-    background: canvas !important;
-    box-shadow: none !important;
-  }
+#urlbar #urlbar-background {
+  background: canvas !important;
+  box-shadow: none !important;
+}
 
-  .findbar-textbox {
-    background: #1e2227 !important;
-    border-color: #48546b !important;
-  }
+.findbar-textbox {
+  background: #1e2227 !important;
+  border-color: #48546b !important;
+}
 
-  .toolbarbutton-1 {
-    fill: currentcolor !important;
-  }
+.toolbarbutton-1 {
+  fill: currentcolor !important;
+}
 
-  .browserContainer > findbar {
+.browserContainer > findbar {
+  background: hsl(0 0 0 / .05) !important;
+  border: none !important;
+  border-top: 1px solid #2c313c !important;
+
+  &:focus {
     background: hsl(0 0 0 / .05) !important;
-    border: none !important;
-    border-top: 1px solid #2c313c !important;
-
-    &:focus {
-      background: hsl(0 0 0 / .05) !important;
-      border: 1px solid hsl(100 100 100 / .15) !important;
-    }
+    border: 1px solid hsl(100 100 100 / .15) !important;
   }
 }
 
