@@ -66,12 +66,10 @@
   #frame-sep,
   #context-viewpartialsource-selection,
 
-  #identity-box,
   #identity-icon-label,
   #reader-mode-button,
   #tab-preview-panel,
   #tracking-protection-icon-container,
-  #unified-extensions-button,
   #zen-current-workspace-indicator,
   #zen-current-workspace-indicator-container,
   #zen-sidebar-bottom-buttons,
@@ -89,8 +87,18 @@
     }
   }
 
+  /* icon url-bar - fix blink msgbox */
+  #identity-box {
+    opacity: 0 !important;
+  }
+
+  /* extension button */
+  #unified-extensions-button {
+    fill: #5c6370 !important;
+  }
+
   #urlbar #urlbar-background {
-    background: Canvas !important;
+    background: canvas !important;
     box-shadow: none !important;
   }
 
@@ -100,7 +108,7 @@
   }
 
   .toolbarbutton-1 {
-    fill: CurrentColor !important;
+    fill: currentcolor !important;
   }
 
   .browserContainer > findbar {
