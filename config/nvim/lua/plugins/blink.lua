@@ -8,7 +8,6 @@ return {
       preset = 'default',
       ['<c-j>'] = { 'select_next', 'fallback' },
       ['<c-k>'] = { 'select_prev', 'fallback' },
-      -- ['<tab>'] = { 'select_and_accept' },
     },
     appearance = {
       use_nvim_cmp_as_default = true,
@@ -24,8 +23,8 @@ return {
       menu = {
         auto_show = function(ctx)
           return ctx.mode ~= 'cmdline' or not vim.tbl_contains({ '/', '?' }, vim.fn.getcmdtype())
-        end,
-      },
-    },
-  },
+        end
+      }
+    }
+  }
 }
