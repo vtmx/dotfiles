@@ -249,7 +249,7 @@ map(
 )
 
 map(
-  'n', '<leader>b', '<cmd>FzfLua buffers<cr>',
+  'n', '<leader>b', function() Snacks.picker.buffers() end,
   { desc = 'Buffers' }
 )
 
@@ -269,8 +269,8 @@ map(
 )
 
 map(
-  'n', '<leader>f', '<cmd>FzfLua files<cr>',
-  { desc = 'Files browser' }
+  'n', '<leader>f', function() Snacks.picker.files() end,
+  { desc = 'Files' }
 )
 
 map(
@@ -279,17 +279,57 @@ map(
 )
 
 map(
-  'n', '<leader>g', '<cmd>FzfLua git_files<cr>',
-  { desc = 'Git files' }
+  'n', '<leader>gb', function() Snacks.picker.git_branches() end,
+  { desc = 'Git Branches' }
 )
 
 map(
-  'n', '<leader>h', '<cmd>FzfLua highlights<cr>',
+  'n', '<leader>gf', function() Snacks.picker.git_files() end,
+  { desc = 'Git Files' }
+)
+
+map(
+  'n', '<leader>gl', function() Snacks.picker.git_branches() end,
+  { desc = 'Git Log' }
+)
+
+map(
+  'n', '<leader>gl', function() Snacks.picker.git_status() end,
+  { desc = 'Git Status' }
+)
+
+map(
+  'n', '<leader>gd', function() Snacks.picker.lsp_definitions() end,
+  { desc = 'Definitions' }
+)
+
+map(
+  'n', '<leader>gD', function() Snacks.picker.lsp_declarations() end,
+  { desc = 'Declarations' }
+)
+
+map(
+  'n', '<leader>gI', function() Snacks.picker.lsp_implementations() end,
+  { desc = 'References' }
+)
+
+map(
+  'n', '<leader>gr', function() Snacks.picker.lsp_references() end,
+  { desc = 'References' }
+)
+
+map(
+  'n', '<leader>gy', function() Snacks.picker.lsp_type_definitions() end,
+  { desc = 'Definitions' }
+)
+
+map(
+  'n', '<leader>h', function() Snacks.picker.highlights() end,
   { desc = 'Highlights' }
 )
 
 map(
-  'n', '<leader>H', '<cmd>FzfLua helptags<cr>',
+  'n', '<leader>H', function() Snacks.picker.help() end,
   { desc = 'Help' }
 )
 
@@ -304,12 +344,12 @@ map(
 )
 
 map(
-  'n', '<leader>j', '<cmd>FzfLua jumps<cr>',
+  'n', '<leader>j', function() Snacks.picker.jumps() end,
   { desc = 'Jump list' }
 )
 
 map(
-  'n', '<leader>k', '<cmd>FzfLua keymaps<cr>',
+  'n', '<leader>k', function() Snacks.picker.keymaps() end,
   { desc = 'Keymaps' }
 )
 
@@ -319,7 +359,7 @@ map(
 )
 
 map(
-  'n', '<leader>m', '<cmd>FzfLua marks<cr>',
+  'n', '<leader>m', function() Snacks.picker.marks() end,
   { desc = 'Marks' }
 )
 
@@ -479,12 +519,17 @@ map(
 )
 
 map(
+  'n', '<leader>:', function() Snacks.picker.command_history() end,
+  { desc = 'Buffers' }
+)
+
+map(
   'n', '<leader>!', '<cmd>w !chmod +x %<cr>',
   { desc = 'Make file executable' }
 )
 
 map(
-  'n', '<leader>/', '<cmd>FzfLua live_grep<cr>',
+  'n', '<leader>/', function() Snacks.picker.grep() end,
   { desc = 'Fuzzy' }
 )
 
