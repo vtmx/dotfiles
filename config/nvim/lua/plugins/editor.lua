@@ -33,11 +33,8 @@ return {
     opts = {
       indent = {
         enabled = true, priority = 2, animate = { enabled = false }
-      },
-      picker = {
-        enabled = true
-      },
-    },
+      }
+    }
   },
   {
     'phaazon/hop.nvim',

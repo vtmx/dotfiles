@@ -273,12 +273,13 @@ local hl_groups = {
 ------------------------------------------------------------
 
   -- codium
-  CodeiumAnnotation        = { fg = c.fg },
-  CodeiumSuggestion        = { fg = c.fd },
+  CodeiumAnnotation        = { fg = c.fg      },
+  CodeiumSuggestion        = { fg = c.fd      },
 
   -- fzf-lua
-  FzfLuaBorder             = { fg = c.fd },
-  FzfLuaPreviewBorder      = { fg = c.fd },
+  Brow1                    = { fg = c.red     },
+  FzfLuaBorder             = { fg = c.fd      },
+  FzfLuaPreviewBorder      = { fg = c.fd      },
 
   -- hop
   HopNextKey               = { fg = c.blue    },
@@ -307,12 +308,9 @@ local hl_groups = {
   -- netrw
   netrwTreeBar = { fg = c.fg },
 
-  -- indent-line
+  -- snacks-indent
   SnacksIndent             = { fg = c.ac      },
   SnacksIndentScope        = { fg = c.ac      },
-
-  -- snacks
-  SnacksPickerTitle       = { fg = c.fg       },
 
   -- which-key
   WhichKey                 = { fg = c.blue    },

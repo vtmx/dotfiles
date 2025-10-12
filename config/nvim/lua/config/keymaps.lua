@@ -249,7 +249,7 @@ map(
 )
 
 map(
-  'n', '<leader>b', function() Snacks.picker.buffers() end,
+  'n', '<leader>b', '<cmd>FzfLua buffers<cr>',
   { desc = 'Buffers' }
 )
 
@@ -269,7 +269,7 @@ map(
 )
 
 map(
-  'n', '<leader>f', function() Snacks.picker.files() end,
+  'n', '<leader>f', '<cmd>FzfLua files<cr>',
   { desc = 'Files' }
 )
 
@@ -279,57 +279,57 @@ map(
 )
 
 map(
-  'n', '<leader>gb', function() Snacks.picker.git_branches() end,
+  'n', '<leader>gb', '<cmd>FzfLua git_branches<cr>',
   { desc = 'Git Branches' }
 )
 
 map(
-  'n', '<leader>gf', function() Snacks.picker.git_files() end,
+  'n', '<leader>gf', '<cmd>FzfLua git_files<cr>',
   { desc = 'Git Files' }
 )
 
 map(
-  'n', '<leader>gl', function() Snacks.picker.git_branches() end,
+  'n', '<leader>gl', '<cmd>FzfLua git_log<cr>',
   { desc = 'Git Log' }
 )
 
 map(
-  'n', '<leader>gl', function() Snacks.picker.git_status() end,
+  'n', '<leader>gs', '<cmd>FzfLua git_status<cr>',
   { desc = 'Git Status' }
 )
 
 map(
-  'n', '<leader>gd', function() Snacks.picker.lsp_definitions() end,
+  'n', '<leader>gd', '<cmd>FzfLua lsp_definitions<cr>',
   { desc = 'Definitions' }
 )
 
 map(
-  'n', '<leader>gD', function() Snacks.picker.lsp_declarations() end,
+  'n', '<leader>gD', '<cmd>FzfLua lsp_declarations<cr>',
   { desc = 'Declarations' }
 )
 
 map(
-  'n', '<leader>gI', function() Snacks.picker.lsp_implementations() end,
+  'n', '<leader>gI', '<cmd>FzfLua lsp_implementations<cr>',
   { desc = 'References' }
 )
 
 map(
-  'n', '<leader>gr', function() Snacks.picker.lsp_references() end,
+  'n', '<leader>gr', '<cmd>FzfLua lsp_references<cr>',
   { desc = 'References' }
 )
 
 map(
-  'n', '<leader>gy', function() Snacks.picker.lsp_type_definitions() end,
+  'n', '<leader>gy', '<cmd>FzfLua lsp_type_definitions<cr>',
   { desc = 'Definitions' }
 )
 
 map(
-  'n', '<leader>h', function() Snacks.picker.highlights() end,
+  'n', '<leader>h', '<cmd>FzfLua highlights<cr>',
   { desc = 'Highlights' }
 )
 
 map(
-  'n', '<leader>H', function() Snacks.picker.help() end,
+  'n', '<leader>H', '<cmd>FzfLua helptags<cr>',
   { desc = 'Help' }
 )
 
@@ -344,12 +344,12 @@ map(
 )
 
 map(
-  'n', '<leader>j', function() Snacks.picker.jumps() end,
+  'n', '<leader>j', '<cmd>FzfLua jumps<cr>',
   { desc = 'Jump list' }
 )
 
 map(
-  'n', '<leader>k', function() Snacks.picker.keymaps() end,
+  'n', '<leader>k', '<cmd>FzfLua keymaps<cr>',
   { desc = 'Keymaps' }
 )
 
@@ -359,7 +359,7 @@ map(
 )
 
 map(
-  'n', '<leader>m', function() Snacks.picker.marks() end,
+  'n', '<leader>m', '<cmd>FzfLua marks<cr>',
   { desc = 'Marks' }
 )
 
@@ -519,7 +519,7 @@ map(
 )
 
 map(
-  'n', '<leader>:', function() Snacks.picker.command_history() end,
+  'n', '<leader>:', '<cmd>FzfLua command_history<cr>',
   { desc = 'Buffers' }
 )
 
@@ -529,7 +529,7 @@ map(
 )
 
 map(
-  'n', '<leader>/', function() Snacks.picker.grep() end,
+  'n', '<leader>/', '<cmd>FzfLua grep<cr>',
   { desc = 'Fuzzy' }
 )
 
