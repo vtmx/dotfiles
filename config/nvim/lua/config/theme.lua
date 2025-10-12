@@ -280,12 +280,6 @@ local hl_groups = {
   FzfLuaBorder             = { fg = c.fd },
   FzfLuaPreviewBorder      = { fg = c.fd },
 
-  -- indent-line
-  SnacksIndent             = { fg = c.ac  },
-  SnacksIndentScope        = { fg = c.ac  },
-  MiniIndentscopeSymbol    = { fg = c.ac  },
-  MiniIndentscopeSymbolOff    = { fg = c.ac  },
-
   -- hop
   HopNextKey               = { fg = c.blue    },
   HopNextKey1              = { fg = c.red     },
@@ -308,10 +302,17 @@ local hl_groups = {
   mkdURL                   = { fg = c.magenta },
 
   -- mini-tabline
-  TabLine                  = { fg = c.fd     },
+  TabLine                  = { fg = c.fd      },
 
   -- netrw
   netrwTreeBar = { fg = c.fg },
+
+  -- indent-line
+  SnacksIndent             = { fg = c.ac      },
+  SnacksIndentScope        = { fg = c.ac      },
+
+  -- snacks
+  SnacksPickerTitle       = { fg = c.fg       },
 
   -- which-key
   WhichKey                 = { fg = c.blue    },
