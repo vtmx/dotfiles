@@ -7,20 +7,27 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-function M.toggle_pairs()
-  if vim.g.minipairs_disable then
-    vim.g.minipairs_disable = false
-    print('Enable pairs')
-  else
-    vim.g.minipairs_disable = true
-    print('Disable pairs')
+function M.toggle_cursorword()
+  if not MiniCursorword then
+    require('mini.cursorword').setup()
   end
+
+  if vim.b.minicursorword_disable then
+    vim.b.minicursorword_disable = true
+  else
+    vim.b.minicursorword_disable = false
+  end
+
+  print('Toggle cursorword')
 end
 
-function M.toggle_ia()
-  if vim.cmd('CodeiumToggle') then
-    print('Toggle ia')
-  end
+function M.toggle_diagnostic()
+  if vim.diagnostic.is_enabled() then
+		vim.diagnostic.enable(false)
+	else
+		vim.diagnostic.enable(true)
+	end
+  print('Toggle diagnostic')
 end
 
 function M.toggle_diary()
@@ -33,6 +40,12 @@ function M.toggle_diary()
   vim.keymap.set({'n', 'v'}, 'H', 'g^')
   vim.keymap.set({'n', 'v'}, 'L', 'g$')
   print('Toggle diary')
+end
+
+function M.toggle_ia()
+  if vim.cmd('CodeiumToggle') then
+    print('Toggle ia')
+  end
 end
 
 function M.toggle_number()
@@ -74,6 +87,16 @@ function M.toggle_listchars()
   else
     vim.o.list = true
     print('Enable list chars')
+  end
+end
+
+function M.toggle_pairs()
+  if vim.g.minipairs_disable then
+    vim.g.minipairs_disable = false
+    print('Enable pairs')
+  else
+    vim.g.minipairs_disable = true
+    print('Disable pairs')
   end
 end
 

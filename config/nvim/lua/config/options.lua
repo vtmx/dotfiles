@@ -16,7 +16,7 @@ local opts = {
   swapfile = false,
   tabstop = 2,
   updatetime = 250,
-  wrap = false,
+  wrap = false
 }
 
 -- Set options

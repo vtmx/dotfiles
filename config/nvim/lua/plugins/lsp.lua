@@ -19,12 +19,7 @@ return {
         filetypes = { 'lua' },
       })
 
-      vim.api.nvim_create_autocmd('FileType', {
-        pattern = 'lua',
-        callback = function()
-          vim.wo.signcolumn = 'yes'
-        end,
-      })
+      vim.diagnostic.enable(false)
     end
-  },
+  }
 }
