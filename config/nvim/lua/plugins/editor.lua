@@ -4,16 +4,15 @@ return {
     event = 'ModeChanged', config = true
   },
   {
+    'nvim-mini/mini.cursorword'
+  },
+  {
     'nvim-mini/mini.files',
     event = 'ModeChanged',
     config = function()
       require('mini.files').setup({
-        mappings = {
-          go_in_plus = '<cr>'
-        },
-        options = {
-          use_as_default_explorer = true,
-        }
+        mappings = { go_in_plus = '<cr>' },
+        options = { use_as_default_explorer = true }
       })
     end
   },

@@ -439,6 +439,16 @@ map(
 )
 
 map(
+  'n', '<leader>C', function() utils.toggle_cursorword() end,
+  { desc = 'Toggle cursorword' }
+)
+
+map(
+  'n', '<leader>ud', function() utils.toggle_diagnostic() end,
+  { desc = 'Toggle diagnostic' }
+)
+
+map(
   'n', '<leader>ui', function() utils.toggle_ia() end,
   { desc = 'Toggle ia' }
 )

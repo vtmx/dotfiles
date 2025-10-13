@@ -302,6 +302,10 @@ local hl_groups = {
   mkdLink                  = { fg = c.blue    },
   mkdURL                   = { fg = c.magenta },
 
+  -- mini-cursorword
+  MiniCursorword           = { fg = c.yellow  },
+  MiniCursorwordCurrent    = { fg = c.yellow  },
+
   -- mini-tabline
   TabLine                  = { fg = c.fd      },
 
