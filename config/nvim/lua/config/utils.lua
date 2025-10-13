@@ -19,14 +19,15 @@ function M.toggle_cursorword()
     vim.b.minicursorword_disable = false
     print('Cursorword disable')
   end
-
 end
 
 function M.toggle_diagnostic()
   if vim.diagnostic.is_enabled() then
+    vim.o.signcolumn = 'no'
 		vim.diagnostic.enable(false)
     print('Diagnostic disable')
 	else
+    vim.o.signcolumn = 'yes'
 		vim.diagnostic.enable(true)
     print('Diagnostic enable')
 	end
