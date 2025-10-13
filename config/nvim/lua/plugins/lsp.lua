@@ -19,7 +19,10 @@ return {
         filetypes = { 'lua' },
         diagnostics = { globals = { 'vim' } },
         settings = {
-          Lua = { diagnostics = { globals = { 'vim' } } }
+          Lua = {
+            diagnostics = { globals = { 'vim' } },
+            runtime = { version = 'LuaJIT' }
+          }
         }
       })
 

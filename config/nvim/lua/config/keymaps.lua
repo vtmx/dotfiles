@@ -439,7 +439,7 @@ map(
 )
 
 map(
-  'n', '<leader>C', function() utils.toggle_cursorword() end,
+  'n', '<leader>uC', function() utils.toggle_cursorword() end,
   { desc = 'Toggle cursorword' }
 )
 
