@@ -16,6 +16,7 @@ local opts = {
   swapfile = false,
   tabstop = 2,
   updatetime = 250,
+  winborder = 'rounded',
   wrap = false
 }
 

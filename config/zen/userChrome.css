@@ -92,6 +92,8 @@ tooltip,
 
 /* icon url-bar - fix blink msgbox */
 #identity-box {
+  width: 0;
+  height: 0;
   opacity: 0 !important;
 }
 

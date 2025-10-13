@@ -14,20 +14,22 @@ function M.toggle_cursorword()
 
   if vim.b.minicursorword_disable then
     vim.b.minicursorword_disable = true
+    print('Cursorword enable')
   else
     vim.b.minicursorword_disable = false
+    print('Cursorword disable')
   end
 
-  print('Toggle cursorword')
 end
 
 function M.toggle_diagnostic()
   if vim.diagnostic.is_enabled() then
 		vim.diagnostic.enable(false)
+    print('Diagnostic disable')
 	else
 		vim.diagnostic.enable(true)
+    print('Diagnostic enable')
 	end
-  print('Toggle diagnostic')
 end
 
 function M.toggle_diary()
