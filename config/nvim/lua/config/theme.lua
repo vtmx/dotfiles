@@ -289,9 +289,13 @@ local hl_groups = {
   HopUnmatched             = { fg = c.fd      },
 
   -- lazy
-  LazyNormal               = { bg = c.bd     },
-  LazyProgressDone         = { fg = c.blue   },
-  LazyProp                 = { bg = c.ac     },
+  LazyNormal               = { bg = c.bd      },
+  LazyProgressDone         = { fg = c.blue    },
+  LazyProp                 = { bg = c.ac      },
+
+  -- mini-cursorword
+  MiniCursorword           = { fg = c.yellow  },
+  MiniCursorwordCurrent    = { fg = c.yellow  },
 
   --markdown
   mkdCodeEnd               = { fg = c.fg      },
@@ -302,15 +306,8 @@ local hl_groups = {
   mkdLink                  = { fg = c.blue    },
   mkdURL                   = { fg = c.magenta },
 
-  -- mini-cursorword
-  MiniCursorword           = { fg = c.yellow  },
-  MiniCursorwordCurrent    = { fg = c.yellow  },
-
-  -- mini-tabline
-  TabLine                  = { fg = c.fd      },
-
   -- netrw
-  netrwTreeBar = { fg = c.fg },
+  netrwTreeBar             = { fg = c.fg      },
 
   -- snacks-indent
   SnacksIndent             = { fg = c.ac      },
