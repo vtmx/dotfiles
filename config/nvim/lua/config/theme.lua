@@ -288,6 +288,15 @@ local hl_groups = {
   HopNextKey3              = { fg = c.magenta },
   HopUnmatched             = { fg = c.fd      },
 
+  -- kitty
+  KittyColor               = { fg = c.orange  },
+  KittyAction              = { fg = c.fg      },
+  KittyKeybind             = { fg = c.blue    },
+  KittyKeyword             = { fg = c.red     },
+  KittyMap                 = { fg = c.purple  },
+  KittyMod                 = { fg = c.blue    },
+  KittySt                  = { fg = c.green   },
+
   -- lazy
   LazyNormal               = { bg = c.bd      },
   LazyProgressDone         = { fg = c.blue    },
