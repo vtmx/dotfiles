@@ -8,6 +8,14 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require('lspconfig')
+      
+      lspconfig.bashls.setup({
+        cmd = { 'bash-language-server' },
+        filetypes = { 'sh' },
+        settings = {
+          bashIde = { shellcheckArguments = '-e SC2086' }
+        }
+      })
 
       lspconfig.emmet_language_server.setup({
         cmd = { 'emmet-language-server', '--stdio' },
@@ -27,6 +35,7 @@ return {
       })
 
       vim.diagnostic.enable(false)
+      vim.opt.winborder = 'rounded'
     end
   }
 }
