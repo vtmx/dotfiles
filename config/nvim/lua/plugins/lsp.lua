@@ -10,10 +10,13 @@ return {
       local lspconfig = require('lspconfig')
       
       lspconfig.bashls.setup({
-        cmd = { 'bash-language-server' },
-        filetypes = { 'sh' },
+        cmd = { 'bash-language-server', 'start' },
+        filetypes = { 'bash', 'sh' },
         settings = {
-          bashIde = { shellcheckArguments = '-e SC2086' }
+          bashIde = { 
+            globPattern = '*@(.sh|.inc|.bash|.command)',
+            shellcheckArguments = '-e SC2086' 
+          }
         }
       })
 
