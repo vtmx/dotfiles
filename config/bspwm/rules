@@ -5,10 +5,7 @@ br="bspc rule -a"
 $br zen               desktop="^1" focus=on follow=on
 $br code-oss          desktop="^2" focus=on
 $br kitty             desktop="^2" focus=on follow=on
-$br dolphin           desktop="^3" focus=on
-$br thunar            desktop="^3" focus=on
 $br bitwarden-desktop desktop="^4" focus=on
-$br keepassxc         desktop="^4" focus=on
 $br steam             desktop="^4" state=floating
 $br qBittorrent       desktop="^5" focus=on follow=on
 $br mpv                            state=floating 
