@@ -400,6 +400,16 @@ play() {
       fi
     }
 
+    to_play_random() {
+      local has_mp3=$(find . -type f -iname '*.mp3')
+      if [[ "$has_mp3" ]]; then
+        find . -type f -name "*.mp3" -exec mpv $args --shuffle {} +
+      else
+        echo "$has_mp3"
+        find "$music" -type f -name "*.mp3" -exec mpv $args --shuffle {} +
+      fi
+    }
+
     case "$1" in
       @(ani?(me)))        to_play "$music/j-music/anime"                                     ;;
       @(brian|bc))        to_play "$music/jazz/brian-cullberston"                            ;;
@@ -410,7 +420,7 @@ play() {
       @(mj|michael))      to_play "$music/lentas/michael-jackson"                            ;;
       ost)                to_play "$music/ost"                                               ;;
       @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 250 | xargs mpv $args                  ;;
-      rd)                 find "$music" -type f -name "*.mp3" -exec mpv $args --shuffle {} + ;;
+      rd)                 to_play_random                                                     ;;
       @(retro?(wave)))    to_play "$music/retrowave"                                         ;;
       @(s?(earch)))       find "$music" -type f -iname *"$2"*.mp3 | fzf | xargs mpv $args    ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"                 ;;
