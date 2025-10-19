@@ -1,5 +1,8 @@
 return {
   {
+    'rktjmp/lush.nvim' 
+  },
+  {
     'nvim-mini/mini.align',
     event = 'ModeChanged', config = true
   },

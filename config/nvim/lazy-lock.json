@@ -7,6 +7,7 @@
   "hop.nvim": { "branch": "master", "commit": "1a1eceafe54b5081eae4cb91c723abd1d450f34b" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lualine.nvim": { "branch": "master", "commit": "b8c23159c0161f4b89196f74ee3a6d02cdc3a955" },
+  "lush.nvim": { "branch": "main", "commit": "9c60ec2279d62487d942ce095e49006af28eed6e" },
   "mason.nvim": { "branch": "main", "commit": "7dc4facca9702f95353d5a1f87daf23d78e31c2a" },
   "mini.align": { "branch": "main", "commit": "ab6777ca0fdfe8e4cfe931e3b0b5d98c719c3c1d" },
   "mini.cursorword": { "branch": "main", "commit": "d843392f739fcfd85969e2dadeb71c8e0221afb5" },

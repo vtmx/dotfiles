@@ -140,16 +140,18 @@ local hl_groups = {
   markdownUrl              = { fg = c.fg      },
 
   -- css
-  cssClassName    = { fg   = c.red    },
-  cssClassNameDot = { fg   = c.orange },
-  cssDefinition   = { link = 'cssClassName' },
-  cssHacks        = { fg   = c.fg     },
-  cssTagName      = { fg   = c.red    },
-  cssVendor       = { fg   = c.fg     },
+  cssClassName    = { fg   = c.red     },
+  cssClassNameDot = { fg   = c.orange  },
+  cssCustomProp   = { fg   = c.magenta },
+  cssDefinition   = { fg   = c.red     },
+  cssHacks        = { fg   = c.fg      },
+  cssNoise        = { fg   = c.cyan    },
+  cssTagName      = { fg   = c.red     },
+  cssVendor       = { fg   = c.fg      },
 
   -- js
   javaScriptBraces   = { link = 'Delimiter' },
-  javaScriptFunction = { fg = c.magenta     },
+  javaScriptFunction = { fg = c.fg          },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red                    },
@@ -307,9 +309,11 @@ local hl_groups = {
   MiniCursorwordCurrent    = { fg = c.yellow  },
 
   --markdown
+  mkdCodeDelimiter         = { fg = c.fg      },
   mkdCodeEnd               = { fg = c.fg      },
+  mkdCode                  = { fg = c.fg      },
   mkdCodeStart             = { fg = c.fg      },
-  mkdHeading               = { fg = c.red     },
+  mkdHeading               = { fg = c.blue    },
   mkdInlineURL             = { fg = c.blue    },
   mkdLineBreak             = { link = 'NONE'  },
   mkdLink                  = { fg = c.blue    },
@@ -329,6 +333,9 @@ local hl_groups = {
   WhichKeyGroup            = { fg = c.magenta },
   WhichKeySeparator        = { fg = c.fg      },
 }
+
+-- Clear all colors
+vim.cmd.hi('clear')
 
 -- Loop for colors
 for name, val in pairs(hl_groups) do
