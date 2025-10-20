@@ -278,6 +278,12 @@ local hl_groups = {
   CodeiumAnnotation        = { fg = c.fg      },
   CodeiumSuggestion        = { fg = c.fd      },
 
+  -- indent-blankline
+  IblIndent = { fg = c.ac  },
+  IblScope  = { fg = c.fg  },
+  ['@ibl.scope.char.1'] = { link = 'IblScope' },
+  ['@ibl.scope.underline.1'] = { link = 'NowText' },
+
   -- fzf-lua
   Brow1                    = { fg = c.red     },
   FzfLuaBorder             = { fg = c.fd      },
@@ -308,6 +314,9 @@ local hl_groups = {
   MiniCursorword           = { fg = c.yellow  },
   MiniCursorwordCurrent    = { fg = c.yellow  },
 
+  -- mini-identscope
+  MiniIndentscopeSymbol    = { fg = c.ac      },
+
   --markdown
   mkdCodeDelimiter         = { fg = c.fg      },
   mkdCodeEnd               = { fg = c.fg      },
@@ -321,10 +330,6 @@ local hl_groups = {
 
   -- netrw
   netrwTreeBar             = { fg = c.fg      },
-
-  -- snacks-indent
-  SnacksIndent             = { fg = c.ac      },
-  SnacksIndentScope        = { fg = c.ac      },
 
   -- which-key
   WhichKey                 = { fg = c.blue    },
