@@ -1,8 +1,5 @@
 return {
   {
-    'rktjmp/lush.nvim' 
-  },
-  {
     'nvim-mini/mini.align',
     event = 'ModeChanged', config = true
   },
@@ -19,6 +16,18 @@ return {
       })
     end
   },
+  -- {
+  --   'nvim-mini/mini.indentscope',
+  --   config = function()
+  --     require('mini.indentscope').setup({
+  --       draw = {
+  --         animation = require('mini.indentscope').gen_animation.none(),
+  --         delay = 0
+  --       },
+  --       symbol = '│'
+  --     })
+  --   end 
+  -- },
   {
     'nvim-mini/mini.surround',
     event = 'ModeChanged',
@@ -30,11 +39,16 @@ return {
     end
   },
   {
-    'folke/snacks.nvim',
-    event = 'ModeChanged',
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    event = 'VeryLazy',
     opts = {
       indent = {
-        enabled = true, priority = 2, animate = { enabled = false }
+        priority = 2
+      },
+      scope = {
+        enabled = true,
+        priority = 2
       }
     }
   },

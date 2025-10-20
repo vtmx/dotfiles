@@ -1,6 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  event = 'ModeChanged', 
+  lazy = false,
   build = ':TSUpdate',
   auto_install = true,
   sync_install = false,
