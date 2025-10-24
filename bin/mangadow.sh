@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+set -e
+
+# awk '/wp-manga-chapter-img">$/ {print $0}' site.url
+# wget $(curl 'site' | grep -Eo 'https://mangalivre.to/wp-content/uploads/WP-manga/data.+.webp')
+# curl 'site' | grep -Eo 'https://mangalivre.to/wp-content/uploads/WP-manga/data.+.webp' | xargs wget
+# https://mangalivre.to/manga/kimetsu-no-yaiba/capitulo-{1..150}/
+
+url_base='https://mangalivre.to'
+manga_title='hunter-x-hunter'
+chapter_start=1
+chapter_end=2
+
+# Download imagens
+for ((chapter=$chapter_start; chapter<=$chapter_end; chapter++)); do
+  chapter_number=$(printf "%03d" $chapter) 
+  chapter_dir=$chapter_number
+
+  echo "Create dir $(pwd)/$chapter_dir"
+  [[ -d "$chapter_dir" ]] && rm -r "$chapter_dir"
+  mkdir "$chapter_dir"
+
+  url_download="$url_base/manga/$manga_title/capitulo-${chapter}/"
+  echo -e "Download fom: $url_download\nTo: $(pwd)/$chapter_dir"
+  wget -q -P "$chapter_dir" \
+  $(curl "$url_download" | grep -Eo "$url_base/wp-content/uploads/WP-manga/data.+.webp")
+
+  echo 'Converting webp to html...'
+  html_file="$manga_title-$chapter_number.html"
+  mobi_file="$manga_title-$chapter_number.mobi"
+  echo -e "<html>\n\t<body style=\"background: black\">" > "$html_file"
+  for img in "$chapter_dir"/*.webp; do
+    echo -e "\t\t<img style=\"display: block; margin: 0 auto; width: 100%; height: auto\" src=\"$img\">" >> "$html_file"
+  done
+  echo -e "\t</body>\n</html>" >> "$html_file"
+
+  echo Convert cover image...
+  manga_cover=$(ls $chapter_dir/*.webp | head -n1)
+  manga_cover_png="${manga_cover/webp/png}"
+  magick "$manga_cover" "$manga_cover_png"
+
+  echo 'Converting to html to mobi...'
+  ebook-convert "$html_file" "$mobi_file" \
+  --title "$manga_title-$chapter" \
+  --cover "$manga_cover_png" \
+  --publisher "Mangá Livre"
+  echo
+done

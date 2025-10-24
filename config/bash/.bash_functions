@@ -411,20 +411,20 @@ play() {
     }
 
     case "$1" in
-      @(ani?(me)))        to_play "$music/j-music/anime"                                     ;;
-      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                            ;;
-      @(jaz?(z)))         to_play "$music/jazz"                                              ;;
-      h)                  usage                                                              ;;
-      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"                           ;;
-      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"                 ;;
-      @(mj|michael))      to_play "$music/lentas/michael-jackson"                            ;;
-      ost)                to_play "$music/ost"                                               ;;
-      @(r?(ecent)?(s)))   ls -t "$music"/** | head -n 250 | xargs mpv $args                  ;;
-      rd)                 to_play_random                                                     ;;
-      @(retro?(wave)))    to_play "$music/retrowave"                                         ;;
-      @(s?(earch)))       find "$music" -type f -iname *"$2"*.mp3 | fzf | xargs mpv $args    ;;
-      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"                 ;;
-      *)                  to_play $1                                                         ;;
+      @(ani?(me)))        to_play "$music/j-music/anime"                                  ;;
+      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                         ;;
+      @(jaz?(z)))         to_play "$music/jazz"                                           ;;
+      h)                  usage                                                           ;;
+      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"                        ;;
+      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"              ;;
+      @(mj|michael))      to_play "$music/lentas/michael-jackson"                         ;;
+      ost)                to_play "$music/ost"                                            ;;
+      rd)                 to_play_random                                                  ;;
+      rc)                 ls -t "$music"/** | head -n 250 | xargs mpv $args               ;;
+      @(retro?(wave)))    to_play "$music/retrowave"                                      ;;
+      @(s?(earch)))       find "$music" -type f -iname *"$2"*.mp3 | fzf | xargs mpv $args ;;
+      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"              ;;
+      *)                  to_play $1                                                      ;;
     esac
   fi
 }

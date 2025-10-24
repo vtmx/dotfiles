@@ -145,7 +145,7 @@ local hl_groups = {
   cssCustomProp   = { fg   = c.magenta },
   cssDefinition   = { fg   = c.red     },
   cssHacks        = { fg   = c.fg      },
-  cssNoise        = { fg   = c.cyan    },
+  cssNoise        = { fg   = c.fg    },
   cssTagName      = { fg   = c.red     },
   cssVendor       = { fg   = c.fg      },
 
