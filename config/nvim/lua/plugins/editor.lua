@@ -38,6 +38,11 @@ return {
       })
     end
   },
+  -- {
+  --   'nvim-mini/mini.pairs',
+  --   event = 'ModeChanged',
+  --   config = true
+  -- },
   {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
@@ -47,7 +52,7 @@ return {
         priority = 2
       },
       scope = {
-        enabled = true,
+        enabled = false,
         priority = 2
       }
     }

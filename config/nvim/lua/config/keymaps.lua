@@ -404,7 +404,7 @@ map(
 )
 
 map(
-  'n', '<leader>s', ':%s/\\<C-r><C-w>\\>//g<Left><Left>',
+  'n', '<leader>s', ':%s/<C-r><C-w>//g<Left><Left>',
   { desc = 'Substitute current word' }
 )
 
