@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+yt_video_url='https://www.youtube.com/watch?v'
+yt_video_id='5AQdmbQ4JhY'
+
+yt-dlp \
+--skip-download \
+--write-subs \
+--write-auto-subs \
+--sub-lang pt \
+--sub-format srt \
+--output "transcricao" \
+"$yt_video_url=$yt_video_id"  
+
+awk '
+# Ignora número da legenda
+/^[0-9]+$/ { next }
+
+# Separa tempo inicial
+/-->/ {
+    split($1, start, ",")
+    time = start[1]
+    next
+}
+NF {
+  # Remove a ocorrência de >>
+  gsub(/>> /, "")
+
+  # Imprimi padrão
+  print time " - " $0
+}' transcricao.pt.srt > transcricao.srt

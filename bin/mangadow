@@ -2,15 +2,12 @@
 
 set -e
 
-# awk '/wp-manga-chapter-img">$/ {print $0}' site.url
-# wget $(curl 'site' | grep -Eo 'https://mangalivre.to/wp-content/uploads/WP-manga/data.+.webp')
-# curl 'site' | grep -Eo 'https://mangalivre.to/wp-content/uploads/WP-manga/data.+.webp' | xargs wget
 # https://mangalivre.to/manga/kimetsu-no-yaiba/capitulo-{1..150}/
 
 url_base='https://mangalivre.to'
 manga_title='kimetsu-no-yaiba'
-chapter_start=23
-chapter_end=25
+chapter_start=57
+chapter_end=57
 echo
 
 # Download imagens
@@ -25,7 +22,7 @@ for ((chapter=$chapter_start; chapter<=$chapter_end; chapter++)); do
 
   manga_url="$url_base/manga/$manga_title/capitulo-${chapter}/"
   echo -e "Download fom: $manga_url\nTo: $(pwd)/$chapter_dir"
-  wget -q -P "$chapter_dir" \
+  wget -q -N -P "$chapter_dir" \
   $(curl "$manga_url" | grep -Eo "$url_base/wp-content/uploads/WP-manga/data.+.webp")
 
   echo 'Converting webp to html...'
@@ -45,7 +42,7 @@ for ((chapter=$chapter_start; chapter<=$chapter_end; chapter++)); do
   echo 'Converting to html to mobi...'
   ebook-convert "$manga_file_html" "$manga_file_mobi" \
   --title "$manga_title-$chapter_number" \
-  --authors "Mangá Livre" \
+  --authors "Koyoharu Gotoge" \
   --publisher "Mangá Livre" \
   --language "pt_BR" \
   --cover "$manga_cover_png" \

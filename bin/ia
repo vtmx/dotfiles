@@ -12,6 +12,8 @@ fi
 prereqs=(glow gum jq)
 type "${prereqs[@]}" &>/dev/null || { echo 'error: need gum, glow and jq'; exit 1; }
 
+premsg="Escreva sem enrolação o mais resumidamente e direto possível."
+
 if [[ "$*" ]]; then
   msg="$*"
 else
@@ -27,7 +29,7 @@ curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
   -H 'Content-Type: application/json' \
   -d '{
     "messages": [
-      { "role": "user", "content": "'"$msg"'" }
+      { "role": "user", "content": "'"$premsg $msg"'" }
     ],
     "model": "llama-3.3-70b-versatile"
   }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"
