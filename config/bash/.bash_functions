@@ -238,7 +238,7 @@ mvcut() {
   read -p 'Rename [y/N]: ' confirm
 
   if [[ $confirm =~ [yY] ]]; then
-    rename -n "s/${1}//" *
+    rename "s/${1}//" *
   fi
 }
 
@@ -345,7 +345,7 @@ mvmd() {
 # Substitute words
 mvs() {
   [[ "$1" ]] || { echo 'error: need two words'; return 1; }
-  rename -n "s/$1/$2/" *
+  rename -n "s/$1/$2/g" *
   echo; read -p 'Rename [y/N]: ' confirm
   [[ $confirm =~ [yY] ]] && rename "s/$1/$2/" *
 }
