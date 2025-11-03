@@ -2,7 +2,7 @@
 
 br="bspc rule -a"
 
-$br zen               desktop="^1" focus=on follow=on
+$br zen               desktop="^1" focus=on
 $br code-oss          desktop="^2" focus=on
 $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^4" focus=on

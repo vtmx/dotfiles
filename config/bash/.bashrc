@@ -12,6 +12,7 @@ export HISTFILESIZE=5000
 export HISTIGNORE='..:...:bg:fg:clear:history:l:ls:pwd:z'
 export HISTSIZE=5000
 export HISTTIMEFORMAT="%F %T "
+export SHELL=/usr/bin/bash
 export PATH="$PATH:$HOME/.local/bin"
 
 # Colors
