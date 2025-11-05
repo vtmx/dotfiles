@@ -1,11 +1,37 @@
 #!/usr/bin/env bash
+
 # Color converter using Dracula theme as base
 # https://github.com/dracula/dracula-theme
-# Usage: ./alucard dracula.json > custom.json
+# Usage: alucard dracula.json > custom.json
 
 [[ $1 ]] || { echo 'alucard: need a file'; exit; }
 
-declare -A dracula
+declare -A custom dracula
+
+# Custom color
+custom[background]='23272e'
+custom[currentline]='2c313c'
+custom[selection]='3d4556'
+custom[foreground]='abb2bf'
+custom[comment]='5c6370'
+custom[blue]='61afef'
+custom[cyan]='56b6c2'
+custom[green]='98c379'
+custom[orange]='d19a66'
+custom[pink]='c678dd'
+custom[purple]='c678dd'
+custom[red]='e06c75'
+custom[yellow]='e5c07b'
+custom[brightblack]=${custom[background]}
+custom[brightblue]=${custom[blue]}
+custom[brightcyan]=${custom[cyan]}
+custom[brightgreen]=${custom[green]}
+custom[brightpurple]=${custom[purple]}
+custom[brightred]=${custom[red]}
+custom[brightwhite]=${custom[foreground]}
+custom[brightyellow]=${custom[yellow]}
+
+# Dracula
 dracula[background]='282a36'
 dracula[currentline]='44475a'
 dracula[selection]='44475a'
@@ -28,28 +54,6 @@ dracula[brightred]='ff6e6e'
 dracula[brightwhite]='ffffff'
 dracula[brightyellow]='ffffa'
 
-declare -A custom
-custom[background]='23272e'
-custom[currentline]='2c313c'
-custom[selection]='3d4556'
-custom[foreground]='abb2bf'
-custom[comment]='5c6370'
-custom[blue]='61afef'
-custom[cyan]='56b6c2'
-custom[green]='98c379'
-custom[orange]='d19a66'
-custom[pink]='c678dd'
-custom[purple]='c678dd'
-custom[red]='e06c75'
-custom[yellow]='e5c07b'
-custom[brightblack]=${custom[background]}
-custom[brightblue]=${custom[blue]}
-custom[brightcyan]=${custom[cyan]}
-custom[brightgreen]=${custom[green]}
-custom[brightpurple]=${custom[purple]}
-custom[brightred]=${custom[red]}
-custom[brightwhite]=${custom[foreground]}
-custom[brightyellow]=${custom[yellow]}
 
 # Loop for colors
 for color in "${!dracula[@]}"; do

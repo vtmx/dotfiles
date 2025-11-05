@@ -74,6 +74,16 @@ map(
 )
 
 map(
+  'n', 'n', 'nzz',
+  { desc = 'Next search and center' }
+)
+
+map(
+  'n', 'N', 'Nzz',
+  { desc = 'Prev search and center' }
+)
+
+map(
   'n', 's', '<cmd>HopChar1<cr>',
   { desc = 'Char' }
 )
@@ -121,6 +131,16 @@ map(
 map(
   'n', '<s-tab>', '<cmd>bp<cr>',
   { desc = 'Buffer prev' }
+)
+
+map(
+  'n', '<c-d>', '<c-d>zz',
+  { desc = 'Page down and center' }
+)
+
+map(
+  'n', '<c-u>', '<c-u>zz',
+  { desc = 'Page up and center' }
 )
 
 map(

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Print ibov stock
+
 [[ $1 ]] && stock="$1" || stock="ibov"
 url="https://www.google.com/search?q=${stock^^}"
 
