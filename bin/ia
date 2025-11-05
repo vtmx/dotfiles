@@ -9,27 +9,39 @@ else
 fi
 
 # Check prereq
-prereqs=(glow gum jq)
-type "${prereqs[@]}" &>/dev/null || { echo 'error: need gum, glow and jq'; exit 1; }
+prereqs=(curl glow gum jq)
+if ! type "${prereqs[@]}" &>/dev/null; then
+  echo 'error: need curl, gum, glow and jq'
+  exit 1
+fi
 
-premsg="Escreva sem enrolação o mais resumidamente e direto possível."
-
+# Get msg
 if [[ "$*" ]]; then
   msg="$*"
 else
-  msg=$(gum input --cursor.foreground=7 --prompt='❯ ' --prompt.foreground=2 --placeholder='Mensagem para ia' --width=80)
-  echo "  $msg"
+  echo 'error: no message'
+  exit 1
 fi
 
-# Check msg
-[[ "$msg" ]] || { echo 'error: no message'; exit 1; }
+# Vars
+api_url="https://api.groq.com/openai/v1/chat/completions"
+auth_header="Bearer $iakey"
+content_type="application/json"
+role="user"
+model="llama-3.3-70b-versatile"
+premsg="Escreva sem enrolação o mais resumidamente e direto possível."
 
-curl -s -X POST 'https://api.groq.com/openai/v1/chat/completions' \
-  -H "Authorization: Bearer $iakey" \
-  -H 'Content-Type: application/json' \
+curl -s -X POST "$api_url" \
+  -H "Authorization: $auth_header" \
+  -H "Content-Type: $content_type" \
   -d '{
     "messages": [
-      { "role": "user", "content": "'"$premsg $msg"'" }
+      {
+        "role": "'"$role"'",
+        "content": "'"$premsg $msg"'"
+      }
     ],
-    "model": "llama-3.3-70b-versatile"
-  }' | jq -r '.choices[0].message.content' | glow -s "$HOME/.config/glow/onedark.json"
+    "model": "'"$model"'"
+  }' | \
+jq -r '.choices[0].message.content' | \
+glow -s "$HOME/.config/glow/onedark.json"
