@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Color converter using Dracula theme as base.
+# Color converter using Dracula theme as base
 # https://github.com/dracula/dracula-theme
 # Usage: ./alucard dracula.json > custom.json
 
-[[ $1 ]] || echo 'alucard: need a file'
+[[ $1 ]] || { echo 'alucard: need a file'; exit; }
 
 declare -A dracula
 dracula[background]='282a36'
@@ -51,25 +51,10 @@ custom[brightred]=${custom[red]}
 custom[brightwhite]=${custom[foreground]}
 custom[brightyellow]=${custom[yellow]}
 
-sed -e "s/${dracula[background]}/${custom[background]}/gI" \
-    -e "s/${dracula[currentline]}/${custom[currentline]}/gI" \
-    -e "s/${dracula[selection]}/${custom[selection]}/gI" \
-    -e "s/${dracula[foreground]}/${custom[foreground]}/gI" \
-    -e "s/${dracula[comment]}/${custom[comment]}/gI" \
-    -e "s/${dracula[blue]}/${custom[blue]}/gI" \
-    -e "s/${dracula[cyan]}/${custom[cyan]}/gI" \
-    -e "s/${dracula[green]}/${custom[green]}/gI" \
-    -e "s/${dracula[orange]}/${custom[orange]}/gI" \
-    -e "s/${dracula[pink]}/${custom[pink]}/gI" \
-    -e "s/${dracula[purple]}/${custom[purple]}/gI" \
-    -e "s/${dracula[red]}/${custom[red]}/gI" \
-    -e "s/${dracula[yellow]}/${custom[yellow]}/gI" \
-    -e "s/${dracula[brightblack]}/${custom[brightblack]}/gI" \
-    -e "s/${dracula[brightblue]}/${custom[brightblue]}/gI" \
-    -e "s/${dracula[brightcyan]}/${custom[brightcyan]}/gI" \
-    -e "s/${dracula[brightgreen]}/${custom[brightgreen]}/gI" \
-    -e "s/${dracula[brightpurple]}/${custom[brightpurple]}/gI" \
-    -e "s/${dracula[brightred]}/${custom[brightred]}/gI" \
-    -e "s/${dracula[brightwhite]}/${custom[brightwhite]}/gI" \
-    -e "s/${dracula[brightyellow]}/${custom[brightyellow]}/gI" \
-    $1
+# Loop for colors
+for color in "${!dracula[@]}"; do
+  sed_args+="s/${dracula[$color]}/${custom[$color]}/gI;"
+done
+
+# Substitute colors
+sed -e "$sed_args" $1

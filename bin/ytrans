@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Youtube download transcript
+
 yt_video_url='https://www.youtube.com/watch?v'
 yt_video_id='K69CM6h9CMI'
 
