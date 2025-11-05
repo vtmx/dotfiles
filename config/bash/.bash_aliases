@@ -124,10 +124,6 @@ alias la="ls -A | grep '^\.' | column"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 
-# man pt-br
-alias m="man -L pt_BR.UTF-8"
-alias man="man -L pt_BR.UTF-8"
-
 # create dir
 alias md="mkdir -p"
 

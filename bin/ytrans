@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 yt_video_url='https://www.youtube.com/watch?v'
-yt_video_id='5AQdmbQ4JhY'
+yt_video_id='K69CM6h9CMI'
 
 yt-dlp \
 --skip-download \
@@ -22,6 +22,7 @@ awk '
     time = start[1]
     next
 }
+
 NF {
   # Remove a ocorrência de >>
   gsub(/>> /, "")

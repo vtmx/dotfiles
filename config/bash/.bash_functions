@@ -157,6 +157,11 @@ htm() {
   curl -s $1 | htmlq -t $2
 }
 
+# Man with bat
+mn() {
+  command man "$@" | col -bx | bat -plman --theme ansi
+}
+
 # Create dir and enter
 mkcd() {
   if [[ -n $1 ]]; then
@@ -362,7 +367,7 @@ ren() {
 }
 
 # Link in working dir
-lwd() {
+lnwd() {
   [[ $1 && $2 ]] || {
     echo 'usage: lnwd <file-or-dir> <path>'
     return 1
