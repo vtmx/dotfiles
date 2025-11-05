@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Print current btc stock
+
 lynx -dump -display_charset=utf-8 \
   'https://www.google.com/finance/quote/BTC-USD' | \
   grep -A1 '\bShare\b'| tail -n1 | tr -d '[[:space:]]'

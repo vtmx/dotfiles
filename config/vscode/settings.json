@@ -210,6 +210,12 @@
     // Create mark
     { "before": ["M"], "after": ["`"] },
 
+    // Next search and center
+    { "before": ["n"], "after": ["n", "z", "z"] },
+
+    // Prev search and center
+    { "before": ["N"], "after": ["N", "z", "z"] },
+
     // Play macro
     { "before": ["Q"], "after": ["@", "q"] },
 
@@ -246,7 +252,7 @@
     // Remove indent
     { "before": ["<"], "after": ["<", "<"] },
 
-    // Down and middle page
+    // Page down and middle page
     { "before": ["<c-d>"], "after": ["<c-d>", "z", "z"] },
 
     // Find
@@ -263,6 +269,9 @@
 
     // Redo
     { "before": ["<c-r>"], "commands": ["redo"] },
+
+    // Page up and middle page
+    { "before": ["<c-u>"], "after": ["<c-u>", "z", "z"] },
 
     // Open explorer
     { "before": ["<c-s-e>"], "commands": ["viewContainer.workbench.view.explorer.enabled"] },
