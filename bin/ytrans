@@ -2,21 +2,31 @@
 
 # Youtube download transcript
 
-yt_video_url='https://www.youtube.com/watch?v'
-yt_video_id=''
+# Check url
+if [[ $1 ]]; then
+  yt_url="$1"
+  yt_trans_file=transcricao.srt
+else
+  echo 'erro: no url'
+  exit 1
+fi
 
 yt-dlp \
---skip-download \
---write-subs \
---write-auto-subs \
---sub-lang pt \
---sub-format srt \
---output "transcricao" \
-"$yt_video_url=$yt_video_id"  
+  --skip-download \
+  --sub-format srt \
+  --sub-lang pt \
+  --write-subs \
+  --write-auto-subs \
+  --quiet \
+  --output "transcricao" \
+  "$yt_url"  
 
 awk '
 # Ignora número da legenda
 /^[0-9]+$/ { next }
+
+# Ignora linhas com [Música]
+/\[Música\]/ { next }
 
 # Separa tempo inicial
 /-->/ {
@@ -31,4 +41,27 @@ NF {
 
   # Imprimi padrão
   print time " - " $0
-}' transcricao.pt.srt > transcricao.srt
+}' transcricao.pt.srt > $yt_trans_file && rm transcricao.pt.srt
+
+if [[ ! -f "$yt_trans_file" ]]; then
+  echo "erro: file not found: $yt_trans_file"
+  exit 1
+fi
+
+# Clipboard line on click time cell
+clipboard() {
+  # Using to remove \n in sed
+  local line=$(sed -E "s/^'([[:digit:]]{2}:[[:digit:]]{2}:[[:digit:]]{2})' '(.+)'$/\1 - \2/g" <<< "$1")
+  printf "%s" "$line" | xclip -selection clipboard
+}
+export -f clipboard
+
+# Show yad
+yad --list \
+  --title=Transcrição \
+  --editable --editable-cols=2 \
+  --search-column=2 \
+  --regex-search \
+  --dclick-action='bash -c "clipboard \"%s\""' \
+  --column=Tempo --column=Frase \
+  < <(sed 's/ - /\n/' $yt_trans_file)
