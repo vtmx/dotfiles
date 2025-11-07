@@ -158,8 +158,8 @@ htm() {
 }
 
 # Man with bat
-mn() {
-  command man "$@" | col -bx | bat -plman --theme ansi
+manb() {
+  command man -L pt_BR "$@" | col -bx | bat -plman --theme ansi
 }
 
 # Create dir and enter
