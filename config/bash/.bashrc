@@ -108,4 +108,4 @@ if type zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
 fi
 
-# vim:ft=bash
+# ft=bash
