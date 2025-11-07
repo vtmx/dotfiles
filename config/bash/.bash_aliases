@@ -125,6 +125,9 @@ alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
 alias l.="ls -d .*"
 
+# man
+alias m="man -L pt_BR"
+
 # create dir
 alias md="mkdir -p"
 
@@ -167,6 +170,9 @@ alias tc="$EDITOR $HOME/.config/tmux/tmux.conf"
 alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
+
+# tldr
+alias tldr="LANG=pt_BR.UTF-8 tldr -t base16"
 
 # tree
 alias tree="eza -T"
