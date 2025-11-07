@@ -6,7 +6,7 @@ clip() {
   if [[ -f "$1" ]]; then
     xclip -sel clip < "$1"
   else
-    echo 'error: no file selected'
+    echo 'error: no file selected' >&2
     return 1
   fi
 }
@@ -23,15 +23,15 @@ cpcd() {
 # Cut audio
 cuta() {
   if [[ ! -f "$1" ]]; then
-    echo 'error: no first argument ex: file.mp3'; return 1
+    echo 'error: no first argument ex: file.mp3' >&2; return 1
   fi
 
   if [[ ! "$2" =~ ^[0-9]{2}:[0-9]{2}$ ]]; then
-    echo 'error: no second argument time start ex: 00:00'; return 1
+    echo 'error: no second argument time start ex: 00:00' >&2; return 1
   fi
 
   if [[ ! "$3" =~ ^[0-9]{2}:[0-9]{2}$ ]]; then
-    echo 'error: no third argument time stop ex: 01:00'; return 1
+    echo 'error: no third argument time stop ex: 01:00' >&2; return 1
   fi
 
   local file="$1"
@@ -49,29 +49,29 @@ cuta() {
 # Extract files
 ex() {
   if [[ ! -f "$1" ]]; then
-    echo "error: $1 is not a valid file"; return 1
+    echo "error: $1 is not a valid file" >&2; return 1
   fi
 
   case $1 in
-    *.7z)   7z x $1       ;;
-    *.bz2)  bunzip2 $1    ;;
-    *.deb)  ar x $1       ;;
-    *.gz)   gunzip $1     ;;
-    *.rar)  unrar x $1    ;;
-    *.tar)  tar xf $1     ;;
-    *.tbz2) tar xjf $1    ;;
-    *.tgz)  tar xzf $1    ;;
-    *.xz)   tar xf $1     ;;
-    *.zip)  unzip $1      ;;
-    *.zst)  unzstd $1     ;;
-    *.Z)    uncompress $1 ;;
-    *)      echo "'$1' cannot be extracted" ;;
+    *.7z) 7z x $1       ;;
+    *.bz2) bunzip2 $1   ;;
+    *.deb) ar x $1      ;;
+    *.gz) gunzip $1     ;;
+    *.rar) unrar x $1   ;;
+    *.tar) tar xf $1    ;;
+    *.tbz2) tar xjf $1  ;;
+    *.tgz) tar xzf $1   ;;
+    *.xz) tar xf $1     ;;
+    *.zip) unzip $1     ;;
+    *.zst) unzstd $1    ;;
+    *.Z) uncompress $1 ;;
+    *) echo "error: '$1' cannot be extracted" >&2 ;;
   esac
 }
 
 # Add extension
 addext() {
-  [[ $1 ]] || { echo 'usage: addext <extension>'; return 1; }
+  [[ $1 ]] || { echo 'usage: addext <extension>' >&2; return 1; }
   rename -n "s/$/\.${1}/" *
   echo; read -p 'Rename [y/N]: ' confirm
   [[ $confirm =~ [yY] ]] && rename "s/$/\.${1}/" *
@@ -80,7 +80,7 @@ addext() {
 # Rename extension
 mvext() {
   [[ $1 && $2 ]] || {
-    echo 'usage: mvext <old extension> <new extension>'
+    echo 'usage: mvext <old extension> <new extension>' >&2
     return 1
   }
   rename -n "s/\.${1}$/\.${2}/" *
@@ -106,7 +106,7 @@ gc() {
   if [[ -n "$1" ]]; then
     git commit -m "$*"
   else
-    echo "error: no commit message provided"
+    echo "error: no commit message provided" >&2
     return 1
   fi
 }
@@ -115,7 +115,7 @@ gc() {
 gpa() {
   local msg="$*"
   if [[ -z "$msg" ]]; then
-    echo "error: no commit message provided"
+    echo "error: no commit message provided" >&2
     return 1
   fi
   git add -A
@@ -150,7 +150,7 @@ htm() {
   fi
 
   [[ "$1"  && "$2" ]] || {
-    echo 'usage: htm <link> <element>'
+    echo 'usage: htm <link> <element>' >&2
     return 1
   }
 
@@ -158,7 +158,7 @@ htm() {
 }
 
 # Man with bat
-manb() {
+mb() {
   command man -L pt_BR "$@" | col -bx | bat -plman --theme ansi
 }
 
@@ -167,7 +167,7 @@ mkcd() {
   if [[ -n $1 ]]; then
     mkdir -p "$1" && cd "$1"
   else
-    echo "error: dirname not exist"
+    echo "error: dirname not exist" >&2
     return 1
   fi
 }
@@ -185,10 +185,10 @@ mksh() {
   local file="$1"
 
   # Test if has argument
-  [[ -z "$file" ]] && echo "error: need a name for script" && return 1
+  [[ -z "$file" ]] && echo "error: need a name for script" >&2; return 1
 
   # Check if file exit
-  [[ -e "$file" ]] && echo "error: file already exist" && return 1
+  [[ -e "$file" ]] && echo "error: file already exist" >&2;  return 1
 
   # Create script
   echo "#!/usr/bin/env bash
@@ -201,7 +201,7 @@ mksh() {
 
 # Add word beginer file
 mva() {
-  [[ $1 ]] || { echo 'error: mva <word>'; return 1; }
+  [[ $1 ]] || { echo 'error: mva <word>' >&2; return 1; }
 
   rename -n "s/^/${1}/" *
   echo
@@ -214,7 +214,7 @@ mva() {
 
 # Add word end file
 mve() {
-  [[ $1 ]] || { echo 'error: mve <word>'; return 1; }
+  [[ $1 ]] || { echo 'error: mve <word>' >&2; return 1; }
 
   rename -n "s/(.*)(\..*$)/\1${1}\2/" *
   echo
@@ -236,7 +236,7 @@ mvcd() {
 
 # Cut
 mvcut() {
-  [[ $1 ]] || { echo 'error: mvcut <word>'; return 1; }
+  [[ $1 ]] || { echo 'error: mvcut <word>' >&2; return 1; }
 
   rename -n "s/${1}//" *
   echo
@@ -250,7 +250,7 @@ mvcut() {
 # Remane duplicate
 mvd() {
   [[ $1 ]] || {
-    echo 'usage: mvd <char-duplicate>'
+    echo 'usage: mvd <char-duplicate>' >&2
     return 1
   }
   local newfile=''
@@ -349,7 +349,7 @@ mvmd() {
 
 # Substitute words
 mvs() {
-  [[ "$1" ]] || { echo 'error: need two words'; return 1; }
+  [[ "$1" ]] || { echo 'error: need two words' >&2; return 1; }
   rename -n "s/$1/$2/g" *
   echo; read -p 'Rename [y/N]: ' confirm
   [[ $confirm =~ [yY] ]] && rename "s/$1/$2/" *
@@ -357,19 +357,19 @@ mvs() {
 
 # Rename
 ren() {
-  [[ "$1" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
+  [[ "$1" ]] || { echo "usage: rn 's/old/new/' *" >&2; return 1; }
   local pattern="$1"; shift
-  [[ "$@" ]] || { echo "usage: rn 's/old/new/' *"; return 1; }
+  [[ "$@" ]] || { echo "usage: rn 's/old/new/' *" >&2; return 1; }
   local files="$@"
   rename -n "$pattern" $files
   echo; read -p "Rename? [y/N]: " choice
   [[ $choice =~ ^[yY] ]] && rename "$pattern" $files
 }
 
-# Link in working dir
+# Link simbolic in working dir
 lnwd() {
   [[ $1 && $2 ]] || {
-    echo 'usage: lnwd <file-or-dir> <path>'
+    echo 'usage: lnwd <file-or-dir> <path>' >&2
     return 1
   }
   ln -sf "$(pwd)/$1" $2
@@ -391,7 +391,7 @@ play() {
     local args="--no-video --display-tags=Title,Artist"
 
     usage() {
-      echo -e "\nr  Recents\ns  Search"; return 1
+      echo -e "\nr  Recents\ns  Search" >&2; return 1
     }
 
     to_play() {

@@ -285,9 +285,21 @@ local hl_groups = {
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
   -- fzf-lua
-  Brow1                    = { fg = c.red     },
   FzfLuaBorder             = { fg = c.fd      },
+  FzfLuaBufFlagAlt         = { fg = c.fg      },
+  FzfLuaBufFlagCur         = { fg = c.fg      },
+  FzfLuaBufLineNr          = { fg = c.fg      },
+  FzfLuaBufNr              = { fg = c.fg      },
+  FzfLuaHeaderBind         = { fg = c.fg      },
+  FzfLuaHeaderText         = { fg = c.fg      },
+  FzfLuaLivePrompt         = { fg = c.fg      },
+  FzfLuaLiveSym            = { fg = c.purple  },
+  FzfLuaNr                 = { fg = c.fg      },
+  FzfLuaPathColNr          = { fg = c.fg      },
+  FzfLuaPathLineNr         = { fg = c.blue    },
   FzfLuaPreviewBorder      = { fg = c.fd      },
+  FzfLuaTabMarker          = { fg = c.fg      },
+  FzfLuaTabTitle           = { fg = c.fg      },
 
   -- hop
   HopNextKey               = { fg = c.blue    },
