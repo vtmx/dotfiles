@@ -185,11 +185,11 @@ mksh() {
   local file="$1"
 
   # Test if has argument
-  [[ -z "$file" ]] && echo "error: need a name for script" >&2; return 1
+  [[ -z "$file" ]] && { echo "error: need a name for script" >&2 && return 1; }
 
   # Check if file exit
-  [[ -e "$file" ]] && echo "error: file already exist" >&2;  return 1
-
+  [[ -e "$file" ]] && { echo "error: file already exist" >&2 && return 1; }
+ 
   # Create script
   echo "#!/usr/bin/env bash
 

@@ -7,9 +7,16 @@ return {
   {
     'neovim/nvim-lspconfig',
     config = function()
-      local lspconfig = require('lspconfig')
-      
-      lspconfig.bashls.setup({
+      -- Configurações globais
+      vim.lsp.config("*", {
+        winbar = "%{%v:lua.require'nvim-navic'.get_location()%}",
+        window = {
+          border = "rounded",
+        },
+      })
+
+      -- BashLS
+      vim.lsp.config("bashls", {
         cmd = { 'bash-language-server', 'start' },
         filetypes = { 'bash', 'sh' },
         settings = {
@@ -20,12 +27,14 @@ return {
         }
       })
 
-      lspconfig.emmet_language_server.setup({
+      -- Emmet Language Server
+      vim.lsp.config("emmet-language-server", {
         cmd = { 'emmet-language-server', '--stdio' },
         filetypes = { 'html', 'htmldjango', 'css', 'scss' },
       })
 
-      lspconfig.lua_ls.setup({
+      -- Lua LS
+      vim.lsp.config("lua_ls", {
         cmd = { 'lua-language-server' },
         filetypes = { 'lua' },
         diagnostics = { globals = { 'vim' } },
@@ -37,8 +46,28 @@ return {
         }
       })
 
-      vim.diagnostic.enable(false)
-      vim.opt.winborder = 'rounded'
+      -- Activate servers
+      local servers = { 'bashls', 'emmet-language-server', 'lua_ls' }
+      for _, server in ipairs(servers) do
+        vim.lsp.enable(server)
+      end
+
+      -- Desativar diagnostico global
+      vim.diagnostic.config({
+        virtual_text = false,
+        signs = false,
+        update_in_insert = true,
+        underline = true,
+        severity_sort = true,
+        float = {
+          focusable = false,
+          style = 'minimal',
+          border = 'rounded',
+          source = 'always',
+          header = '',
+          prefix = '',
+        }
+      })
     end
   }
 }

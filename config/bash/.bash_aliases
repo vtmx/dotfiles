@@ -170,6 +170,7 @@ alias tc="$EDITOR $HOME/.config/tmux/tmux.conf"
 alias tk="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
+alias tw="tmux choose-tree"
 
 # tldr
 alias tldr="LANG=pt_BR.UTF-8 tldr -t base16"
