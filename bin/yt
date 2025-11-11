@@ -11,7 +11,10 @@ main() {
     exit 127
   fi
 
-  [[ "$1" ]] || { echo 'no url'; exit; }
+  if [[ ! "$1" ]]; then
+    echo 'no url' >&2
+    exit 1
+  fi
 
   local url="$1"
   local filename=""
@@ -28,7 +31,13 @@ main() {
   filename=$(transform_filename "$filename")
 
   # Download file
-  yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -o "$filename" "$url"
+  yt-dlp \
+    -x  \
+    --add-metadata \
+    --audio-format mp3 \
+    --embed-thumbnail \
+    --no-warnings \
+    -o "$filename" "$url"
 }
 
 transform_filename() {
