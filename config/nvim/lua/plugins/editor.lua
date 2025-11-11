@@ -16,6 +16,7 @@ return {
       })
     end
   },
+  
   -- {
   --   'nvim-mini/mini.indentscope',
   --   config = function()
@@ -38,11 +39,6 @@ return {
       })
     end
   },
-  -- {
-  --   'nvim-mini/mini.pairs',
-  --   event = 'ModeChanged',
-  --   config = true
-  -- },
   {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',

@@ -2,66 +2,74 @@
 
 # Youtube download transcript
 
+set -e
+
+yt_trans_file=transcript.pt.srt
+yt_trans_file_format=transcript.txt
+yt_trans_lang=pt
+
+# Check file exist
+if [[ -f "$yt_trans_file" ]]; then
+  read -rp 'File exist overwrie [y/N]: ' opc
+
+  if [[ $opc =~ [Yy] ]]; then
+    yt_trans_file_overwrite=true
+  fi
+fi
+
 # Check url
 if [[ $1 ]]; then
   yt_url="$1"
-  yt_trans_file=transcricao.srt
 else
-  echo 'erro: no url'
+  echo 'error: need url' >&2
   exit 1
 fi
 
-yt-dlp \
-  --skip-download \
-  --sub-format srt \
-  --sub-lang pt \
-  --write-subs \
-  --write-auto-subs \
-  --quiet \
-  --output "transcricao" \
-  "$yt_url"  
-
-awk '
-# Ignora número da legenda
-/^[0-9]+$/ { next }
-
-# Ignora linhas com [Música]
-/\[Música\]/ { next }
-
-# Separa tempo inicial
-/-->/ {
-    split($1, start, ",")
-    time = start[1]
-    next
-}
-
-NF {
-  # Remove a ocorrência de >>
-  gsub(/>> /, "")
-
-  # Imprimi padrão
-  print time " - " $0
-}' transcricao.pt.srt > $yt_trans_file && rm transcricao.pt.srt
-
-if [[ ! -f "$yt_trans_file" ]]; then
-  echo "erro: file not found: $yt_trans_file"
+# Check yt-dlp
+if ! type yt-dlp  >/dev/null; then
+  echo 'error: need yt-dlp' >&2
   exit 1
 fi
 
-# Clipboard line on click time cell
-clipboard() {
-  # Using to remove \n in sed
-  local line=$(sed -E "s/^'([[:digit:]]{2}:[[:digit:]]{2}:[[:digit:]]{2})' '(.+)'$/\1 - \2/g" <<< "$1")
-  printf "%s" "$line" | xclip -selection clipboard
-}
-export -f clipboard
+# Get transcript
+if [[ $yt_trans_file_overwrite ]]; then
+  yt-dlp \
+    --skip-download \
+    --sub-format srt \
+    --sub-lang $yt_trans_lang \
+    --write-subs \
+    --write-auto-subs \
+    --quiet \
+    --output "transcript" \
+    "$yt_url"  
+fi
 
-# Show yad
-yad --list \
-  --title=Transcrição \
-  --editable --editable-cols=2 \
-  --search-column=2 \
-  --regex-search \
-  --dclick-action='bash -c "clipboard \"%s\""' \
-  --column=Tempo --column=Frase \
-  < <(sed 's/ - /\n/' $yt_trans_file)
+# Get format transcript from
+yt_trans_txt=$(awk -f format.awk "$yt_trans_file")
+
+read -rp '
+Escolha uma opção:
+p) Print
+o) Open
+g) Gui
+s) Save
+q) Quit
+
+Opção: ' opc
+
+case "$opc" in
+  p) echo "$yt_trans_txt" ;;
+  o) echo "$yt_trans_txt" > "$yt_trans_file_format" && \
+     $EDITOR $yt_trans_file_format
+     ;;
+  g) 
+    if type yad  >/dev/null; then
+      ./gui "$yt_trans_file"
+    else
+      echo 'error: need yad to gui' >&2
+      exit 1
+    fi
+    ;;
+  s) echo "$yt_trans_txt" > "$yt_trans_file_format" ;;
+  q) exit 0 ;;
+esac

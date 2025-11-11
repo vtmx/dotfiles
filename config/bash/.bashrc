@@ -61,9 +61,6 @@ if [[ -f $HOME/.bun/bin/bun ]]; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# fzf
-# [[ -f $HOME/.fzf.bash ]] && source $HOME/.fzf.bash
-
 if type fzf &> /dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
     source /usr/share/fzf/completion.bash
