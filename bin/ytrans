@@ -10,7 +10,7 @@ yt_trans_lang=pt
 
 # Check file exist
 if [[ -f "$yt_trans_file" ]]; then
-  read -rp 'File exist overwrie [y/N]: ' opc
+  read -rp 'File already exist, overwrite [y/N]: ' opc
 
   if [[ $opc =~ [Yy] ]]; then
     yt_trans_file_overwrite=true
