@@ -30,14 +30,16 @@ autocmd('FileType', {
 -- Close help with "q"
 autocmd('FileType', {
     pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
-    command = 'nnoremap <buffer><silent> q :quit<cr>' 
+    callback = function()
+      vim.keymap.set('n', 'q', '<cmd>quit<cr>', { desc = 'Quit doc file' })
+    end
   }
 )
 
 -- Open help file in left
 autocmd('FileType', {
     pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
-    command = 'wincmd L' 
+    command = 'wincmd L'
   }
 )
 
@@ -56,7 +58,8 @@ autocmd('FileType', {
     vim.opt.shiftwidth = 2
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
-    vim.keymap.set('i', '<c-,>', '```bash<cr>```<esc>O', { desc = 'Add bashcode' })
+    vim.keymap.set('i', '<c-b>', '```bash<cr>```<esc>O', { desc = 'Add bashcode' })
+    vim.keymap.set('i', '<c-k>', '[]()<left><left><left>', { desc = 'Add link' })
   end
 })
 
