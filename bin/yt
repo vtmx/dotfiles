@@ -16,11 +16,33 @@ main() {
     exit 1
   fi
 
-  local url="$1"
+  local url=""
   local filename=""
+  local time_start=""
+  local time_end=""
 
-  # Make url $1 and all words $2
-  shift; filename="$*"
+  while (( $# )); do
+    case "$1" in
+      # ex: 1:23, 01:30, 0:45, 123, 02:15:30
+      *([0-9]):*([0-9]) | *([0-9]):*([0-9]):*([0-9]) | [0-9][0-9]?:[0-9][0-9] | [0-9]:[0-9][0-9] | [0-9][0-9][0-9])
+        if [[ -z "$time_start" ]]; then
+          time_start="$1"
+        elif [[ -z "$time_end" ]]; then
+          time_end="$1"
+        fi
+        shift
+        ;;
+
+      http://*|https://*)
+        [[ -z "$url" ]] && url="$1" || filename+="$1"
+        shift
+        ;;
+      *)
+        filename+="$1"
+        shift
+        ;;
+    esac
+  done
 
   if [[ -z "$filename" ]]; then
     # Get title of video
@@ -37,6 +59,7 @@ main() {
     --audio-format mp3 \
     --embed-thumbnail \
     --no-warnings \
+    --download-sections "*$time_start-$time_end" \
     -o "$filename" "$url"
 }
 
