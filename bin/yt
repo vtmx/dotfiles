@@ -11,11 +11,6 @@ main() {
     exit 127
   fi
 
-  if [[ ! "$1" ]]; then
-    echo 'no url' >&2
-    exit 1
-  fi
-
   local url=""
   local filename=""
   local time_start=""
@@ -23,18 +18,17 @@ main() {
 
   while (( $# )); do
     case "$1" in
-      # ex: 1:23, 01:30, 0:45, 123, 02:15:30
+      *youtube*)
+        [[ -z "$url" ]] && url="$1"
+        shift
+        ;;
+      # time: 1:23, 01:30, 0:45
       *([0-9]):*([0-9]) | *([0-9]):*([0-9]):*([0-9]) | [0-9][0-9]?:[0-9][0-9] | [0-9]:[0-9][0-9] | [0-9][0-9][0-9])
         if [[ -z "$time_start" ]]; then
           time_start="$1"
         elif [[ -z "$time_end" ]]; then
           time_end="$1"
         fi
-        shift
-        ;;
-
-      http://*|https://*)
-        [[ -z "$url" ]] && url="$1" || filename+="$1"
         shift
         ;;
       *)
@@ -44,8 +38,8 @@ main() {
     esac
   done
 
+  # Get title of video
   if [[ -z "$filename" ]]; then
-    # Get title of video
     filename=$(yt-dlp --print filename -o "%(title)s" "$url")
   fi
 
@@ -54,18 +48,19 @@ main() {
 
   # Download file
   yt-dlp \
-    -x  \
+    -x \
+    -q \
     --add-metadata \
     --audio-format mp3 \
+    --download-sections "*$time_start-$time_end" \
     --embed-thumbnail \
     --no-warnings \
-    --download-sections "*$time_start-$time_end" \
     -o "$filename" "$url"
 }
 
 transform_filename() {
   # Remove chars
-  filename="${filename//[\'\"\“\”\[\]\(\)]/}"
+  filename="${filename//[\'\"\“\”\[\]\(\)\/\⧸]/}"
 
   # Replace spaces with dashes
   filename="${filename// /-}"
