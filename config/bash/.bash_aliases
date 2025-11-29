@@ -115,6 +115,11 @@ alias k=killall
 # kitty
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
 
+# kee-pass-xc
+alias kp='keepassxc-cli'
+# alias kps='keepassxc-cli show -s file'
+# alias kpc='keepassxc-cli clip file'
+
 # live-server
 alias live="browser-sync start --no-open --server "." --files *"
 

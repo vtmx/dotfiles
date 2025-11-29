@@ -8,7 +8,14 @@ PreviewSize=16
 
 [ContextMenu]
 ShowCopyLocation=false
+ShowCopyToOtherSplitView=false
+ShowMoveToOtherSplitView=false
+ShowOpenInNewTab=false
+ShowOpenInNewWindow=false
+ShowOpenInSplitView=false
 ShowOpenTerminal=false
+ShowSortBy=false
+ShowViewMode=false
 
 [CreateDialog]
 LastMimeType=application/zip
@@ -16,7 +23,6 @@ LastMimeType=application/zip
 [DetailsMode]
 PreviewSize=16
 SidePadding=0
-ViewFont=Segoe,10,-1,5,63,0,0,0,0,0,Semibold
 
 [ExtractDialog]
 1920x1080 screen: Height=540
@@ -34,6 +40,9 @@ ShowSpaceInfo=false
 ShowZoomSlider=false
 Version=202
 ViewPropsTimestamp=2022,3,14,8,51,38.73
+
+[InformationPanel]
+dateFormat=ShortFormat
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -56,7 +65,6 @@ HDMI-0 Window-Maximized 1920x1080=true
 HDMI-0 XPosition 1920x1080=256
 HDMI-0 YPosition 1920x1080=380
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [Notification Messages]
 ConfirmDelete=true
@@ -66,7 +74,7 @@ CompletionMode=1
 History=fire,inks,mp,mpv,kate,vlc,qbi
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+Plugins=cursorthumbnail,imagethumbnail,jpegthumbnail,jxl,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,librsvg,svgthumbnail,ffmpegthumbs
 
 [UiSettings]
 ColorScheme=*
