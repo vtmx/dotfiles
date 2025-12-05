@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if ping -c1 8.8.8.8 >/dev/null; then
+  echo 󰍹
+else
+  echo 󰶐
+fi
