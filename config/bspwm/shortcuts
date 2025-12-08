@@ -18,6 +18,10 @@ super + shift + p
 super + shift + q
   bspc quit
 
+# Reload
+super + shift + r
+  bspc wm -r && pkill -USR1 -x sxhkd && notify-send -u low -t 1500 'bspwm' 'Reloaded'
+
 # Toggle compositor
 super + shift + u
   pkill -x picom || picom --config $HOME/.config/bspwm/picom/picom.conf
