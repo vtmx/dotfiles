@@ -150,7 +150,7 @@ alias paciy="sudo pacman -S --noconfirm"  # install no confirm
 alias paclo="pacman -Qdt"                 # list orphans
 alias pacl="pacman -Q"                    # list
 alias paclq="pacman -Qqe"                 # filter
-alias pacr="sudo pacman -Rs"              # remove
+alias pacr="sudo pacman -Rns"              # remove
 alias pacry="sudo pacman --noconfirm -Rs" # remove no confirm
 alias pacs="sudo pacman -Ss"              # search
 alias pac="sudo pacman"                   # pacman
@@ -219,7 +219,7 @@ alias yv="yarn version"
 # yay
 alias yayi="yay -S"
 alias yayc='yay -Sc'
-alias yayr="yay -R"
+alias yayr="yay -Rns"
 alias yayu="yay -Syu"
 
 # yt-dlp
