@@ -27,13 +27,14 @@ local hl_groups = {
   PreCondit      = { fg = c.magenta },
   PreProc        = { fg = c.magenta },
   Repeat         = { fg = c.magenta },
-  Tag            = { fg = c.red     },
   Statement      = { fg = c.magenta },
-  String         = { fg = c.green   },
   StorageClass   = { fg = c.magenta },
+  String         = { fg = c.green   },
   Structure      = { fg = c.magenta },
+  Tag            = { fg = c.red     },
   Typedef        = { fg = c.magenta },
   Type           = { fg = c.magenta },
+  Underlined     = { fg = c.blue, underline = true },
 
   -- Keys [] {} ()
   Delimiter      = { fg = c.fg     },
@@ -46,9 +47,9 @@ local hl_groups = {
   Directory      = { fg = c.blue   },
   EndOfBuffer    = { fg = c.bg     }, -- Line tilde blank
   NonText        = { fg = c.fd     },
-  Special        = { fg = c.fg     },
   SpecialChar    = { fg = c.yellow },
   SpecialComment = { fg = c.fd     },
+  Special        = { fg = c.fg     },
   SpecialKey     = { fg = c.cyan   },
   TermCursor     = { fg = c.fg     },
 
@@ -192,18 +193,6 @@ local hl_groups = {
 
   -- tree-sitter
 
-  -- Text
-  ['@text.literal']       = { link = 'Comment'         },
-  ['@text.reference']     = { link = 'Identifier'      },
-  ['@text.title']         = { link = 'Title'           },
-  ['@text.uri']           = { link = 'Underlined'      },
-  ['@text.underline']     = { link = 'Underlined'      },
-  ['@text.todo']          = { link = 'Todo'            },
-
-  -- Miscs
-  ['@comment']            = { link = 'Comment'         },
-  ['@punctuation']        = { link = 'Delimiter'       },
-
   -- Constants
   ['@boolean']            = { link = 'Boolean'         },
   ['@character']          = { link = 'Character'       },
@@ -220,38 +209,52 @@ local hl_groups = {
   ['@string.special']     = { link = 'SpecialChar'     },
   ['@string.special.url'] = { link = 'SpecialChar'     },
 
-  -- Functions
-  ['@function']           = { link = 'Function'        },
-  ['@function.builtin']   = { link = 'Special'         },
-  ['@function.macro']     = { link = 'Macro'           },
-  ['@parameter']          = { link = 'Identifier'      },
-  ['@method']             = { link = 'Function'        },
-  ['@field']              = { link = 'Identifier'      },
-  ['@property']           = { link = 'Identifier'      },
-  ['@constructor']        = { link = 'Special'         },
-
-  -- Keywords
-  ['@conditional']        = { link = 'Conditional'     },
-  ['@repeat']             = { link = 'Repeat'          },
-  ['@label']              = { link = 'Label'           },
-  ['@operator']           = { link = 'Operator'        },
-  ['@keyword']            = { link = 'Keyword'         },
-  ['@exception']          = { link = 'Exception'       },
-  ['@variable']           = { fg   = nil, bg = nil     }, -- using default foreground reduces visual overloa,
-  ['@type']               = { link = 'Type'            },
-  ['@type.definition']    = { link = 'Typedef'         },
-  ['@storageclass']       = { link = 'StorageClass'    },
-  ['@namespace']          = { link = 'Identifier'      },
-  ['@include']            = { link = 'Include'         },
-  ['@preproc']            = { link = 'PreProc'         },
-  ['@debug']              = { link = 'Debug'           },
-  ['@tag']                = { link = 'Tag'             },
+  -- Comments
+  ['@comment']            = { link = 'Comment'         },
+  ['@comment.todo']       = { link = 'Todo'            },
+  ['@punctuation']        = { link = 'Delimiter'       },
 
   -- Diff
   ['@diff.plus']          = { link = 'DiffAdd'         },
   ['@diff.delta']         = { link = 'DiffChange'      },
   ['@diff.minus']         = { link = 'DiffDelete'      },
- 
+
+  -- Functions
+  ['@function']           = { link = 'Function'        },
+  ['@function.builtin']   = { link = 'Special'         },
+  ['@function.macro']     = { link = 'Macro'           },
+  ['@function.method']    = { link = 'Function'        },
+  ['@parameter']          = { link = 'Identifier'      },
+  ['@method']             = { link = 'Function'        },
+  ['@field']              = { link = 'Identifier'      },
+  ['@property']           = { link = 'Identifier'      },
+  ['@constructor']        = { link = 'Special'         },
+  ['@variable.parameter'] = { link = 'Identifier'      },
+  ['@variable.parameter.builtin'] = { link = 'Special' },
+  ['@variable.member']    = { link = 'Identifier'      },
+  ['@attribute']          = { link = 'Macro'           },
+  ['@attribute.builtin']  = { link = 'Special'         },
+
+  -- Keywords
+  ['@conditional']        = { link = 'Conditional'     },
+  ['@debug']              = { link = 'Debug'           },
+  ['@exception']          = { link = 'Exception'       },
+  ['@include']            = { link = 'Include'         },
+  ['@keyword.conditional'] = { link = 'Conditional'    },
+  ['@keyword']            = { link = 'Keyword'         },
+  ['@keyword.repeat']     = { link = 'Repeat'          },
+  ['@keyword.type']       = { link = 'Structure'       },
+  ['@label']              = { link = 'Label'           },
+  ['@namespace']          = { link = 'Identifier'      },
+  ['@operator']           = { link = 'Operator'        },
+  ['@preproc']            = { link = 'PreProc'         },
+  ['@repeat']             = { link = 'Repeat'          },
+  ['@storageclass']       = { link = 'StorageClass'    },
+  ['@tag']                = { link = 'Tag'             },
+  ['@type.definition']    = { link = 'Typedef'         },
+  ['@type']               = { link = 'Type'            },
+  ['@variable']           = { fg   = nil, bg = nil     }, -- using default foreground reduces visual overloa,
+
   -- LSP semantic tokens
   ['@lsp.type.class']         = { link = 'Structure'  },
   ['@lsp.type.comment']       = { link = 'Comment'    },
@@ -269,6 +272,21 @@ local hl_groups = {
   ['@lsp.type.type']          = { link = 'Type'       },
   ['@lsp.type.typeParameter'] = { link = 'TypeDef'    },
   ['@lsp.type.variable']      = { link = '@variable'  }, -- links to tree-sitter group to reduce overloa,
+
+  -- Markup
+  ['@markup.heading'] =   { link = 'Title' },
+  ['@markup.link'] =      { link = 'Identifier' },
+  ['@markup.link.url'] =  { link = 'Underlined' },
+  ['@markup.raw'] =       { link = 'Comment' },
+  ['@markup.underline'] = { link = 'Underlined' },
+
+  -- Text
+  ['@text.literal']       = { link = 'Comment'         },
+  ['@text.reference']     = { link = 'Identifier'      },
+  ['@text.title']         = { link = 'Title'           },
+  ['@text.uri']           = { link = 'Underlined'      },
+  ['@text.underline']     = { link = 'Underlined'      },
+  ['@text.todo']          = { link = 'Todo'            },
 
 ------------------------------------------------------------
   -- Plugins
