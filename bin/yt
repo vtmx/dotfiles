@@ -15,10 +15,11 @@ main() {
   local filename=""
   local time_start=""
   local time_end=""
+  local filename=""
 
   while (( $# )); do
     case "$1" in
-      *youtube*)
+      *youtu*)
         [[ -z "$url" ]] && url="$1"
         shift
         ;;
@@ -47,15 +48,27 @@ main() {
   filename=$(transform_filename "$filename")
 
   # Download file
-  yt-dlp \
-    -x \
-    -q \
-    --add-metadata \
-    --audio-format mp3 \
-    --download-sections "*$time_start-$time_end" \
-    --embed-thumbnail \
-    --no-warnings \
-    -o "$filename" "$url"
+  local args=(
+    -x
+    --add-metadata
+    --audio-format mp3
+    --embed-thumbnail
+    --no-warnings
+    -o "$filename"
+    "$url"
+  )
+
+  # Add arg --download-sections if time fill
+  if [[ -n "$time_start" ]]; then
+    if [[ -n "$time_end" ]]; then
+      args+=(--download-sections "*${time_start}-${time_end}")
+    else
+      args+=(--download-sections "*0:00-${time_start}")
+    fi
+  fi
+
+  # Command
+  yt-dlp "${args[@]}"
 }
 
 transform_filename() {
