@@ -5,6 +5,7 @@ shopt -s cdspell checkwinsize histappend
 bind -s 'set completion-ignore-case on' # Show fzf message in reload
 
 # Environment variables
+export BROWSER="zen-browser"
 export CDPATH=".:..:~"
 export EDITOR="nvim"
 export HISTCONTROL="ignoreboth:ignorespace"
@@ -72,7 +73,7 @@ if type fzf &> /dev/null; then
 
   if [[ $DISPLAY ]]; then
     export FZF_DEFAULT_OPTS="\
-    --height 50% --reverse \
+    --height 50% --reverse --separator='' \
     --border=none --preview-window=''\
     --prompt '❯ ' --marker '❯' --pointer '❯' \
     --color=bg:-1,fg:-1 \
@@ -84,7 +85,7 @@ if type fzf &> /dev/null; then
     --color=gutter:-1,border:black"
   else
     export FZF_DEFAULT_OPTS="\
-    --height 50% --reverse \
+    --height 50% --reverse --separator='' \
     --border=none --preview-window=''\
     --prompt '> ' --marker '>' --pointer '>' \
     --color=bg:-1,fg:-1 \

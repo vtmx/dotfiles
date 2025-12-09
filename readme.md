@@ -346,6 +346,10 @@
       <td>Close window</td>
     </tr>
     <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd></td>
+      <td>Kill window</td>
+    </tr>
+    <tr>
       <td><kbd>Super</kbd> + <kbd>d</kbd></td>
       <td>Hide all window</td>
     </tr>
@@ -354,16 +358,20 @@
       <td>Fullscreen</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>,</kbd></td>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> r <kbd>c</kbd></td>
       <td>Reload window manager</td>
-    </tr>
-    <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd></td>
-      <td>Reload shortcuts</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>q</kbd></td>
       <td>Quit window manager</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>,</kbd></td>
+      <td>Edit window manager</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>.</kbd></td>
+      <td>Edit shortcuts</td>
     </tr>
     <tr>
       <td><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
