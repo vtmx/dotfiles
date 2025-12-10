@@ -75,7 +75,7 @@ if type fzf &> /dev/null; then
     --height 50% --reverse --separator=''
     --border=none --preview-window=''
     --color=bg:-1,fg:-1,hl:blue
-    --color=bg+:blue,fg+:0,hl+:blue
+    --color=bg+:blue,fg+:0,hl+:black
     --color=prompt:green,marker:blue,pointer:black
     --color=spinner:-1,border:black,gutter:black
     --color=header:-1,info:-1
