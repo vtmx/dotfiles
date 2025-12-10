@@ -71,30 +71,22 @@ if type fzf &> /dev/null; then
     source /usr/share/fzf/key-bindings.bash
   fi
 
+  fzf_args="
+    --height 50% --reverse --separator=''
+    --border=none --preview-window=''
+    --color=bg:-1,fg:-1,hl:blue
+    --color=bg+:blue,fg+:0,hl+:blue
+    --color=prompt:green,marker:blue,pointer:black
+    --color=spinner:-1,border:black,gutter:black
+    --color=header:-1,info:-1
+  "
+
   if [[ $DISPLAY ]]; then
-    export FZF_DEFAULT_OPTS="\
-    --height 50% --reverse --separator='' \
-    --border=none --preview-window=''\
-    --prompt '❯ ' --marker '❯' --pointer '❯' \
-    --color=bg:-1,fg:-1 \
-    --color=bg+:#3d4556,fg+:-1 \
-    --color=hl:blue,hl+:blue \
-    --color=info:-1,marker:blue \
-    --color=prompt:green,spinner:-1 \
-    --color=pointer:-1,header:-1 \
-    --color=gutter:-1,border:black"
+    export FZF_DEFAULT_OPTS="$fzf_args
+    --prompt '❯ ' --marker '❯' --pointer '❯'"
   else
-    export FZF_DEFAULT_OPTS="\
-    --height 50% --reverse --separator='' \
-    --border=none --preview-window=''\
-    --prompt '> ' --marker '>' --pointer '>' \
-    --color=bg:-1,fg:-1 \
-    --color=bg+:blue,fg+:0 \
-    --color=hl:blue,hl+:blue \
-    --color=info:-1,marker:blue \
-    --color=prompt:green,spinner:-1 \
-    --color=pointer:0,header:-1 \
-    --color=gutter:-1,border:black"
+    export FZF_DEFAULT_OPTS="$fzf_args
+    --prompt '> ' --marker '>' --pointer '>'"
   fi
 fi
 
