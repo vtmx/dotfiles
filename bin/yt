@@ -16,6 +16,11 @@ main() {
   local time_start=""
   local time_end=""
   local filename=""
+  local clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || echo "")
+
+  if [[ "$clipboard" =~ youtu ]]; then
+    url="$clipboard"
+  fi
 
   while (( $# )); do
     case "$1" in
@@ -33,7 +38,11 @@ main() {
         shift
         ;;
       *)
-        filename+="$1"
+        if [[ "$filename" ]]; then
+          filename+=" $1"
+        else
+          filename="$1"
+        fi
         shift
         ;;
     esac
