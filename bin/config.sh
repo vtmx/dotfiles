@@ -7,7 +7,7 @@ pre_reqs=(pastel)
 
 for command in ${pre_reqs[@]}; do
   if ! command -v $command &>/dev/null; then
-    echo "$(tput setaf 1)error:$(tput sgr0) need $command "
+    echo "$(tput setaf 1)error:$(tput sgr0) need $command"
     exit 1
   fi
 done
@@ -17,7 +17,7 @@ done
 # Font
 declare -A font=(
   ['family']='BlexMono Nerd Font Medium'
-  ['font_size']=11
+  ['size']=11
 )
 
 # Cursor
@@ -51,7 +51,7 @@ color['fg']=$(pastel format hex "hsl(${color['hue']} ${color['sat']}% 70%)")
 
 color['hue_angle_start']=0
 color['hue_angle_limit']=360
-color['hue_angle_rotate']=30
+color['hue_angle_step']=30
 color['hue_angle_current']=${color['hue_angle_start']}
 
 # Rotate wheel
@@ -62,7 +62,7 @@ for number in {1..12}; do
 
   color[$number]=$(pastel format hex "hsl(${color['hue_angle_current']} ${color['sat']}% ${color['lgt']}%)")
   echo ${color['hue_angle_current']}
-  (( color['hue_angle_current'] = color['hue_angle_current'] + color['hue_angle_rotate'] ))
+  (( color['hue_angle_current'] = color['hue_angle_current'] + color['hue_angle_step'] ))
 done
 
 color['bg']=${color['bg']}
