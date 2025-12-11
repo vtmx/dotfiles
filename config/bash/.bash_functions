@@ -367,7 +367,7 @@ ren() {
 }
 
 # Link simbolic in working dir
-lnwd() {
+lwd() {
   [[ $1 && $2 ]] || {
     echo 'usage: lnwd <file-or-dir> <path>' >&2
     return 1
@@ -391,45 +391,44 @@ play() {
     local args="--no-video --display-tags=Title,Artist"
 
     usage() {
-      echo -e "\nr  Recents\ns  Search" >&2; return 1
+      echo -e "\nrc Recents\nrd Random\ns  Search" >&2; return 1
     }
 
     to_play() {
       if [[ -d "$1" ]]; then
-        find "$1" -type f -name "*.mp3" -exec mpv $args {} +
-        # ls -R "$1" | awk '!/:$/ && !/^$/ {print $NF}' | xargs mpv $args
+        printf "%s\n" "$1"/**/*.mp3 | mpv $args --playlist=-
+      elif [[ "$1" =~ mp3 ]]; then
+        printf "%s\n" "$1" | mpv $args --playlist=-
       elif [[ "$1" =~ ^"http" ]]; then
         mpv $args "$1"
       else
-        mpv $args **/*.mp3
+        mpv $args $music/**/*.mp3
       fi
     }
 
     to_play_random() {
-      local has_mp3=$(find . -type f -iname '*.mp3')
-      if [[ "$has_mp3" ]]; then
-        find . -type f -name "*.mp3" -exec mpv $args --shuffle {} +
+      if [[ $PWD == $music/* ]]; then
+        printf "%s\n" **/*.mp3 | mpv $args --shuffle --playlist=-
       else
-        echo "$has_mp3"
-        find "$music" -type f -name "*.mp3" -exec mpv $args --shuffle {} +
+        printf "%s\n" $music/**/*.mp3 | mpv $args --shuffle --playlist=-
       fi
     }
 
     case "$1" in
-      @(ani?(me)))        to_play "$music/j-music/anime"                                  ;;
-      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                         ;;
-      @(jaz?(z)))         to_play "$music/jazz"                                           ;;
-      h)                  usage                                                           ;;
-      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"                        ;;
-      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"              ;;
-      @(mj|michael))      to_play "$music/lentas/michael-jackson"                         ;;
-      ost)                to_play "$music/ost"                                            ;;
-      rd)                 to_play_random                                                  ;;
-      rc)                 ls -t "$music"/** | head -n 250 | xargs mpv $args               ;;
-      @(retro?(wave)))    to_play "$music/retrowave"                                      ;;
-      @(s?(earch)))       find "$music" -type f -iname *"$2"*.mp3 | fzf | xargs mpv $args ;;
-      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"              ;;
-      *)                  to_play $1                                                      ;;
+      @(ani?(me)))        to_play "$music/animes"                                ;;
+      @(brian|bc))        to_play "$music/jazz/brian-cullberston"                ;;
+      @(jaz?(z)))         to_play "$music/jazz"                                  ;;
+      h)                  usage                                                  ;;
+      @(hiro))            to_play "$music/j-music/hiroyuki-sawano"               ;;
+      lof|lofi)           to_play "https://www.youtube.com/live/jfKfPfyJRdk"     ;;
+      @(mj|michael))      to_play "$music/pop/michael-jackson"                   ;;
+      rd)                 to_play_random                                         ;;
+      rc)                 to_play "$(ls -t $music/** | head -n 250)"             ;;
+      @(retro?(wave)))    to_play $music/retrowave                               ;;
+      ost)                to_play "$music/ost"                                   ;;
+      @(s?(earch)))       to_play "$(ls -t $music/**/*.mp3 | fzf)"               ;;
+      @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"     ;;
+      *)                  to_play                                                ;;
     esac
   fi
 }
