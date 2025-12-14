@@ -73,6 +73,7 @@
         <value type="string" value="pamac-tray"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="IKhcmsGe_y"/>
         <value type="string" value="steam"/>
       </property>
       <property name="single-row" type="bool" value="false"/>

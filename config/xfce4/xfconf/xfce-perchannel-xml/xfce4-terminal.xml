@@ -11,7 +11,7 @@
   <property name="misc-cursor-blinks" type="bool" value="true"/>
   <property name="font-allow-bold" type="bool" value="false"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
-  <property name="misc-borders-default" type="bool" value="false"/>
+  <property name="misc-borders-default" type="bool" value="true"/>
   <property name="scrolling-on-keystroke" type="bool" value="false"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
   <property name="color-bold-is-bright" type="bool" value="false"/>
@@ -24,4 +24,5 @@
   <property name="custom-command" type="string" value="tmux"/>
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
   <property name="font-use-system" type="bool" value="false"/>
+  <property name="misc-maximize-default" type="bool" value="false"/>
 </channel>

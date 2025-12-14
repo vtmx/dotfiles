@@ -401,6 +401,8 @@ play() {
         printf "%s\n" "$1" | mpv $args --playlist=-
       elif [[ "$1" =~ ^"http" ]]; then
         mpv $args "$1"
+      elif [[ "$PWD" =~ $music ]]; then
+        mpv $args **/*.mp3
       else
         mpv $args $music/**/*.mp3
       fi

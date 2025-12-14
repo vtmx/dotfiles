@@ -6,7 +6,7 @@
     <property name="LockCommand" type="empty"/>
     <property name="SessionName" type="string" value="Default"/>
     <property name="SaveOnExit" type="bool" value="false"/>
-    <property name="PromptOnLogout" type="bool" value="false"/>
+    <property name="PromptOnLogout" type="bool" value="true"/>
   </property>
   <property name="sessions" type="empty">
     <property name="Failsafe" type="empty">
@@ -47,5 +47,8 @@
   </property>
   <property name="shutdown" type="empty">
     <property name="LockScreen" type="bool" value="false"/>
+  </property>
+  <property name="chooser" type="empty">
+    <property name="AlwaysDisplay" type="bool" value="true"/>
   </property>
 </channel>
