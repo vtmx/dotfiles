@@ -1,0 +1,16 @@
+Command install
+
+./install.sh \
+  --name OneDarkV \
+  --theme default \
+  --color dark \
+  --size standard \
+  --tweaks solid \
+  --round 4px
+
+# xfce-panel ajust size plugins
+
+#pulseaudio-button image,
+#xfce4-clipman-plugin image {
+  -gtk-icon-transform: scale(0.55);
+}
