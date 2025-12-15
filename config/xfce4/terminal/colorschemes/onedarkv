@@ -1,8 +1,0 @@
-[Scheme]
-Name=OneDarkV
-ColorForeground=#4ccd4ccd4ccd
-ColorBackground=#f851f465ebe7
-TabActivityColor=#d8d8a9a97f7f
-ColorCursor=#f0f0b6b66666
-ColorSelection=#16163b3b5959
-ColorPalette=rgb(0,0,0);rgb(170,0,0);rgb(0,170,0);rgb(170,85,0);rgb(0,0,170);rgb(170,0,170);rgb(0,138,138);rgb(170,170,170);rgb(85,85,85);rgb(255,85,85);rgb(85,255,85);rgb(196,160,0);rgb(85,85,255);rgb(255,85,255);rgb(68,204,204);rgb(255,255,255)
