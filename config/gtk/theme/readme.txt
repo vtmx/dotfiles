@@ -8,9 +8,13 @@ Command install
   --tweaks solid \
   --round 4px
 
+cd ~/.local/share/themes/OneDarkV-Dark/
+sed -i 's/color: white/color: \#abb2bf/g' **/*.css
+
 # xfce-panel ajust size plugins
 
 #pulseaudio-button image,
 #xfce4-clipman-plugin image {
   -gtk-icon-transform: scale(0.55);
 }
+

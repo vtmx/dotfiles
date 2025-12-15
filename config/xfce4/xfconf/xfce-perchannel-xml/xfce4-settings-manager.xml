@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-settings-manager" version="1.0">
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="717"/>
-    <property name="window-height" type="int" value="762"/>
+    <property name="window-width" type="int" value="870"/>
+    <property name="window-height" type="int" value="741"/>
   </property>
 </channel>
