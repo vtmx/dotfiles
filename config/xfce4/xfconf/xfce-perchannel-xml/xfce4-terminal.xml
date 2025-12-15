@@ -5,7 +5,7 @@
   <property name="color-background" type="string" value="#232327262e2e"/>
   <property name="color-foreground" type="string" value="#ababb2b2bfbf"/>
   <property name="tab-activity-color" type="string" value="#ababb2b2bfbf"/>
-  <property name="color-palette" type="string" value="rgb(35,39,46);rgb(224,108,117);rgb(152,195,121);rgb(229,192,123);rgb(97,175,239);rgb(198,120,221);rgb(86,182,194);rgb(171,178,191);rgb(62,68,82);rgb(190,80,70);rgb(152,195,121);rgb(209,154,102);rgb(97,175,239);rgb(198,120,221);rgb(86,182,194);rgb(92,99,112)"/>
+  <property name="color-palette" type="string" value="rgb(35,39,46);rgb(224,108,117);rgb(152,195,121);rgb(229,192,123);rgb(97,175,239);rgb(198,120,221);rgb(86,182,194);rgb(171,178,191);rgb(62,68,82);rgb(224,108,117);rgb(152,195,121);rgb(209,154,102);rgb(97,175,239);rgb(198,120,221);rgb(86,182,194);rgb(92,99,112)"/>
   <property name="misc-tab-close-middle-click" type="bool" value="false"/>
   <property name="misc-hyperlinks-enabled" type="bool" value="false"/>
   <property name="misc-cursor-blinks" type="bool" value="true"/>
