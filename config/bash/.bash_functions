@@ -126,8 +126,8 @@ gpa() {
 # Update doftiles
 gpdf() {
   local msg="$*"
-  local dotdir="$HOME/Dev/dotfiles"
   [[ -z "$*" ]] && msg="Update dotfiles"
+  local dotdir="$HOME/Dev/dotfiles"
 
   # Git commands
   git -C "$dotdir" add -A
