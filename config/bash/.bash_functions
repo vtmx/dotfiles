@@ -424,9 +424,9 @@ play() {
   fi
 }
 
-# Open rc configs
+# Open config file
 rc() {
-  local rcfiles=(\
+  local files=(\
     "$HOME/.bashrc" \
     "$HOME/.bash_aliases" \
     "$HOME/.bash_functions" \
@@ -444,15 +444,12 @@ rc() {
     "$HOME/.config/tmux/tmux.conf"
   )
 
-  # rcfile=$(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
-  # printf '%s\n' "${rcfiles[@]}" | fzf | xargs $EDITOR
-  # printf '%s\n' "${rcfiles[@]}" | fzf | xargs nvim
-  rcfile=$(printf '%s\n' "${rcfiles[@]}" | fzf)
+  selected_file=$(printf '%s\n' "${files[@]}" | fzf)
 
-  if [[ -f "$rcfile" ]]; then
-    $EDITOR "$rcfile"
+  if [[ -f "$selected_file" ]]; then
+    $EDITOR "$selected_file"
   else
-    echo "error: file '${rcfile}'"
+    echo "error: file '${selected_file}' not exit"
     return 1
   fi
 }
