@@ -441,12 +441,20 @@ rc() {
     "$HOME/.config/kitty/kitty.conf" \
     "$HOME/.config/nvim/init.lua" \
     "$HOME/.config/rofi/config.rasi" \
-    "$HOME/.config/tmux/tmux.conf" \
+    "$HOME/.config/tmux/tmux.conf"
   )
 
-  rcfile=$(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
-  [[ "$rcfile" ]] && $EDITOR "$rcfile"
-  # $EDITOR $(printf '%s\n' "${rcfiles[@]}" | fzf)
+  # rcfile=$(IFS=$'\n'; echo "${rcfiles[*]}" | fzf)
+  # printf '%s\n' "${rcfiles[@]}" | fzf | xargs $EDITOR
+  # printf '%s\n' "${rcfiles[@]}" | fzf | xargs nvim
+  rcfile=$(printf '%s\n' "${rcfiles[@]}" | fzf)
+
+  if [[ -f "$rcfile" ]]; then
+    $EDITOR "$rcfile"
+  else
+    echo "error: file '${rcfile}'"
+    return 1
+  fi
 }
 
 # SSH Add Agent
