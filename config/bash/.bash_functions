@@ -127,14 +127,12 @@ gpa() {
 gpdf() {
   local msg="$*"
   local dotdir="$HOME/Dev/dotfiles"
-  [[ -z "$msg" ]] && msg="Update dotfiles"
+  [[ -z "$*" ]] && msg="Update dotfiles"
 
   # Git commands
-  cd "$dotdir"
-  git add -A
-  git commit -m "${msg^}"
-  git push
-  cd - >/dev/null
+  git -C "$dotdir" add -A
+  git -C "$dotdir" commit -m "${msg^}"
+  git -C "$dotdir" git push
 }
 
 # Convert rgb to hex
@@ -184,18 +182,10 @@ mkdia() {
 mksh() {
   local file="$1"
 
-  # Test if has argument
   [[ -z "$file" ]] && { echo "error: need a name for script" >&2 && return 1; }
-
-  # Check if file exit
   [[ -e "$file" ]] && { echo "error: file already exist" >&2 && return 1; }
  
-  # Create script
-  echo "#!/usr/bin/env bash
-
-  " > "$file"
-
-  # Make script executable and open script
+  echo -e "#!/usr/bin/env bash\n\n" > "$file"
   chmod +x "$file" && $EDITOR +3 "$file"
 }
 
