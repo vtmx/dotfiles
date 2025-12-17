@@ -1,29 +1,54 @@
 local style = require 'core.style'
 local common = require 'core.common'
 
-style.background = { common.color '#23272e' }
-style.background2 = { common.color '#1e2227' }
-style.background3 = { common.color '#1e2227' }
-style.text = { common.color '#abb2bf' }
-style.caret = { common.color '#5c6370' }
-style.accent = { common.color '#dadfe9' }
-style.dim = { common.color '#5c6370' }
-style.divider = { common.color '#2c313c' }
-style.error = { common.color '#e06c75' }
-style.selection = { common.color '#3d4556' }
-style.line_number = { common.color '#3d4556' }
-style.line_number2 = { common.color '#abb2bf' }
-style.line_highlight = { common.color '#2c313c' }
-style.scrollbar = { common.color '#3d4556' }
-style.scrollbar2 = { common.color '#5c6370' }
+local color = {
+  bd      = { common.color '#1e2227' },
+  bg      = { common.color '#23272e' },
+  bl      = { common.color '#2c313c' }, -- cursorline and sel
+  fd      = { common.color '#5c6370' }, -- comment
+  fg      = { common.color '#abb2bf' },
+  fl      = { common.color '#0000ff' },
+  ac      = { common.color '#3d4556' }, -- selection and accent
+  red     = { common.color '#e06c75' },
+  orange  = { common.color '#d19a66' },
+  yellow  = { common.color '#e5c07b' },
+  green   = { common.color '#98c379' },
+  cyan    = { common.color '#56b6c2' },
+  blue    = { common.color '#61afef' },
+  magenta = { common.color '#c678dd' },
+}
 
-style.syntax['normal'] = { common.color '#abb2bf' }
-style.syntax['symbol'] = { common.color '#abb2bf' }
-style.syntax['comment'] = { common.color '#5c6370' }
-style.syntax['keyword'] = { common.color '#c678dd' }
-style.syntax['keyword2'] = { common.color '#c678dd' }
-style.syntax['number'] = { common.color '#d19a66' }
-style.syntax['literal'] = { common.color '#d19a66' }
-style.syntax['string'] = { common.color '#98c379' }
-style.syntax['operator'] = { common.color '#56b6c2' }
-style.syntax['function'] = { common.color '#61afef' }
+-- General
+style.background = color.bg
+style.background2 = color.bd
+style.background3 = color.bd
+style.text = color.fg
+style.caret = color.fd
+style.accent = color.ac
+style.dim = color.fd
+style.divider = color.bl
+style.error = color.red
+style.selection = color.ac
+style.line_number = color.ac
+style.line_number2 = color.fg
+style.line_highlight = color.bl
+style.scrollbar = color.ac
+style.scrollbar2 = color.fd
+
+-- Syntax
+style.syntax['normal'] = color.fg
+style.syntax['symbol'] = color.fg
+style.syntax['comment'] = color.fd
+style.syntax['keyword'] = color.magenta
+style.syntax['keyword2'] = color.red
+style.syntax['number'] = color.orange
+style.syntax['literal'] = color.yellow
+style.syntax['string'] = color.green
+style.syntax['operator'] = color.cyan
+style.syntax['function'] = color.blue
+
+-- Plugins
+-- indentguide
+style.guide = color.bl
+style.guide_highlight = color.ac
+
