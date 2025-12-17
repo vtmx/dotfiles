@@ -1,0 +1,27 @@
+Error: /usr/share/lite-xl/core/docview.lua:454: bad argument #5 to 'draw_text' (table expected, got string)
+
+stack traceback:
+	[C]: in function 'renderer.draw_text'
+	/usr/share/lite-xl/core/docview.lua:454: in function </usr/share/lite-xl/core/docview.lua:440>
+	(...tail calls...)
+	/usr/share/lite-xl/core/docview.lua:587: in upvalue 'old_draw'
+	/usr/share/lite-xl/plugins/linewrapping.lua:529: in function 'core.docview.draw'
+	/usr/share/lite-xl/core/node.lua:594: in function 'core.node.draw'
+	/usr/share/lite-xl/core/node.lua:34: in function 'core.node.propagate'
+	/usr/share/lite-xl/core/node.lua:599: in function 'core.node.draw'
+	/usr/share/lite-xl/core/node.lua:33: in function 'core.node.propagate'
+	/usr/share/lite-xl/core/node.lua:599: in function 'core.node.draw'
+	/usr/share/lite-xl/core/node.lua:34: in function 'core.node.propagate'
+	/usr/share/lite-xl/core/node.lua:599: in function 'core.node.draw'
+	/usr/share/lite-xl/core/node.lua:34: in function 'core.node.propagate'
+	/usr/share/lite-xl/core/node.lua:599: in function 'core.node.draw'
+	/usr/share/lite-xl/core/rootview.lua:482: in upvalue 'draw'
+	/usr/share/lite-xl/plugins/autocomplete.lua:598: in upvalue 'root_view_draw'
+	/usr/share/lite-xl/plugins/treeview.lua:497: in upvalue 'root_view_draw'
+	/usr/share/lite-xl/plugins/contextmenu.lua:32: in function 'core.rootview.draw'
+	/usr/share/lite-xl/core/init.lua:1356: in function 'core.step'
+	/usr/share/lite-xl/core/init.lua:1416: in function 'core.run'
+	(...tail calls...)
+	[string "local core..."]:14: in function <[string "local core..."]:6>
+	[C]: in function 'xpcall'
+	[string "local core..."]:6: in main chunk
