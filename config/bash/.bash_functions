@@ -130,8 +130,11 @@ gpdf() {
   local dotdir="$HOME/Dev/dotfiles"
 
   # Git commands
+  echo 1
   git -C "$dotdir" add -A
+  echo 2
   git -C "$dotdir" commit -m "${msg^}"
+  echo 3
   git -C "$dotdir" git push
 }
 
