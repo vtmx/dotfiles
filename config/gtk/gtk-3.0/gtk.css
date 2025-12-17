@@ -1,3 +1,44 @@
+@import 'colors.css';
+
+/* General */
+
+/* Hidden tooltip */
+
+tooltip {
+  opacity: 0;
+}
+
+/* Nemo */
+
+.nemo-window separator {
+  background: #2c313c;
+}
+
+.nemo-window .primary-toolbar {
+  background: #23272e;
+}
+
+/* Thunar */
+
+/* Hidden menu button */
+
+.thunar toolbutton:first-child image {
+  opacity: 0;
+}
+
+.thunar toolbar entry {
+  margin-left: -36px;
+  border-color: #2c313c;
+}
+
+/* Line separator */
+
+.thunar separator {
+  background: #2c313c;
+}
+
+/* Xfce Panel */
+
 .panel {
   background: #1e2227;
   border-top: 1px solid #2c313c;
@@ -35,4 +76,10 @@
 
 .panel #clock-button {
   padding: 0 8px;
+}
+
+/* Xfce Terminal */
+
+VteTerminal, vte-terminal {
+  padding: 8px;
 }
