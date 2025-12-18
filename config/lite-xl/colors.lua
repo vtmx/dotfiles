@@ -7,7 +7,6 @@ local color = {
   bl      = { common.color '#2c313c' }, -- cursorline and sel
   fd      = { common.color '#5c6370' }, -- comment
   fg      = { common.color '#abb2bf' },
-  fl      = { common.color '#0000ff' },
   ac      = { common.color '#3d4556' }, -- selection and accent
   red     = { common.color '#e06c75' },
   orange  = { common.color '#d19a66' },
@@ -27,13 +26,25 @@ style.caret = color.fd
 style.accent = color.ac
 style.dim = color.fd
 style.divider = color.bl
-style.error = color.red
 style.selection = color.ac
 style.line_number = color.ac
 style.line_number2 = color.fg
 style.line_highlight = color.bl
 style.scrollbar = color.ac
 style.scrollbar2 = color.fd
+style.scrollbar_track = color.bl
+style.nagbar = color.bd
+style.nagbar_text = color.fg
+style.nagbar_dim = color.bg
+style.drag_overlay = color.bg
+style.drag_overlay_tab = color.bl
+style.good = color.green
+style.warn = color.yellow
+style.error = color.red
+style.modified = color.blue
+style.log["INFO"]  = { icon = "i", color = color.blue }
+style.log["WARN"]  = { icon = "!", color = color.yellow }
+style.log["ERROR"] = { icon = "!", color = color.red }
 
 -- Syntax
 style.syntax['normal'] = color.fg

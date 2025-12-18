@@ -4,7 +4,6 @@ local colors = {
   bl      = '#2c313c', -- cursorline and sel
   fd      = '#5c6370', -- comment
   fg      = '#abb2bf',
-  fl      = '#0000ff',
   ac      = '#3d4556', -- selection and accent
   red     = '#e06c75',
   orange  = '#d19a66',
