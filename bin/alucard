@@ -2,9 +2,10 @@
 
 # Color converter using Dracula theme as base
 # https://github.com/dracula/dracula-theme
-# Usage: alucard dracula.json
-#        alucard dracula.json > custom.json
-#        alucard -i dracula.json
+# Usage:
+# alucard dracula.json
+# alucard dracula.json > custom.json
+# alucard -i dracula.json
 
 # Check -i argument
 while [[ $# -gt 0 ]]; do
