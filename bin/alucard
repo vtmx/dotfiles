@@ -2,13 +2,34 @@
 
 # Color converter using Dracula theme as base
 # https://github.com/dracula/dracula-theme
-# Usage: alucard dracula.json > custom.json
+# Usage: alucard dracula.json
+#        alucard dracula.json > custom.json
+#        alucard -i dracula.json
 
-[[ $1 ]] || { echo 'alucard: need a file'; exit; }
+# Check -i argument
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -i)
+      overwrite=true
+      shift
+      ;;
+    *)
+      file="$1"
+      shift
+      ;;
+  esac
+done
 
+# Check if file
+if [[ ! -f "$file" ]]; then
+  echo 'alucard: no file in argument'
+  exit 1
+fi
+
+# Create arrays
 declare -A custom dracula
 
-# Custom color
+# Custom
 custom[background]='23272e'
 custom[currentline]='2c313c'
 custom[selection]='3d4556'
@@ -54,11 +75,16 @@ dracula[brightred]='ff6e6e'
 dracula[brightwhite]='ffffff'
 dracula[brightyellow]='ffffa'
 
-
 # Loop for colors
 for color in "${!dracula[@]}"; do
   sed_args+="s/${dracula[$color]}/${custom[$color]}/gI;"
 done
 
 # Substitute colors
-sed -e "$sed_args" $1
+if [[ $overwrite ]]; then
+  if sed -Ei "$sed_args" "$file"; then
+    echo 'alucard: substitute done'
+  fi
+else
+  sed -E "$sed_args" "$file"
+fi
