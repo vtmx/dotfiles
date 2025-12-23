@@ -119,7 +119,7 @@ super + F11
 
 # Powermenu
 ctrl + alt + Delete
-  $HOME/.local/bin/powermenu.sh
+  $HOME/.local/bin/powermenu
 
 Print
   flameshot gui

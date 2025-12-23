@@ -7,7 +7,7 @@ logout='Logout'
 
 # Get option
 getopt() {
-	echo -e "$shutdown\n$reboot\n$logout" | \
+  echo -e "$shutdown\n$reboot\n$logout" | \
   rofi -dmenu \
        -p "" \
        -theme-str 'listview { lines: 3; }'
