@@ -89,6 +89,11 @@ map(
 )
 
 map(
+  'n', 'S', '<cmd>HopAnywhere<cr>',
+  { desc = 'Char anywhere' }
+)
+
+map(
   'n', 'U', '<c-r>',
   { desc = 'Redo' }
 )

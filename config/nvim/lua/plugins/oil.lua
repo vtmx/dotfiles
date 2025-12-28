@@ -4,7 +4,6 @@ return {
     cmd = 'Oil',
     config = function()
       require('oil').setup({
-        -- Buffer-local options to use for oil buffers
         buf_options = {
           buflisted = false,
           bufhidden = 'hide',
@@ -12,13 +11,10 @@ return {
         prompt_save_on_select_new_entry = true,
         skip_confirm_for_simple_edits = false,
         float = {
-          -- Padding around the floating window
           padding = 3,
           max_width = 70,
           max_height = 30,
           border = 'rounded',
-          -- This is the config that will be passed to nvim_open_win.
-          -- Change values here to customize the layout
           override = function(conf)
             return conf
           end,
@@ -44,6 +40,6 @@ return {
         },
         use_default_keymaps = false,
       })
-    end,
-  },
+    end
+  }
 }

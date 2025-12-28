@@ -13,11 +13,11 @@ local lualine_map = {
 }
 
 local lualine_theme = ({
-  normal   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
-  insert   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
-  visual   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
-  replace  = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
-  inactive = { a = { fg = c.fd, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd }, },
+  normal   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd } },
+  insert   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd } },
+  visual   = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd } },
+  replace  = { a = { fg = c.fg, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd } },
+  inactive = { a = { fg = c.fd, bg = 'NONE' }, b = { fg = c.fd }, z = { fg = c.fd } },
 })
 
 return {
