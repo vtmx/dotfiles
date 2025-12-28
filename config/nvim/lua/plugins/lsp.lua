@@ -11,12 +11,12 @@ return {
       vim.lsp.config("*", {
         winbar = "%{%v:lua.require'nvim-navic'.get_location()%}",
         window = {
-          border = "rounded",
+          border = 'rounded',
         },
       })
 
       -- BashLS
-      vim.lsp.config("bashls", {
+      vim.lsp.config('bashls', {
         cmd = { 'bash-language-server', 'start' },
         filetypes = { 'bash', 'sh' },
         settings = {
@@ -28,13 +28,13 @@ return {
       })
 
       -- Emmet Language Server
-      vim.lsp.config("emmet-language-server", {
+      vim.lsp.config('emmet-language-server', {
         cmd = { 'emmet-language-server', '--stdio' },
         filetypes = { 'html', 'htmldjango', 'css', 'scss' },
       })
 
       -- Lua LS
-      vim.lsp.config("lua_ls", {
+      vim.lsp.config('lua_ls', {
         cmd = { 'lua-language-server' },
         filetypes = { 'lua' },
         diagnostics = { globals = { 'vim' } },
@@ -65,7 +65,7 @@ return {
           border = 'rounded',
           source = 'always',
           header = '',
-          prefix = '',
+          prefix = ''
         }
       })
     end

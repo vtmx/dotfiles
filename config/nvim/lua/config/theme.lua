@@ -4,6 +4,7 @@ local hl_groups = {
   -- General
   Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
   Comment        = { fg = c.fd, ctermfg = 7, italic = true   },
+  Cursor         = { bg = c.fg, fg = c.bg                    },
   Title          = { fg = c.magenta },
   Twilight       = { fg = c.fd      },
 
@@ -308,10 +309,11 @@ local hl_groups = {
   FzfLuaBufFlagCur         = { fg = c.fg      },
   FzfLuaBufLineNr          = { fg = c.fg      },
   FzfLuaBufNr              = { fg = c.fg      },
+  FzfLuaDirPart            = { fg = c.fd, italic = false },
   FzfLuaHeaderBind         = { fg = c.fg      },
   FzfLuaHeaderText         = { fg = c.fg      },
   FzfLuaLivePrompt         = { fg = c.fg      },
-  FzfLuaLiveSym            = { fg = c.purple  },
+  FzfLuaLiveSym            = { fg = c.magenta },
   FzfLuaNr                 = { fg = c.fg      },
   FzfLuaPathColNr          = { fg = c.fg      },
   FzfLuaPathLineNr         = { fg = c.blue    },
