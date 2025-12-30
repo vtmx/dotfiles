@@ -2,14 +2,8 @@
 @theme '/dev/null'
 
 configuration {
-  modi: 'drun,run,window';
-
-  // icons
+  modi: 'drun';
   display-drun: '';
-  display-filebrowser: '';
-  display-keys: '';
-  display-run: '󰆍';
-  display-window: '';
 
   // format
   drun-display-format: '{name}';
@@ -41,15 +35,12 @@ configuration {
   kb-cancel: 'Escape,Control+c';
 }
 
-// import
-// @import "onedarkv.rasi"
-
 * {
   font: 'BlexMono Nerd Font 11';
   bg: #1e2227;
   bl: #2c313c;
   fg: #abb2bf;
-  blue: #61afef;
+  ac: #61afef;
 }
 
 window {
@@ -118,7 +109,7 @@ element {
 element-text{
   background-color: transparent;
   text-color: @fg;
-  highlight: @blue; // highlight
+  highlight: @ac; // highlight
 }
 
 element normal.normal,
