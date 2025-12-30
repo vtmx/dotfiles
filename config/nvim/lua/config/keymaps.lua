@@ -19,7 +19,7 @@ map(
 )
 
 map(
-  'n', 'gcd', 'yypk:normal gcc<cr>j$',
+  'n', 'gcd', 'yypk:normal gcc<cr>j^',
   { desc = 'Duplicate line and comment' }
 )
 
