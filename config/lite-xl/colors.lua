@@ -50,6 +50,7 @@ style.log["ERROR"] = { icon = "!", color = color.red }
 style.syntax['normal'] = color.fg
 style.syntax['symbol'] = color.fg
 style.syntax['comment'] = color.fd
+style.syntax_fonts['comment'] = style.italic_code_font
 style.syntax['keyword'] = color.magenta
 style.syntax['keyword2'] = color.red
 style.syntax['number'] = color.orange

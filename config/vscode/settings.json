@@ -39,10 +39,6 @@
   "editor.semanticHighlighting.enabled": false,
   "editor.stickyScroll.enabled": false,
   "editor.tabSize": 2,
-  "editor.tokenColorCustomizations": {
-    "comments": "#5c6370",
-    "textMateRules": [ { "scope": "comment", "settings": { "fontStyle": "italic" } } ]
-  },
 
   // Explorer
   "explorer.confirmDelete": false,
@@ -92,6 +88,7 @@
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
     "editor.background": "#23272e",
+    "editor.foreground": "#abb2bf",
     "editor.selectionBackground": "#3d4556",
     "editor.selectionHighlightBorder": "#00000000",
     "editor.wordHighlightBackground": "#00000000",
@@ -120,6 +117,20 @@
     "titleBar.activeBackground": "#1e2227",
     "terminal.background": "#1e2227",
     "terminalCursor.background": "#abb2bf"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": { "foreground": "#5c6370", "fontStyle": "italic" },
+    "keywords": "#c678dd",
+    "strings": "#98c379",
+    "functions": "#61afef",
+    "variables": "#abb2bf",
+    "numbers": "#d19a66",
+    "classes": "#c678dd",
+    "operators": "#56b6c2",
+    "types": "#e06c75",
+    "constants": "#56b6c2",
+    "properties": "#abb2bf",
+    "parameters": "#abb2bf",
   },
 
   // Plugins
