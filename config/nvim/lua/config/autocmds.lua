@@ -63,6 +63,16 @@ autocmd('FileType', {
   end
 })
 
+autocmd('FileType', {
+  pattern = 'python',
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.shiftwidth = 2
+    vim.opt.softtabstop = 2
+  end,
+})
+
+
 -- Set opts in terminal
 autocmd('TermOpen', {
   command = 'setlocal listchars= nonumber norelativenumber nocursorline',

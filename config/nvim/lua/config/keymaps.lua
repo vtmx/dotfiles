@@ -243,6 +243,11 @@ map(
 )
 
 map(
+  'v', '<c-l>', '<esc>',
+  { desc = 'Return to normal mode' }
+)
+
+map(
   'v', '<c-a-j>', ":m '>+1<cr>gv=gv",
   { desc = 'Move select line(s) to down' }
 )
