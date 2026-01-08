@@ -1,17 +1,18 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  lazy = false,
+  event = { 'BufReadPre', 'BufNewFile' },
   build = ':TSUpdate',
-  auto_install = true,
+  auto_install = false,
   sync_install = false,
   opts = {
     autotag = { enable = true },
     highlight = { enable = true },
-    indent = { enable = true },
+    incremental_selection = { enable = true },
+    indent = { enable = false },
     ensure_installed = {
       'c', 'bash', 'css', 'help', 'html', 'javascript', 'json',
       'lua', 'markdown', 'markdown_inline', 'python', 'scss', 'sxhkdrc',
-      'tmux', 'toml', 'typescript', 'v', 'vim', 'vimdoc', 'vue', 'yaml'
-    }
+      'tmux', 'toml', 'typescript', 'v', 'vim', 'vimdoc', 'yaml'
+    },
   }
 }
