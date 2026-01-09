@@ -346,6 +346,10 @@ local hl_groups = {
   MiniCursorword           = { fg = c.yellow  },
   MiniCursorwordCurrent    = { fg = c.yellow  },
 
+  -- mini-files
+  MiniFilesTitle           = { fg = c.fd      },
+  MiniFilesTitleFocused    = { fg = c.fg      },
+
   -- mini-identscope
   MiniIndentscopeSymbol    = { fg = c.ac      },
 

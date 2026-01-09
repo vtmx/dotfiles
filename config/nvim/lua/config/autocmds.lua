@@ -27,27 +27,21 @@ autocmd('FileType', {
   end
 })
 
--- Close help with "q"
+-- Close help with "q" and open right
 autocmd('FileType', {
     pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
     callback = function()
       vim.keymap.set('n', 'q', '<cmd>quit<cr>', { desc = 'Quit doc file' })
-    end
-  }
-)
-
--- Open help file in left
-autocmd('FileType', {
-    pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
-    command = 'wincmd L'
+      vim.cmd('wincmd L')
+    end,
   }
 )
 
 -- Emmet
 autocmd('FileType', {
-  pattern = { 'css', 'scss', 'html', 'vue' },
+  pattern = { 'css', 'scss', 'html' },
   callback = function()
-    vim.keymap.set('i', '<c-e>', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
+    vim.keymap.set('i', '<c-x>e', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
   end
 })
 
