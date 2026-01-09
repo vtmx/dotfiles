@@ -16,8 +16,10 @@ local opts = {
   swapfile = false,
   tabstop = 2,
   updatetime = 250,
+  winborder = 'rounded',
   wrap = false
 }
+
 
 -- Set options
 for key, value in pairs(opts) do
