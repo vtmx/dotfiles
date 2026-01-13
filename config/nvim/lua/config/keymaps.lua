@@ -124,11 +124,6 @@ map(
 )
 
 map(
-  'n', '<f1>', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
-  { desc = 'Help for current word' }
-)
-
-map(
   'n', '<tab>', '<cmd>bn<cr>',
   { desc = 'Buffer next' }
 )
@@ -386,6 +381,11 @@ map(
 map(
   'n', '<leader>k', '<cmd>FzfLua keymaps<cr>',
   { desc = 'Keymaps' }
+)
+
+map(
+  'n', '<leader>K', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
+  { desc = 'Help for current word' }
 )
 
 map(

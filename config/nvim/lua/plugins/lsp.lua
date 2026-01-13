@@ -54,7 +54,7 @@ return {
         filetypes = { 'html', 'css', 'scss' },
         showAbbreviationSuggestions = true,
         showExpandedAbbreviation = 'always',
-        showSuggestionsAsSnippets = false,
+        showSuggestionsAsSnippets = true,
       })
 
       -- HTML
