@@ -61,14 +61,6 @@ autocmd('BufWritePre', {
   command = '%s/\\s\\+$//e'
 })
 
--- CSS
-autocmd('FileType', {
-  pattern = { 'css', 'scss', 'html' },
-  callback = function()
-    vim.keymap.set('i', '<c-x>e', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
-  end
-})
-
 -- Close help with "q" and open right
 autocmd('FileType', {
   pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
@@ -76,8 +68,15 @@ autocmd('FileType', {
     vim.keymap.set('n', 'q', '<cmd>quit<cr>', { desc = 'Quit doc file' })
     vim.cmd('wincmd L')
   end
-}
-)
+})
+
+-- CSS
+autocmd('FileType', {
+  pattern = { 'css', 'scss', 'html' },
+  callback = function()
+    vim.keymap.set('i', '<c-x>e', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
+  end
+})
 
 -- HTML
 autocmd('FileType', {
