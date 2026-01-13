@@ -20,6 +20,25 @@ autocmd('TextYankPost', {
   end
 })
 
+-- Retore cursor position
+autocmd('BufReadPost', {
+  callback = function(args)
+    local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+    local line_count = vim.api.nvim_buf_line_count(args.buf)
+    if mark[1] > 0 and mark[1] <= line_count then
+      vim.api.nvim_win_set_cursor(0, mark)
+      vim.schedule(function()
+        vim.cmd('normal! zz')
+      end)
+    end
+  end
+})
+
+-- Better resize
+autocmd('VimResized', {
+  command = 'wincmd ='
+})
+
 -- Disable auto comment
 autocmd('FileType', {
   callback = function()
@@ -27,21 +46,44 @@ autocmd('FileType', {
   end
 })
 
--- Close help with "q" and open right
-autocmd('FileType', {
-    pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
-    callback = function()
-      vim.keymap.set('n', 'q', '<cmd>quit<cr>', { desc = 'Quit doc file' })
-      vim.cmd('wincmd L')
-    end,
-  }
-)
+-- Syntax highlighting for dotenv files
+autocmd('BufRead', {
+  group = vim.api.nvim_create_augroup('dotenv_ft', { clear = true }),
+  pattern = { '.env', '.env.*' },
+  callback = function()
+    vim.bo.filetype = 'dosini'
+  end
+})
 
--- Emmet
+-- Trim whitespace on save
+autocmd('BufWritePre', {
+  pattern = '*',
+  command = '%s/\\s\\+$//e'
+})
+
+-- CSS
 autocmd('FileType', {
   pattern = { 'css', 'scss', 'html' },
   callback = function()
     vim.keymap.set('i', '<c-x>e', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
+  end
+})
+
+-- Close help with "q" and open right
+autocmd('FileType', {
+  pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
+  callback = function()
+    vim.keymap.set('n', 'q', '<cmd>quit<cr>', { desc = 'Quit doc file' })
+    vim.cmd('wincmd L')
+  end
+}
+)
+
+-- HTML
+autocmd('FileType', {
+  pattern = 'html',
+  callback = function()
+    vim.bo.omnifunc = 'htmlcomplete#CompleteTags'
   end
 })
 
@@ -80,6 +122,6 @@ autocmd('TermOpen', {
 
 -- Run by file
 exec([[
-  autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
-  autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
+autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
+autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
 ]], false)

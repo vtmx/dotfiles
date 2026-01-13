@@ -1,9 +1,9 @@
 return {
-  -- {
-  --   'nvim-mini/mini.align',
-  --   event = 'VeryLazy',
-  --   config = true
-  -- },
+  {
+    'nvim-mini/mini.align',
+    event = 'VeryLazy',
+    config = true
+  },
   -- {
   --   'nvim-mini/mini.cursorword',
   --   config = true

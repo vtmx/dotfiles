@@ -47,6 +47,8 @@
   // Files
   "files.autoSave": "off",
   "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
 
   // Git
   "git.confirmSync": false,
@@ -339,7 +341,7 @@
 
     // Paste in new line above
     { "before": ["<leader><leader>", "p"], "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"] },
-    
+
     // Paste in new line below
     { "before": ["<leader><leader>", "P"], "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"] }
   ],
@@ -362,7 +364,7 @@
 
     // Remove indent
     { "before": ["<"], "after": ["<", "g", "v"] },
-    
+
     // Exit visual mode
     { "before": ["<c-c>"], "after": ["esc"] },
 
