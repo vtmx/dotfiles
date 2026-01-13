@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <th align="left">Shell</th>
-    <td><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash</a> + <a href="https://starship.rs">Starship</a></td>
+    <td><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash</a></td>
   </tr>
   <tr>
     <th align="left">System Font</th>
@@ -166,47 +166,47 @@
   </thead>
   <tbody>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/23272e/?text=+" alt="Black"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/23272e&text=+" alt="Black"></td>
       <td>Black (BG)</td>
       <td><code>#23272e</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/5c6370/?text=+" alt="Black"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/5c6370&text=+" alt="Black"></td>
       <td>Black Bright</td>
       <td><code>#5c6370</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/e06c75/?text=+" alt="Red"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/e06c75&text=+" alt="Red"></td>
       <td>Red</td>
       <td><code>#e06c75</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/98c379/?text=+" alt="Green"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/98c379&text=+" alt="Green"></td>
       <td>Green</td>
       <td><code>#98c379</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/e5c07b/?text=+" alt="Yellow"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/e5c07b&text=+" alt="Yellow"></td>
       <td>Yellow</td>
       <td><code>#e5c07b</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/61afef/?text=+" alt="Blue"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/61afef&text=+" alt="Blue"></td>
       <td>Blue</td>
       <td><code>#61afef</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/c678dd/?text=+" alt="Magenta"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/c678dd&text=+" alt="Magenta"></td>
       <td>Magenta</td>
       <td><code>#c678dd</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/56b6c2/?text=+" alt="Cyan"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/56b6c2&text=+" alt="Cyan"></td>
       <td>Cyan</td>
       <td><code>#56b6c2</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/5c6370/?text=+" alt="White"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/5c6370&text=+" alt="White"></td>
       <td>White</td>
       <td><code>#abb2bf</code></td>
     </tr>
@@ -229,58 +229,58 @@
     <th align="left">Hex</th>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/1e2227/?text=+" alt="Background Dark"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/1e2227&text=+" alt="Background Dark"></td>
     <td>Background Dark</td>
     <td><code>#1e2227</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/e06c75/?text=+" alt="Red"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/e06c75&text=+" alt="Red"></td>
     <td>Red</td>
     <td><code>#e06c75</code></td>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/23272e/?text=+" alt="Background"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/23272e&text=+" alt="Background"></td>
     <td>Background</td>
     <td><code>#23272e</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/d19a66/?text=+" alt="Orange"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/d19a66&text=+" alt="Orange"></td>
     <td>Orange</td>
     <td><code>#d19a66</code></td>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/2c313c/?text=+" alt="Line Hightlight"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/2c313c&text=+" alt="Line Hightlight"></td>
     <td>Current Line</td>
     <td><code>#2c313c</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/e5c07b/?text=+" alt="Yellow"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/e5c07b&text=+" alt="Yellow"></td>
     <td>Yellow</td>
     <td><code>#e5c07b</code></td>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/3d4556/?text=+" alt="Selection"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/3d4556&text=+" alt="Selection"></td>
     <td>Selection</td>
     <td><code>#3d4556</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/98c379/?text=+" alt="Green"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/98c379&text=+" alt="Green"></td>
     <td>Green</td>
     <td><code>#98c379</code></td>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/5c6370/?text=+" alt="Comment"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/5c6370&text=+" alt="Comment"></td>
     <td>Comment</td>
     <td><code>#5c6370</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/56b6c2/?text=+" alt="Cyan"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/56b6c2&text=+" alt="Cyan"></td>
     <td>Cyan</td>
     <td><code>#56b6c2</code></td>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/abb2bf/?text=+" alt="Foreground"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/abb2bf&text=+" alt="Foreground"></td>
     <td>Foreground</td>
     <td><code>#abb2bf</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/61afef/?text=+" alt="Blue"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/61afef&text=+" alt="Blue"></td>
     <td>Blue</td>
     <td><code>#61afef</code></td>
   </tr>
   <tr>
-    <td><img src="https://fakeimg.deblan.org/32x32/dadfe9/?text=+" alt="Foreground Light"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/dadfe9&text=+" alt="Foreground Light"></td>
     <td>Foreground Light</td>
     <td><code>#dadfe9</code></td>
-    <td><img src="https://fakeimg.deblan.org/32x32/c678dd/?text=+" alt="Magenta"></td>
+    <td><img src="https://fakeimg.deblan.org/32x32/c678dd&text=+" alt="Magenta"></td>
     <td>Magenta</td>
     <td><code>#c678dd</code></td>
   </tr>
