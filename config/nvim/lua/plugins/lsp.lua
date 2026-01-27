@@ -48,15 +48,6 @@ return {
         }
       })
 
-      -- Emmet Language Server
-      vim.lsp.config('emmet-language-server', {
-        cmd = { 'emmet-language-server', '--stdio' },
-        filetypes = { 'html', 'css', 'scss' },
-        showAbbreviationSuggestions = true,
-        showExpandedAbbreviation = 'always',
-        showSuggestionsAsSnippets = true,
-      })
-
       -- HTML
       vim.lsp.config('html', {
         cmd = { 'vscode-html-language-server', '--stdio' },

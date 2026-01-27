@@ -9,10 +9,10 @@
   "window.restoreWindows": "none",
 
   // Editor
-  "editor.autoClosingBrackets": "never",
-  "editor.autoClosingDelete": "never",
-  "editor.autoClosingQuotes": "never",
-  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoClosingOvertype": "always",
   "editor.autoIndent": "full",
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": false,
@@ -125,7 +125,7 @@
     "keywords": "#c678dd",
     "strings": "#98c379",
     "functions": "#61afef",
-    "variables": "#abb2bf",
+    "variables": "#e06c75",
     "numbers": "#d19a66",
     "classes": "#c678dd",
     "operators": "#56b6c2",
@@ -282,6 +282,9 @@
 
     // Redo
     { "before": ["<c-r>"], "commands": ["redo"] },
+
+    // Close
+    { "before": ["<c-w>"], "commands": ["workbench.action.closeActiveEditor"] },
 
     // Page up and middle page
     { "before": ["<c-u>"], "after": ["<c-u>", "z", "z"] },
