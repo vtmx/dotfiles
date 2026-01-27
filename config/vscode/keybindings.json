@@ -201,12 +201,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
-  // Close
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor"
-  },
-
   // Terminal
   {
     "key": "ctrl+'",
@@ -372,5 +366,11 @@
     "key": "ctrl+shift+m",
     "command": "-workbench.actions.view.problems",
     "when": "workbench.panel.markers.view.active"
+  },
+
+  // Close
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeActiveEditor"
   }
 ]

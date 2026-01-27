@@ -211,7 +211,7 @@ map(
 )
 
 map(
-  'i', '[[', '[[ $  ]]<esc><left><left><left>i',
+  'i', '[[', '[[   ]]<esc><left><left><left>i',
   { desc = 'Test in bash' }
 )
 
@@ -575,7 +575,12 @@ map(
 
 map(
   'n', '<leader>/', '<cmd>FzfLua grep<cr>',
-  { desc = 'Fuzzy' }
+  { desc = 'Fuzzy grep' }
+)
+
+map(
+  'n', '<leader>?', '<cmd>FzfLua live_grep<cr>',
+  { desc = 'Fuzzy live_grep' }
 )
 
 -- Leader leader
