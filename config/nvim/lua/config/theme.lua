@@ -112,25 +112,25 @@ local hl_groups = {
   -- Languages
 
   -- html
-  djangoTagBlock     = { fg = c.blue   },
-  djangoStatement    = { fg = c.blue   },
-  htmlArg            = { fg = c.orange },
-  htmlH1             = { fg = c.fg     },
-  htmlH2             = { fg = c.fg     },
-  htmlH3             = { fg = c.fg     },
-  htmlH4             = { fg = c.fg     },
-  htmlH5             = { fg = c.fg     },
-  htmlH6             = { fg = c.fg     },
-  htmlSpecialTagName = { fg = c.red    },
-  htmlTag            = { fg = c.fg     },
-  htmlEndTag         = { fg = c.fg     },
-  htmlTagName        = { fg = c.red    },
-  htmlTitle          = { fg = c.fg     },
-  htmlLink           = { fg = c.fg     },
+  djangoTagBlock     = { fg = c.red      },
+  djangoStatement    = { fg = c.red      },
+  htmlArg            = { fg = c.orange   },
+  htmlH1             = { link = 'Normal' },
+  htmlH2             = { link = 'Normal' },
+  htmlH3             = { link = 'Normal' },
+  htmlH4             = { link = 'Normal' },
+  htmlH5             = { link = 'Normal' },
+  htmlH6             = { link = 'Normal' },
+  htmlSpecialTagName = { fg = c.red      },
+  htmlTag            = { link = 'Normal' },
+  htmlEndTag         = { link = 'Normal' },
+  htmlTagName        = { fg = c.red      },
+  htmlTitle          = { link = 'Normal' },
+  htmlLink           = { link = 'Normal' },
 
   -- markdown
-  markdownBlockquote       = { fg = c.fg      },
-  markdownCodeDelimiter    = { fg = c.fg      },
+  markdownBlockquote       = { link = 'Normal' },
+  markdownCodeDelimiter    = { link = 'Normal' },
   markdownId               = { fg = c.magenta },
   markdownH1               = { fg = c.magenta },
   markdownH2               = { fg = c.magenta },
@@ -142,21 +142,24 @@ local hl_groups = {
   markdownHeadingRule      = { fg = c.magenta },
   markdownListMarker       = { fg = c.yellow  },
   markdownRule             = { fg = c.magenta },
-  markdownUrl              = { fg = c.fg      },
+  markdownUrl              = { link = 'Normal' },
 
   -- css
-  cssBraces          = { fg = c.fg           },
-  cssClassNameDot    = { link = 'cssTagName' },
-  cssClassName       = { link = 'cssTagName' },
-  cssCustomProp      = { fg = c.red          },
-  cssDefinition      = { fg = c.red          },
-  cssHacks           = { fg = c.fg           },
-  cssNoise           = { fg = c.fg           },
-  cssPseudoClass     = { fg = c.cyan         },
-  cssPseudoClassFn   = { fg = c.cyan         },
-  cssPseudoClassID   = { fg = c.cyan         },
-  cssTagName         = { fg = c.blue         },
-  cssVendor          = { fg = c.cyan         },
+  cssAttrRegion     = { link = 'cssPseudoClass' },
+  cssBraces         = { link = 'Normal'         },
+  cssClassNameDot   = { link = 'cssTagName'     },
+  cssClassName      = { link = 'cssTagName'     },
+  cssIdentifier     = { link = 'cssTagName'     },
+  cssCustomProp     = { link = 'cssDefinition'  },
+  cssDefinition     = { fg   = c.red            },
+  cssHacks          = { link = 'Normal'         },
+  cssNoise          = { link = 'Normal'         },
+  cssPseudoClass    = { fg   = c.orange         },
+  cssPseudoClassFn  = { link = 'cssPseudoClass' },
+  cssPseudoClassID  = { link = 'cssPseudoClass' },
+  cssTagName        = { fg   = c.blue           },
+  cssUnitDecorators = { link = 'cssDefinition'  },
+  cssVendor         = { link = 'StorageClass'   },
 
   -- js
   javaScriptBraces   = { link = 'Delimiter' },
@@ -389,6 +392,14 @@ vim.cmd.hi('clear')
 for name, val in pairs(hl_groups) do
   vim.api.nvim_set_hl(0, name, val)
 end
+
+-- css
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'css', 'scss' },
+  callback = function()
+    vim.api.nvim_set_hl(0, 'StorageClass', { fg = c.fg })
+  end
+})
 
 -- Spell
 vim.cmd('hi SpellBad guisp=' .. c.red)
