@@ -84,6 +84,8 @@ autocmd('FileType', {
 autocmd('FileType', {
   pattern = { 'css', 'scss' },
   callback = function()
+    vim.api.nvim_set_hl(0, 'StorageClass', { fg = '#e06c75' })
+
     vim.keymap.set('i', '{', function()
       vim.snippet.expand('{\n\t$0\n}')
     end)
