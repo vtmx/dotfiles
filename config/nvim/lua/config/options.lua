@@ -54,7 +54,7 @@ for key, value in pairs(g) do
   vim.g[key] = value
 end
 
--- Search recursively in current directory 
+-- Search recursively in current directory
 vim.cmd('set path+=**')
 
 -- Loading tmux navigator
