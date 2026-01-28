@@ -9,7 +9,6 @@ return {
     config = function()
       local servers = {
         'bashls',
-        'emmet-language-server',
         'cssls',
         'html',
         'lua_ls'
