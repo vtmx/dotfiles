@@ -112,7 +112,9 @@ local hl_groups = {
   -- Languages
 
   -- html
-  htmlArg            = { fg = c.yellow },
+  djangoTagBlock     = { fg = c.blue   },
+  djangoStatement    = { fg = c.blue   },
+  htmlArg            = { fg = c.orange },
   htmlH1             = { fg = c.fg     },
   htmlH2             = { fg = c.fg     },
   htmlH3             = { fg = c.fg     },
@@ -121,6 +123,7 @@ local hl_groups = {
   htmlH6             = { fg = c.fg     },
   htmlSpecialTagName = { fg = c.red    },
   htmlTag            = { fg = c.fg     },
+  htmlEndTag         = { fg = c.fg     },
   htmlTagName        = { fg = c.red    },
   htmlTitle          = { fg = c.fg     },
   htmlLink           = { fg = c.fg     },
@@ -142,14 +145,18 @@ local hl_groups = {
   markdownUrl              = { fg = c.fg      },
 
   -- css
-  cssClassName    = { fg   = c.red     },
-  cssClassNameDot = { fg   = c.orange  },
-  cssCustomProp   = { fg   = c.magenta },
-  cssDefinition   = { fg   = c.red     },
-  cssHacks        = { fg   = c.fg      },
-  cssNoise        = { fg   = c.fg    },
-  cssTagName      = { fg   = c.red     },
-  cssVendor       = { fg   = c.fg      },
+  cssBraces          = { fg = c.fg           },
+  cssClassNameDot    = { link = 'cssTagName' },
+  cssClassName       = { link = 'cssTagName' },
+  cssCustomProp      = { fg = c.red          },
+  cssDefinition      = { fg = c.red          },
+  cssHacks           = { fg = c.fg           },
+  cssNoise           = { fg = c.fg           },
+  cssPseudoClass     = { fg = c.cyan         },
+  cssPseudoClassFn   = { fg = c.cyan         },
+  cssPseudoClassID   = { fg = c.cyan         },
+  cssTagName         = { fg = c.blue         },
+  cssVendor          = { fg = c.cyan         },
 
   -- js
   javaScriptBraces   = { link = 'Delimiter' },
