@@ -210,11 +210,6 @@ map(
   { desc = 'Comment line' }
 )
 
-map(
-  'i', '[[', '[[   ]]<esc><left><left><left>i',
-  { desc = 'Test in bash' }
-)
-
 -- Visual
 
 map(

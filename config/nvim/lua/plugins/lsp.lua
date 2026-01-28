@@ -10,6 +10,7 @@ return {
       local servers = {
         'bashls',
         'cssls',
+        'emmet_ls',
         'html',
         'lua_ls'
       }
@@ -44,6 +45,16 @@ return {
             lint = { unknownAtRules = 'warning' },
           },
           scss = { validate = true },
+        }
+      })
+
+      vim.lsp.config('emmet_ls', {
+        cmd = { 'emmet-ls', '--stdio' },
+        filetypes = { 'css', 'scss', 'html' },
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
+        init_options = {
+          showAbbreviationSuggestions = true,
+          showExpandedAbbreviation = "always",
         }
       })
 

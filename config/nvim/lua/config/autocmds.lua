@@ -70,15 +70,35 @@ autocmd('FileType', {
   end
 })
 
--- CSS
+-- bash
 autocmd('FileType', {
-  pattern = { 'css', 'scss', 'html' },
+  pattern = { 'bash', 'sh' },
   callback = function()
-    vim.keymap.set('i', '<c-x>e', '<Plug>(emmet-expand-abbr)', { desc = 'Emmet expand' })
+    vim.keymap.set('i', '[[', function()
+      vim.snippet.expand('[[ $1 ]]$0')
+    end)
   end
 })
 
--- HTML
+-- css
+autocmd('FileType', {
+  pattern = { 'css', 'scss' },
+  callback = function()
+    vim.keymap.set('i', '{', function()
+      vim.snippet.expand('{\n\t$0\n}')
+    end)
+
+    vim.keymap.set('i', '[', function()
+      vim.snippet.expand("[$1='$2']$0")
+    end)
+
+    vim.keymap.set('i', 'var', function()
+      vim.snippet.expand('var(--$0)')
+    end)
+  end
+})
+
+-- html
 autocmd('FileType', {
   pattern = 'html',
   callback = function()
@@ -86,18 +106,26 @@ autocmd('FileType', {
   end
 })
 
--- Markdown
+-- md
 autocmd('FileType', {
   pattern = 'markdown',
   callback = function()
     vim.opt.shiftwidth = 2
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
-    vim.keymap.set('i', '<c-b>', '```bash<cr>```<esc>O', { desc = 'Add bashcode' })
     vim.keymap.set('i', '<c-k>', '[]()<left><left><left>', { desc = 'Add link' })
+
+    vim.keymap.set('n', '<leader>`', function()
+      vim.snippet.expand('```bash\n$0\n```')
+    end)
+
+    vim.keymap.set('i', '`',function()
+      vim.snippet.expand('```bash\n$0\n```')
+    end)
   end
 })
 
+-- python
 autocmd('FileType', {
   pattern = 'python',
   callback = function()
@@ -107,16 +135,9 @@ autocmd('FileType', {
   end,
 })
 
-
 -- Set opts in terminal
 autocmd('TermOpen', {
-  command = 'setlocal listchars= nonumber norelativenumber nocursorline',
-})
-
--- Open terminal in insert mode
-autocmd('TermOpen', {
-  pattern = '',
-  command = 'startinsert'
+  command = 'setlocal listchars= nonumber norelativenumber nocursorline startinsert',
 })
 
 -- Run by file
