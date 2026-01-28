@@ -54,7 +54,7 @@ return {
         capabilities = require('blink.cmp').get_lsp_capabilities(),
         init_options = {
           showAbbreviationSuggestions = true,
-          showExpandedAbbreviation = "always",
+          showExpandedAbbreviation = 'always',
         }
       })
 
