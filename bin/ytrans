@@ -10,7 +10,7 @@ yt_trans_lang=pt
 
 # Check file exist
 if [[ -f "$yt_trans_file" ]]; then
-  read -rp 'File already exist, overwrite [y/N]: ' opc
+  read -rp 'File exist overwrie [y/N]: ' opc
 
   if [[ $opc =~ [Yy] ]]; then
     yt_trans_file_overwrite=true
@@ -32,7 +32,7 @@ if ! type yt-dlp  >/dev/null; then
 fi
 
 # Get transcript
-if [[ $yt_trans_file_overwrite ]]; then
+if [[ ! -f "$yt_trans_file" ]] || [[ $yt_trans_file_overwrite == 'true' ]]; then
   yt-dlp \
     --skip-download \
     --sub-format srt \
@@ -41,7 +41,7 @@ if [[ $yt_trans_file_overwrite ]]; then
     --write-auto-subs \
     --quiet \
     --output "transcript" \
-    "$yt_url"  
+    "$yt_url"
 fi
 
 # Get format transcript from
@@ -52,17 +52,17 @@ Escolha uma opção:
 p) Print
 o) Open
 g) Gui
-s) Save
 q) Quit
 
 Opção: ' opc
 
+# Transform txt format
+echo "$yt_trans_txt" > "$yt_trans_file_format"
+
 case "$opc" in
   p) echo "$yt_trans_txt" ;;
-  o) echo "$yt_trans_txt" > "$yt_trans_file_format" && \
-     $EDITOR $yt_trans_file_format
-     ;;
-  g) 
+  o) $EDITOR $yt_trans_file_format ;;
+  g)
     if type yad  >/dev/null; then
       ./gui "$yt_trans_file"
     else
@@ -70,6 +70,5 @@ case "$opc" in
       exit 1
     fi
     ;;
-  s) echo "$yt_trans_txt" > "$yt_trans_file_format" ;;
   q) exit 0 ;;
 esac

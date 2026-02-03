@@ -2,7 +2,7 @@ local keymap = require 'core.keymap'
 
 local keymaps = {
   -- Treeview
-  ['ctrl+shift+b'] = 'treeview:toggle',
+  ['ctrl+shift+e'] = 'treeview:toggle',
 
   -- Doc
   ['ctrl+shift+z'] = 'doc:redo',
