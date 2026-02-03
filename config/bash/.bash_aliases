@@ -188,6 +188,7 @@ alias vdir="vdir --color=auto"
 
 # vim
 alias v="nvim"
+alias va="$EDITOR $HOME/.config/nvim/lua/config/autocmds.lua"
 alias vc="$EDITOR $HOME/.config/nvim/init.lua"
 alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"

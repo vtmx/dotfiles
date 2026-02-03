@@ -112,21 +112,23 @@ local hl_groups = {
   -- Languages
 
   -- html
-  djangoTagBlock     = { fg = c.red      },
-  djangoStatement    = { fg = c.red      },
-  htmlArg            = { fg = c.orange   },
-  htmlH1             = { link = 'Normal' },
-  htmlH2             = { link = 'Normal' },
-  htmlH3             = { link = 'Normal' },
-  htmlH4             = { link = 'Normal' },
-  htmlH5             = { link = 'Normal' },
-  htmlH6             = { link = 'Normal' },
-  htmlSpecialTagName = { fg = c.red      },
-  htmlTag            = { link = 'Normal' },
-  htmlEndTag         = { link = 'Normal' },
-  htmlTagName        = { fg = c.red      },
-  htmlTitle          = { link = 'Normal' },
-  htmlLink           = { link = 'Normal' },
+  djangoTagBlock     = { link = 'Normal'  },
+  djangoStatement    = { link = 'Normal'  },
+  djangoFilter       = { link = 'Include' },
+  djangoVarBlock     = { link = 'Include' },
+  htmlArg            = { fg = c.orange    },
+  htmlH1             = { link = 'Normal'  },
+  htmlH2             = { link = 'Normal'  },
+  htmlH3             = { link = 'Normal'  },
+  htmlH4             = { link = 'Normal'  },
+  htmlH5             = { link = 'Normal'  },
+  htmlH6             = { link = 'Normal'  },
+  htmlSpecialTagName = { fg = c.red       },
+  htmlTag            = { link = 'Normal'  },
+  htmlEndTag         = { link = 'Normal'  },
+  htmlTagName        = { fg = c.red       },
+  htmlTitle          = { link = 'Normal'  },
+  htmlLink           = { link = 'Normal'  },
 
   -- markdown
   markdownBlockquote       = { link = 'Normal' },
@@ -145,6 +147,7 @@ local hl_groups = {
   markdownUrl              = { link = 'Normal' },
 
   -- css
+  cssAttributeSelector = { link = 'cssTagName' },
   cssAttrRegion     = { link = 'cssPseudoClass' },
   cssBraces         = { link = 'Normal'         },
   cssClassNameDot   = { link = 'cssTagName'     },
@@ -161,9 +164,13 @@ local hl_groups = {
   cssUnitDecorators = { link = 'cssDefinition'  },
   cssVendor         = { link = 'StorageClass'   },
 
+  -- dosini
+  dosiniLabel       = { link = 'Function'       },
+  dosiniValue       = { link = 'Normal'         },
+
   -- js
-  javaScriptBraces   = { link = 'Delimiter' },
-  javaScriptFunction = { fg = c.fg          },
+  javaScriptBraces   = { link = 'Delimiter'     },
+  javaScriptFunction = { fg = c.fg              },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red     },

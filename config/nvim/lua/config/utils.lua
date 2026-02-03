@@ -7,18 +7,11 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-function M.toggle_cursorword()
-  if not MiniCursorword then
-    require('mini.cursorword').setup()
-  end
+vim.g.minicursorword_disable = true
 
-  if vim.b.minicursorword_disable then
-    vim.b.minicursorword_disable = true
-    print('Cursorword enable')
-  else
-    vim.b.minicursorword_disable = false
-    print('Cursorword disable')
-  end
+function M.toggle_cursorword()
+  vim.g.minicursorword_disable = not vim.g.minicursorword_disable
+  print('Cursorword ' .. (vim.g.minicursorword_disable and 'off' or 'on'))
 end
 
 function M.toggle_diagnostic()
@@ -45,9 +38,15 @@ function M.toggle_diary()
   print('Toggle diary')
 end
 
+vim.g.codeium_enabled = false
+
 function M.toggle_ia()
-  if vim.cmd('CodeiumToggle') then
-    print('Toggle ia')
+  if vim.g.codeium_enabled == true then
+    vim.cmd('Codeium Disable')
+    print('Codeium off')
+  else
+    vim.cmd('Codeium Enable')
+    print('Codeium: on')
   end
 end
 
@@ -74,33 +73,20 @@ function M.toggle_colorcolumn()
 end
 
 function M.toggle_relativenumber()
-  if vim.o.relativenumber then
-    vim.o.relativenumber = false
-    print('Disable relative number')
-  else
-    vim.o.relativenumber = true
-    print('Enable relative number')
-  end
+  vim.o.relativenumber = not vim.o.relativenumber
+  print('Relative number ' .. (vim.o.relativenumber and 'off' or 'on'))
 end
 
 function M.toggle_listchars()
-  if vim.o.list then
-    vim.o.list = false
-    print('Disable list chars')
-  else
-    vim.o.list = true
-    print('Enable list chars')
-  end
+  vim.o.list = not vim.o.list
+  print('List ' .. (vim.o.list and 'on' or 'off'))
 end
 
+vim.g.minipairs_disable = true
+
 function M.toggle_pairs()
-  if vim.g.minipairs_disable then
-    vim.g.minipairs_disable = false
-    print('Enable pairs')
-  else
-    vim.g.minipairs_disable = true
-    print('Disable pairs')
-  end
+  vim.g.minipairs_disable = not vim.g.minipairs_disable
+  print('Pairs ' .. (vim.g.minipairs_disable and 'off' or 'on'))
 end
 
 function M.toggle_spelllang()
@@ -142,11 +128,11 @@ function M.close_netrw()
   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
     if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
       vim.api.nvim_buf_delete(buf, { force = true })
-      print('Netrw has been closed.')
+      print('Netrw has been closed')
       return
     end
   end
-  print('Netrw is not open.')
+  print('Netrw is not open')
 end
 
 function M.toggle_netrw_ex()

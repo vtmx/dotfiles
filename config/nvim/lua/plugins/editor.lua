@@ -4,10 +4,10 @@ return {
     event = 'VeryLazy',
     config = true
   },
-  -- {
-  --   'nvim-mini/mini.cursorword',
-  --   config = true
-  -- },
+  {
+    'nvim-mini/mini.cursorword',
+    config = true
+  },
   {
     'nvim-mini/mini.files',
     event = 'VeryLazy',
@@ -17,6 +17,11 @@ return {
         options = { use_as_default_explorer = true }
       })
     end
+  },
+  {
+    'nvim-mini/mini.pairs',
+    event = 'VeryLazy',
+    config = true
   },
   {
     'nvim-mini/mini.surround',

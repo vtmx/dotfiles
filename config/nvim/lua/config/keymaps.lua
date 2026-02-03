@@ -19,6 +19,11 @@ map(
 )
 
 map(
+  'n', 'gca', ':normal GVgggc<esc>',
+  { desc = 'Comment all' }
+)
+
+map(
   'n', 'gcd', 'yypk:normal gcc<cr>j^',
   { desc = 'Duplicate line and comment' }
 )
@@ -495,7 +500,7 @@ map(
 
 map(
   'n', '<leader>un', function() utils.toggle_number() end,
-  { desc = 'Toggle line number', }
+  { desc = 'Toggle line number' }
 )
 
 map(

@@ -103,6 +103,10 @@ autocmd('FileType', {
   pattern = 'html',
   callback = function()
     vim.bo.omnifunc = 'htmlcomplete#CompleteTags'
+
+    vim.keymap.set('i', '{{', function()
+      vim.snippet.expand('{{ $0 }}')
+    end)
   end
 })
 
@@ -136,9 +140,9 @@ autocmd('FileType', {
 })
 
 -- Set opts in terminal
-autocmd('TermOpen', {
-  command = 'setlocal listchars= nonumber norelativenumber nocursorline startinsert',
-})
+-- autocmd('TermOpen', {
+--   command = 'setlocal listchars= nonumber norelativenumber nocursorline startinsert',
+-- })
 
 -- Run by file
 exec([[
