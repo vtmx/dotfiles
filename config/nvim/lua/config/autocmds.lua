@@ -84,14 +84,6 @@ autocmd('FileType', {
 autocmd('FileType', {
   pattern = { 'css', 'scss' },
   callback = function()
-    vim.keymap.set('i', '{', function()
-      vim.snippet.expand('{\n\t$0\n}')
-    end)
-
-    vim.keymap.set('i', '[', function()
-      vim.snippet.expand("[$1='$2']$0")
-    end)
-
     vim.keymap.set('i', 'var', function()
       vim.snippet.expand('var(--$0)')
     end)
@@ -140,6 +132,7 @@ autocmd('FileType', {
 })
 
 -- Set opts in terminal
+-- falhando com o fzflua
 -- autocmd('TermOpen', {
 --   command = 'setlocal listchars= nonumber norelativenumber nocursorline startinsert',
 -- })
