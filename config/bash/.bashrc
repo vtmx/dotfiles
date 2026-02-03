@@ -32,10 +32,10 @@ export LESS_TERMCAP_us=$(setaf 5)               # header and attr
 export GROFF_NO_SGR=1                           # for konsole and gnome-terminal
 
 # Aliases
-[[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases 
+[[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases
 
 # Functions
-[[ -f $HOME/.bash_functions ]] && source $HOME/.bash_functions 
+[[ -f $HOME/.bash_functions ]] && source $HOME/.bash_functions
 
 # Auto-completion
 if ! shopt -oq posix; then

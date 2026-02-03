@@ -12,6 +12,12 @@ return {
         prompt       = '❯ '
       }
     }
+  },
+  {
+  'folke/snacks.nvim',
+    opts = {
+      picker = { }
+    }
   }
 }
 

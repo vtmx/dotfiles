@@ -5,8 +5,8 @@ local hl_groups = {
   Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
   Comment        = { fg = c.fd, ctermfg = 7, italic = true   },
   Cursor         = { bg = c.fg, fg = c.bg                    },
-  Title          = { fg = c.magenta },
-  Twilight       = { fg = c.fd      },
+  Title          = { link = 'Normal' },
+  Twilight       = { fg = c.fd       },
 
   -- Sintaxy
   Boolean        = { fg = c.orange  },
@@ -316,7 +316,7 @@ local hl_groups = {
 
   -- indent-blankline
   IblIndent = { fg = c.ac  },
-  IblScope  = { fg = c.fg  },
+  IblScope  = { fg = c.ac  },
   ['@ibl.scope.char.1'] = { link = 'IblScope' },
   ['@ibl.scope.underline.1'] = { link = 'NowText' },
 
