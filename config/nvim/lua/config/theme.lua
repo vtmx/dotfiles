@@ -23,8 +23,8 @@ local hl_groups = {
   Keyword        = { fg = c.magenta },
   Label          = { fg = c.red     },
   Macro          = { fg = c.red     },
-  Number         = { fg = c.orange  },
-  Operator       = { fg = c.cyan    },
+  Number         = { fg = c.yellow  },
+  Operator       = { fg = c.fg      },
   PreCondit      = { fg = c.magenta },
   PreProc        = { fg = c.magenta },
   Repeat         = { fg = c.magenta },
@@ -111,6 +111,28 @@ local hl_groups = {
 
   -- Languages
 
+  -- css
+  cssAttributeSelector = { link = 'cssTagName'  },
+  cssAttrRegion     = { link = 'cssPseudoClass' },
+  cssBraces         = { link = 'Normal'         },
+  cssClassNameDot   = { link = 'cssTagName'     },
+  cssClassName      = { link = 'cssTagName'     },
+  cssIdentifier     = { link = 'cssTagName'     },
+  cssCustomProp     = { link = 'cssDefinition'  },
+  cssDefinition     = { fg   = c.red            },
+  cssHacks          = { link = 'Normal'         },
+  cssNoise          = { link = 'Normal'         },
+  cssPseudoClass    = { fg   = c.orange         },
+  cssPseudoClassFn  = { link = 'cssPseudoClass' },
+  cssPseudoClassID  = { link = 'cssPseudoClass' },
+  cssTagName        = { fg   = c.blue           },
+  cssUnitDecorators = { link = 'cssDefinition'  },
+  cssVendor         = { link = 'StorageClass'   },
+
+  -- dosini
+  dosiniLabel       = { link = 'Function'       },
+  dosiniValue       = { link = 'Normal'         },
+
   -- html
   djangoTagBlock     = { link = 'Normal'  },
   djangoStatement    = { link = 'Normal'  },
@@ -133,44 +155,25 @@ local hl_groups = {
   -- markdown
   markdownBlockquote       = { link = 'Normal' },
   markdownCodeDelimiter    = { link = 'Normal' },
-  markdownId               = { fg = c.magenta },
-  markdownH1               = { fg = c.magenta },
-  markdownH2               = { fg = c.magenta },
-  markdownH3               = { fg = c.magenta },
-  markdownH4               = { fg = c.magenta },
-  markdownH5               = { fg = c.magenta },
-  markdownH6               = { fg = c.magenta },
-  markdownHeadingDelimiter = { fg = c.magenta },
-  markdownHeadingRule      = { fg = c.magenta },
-  markdownListMarker       = { fg = c.yellow  },
-  markdownRule             = { fg = c.magenta },
+  markdownId               = { fg = c.magenta  },
+  markdownH1               = { fg = c.magenta  },
+  markdownH2               = { fg = c.magenta  },
+  markdownH3               = { fg = c.magenta  },
+  markdownH4               = { fg = c.magenta  },
+  markdownH5               = { fg = c.magenta  },
+  markdownH6               = { fg = c.magenta  },
+  markdownHeadingDelimiter = { fg = c.magenta  },
+  markdownHeadingRule      = { fg = c.magenta  },
+  markdownListMarker       = { fg = c.yellow   },
+  markdownRule             = { fg = c.magenta  },
   markdownUrl              = { link = 'Normal' },
 
-  -- css
-  cssAttributeSelector = { link = 'cssTagName' },
-  cssAttrRegion     = { link = 'cssPseudoClass' },
-  cssBraces         = { link = 'Normal'         },
-  cssClassNameDot   = { link = 'cssTagName'     },
-  cssClassName      = { link = 'cssTagName'     },
-  cssIdentifier     = { link = 'cssTagName'     },
-  cssCustomProp     = { link = 'cssDefinition'  },
-  cssDefinition     = { fg   = c.red            },
-  cssHacks          = { link = 'Normal'         },
-  cssNoise          = { link = 'Normal'         },
-  cssPseudoClass    = { fg   = c.orange         },
-  cssPseudoClassFn  = { link = 'cssPseudoClass' },
-  cssPseudoClassID  = { link = 'cssPseudoClass' },
-  cssTagName        = { fg   = c.blue           },
-  cssUnitDecorators = { link = 'cssDefinition'  },
-  cssVendor         = { link = 'StorageClass'   },
-
-  -- dosini
-  dosiniLabel       = { link = 'Function'       },
-  dosiniValue       = { link = 'Normal'         },
-
   -- js
-  javaScriptBraces   = { link = 'Delimiter'     },
-  javaScriptFunction = { fg = c.fg              },
+  javaScriptBraces   = { link = 'Delimiter'    },
+  javaScriptFunction = { fg = c.fg             },
+
+  -- json
+  jsonCommentError   = { link = 'Comment'      },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red     },
@@ -355,9 +358,15 @@ local hl_groups = {
   KittySt                  = { fg = c.green   },
 
   -- lazy
-  LazyNormal               = { bg = c.bd      },
-  LazyProgressDone         = { fg = c.blue    },
-  LazyProp                 = { bg = c.ac      },
+  LazyNormal        = { bg = c.bd   },
+  LazyProgressDone  = { fg = c.blue },
+  LazyProp          = { bg = c.ac },
+  LazyReasonEvent   = { fg = c.fd },
+  LazyReasonFt      = { fg = c.fd },
+  LazyReasonPlugin  = { fg = c.fd },
+  LazyReasonRequire = { fg = c.fd },
+  LazyReasonSource  = { fg = c.fd },
+  LazyReasonStart   = { fg = c.fd },
 
   -- mini-cursorword
   MiniCursorword           = { fg = c.yellow  },
