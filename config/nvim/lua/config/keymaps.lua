@@ -4,7 +4,7 @@ local map = vim.keymap.set
 -- Normal
 
 map(
-  'n', 'ç', ':',
+  {'n', 'v'}, 'ç', ':',
   { desc = 'Enter in command mode' }
 )
 
@@ -216,11 +216,6 @@ map(
 )
 
 -- Visual
-
-map(
-  'v', 'ç', '<esc>',
-  { desc = 'Return to normal mode' }
-)
 
 map(
   'v', 'y', 'ygv<esc>',
