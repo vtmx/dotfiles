@@ -20,7 +20,7 @@ autocmd('TextYankPost', {
   end
 })
 
--- Retore cursor position
+-- Restore cursor position
 autocmd('BufReadPost', {
   callback = function(args)
     local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
@@ -49,7 +49,7 @@ autocmd('FileType', {
 -- Syntax highlighting for dotenv files
 autocmd('BufRead', {
   group = vim.api.nvim_create_augroup('dotenv_ft', { clear = true }),
-  pattern = { '.env', '.env.*' },
+  pattern = { '.conf', '.config', '.env', '.env.*' },
   callback = function()
     vim.bo.filetype = 'dosini'
   end
@@ -102,14 +102,17 @@ autocmd('FileType', {
   end
 })
 
--- md
+-- markddown
 autocmd('FileType', {
   pattern = 'markdown',
   callback = function()
     vim.opt.shiftwidth = 2
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
-    vim.keymap.set('i', '<c-k>', '[]()<left><left><left>', { desc = 'Add link' })
+
+    vim.keymap.set('i', '<c-k>', function()
+      vim.snippet.expand('[$1]($0)')
+    end)
 
     vim.keymap.set('n', '<leader>`', function()
       vim.snippet.expand('```bash\n$0\n```')

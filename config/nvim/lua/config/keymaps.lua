@@ -274,7 +274,6 @@ map(
 )
 
 map(
-  -- 'n', '<leader>b', function() require('fzf-lua').buffers() end,
   'n', '<leader>b', function() Snacks.picker.buffers() end,
   { desc = 'Buffers' }
 )
@@ -295,7 +294,6 @@ map(
 )
 
 map(
-  -- 'n', '<leader>f', function() require('fzf-lua').files() end,
   'n', '<leader>f', function() Snacks.picker.files() end,
   { desc = 'Files' }
 )
@@ -306,67 +304,56 @@ map(
 )
 
 map(
-  -- 'n', '<leader>gb', function() require('fzf-lua').git_branches() end,
   'n', '<leader>gb', function() Snacks.picker.git_branches() end,
   { desc = 'Git Branches' }
 )
 
 map(
-  -- 'n', '<leader>gf', function() require('fzf-lua').git_files() end,
   'n', '<leader>gf', function() Snacks.picker.git_files() end,
   { desc = 'Git Files' }
 )
 
 map(
-  -- 'n', '<leader>gl', function() require('fzf-lua').git_log() end,
   'n', '<leader>gl', function() Snacks.picker.git_log() end,
   { desc = 'Git Log' }
 )
 
 map(
-  -- 'n', '<leader>gs', function() require('fzf-lua').git_status() end,
   'n', '<leader>gs', function() Snacks.picker.git_status() end,
   { desc = 'Git Status' }
 )
 
 map(
-  -- 'n', '<leader>gd', function() require('fzf-lua').lsp_definitions() end,
   'n', '<leader>gd', function() Snacks.picker.lsp_definitions() end,
   { desc = 'Definitions' }
 )
 
 map(
-  -- 'n', '<leader>gD', function() require('fzf-lua').lsp_declarations() end,
   'n', '<leader>gD', function() Snacks.picker.lsp_declarations() end,
   { desc = 'Declarations' }
 )
 
 map(
-  -- 'n', '<leader>gI', function() require('fzf-lua').lsp_implementations() end,
   'n', '<leader>gI', function() Snacks.picker.lsp_implementations() end,
   { desc = 'References' }
 )
 
 map(
-  -- 'n', '<leader>gr', function() require('fzf-lua').lsp_references() end,
   'n', '<leader>gr', function() Snacks.picker.lsp_references() end,
   { desc = 'References' }
 )
 
 map(
-  -- 'n', '<leader>gy', function() require('fzf-lua').lsp_type_definitions() end,
   'n', '<leader>gy', function() Snacks.picker.lsp_type_definitions() end,
   { desc = 'Definitions' }
 )
 
 map(
-  -- 'n', '<leader>h', function() require('fzf-lua').highlights() end,
   'n', '<leader>h', function() Snacks.picker.highlights() end,
   { desc = 'Highlights' }
 )
 
 map(
-  -- 'n', '<leader>H', function() require('fzf-lua').helptags() end,
   'n', '<leader>H', function() Snacks.picker.helptags() end,
   { desc = 'Help' }
 )
@@ -382,13 +369,11 @@ map(
 )
 
 map(
-  -- 'n', '<leader>j', function() require('fzf-lua').jumps() end,
   'n', '<leader>j', function() Snacks.picker.jumps() end,
   { desc = 'Jump list' }
 )
 
 map(
-  -- 'n', '<leader>k', function() require('fzf-lua').keymaps() end,
   'n', '<leader>k', function() Snacks.picker.keymaps() end,
   { desc = 'Keymaps' }
 )
@@ -404,7 +389,6 @@ map(
 )
 
 map(
-  -- 'n', '<leader>m', function() require('fzf-lua').marks() end,
   'n', '<leader>m', function() Snacks.picker.marks() end,
   { desc = 'Marks' }
 )
@@ -575,7 +559,6 @@ map(
 )
 
 map(
-  -- 'n', '<leader>:', function() require('fzf-lua').command_history() end,
   'n', '<leader>:', function() Snacks.picker.command_history() end,
   { desc = 'Buffers' }
 )
@@ -586,13 +569,11 @@ map(
 )
 
 map(
-  -- 'n', '<leader>/', function() require('fzf-lua').grep() end,
   'n', '<leader>/', function() Snacks.picker.grep() end,
   { desc = 'Fuzzy grep' }
 )
 
 map(
-  -- 'n', '<leader>?', function() require('fzf-lua').live_grep() end,
   'n', '<leader>?', function() Snacks.picker.grep_buffers() end,
   { desc = 'Fuzzy live_grep' }
 )
