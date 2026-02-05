@@ -464,13 +464,13 @@ map(
 )
 
 map(
-  'n', '<leader>uc', function() utils.toggle_colorcolumn() end,
-  { desc = 'Toggle colorcolumn' }
+  'n', '<leader>uc', function() utils.toggle_cursorword() end,
+  { desc = 'Toggle cursorword' }
 )
 
 map(
-  'n', '<leader>uC', function() utils.toggle_cursorword() end,
-  { desc = 'Toggle cursorword' }
+  'n', '<leader>uC', function() utils.toggle_colorcolumn() end,
+  { desc = 'Toggle colorcolumn' }
 )
 
 map(
@@ -481,11 +481,6 @@ map(
 map(
   'n', '<leader>ui', function() utils.toggle_ia() end,
   { desc = 'Toggle ia' }
-)
-
-map(
-  'n', '<leader>uk', '<cmd>WhichKey<cr>',
-  { desc = 'Active whichkey' }
 )
 
 map(
