@@ -3,10 +3,10 @@ local c = require('config.colors')
 local hl_groups = {
   -- General
   Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
-  Comment        = { fg = c.fd, ctermfg = 7                  },
-  Cursor         = { bg = c.fg, fg = c.bg                    },
-  Title          = { link = 'Normal' },
-  Twilight       = { fg = c.fd       },
+  Comment        = { fg = c.fd, ctermfg = 7 },
+  Cursor         = { bg = c.fg, fg = c.bg   },
+  Title          = { link = 'Normal'        },
+  Twilight       = { link = 'Comment'       },
 
   -- Sintaxy
   Boolean        = { fg = c.orange  },
@@ -106,7 +106,7 @@ local hl_groups = {
   WinSeparator   = { fg = c.ac },
 
   -- Line win separator split
-  StatusLine     = { bg = 'NONE'     },
+  StatusLine     = { link = 'Normal' },
   StatusLineNC   = { link = 'Normal' },
 
   -- dosini
@@ -114,23 +114,23 @@ local hl_groups = {
   dosiniValue       = { link = 'Normal'         },
 
   -- html
-  djangoTagBlock     = { link = 'Normal'  },
-  djangoStatement    = { link = 'Normal'  },
-  djangoFilter       = { link = 'Include' },
-  djangoVarBlock     = { link = 'Include' },
-  htmlArg            = { fg = c.orange    },
-  htmlH1             = { link = 'Normal'  },
-  htmlH2             = { link = 'Normal'  },
-  htmlH3             = { link = 'Normal'  },
-  htmlH4             = { link = 'Normal'  },
-  htmlH5             = { link = 'Normal'  },
-  htmlH6             = { link = 'Normal'  },
-  htmlSpecialTagName = { fg = c.red       },
-  htmlTag            = { link = 'Normal'  },
-  htmlEndTag         = { link = 'Normal'  },
-  htmlTagName        = { fg = c.red       },
-  htmlTitle          = { link = 'Normal'  },
-  htmlLink           = { link = 'Normal'  },
+  djangoTagBlock     = { link = 'Normal'     },
+  djangoStatement    = { link = 'Normal'     },
+  djangoFilter       = { link = 'Include'    },
+  djangoVarBlock     = { link = 'Include'    },
+  htmlArg            = { link = 'Number'     },
+  htmlH1             = { link = 'Normal'     },
+  htmlH2             = { link = 'Normal'     },
+  htmlH3             = { link = 'Normal'     },
+  htmlH4             = { link = 'Normal'     },
+  htmlH5             = { link = 'Normal'     },
+  htmlH6             = { link = 'Normal'     },
+  htmlSpecialTagName = { link = 'Definition' },
+  htmlTag            = { link = 'Normal'     },
+  htmlEndTag         = { link = 'Normal'     },
+  htmlTagName        = { link = 'Definition' },
+  htmlTitle          = { link = 'Normal'     },
+  htmlLink           = { link = 'Normal'     },
 
   -- markdown
   markdownBlockquote       = { link = 'Normal'   },
@@ -243,27 +243,27 @@ local hl_groups = {
   ['@attribute.builtin']  = { link = 'Special'         },
 
   -- Keywords
-  ['@conditional']        = { link = 'Conditional'     },
-  ['@debug']              = { link = 'Debug'           },
-  ['@exception']          = { link = 'Exception'       },
-  ['@include']            = { link = 'Include'         },
+  ['@conditional']         = { link = 'Conditional'     },
+  ['@debug']               = { link = 'Debug'           },
+  ['@exception']           = { link = 'Exception'       },
+  ['@include']             = { link = 'Include'         },
   ['@keyword.conditional'] = { link = 'Conditional'    },
-  ['@keyword']            = { link = 'Keyword'         },
-  ['@keyword.repeat']     = { link = 'Repeat'          },
-  ['@keyword.type']       = { link = 'Structure'       },
-  ['@label']              = { link = 'Label'           },
-  ['@namespace']          = { link = 'Identifier'      },
-  ['@operator']           = { link = 'Operator'        },
-  ['@preproc']            = { link = 'PreProc'         },
-  ['@repeat']             = { link = 'Repeat'          },
-  ['@storageclass']       = { link = 'StorageClass'    },
-  ['@tag']                = { link = 'Tag'             },
-  ['@tag.builtin']        = { link = 'Tag'             },
-  ['@tag.attribute']      = { fg = c.orange            },
-  ['@tag.delimiter']      = { link = 'Normal'          },
-  ['@type.definition']    = { link = 'Typedef'         },
-  ['@type']               = { link = 'Type'            },
-  ['@variable']           = { fg   = nil, bg = nil     }, -- using default foreground reduces visual overloa,
+  ['@keyword']             = { link = 'Keyword'         },
+  ['@keyword.repeat']      = { link = 'Repeat'          },
+  ['@keyword.type']        = { link = 'Structure'       },
+  ['@label']               = { link = 'Label'           },
+  ['@namespace']           = { link = 'Identifier'      },
+  ['@operator']            = { link = 'Operator'        },
+  ['@preproc']             = { link = 'PreProc'         },
+  ['@repeat']              = { link = 'Repeat'          },
+  ['@storageclass']        = { link = 'StorageClass'    },
+  ['@tag']                 = { link = 'Tag'             },
+  ['@tag.builtin']         = { link = 'Tag'             },
+  ['@tag.attribute']       = { link = 'Number'          },
+  ['@tag.delimiter']       = { link = 'Normal'          },
+  ['@type.definition']     = { link = 'Typedef'         },
+  ['@type']                = { link = 'Type'            },
+  ['@variable']            = { fg   = nil, bg = nil     }, -- using default foreground reduces visual overloa,
 
   -- LSP semantic tokens
   ['@lsp.type.class']         = { link = 'Structure'  },
@@ -307,8 +307,8 @@ local hl_groups = {
   ['@value.css']     = { link = 'Number'     },
 
   -- html
-  ['@constant.html']           = { link = 'Normal'     },
   ['@tag.html']                = { link = 'Identifier' },
+  ['@constant.html']           = { link = 'Identifier' },
   ['@string.special.url.html'] = { link = 'String'     },
 
   -- js
@@ -370,7 +370,7 @@ local hl_groups = {
   mkdCodeStart     = { link = 'Normal'   },
   mkdHeading       = { link = 'Function' },
   mkdInlineURL     = { link = 'Function' },
-  mkdLineBreak     = { link = 'NONE'     },
+  mkdLineBreak     = { link = 'Normal'   },
   mkdLink          = { link = 'Function' },
   mkdURL           = { link = 'Keyword'  },
 
