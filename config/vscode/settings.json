@@ -138,7 +138,7 @@
     "terminal.ansiBrightWhite": "#abb2bf"
   },
   "editor.tokenColorCustomizations": {
-    "comments": { "foreground": "#5f6672", "fontStyle": "italic" },
+    "comments": { "foreground": "#5f6672" },
     "keywords": "#c678dd",
     "strings": "#98c379",
     "functions": "#61afef",

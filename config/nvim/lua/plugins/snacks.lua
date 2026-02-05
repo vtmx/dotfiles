@@ -1,9 +1,8 @@
 return {
-  {
   'folke/snacks.nvim',
-    opts = {
-      picker = { }
-    }
+  opts = {
+    indent = { enabled = true },
+    picker = { enable  = true },
+    zen    = { enable  = true },
   }
 }
-

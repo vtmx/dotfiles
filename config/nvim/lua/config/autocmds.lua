@@ -124,6 +124,15 @@ autocmd('FileType', {
   end
 })
 
+-- lua
+autocmd('BufWritePost', {
+  pattern = 'theme.lua',
+  callback = function()
+    vim.cmd('source %')
+    print('Reload')
+  end
+})
+
 -- python
 autocmd('FileType', {
   pattern = 'python',

@@ -284,10 +284,10 @@ local hl_groups = {
   ['@lsp.type.variable']      = { link = '@variable'  }, -- links to tree-sitter group to reduce overloa,
 
   -- Markup
-  ['@markup.heading'] =   { link = 'Title' },
+  ['@markup.heading'] =   { link = 'Title'      },
   ['@markup.link'] =      { link = 'Identifier' },
   ['@markup.link.url'] =  { link = 'Underlined' },
-  ['@markup.raw'] =       { link = 'Comment' },
+  ['@markup.raw'] =       { link = 'Comment'    },
   ['@markup.underline'] = { link = 'Underlined' },
 
   -- Text
@@ -313,6 +313,10 @@ local hl_groups = {
 
   -- js
 
+  -- lua
+  -- ['@property.lua']           = { link = 'Normal'     },
+  -- ['@lsp.type.property.lua']  = { link = 'Normal'     },
+
 ------------------------------------------------------------
   -- Plugins
 ------------------------------------------------------------
@@ -321,27 +325,21 @@ local hl_groups = {
   CodeiumAnnotation = { fg = c.fg },
   CodeiumSuggestion = { fg = c.fd },
 
-  -- indent-blankline
-  IblIndent                  = { fg   = c.ac       },
-  IblScope                   = { fg   = c.ac       },
-  ['@ibl.scope.char.1']      = { link = 'IblScope' },
-  ['@ibl.scope.underline.1'] = { link = 'IblScope' },
-
   -- hop
-  HopNextKey   = { link = 'Function' },
-  HopNextKey1  = { fg = c.red        },
-  HopNextKey2  = { fg = c.orange     },
-  HopNextKey3  = { fg = c.magenta    },
-  HopUnmatched = { fg = c.fd         },
+  HopNextKey   = { fg = c.blue    },
+  HopNextKey1  = { fg = c.red     },
+  HopNextKey2  = { fg = c.orange  },
+  HopNextKey3  = { fg = c.magenta },
+  HopUnmatched = { fg = c.fd      },
 
   -- kitty
-  KittyColor   = { fg = c.orange  },
-  KittyAction  = { fg = c.fg      },
-  KittyKeybind = { fg = c.blue    },
-  KittyKeyword = { fg = c.red     },
-  KittyMap     = { fg = c.purple  },
-  KittyMod     = { fg = c.blue    },
-  KittySt      = { fg = c.green   },
+  KittyColor   = { link = 'Number'     },
+  KittyAction  = { link = 'Normal'     },
+  KittyKeybind = { link = 'Function'   },
+  KittyKeyword = { link = 'Definition' },
+  KittyMap     = { link = 'Keyword'    },
+  KittyMod     = { link = 'Function'   },
+  KittySt      = { link = 'String'     },
 
   -- lazy
   LazyNormal        = { bg = c.bd   },
@@ -374,10 +372,14 @@ local hl_groups = {
   mkdInlineURL     = { link = 'Function' },
   mkdLineBreak     = { link = 'NONE'     },
   mkdLink          = { link = 'Function' },
-  mkdURL           = { fg = c.magenta    },
+  mkdURL           = { link = 'Keyword'  },
 
   -- netrw
   netrwTreeBar = { link = 'Normal' },
+
+  -- snacks
+  SnacksIndent      = { fg   = c.ac           },
+  SnacksIndentScope = { link = 'SnacksIndent' },
 }
 
 -- Clear all colors
