@@ -29,7 +29,7 @@ local hl_groups = {
   PreProc        = { fg = c.magenta },
   Repeat         = { fg = c.magenta },
   Statement      = { fg = c.magenta },
-  StorageClass   = { fg = c.magenta },
+  StorageClass   = { fg = c.fg      },
   String         = { fg = c.green   },
   Structure      = { fg = c.magenta },
   Tag            = { fg = c.red     },
@@ -48,7 +48,7 @@ local hl_groups = {
   Directory      = { fg = c.blue   },
   EndOfBuffer    = { fg = c.bg     }, -- Line tilde blank
   NonText        = { fg = c.fd     },
-  SpecialChar    = { fg = c.yellow },
+  SpecialChar    = { fg = c.orange },
   SpecialComment = { fg = c.fd     },
   Special        = { fg = c.fg     },
   SpecialKey     = { fg = c.cyan   },
@@ -106,142 +106,20 @@ local hl_groups = {
   WinSeparator   = { fg = c.ac },
 
   -- Line win separator split
-  StatusLine     = { bg = 'NONE' },
-  StatusLineNC   = { fg = c.fg   },
+  StatusLine     = { bg = 'NONE'     },
+  StatusLineNC   = { link = 'Normal' },
 
   -- Languages
 
   -- css
-
-  -- -- selector
   cssTagName                  = { link = 'Function'  },
   cssPseudoClassId            = { link = 'Function'  },
   cssPseudoClassLang          = { link = 'Function'  },
   cssVendor                   = { link = 'Function'  },
   cssHacks                    = { link = 'Function' },
-  -- cssComment                  = { link = 'Comment' },
-  --
-  -- -- Operator
-  -- cssNoise                    = { link = 'Operator' },
-  -- cssAttrComma                = { link = 'Operator' },
   cssBraces                   = { link = 'Operator' },
   cssBraceError               = { link = 'Operator' },
-  --
-  -- -- Prop
-  -- cssDefinition               = { link = 'Function' },
-  -- cssAttr                     = { link = 'Function' },
-  -- cssAnimationAttr            = { link = 'Function' },
-  -- cssAnimationProp            = { link = 'Function' },
-  -- cssAuralAttr                = { link = 'Function' },
-  -- cssAuralProp                = { link = 'Function' },
-  -- cssBackgroundProp           = { link = 'Function' },
-  -- cssBorderProp               = { link = 'Function' },
-  -- cssBoxProp                  = { link = 'Function' },
-  -- cssCascadeAttr              = { link = 'Function' },
-  -- cssColorProp                = { link = 'Function' },
-  -- cssContentForPagedMediaAttr = { link = 'Function' },
-  -- cssContentForPagedMediaProp = { link = 'Function' },
-  -- cssDeprecated               = { link = 'Function' },
-  -- cssDimensionAttr            = { link = 'Function' },
-  -- cssDimensionProp            = { link = 'Function' },
-  -- cssFlexibleBoxAttr          = { link = 'Function' },
-  -- cssFlexibleBoxProp          = { link = 'Function' },
-  -- cssFontDescriptorProp       = { link = 'Function' },
-  -- cssFontProp                 = { link = 'Function' },
-  -- cssGeneratedContentAttr     = { link = 'Function' },
-  -- cssGeneratedContentProp     = { link = 'Function' },
-  -- cssGradientAttr             = { link = 'Function' },
-  -- cssGridAttr                 = { link = 'Function' },
-  -- cssGridProp                 = { link = 'Function' },
-  -- cssHyerlinkAttr             = { link = 'Function' },
-  -- cssHyerlinkProp             = { link = 'Function' },
-  -- cssIEUIAttr                 = { link = 'Function' },
-  -- cssIEUIProp                 = { link = 'Function' },
-  -- cssInteractAttr             = { link = 'Function' },
-  -- cssInteractProp             = { link = 'Function' },
-  -- cssLineboxAttr              = { link = 'Function' },
-  -- cssLineboxProp              = { link = 'Function' },
-  -- cssListAttr                 = { link = 'Function' },
-  -- cssListProp                 = { link = 'Function' },
-  -- cssMarginAttr               = { link = 'Function' },
-  -- cssMarqueeAttr              = { link = 'Function' },
-  -- cssMarqueeProp              = { link = 'Function' },
-  -- cssMediaProp                = { link = 'Function' },
-  -- cssMobileTextProp           = { link = 'Function' },
-  -- cssMultiColumnProp          = { link = 'Function' },
-  -- cssObjectAttr               = { link = 'Function' },
-  -- cssObjectProp               = { link = 'Function' },
-  -- cssPaddingAttr              = { link = 'Function' },
-  -- cssPagedMediaAttr           = { link = 'Function' },
-  -- cssPagedMediaProp           = { link = 'Function' },
-  -- cssPositioningProp          = { link = 'Function' },
-  -- cssPrintAttr                = { link = 'Function' },
-  -- cssPrintProp                = { link = 'Function' },
-  -- cssRenderAttr               = { link = 'Function' },
-  -- cssRenderProp               = { link = 'Function' },
-  -- cssRubyAttr                 = { link = 'Function' },
-  -- cssRubyProp                 = { link = 'Function' },
-  -- cssSelectorOp2              = { link = 'Function' },
-  -- cssSelectorOp               = { link = 'Function' },
-  -- cssSpeechAttr               = { link = 'Function' },
-  -- cssSpeechProp               = { link = 'Function' },
-  -- cssTableAttr                = { link = 'Function' },
-  -- cssTableProp                = { link = 'Function' },
-  -- cssTextProp                 = { link = 'Function' },
-  -- cssTransformAttr            = { link = 'Function' },
-  -- cssTransformProp            = { link = 'Function' },
-  -- cssTransitionAttr           = { link = 'Function' },
-  -- cssTransitionProp           = { link = 'Function' },
-  -- cssUIProp                   = { link = 'Function' },
-  -- cssFunctionName             = { link = 'Function' },
   cssAttributeSelector        = { link = 'Function' },
-  --
-  -- -- Value
-  -- cssAtKeyword                = { link = 'Normal' },
-  -- cssAtRule                   = { link = 'Normal' },
-  -- cssAtRuleLogical            = { link = 'Normal' },
-  -- cssAttrRegion               = { link = 'Normal' },
-  -- cssBackgroundAttr           = { link = 'Normal' },
-  -- cssBorderAttr               = { link = 'Normal' },
-  -- cssBoxAttr                  = { link = 'Normal' },
-  -- cssCascadeProp              = { link = 'Normal' },
-  -- cssClassNameDot             = { link = 'Normal' },
-  -- cssClassName                = { link = 'Normal' },
-  -- cssColor                    = { link = 'Normal' },
-  -- cssCommonAttr               = { link = 'Normal' },
-  -- cssCustomProp               = { link = 'Normal' },
-  -- cssError                    = { link = 'Normal' },
-  -- cssFontAttr                 = { link = 'Normal' },
-  -- cssFontDescriptorAttr       = { link = 'Normal' },
-  -- cssFontDescriptor           = { link = 'Normal' },
-  -- cssFunctionComma            = { link = 'Normal' },
-  -- cssFunction                 = { link = 'Normal' },
-  -- cssIdentifier               = { link = 'Normal' },
-  -- cssImportant                = { link = 'Normal' },
-  -- cssKeyFrameProp             = { link = 'Normal' },
-  -- cssMediaAttr                = { link = 'Normal' },
-  -- cssMediaComma               = { link = 'Normal' },
-  -- cssMediaType                = { link = 'Normal' },
-  -- cssMultiColumnAttr          = { link = 'Normal' },
-  -- cssPageMarginProp           = { link = 'Normal' },
-  -- cssPageProp                 = { link = 'Normal' },
-  -- cssPagePseudo               = { link = 'Normal' },
-  -- cssPositioningAttr          = { link = 'Normal' },
-  -- cssTextAttr                 = { link = 'Normal' },
-  -- cssUIAttr                   = { link = 'Normal' },
-  -- cssUnicodeEscape            = { link = 'Normal' },
-  -- cssUnicodeRange             = { link = 'Normal' },
-  -- cssUnitDecorators           = { link = 'Normal' },
-  -- cssValueAngle               = { link = 'Normal' },
-  -- cssValueFrequency           = { link = 'Normal' },
-  -- cssValueInteger             = { link = 'Normal' },
-  -- cssValueLength              = { link = 'Normal' },
-  -- cssValueNumber              = { link = 'Normal' },
-  -- cssValueTime                = { link = 'Normal' },
-  --
-  -- cssStringQ                  = { link = 'String' },
-  -- cssStringQQ                 = { link = 'String' },
-  -- cssURL                      = { link = 'String' },
 
   -- dosini
   dosiniLabel       = { link = 'Function'       },
@@ -267,20 +145,26 @@ local hl_groups = {
   htmlLink           = { link = 'Normal'  },
 
   -- markdown
-  markdownBlockquote       = { link = 'Normal' },
-  markdownCodeDelimiter    = { link = 'Normal' },
-  markdownId               = { fg = c.magenta  },
-  markdownH1               = { fg = c.magenta  },
-  markdownH2               = { fg = c.magenta  },
-  markdownH3               = { fg = c.magenta  },
-  markdownH4               = { fg = c.magenta  },
-  markdownH5               = { fg = c.magenta  },
-  markdownH6               = { fg = c.magenta  },
-  markdownHeadingDelimiter = { fg = c.magenta  },
-  markdownHeadingRule      = { fg = c.magenta  },
-  markdownListMarker       = { fg = c.yellow   },
-  markdownRule             = { fg = c.magenta  },
-  markdownUrl              = { link = 'Normal' },
+  markdownBlockquote       = { link = 'Normal'   },
+  markdownCodeDelimiter    = { link = 'Normal'   },
+  markdownId               = { link = 'Normal'   },
+  markdownH1               = { link = 'Normal'   },
+  markdownH1Delimiter      = { link = 'Function' },
+  markdownH2               = { link = 'Normal'   },
+  markdownH2Delimiter      = { link = 'Function' },
+  markdownH3               = { link = 'Normal'   },
+  markdownH3Delimiter      = { link = 'Function' },
+  markdownH4               = { link = 'Normal'   },
+  markdownH4Delimiter      = { link = 'Function' },
+  markdownH5               = { link = 'Normal'   },
+  markdownH5Delimiter      = { link = 'Function' },
+  markdownH6               = { link = 'Normal'   },
+  markdownH6Delimiter      = { link = 'Function' },
+  markdownHeadingDelimiter = { link = 'Normal'   },
+  markdownHeadingRule      = { link = 'Normal'   },
+  markdownListMarker       = { link = 'Normal'   },
+  markdownRule             = { link = 'Normal'   },
+  markdownUrl              = { link = 'Normal'   },
 
   -- js
   javaScriptBraces   = { link = 'Delimiter'    },
@@ -312,19 +196,19 @@ local hl_groups = {
   DiagnosticWarn             = { fg = c.yellow  },
 
   -- Diff
-  DiffAdd      = { fg = c.green },
-  DiffChange   = { fg = c.blue  },
-  DiffDelete   = { fg = c.red   },
-  DiffText     = { fg = c.fg    },
+  DiffAdd      = { fg = c.green    },
+  DiffChange   = { fg = c.blue     },
+  DiffDelete   = { fg = c.red      },
+  DiffText     = { link = 'Normal' },
 
   -- Float
   FoldColumn   = { bg = c.ac, fg = c.cyan },
   Folder       = { bg = c.ac, fg = c.cyan },
 
   -- Help
-  healthHeadingChar   = { fg = c.fg  },
-  helpHeader          = { fg = c.blue },
-  helpSectionDelim    = { fg = c.blue },
+  healthHeadingChar = { link = 'Normal' },
+  helpHeader        = { fg   = c.blue   },
+  helpSectionDelim  = { fg   = c.blue   },
 
   -- tree-sitter
 
@@ -428,93 +312,79 @@ local hl_groups = {
 ------------------------------------------------------------
 
   -- codium
-  CodeiumAnnotation        = { fg = c.fg      },
-  CodeiumSuggestion        = { fg = c.fd      },
+  CodeiumAnnotation = { fg = c.fg },
+  CodeiumSuggestion = { fg = c.fd },
 
   -- indent-blankline
-  IblIndent = { fg = c.ac  },
-  IblScope  = { fg = c.ac  },
-  ['@ibl.scope.char.1'] = { link = 'IblScope' },
-  ['@ibl.scope.underline.1'] = { link = 'NowText' },
+  IblIndent                  = { fg   = c.ac       },
+  IblScope                   = { fg   = c.ac       },
+  ['@ibl.scope.char.1']      = { link = 'IblScope' },
+  ['@ibl.scope.underline.1'] = { link = 'IblScope' },
 
   -- hop
-  HopNextKey               = { fg = c.blue    },
-  HopNextKey1              = { fg = c.red     },
-  HopNextKey2              = { fg = c.orange  },
-  HopNextKey3              = { fg = c.magenta },
-  HopUnmatched             = { fg = c.fd      },
+  HopNextKey   = { link = 'Function' },
+  HopNextKey1  = { fg = c.red        },
+  HopNextKey2  = { fg = c.orange     },
+  HopNextKey3  = { fg = c.magenta    },
+  HopUnmatched = { fg = c.fd         },
 
   -- kitty
-  KittyColor               = { fg = c.orange  },
-  KittyAction              = { fg = c.fg      },
-  KittyKeybind             = { fg = c.blue    },
-  KittyKeyword             = { fg = c.red     },
-  KittyMap                 = { fg = c.purple  },
-  KittyMod                 = { fg = c.blue    },
-  KittySt                  = { fg = c.green   },
+  KittyColor   = { fg = c.orange  },
+  KittyAction  = { fg = c.fg      },
+  KittyKeybind = { fg = c.blue    },
+  KittyKeyword = { fg = c.red     },
+  KittyMap     = { fg = c.purple  },
+  KittyMod     = { fg = c.blue    },
+  KittySt      = { fg = c.green   },
 
   -- lazy
   LazyNormal        = { bg = c.bd   },
   LazyProgressDone  = { fg = c.blue },
-  LazyProp          = { bg = c.ac },
-  LazyReasonEvent   = { fg = c.fd },
-  LazyReasonFt      = { fg = c.fd },
-  LazyReasonPlugin  = { fg = c.fd },
-  LazyReasonRequire = { fg = c.fd },
-  LazyReasonSource  = { fg = c.fd },
-  LazyReasonStart   = { fg = c.fd },
+  LazyProp          = { bg = c.ac   },
+  LazyReasonEvent   = { fg = c.fd   },
+  LazyReasonFt      = { fg = c.fd   },
+  LazyReasonPlugin  = { fg = c.fd   },
+  LazyReasonRequire = { fg = c.fd   },
+  LazyReasonSource  = { fg = c.fd   },
+  LazyReasonStart   = { fg = c.fd   },
 
   -- mini-cursorword
-  MiniCursorword           = { fg = c.yellow  },
-  MiniCursorwordCurrent    = { fg = c.yellow  },
+  MiniCursorword        = { fg = c.yellow },
+  MiniCursorwordCurrent = { fg = c.yellow },
 
   -- mini-files
-  MiniFilesTitle           = { fg = c.fd      },
-  MiniFilesTitleFocused    = { fg = c.fg      },
+  MiniFilesTitle        = { fg = c.fd     },
+  MiniFilesTitleFocused = { fg = c.fg     },
 
   -- mini-identscope
-  MiniIndentscopeSymbol    = { fg = c.ac      },
+  MiniIndentscopeSymbol = { fg = c.ac     },
 
   --markdown
-  mkdCodeDelimiter         = { fg = c.fg      },
-  mkdCodeEnd               = { fg = c.fg      },
-  mkdCode                  = { fg = c.fg      },
-  mkdCodeStart             = { fg = c.fg      },
-  mkdHeading               = { fg = c.blue    },
-  mkdInlineURL             = { fg = c.blue    },
-  mkdLineBreak             = { link = 'NONE'  },
-  mkdLink                  = { fg = c.blue    },
-  mkdURL                   = { fg = c.magenta },
+  mkdCode          = { link = 'Normal'   },
+  mkdCodeDelimiter = { link = 'Normal'   },
+  mkdCodeEnd       = { link = 'Normal'   },
+  mkdCodeStart     = { link = 'Normal'   },
+  mkdHeading       = { link = 'Function' },
+  mkdInlineURL     = { link = 'Function' },
+  mkdLineBreak     = { link = 'NONE'     },
+  mkdLink          = { link = 'Function' },
+  mkdURL           = { fg = c.magenta    },
 
   -- netrw
-  netrwTreeBar             = { fg = c.fg      },
-
-  -- which-key
-  WhichKey                 = { fg = c.blue    },
-  WhichKeyDesc             = { fg = c.fg      },
-  WhichKeyFloat            = { bg = c.bd      },
-  WhichKeyGroup            = { fg = c.magenta },
-  WhichKeySeparator        = { fg = c.fg      },
+  netrwTreeBar = { link = 'Normal' },
 }
 
 -- Clear all colors
 vim.cmd.hi('clear')
-
--- Loop for colors
-for name, val in pairs(hl_groups) do
-  vim.api.nvim_set_hl(0, name, val)
-end
-
--- css
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'css', 'scss' },
-  callback = function()
-    vim.api.nvim_set_hl(0, 'StorageClass', { fg = c.fg })
-  end
-})
 
 -- Spell
 vim.cmd('hi SpellBad guisp=' .. c.red)
 vim.cmd('hi SpellCap guisp=' .. c.blue)
 vim.cmd('hi SpellRare guisp=' .. c.magenta)
 vim.cmd('hi SpellLocal guisp=' .. c.cyan)
+
+-- Loop for colors
+for name, val in pairs(hl_groups) do
+  vim.api.nvim_set_hl(0, name, val)
+end
+
