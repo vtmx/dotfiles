@@ -43,15 +43,6 @@ return {
     end
   },
   {
-    'lukas-reineke/indent-blankline.nvim',
-    main = 'ibl',
-    event = 'VeryLazy',
-    opts = {
-      indent = { priority = 2 },
-      scope = { enabled = false, priority = 2 }
-    }
-  },
-  {
     'phaazon/hop.nvim',
     cmd = { 'HopChar1', 'HopAnywhere' },
     config = true
