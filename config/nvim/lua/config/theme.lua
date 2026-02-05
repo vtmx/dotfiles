@@ -3,7 +3,7 @@ local c = require('config.colors')
 local hl_groups = {
   -- General
   Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
-  Comment        = { fg = c.fd, ctermfg = 7, italic = true   },
+  Comment        = { fg = c.fd, ctermfg = 7                  },
   Cursor         = { bg = c.fg, fg = c.bg                    },
   Title          = { link = 'Normal' },
   Twilight       = { fg = c.fd       },
@@ -108,18 +108,6 @@ local hl_groups = {
   -- Line win separator split
   StatusLine     = { bg = 'NONE'     },
   StatusLineNC   = { link = 'Normal' },
-
-  -- Languages
-
-  -- css
-  cssTagName                  = { link = 'Function'  },
-  cssPseudoClassId            = { link = 'Function'  },
-  cssPseudoClassLang          = { link = 'Function'  },
-  cssVendor                   = { link = 'Function'  },
-  cssHacks                    = { link = 'Function' },
-  cssBraces                   = { link = 'Operator' },
-  cssBraceError               = { link = 'Operator' },
-  cssAttributeSelector        = { link = 'Function' },
 
   -- dosini
   dosiniLabel       = { link = 'Function'       },
@@ -270,6 +258,9 @@ local hl_groups = {
   ['@repeat']             = { link = 'Repeat'          },
   ['@storageclass']       = { link = 'StorageClass'    },
   ['@tag']                = { link = 'Tag'             },
+  ['@tag.builtin']        = { link = 'Tag'             },
+  ['@tag.attribute']      = { fg = c.orange            },
+  ['@tag.delimiter']      = { link = 'Normal'          },
   ['@type.definition']    = { link = 'Typedef'         },
   ['@type']               = { link = 'Type'            },
   ['@variable']           = { fg   = nil, bg = nil     }, -- using default foreground reduces visual overloa,
@@ -306,6 +297,21 @@ local hl_groups = {
   ['@text.uri']           = { link = 'Underlined'      },
   ['@text.underline']     = { link = 'Underlined'      },
   ['@text.todo']          = { link = 'Todo'            },
+
+  -- Languages
+
+  -- css
+  ['@selectors.css'] = { link = 'Identifier' },
+  ['@function.css']  = { link = 'Function'   },
+  ['@property.css']  = { link = 'Normal'     },
+  ['@value.css']     = { link = 'Number'     },
+
+  -- html
+  ['@constant.html']           = { link = 'Normal'     },
+  ['@tag.html']                = { link = 'Identifier' },
+  ['@string.special.url.html'] = { link = 'String'     },
+
+  -- js
 
 ------------------------------------------------------------
   -- Plugins
