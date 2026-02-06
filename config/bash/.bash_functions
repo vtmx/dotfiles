@@ -35,8 +35,8 @@ cuta() {
   fi
 
   local file="$1"
-  local start="$2" 
-  local stop="$3" 
+  local start="$2"
+  local stop="$3"
   local name="${file%.*}"
   local format="${file##*.}"
   local cutfile="$name-cut.$format"
@@ -183,7 +183,7 @@ mksh() {
 
   [[ -z "$file" ]] && { echo "error: need a name for script" >&2 && return 1; }
   [[ -e "$file" ]] && { echo "error: file already exist" >&2 && return 1; }
- 
+
   echo -e "#!/usr/bin/env bash\n\n" > "$file"
   chmod +x "$file" && $EDITOR +3 "$file"
 }
@@ -250,7 +250,7 @@ mvd() {
   return 0
 }
 
-# Rename files to lower case and replace spaces to - 
+# Rename files to lower case and replace spaces to -
 mvlo() {
   rename -n \
     '$_=lc($_);
@@ -287,7 +287,7 @@ mvlo() {
   fi
 }
 
-# Rename files to upper case and replace spaces to - 
+# Rename files to upper case and replace spaces to -
 mvup() {
   rename -n \
   '($name, $ext) = $_ =~ /^(.+)\.([^.]+)$/;
@@ -361,7 +361,12 @@ lwd() {
     echo 'usage: lnwd <file-or-dir> <path>' >&2
     return 1
   }
-  ln -sf "$(pwd)/$1" $2
+
+  local file="$(pwd)/$1"
+  shift
+  local dir="$*"
+
+  ln -sf "$file" "$dir"
 }
 
 # Open
@@ -486,7 +491,7 @@ wa() {
       local file=$1
       local ext=$(echo $1 | awk -F . '{print $NF}')
       if [[ $ext = 'sh' ]]; then
-        find $file | entr -cr ./$file 
+        find $file | entr -cr ./$file
       elif [[ $ext = 'js' ]]; then
         find $file | entr -cr node $file
       elif [[ $ext = 'v' ]]; then

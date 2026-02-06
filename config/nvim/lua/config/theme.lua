@@ -153,13 +153,22 @@ local hl_groups = {
   markdownListMarker       = { link = 'Normal'   },
   markdownRule             = { link = 'Normal'   },
   markdownUrl              = { link = 'Normal'   },
+  mkdCode                  = { link = 'Normal'   },
+  mkdCodeDelimiter         = { link = 'Normal'   },
+  mkdCodeEnd               = { link = 'Normal'   },
+  mkdCodeStart             = { link = 'Normal'   },
+  mkdHeading               = { link = 'Function' },
+  mkdInlineURL             = { link = 'Function' },
+  mkdLineBreak             = { link = 'Normal'   },
+  mkdLink                  = { link = 'Function' },
+  mkdURL                   = { link = 'Keyword'  },
 
   -- js
-  javaScriptBraces   = { link = 'Delimiter'    },
-  javaScriptFunction = { fg = c.fg             },
+  javaScriptBraces   = { link = 'Delimiter'      },
+  javaScriptFunction = { fg = c.fg               },
 
   -- json
-  jsonCommentError   = { link = 'Comment'      },
+  jsonCommentError   = { link = 'Comment'        },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red     },
@@ -300,6 +309,15 @@ local hl_groups = {
 
   -- Languages
 
+  -- bash
+  ['@constant.bash']            = { link = 'Identifier' },
+  ['@function.builtin.bash']    = { link = 'Function'   },
+  ['@punctuation.special.bash'] = { link = 'Identifier' },
+  ['@string.regexp.bash']       = { link = 'Normal'     },
+  ['@variable.bash']            = { link = 'Identifier' },
+  ['@variable.builtin.bash']    = { link = 'Identifier' },
+  ['@variable.parameter.bash']  = { link = 'Normal'     },
+
   -- css
   ['@selectors.css'] = { link = 'Identifier' },
   ['@function.css']  = { link = 'Function'   },
@@ -311,14 +329,8 @@ local hl_groups = {
   ['@constant.html']           = { link = 'Identifier' },
   ['@string.special.url.html'] = { link = 'String'     },
 
-  -- js
-
-  -- lua
-  -- ['@property.lua']           = { link = 'Normal'     },
-  -- ['@lsp.type.property.lua']  = { link = 'Normal'     },
-
 ------------------------------------------------------------
-  -- Plugins
+-- Plugins
 ------------------------------------------------------------
 
   -- codium
@@ -359,20 +371,6 @@ local hl_groups = {
   -- mini-files
   MiniFilesTitle        = { fg = c.fd     },
   MiniFilesTitleFocused = { fg = c.fg     },
-
-  -- mini-identscope
-  MiniIndentscopeSymbol = { fg = c.ac     },
-
-  --markdown
-  mkdCode          = { link = 'Normal'   },
-  mkdCodeDelimiter = { link = 'Normal'   },
-  mkdCodeEnd       = { link = 'Normal'   },
-  mkdCodeStart     = { link = 'Normal'   },
-  mkdHeading       = { link = 'Function' },
-  mkdInlineURL     = { link = 'Function' },
-  mkdLineBreak     = { link = 'Normal'   },
-  mkdLink          = { link = 'Function' },
-  mkdURL           = { link = 'Keyword'  },
 
   -- netrw
   netrwTreeBar = { link = 'Normal' },
