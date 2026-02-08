@@ -1,5 +1,8 @@
 ;; extends
 
+((comment) @comment
+ (#set! "priority" 110))
+
 ((selectors) @selectors
   (#set! "priority" 110))
 
