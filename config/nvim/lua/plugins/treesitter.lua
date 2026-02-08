@@ -7,13 +7,16 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup({
       autotag = { enable = true },
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        disable = { 'markdown', 'markdown_inline' }
+      },
       incremental_selection = { enable = true },
       indent = { enable = false },
       ensure_installed = {
         'c', 'bash', 'css', 'html', 'javascript', 'json',
-        'lua', 'markdown', 'markdown_inline', 'python', 'scss', 'sxhkdrc',
-        'tmux', 'toml', 'typescript', 'v', 'vim', 'vimdoc', 'yaml'
+        'lua', 'python', 'scss', 'sxhkdrc', 'toml',
+        'typescript', 'v', 'vim', 'vimdoc', 'yaml'
       },
     })
   end

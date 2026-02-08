@@ -47,7 +47,6 @@ tooltip,
 #context-sendlinktodevice,
 #context-sep-sendlinktodevice,
 #context-sep-copylink,
-#context-searchselect,
 #frame-sep,
 
 /* context device */
@@ -59,11 +58,12 @@ tooltip,
 #context_sendTabToDevice_separator,
 
 /* context select */
+#context-print-selection,
+#context-searchselect-private,
 #context-openlinkincurrent,
 #context-copy,
 #context-selectall,
 #context-sep-selectall,
-#context-searchselect,
 #context-translate-selection,
 #frame-sep,
 #context-viewpartialsource-selection,
