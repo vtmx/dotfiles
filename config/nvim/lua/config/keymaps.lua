@@ -289,7 +289,11 @@ map(
 )
 
 map(
-  'n', '<leader>e', ':lua MiniFiles.open()<cr>',
+  'n', '<leader>e', function() -- Close if open a file
+    if MiniFiles.open() then
+      MiniFiles.close()
+    end
+  end,
   { desc = 'Explorer' }
 )
 

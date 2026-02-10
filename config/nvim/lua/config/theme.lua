@@ -329,6 +329,13 @@ local hl_groups = {
   ['@constant.html']           = { link = 'Identifier' },
   ['@string.special.url.html'] = { link = 'String'     },
 
+  -- vimdoc
+  ['@comment.note.vimdoc']     = { link = 'Normal'     },
+  ['@label.vimdoc']            = { link = 'Identifier' },
+  ['@markup.link.vimdoc']      = { link = 'Function'   },
+  ['@markup.raw.block.vimdoc'] = { link = 'Normal'     },
+  ['@markup.raw.vimdoc']       = { link = 'Normal'     },
+
 ------------------------------------------------------------
 -- Plugins
 ------------------------------------------------------------

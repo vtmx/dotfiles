@@ -15,8 +15,8 @@ return {
       indent = { enable = false },
       ensure_installed = {
         'c', 'bash', 'css', 'html', 'javascript', 'json',
-        'lua', 'python', 'scss', 'sxhkdrc', 'toml',
-        'typescript', 'v', 'vim', 'vimdoc', 'yaml'
+        'lua', 'python', 'scss', 'sxhkdrc', 'tmux', 'tera',
+        'toml', 'typescript', 'v', 'vim', 'vimdoc', 'yaml'
       },
     })
   end
