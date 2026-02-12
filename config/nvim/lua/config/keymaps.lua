@@ -99,18 +99,6 @@ map(
 )
 
 map(
-  'n', '8', function()
-    require('mini.jump2d').start(require('mini.jump2d').builtin_opts.single_character)
-  end,
-  { desc = 'Char' }
-)
-
-map(
-  'n', '9', function() require('mini.jump2d').start() end,
-  { desc = 'Char anywhere' }
-)
-
-map(
   'n', 'U', '<c-r>',
   { desc = 'Redo' }
 )
@@ -128,6 +116,11 @@ map(
 map(
   'n', 'y%', '<cmd>%y+<cr><cmd>:lua vim.notify("Copy all content to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy all content to clipboard' }
+)
+
+map(
+  'n', '<cr>', '<cmd>HopAnywhere<cr>',
+  { desc = 'Char anywhere' }
 )
 
 map(
