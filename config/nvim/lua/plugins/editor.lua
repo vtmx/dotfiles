@@ -6,6 +6,7 @@ return {
   },
   {
     'nvim-mini/mini.cursorword',
+    event = 'VeryLazy',
     config = true
   },
   {
@@ -17,6 +18,11 @@ return {
         options = { use_as_default_explorer = true }
       })
     end
+  },
+  {
+    'nvim-mini/mini.jump2d',
+    event = 'VeryLazy',
+    config = { view = { dim = true } }
   },
   {
     'nvim-mini/mini.pairs',

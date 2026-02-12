@@ -1,5 +1,4 @@
 local opts = {
-  autochdir = true,
   cursorline = true,
   expandtab = true,
   ignorecase = true,
@@ -20,7 +19,6 @@ local opts = {
   wrap = false
 }
 
-
 -- Set options
 for key, value in pairs(opts) do
   vim.opt[key] = value
@@ -30,15 +28,15 @@ end
 vim.opt.wildignore:append { '*/node_modules/*' }
 
 local g = {
-  loaded_gzip = 1,
+  loaded_gzip = 0,
   loaded_node_provider = 0,
   loaded_perl_provider = 0,
   loaded_python3_provider = 0,
   loaded_ruby_provider = 0,
-  loaded_tarPlugin= 1,
-  loaded_tohtml = 1,
-  loaded_tutor = 1,
-  loaded_zipPlugin = 1,
+  loaded_tarPlugin= 0,
+  loaded_tohtml = 0,
+  loaded_tutor = 0,
+  loaded_zipPlugin = 0,
   mapleader = ' ',
   netrw_altv = 1,
   netrw_banner = 0,
@@ -58,4 +56,4 @@ end
 vim.cmd('set path+=**')
 
 -- Loading tmux navigator
-vim.cmd('source ' .. os.getenv('HOME') .. '/.config/nvim/lua/plugins/tmux-navigator.vim')
+vim.cmd.runtime('lua/plugins/tmux-navigator.vim')

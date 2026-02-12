@@ -15,8 +15,8 @@ return {
         'lua_ls'
       }
 
-      -- Configurações globais
-      vim.lsp.config("*", {
+      -- Global
+      vim.lsp.config('*', {
         winbar = "%{%v:lua.require'nvim-navic'.get_location()%}",
         window = {
           border = 'rounded',

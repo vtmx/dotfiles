@@ -158,9 +158,10 @@ local hl_groups = {
   mkdCodeEnd               = { link = 'Normal'   },
   mkdCodeStart             = { link = 'Normal'   },
   mkdHeading               = { link = 'Function' },
-  mkdInlineURL             = { link = 'Function' },
+  mkdInlineURL             = { link = 'Normal'   },
   mkdLineBreak             = { link = 'Normal'   },
   mkdLink                  = { link = 'Function' },
+  mkdListItem              = { link = 'Normal'   },
   mkdURL                   = { link = 'Keyword'  },
 
   -- js
@@ -378,6 +379,11 @@ local hl_groups = {
   -- mini-files
   MiniFilesTitle        = { fg = c.fd     },
   MiniFilesTitleFocused = { fg = c.fg     },
+
+  -- mini-jump2d
+  MiniJump2dSpot        = { fg = c.red    },
+  MiniJump2dSpotUnique  = { fg = c.blue   },
+  MiniJump2dSpotAhead   = { fg = c.yellow },
 
   -- netrw
   netrwTreeBar = { link = 'Normal' },
