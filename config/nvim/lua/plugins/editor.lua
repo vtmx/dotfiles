@@ -20,11 +20,6 @@ return {
     end
   },
   {
-    'nvim-mini/mini.jump2d',
-    event = 'VeryLazy',
-    config = { view = { dim = true } }
-  },
-  {
     'nvim-mini/mini.pairs',
     event = 'VeryLazy',
     config = true
