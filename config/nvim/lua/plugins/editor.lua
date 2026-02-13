@@ -20,6 +20,26 @@ return {
     end
   },
   {
+    'nvim-mini/mini-git',
+    event = 'VeryLazy',
+    config = function()
+      require('mini.files').setup({
+        job = {
+          git_executable = 'git',
+          timeout = 30000,
+        },
+        command = {
+          split = 'auto',
+        },
+      })
+    end
+  },
+  {
+    'nvim-mini/mini.jump2d',
+    event = 'VeryLazy',
+    config = { view = { dim = true } }
+  },
+  {
     'nvim-mini/mini.pairs',
     event = 'VeryLazy',
     config = true
@@ -45,7 +65,7 @@ return {
   },
   {
     'nvim-mini/mini.statusline',
-    event = 'ModeChanged',
+    event = 'VeryLazy',
     config = function()
       local statusline = require('mini.statusline')
       statusline.setup({
@@ -57,37 +77,35 @@ return {
             local filename      = statusline.section_filename({ trunc_width = 140 })
             local location      = statusline.section_location({ trunc_width = 75 })
 
-            -- Troca o nome do modo
-            filename = '%t'
-            location = '%l:%c'
-
-            if mode == 'Command' then mode  = 'CMD' end
-            if mode == 'Insert' then mode   = 'INS' end
-            if mode == 'Normal' then mode   = 'NOR' end
-            if mode == 'Prompt' then mode   = 'PRO' end
-            if mode == 'Replace' then mode  = 'REP' end
-            if mode == 'S-Block' then mode  = 'SEL' end
-            if mode == 'Select' then mode   = 'SEL' end
-            if mode == 'Shell' then mode    = 'SHE' end
-            if mode == 'S-Line' then mode   = 'SEL' end
-            if mode == 'Terminal' then mode = 'TER' end
-            if mode == 'V-Block' then mode  = 'VIS' end
-            if mode == 'Visual' then mode   = 'VIS' end
-            if mode == 'V-Line' then mode   = 'VIS' end
+            local mode_abb = {
+              ['Command']  = 'CMD',
+              ['Insert']   = 'INS',
+              ['Normal']   = 'NOR',
+              ['Prompt']   = 'PRO',
+              ['Replace']  = 'REP',
+              ['S-Block']  = 'SEL',
+              ['Select']   = 'SEL',
+              ['Shell']    = 'SHE',
+              ['S-Line']   = 'SEL',
+              ['Terminal'] = 'TER',
+              ['V-Block']  = 'VIS',
+              ['Visual']   = 'VIS',
+              ['V-Line']   = 'VIS',
+            }
+            mode = mode_abb[mode] or mode
 
             return statusline.combine_groups({
               { hl = 'Normal', strings = { mode } },
-              { hl = 'Comment', strings = { git } },
-              '%<',            -- Mark general truncate point
-              { hl = 'Comment', strings = { filename } },
-              '%=',            -- End left alignment
+              { hl = 'Comment', strings = { git } }, -- to work { 'lewis6991/gitsigns.nvim', config = true },
+              '%<', -- Mark general truncate point
+              { hl = 'Comment', strings = { '%t' } },
+              '%=', -- End left alignment
               { hl = 'Normal', strings = { search } },
-              { hl = 'Comment',strings = { location } },
+              { hl = 'Comment',strings = { '%l:%c' } },
             })
           end,
           inactive = nil,
-        },
-        use_icons = false,
+        }
       })
     end
   },
