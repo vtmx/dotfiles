@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Executa programa no desktop onde o comando foi executado
+bspc rule -a \* -o desktop=^$(bspc query -D -d --names) && $@
