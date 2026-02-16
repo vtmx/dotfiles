@@ -125,7 +125,7 @@ autocmd('FileType', {
       vim.snippet.expand('```bash\n$0\n```')
     end)
 
-    vim.keymap.set('i', '`',function()
+    vim.keymap.set('i', '`', function()
       vim.snippet.expand('```bash\n$0\n```')
     end)
   end

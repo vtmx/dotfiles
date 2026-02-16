@@ -2,8 +2,9 @@
 
 bspdir=$HOME/.config/bspwm
 
-xset -dpms &
-xset s off &
+xset -dpms & # Disable display power management system
+xset s off & # Disable screen saver
+xset s noblank & # Prevent the screem blank
 xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd    > /dev/null || sxhkd -c $bspdir/shortcuts &
 pgrep -x numlockx > /dev/null || numlockx &

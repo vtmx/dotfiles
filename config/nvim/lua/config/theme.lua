@@ -97,9 +97,9 @@ local hl_groups = {
 
   -- Popup
   NormalFloat        = { bg = c.bg },
-  FloatBorder        = { bg = c.bg, fg = c.fd },
-  FloatShadow        = { bg = c.bd },
-  FloatShadowThrough = { bg = c.bd },
+  FloatBorder        = { bg = c.bg },
+  FloatShadow        = { bg = c.bg },
+  FloatShadowThrough = { bg = c.bg },
 
   -- Tabbar
   WinbarNC       = { fg = c.fd },
@@ -109,9 +109,12 @@ local hl_groups = {
   StatusLine     = { link = 'Normal' },
   StatusLineNC   = { link = 'Normal' },
 
+  -- Nvim
+  NvimInternalError = { fg = c.red   },
+
   -- dosini
-  dosiniLabel       = { link = 'Function'       },
-  dosiniValue       = { link = 'Normal'         },
+  dosiniLabel       = { link = 'Function'    },
+  dosiniValue       = { link = 'Normal'      },
 
   -- html
   djangoTagBlock     = { link = 'Normal'     },
@@ -162,7 +165,7 @@ local hl_groups = {
   mkdLineBreak             = { link = 'Normal'   },
   mkdLink                  = { link = 'Function' },
   mkdListItem              = { link = 'Normal'   },
-  mkdURL                   = { link = 'Keyword'  },
+  mkdURL                   = { link = 'Normal'   },
 
   -- js
   javaScriptBraces   = { link = 'Delimiter'      },

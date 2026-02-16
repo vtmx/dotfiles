@@ -1,4 +1,5 @@
 local opts = {
+  autochdir = true,
   cursorline = true,
   expandtab = true,
   ignorecase = true,
