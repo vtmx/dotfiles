@@ -20,14 +20,6 @@ local opts = {
   wrap = false
 }
 
--- Set options
-for key, value in pairs(opts) do
-  vim.opt[key] = value
-end
-
--- Ignore node_modules
-vim.opt.wildignore:append { '*/node_modules/*' }
-
 local g = {
   loaded_gzip = 0,
   loaded_node_provider = 0,
@@ -48,10 +40,18 @@ local g = {
   vim_markdown_folding_disabled = true
 }
 
--- Set global variables
+-- Set options
+for key, value in pairs(opts) do
+  vim.opt[key] = value
+end
+
+-- Set global vars
 for key, value in pairs(g) do
   vim.g[key] = value
 end
+
+-- Ignore node_modules
+vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- Search recursively in current directory
 vim.cmd('set path+=**')

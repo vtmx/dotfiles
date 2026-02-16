@@ -55,10 +55,10 @@ local hl_groups = {
   TermCursor     = { fg = c.fg     },
 
   -- Search
-  IncSearch      = { bg = c.ac     },
-  Search         = { bg = c.ac     },
+  IncSearch      = { bg = c.sel     },
+  Search         = { bg = c.sel     },
   CurSearch      = { bg = c.fg, fg = c.bg },
-  Conceal        = { bg = c.ac     },
+  Conceal        = { bg = c.sel     },
 
   -- Messages
   ModeMsg        = { fg = c.fd     },
@@ -75,15 +75,15 @@ local hl_groups = {
   CursorLine     = { bg = c.bl },
 
   -- Select text
-  Visual         = { bg = c.ac },
+  Visual         = { bg = c.sel },
 
   -- Line number column
-  CursorLineFold = { fg = c.fg },
-  CursorLineNr   = { fg = c.fg },
-  CursorLineSign = { fg = c.fg },
-  LineNr         = { fg = c.ac },
-  LineNrAbove    = { fg = c.ac },
-  LineNrBelow    = { fg = c.ac },
+  CursorLineFold = { fg = c.fg  },
+  CursorLineNr   = { fg = c.fg  },
+  CursorLineSign = { fg = c.fg  },
+  LineNr         = { fg = c.sel },
+  LineNrAbove    = { fg = c.sel },
+  LineNrBelow    = { fg = c.sel },
 
   -- ColorColumn
   ColorColumn    = { bg = c.bl },
@@ -102,8 +102,8 @@ local hl_groups = {
   FloatShadowThrough = { bg = c.bg },
 
   -- Tabbar
-  WinbarNC       = { fg = c.fd },
-  WinSeparator   = { fg = c.ac },
+  WinbarNC       = { fg = c.fd  },
+  WinSeparator   = { fg = c.sel },
 
   -- Line win separator split
   StatusLine     = { link = 'Normal' },
@@ -203,8 +203,8 @@ local hl_groups = {
   DiffText     = { link = 'Normal' },
 
   -- Float
-  FoldColumn   = { bg = c.ac, fg = c.cyan },
-  Folder       = { bg = c.ac, fg = c.cyan },
+  FoldColumn   = { bg = c.sel, fg = c.cyan },
+  Folder       = { bg = c.sel, fg = c.cyan },
 
   -- Help
   healthHeadingChar = { link = 'Normal' },
@@ -367,7 +367,7 @@ local hl_groups = {
   -- lazy
   LazyNormal        = { bg = c.bd   },
   LazyProgressDone  = { fg = c.blue },
-  LazyProp          = { bg = c.ac   },
+  LazyProp          = { bg = c.sel  },
   LazyReasonEvent   = { fg = c.fd   },
   LazyReasonFt      = { fg = c.fd   },
   LazyReasonPlugin  = { fg = c.fd   },
@@ -388,11 +388,15 @@ local hl_groups = {
   MiniJump2dSpotUnique  = { fg = c.blue   },
   MiniJump2dSpotAhead   = { fg = c.yellow },
 
+  -- mini-statusline
+  MiniStatuslineRecording = { fg = c.red },
+
+
   -- netrw
   netrwTreeBar = { link = 'Normal' },
 
   -- snacks
-  SnacksIndent      = { fg   = c.ac           },
+  SnacksIndent      = { fg   = c.sel          },
   SnacksIndentScope = { link = 'SnacksIndent' },
 }
 
