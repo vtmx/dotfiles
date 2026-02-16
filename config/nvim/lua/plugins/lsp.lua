@@ -2,7 +2,8 @@ return {
   {
     'williamboman/mason.nvim',
     cmd = 'Mason',
-    config = true
+    config = true,
+    ui = { border = 'rounded' }
   },
   {
     'neovim/nvim-lspconfig',

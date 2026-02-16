@@ -366,18 +366,26 @@
     { "before": ["<leader><leader>", "P"], "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    // Command mode
+    { "before": ["ç"], "after": [":"] },
 
-    // Exit to visual mode
-    { "before": ["ç"], "after": ["<esc>"] },
-
-    // Yank to clipboard
-    { "before": ["y"], "after": ["y", "g", "v", "<esc>"] },
+    // Cut to clipboard
+    { "before": ["D"], "after": ["\"", "+", "x"] },
 
     // Go to begin text
     { "before": ["H"], "after": ["^"] },
 
     // Go to end text
     { "before": ["L"], "after": ["$", "h"] },
+
+    // Paste from clipboard
+    { "before": ["P"], "after": ["\"", "+", "p"] },
+
+    // Yank same position cursor
+    { "before": ["y"], "after": ["y", "g", "v", "<esc>"] },
+
+    // Yank to clipboard
+    { "before": ["Y"], "after": ["\"", "+", "y", "g", "v", "<esc>"] },
 
     // Add indent
     { "before": [">"], "after": [">", "g", "v"] },

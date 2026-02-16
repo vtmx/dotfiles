@@ -53,6 +53,7 @@ return {
     event = 'VeryLazy',
     config = function()
       local statusline = require('mini.statusline')
+
       statusline.setup({
         content = {
           active = function()
@@ -61,6 +62,13 @@ return {
             local search        = statusline.section_searchcount({ trunc_width = 75 })
             local filename      = statusline.section_filename({ trunc_width = 140 })
             local location      = statusline.section_location({ trunc_width = 75 })
+
+            -- Detecta gravação de macro
+            local recording = vim.fn.reg_recording()
+            local macro_msg = ''
+            if recording ~= '' then
+              macro_msg = string.format('⏺')
+            end
 
             local mode_abb = {
               ['Command']  = 'CMD',
@@ -86,6 +94,7 @@ return {
               { hl = 'Comment', strings = { '%t' } },
               '%=', -- End left alignment
               { hl = 'Normal', strings = { search } },
+              { hl = 'MiniStatuslineRecording', strings = { macro_msg } },
               { hl = 'Comment',strings = { '%l:%c' } },
             })
           end,
@@ -114,7 +123,7 @@ return {
       },
       plugins = {
         twilight = { enabled = true },
-        kitty = { enabled = true, font = "+4" }
+        kitty = { enabled = true, font = '+4' }
       }
     }
   }

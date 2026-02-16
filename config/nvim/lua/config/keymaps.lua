@@ -4,7 +4,7 @@ local map = vim.keymap.set
 -- Normal
 
 map(
-  {'n', 'v'}, 'ç', ':',
+  {'n', 'x'}, 'ç', ':',
   { desc = 'Enter in command mode' }
 )
 
@@ -36,11 +36,6 @@ map(
 map(
   'n', 'gcO', 'O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
   { desc = 'Add a comment above current line' }
-)
-
-map(
-  'n', 'gd', vim.lsp.buf.definition,
-  { desc = 'Go to definition' }
 )
 
 map(
@@ -141,41 +136,6 @@ map(
 )
 
 map(
-  'n', '<tab>', '<cmd>bn<cr>',
-  { desc = 'Buffer next' }
-)
-
-map(
-  'n', '<s-tab>', '<cmd>bp<cr>',
-  { desc = 'Buffer prev' }
-)
-
-map(
-  'n', '<c-d>', '<c-d>zz',
-  { desc = 'Page down and center' }
-)
-
-map(
-  'n', '<c-u>', '<c-u>zz',
-  { desc = 'Page up and center' }
-)
-
-map(
-  { 'n', 'i', 's', 'x' }, '<c-s>', '<cmd>w<cr><esc>',
-  { desc = 'Save file if file is change' }
-)
-
-map(
-  'n', '<c-a-j>', '<cmd>m .+1<cr>',
-  { desc = 'Move line to down' }
-)
-
-map(
-  'n', '<c-a-k>', '<cmd>m .-2<cr>',
-  { desc = 'Move line to up' }
-)
-
-map(
   'n', '<a-h>', '<cmd>TmuxNavigateLeft<cr>',
   { desc = 'TmuxNavigateLeft' }
 )
@@ -193,6 +153,51 @@ map(
 map(
   'n', '<a-l>', '<cmd>TmuxNavigateRight<cr>',
   { desc = 'TmuxNavigateRight' }
+)
+
+map(
+  'n', '<c-d>', '<c-d>zz',
+  { desc = 'Page down' }
+)
+
+map(
+  'n', '<c-i>', '<c-i>zz',
+  { desc = 'Jump forwards' }
+)
+
+map(
+  'n', '<c-o>', '<c-o>zz',
+  { desc = 'Jump backwards' }
+)
+
+map(
+  { 'n', 'i', 's', 'x' }, '<c-s>', '<cmd>w<cr><esc>',
+  { desc = 'Save file' }
+)
+
+map(
+  'n', '<c-u>', '<c-u>zz',
+  { desc = 'Page up' }
+)
+
+map(
+  'n', '<c-a-j>', '<cmd>m .+1<cr>',
+  { desc = 'Move line to down' }
+)
+
+map(
+  'n', '<c-a-k>', '<cmd>m .-2<cr>',
+  { desc = 'Move line to up' }
+)
+
+map(
+  'n', '<tab>', '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
+)
+
+map(
+  'n', '<s-tab>', '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
 )
 
 -- Insert
@@ -230,32 +235,42 @@ map(
 -- Visual
 
 map(
-  'v', 'y', 'ygv<esc>',
+  'x', 'D', '"+x<cmd>:lua vim.notify("Cut to clipboard", "info", { title = "Clipboard" })<cr>',
+  { desc = 'Cut to clipboard' }
+)
+
+map(
+  'x', 'P', '"+gp<esc><cmd>echo "paste from clipboard"<cr>',
+  { desc = 'Paste from clipboard' }
+)
+
+map(
+  'x', 'y', 'ygv<esc>',
   { desc = 'Keep cursor end select when visual copy' }
 )
 
 map(
-  'v', '>', '>gv',
+  'x', 'Y', '"+ygv<esc><cmd>echo "copy to clipboard"<cr>',
+  { desc = 'Copy to clipboard' }
+)
+
+map(
+  'x', '>', '>gv',
   { desc = 'Add indent' }
 )
 
 map(
-  'v', '<', '<gv',
+  'x', '<', '<gv',
   { desc = 'Remove indent' }
 )
 
 map(
-  'v', '<c-l>', '<esc>',
-  { desc = 'Return to normal mode' }
-)
-
-map(
-  'v', '<c-a-j>', ":m '>+1<cr>gv=gv",
+  'x', '<c-a-j>', ":m '>+1<cr>gv=gv",
   { desc = 'Move select line(s) to down' }
 )
 
 map(
-  'v', '<c-a-k>', ":m '<-2<cr>gv=gv",
+  'x', '<c-a-k>', ":m '<-2<cr>gv=gv",
   { desc = 'Move select line(s) to up' }
 )
 
@@ -296,7 +311,7 @@ map(
 )
 
 map(
-  'v', '<leader>d', '"+x<cmd>:lua vim.notify("Cut to clipboard", "info", { title = "Clipboard" })<cr>',
+  'x', '<leader>d', '"+x<cmd>:lua vim.notify("Cut to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Cut to clipboard' }
 )
 
@@ -400,11 +415,6 @@ map(
 )
 
 map(
-  'n', '<leader>l', '<cmd>Lazy<cr>',
-  { desc = 'Lazy' }
-)
-
-map(
   'n', '<leader>m', function() require('snacks').picker.marks() end,
   { desc = 'Marks' }
 )
@@ -425,7 +435,7 @@ map(
 )
 
 map(
-  { 'n', 'v' }, '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
+  { 'n', 'x' }, '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
 
@@ -450,6 +460,11 @@ map(
 )
 
 map(
+  'n', '<leader>R', function() require('snacks').picker.registers() end,
+  { desc = 'Registers' }
+)
+
+map(
   'n', '<leader>s', ':%s/<C-r><C-w>//g<Left><Left>',
   { desc = 'Substitute current word' }
 )
@@ -460,12 +475,12 @@ map(
 )
 
 map(
-  'v', '<leader>s', '"hy:%s/<c-r>h//g<left><left>',
+  'x', '<leader>s', '"hy:%s/<c-r>h//g<left><left>',
   { desc = 'Substitute selected word' }
 )
 
 map(
-  'v', '<leader>S', '"hy:%s/<c-r><c-w>/<c-r>+/g<left><left>',
+  'x', '<leader>S', '"hy:%s/<c-r><c-w>/<c-r>+/g<left><left>',
   { desc = 'Substitute selected word to clipboard' }
 )
 
@@ -550,17 +565,17 @@ map(
 )
 
 map(
-  'v', '<leader>x', ":'<,'>w !bash<cr>",
+  'x', '<leader>x', ":'<,'>w !bash<cr>",
   { desc = 'Execute selected line(s)' }
 )
 
 map(
-  'n', '<leader>y', 'mtviw"+y`t<cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
+  'n', '<leader>y', 'mtviw"+y`t<cmd>:lua vim.notify("copy to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy to clipboard' }
 )
 
 map(
-  'v', '<leader>y', '"+ygv<esc><cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
+  'x', '<leader>y', '"+ygv<esc><cmd>:lua vim.notify("copy to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Copy to clipboard' }
 )
 
@@ -590,6 +605,16 @@ map(
 )
 
 -- Leader leader
+
+map(
+  'n', '<leader><leader>l', '<cmd>Lazy<cr>',
+  { desc = 'Lazy' }
+)
+
+map(
+  'n', '<leader><leader>m', '<cmd>Mason<cr>',
+  { desc = 'Mason' }
+)
 
 map(
   'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',

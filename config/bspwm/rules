@@ -3,11 +3,10 @@
 br="bspc rule -a"
 
 $br zen               desktop="^1" focus=on
-$br code-oss          desktop="^2" focus=on
 $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^4" focus=on
 $br steam             desktop="^4" state=floating
 $br qBittorrent       desktop="^5" focus=on follow=on
-$br mpv                            state=floating 
+$br mpv                            state=floating
 $br pavucontrol                    state=floating
 $br Screenkey                      manager=off
