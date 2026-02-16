@@ -15,15 +15,20 @@ function M.toggle_cursorword()
 end
 
 function M.toggle_diagnostic()
-  if vim.diagnostic.is_enabled() then
-    vim.o.signcolumn = 'no'
-		vim.diagnostic.enable(false)
+  -- local is_signcolumn = vim.opt.signcolumn:get() == 'yes'
+  local is_signcolumn = vim.wo.signcolumn == 'yes'
+
+  if is_signcolumn then
+    vim.opt.signcolumn = 'no'
+    vim.diagnostic.enable(false)
+    vim.diagnostic.config({ signs = false, virtual_text = false })
     print('Diagnostic disable')
-	else
-    vim.o.signcolumn = 'yes'
-		vim.diagnostic.enable(true)
+  else
+    vim.opt.signcolumn = 'yes'
+    vim.diagnostic.enable(true)
+    vim.diagnostic.config({ signs = true, virtual_text = true })
     print('Diagnostic enable')
-	end
+  end
 end
 
 function M.toggle_diary()
