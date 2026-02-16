@@ -100,8 +100,9 @@ return {
 
       -- Desativar diagnostico global
       vim.diagnostic.config({
-        virtual_text = false,
         signs = false,
+        virtual_lines = false,
+        virtual_text = false,
         update_in_insert = true,
         underline = true,
         severity_sort = true,

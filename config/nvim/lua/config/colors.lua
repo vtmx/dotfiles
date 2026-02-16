@@ -6,12 +6,12 @@ local colors = {
   fg      = '#abb2bf',
   ac      = '#3d4556', -- selection and accent
   red     = '#e06c75',
-  orange  = '#d19a66',
-  yellow  = '#e5c07b',
   green   = '#98c379',
-  cyan    = '#56b6c2',
+  yellow  = '#e5c07b',
+  orange  = '#d19a66',
   blue    = '#61afef',
   magenta = '#c678dd',
+  cyan    = '#56b6c2',
 }
 
 return colors

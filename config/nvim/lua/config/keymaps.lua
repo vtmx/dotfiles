@@ -131,11 +131,6 @@ map(
 )
 
 map(
-  'n', '<cr>', '<cmd>HopAnywhere<cr>',
-  { desc = 'Char anywhere' }
-)
-
-map(
   'n', '>', '>>',
   { desc = 'Add indent' }
 )
@@ -291,7 +286,7 @@ map(
 )
 
 map(
-  'n', '<leader>b', function() Snacks.picker.buffers() end,
+  'n', '<leader>b', function() require('snacks').picker.buffers() end,
   { desc = 'Buffers' }
 )
 
@@ -307,15 +302,15 @@ map(
 
 map(
   'n', '<leader>e', function() -- Close if open a file
-    if MiniFiles.open() then
-      MiniFiles.close()
+    if require('mini.files').open() then
+      require('mini.files').close()
     end
   end,
   { desc = 'Explorer' }
 )
 
 map(
-  'n', '<leader>f', function() Snacks.picker.files() end,
+  'n', '<leader>f', function() require('snacks').picker.files() end,
   { desc = 'Files' }
 )
 
@@ -325,57 +320,73 @@ map(
 )
 
 map(
-  'n', '<leader>gb', function() Snacks.picker.git_branches() end,
+  'n', '<leader>gb', function() require('snacks').picker.git_branches() end,
   { desc = 'Git Branches' }
 )
 
 map(
-  'n', '<leader>gf', function() Snacks.picker.git_files() end,
+  'n', '<leader>gf', function() require('snacks').picker.git_files() end,
   { desc = 'Git Files' }
 )
 
 map(
-  'n', '<leader>gl', function() Snacks.picker.git_log() end,
+  'n', '<leader>gl', function() require('snacks').picker.git_log() end,
   { desc = 'Git Log' }
 )
 
 map(
-  'n', '<leader>gs', function() Snacks.picker.git_status() end,
+  'n', '<leader>gs', function() require('snacks').picker.git_status() end,
   { desc = 'Git Status' }
 )
 
 map(
-  'n', '<leader>gd', function() Snacks.picker.lsp_definitions() end,
+  'n', '<leader>gd', function() require('snacks').picker.lsp_definitions() end,
   { desc = 'Definitions' }
 )
 
 map(
-  'n', '<leader>gD', function() Snacks.picker.lsp_declarations() end,
+  'n', '<leader>gD', function() require('snacks').picker.lsp_declarations() end,
   { desc = 'Declarations' }
 )
 
 map(
-  'n', '<leader>gI', function() Snacks.picker.lsp_implementations() end,
+  'n', '<leader>gI', function() require('snacks').picker.lsp_implementations() end,
+  { desc = 'References' }
+)
+
+map('n', '<leader>gk', function()
+    -- local is_signcolumn = vim.opt.signcolumn:get() == 'yes'
+    local is_signcolumn = vim.wo.signcolumn == 'yes'
+
+    if is_signcolumn then
+      vim.opt.signcolumn = 'no'
+      vim.diagnostic.config({ signs = false, virtual_text = false })
+    else
+      vim.opt.signcolumn = 'yes'
+      vim.diagnostic.config({ signs = true, virtual_text = true })
+    end
+
+  end,
+  { desc = 'Toggle diagnostic signs and virtual_lines' }
+)
+
+map(
+  'n', '<leader>gr', function() require('snacks').picker.lsp_references() end,
   { desc = 'References' }
 )
 
 map(
-  'n', '<leader>gr', function() Snacks.picker.lsp_references() end,
-  { desc = 'References' }
-)
-
-map(
-  'n', '<leader>gy', function() Snacks.picker.lsp_type_definitions() end,
+  'n', '<leader>gy', function() require('snacks').picker.lsp_type_definitions() end,
   { desc = 'Definitions' }
 )
 
 map(
-  'n', '<leader>h', function() Snacks.picker.highlights() end,
+  'n', '<leader>h', function() require('snacks').picker.highlights() end,
   { desc = 'Highlights' }
 )
 
 map(
-  'n', '<leader>H', function() Snacks.picker.helptags() end,
+  'n', '<leader>H', function() require('snacks').picker.helptags() end,
   { desc = 'Help' }
 )
 
@@ -390,12 +401,12 @@ map(
 )
 
 map(
-  'n', '<leader>j', function() Snacks.picker.jumps() end,
+  'n', '<leader>j', function() require('snacks').picker.jumps() end,
   { desc = 'Jump list' }
 )
 
 map(
-  'n', '<leader>k', function() Snacks.picker.keymaps() end,
+  'n', '<leader>k', function() require('snacks').picker.keymaps() end,
   { desc = 'Keymaps' }
 )
 
@@ -410,7 +421,7 @@ map(
 )
 
 map(
-  'n', '<leader>m', function() Snacks.picker.marks() end,
+  'n', '<leader>m', function() require('snacks').picker.marks() end,
   { desc = 'Marks' }
 )
 
@@ -575,7 +586,7 @@ map(
 )
 
 map(
-  'n', '<leader>:', function() Snacks.picker.command_history() end,
+  'n', '<leader>:', function() require('snacks').picker.command_history() end,
   { desc = 'Buffers' }
 )
 
@@ -585,12 +596,12 @@ map(
 )
 
 map(
-  'n', '<leader>/', function() Snacks.picker.grep() end,
+  'n', '<leader>/', function() require('snacks').picker.grep() end,
   { desc = 'Fuzzy grep' }
 )
 
 map(
-  'n', '<leader>?', function() Snacks.picker.grep_buffers() end,
+  'n', '<leader>?', function() require('snacks').picker.grep_buffers() end,
   { desc = 'Fuzzy live_grep' }
 )
 

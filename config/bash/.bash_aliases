@@ -114,6 +114,7 @@ alias k=killall
 
 # kitty
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
+alias kakc="kak $HOME/.config/kak/kakrc"
 
 # kee-pass-xc
 alias kp='keepassxc-cli'

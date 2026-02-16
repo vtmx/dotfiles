@@ -83,11 +83,11 @@ super + u ; {b,f,o,r,s}
 
 # Apps
 super + {a,b,e,g,p,t,s,v}
-  $HOME/.config/bspwm/open {pamac-manager,zen-browser,dolphin,steam,kcolorchooser,qbittorrent,flameshot gui,code}
+  {pamac-manager,zen-browser,dolphin,steam,kcolorchooser,qbittorrent,flameshot gui,code}
 
 # Apps alternate
 super + alt + {b,e,p}
-  $HOME/.config/bspwm/open {firefox,thunar,bitwarden-desktop}
+  {firefox,thunar,bitwarden-desktop}
 
 # Terminal
 super + {_,alt + }Return

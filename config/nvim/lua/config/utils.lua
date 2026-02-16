@@ -82,7 +82,7 @@ function M.toggle_listchars()
   print('List ' .. (vim.o.list and 'on' or 'off'))
 end
 
--- vim.g.minipairs_disable = true
+vim.g.minipairs_disable = true
 
 function M.toggle_pairs()
   vim.g.minipairs_disable = not vim.g.minipairs_disable

@@ -20,21 +20,6 @@ return {
     end
   },
   {
-    'nvim-mini/mini-git',
-    event = 'VeryLazy',
-    config = function()
-      require('mini.files').setup({
-        job = {
-          git_executable = 'git',
-          timeout = 30000,
-        },
-        command = {
-          split = 'auto',
-        },
-      })
-    end
-  },
-  {
     'nvim-mini/mini.jump2d',
     event = 'VeryLazy',
     config = { view = { dim = true } }
