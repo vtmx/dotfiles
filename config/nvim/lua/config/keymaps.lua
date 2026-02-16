@@ -354,22 +354,6 @@ map(
   { desc = 'References' }
 )
 
-map('n', '<leader>gk', function()
-    -- local is_signcolumn = vim.opt.signcolumn:get() == 'yes'
-    local is_signcolumn = vim.wo.signcolumn == 'yes'
-
-    if is_signcolumn then
-      vim.opt.signcolumn = 'no'
-      vim.diagnostic.config({ signs = false, virtual_text = false })
-    else
-      vim.opt.signcolumn = 'yes'
-      vim.diagnostic.config({ signs = true, virtual_text = true })
-    end
-
-  end,
-  { desc = 'Toggle diagnostic signs and virtual_lines' }
-)
-
 map(
   'n', '<leader>gr', function() require('snacks').picker.lsp_references() end,
   { desc = 'References' }
