@@ -246,7 +246,7 @@ map(
 
 map(
   'x', 'y', 'ygv<esc>',
-  { desc = 'Keep cursor end select when visual copy' }
+  { desc = 'Keep cursor when visual copy' }
 )
 
 map(
@@ -385,7 +385,7 @@ map(
 )
 
 map(
-  'n', '<leader>H', function() require('snacks').picker.helptags() end,
+  'n', '<leader>H', function() require('snacks').picker.help() end,
   { desc = 'Help' }
 )
 

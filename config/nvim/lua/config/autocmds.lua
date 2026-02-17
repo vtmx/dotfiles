@@ -61,12 +61,13 @@ autocmd('BufWritePre', {
   command = '%s/\\s\\+$//e'
 })
 
--- Close help with 'q' and open right
+-- Close help with 'q'
 autocmd('FileType', {
   pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
   callback = function()
-    vim.keymap.set('n', 'q', '<cmd>quit<cr>', { desc = 'Quit doc file' })
+    vim.keymap.set('n', 'q', '<cmd>bd<cr>', { desc = 'Close file' })
     vim.cmd('wincmd L')
+    vim.cmd('only')
   end
 })
 

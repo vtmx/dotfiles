@@ -231,6 +231,9 @@
     // Go to symbol
     { "before": ["g", "s"], "commands": ["workbench.action.gotoSymbol"] },
 
+    // Join lines
+    { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
+
     // Go to begin line
     { "before": ["H"], "after": ["^"] },
 
@@ -328,9 +331,6 @@
 
     // Open find files
     { "before": ["<leader>", "f"], "commands": ["workbench.action.quickOpen"] },
-
-    // Join lines
-    { "before": ["J"], "after": ["m", "z", "J", "`", "z"] },
 
     // Open new tab
     { "before": ["<leader>", "n"], "commands": ["workbench.action.files.newUntitledFile"] },
