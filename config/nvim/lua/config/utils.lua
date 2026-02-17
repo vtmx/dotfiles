@@ -43,6 +43,18 @@ function M.toggle_diary()
   print('Toggle diary')
 end
 
+vim.g.blink_enabled = false
+
+function M.toggle_autocomplete()
+  if vim.g.blink_enable == true then
+    vim.g.blink_enable = false
+    print('auto complete off')
+  else
+    vim.g.blink_enable = true
+    print('auto complete on')
+  end
+end
+
 vim.g.codeium_enabled = false
 
 function M.toggle_ia()

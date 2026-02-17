@@ -344,6 +344,10 @@ local hl_groups = {
 -- Plugins
 ------------------------------------------------------------
 
+  -- blink
+  BlinkCmpMenu       = { bg = c.bg },
+  BlinkCmpMenuBorder = { bg = c.bg },
+
   -- codium
   CodeiumAnnotation = { fg = c.fg },
   CodeiumSuggestion = { fg = c.fd },
