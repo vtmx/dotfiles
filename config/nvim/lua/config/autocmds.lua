@@ -65,7 +65,7 @@ autocmd('BufWritePre', {
 autocmd('FileType', {
   pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
   callback = function()
-    vim.keymap.set('n', 'q', '<cmd>bd<cr>', { desc = 'Close file' })
+    vim.keymap.set('n', 'q', '<cmd>bd<cr>')
     vim.cmd('wincmd L')
     vim.cmd('only')
   end

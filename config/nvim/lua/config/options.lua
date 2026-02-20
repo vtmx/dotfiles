@@ -51,7 +51,7 @@ for key, value in pairs(g) do
 end
 
 -- Ignore node_modules
-vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.wildignore:append { 'node_modules/**', 'dist/**', 'public/**' }
 
 -- Search recursively in current directory
 vim.cmd('set path+=**')
