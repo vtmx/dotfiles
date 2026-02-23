@@ -36,7 +36,25 @@ autocmd('BufReadPost', {
 
 -- Better resize
 autocmd('VimResized', {
-  command = 'wincmd ='
+  callback = function()
+    vim.cmd('wincmd =')
+  end
+})
+
+-- Show cursorline only active window enable
+autocmd({ 'WinEnter', 'BufEnter' }, {
+  group = augroup('active_cursorline', { clear = true }),
+  callback = function()
+    vim.opt_local.cursorline = true
+  end
+})
+
+-- Show cursorline only active window disable
+autocmd({ 'WinLeave', 'BufLeave' }, {
+  group = 'active_cursorline',
+  callback = function()
+    vim.opt_local.cursorline = false
+  end
 })
 
 -- Disable auto comment
@@ -48,7 +66,7 @@ autocmd('FileType', {
 
 -- Syntax highlighting for dotenv files
 autocmd('BufRead', {
-  group = vim.api.nvim_create_augroup('dotenv_ft', { clear = true }),
+  group = augroup('dotenv_ft', { clear = true }),
   pattern = { '.conf', '.config', '.env', '.env.*' },
   callback = function()
     vim.bo.filetype = 'dosini'
@@ -63,7 +81,15 @@ autocmd('BufWritePre', {
 
 -- Close help with 'q'
 autocmd('FileType', {
-  pattern = { 'help', 'lspinfo', 'man', 'startuptime', 'qf' },
+  pattern = {
+    'checkhealth',
+    'gitsigns-blame',
+    'help',
+    'lspinfo',
+    'man',
+    'startuptime',
+    'qf'
+  },
   callback = function()
     vim.keymap.set('n', 'q', '<cmd>bd<cr>')
     vim.cmd('wincmd L')
@@ -75,6 +101,15 @@ autocmd('FileType', {
 autocmd('CmdwinEnter', {
   callback = function()
     vim.keymap.set('n', 'q', '<C-W>c', { buffer = true })
+  end
+})
+
+-- Wrap and check for spell in text filetypes
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'text', 'plaintex', 'typst', 'gitcommit', 'markdown' },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
   end
 })
 
@@ -103,7 +138,6 @@ autocmd('FileType', {
   pattern = 'html',
   callback = function()
     vim.bo.omnifunc = 'htmlcomplete#CompleteTags'
-
     vim.keymap.set('i', '{{', function()
       vim.snippet.expand('{{ $0 }}')
     end)
@@ -148,14 +182,21 @@ autocmd('FileType', {
     vim.opt.tabstop = 2
     vim.opt.shiftwidth = 2
     vim.opt.softtabstop = 2
-  end,
+  end
 })
 
 -- Set opts in terminal
--- falhando com o fzflua
--- autocmd('TermOpen', {
---   command = 'setlocal listchars= nonumber norelativenumber nocursorline startinsert',
--- })
+-- falhou com o fzflua
+autocmd('TermOpen', {
+  callback = function()
+    vim.opt_local.listchars = ''
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+    vim.opt_local.cursorline = false
+    vim.cmd('wincmd J')
+    vim.cmd('startinsert')
+  end
+})
 
 -- Run by file
 exec([[

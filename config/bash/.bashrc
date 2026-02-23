@@ -56,6 +56,20 @@ else
   PS1=$'\n\[\e[0;36m\]$(pwd)\[\e[0m\] \n\[\e[0;32m\]>\[\e[0m\] '
 fi
 
+# bemenu
+if type bemenu &> /dev/null; then
+  export BEMENU_OPTS='-c -l 10 -W 0.3 -B 1
+      -p  ""
+    --fn "BlexMono Nerd Font 11"
+    --tb  "#1e2227" --tf  "#abb2bf"
+    --fb  "#1e2227" --ff  "#abb2bf"
+    --nb  "#1e2227" --nf  "#abb2bf"
+    --ab  "#1e2227" --af  "#abb2bf"
+    --hb  "#3d4556" --hf  "#abb2bf"
+    --sb  "#61afef" --sf  "#3d4556"
+    --bdr "#2c313c"'
+fi
+
 # bun
 if [[ -f $HOME/.bun/bin/bun ]]; then
   export BUN_INSTALL=$HOME/.bun
