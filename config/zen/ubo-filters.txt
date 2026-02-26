@@ -69,6 +69,8 @@ www.youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-rend
 ! Hide shorts category on homepage and search pages
 www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))
 
+! Hide shorts search page
+www.youtube.com##.ytGridShelfViewModelHostHasBottomButton.ytd-item-section-renderer.ytGridShelfViewModelHost
 
 ! References
 ! https://github.com/gijsdev/ublock-hide-yt-shorts
