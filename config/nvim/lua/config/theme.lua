@@ -400,8 +400,9 @@ local hl_groups = {
   netrwTreeBar = { link = 'Normal' },
 
   -- snacks
-  SnacksIndent      = { fg   = c.sel          },
-  SnacksIndentScope = { link = 'SnacksIndent' },
+  SnacksIndent           = { fg    = c.sel          },
+  SnacksIndentScope      = { link  = 'SnacksIndent' },
+  SnacksPickerCursorLine = { link  = 'Normal'       },
 }
 
 -- Clear all colors

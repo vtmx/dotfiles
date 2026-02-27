@@ -16,7 +16,7 @@ autocmd('CursorMoved', {
 -- Highlight yank
 autocmd('TextYankPost', {
   callback = function()
-    vim.highlight.on_yank({ timeout = 100 })
+    vim.hl.on_yank({ timeout = 100 })
   end
 })
 
