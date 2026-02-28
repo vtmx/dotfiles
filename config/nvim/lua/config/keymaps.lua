@@ -625,3 +625,8 @@ map(
   'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
+
+map(
+  'n', '<leader><leader>r',  ':TMUXcompile Run<CR>',
+  { desc = 'Paste from clipboard in new line' }
+)

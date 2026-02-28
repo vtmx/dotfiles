@@ -117,6 +117,16 @@ vim.api.nvim_create_autocmd('FileType', {
 autocmd('FileType', {
   pattern = { 'bash', 'sh' },
   callback = function()
+    -- Execute script
+    vim.keymap.set('n', '<leader><cr>', function()
+      local file = vim.fn.expand('%:p')
+      local cmd = string.format(
+        [[tmux display-popup -w 50%% -h 50%% -E "bash -c '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
+      )
+      vim.fn.system(cmd)
+    end)
+
+    -- Auto pair test command
     vim.keymap.set('i', '[[', function()
       vim.snippet.expand('[[ $1 ]]$0')
     end)
@@ -175,6 +185,20 @@ autocmd('BufWritePost', {
   end
 })
 
+autocmd('FileType', {
+  pattern = 'lua',
+  callback = function()
+    -- Execute script
+    vim.keymap.set('n', '<leader><cr>', function()
+      local file = vim.fn.expand('%:p')
+      local cmd = string.format(
+        [[tmux display-popup -w 50%% -h 50%% -E "lua '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
+      )
+      vim.fn.system(cmd)
+    end)
+  end
+})
+
 -- python
 autocmd('FileType', {
   pattern = 'python',
@@ -182,6 +206,15 @@ autocmd('FileType', {
     vim.opt.tabstop = 2
     vim.opt.shiftwidth = 2
     vim.opt.softtabstop = 2
+
+    -- Execute script
+    vim.keymap.set('n', '<leader><cr>', function()
+      local file = vim.fn.expand('%:p')
+      local cmd = string.format(
+        [[tmux display-popup -w 50%% -h 50%% -E "python '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
+      )
+      vim.fn.system(cmd)
+    end)
   end
 })
 
@@ -199,7 +232,8 @@ autocmd('TermOpen', {
 })
 
 -- Run by file
-exec([[
-autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
-autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
-]], false)
+-- exec([[
+-- autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
+-- autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' %<cr>
+-- autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
+-- ]], false)
