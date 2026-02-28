@@ -560,13 +560,13 @@ map(
 )
 
 map(
-  'n', '<leader>X', '<cmd>%w !bash %<cr>',
-  { desc = 'Execute file' }
+  'x', '<leader>x', ":'<,'>w !bash<cr>",
+  { desc = 'Execute selected line(s)' }
 )
 
 map(
-  'x', '<leader>x', ":'<,'>w !bash<cr>",
-  { desc = 'Execute selected line(s)' }
+  'n', '<leader>X', '<cmd>%w !bash %<cr>',
+  { desc = 'Execute file' }
 )
 
 map(
@@ -585,18 +585,23 @@ map(
 )
 
 map(
-  'n', '<leader>:', function() require('snacks').picker.command_history() end,
-  { desc = 'Buffers' }
-)
-
-map(
   'n', '<leader>!', '<cmd>w !chmod +x %<cr>',
   { desc = 'Make file executable' }
 )
 
 map(
+  'n', '<leader>.', '<cmd>rightbelow vsplit term://bash % | startinsert<cr>',
+  { desc = 'Execute bash to current file in vertical' }
+)
+
+map(
   'n', '<leader>/', function() require('snacks').picker.grep() end,
   { desc = 'Fuzzy grep' }
+)
+
+map(
+  'n', '<leader>:', function() require('snacks').picker.command_history() end,
+  { desc = 'Buffers' }
 )
 
 map(
@@ -623,10 +628,5 @@ map(
 
 map(
   'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Paste from clipboard in new line' }
-)
-
-map(
-  'n', '<leader><leader>r',  ':TMUXcompile Run<CR>',
   { desc = 'Paste from clipboard in new line' }
 )
