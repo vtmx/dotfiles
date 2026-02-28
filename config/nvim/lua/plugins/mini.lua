@@ -23,7 +23,14 @@ return {
   {
     'nvim-mini/mini.jump2d',
     event = 'VeryLazy',
-    opts = { view = { dim = true } }
+    opts = {
+      mappings = {
+        start_jumping = '',
+      },
+      view = {
+        dim = true
+      }
+    }
   },
   {
     'nvim-mini/mini.pairs',
