@@ -555,13 +555,13 @@ map(
 )
 
 map(
-  'n', '<leader>x', '<cmd>.w !bash<cr>',
-  { desc = 'Execute current line' }
+  'x', '<leader>x', ":'<,'>w !bash<cr>",
+  { desc = 'Execute selected line(s)' }
 )
 
 map(
-  'x', '<leader>x', ":'<,'>w !bash<cr>",
-  { desc = 'Execute selected line(s)' }
+  'n', '<leader>X', '<cmd>.w !bash<cr>',
+  { desc = 'Execute current line' }
 )
 
 map(
@@ -580,7 +580,7 @@ map(
 )
 
 map(
-  'n', '<leader>z', function() utils.toggle_diary(); vim.cmd('ZenMode') end,
+  'n', '<leader>z', function() utils.toggle_diary(); require('snacks').zen() end,
   { desc = 'Toggle diary mode' }
 )
 

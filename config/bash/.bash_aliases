@@ -179,7 +179,7 @@ alias tn="tmux new -s"
 alias tw="tmux choose-tree"
 
 # tldr
-alias tldr="LANG=pt_BR.UTF-8 tldr -t base16"
+alias tldr="LANG=pt_BR.UTF-8 tldr -p linux -t base16"
 
 # tree
 alias tree="eza -T"

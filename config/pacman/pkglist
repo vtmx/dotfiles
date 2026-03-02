@@ -34,7 +34,6 @@ font-manager
 fzf
 glow
 gum
-helix
 htmlq
 hyperfine
 inkscape
@@ -75,10 +74,10 @@ rsync
 sassc
 steam
 sxhkd
+tealdeer
 telegram-desktop
 tesseract
 timeshift
-tldr
 tmux
 tokei
 unrar
@@ -96,7 +95,6 @@ xev
 xprop
 yad
 yay
-zellij
 zen-browser-bin
 zip
 zoxide
