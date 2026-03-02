@@ -115,7 +115,7 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- bash
 autocmd('FileType', {
-  pattern = { 'bash', 'sh' },
+  pattern = { 'bash', 'sh', 'yad' },
   callback = function()
     -- Execute script
     vim.keymap.set('n', '<leader><cr>', function()

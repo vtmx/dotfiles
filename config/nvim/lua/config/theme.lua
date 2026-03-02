@@ -110,11 +110,15 @@ local hl_groups = {
   StatusLineNC   = { link = 'Normal' },
 
   -- Nvim
-  NvimInternalError = { fg = c.red   },
+  NvimInternalError  = { fg = c.red   },
+
+  -- awk
+  awkPatterns        = { fg = c.magenta       },
+  awkVariables       = { fg = c.red           },
 
   -- dosini
-  dosiniLabel       = { link = 'Function'    },
-  dosiniValue       = { link = 'Normal'      },
+  dosiniLabel        = { link = 'Function'    },
+  dosiniValue        = { link = 'Normal'      },
 
   -- html
   djangoTagBlock     = { link = 'Normal'     },
@@ -316,6 +320,7 @@ local hl_groups = {
   -- bash
   ['@constant.bash']            = { link = 'Identifier' },
   ['@function.builtin.bash']    = { link = 'Function'   },
+  ['@keyword.directive.bash']   = { link = 'Comment'    },
   ['@punctuation.special.bash'] = { link = 'Identifier' },
   ['@string.regexp.bash']       = { link = 'Normal'     },
   ['@variable.bash']            = { link = 'Identifier' },
@@ -353,8 +358,8 @@ local hl_groups = {
   CodeiumSuggestion = { fg = c.fd },
 
   -- hop
-  HopNextKey   = { fg = c.blue    },
-  HopNextKey1  = { fg = c.red     },
+  HopNextKey   = { fg = c.red    },
+  HopNextKey1  = { fg = c.blue     },
   HopNextKey2  = { fg = c.orange  },
   HopNextKey3  = { fg = c.magenta },
   HopUnmatched = { fg = c.fd      },
