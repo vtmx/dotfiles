@@ -622,6 +622,11 @@ map(
 )
 
 map(
+  'n', '<leader><leader>s', function() require('snacks').picker.lsp_symbols() end,
+  { desc = 'Symbols' }
+)
+
+map(
   'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
