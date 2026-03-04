@@ -46,13 +46,13 @@ alias diff="diff --color=auto"
 alias dmenu="dmenu -b -fn 'BlexMono Nerd Font' -nb '#1e2227' -nf '#abb2bf' -sb '#3d4556' -sf '#abb2bf'"
 
 # dnf
-alias dnfi="sudo dnf install"
-alias dnfiy="sudo dnf install -y"
+alias dnfi="sudo dnf install --setopt='skip_if_unavailable=True'"
+alias dnfiy="sudo dnf install -y --setopt='skip_if_unavailable=True'"
 alias dnfl="sudo dnf list"
 alias dnfrepo="sudo dnf repoquery"
 alias dnfr="sudo dnf remove -y"
-alias dnfs="sudo dnf search"
-alias dnfu="sudo dnf upgrade --refresh"
+alias dnfs="sudo dnf search --setopt='skip_if_unavailable=True'"
+alias dnfu="sudo dnf upgrade --refresh --setopt='skip_if_unavailable=True'"
 
 # egrep
 alias egrep="egrep --color=auto"
