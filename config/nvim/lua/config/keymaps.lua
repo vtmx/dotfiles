@@ -93,17 +93,17 @@ map(
   { desc = 'Char anywhere' }
 )
 
-map(
-  'n', '8', function()
-    require('mini.jump2d').start(require('mini.jump2d').builtin_opts.single_character)
-  end,
-  { desc = 'Char' }
-)
-
-map(
-  'n', '9', function() require('mini.jump2d').start() end,
-  { desc = 'Char anywhere' }
-)
+-- map(
+--   'n', 's', function()
+--     require('mini.jump2d').start(require('mini.jump2d').builtin_opts.single_character)
+--   end,
+--   { desc = 'Char' }
+-- )
+--
+-- map(
+--   'n', 'S', function() require('mini.jump2d').start() end,
+--   { desc = 'Char anywhere' }
+-- )
 
 map(
   'n', 'U', '<c-r>',

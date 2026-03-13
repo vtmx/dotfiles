@@ -108,15 +108,6 @@ autocmd('CmdwinEnter', {
   end
 })
 
--- Wrap and check for spell in text filetypes
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'text', 'plaintex', 'typst', 'gitcommit', 'markdown' },
-  callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.spell = true
-  end
-})
-
 -- bash
 autocmd('FileType', {
   pattern = { 'bash', 'sh', 'yad' },
@@ -166,16 +157,16 @@ autocmd('FileType', {
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
 
-    vim.keymap.set('i', '<c-k>', function()
-      vim.snippet.expand('[$1]($0)')
-    end)
-
     vim.keymap.set('n', '<leader>`', function()
       vim.snippet.expand('```bash\n$0\n```')
     end)
 
-    vim.keymap.set('i', '`', function()
-      vim.snippet.expand('```bash\n$0\n```')
+    vim.keymap.set('i', '<c-b>', function()
+      vim.snippet.expand('```$1\n$0\n```')
+    end)
+
+    vim.keymap.set('i', '<c-k>', function()
+      vim.snippet.expand('[$1]($0)')
     end)
   end
 })

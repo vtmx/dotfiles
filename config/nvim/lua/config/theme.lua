@@ -301,11 +301,12 @@ local hl_groups = {
   ['@lsp.type.variable']      = { link = '@variable'  }, -- links to tree-sitter group to reduce overloa,
 
   -- Markup
-  ['@markup.heading'] =   { link = 'Title'      },
-  ['@markup.link'] =      { link = 'Identifier' },
-  ['@markup.link.url'] =  { link = 'Underlined' },
-  ['@markup.raw'] =       { link = 'Comment'    },
-  ['@markup.underline'] = { link = 'Underlined' },
+  ['@markup.heading']    = { link = 'Title'      },
+  ['@markup.link']       = { link = 'Identifier' },
+  ['@markup.link.label'] = { link = 'Normal'     },
+  ['@markup.link.url']   = { link = 'Underlined' },
+  ['@markup.raw']        = { link = 'Comment'    },
+  ['@markup.underline']  = { link = 'Underlined' },
 
   -- Text
   ['@text.literal']       = { link = 'Comment'         },
@@ -335,7 +336,7 @@ local hl_groups = {
 
   -- html
   ['@tag.html']                = { link = 'Identifier' },
-  ['@constant.html']           = { link = 'Identifier' },
+  ['@constant.html']           = { link = 'Normal'     },
   ['@string.special.url.html'] = { link = 'String'     },
 
   -- vimdoc
