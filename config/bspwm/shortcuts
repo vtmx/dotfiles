@@ -2,13 +2,17 @@
 super + shift + b
   $HOME/.config/bspwm/polybar/scripts/toggle
 
-# Close, kill window
+# Close or kill window
 super + {_,shift + }c
   bspc node -{c,k}
 
+# Toggle fullscreen
+super + f
+  bspc node -t '~'{tiled,fullscreen}
+
 # Toggle floating
 super + shift + f
-  bspc node -t "~"{floating,tiled}
+  bspc node -t '~'{floating,tiled}
 
 # Stick window always top
 super + shift + p
@@ -30,15 +34,18 @@ super + shift + u
 super + shift + w
   feh --no-fehbg --bg-fill --recursive --randomize $HOME/.config/bspwm/wall/**
 
-# Reload
-super + shift + comma
-  bspc wm -r && pkill -USR1 -x sxhkd && notify-send -u low -t 1500 'bspwm' 'Reloaded'
+# Edit config or shortcuts
+super + {comma,period}
+  term=kitty; editor=nvim; \
+  {$term -e $editor $HOME/.config/bspwm/bspwmrc, \
+   $term -e $editor $HOME/.config/bspwm/shortcuts}
 
-# Reload sxhkd
-super + shift + period
-  pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'Reloaded'
+# Reload config or shortcuts
+super + shift + {comma,period}
+  {bspc wm -r && pkill -USR1 -x sxhkd && notify-send -u low -t 1500 'bspwm' 'Reloaded' \
+  pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'Reloaded'}
 
-# Focus and swap selected node
+# Focus or swap selected node
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
   bspc node -{f,s} {west,west,south,south,north,north,east,east}
 
@@ -61,7 +68,7 @@ super +  m : {h,Left,j,Down,k,Up,l,Right}
 super + ctrl + {_,shift + }{h,Left,l,Right}
   bspc {desktop -f,node -d} {prev,prev,next,next}.local --follow
 
-# Focus n desktop and send selected node to n desktop
+# Focus n desktop or send selected node to n desktop
 super + {_,shift + }{1-9}
   bspc {desktop -f,node -d} '^{1-9}' --follow
 
@@ -107,20 +114,11 @@ super + {equal,minus,0}
   amixer -q set Master {$step%+, $step%-, toggle} && \
   notify-send 'Volume' $(awk -F'[][]' '/Left:/ \{print $2\}' <(amixer sget Master))
 
-# Edit config and shortcuts
-super + {comma,period}
-  term=kitty; editor=nvim; \
-  {$term -e $editor $HOME/.config/bspwm/bspwmrc, \
-   $term -e $editor $HOME/.config/bspwm/shortcuts}
-
-# Toggle fullscreen
-super + F11
-  bspc node -t "~"{tiled,fullscreen}
-
 # Powermenu
 ctrl + alt + Delete
   $HOME/.local/bin/powermenu
 
+# Screenshot
 Print
   flameshot gui
 
