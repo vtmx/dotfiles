@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Caminho do seu arquivo de atalhos
+sxhkdrc="$HOME/.config/bspwm/shortcuts"
+
+# Filtra o arquivo: pega linhas de comentário (#) e a linha seguinte (atalho)
+awk '/^#/ {desc=$0; next} /^[a-z|A-Z|super|alt|ctrl|shift]/ {print substr(desc,3); print $0}' "$sxhkdrc" | \
+
+yad --list \
+    --title="Meus Atalhos" \
+    --width=600 --height=400 \
+    --column="Descrição" --column="Atalho" \
+    --search-column=1 \
+    --print-column=2 \
+    --button="Fechar:1"
+
+
+ # awk '/^#/ {desc=$0; next} /^[a-z|A-Z]/ {print substr(desc,3); print $0; print ""}' $HOME/.config/bspwm/shortcuts
