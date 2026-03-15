@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+step=${2:-'20'}
+direction=$1
+
+# If float
+if bspc query -N -n focused.floating > /dev/null; then
+  case "$direction" in
+    west)  bspc node -v -"$step" 0 ;;
+    east)  bspc node -v "$step" 0  ;;
+    north) bspc node -v 0 -"$step" ;;
+    south) bspc node -v 0 "$step"  ;;
+  esac
+else
+  bspc node -s "$direction"
+fi

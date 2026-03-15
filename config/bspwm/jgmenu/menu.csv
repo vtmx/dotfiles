@@ -12,6 +12,6 @@ Reset shkd,pgrep -x sxhkd >/dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkd
 Exit,^checkout(exit),system-shutdown
 
 ^tag(exit)
-Logout,bspc quit
+Shutdown,systemctl -i poweroff,system-shutdown
 Reboot,systemctl -i reboot,system-reboot
-Poweroff,systemctl -i poweroff,system-shutdown
+Logout,bspc quit
