@@ -80,7 +80,11 @@ autocmd('BufRead', {
 -- Trim whitespace on save
 autocmd('BufWritePre', {
   pattern = '*',
-  command = '%s/\\s\\+$//e'
+  callback = function()
+    local save_cursor = vim.fn.getpos('.')
+    vim.cmd([[%s/\s\+$//e]])
+    vim.fn.setpos('.', save_cursor)
+  end
 })
 
 -- Close help with 'q'
