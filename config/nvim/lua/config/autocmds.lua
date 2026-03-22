@@ -162,11 +162,11 @@ autocmd('FileType', {
     vim.opt.softtabstop = 2
 
     vim.keymap.set('n', '<leader>`', function()
-      vim.snippet.expand('```bash\n$0\n```')
+      vim.snippet.expand('```\n$0\n```')
     end)
 
     vim.keymap.set('i', '<c-b>', function()
-      vim.snippet.expand('```$1\n$0\n```')
+      vim.snippet.expand('```\n$0\n```')
     end)
 
     vim.keymap.set('i', '<c-k>', function()

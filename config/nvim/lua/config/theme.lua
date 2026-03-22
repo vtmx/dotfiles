@@ -59,6 +59,7 @@ local hl_groups = {
   Search         = { bg = c.sel     },
   CurSearch      = { bg = c.fg, fg = c.bg },
   Conceal        = { bg = c.sel     },
+  SnippetTabStop = { link = 'Normal' },
 
   -- Messages
   ModeMsg        = { fg = c.fd     },
@@ -305,7 +306,7 @@ local hl_groups = {
   ['@markup.link']       = { link = 'Identifier' },
   ['@markup.link.label'] = { link = 'Normal'     },
   ['@markup.link.url']   = { link = 'Underlined' },
-  ['@markup.raw']        = { link = 'Comment'    },
+  ['@markup.raw']        = { link = 'Normal'     },
   ['@markup.underline']  = { link = 'Underlined' },
 
   -- Text
