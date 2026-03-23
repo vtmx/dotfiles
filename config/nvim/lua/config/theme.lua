@@ -118,6 +118,7 @@ local hl_groups = {
   awkVariables       = { fg = c.red           },
 
   -- dosini
+  dosiniHeader       = { fg   = c.red         },
   dosiniLabel        = { link = 'Function'    },
   dosiniValue        = { link = 'Normal'      },
 
