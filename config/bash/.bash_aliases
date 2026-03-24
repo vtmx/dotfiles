@@ -1,3 +1,13 @@
+# apt
+alias apti="sudo apt install"
+alias aptl="apt list --installed"
+alias aptp="sudo apt purge"
+alias aptra="sudo apt autoremove"
+alias aptr="sudo apt remove"
+alias apts="apt search"
+alias aptsh="apt show"
+alias aptu="sudo apt update && sudo apt update"
+
 # bash
 alias ba="$EDITOR $HOME/.bash_aliases"
 alias bf="$EDITOR $HOME/.bash_functions"

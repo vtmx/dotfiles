@@ -24,7 +24,7 @@ super + shift + q
 
 # Run
 super + r
-  rofi -show run -display-run ''
+  rofi -show run -display-run '' -config $HOME/.config/bspwm/rofi/config.rasi
 
 # Reload
 super + shift + r
@@ -105,7 +105,7 @@ super + {_,alt + }Return
 
 # Launcher
 super + space
-  rofi -show drun
+  rofi -show drun -config $HOME/.config/bspwm/rofi/config.rasi
 
 # Change volume
 super + {equal,minus,0}
@@ -123,6 +123,6 @@ Print
 
 # Mouse
 ~button3
-  if ! bspc query -N -d focused; then jgmenu; fi
+  if ! bspc query -N -d focused; then jgmenu --config-file=$HOME/.config/bspwm/jgmenu/jgmenurc; fi
 
 # vim:ft=sxhkdrc

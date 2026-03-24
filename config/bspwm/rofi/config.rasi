@@ -1,0 +1,133 @@
+// clear default theme
+@theme '/dev/null'
+
+configuration {
+  modi: 'drun';
+  display-drun: '';
+
+  // format
+  drun-display-format: '{name}';
+  window-format: '{name}';
+
+  // config
+  disable-history: false;
+  max-history-size: 25;
+  terminal: 'kitty';
+  show-icons: false;
+
+  // keybinds: rofi -show keys
+  kb-remove-char-back: 'BackSpace';
+  kb-remove-word-forward: 'Control+Delete';
+
+  // up and down
+  kb-remove-to-eol: '';
+  kb-row-down: 'Control+j,Control+n,Down';
+  kb-row-up: 'Control+k,Control+p,Up';
+
+  // next prev tab
+  kb-mode-complete: '';
+  kb-mode-next: 'Control+l';
+  kb-mode-previous: 'Control+h';
+
+  // confirm and cancel
+  kb-accept-entry: 'Return';
+  kb-secondary-copy: '';
+  kb-cancel: 'Escape,Control+c';
+}
+
+* {
+  font: 'BlexMono Nerd Font 11';
+  bg: #1e2227;
+  bl: #2c313c;
+  fg: #abb2bf;
+  ac: #61afef;
+}
+
+window {
+  width: 600px;
+  padding: 0;
+  background-color: @bg;
+  border: 1px;
+  border-color: @bl;
+}
+
+mainbox {
+  spacing: 0;
+}
+
+message {
+  background-color: transparent;
+}
+
+// filebrowser
+textbox {
+  padding: 8px 16px;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+// input
+inputbar {
+  children: [prompt, entry];
+  padding: 14px 16px;
+  background-color: @bg;
+  border: 0 0 1px 0;
+  border-color: @bl;
+}
+ 
+// icon
+prompt {
+  padding: 0 4px 0 0;
+  background-color: transparent;
+  text-color: @fg;
+}
+
+// input
+entry {
+  placeholder: '';
+  background-color: transparent;
+  margin: 0 0 0 16px;
+  text-color: @fg;
+}
+
+// item
+listview {
+  lines: 5;
+  margin: 0;
+  padding: 0;
+  background-color: @bg;
+  border: 0;
+  spacing: 0;
+  scrollbar: false;
+}
+
+element {
+  padding: 8px 16px;
+  text-color: @fg;
+}
+
+element-text{
+  background-color: transparent;
+  text-color: @fg;
+  highlight: @ac; // highlight
+}
+
+element normal.normal,
+element normal.active,
+element alternate.normal,
+element alternate.active {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element selected.normal,
+element selected.active {
+  background-color: @bl;
+  text-color: inherit;
+}
+
+// References:
+// rofi -no-config -dump-theme
+// /usr/share/rofi/themes/default.rasi
+// https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown
+// vim:ft=scss
