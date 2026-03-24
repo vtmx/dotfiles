@@ -57,7 +57,7 @@ else
 fi
 
 # bemenu
-if type bemenu &> /dev/null; then
+if command -v bemenu &> /dev/null; then
   export BEMENU_OPTS='-c -l 10 -W 0.3 -B 1
       -p  ""
     --fn "BlexMono Nerd Font 11"
@@ -70,13 +70,8 @@ if type bemenu &> /dev/null; then
     --bdr "#2c313c"'
 fi
 
-# bun
-if [[ -f $HOME/.bun/bin/bun ]]; then
-  export BUN_INSTALL=$HOME/.bun
-  export PATH="$BUN_INSTALL/bin:$PATH"
-fi
-
-if type fzf &> /dev/null; then
+# fzf
+if command -v fzf &> /dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
     source /usr/share/fzf/completion.bash
   fi
@@ -104,11 +99,8 @@ if type fzf &> /dev/null; then
   fi
 fi
 
-# nvm
-[[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
-
 # zoxide
-if type zoxide &> /dev/null; then
+if command -v zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
 fi
 

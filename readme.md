@@ -39,14 +39,6 @@
 
 <table>
   <tr>
-    <th align="left" width="180">Application Style</th>
-    <td width="360"><a href="https://store.kde.org/p/1162362">Oxygen</a></td>
-  </tr>
-  <tr>
-    <th align="left">Plasma Style</th>
-    <td><a href="https://archlinux.org/packages/extra/x86_64/breeze">Breeze</a></td>
-  </tr>
-  <tr>
     <th align="left">Colors</th>
     <td><a href="config/kde/kde.colors">OneDarkV</a></td>
   </tr>
@@ -55,20 +47,16 @@
     <td><a href="https://github.com/vinceliuice/Orchis-theme">Orchis</a></td>
   </tr>
   <tr>
+    <th align="left" width="180">QT Theme</th>
+    <td width="360"><a href="https://store.kde.org/p/1162362">Oxygen</a></td>
+  </tr>
+  <tr>
     <th align="left">Icons</th>
     <td><a href="https://store.kde.org/p/1373825">Sensual-Breeze-Dark Icons</a></td>
   </tr>
   <tr>
     <th align="left">Cursors</th>
     <td><a href="https://store.kde.org/p/1381208">We10XOS Cursors</a></td>
-  </tr>
-  <tr>
-    <th align="left">Lauch Feedback</th>
-    <td>Cursor Static</td>
-  </tr>
-  <tr>
-    <th align="left">Fonts Management</th>
-    <td><a href="https://docs.microsoft.com/pt-br/typography/font-list/segoe-ui">Segoe UI Semibold 10</a></td>
   </tr>
 </table>
 
@@ -206,7 +194,7 @@
       <td><code>#56b6c2</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/5f6672&text=+" alt="White"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/abb2bf&text=+" alt="White"></td>
       <td>White</td>
       <td><code>#abb2bf</code></td>
     </tr>
@@ -321,7 +309,7 @@
       <td>Move window to {left,down,up,right} direction</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + {<kbd>h</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯈</kbd>}, {<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + {<kbd>h</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯈</kbd>}</td>
       <td>Go to {next,prev} workspace</td>
     </tr>
     <tr>
@@ -329,7 +317,7 @@
       <td>Go to workspace number {1..9}</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>⯇</kbd>,<kbd>⯈</kbd>},{<kbd>PgDn</kbd>,<kbd>PgUp</kbd>}</td>
+      <td><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +{<kbd>h</kbd>,<kbd>l</kbd>},{<kbd>⯇</kbd>,<kbd>⯈</kbd>}</td>
       <td>Move window to {next,prev} workspace</td>
     </tr>
     <tr>
@@ -357,7 +345,11 @@
       <td>Fullscreen</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Shift</kbd> r <kbd>c</kbd></td>
+      <td><kbd>Super</kbd> + <kbd>r</kbd></td>
+      <td>Run</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd></td>
       <td>Reload window manager</td>
     </tr>
     <tr>
@@ -365,12 +357,24 @@
       <td>Quit window manager</td>
     </tr>
     <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>u</kbd></td>
+      <td>Toggle compositor</td>
+    </tr>
+    <tr>
       <td><kbd>Super</kbd> + <kbd>,</kbd></td>
       <td>Edit window manager</td>
     </tr>
     <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>,</kbd></td>
+      <td>Reload window manager</td>
+    </tr>
+    <tr>
       <td><kbd>Super</kbd> + <kbd>.</kbd></td>
       <td>Edit shortcuts</td>
+    </tr>
+    <tr>
+      <td><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd></td>
+      <td>Reload shortcuts</td>
     </tr>
     <tr>
       <td><kbd>Alt</kbd> + <kbd>Tab</kbd></td>
@@ -397,24 +401,16 @@
       <th>Action</th>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>Space</kbd></td>
-      <td>Launcher</td>
-    </tr>
-    <tr>
       <td><kbd>Super</kbd> + <kbd>Enter</kbd></td>
       <td>Terminal</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>,</kbd></td>
-      <td>System</td>
-    </tr>
-    <tr>
-      <td><kbd>Super</kbd> + <kbd>.</kbd></td>
-      <td>Shortcuts</td>
+      <td><kbd>Super</kbd> + <kbd>Space</kbd></td>
+      <td>Launcher</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>a</kbd></td>
-      <td>Package</td>
+      <td>Packages</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>b</kbd></td>
@@ -437,20 +433,12 @@
       <td>Password</td>
     </tr>
     <tr>
-      <td><kbd>Super</kbd> + <kbd>r</kbd></td>
-      <td>Run</td>
-    </tr>
-    <tr>
       <td><kbd>Super</kbd> + <kbd>s</kbd></td>
       <td>Screenshot</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>t</kbd></td>
       <td>Torrent</td>
-    </tr>
-    <tr>
-      <td><kbd>Super</kbd> + <kbd>u</kbd></td>
-      <td>UI</td>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + <kbd>v</kbd></td>

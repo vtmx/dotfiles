@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
 pkgs=(
-  breeze-gtk
   bspwm
-  conky
   dunst
   feh
   jgmenu
+  lxappearance
   numlockx
   pavucontrol
   picom
@@ -14,9 +13,16 @@ pkgs=(
   polybar
   qt5ct
   qt6ct
+  rofi
   sxhkd
   xfce4-power-manager
   yad
 )
 
-sudo pacman --noconfirm -S "${pkgs[@]}"
+if command -v apt &>/dev/null; then
+  echo 'Instalando pacotes apt...'
+  sudo apt install -y "${pkgs[@]}"
+elif command -v pacman &>/dev/null; then
+  echo 'Instalando pacotes pacman...'
+  sudo pacman --noconfirm -S "${pkgs[@]}"
+fi
