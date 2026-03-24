@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Options
+shutdown='Shutdown'
+reboot='Reboot'
+logout='Logout'
+
+# Get option
+getopt() {
+  echo -e "$shutdown\n$reboot\n$logout" | \
+  rofi -config $HOME/.config/bspwm/rofi/config.rasi \
+       -dmenu \
+       -p "" \
+       -theme-str 'listview { lines: 3; }'
+}
+
+case "$(getopt)" in
+  $shutdown) systemctl poweroff ;;
+  $reboot  ) systemctl reboot ;;
+  $logout)
+    case $DESKTOP_SESSION in
+      'bspwm'  ) bspc quit ;;
+      'i3'     ) i3-msg exit ;;
+      'openbox') openbox --exit ;;
+      'xfce4'  ) xfce4-session-logout --logout ;;
+      *        ) notify-send 'window maneger not found' ;;
+    esac
+  ;;
+esac
