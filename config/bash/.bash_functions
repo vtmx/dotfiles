@@ -432,20 +432,21 @@ play() {
 # Open config file
 rc() {
   local files=(\
-    "$HOME/.bashrc" \
     "$HOME/.bash_aliases" \
     "$HOME/.bash_functions" \
+    "$HOME/.bashrc" \
     "$HOME/.config/bspwm/autostart" \
     "$HOME/.config/bspwm/config" \
-    "$HOME/.config/bspwm/rules" \
-    "$HOME/.config/bspwm/shortcuts" \
     "$HOME/.config/bspwm/dunst/dunstrc" \
     "$HOME/.config/bspwm/jgmenu/jgmenurc" \
     "$HOME/.config/bspwm/picom/picom.conf" \
     "$HOME/.config/bspwm/polybar/config.ini" \
+    "$HOME/.config/bspwm/rofi/config.rasi" \
+    "$HOME/.config/bspwm/rofi/theme.rasi" \
+    "$HOME/.config/bspwm/rules" \
+    "$HOME/.config/bspwm/shortcuts" \
     "$HOME/.config/kitty/kitty.conf" \
     "$HOME/.config/nvim/init.lua" \
-    "$HOME/.config/rofi/config.rasi" \
     "$HOME/.config/tmux/tmux.conf"
   )
 
