@@ -123,6 +123,8 @@ Print
 
 # Mouse
 ~button3
-  if ! bspc query -N -d focused; then jgmenu --config-file=$HOME/.config/bspwm/jgmenu/jgmenurc; fi
+  if ! bspc query -N -d focused; then \
+    jgmenu --config-file=$HOME/.config/bspwm/jgmenu/jgmenurc; \
+  fi
 
 # vim:ft=sxhkdrc

@@ -6,10 +6,6 @@ super + {_,shift + }c
 super + shift + f
 	bspc node -t "~"{tiled,fullscreen}
 
-# Stick window always top
-super + shift + p
-	bspc node -g sticky
-
 # Quit
 super + shift + q
 	bspc quit
@@ -24,14 +20,6 @@ super + shift + comma
 # Reload sxhkd
 super + shift + period
   pkill -USR1 -x sxhkd && notify-send 'sxhkd' 'reloaded'
-
-# Help
-super + shift + f1
-	$HOME/.config/bspwm/conky/toggle
-
-# Toggle floating
-super + shift + space
-	bspc node -t "~"{floating,tiled}
 
 # Focus and move window
 super + {_,shift + }{h,Left,j,Down,k,Up,l,Right}
@@ -59,4 +47,8 @@ super + {_,alt + }Return
 
 # Mouse
 ~button3
-  if ! bspc query -N -d focused; then jgmenu --csv-file=$HOME/.config/bspwm/jgmenu/menu.csv; fi
+  if ! bspc query -N -d focused; then \
+    jgmenu \
+    --csv-file=$HOME/.config/bspwm/jgmenu/menu.csv \
+    --config-file=$HOME/.config/bspwm/jgmenu/jgmenurc; \
+  fi
