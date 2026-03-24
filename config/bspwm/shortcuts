@@ -115,7 +115,7 @@ super + {equal,minus,0}
 
 # Powermenu
 ctrl + alt + Delete
-  $HOME/.local/bin/powermenu
+  $HOME/.config/bspwm/powermenu
 
 # Screenshot
 Print
