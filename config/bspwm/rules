@@ -7,6 +7,7 @@ $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^4" focus=on
 $br steam             desktop="^4" state=floating rectangle=1920x1080+0+0 center=on
 $br qBittorrent       desktop="^5" focus=on follow=on
+$br java                           state=floating
 $br mpv                            state=floating
 $br pavucontrol                    state=floating
 $br Screenkey                      manager=off
