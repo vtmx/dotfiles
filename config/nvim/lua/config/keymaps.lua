@@ -116,6 +116,11 @@ map(
 )
 
 map(
+  'n', 'yd', 'mtV"+x`t<cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
+  { desc = 'Cut to clipboard' }
+)
+
+map(
   'n', 'yl', '"+yy<cmd>:lua vim.notify("Copy line to clipboard", "info", { title = "Clipboard" })<cr>',
   { desc = 'Yank current line to clipboard' }
 )

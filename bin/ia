@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # Check ia key
-if [[ -f $HOME/.groq.key ]]; then
-  iakey=$(<$HOME/.groq.key)
+api_file=$HOME/.GROQ_API_KEY
+if [[ -f "$api_file" ]]; then
+  api_key=$(<"$api_file")
 else
-  echo 'error: need apikey in ~/.groq.key'
+  echo "error: need apikey in $api_file"
   exit 1
 fi
 
@@ -16,31 +17,29 @@ if ! type "${prereqs[@]}" &>/dev/null; then
 fi
 
 # Get msg
-if [[ "$*" ]]; then
-  msg="$*"
-else
+msg="$*"
+
+# Check if msg blank
+if [[ -z "$msg" ]]; then
   echo 'error: no message'
   exit 1
 fi
 
 # Vars
 api_url="https://api.groq.com/openai/v1/chat/completions"
-auth_header="Bearer $iakey"
+auth_header="Bearer $api_key"
 content_type="application/json"
 role="user"
 model="llama-3.3-70b-versatile"
 premsg="Escreva sem enrolação o mais resumidamente e direto possível."
 
-curl -s -X POST "$api_url" \
+# Request
+curl -s \
+  -X POST "$api_url" \
   -H "Authorization: $auth_header" \
   -H "Content-Type: $content_type" \
   -d '{
-    "messages": [
-      {
-        "role": "'"$role"'",
-        "content": "'"$premsg $msg"'"
-      }
-    ],
+    "messages": [ { "role": "'"$role"'", "content": "'"$premsg $msg"'" } ],
     "model": "'"$model"'"
   }' | \
 jq -r '.choices[0].message.content' | \
