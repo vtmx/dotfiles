@@ -203,19 +203,20 @@ local hl_groups = {
   DiagnosticWarn             = { fg = c.yellow  },
 
   -- Diff
-  DiffAdd      = { fg = c.green    },
-  DiffChange   = { fg = c.blue     },
-  DiffDelete   = { fg = c.red      },
-  DiffText     = { link = 'Normal' },
+  DiffAdd      = { fg = c.green  },
+  DiffChange   = { fg = c.blue   },
+  DiffDelete   = { fg = c.red    },
+  DiffText     = { fg = c.fg     },
 
   -- Float
   FoldColumn   = { bg = c.sel, fg = c.cyan },
   Folder       = { bg = c.sel, fg = c.cyan },
 
   -- Help
-  healthHeadingChar = { link = 'Normal' },
-  helpHeader        = { fg   = c.blue   },
-  helpSectionDelim  = { fg   = c.blue   },
+  healthHeadingChar  = { fg = c.fg   },
+  healthSectionDelim = { fg = c.blue },
+  helpHeader         = { fg = c.blue },
+  helpSectionDelim   = { fg = c.blue },
 
   -- tree-sitter
 

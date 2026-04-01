@@ -1,5 +1,6 @@
 android-tools
 anydesk-bin
+alass
 bash-language-server
 bat
 bitwarden
@@ -61,6 +62,7 @@ perl-rename
 picard
 picom
 polybar
+pipe-rename
 poppler
 qbittorrent
 qca-qt6

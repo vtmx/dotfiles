@@ -31,7 +31,7 @@ menu_radius         = 0
 item_height         = 32
 item_margin_x       = 0
 item_margin_y       = 0
-item_padding_x      = 16 
+item_padding_x      = 16
 item_border         = 0
 item_radius         = 0
 
@@ -46,6 +46,6 @@ sep_height          = 4
 
 hover_delay         = 10
 sub_hover_action    = 1
-sub_spacing         = 4
+sub_spacing         = 1
 
 # vim:ft=dosini
