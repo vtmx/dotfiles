@@ -163,7 +163,7 @@ alias pacl="pacman -Q"                    # list
 alias paclq="pacman -Qqe"                 # filter
 alias pacr="sudo pacman -Rns"             # remove
 alias pacry="sudo pacman --noconfirm -Rs" # remove no confirm
-alias pacs="sudo pacman -Ss"              # search
+alias pacs="pacman -Ss"                   # search
 alias pac="sudo pacman"                   # pacman
 alias pacu="sudo pacman -Syu"             # update
 
@@ -172,6 +172,9 @@ alias pstree="pstree -npTC age"
 
 # rename
 alias rename="perl-rename"
+
+# rm
+alias rmr="rm -r"
 
 # source
 alias so="source"
@@ -189,7 +192,7 @@ alias tn="tmux new -s"
 alias tw="tmux choose-tree"
 
 # tldr
-alias tldr="LANG=pt_BR.UTF-8 tldr -p linux -t base16"
+alias tldr="LANG=pt_BR.UTF-8 tldr -p linux"
 
 # tree
 alias tree="eza -T"

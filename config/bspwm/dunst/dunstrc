@@ -2,6 +2,7 @@
 alignment = left
 font = BlexMono Nerd Font 11
 frame_width = 1
+gap_size = 8
 icon_position = off
 origin = bottom-right
 offset = 8x40

@@ -473,6 +473,11 @@ starship() {
   fi
 }
 
+# alass sync
+sync() {
+  alass "$*" "${*//.*}.srt" "${*//.*}_new.srt"
+}
+
 # Move to trash
 trash() {
   local trash_dir="$HOME/.local/share/Trash/"
