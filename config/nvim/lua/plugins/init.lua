@@ -1,0 +1,8 @@
+require('plugins.syntax')
+require('plugins.treesitter')
+require('plugins.mini')
+require('plugins.lsp')
+require('plugins.snacks')
+require('plugins.oil')
+vim.cmd('source ~/.config/nvim/lua/plugins/tmux-navigator.vim')
+-- require('plugins.codeium')

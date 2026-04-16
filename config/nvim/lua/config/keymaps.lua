@@ -500,18 +500,28 @@ map(
 )
 
 map(
-  'n', '<leader>uc', function() utils.toggle_cursorword() end,
+  'n', '<leader>uac', function() utils.toggle_autocomplete() end,
+  { desc = 'Toggle autocomplete' }
+)
+
+map(
+  'n', '<leader>ucw', function() utils.toggle_cursorword() end,
   { desc = 'Toggle cursorword' }
 )
 
 map(
-  'n', '<leader>uC', function() utils.toggle_colorcolumn() end,
+  'n', '<leader>ucc', function() utils.toggle_colorcolumn() end,
   { desc = 'Toggle colorcolumn' }
 )
 
 map(
-  'n', '<leader>ud', function() utils.toggle_diagnostic() end,
+  'n', '<leader>udg', function() utils.toggle_diagnostic() end,
   { desc = 'Toggle diagnostic' }
+)
+
+map(
+  'n', '<leader>udc', function() utils.toggle_document_color() end,
+  { desc = 'Toggle document color' }
 )
 
 map(
@@ -552,6 +562,11 @@ map(
 map(
   'n', '<leader>uz', '<cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
+)
+
+map(
+  { 'n', 'i', 's', 'x' }, '<leader>w', '<cmd>w<cr><esc>',
+  { desc = 'Save file' }
 )
 
 map(
@@ -617,11 +632,6 @@ map(
 -- Leader leader
 
 map(
-  'n', '<leader><leader>l', '<cmd>Lazy<cr>',
-  { desc = 'Lazy' }
-)
-
-map(
   'n', '<leader><leader>m', '<cmd>Mason<cr>',
   { desc = 'Mason' }
 )
@@ -640,3 +650,9 @@ map(
   'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in new line' }
 )
+
+map(
+  'n', '<leader><leader>u', '<cmd>:lua vim.pack.update()<cr>',
+  { desc = 'Update plugins' }
+)
+

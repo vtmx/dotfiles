@@ -7,6 +7,16 @@ function M.map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
+function M.toggle_autocomplete()
+  if vim.o.autocomplete then
+    vim.o.autocomplete = false
+    print('Disable auto-complete')
+  else
+     vim.o.autocomplete = true
+    print('Enable auto-complete')
+  end
+end
+
 vim.g.minicursorword_disable = true
 
 function M.toggle_cursorword()
@@ -43,15 +53,13 @@ function M.toggle_diary()
   print('Toggle diary')
 end
 
-vim.g.blink_enabled = false
-
-function M.toggle_autocomplete()
-  if vim.g.blink_enable == true then
-    vim.g.blink_enable = false
-    print('auto complete off')
+function M.toggle_document_color()
+  if vim.lsp.document_color.is_enabled() then
+    vim.lsp.document_color.enable(false)
+    print('Disable document color')
   else
-    vim.g.blink_enable = true
-    print('auto complete on')
+    vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
+    print('Enable document color')
   end
 end
 
@@ -60,10 +68,10 @@ vim.g.codeium_enabled = false
 function M.toggle_ia()
   if vim.g.codeium_enabled == true then
     vim.cmd('Codeium Disable')
-    print('Codeium off')
+    print('Enable IA')
   else
     vim.cmd('Codeium Enable')
-    print('Codeium: on')
+    print('Disable IA')
   end
 end
 
