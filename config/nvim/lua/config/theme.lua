@@ -110,6 +110,12 @@ local hl_groups = {
   StatusLine     = { link = 'Normal' },
   StatusLineNC   = { link = 'Normal' },
 
+  -- Spell
+  SpellBad   = { sp = c.red, undercurl = true },
+  SpellCap   = { sp = c.blue, undercurl = true },
+  SpellRare  = { sp = c.magenta, undercurl = true },
+  SpellLocal = { sp = c.cyan, undercurl = true },
+
   -- Nvim
   NvimInternalError  = { fg = c.red   },
 
@@ -354,10 +360,6 @@ local hl_groups = {
 -- Plugins
 ------------------------------------------------------------
 
-  -- blink
-  BlinkCmpMenu       = { bg = c.bg },
-  BlinkCmpMenuBorder = { bg = c.bg },
-
   -- codium
   CodeiumAnnotation = { fg = c.fg },
   CodeiumSuggestion = { fg = c.fd },
@@ -415,17 +417,15 @@ local hl_groups = {
   SnacksPickerCursorLine = { link  = 'Normal'       },
 }
 
--- Clear all colors
+-- Clear colors
 vim.cmd.hi('clear')
 
--- Spell
-vim.cmd('hi SpellBad guisp=' .. c.red)
-vim.cmd('hi SpellCap guisp=' .. c.blue)
-vim.cmd('hi SpellRare guisp=' .. c.magenta)
-vim.cmd('hi SpellLocal guisp=' .. c.cyan)
+-- Reset syntax
+if vim.fn.exists('syntax_on') then
+  vim.cmd('syntax reset')
+end
 
--- Loop for colors
+-- Set colors
 for name, val in pairs(hl_groups) do
   vim.api.nvim_set_hl(0, name, val)
 end
-
