@@ -27,7 +27,7 @@
     </property>
   </property>
   <property name="file" type="empty">
-    <property name="current-uri" type="string" value="file:///home/vitor/Dev/dotfiles/config/bspwm/wall"/>
+    <property name="current-uri" type="string" value="file:///home/vitor/Pictures/wallpapers/games"/>
   </property>
   <property name="image" type="empty">
     <property name="enable-smoothing" type="bool" value="false"/>

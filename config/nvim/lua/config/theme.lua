@@ -90,11 +90,11 @@ local hl_groups = {
   ColorColumn    = { bg = c.bl },
 
   -- Pmenu
-  Pmenu          = { bg = c.bd },
+  Pmenu          = { bg = c.bg },
   PmenuSel       = { bg = c.bl },
   PmenuSbar      = { bg = c.bd },
   Pmenuac        = { bg = c.bl },
-  PmenuThumb     = { bg = c.bl },
+  PmenuThumb     = { bg = c.fg },
 
   -- Popup
   NormalFloat        = { bg = c.bg },
@@ -201,6 +201,7 @@ local hl_groups = {
   DiagnosticVirtualTextOk    = { fg = c.green   },
   DiagnosticVirtualTextWarn  = { fg = c.yellow  },
   DiagnosticWarn             = { fg = c.yellow  },
+  QuickFixLine               = { fg = c.cyan    },
 
   -- Diff
   DiffAdd      = { fg = c.green  },

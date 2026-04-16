@@ -7,7 +7,7 @@ bind -s 'set completion-ignore-case on' # Show fzf message in reload
 # Environment variables
 export BROWSER="zen-browser"
 export CDPATH=".:..:~"
-export EDITOR="nvim"
+export EDITOR="/home/vitor/Downloads/nvim-linux-x86_64/bin/nvim"
 export HISTCONTROL="ignoreboth:ignorespace"
 export HISTFILESIZE=5000
 export HISTIGNORE='..:...:bg:fg:clear:history:l:ls:pwd:z'
