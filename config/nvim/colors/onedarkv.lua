@@ -224,10 +224,10 @@ local hl_groups = {
   QuickFixLine               = { fg = c.cyan    },
 
   -- Diff
-  DiffAdd      = { fg = c.green  },
-  DiffChange   = { fg = c.blue   },
-  DiffDelete   = { fg = c.red    },
-  DiffText     = { fg = c.fg     },
+  DiffAdd      = { bg = '#31392b' },
+  DiffChange   = { bg = '#1c3448' },
+  DiffDelete   = { bg = '#382b2c' },
+  DiffText     = { bg = '#2c5372' },
 
   -- Float
   FoldColumn   = { bg = c.sel, fg = c.cyan },
