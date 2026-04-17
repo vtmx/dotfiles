@@ -395,17 +395,6 @@ local hl_groups = {
   KittyMod     = { link = 'Function'   },
   KittySt      = { link = 'String'     },
 
-  -- lazy
-  LazyNormal        = { bg = c.bd   },
-  LazyProgressDone  = { fg = c.blue },
-  LazyProp          = { bg = c.sel  },
-  LazyReasonEvent   = { fg = c.fd   },
-  LazyReasonFt      = { fg = c.fd   },
-  LazyReasonPlugin  = { fg = c.fd   },
-  LazyReasonRequire = { fg = c.fd   },
-  LazyReasonSource  = { fg = c.fd   },
-  LazyReasonStart   = { fg = c.fd   },
-
   -- mini-cursorword
   MiniCursorword        = { fg = c.yellow },
   MiniCursorwordCurrent = { fg = c.yellow },

@@ -106,4 +106,4 @@ vim.diagnostic.config({
 })
 
 -- Ativa módulo de cores
-vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
+vim.lsp.document_color.enable(false)
