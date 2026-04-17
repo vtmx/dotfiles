@@ -460,7 +460,7 @@ map(
 )
 
 map(
-  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>echo "source" bufname("%")<cr>',
+  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>restart<cr>',
   { desc = 'Reload config file' }
 )
 

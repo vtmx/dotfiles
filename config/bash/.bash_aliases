@@ -207,7 +207,7 @@ alias vc="$EDITOR $HOME/.config/nvim/init.lua"
 alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins"
-alias vt="$EDITOR $HOME/.config/nvim/lua/config/theme.lua"
+alias vt="$EDITOR $HOME/.config/nvim/colors/onedarkv.lua"
 
 # vlang
 alias vl="$HOME/.v/vl"

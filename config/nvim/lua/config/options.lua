@@ -21,7 +21,7 @@ local opts = {
   wrap = false
 }
 
-local g = {
+local globals = {
   loaded_gzip = 0,
   loaded_node_provider = 0,
   loaded_perl_provider = 0,
@@ -45,16 +45,16 @@ for key, value in pairs(opts) do
   vim.opt[key] = value
 end
 
--- Set global vars
-for key, value in pairs(g) do
+-- Set globals vars
+for key, value in pairs(globals) do
   vim.g[key] = value
 end
 
--- Ignore node_modules
+-- Search recursive
+vim.opt.path:append('**')
+
+-- Ignore dirs
 vim.opt.wildignore:append { 'node_modules/**', 'dist/**', 'public/**' }
 
--- Search recursively in current directory
-vim.cmd('set path+=**')
-
--- Loading tmux navigator
-vim.cmd.runtime('lua/plugins/tmux-navigator.vim')
+-- Set colorscheme
+vim.cmd.colorscheme('onedarkv')

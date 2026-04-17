@@ -1,7 +1,6 @@
 -- Vars
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
-local exec = vim.api.nvim_exec
 
 -- Disable hightlight when move cursor
 autocmd('CursorMoved', {
@@ -31,9 +30,7 @@ autocmd('BufReadPost', {
     local line_count = vim.api.nvim_buf_line_count(args.buf)
     if mark[1] > 0 and mark[1] <= line_count then
       vim.api.nvim_win_set_cursor(0, mark)
-      vim.schedule(function()
-        vim.cmd('normal! zz')
-      end)
+      vim.schedule(function() vim.cmd('normal! zz') end)
     end
   end
 })
@@ -77,13 +74,11 @@ autocmd('BufRead', {
   end
 })
 
--- Trim whitespace on save
+-- Trim whitespace when save
 autocmd('BufWritePre', {
   pattern = '*',
   callback = function()
-    local save_cursor = vim.fn.getpos('.')
     vim.cmd([[%s/\s\+$//e]])
-    vim.fn.setpos('.', save_cursor)
   end
 })
 
@@ -177,7 +172,7 @@ autocmd('FileType', {
 
 -- lua
 autocmd('BufWritePost', {
-  pattern = 'theme.lua',
+  pattern = 'onedarkv.lua',
   callback = function()
     vim.cmd('source %')
     print('Reload')
@@ -225,14 +220,5 @@ autocmd('TermOpen', {
     vim.opt_local.number = false
     vim.opt_local.relativenumber = false
     vim.opt_local.cursorline = false
-    -- vim.cmd('wincmd J')
-    -- vim.cmd('startinsert')
   end
 })
-
--- Run by file
--- exec([[
--- autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' shellescape(@%, 1)<cr>
--- autocmd BufRead,BufNewFile *.sh nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!bash' %<cr>
--- autocmd BufRead,BufNewFile *.py nnoremap <c-cr> <cmd>w!<cr> <cmd>exec '!python' shellescape(@%, 1)<cr>
--- ]], false)
