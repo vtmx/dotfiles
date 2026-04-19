@@ -1,7 +1,9 @@
 local opts = {
   autochdir = true,
   autocomplete = true,
+  clipboard = 'unnamedplus',
   cursorline = true,
+  diffopt = 'internal,filler,closeoff,indent-heuristic,linematch:60,algorithm:histogram',
   expandtab = true,
   ignorecase = true,
   lazyredraw = true,

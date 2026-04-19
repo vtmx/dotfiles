@@ -9,13 +9,31 @@ alias aptsh="apt show"
 alias aptu="sudo apt update && sudo apt update"
 
 # bash
-alias ba="$EDITOR $HOME/.bash_aliases"
-alias bf="$EDITOR $HOME/.bash_functions"
+alias ba="$EDITOR $HOME/.config/bash/aliases"
+alias be="$EDITOR $HOME/.config/bash/envs"
+alias bf="$EDITOR $HOME/.config/bash/functions"
+alias bo="$EDITOR $HOME/.config/bash/opts"
+alias bp="$EDITOR $HOME/.config/bash/pkgs"
 alias br="source $HOME/.bashrc; echo Reload bashrc"
 alias brc="$EDITOR $HOME/.bashrc"
 
 # bat
-alias bat="bat --theme=ansi --style=numbers,changes,header --italic-text=always"
+alias bat="bat \
+--theme=ansi \
+--style=numbers,changes,header \
+--italic-text=always"
+
+# bemenu
+alias bemenu="bemenu \
+-c -l 10 -W 0.3 -B 1 -p '' \
+--fn 'BlexMono Nerd Font 11' \
+--tb  '#1e2227' --tf  '#abb2bf' \
+--fb  '#1e2227' --ff  '#abb2bf' \
+--nb  '#1e2227' --nf  '#abb2bf' \
+--ab  '#1e2227' --af  '#abb2bf' \
+--hb  '#3d4556' --hf  '#abb2bf' \
+--sb  '#61afef' --sf  '#3d4556' \
+--bdr '#2c313c'"
 
 # bun
 alias buni="bun install"
@@ -246,3 +264,5 @@ alias wt="curl wttr.in/?format=3"
 # lite-xl
 alias xl="lite-xl"
 alias xc="lite-xl $HOME/.config/lite-xl"
+
+# vim:ft=bash
