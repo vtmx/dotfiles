@@ -119,11 +119,6 @@ autocmd('FileType', {
       )
       vim.fn.system(cmd)
     end)
-
-    -- Auto pair test command
-    vim.keymap.set('i', '[[', function()
-      vim.snippet.expand('[[ $1 ]]$0')
-    end)
   end
 })
 
