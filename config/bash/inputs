@@ -1,0 +1,21 @@
+set completion-ignore-case on
+set colored-completion-prefix on
+set colored-stats on
+set completion-ignore-case on
+set completion-map-case on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set skip-completed-text on
+set menu-complete-display-prefix on
+
+# History
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+# Tab
+TAB: menu-complete
+"\e[Z": menu-complete-backward # Alt + Tab
+
+# vim:ft=bash
