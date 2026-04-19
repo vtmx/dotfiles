@@ -93,7 +93,7 @@ super + ctrl + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
 
 # Apps
 super + {a,b,e,g,p,t,s,v}
-  {pamac-manager,zen-browser,dolphin,steam,kcolorchooser,qbittorrent,flameshot gui,code}
+  {pamac-manager,zen-browser,thunar,steam,kcolorchooser,qbittorrent,flameshot gui,code}
 
 # Alternate
 super + alt + {b,e,p}

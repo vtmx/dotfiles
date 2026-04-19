@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export QT_QPA_PLATFORMTHEME=qt6ct
+
 bspdir=$HOME/.config/bspwm
 
 xset -dpms & # Disable display power management system
@@ -7,8 +9,10 @@ xset s off & # Disable screen saver
 xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd    > /dev/null || sxhkd -c $bspdir/shortcuts &
 pgrep -x numlockx > /dev/null || numlockx &
-pgrep -x feh      > /dev/null || feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/** &
+pgrep -x feh      > /dev/null || feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/ &
 pgrep -x polybar  > /dev/null || polybar bottom -c $bspdir/polybar/config.ini &
 pgrep -x dunst    > /dev/null || dunst -config $bspdir/dunst/dunstrc &
 # pgrep -x picom > /dev/null || picom --config $bspdir/picom/picom.conf &
 pgrep -f /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+

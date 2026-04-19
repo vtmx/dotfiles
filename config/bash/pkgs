@@ -1,0 +1,35 @@
+# fzf
+if command -v fzf &> /dev/null; then
+  if [[ -f /usr/share/fzf/completion.bash ]]; then
+    source /usr/share/fzf/completion.bash
+  fi
+
+  if [[ -f /usr/share/fzf/key-bindings.bash ]]; then
+    source /usr/share/fzf/key-bindings.bash
+  fi
+
+  fzf_args="
+    --height 50% --reverse --separator=''
+    --border=none --preview-window=''
+    --color=bg:-1,fg:-1,hl:blue
+    --color=bg+:blue,fg+:0,hl+:black
+    --color=prompt:green,marker:blue,pointer:black
+    --color=spinner:-1,border:black,gutter:black
+    --color=header:-1,info:-1
+  "
+
+  if [[ $DISPLAY ]]; then
+    export FZF_DEFAULT_OPTS="$fzf_args
+    --prompt '❯ ' --marker '❯' --pointer '❯'"
+  else
+    export FZF_DEFAULT_OPTS="$fzf_args
+    --prompt '> ' --marker '>' --pointer '>'"
+  fi
+fi
+
+# zoxide
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init bash)"
+fi
+
+# vim:ft=bash
