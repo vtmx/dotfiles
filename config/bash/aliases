@@ -249,6 +249,7 @@ alias yu="yarn upgrade"
 # yay
 alias yayi="yay -S"
 alias yayc='yay -Sc'
+alias yayl="pacman -Qm"
 alias yayr="yay -Rns"
 alias yayu="yay -Syu"
 
