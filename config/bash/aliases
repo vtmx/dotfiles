@@ -15,7 +15,7 @@ alias bf="$EDITOR $HOME/.config/bash/functions"
 alias bi="$EDITOR $HOME/.config/bash/inputs"
 alias bo="$EDITOR $HOME/.config/bash/opts"
 alias bp="$EDITOR $HOME/.config/bash/pkgs"
-alias br="source $HOME/.bashrc; echo Reload bashrc"
+alias br="source $HOME/.bashrc; echo Reload bash"
 alias brc="$EDITOR $HOME/.bashrc"
 
 # bat
@@ -72,7 +72,11 @@ alias dir="dir --color=auto"
 alias diff="diff --color=auto"
 
 # demenu
-alias dmenu="dmenu -b -fn 'BlexMono Nerd Font' -nb '#1e2227' -nf '#abb2bf' -sb '#3d4556' -sf '#abb2bf'"
+alias dmenu="dmenu \
+-b \
+-fn 'BlexMono Nerd Font' \
+-nb '#1e2227' -nf '#abb2bf' \
+-sb '#3d4556' -sf '#abb2bf'"
 
 # dnf
 alias dnfi="sudo dnf install --setopt='skip_if_unavailable=True'"
@@ -87,7 +91,12 @@ alias dnfu="sudo dnf upgrade --refresh --setopt='skip_if_unavailable=True'"
 alias egrep="egrep --color=auto"
 
 # fuzzy finder
-alias ff="fzf --preview 'bat --theme=ansi --style=numbers,changes,header --italic-text=always --color=always {}'"
+alias ff="fzf \
+--preview 'bat \
+--theme=ansi \
+--style=numbers,changes,header \
+--italic-text=always \
+--color=always {}'"
 
 # fgrep
 alias fgrep="fgrep --color=auto"
@@ -126,11 +135,6 @@ alias grep="grep --color=auto"
 # gtk
 alias gtk="GTK_DEBUG=interactive"
 
-# helix
-alias h="helix"
-alias hc="helix $HOME/.config/helix/config.toml"
-alias ht="helix $HOME/.config/helix/themes/onedarkv.toml"
-
 # history
 alias hi="history | sort -rn"
 
@@ -143,7 +147,6 @@ alias k=killall
 
 # kitty
 alias kc="$EDITOR $HOME/.config/kitty/kitty.conf"
-alias kakc="kak $HOME/.config/kak/kakrc"
 
 # kee-pass-xc
 alias kp='keepassxc-cli'
@@ -155,10 +158,9 @@ alias live="browser-sync start --no-open --server "." --files *"
 
 # ls
 alias l="ls --color=auto --group-directories-first --sort=extension"
-alias la="ls -A | grep '^\.' | column"
+alias la="ls -d .* 2>/dev/null"
 alias ll="ls -Fal"
 alias ls="ls --color=auto --group-directories-first --sort=extension"
-alias l.="ls -d .*"
 
 # man
 alias m="man -L pt_BR"
@@ -191,9 +193,6 @@ alias pstree="pstree -npTC age"
 
 # rename
 alias rename="perl-rename"
-
-# rm
-alias rmr="rm -r"
 
 # source
 alias so="source"
@@ -241,14 +240,11 @@ alias ya="yarn add"
 alias yb="yarn build"
 alias yc="yarn autoclean"
 alias yd="yarn dev"
-alias yh="yarn help"
 alias ydp="yarn deploy"
 alias yi="yarn install"
 alias yr="yarn remove"
 alias ys="yarn start"
-alias yte="yarn test"
 alias yu="yarn upgrade"
-alias yv="yarn version"
 
 # yay
 alias yayi="yay -S"
@@ -257,10 +253,11 @@ alias yayr="yay -Rns"
 alias yayu="yay -Syu"
 
 # yt-dlp
-alias ytp='yt-dlp -x --audio-format mp3 --replace-in-metadata title " " "-" --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
-
-# weather
-alias wt="curl wttr.in/?format=3"
+alias ytp='yt-dlp \
+-x \
+--audio-format mp3 \
+--replace-in-metadata title " " "-" \
+--output "%(playlist_index|02)s-%(title)s.%(ext)s"'
 
 # lite-xl
 alias xl="lite-xl"

@@ -3,16 +3,16 @@ shopt -s cmdhist
 shopt -s checkwinsize
 shopt -s histappend
 
-# bind 'set completion-ignore-case on'
-# bind 'set colored-completion-prefix on'
-# bind 'set colored-stats on'
-# bind 'set completion-ignore-case on'
-# bind 'set completion-map-case on'
-# bind 'set show-all-if-ambiguous on'
-# bind 'set show-all-if-unmodified on'
-# bind 'set skip-completed-text on'
-# bind 'set menu-complete-display-prefix on'
-# bind 'TAB: menu-complete'
-# bind '"\e[Z": menu-complete-backward' # Alt + Tab
+bind 'set completion-ignore-case on'
+bind 'set colored-completion-prefix on'
+bind 'set colored-stats on'
+bind 'set completion-ignore-case on'
+bind 'set completion-map-case on'
+bind 'set show-all-if-ambiguous on'
+bind 'set show-all-if-unmodified on'
+bind 'set skip-completed-text on'
+bind 'set menu-complete-display-prefix on'
+bind 'TAB: menu-complete'
+bind '"\e[Z": menu-complete-backward' # Alt + Tab
 
 # vim:ft=bash
