@@ -1,7 +1,7 @@
 local c = {
   bd      = '#1e2227',
   bg      = '#23272e',
-  bl      = '#2c313c', -- cursorline and sel
+  bl      = '#2c313c', -- cursorline
   fd      = '#5f6672', -- comment
   fg      = '#abb2bf',
   sel     = '#3d4556', -- selection

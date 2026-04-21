@@ -565,7 +565,7 @@ map(
 )
 
 map(
-  { 'n', 'i', 's', 'x' }, '<leader>w', '<cmd>w<cr><esc>',
+  'n', '<leader>w', '<cmd>w<cr>',
   { desc = 'Save file' }
 )
 

@@ -16,7 +16,7 @@ alias bi="$EDITOR $HOME/.config/bash/inputs"
 alias bo="$EDITOR $HOME/.config/bash/opts"
 alias bp="$EDITOR $HOME/.config/bash/pkgs"
 alias br="source $HOME/.bashrc; echo Reload bash"
-alias brc="$EDITOR $HOME/.bashrc"
+alias brc="$EDITOR $HOME/.config/bash/bashrc"
 
 # bat
 alias bat="bat \
