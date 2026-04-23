@@ -2,6 +2,7 @@ local opts = {
   autochdir = true,
   autocomplete = true,
   clipboard = 'unnamedplus',
+  completeopt = { 'menu', 'menuone' },
   cursorline = true,
   diffopt = 'internal,filler,closeoff,indent-heuristic,linematch:60,algorithm:histogram',
   expandtab = true,
