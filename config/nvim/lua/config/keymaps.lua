@@ -232,6 +232,17 @@ map(
   { desc = 'Move cursor char right' }
 )
 
+-- Força a seleção do primeiro item e confirma
+map('i', '<c-y>', function()
+    local info = vim.fn.complete_info({'selected'})
+    if info.selected == -1 then
+      return '<c-n><c-y>'
+    end
+    return '<c-y>'
+  end,
+  { expr = true, replace_keycodes = true }
+)
+
 map(
   'i', '<m-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
   { desc = 'Comment line' }

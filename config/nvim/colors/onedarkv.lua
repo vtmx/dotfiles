@@ -270,7 +270,7 @@ local hl_groups = {
   -- Functions
   ['@function']           = { link = 'Function'        },
   ['@function.builtin']   = { link = 'Special'         },
-  ['@function.call']      = { link = 'Normal'          },
+  ['@function.call']      = { link = 'Function'        },
   ['@function.macro']     = { link = 'Macro'           },
   ['@function.method']    = { link = 'Function'        },
   ['@parameter']          = { link = 'Identifier'      },
@@ -323,7 +323,7 @@ local hl_groups = {
   ['@lsp.type.struct']        = { link = 'Structure'  },
   ['@lsp.type.type']          = { link = 'Type'       },
   ['@lsp.type.typeParameter'] = { link = 'TypeDef'    },
-  ['@lsp.type.variable']      = { link = 'Normal'     },
+  ['@lsp.type.variable']      = { link = 'Variable'   },
 
   -- Markup
   ['@markup.heading']    = { link = 'Title'      },
