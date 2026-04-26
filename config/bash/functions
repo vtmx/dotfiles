@@ -370,8 +370,14 @@ lwd() {
 }
 
 # Open
-open() {
-  xdg-open "$@" >/dev/null 2>&1 &
+o() {
+  if [[ $2 ]]; then
+    for file in "${@}"; do
+      xdg-open "$file" &
+    done
+  else
+    xdg-open "$1" &
+  fi
 }
 
 # Play
