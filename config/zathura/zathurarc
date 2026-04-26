@@ -57,5 +57,5 @@ set recolor-darkcolor '#abb2bf'
 set recolor-lightcolor '#23272e'
 
 # Maps
+map i recolor
 map ç feedkeys ':'
-map <C-r> feedkeys ':set recolor<Return>'
