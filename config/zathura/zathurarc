@@ -1,0 +1,61 @@
+# Options
+set adjust-open width
+set recolor true
+set selection-clipboard 'clipboard'
+set render-loading true
+set window-title-basename 'true'
+
+# Fonts
+set font 'BlexMono Nerd Font Medium 11'
+
+# Colors
+
+# default
+set default-bg '#23272e'
+set default-fg '#abb2bf'
+
+# hightlight
+set highlight-color rgba(97,175,239,0.5)
+set highlight-active-color rgba(198,120,221,0.5)
+
+# statusbar
+set statusbar-bg '#1e2227'
+set statusbar-fg '#abb2bf'
+
+# inputbar
+set inputbar-bg '#1e2227'
+set inputbar-fg '#abb2bf'
+
+# completion
+set completion-bg '#1e2227'
+set completion-fg '#abb2bf'
+set completion-group-bg '#3d4556'
+set completion-group-fg '#abb2bf'
+set completion-highlight-bg '#3d4556'
+set completion-highlight-fg '#abb2bf'
+
+# Index
+set index-bg '#23272e'
+set index-fg '#abb2bf'
+set index-active-bg '#3d4556'
+set index-active-fg '#abb2bf'
+
+# notification
+set notification-bg '#61afef'
+set notification-fg '#23272e'
+set notification-warning-bg '#e5c07b'
+set notification-warning-fg '#23272e'
+set notification-error-bg '#e06c75'
+set notification-error-fg '#23272e'
+
+# render-loading
+set render-loading-bg '#1e2227'
+set render-loading-fg '#abb2bf'
+
+# recolor
+set recolor-darkcolor '#abb2bf'
+set recolor-lightcolor '#23272e'
+
+# Maps
+map ç feedkeys ':'
+map <C-r> feedkeys ':set recolor<Return>'

@@ -50,6 +50,13 @@ vim.lsp.config('emmet_ls', {
 })
 vim.lsp.enable('emmet_ls')
 
+-- Go
+vim.lsp.config('gopls', {
+  cmd = { 'gopls' },
+  filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+})
+vim.lsp.enable('gopls')
+
 -- HTML
 vim.lsp.config('html', {
   cmd = { 'vscode-html-language-server', '--stdio' },
