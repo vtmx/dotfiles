@@ -44,7 +44,6 @@ alias bunl="bun pm ls"
 # directories
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
 alias cdb="cd $HOME/Dev/dotfiles/bin"
 alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
@@ -64,12 +63,6 @@ alias chx="chmod +x"
 # copy
 alias cp="cp -i"
 alias cpv="rsync -ah --info=progress2"
-
-# dir
-alias dir="dir --color=auto"
-
-# diff
-alias diff="diff --color=auto"
 
 # demenu
 alias dmenu="dmenu \
@@ -98,9 +91,6 @@ alias ff="fzf \
 --italic-text=always \
 --color=always {}'"
 
-# fgrep
-alias fgrep="fgrep --color=auto"
-
 # git
 alias g="git"
 alias ga="git add"
@@ -125,9 +115,6 @@ alias grr="git remote remove"
 alias gru="git remote update"
 alias gs="git push"
 alias gs="git status -sb"
-
-# ghostty
-alias gho="$EDITOR $HOME/.config/ghostty/config"
 
 # grep
 alias grep="grep --color=auto"
@@ -218,7 +205,7 @@ alias tree="eza -T"
 # vdir
 alias vdir="vdir --color=auto"
 
-# vim
+# nvim
 alias v="$EDITOR"
 alias va="$EDITOR $HOME/.config/nvim/lua/config/autocmds.lua"
 alias vc="$EDITOR $HOME/.config/nvim/init.lua"
@@ -241,10 +228,6 @@ alias yb="yarn build"
 alias yc="yarn autoclean"
 alias yd="yarn dev"
 alias ydp="yarn deploy"
-alias yi="yarn install"
-alias yr="yarn remove"
-alias ys="yarn start"
-alias yu="yarn upgrade"
 
 # yay
 alias yayi="yay -S"
