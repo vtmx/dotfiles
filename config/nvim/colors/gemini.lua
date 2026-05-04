@@ -1,22 +1,22 @@
 local c = {
   bd      = '#1e2227',
-  bg      = '#23272e',
+  bg      = '#1e1f20',
   bl      = '#2c313c', -- cursorline
-  fd      = '#5f6672', -- comment
-  fg      = '#abb2bf',
+  fd      = '#80868b', -- comment
+  fg      = '#c4c7c5',
   sel     = '#3d4556', -- selection
-  red     = '#e06c75',
-  green   = '#98c379',
-  yellow  = '#e5c07b',
-  orange  = '#d19a66',
-  blue    = '#61afef',
+  red     = '#f28b82',
+  green   = '#81c995',
+  yellow  = '#fdd663',
+  orange  = '#fa903e',
+  blue    = '#8ab4f8',
   magenta = '#c678dd',
   cyan    = '#56b6c2',
 }
 
 local hl_groups = {
   -- General
-  Normal         = { bg = c.bg, fg = c.fg, ctermbg = 234, ctermfg = 250 },
+  Normal         = { bg = c.bg, fg = c.fg, ctermfg = 250, ctermbg = 234 },
   Comment        = { fg = c.fd, ctermfg = 7 },
   Cursor         = { bg = c.fg, fg = c.bg   },
   Title          = { link = 'Normal'        },
@@ -32,7 +32,7 @@ local hl_groups = {
   Exception      = { fg = c.magenta },
   Float          = { fg = c.orange  },
   Function       = { fg = c.blue    },
-  Identifier     = { fg = c.red     },
+  Identifier     = { fg = c.fg     },
   Include        = { fg = c.magenta },
   Keyword        = { fg = c.magenta },
   Label          = { fg = c.red     },
@@ -48,7 +48,7 @@ local hl_groups = {
   Structure      = { fg = c.magenta },
   Tag            = { fg = c.red     },
   Typedef        = { fg = c.magenta },
-  Type           = { fg = c.magenta },
+  Type           = { fg = c.yellow },
   Underlined     = { fg = c.blue, underline = true },
 
   -- Keys [] {} ()
@@ -105,10 +105,9 @@ local hl_groups = {
 
   -- Pmenu
   Pmenu          = { bg = c.bg },
-  Pmenuac        = { bg = c.bl },
-  PmenuBorder    = { fg = c.fg },
-  PmenuSbar      = { bg = c.bd },
   PmenuSel       = { bg = c.bl },
+  PmenuSbar      = { bg = c.bd },
+  Pmenuac        = { bg = c.bl },
   PmenuThumb     = { bg = c.fg },
 
   -- Popup
@@ -130,6 +129,82 @@ local hl_groups = {
   SpellCap   = { sp = c.blue, undercurl = true },
   SpellRare  = { sp = c.magenta, undercurl = true },
   SpellLocal = { sp = c.cyan, undercurl = true },
+
+  -- Nvim
+  NvimInternalError  = { fg = c.red   },
+
+  -- awk
+  awkPatterns        = { fg = c.magenta       },
+  awkVariables       = { fg = c.red           },
+
+  -- dosini
+  dosiniHeader       = { fg   = c.red         },
+  dosiniLabel        = { link = 'Function'    },
+  dosiniValue        = { link = 'Normal'      },
+
+  -- html
+  djangoTagBlock     = { link = 'Normal'     },
+  djangoStatement    = { link = 'Normal'     },
+  djangoFilter       = { link = 'Include'    },
+  djangoVarBlock     = { link = 'Include'    },
+  htmlArg            = { link = 'Number'     },
+  htmlH1             = { link = 'Normal'     },
+  htmlH2             = { link = 'Normal'     },
+  htmlH3             = { link = 'Normal'     },
+  htmlH4             = { link = 'Normal'     },
+  htmlH5             = { link = 'Normal'     },
+  htmlH6             = { link = 'Normal'     },
+  htmlSpecialTagName = { link = 'Definition' },
+  htmlTag            = { link = 'Normal'     },
+  htmlEndTag         = { link = 'Normal'     },
+  htmlTagName        = { link = 'Definition' },
+  htmlTitle          = { link = 'Normal'     },
+  htmlLink           = { link = 'Normal'     },
+
+  -- markdown
+  markdownBlockquote       = { link = 'Normal'   },
+  markdownCodeDelimiter    = { link = 'Normal'   },
+  markdownId               = { link = 'Normal'   },
+  markdownH1               = { link = 'Normal'   },
+  markdownH1Delimiter      = { link = 'Function' },
+  markdownH2               = { link = 'Normal'   },
+  markdownH2Delimiter      = { link = 'Function' },
+  markdownH3               = { link = 'Normal'   },
+  markdownH3Delimiter      = { link = 'Function' },
+  markdownH4               = { link = 'Normal'   },
+  markdownH4Delimiter      = { link = 'Function' },
+  markdownH5               = { link = 'Normal'   },
+  markdownH5Delimiter      = { link = 'Function' },
+  markdownH6               = { link = 'Normal'   },
+  markdownH6Delimiter      = { link = 'Function' },
+  markdownHeadingDelimiter = { link = 'Normal'   },
+  markdownHeadingRule      = { link = 'Normal'   },
+  markdownListMarker       = { link = 'Normal'   },
+  markdownRule             = { link = 'Normal'   },
+  markdownUrl              = { link = 'Normal'   },
+  mkdCode                  = { link = 'Normal'   },
+  mkdCodeDelimiter         = { link = 'Normal'   },
+  mkdCodeEnd               = { link = 'Normal'   },
+  mkdCodeStart             = { link = 'Normal'   },
+  mkdHeading               = { link = 'Function' },
+  mkdInlineURL             = { link = 'Normal'   },
+  mkdLineBreak             = { link = 'Normal'   },
+  mkdLink                  = { link = 'Function' },
+  mkdListItem              = { link = 'Normal'   },
+  mkdURL                   = { link = 'Normal'   },
+
+  -- js
+  javaScriptBraces   = { link = 'Delimiter'      },
+  javaScriptFunction = { fg = c.fg               },
+
+  -- json
+  jsonCommentError   = { link = 'Comment'        },
+
+  -- sh
+  shDeref            = { fg = c.red              },
+  shDerefVarArray    = { fg = c.red              },
+  shQuote            = { fg = c.green            },
+  shVariable         = { fg = c.red              },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red     },
@@ -169,93 +244,6 @@ local hl_groups = {
   healthSectionDelim = { fg = c.blue },
   helpHeader         = { fg = c.blue },
   helpSectionDelim   = { fg = c.blue },
-
-  -- Nvim
-  NvimInternalError  = { fg = c.red  },
-
-  -- awk
-  awkPatterns        = { fg = c.magenta       },
-  awkVariables       = { fg = c.red           },
-
-  -- css
-  cssAtRule          = { link = 'Identifier'  },
-  cssBraces          = { link = 'Normal'      },
-  cssClassName       = { link = 'Identifier'  },
-  cssClassNameDot    = { link = 'Identifier'  },
-  cssIdentifier      = { link = 'Identifier'  },
-  cssTagName         = { link = 'Identifier'  },
-
-  -- dosini
-  dosiniHeader       = { link = 'Identifier'  },
-  dosiniLabel        = { link = 'Function'    },
-  dosiniValue        = { link = 'Normal'      },
-
-  -- html
-  djangoTagBlock     = { link = 'Normal'     },
-  djangoStatement    = { link = 'Normal'     },
-  djangoFilter       = { link = 'Include'    },
-  djangoVarBlock     = { link = 'Include'    },
-  htmlArg            = { link = 'Number'     },
-  htmlH1             = { link = 'Normal'     },
-  htmlH2             = { link = 'Normal'     },
-  htmlH3             = { link = 'Normal'     },
-  htmlH4             = { link = 'Normal'     },
-  htmlH5             = { link = 'Normal'     },
-  htmlH6             = { link = 'Normal'     },
-  htmlSpecialTagName = { link = 'Definition' },
-  htmlTag            = { link = 'Normal'     },
-  htmlEndTag         = { link = 'Normal'     },
-  htmlTagName        = { link = 'Definition' },
-  htmlTitle          = { link = 'Normal'     },
-  htmlLink           = { link = 'Normal'     },
-
-  -- js
-  javaScriptBraces   = { link = 'Delimiter'      },
-  javaScriptFunction = { fg = c.fg               },
-
-  -- json
-  jsonCommentError   = { link = 'Comment'        },
-
-  -- kitty
-  KittyAction     = { link = 'Normal'     },
-  KittyAlt        = { link = 'Normal'     },
-  KittyOptionName = { link = 'Normal'     },
-  KittyColor      = { link = 'Number'     },
-  KittyCtrl       = { link = 'Normal'     },
-  KittyKeybind    = { link = 'Function'   },
-  KittyKeyword    = { link = 'Definition' },
-  KittyMap        = { link = 'Keyword'    },
-  KittyMod        = { link = 'Function'   },
-  KittySt         = { link = 'String'     },
-
-  -- markdown
-  markdownBlockquote       = { link = 'Normal'   },
-  markdownCodeDelimiter    = { link = 'Normal'   },
-  markdownId               = { link = 'Normal'   },
-  markdownH1               = { link = 'Normal'   },
-  markdownH1Delimiter      = { link = 'Function' },
-  markdownH2               = { link = 'Normal'   },
-  markdownH2Delimiter      = { link = 'Function' },
-  markdownH3               = { link = 'Normal'   },
-  markdownH3Delimiter      = { link = 'Function' },
-  markdownH4               = { link = 'Normal'   },
-  markdownH4Delimiter      = { link = 'Function' },
-  markdownH5               = { link = 'Normal'   },
-  markdownH5Delimiter      = { link = 'Function' },
-  markdownH6               = { link = 'Normal'   },
-  markdownH6Delimiter      = { link = 'Function' },
-  markdownHeadingDelimiter = { link = 'Normal'   },
-  markdownHeadingRule      = { link = 'Normal'   },
-  markdownListMarker       = { link = 'Normal'   },
-  markdownRule             = { link = 'Normal'   },
-  markdownUrl              = { link = 'Normal'   },
-
-  -- sh
-  shDeref            = { link = 'Identifier'     },
-  shQuote            = { link = 'String'         },
-
-  -- toml
-  tomlTable          = { link = 'Function'       },
 
   -- tree-sitter
 
@@ -344,19 +332,12 @@ local hl_groups = {
   ['@lsp.type.variable']      = { link = 'Variable'   },
 
   -- Markup
-  ['@label.markdown']            = { link = 'Normal'     },
-  ['@markup.heading.1.markdown'] = { link = 'Function'   },
-  ['@markup.heading.2.markdown'] = { link = 'Function'   },
-  ['@markup.heading.3.markdown'] = { link = 'Function'   },
-  ['@markup.heading.4.markdown'] = { link = 'Function'   },
-  ['@markup.heading.5.markdown'] = { link = 'Function'   },
-  ['@markup.heading.6.markdown'] = { link = 'Function'   },
-  ['@markup.heading']            = { link = 'Title'      },
-  ['@markup.link.label']         = { link = 'Normal'     },
-  ['@markup.link']               = { link = 'Identifier' },
-  ['@markup.link.url']           = { link = 'Underlined' },
-  ['@markup.raw']                = { link = 'Normal'     },
-  ['@markup.underline']          = { link = 'Underlined' },
+  ['@markup.heading']    = { link = 'Title'      },
+  ['@markup.link']       = { link = 'Identifier' },
+  ['@markup.link.label'] = { link = 'Normal'     },
+  ['@markup.link.url']   = { link = 'Underlined' },
+  ['@markup.raw']        = { link = 'Normal'     },
+  ['@markup.underline']  = { link = 'Underlined' },
 
   -- Text
   ['@text.literal']       = { link = 'Comment'         },
@@ -371,7 +352,6 @@ local hl_groups = {
   -- bash
   ['@constant.bash']            = { link = 'Identifier' },
   ['@function.builtin.bash']    = { link = 'Function'   },
-  ['@function.call.bash']       = { link = 'Normal'     },
   ['@keyword.directive.bash']   = { link = 'Comment'    },
   ['@punctuation.special.bash'] = { link = 'Identifier' },
   ['@string.regexp.bash']       = { link = 'Normal'     },
@@ -391,7 +371,14 @@ local hl_groups = {
   ['@string.special.url.html'] = { link = 'String'     },
 
   -- lua
-  ['@string.escape.lua']       = { link = 'String'     },
+  ['@lsp.type.property.lua']   = { link = 'Function' },
+  ['@lsp.type.parameter.lua']  = { link = 'Function' },
+  ['@module.builtin.lua']      = { link = 'Function' },
+  ['@property.lua']            = { link = 'Function' },
+  ['@variable.lua']            = { link = 'Function' },
+  ['@string.escape.lua']       = { link = 'String'   },
+  ['@lsp.mod.declaration.lua'] = { link = 'Type'     },
+  ['@lsp.typemod.paramater.declaration.lua'] = { link = 'Normal' },
 
   -- vimdoc
   ['@comment.note.vimdoc']     = { link = 'Normal'     },
@@ -409,11 +396,20 @@ local hl_groups = {
   CodeiumSuggestion = { fg = c.fd },
 
   -- hop
-  HopNextKey   = { fg = c.red     },
-  HopNextKey1  = { fg = c.blue    },
+  HopNextKey   = { fg = c.red    },
+  HopNextKey1  = { fg = c.blue     },
   HopNextKey2  = { fg = c.orange  },
   HopNextKey3  = { fg = c.magenta },
   HopUnmatched = { fg = c.fd      },
+
+  -- kitty
+  KittyColor   = { link = 'Number'     },
+  KittyAction  = { link = 'Normal'     },
+  KittyKeybind = { link = 'Function'   },
+  KittyKeyword = { link = 'Definition' },
+  KittyMap     = { link = 'Keyword'    },
+  KittyMod     = { link = 'Function'   },
+  KittySt      = { link = 'String'     },
 
   -- mini-cursorword
   MiniCursorword        = { fg = c.yellow },
@@ -430,6 +426,7 @@ local hl_groups = {
 
   -- mini-statusline
   MiniStatuslineRecording = { fg = c.red },
+
 
   -- netrw
   netrwTreeBar = { link = 'Normal' },

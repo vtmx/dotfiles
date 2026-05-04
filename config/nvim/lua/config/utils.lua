@@ -25,19 +25,29 @@ function M.toggle_cursorword()
 end
 
 function M.toggle_diagnostic()
-  -- local is_signcolumn = vim.opt.signcolumn:get() == 'yes'
+  local is_enabled = vim.diagnostic.is_enabled()
+
+  if is_enabled then
+    vim.diagnostic.enable(false)
+    print('Diagnostic disable')
+  else
+    vim.diagnostic.enable(true)
+    print('Diagnostic enable')
+  end
+end
+
+function M.toggle_diagnostic_virtual_text()
   local is_signcolumn = vim.wo.signcolumn == 'yes'
 
   if is_signcolumn then
     vim.opt.signcolumn = 'no'
-    vim.diagnostic.enable(false)
     vim.diagnostic.config({ signs = false, virtual_text = false })
-    print('Diagnostic disable')
+    print('Diagnostic virtual text disable')
   else
     vim.opt.signcolumn = 'yes'
     vim.diagnostic.enable(true)
     vim.diagnostic.config({ signs = true, virtual_text = true })
-    print('Diagnostic enable')
+    print('Diagnostic virtual text enable')
   end
 end
 

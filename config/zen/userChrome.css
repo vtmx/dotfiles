@@ -92,8 +92,6 @@ tooltip,
 
 /* icon url-bar - fix blink msgbox */
 #identity-box {
-  width: 0;
-  height: 0;
   opacity: 0 !important;
 }
 
@@ -135,9 +133,42 @@ tooltip,
   background: #1e2227 !important;
 }
 
+/* Popup de adição de bookmarks */
+
+/* Alvo na moldura externa do painel */
+#editBookmarkPanel {
+  appearance: none !important;
+  background: var(--arrowpanel-background) !important;
+}
+
+/* Força a caixa de scroll e o container principal a expandirem */
+#editBookmarkPanel .panel-viewstack,
+#editBookmarkPanel .panel-subview-body {
+  min-height: 600px !important; /* Mesma altura que você definiu antes */
+}
+
+/* Remove restrições de altura máxima que causam o "vazio" */
+panelmultiview[mainViewId="editBookmarkPanelContent"] {
+  height: auto !important;
+  min-height: 600px !important;
+}
+
+/* Aumenta especificamente a área da lista de pastas */
+#editBMPanel_folderTree {
+  min-height: 400px !important;
+  max-height: 500px !important;
+  background: var(--arrowpanel-background) !important;
+}
+
+/* Garante que o container que envolve a árvore não limite o crescimento */
+#editBMPanel_folderTreeRow {
+  height: auto !important;
+}
+
 /* Download */
 
 xul|richlistbox {
   background: #1e2227 !important;
   border-color: #2c313c !important;
 }
+

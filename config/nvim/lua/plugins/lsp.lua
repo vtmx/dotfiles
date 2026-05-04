@@ -7,27 +7,30 @@ require('mason').setup({
   ui = { border = 'rounded' }
 })
 
+local function lsp(name, config)
+  vim.lsp.config(name, config)
+  vim.lsp.enable(name)
+end
+
 -- Global
 vim.lsp.config('*', {
-  winbar = "%{%v:lua.require'nvim-navic'.get_location()%}",
   window = { border = 'rounded' },
 })
 
--- BashLS
-vim.lsp.config('bashls', {
+-- Bash
+lsp('bashls', {
   cmd = { 'bash-language-server', 'start' },
   filetypes = { 'bash', 'sh' },
   settings = {
     bashIde = {
       globPattern = '*@(.sh|.inc|.bash|.command)',
-      shellcheckArguments = '-e SC2086'
+      shellcheckArguments = { '-e SC2086' },
     }
   }
 })
-vim.lsp.enable('bashls')
 
 -- CSS
-vim.lsp.config('cssls', {
+lsp('cssls', {
   cmd = { 'vscode-css-language-server', '--stdio' },
   filetypes = { 'css', 'scss' },
   settings = {
@@ -38,9 +41,8 @@ vim.lsp.config('cssls', {
     scss = { validate = true },
   }
 })
-vim.lsp.enable('cssls')
 
-vim.lsp.config('emmet_ls', {
+lsp('emmet_ls', {
   cmd = { 'emmet-ls', '--stdio' },
   filetypes = { 'css', 'scss', 'html' },
   init_options = {
@@ -48,17 +50,15 @@ vim.lsp.config('emmet_ls', {
     showExpandedAbbreviation = 'always',
   }
 })
-vim.lsp.enable('emmet_ls')
 
 -- Go
-vim.lsp.config('gopls', {
+lsp('gopls', {
   cmd = { 'gopls' },
   filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
 })
-vim.lsp.enable('gopls')
 
 -- HTML
-vim.lsp.config('html', {
+lsp('html', {
   cmd = { 'vscode-html-language-server', '--stdio' },
   filetypes = { 'html' },
   settings = {
@@ -76,30 +76,26 @@ vim.lsp.config('html', {
       },
     },
   },
-  -- Snippet support (pra completions mais ricas, se usar nvim-cmp)
-  capabilities = vim.lsp.protocol.make_client_capabilities(),
 })
-vim.lsp.enable('html')
 
 -- Lua
-vim.lsp.config('lua_ls', {
+lsp('lua_ls', {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
   settings = {
     Lua = {
       diagnostics = { globals = { 'vim' } },
-      runtime = { version = 'LuaJIT' }
+      runtime = { version = 'LuaJIT' },
     }
   }
 })
-vim.lsp.enable('lua_ls')
 
 -- Desativar diagnostico global
 vim.diagnostic.config({
   signs = false,
   virtual_lines = false,
   virtual_text = false,
-  update_in_insert = true,
+  update_in_insert = false,
   underline = true,
   severity_sort = true,
   float = {
@@ -108,9 +104,9 @@ vim.diagnostic.config({
     border = 'rounded',
     source = 'always',
     header = '',
-    prefix = ''
+    prefix = '',
   }
 })
 
--- Ativa módulo de cores
+-- Desativa módulo de cores padrão (chato)
 vim.lsp.document_color.enable(false)

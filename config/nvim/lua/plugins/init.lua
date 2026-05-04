@@ -1,4 +1,3 @@
-require('plugins.syntax')
 require('plugins.treesitter')
 require('plugins.mini')
 require('plugins.lsp')
