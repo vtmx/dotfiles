@@ -56,25 +56,13 @@
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
       "src": "https://github.com/folke/snacks.nvim"
     },
-    "v-vim": {
-      "rev": "1dc1388bafb89072f8349dbd96f9462ae22237cb",
-      "src": "https://github.com/ollykel/v-vim"
-    },
-    "vim-kitty": {
-      "rev": "cd72f2d9cfee8d6aba5a180a5ac3ca265b5d3a46",
-      "src": "https://github.com/fladson/vim-kitty"
-    },
-    "vim-markdown": {
-      "rev": "1bc9d0cd8e1cc3e901b0a49c2b50a843f1c89397",
-      "src": "https://github.com/preservim/vim-markdown"
+    "tree-sitter-sxhkdrc": {
+      "rev": "440d5f913d9465c9c776a1bd92334d32febcf065",
+      "src": "https://github.com/RaafatTurki/tree-sitter-sxhkdrc"
     },
     "vim-sxhkdrc": {
       "rev": "7b8abc305ba346c3af7d57da0ebec2b2f2d3f5b0",
       "src": "https://github.com/baskerville/vim-sxhkdrc"
-    },
-    "vim-toml": {
-      "rev": "da051b7c23bad3c52d18886203c594739780ec09",
-      "src": "https://github.com/cespare/vim-toml"
     }
   }
 }

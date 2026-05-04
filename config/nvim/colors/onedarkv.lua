@@ -16,7 +16,7 @@ local c = {
 
 local hl_groups = {
   -- General
-  Normal         = { fg = c.fg, ctermfg = 250, ctermbg = 234 },
+  Normal         = { bg = c.bg, fg = c.fg, ctermbg = 234, ctermfg = 250 },
   Comment        = { fg = c.fd, ctermfg = 7 },
   Cursor         = { bg = c.fg, fg = c.bg   },
   Title          = { link = 'Normal'        },
@@ -40,7 +40,7 @@ local hl_groups = {
   Number         = { fg = c.orange  },
   Operator       = { fg = c.fg      },
   PreCondit      = { fg = c.magenta },
-  PreProc        = { fg = c.magenta },
+  PreProc        = { fg = c.red     },
   Repeat         = { fg = c.magenta },
   Statement      = { fg = c.magenta },
   StorageClass   = { fg = c.fg      },
@@ -105,9 +105,10 @@ local hl_groups = {
 
   -- Pmenu
   Pmenu          = { bg = c.bg },
-  PmenuSel       = { bg = c.bl },
-  PmenuSbar      = { bg = c.bd },
   Pmenuac        = { bg = c.bl },
+  PmenuBorder    = { fg = c.fg },
+  PmenuSbar      = { bg = c.bd },
+  PmenuSel       = { bg = c.bl },
   PmenuThumb     = { bg = c.fg },
 
   -- Popup
@@ -129,76 +130,6 @@ local hl_groups = {
   SpellCap   = { sp = c.blue, undercurl = true },
   SpellRare  = { sp = c.magenta, undercurl = true },
   SpellLocal = { sp = c.cyan, undercurl = true },
-
-  -- Nvim
-  NvimInternalError  = { fg = c.red   },
-
-  -- awk
-  awkPatterns        = { fg = c.magenta       },
-  awkVariables       = { fg = c.red           },
-
-  -- dosini
-  dosiniHeader       = { fg   = c.red         },
-  dosiniLabel        = { link = 'Function'    },
-  dosiniValue        = { link = 'Normal'      },
-
-  -- html
-  djangoTagBlock     = { link = 'Normal'     },
-  djangoStatement    = { link = 'Normal'     },
-  djangoFilter       = { link = 'Include'    },
-  djangoVarBlock     = { link = 'Include'    },
-  htmlArg            = { link = 'Number'     },
-  htmlH1             = { link = 'Normal'     },
-  htmlH2             = { link = 'Normal'     },
-  htmlH3             = { link = 'Normal'     },
-  htmlH4             = { link = 'Normal'     },
-  htmlH5             = { link = 'Normal'     },
-  htmlH6             = { link = 'Normal'     },
-  htmlSpecialTagName = { link = 'Definition' },
-  htmlTag            = { link = 'Normal'     },
-  htmlEndTag         = { link = 'Normal'     },
-  htmlTagName        = { link = 'Definition' },
-  htmlTitle          = { link = 'Normal'     },
-  htmlLink           = { link = 'Normal'     },
-
-  -- markdown
-  markdownBlockquote       = { link = 'Normal'   },
-  markdownCodeDelimiter    = { link = 'Normal'   },
-  markdownId               = { link = 'Normal'   },
-  markdownH1               = { link = 'Normal'   },
-  markdownH1Delimiter      = { link = 'Function' },
-  markdownH2               = { link = 'Normal'   },
-  markdownH2Delimiter      = { link = 'Function' },
-  markdownH3               = { link = 'Normal'   },
-  markdownH3Delimiter      = { link = 'Function' },
-  markdownH4               = { link = 'Normal'   },
-  markdownH4Delimiter      = { link = 'Function' },
-  markdownH5               = { link = 'Normal'   },
-  markdownH5Delimiter      = { link = 'Function' },
-  markdownH6               = { link = 'Normal'   },
-  markdownH6Delimiter      = { link = 'Function' },
-  markdownHeadingDelimiter = { link = 'Normal'   },
-  markdownHeadingRule      = { link = 'Normal'   },
-  markdownListMarker       = { link = 'Normal'   },
-  markdownRule             = { link = 'Normal'   },
-  markdownUrl              = { link = 'Normal'   },
-  mkdCode                  = { link = 'Normal'   },
-  mkdCodeDelimiter         = { link = 'Normal'   },
-  mkdCodeEnd               = { link = 'Normal'   },
-  mkdCodeStart             = { link = 'Normal'   },
-  mkdHeading               = { link = 'Function' },
-  mkdInlineURL             = { link = 'Normal'   },
-  mkdLineBreak             = { link = 'Normal'   },
-  mkdLink                  = { link = 'Function' },
-  mkdListItem              = { link = 'Normal'   },
-  mkdURL                   = { link = 'Normal'   },
-
-  -- js
-  javaScriptBraces   = { link = 'Delimiter'      },
-  javaScriptFunction = { fg = c.fg               },
-
-  -- json
-  jsonCommentError   = { link = 'Comment'        },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red     },
@@ -238,6 +169,93 @@ local hl_groups = {
   healthSectionDelim = { fg = c.blue },
   helpHeader         = { fg = c.blue },
   helpSectionDelim   = { fg = c.blue },
+
+  -- Nvim
+  NvimInternalError  = { fg = c.red  },
+
+  -- awk
+  awkPatterns        = { fg = c.magenta       },
+  awkVariables       = { fg = c.red           },
+
+  -- css
+  cssAtRule          = { link = 'Identifier'  },
+  cssBraces          = { link = 'Normal'      },
+  cssClassName       = { link = 'Identifier'  },
+  cssClassNameDot    = { link = 'Identifier'  },
+  cssIdentifier      = { link = 'Identifier'  },
+  cssTagName         = { link = 'Identifier'  },
+
+  -- dosini
+  dosiniHeader       = { link = 'Identifier'  },
+  dosiniLabel        = { link = 'Function'    },
+  dosiniValue        = { link = 'Normal'      },
+
+  -- html
+  djangoTagBlock     = { link = 'Normal'     },
+  djangoStatement    = { link = 'Normal'     },
+  djangoFilter       = { link = 'Include'    },
+  djangoVarBlock     = { link = 'Include'    },
+  htmlArg            = { link = 'Number'     },
+  htmlH1             = { link = 'Normal'     },
+  htmlH2             = { link = 'Normal'     },
+  htmlH3             = { link = 'Normal'     },
+  htmlH4             = { link = 'Normal'     },
+  htmlH5             = { link = 'Normal'     },
+  htmlH6             = { link = 'Normal'     },
+  htmlSpecialTagName = { link = 'Definition' },
+  htmlTag            = { link = 'Normal'     },
+  htmlEndTag         = { link = 'Normal'     },
+  htmlTagName        = { link = 'Definition' },
+  htmlTitle          = { link = 'Normal'     },
+  htmlLink           = { link = 'Normal'     },
+
+  -- js
+  javaScriptBraces   = { link = 'Delimiter'      },
+  javaScriptFunction = { fg = c.fg               },
+
+  -- json
+  jsonCommentError   = { link = 'Comment'        },
+
+  -- kitty
+  KittyAction     = { link = 'Normal'     },
+  KittyAlt        = { link = 'Normal'     },
+  KittyOptionName = { link = 'Normal'     },
+  KittyColor      = { link = 'Number'     },
+  KittyCtrl       = { link = 'Normal'     },
+  KittyKeybind    = { link = 'Function'   },
+  KittyKeyword    = { link = 'Definition' },
+  KittyMap        = { link = 'Keyword'    },
+  KittyMod        = { link = 'Function'   },
+  KittySt         = { link = 'String'     },
+
+  -- markdown
+  markdownBlockquote       = { link = 'Normal'   },
+  markdownCodeDelimiter    = { link = 'Normal'   },
+  markdownId               = { link = 'Normal'   },
+  markdownH1               = { link = 'Normal'   },
+  markdownH1Delimiter      = { link = 'Function' },
+  markdownH2               = { link = 'Normal'   },
+  markdownH2Delimiter      = { link = 'Function' },
+  markdownH3               = { link = 'Normal'   },
+  markdownH3Delimiter      = { link = 'Function' },
+  markdownH4               = { link = 'Normal'   },
+  markdownH4Delimiter      = { link = 'Function' },
+  markdownH5               = { link = 'Normal'   },
+  markdownH5Delimiter      = { link = 'Function' },
+  markdownH6               = { link = 'Normal'   },
+  markdownH6Delimiter      = { link = 'Function' },
+  markdownHeadingDelimiter = { link = 'Normal'   },
+  markdownHeadingRule      = { link = 'Normal'   },
+  markdownListMarker       = { link = 'Normal'   },
+  markdownRule             = { link = 'Normal'   },
+  markdownUrl              = { link = 'Normal'   },
+
+  -- sh
+  shDeref            = { link = 'Identifier'     },
+  shQuote            = { link = 'String'         },
+
+  -- toml
+  tomlTable          = { link = 'Function'       },
 
   -- tree-sitter
 
@@ -326,12 +344,19 @@ local hl_groups = {
   ['@lsp.type.variable']      = { link = 'Variable'   },
 
   -- Markup
-  ['@markup.heading']    = { link = 'Title'      },
-  ['@markup.link']       = { link = 'Identifier' },
-  ['@markup.link.label'] = { link = 'Normal'     },
-  ['@markup.link.url']   = { link = 'Underlined' },
-  ['@markup.raw']        = { link = 'Normal'     },
-  ['@markup.underline']  = { link = 'Underlined' },
+  ['@label.markdown']            = { link = 'Normal'     },
+  ['@markup.heading.1.markdown'] = { link = 'Function'   },
+  ['@markup.heading.2.markdown'] = { link = 'Function'   },
+  ['@markup.heading.3.markdown'] = { link = 'Function'   },
+  ['@markup.heading.4.markdown'] = { link = 'Function'   },
+  ['@markup.heading.5.markdown'] = { link = 'Function'   },
+  ['@markup.heading.6.markdown'] = { link = 'Function'   },
+  ['@markup.heading']            = { link = 'Title'      },
+  ['@markup.link.label']         = { link = 'Normal'     },
+  ['@markup.link']               = { link = 'Identifier' },
+  ['@markup.link.url']           = { link = 'Underlined' },
+  ['@markup.raw']                = { link = 'Normal'     },
+  ['@markup.underline']          = { link = 'Underlined' },
 
   -- Text
   ['@text.literal']       = { link = 'Comment'         },
@@ -346,6 +371,7 @@ local hl_groups = {
   -- bash
   ['@constant.bash']            = { link = 'Identifier' },
   ['@function.builtin.bash']    = { link = 'Function'   },
+  ['@function.call.bash']       = { link = 'Normal'     },
   ['@keyword.directive.bash']   = { link = 'Comment'    },
   ['@punctuation.special.bash'] = { link = 'Identifier' },
   ['@string.regexp.bash']       = { link = 'Normal'     },
@@ -364,6 +390,9 @@ local hl_groups = {
   ['@constant.html']           = { link = 'Normal'     },
   ['@string.special.url.html'] = { link = 'String'     },
 
+  -- lua
+  ['@string.escape.lua']       = { link = 'String'     },
+
   -- vimdoc
   ['@comment.note.vimdoc']     = { link = 'Normal'     },
   ['@label.vimdoc']            = { link = 'Identifier' },
@@ -380,20 +409,11 @@ local hl_groups = {
   CodeiumSuggestion = { fg = c.fd },
 
   -- hop
-  HopNextKey   = { fg = c.red    },
-  HopNextKey1  = { fg = c.blue     },
+  HopNextKey   = { fg = c.red     },
+  HopNextKey1  = { fg = c.blue    },
   HopNextKey2  = { fg = c.orange  },
   HopNextKey3  = { fg = c.magenta },
   HopUnmatched = { fg = c.fd      },
-
-  -- kitty
-  KittyColor   = { link = 'Number'     },
-  KittyAction  = { link = 'Normal'     },
-  KittyKeybind = { link = 'Function'   },
-  KittyKeyword = { link = 'Definition' },
-  KittyMap     = { link = 'Keyword'    },
-  KittyMod     = { link = 'Function'   },
-  KittySt      = { link = 'String'     },
 
   -- mini-cursorword
   MiniCursorword        = { fg = c.yellow },
@@ -410,7 +430,6 @@ local hl_groups = {
 
   -- mini-statusline
   MiniStatuslineRecording = { fg = c.red },
-
 
   -- netrw
   netrwTreeBar = { link = 'Normal' },

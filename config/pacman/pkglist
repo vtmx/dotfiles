@@ -82,6 +82,7 @@ tesseract
 timeshift
 tmux
 tokei
+tree-sitter-cli
 unrar
 veracrypt
 vim

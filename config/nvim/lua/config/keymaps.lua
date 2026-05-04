@@ -471,7 +471,7 @@ map(
 )
 
 map(
-  'n', '<leader>r', '<cmd>w<cr><cmd>so<cr><cmd>restart<cr>',
+  'n', '<leader>r', '<cmd>w<cr><cmd>restart<cr><cmd>echo "restart"<cr>',
   { desc = 'Reload config file' }
 )
 
@@ -526,13 +526,18 @@ map(
 )
 
 map(
+  'n', '<leader>udc', function() utils.toggle_document_color() end,
+  { desc = 'Toggle document color' }
+)
+
+map(
   'n', '<leader>udg', function() utils.toggle_diagnostic() end,
   { desc = 'Toggle diagnostic' }
 )
 
 map(
-  'n', '<leader>udc', function() utils.toggle_document_color() end,
-  { desc = 'Toggle document color' }
+  'n', '<leader>udv', function() utils.toggle_diagnostic_virtual_text() end,
+  { desc = 'Toggle diagnostic virtual text' }
 )
 
 map(
