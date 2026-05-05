@@ -91,7 +91,7 @@ autocmd('FileType', {
     'lspinfo',
     'man',
     'startuptime',
-    'qf'
+    'qf',
   },
   callback = function()
     vim.keymap.set('n', 'q', '<cmd>bd<cr>')
@@ -207,8 +207,7 @@ autocmd('FileType', {
   end
 })
 
--- Set opts in terminal
--- falhou com o fzflua
+-- Set opts in terminal, falhou com o fzflua
 autocmd('TermOpen', {
   callback = function()
     vim.opt_local.listchars = ''

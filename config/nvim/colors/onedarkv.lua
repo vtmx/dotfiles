@@ -4,7 +4,7 @@ local c = {
   bl      = '#2c313c', -- cursorline
   fd      = '#5f6672', -- comment
   fg      = '#abb2bf',
-  sel     = '#3d4556', -- selection
+  sel     = '#3d4556',
   red     = '#e06c75',
   green   = '#98c379',
   yellow  = '#e5c07b',
@@ -118,6 +118,7 @@ local hl_groups = {
   FloatShadowThrough = { bg = c.bg },
 
   -- Tabbar
+  Winbar         = { fg = c.fg  },
   WinbarNC       = { fg = c.fd  },
   WinSeparator   = { fg = c.sel },
 
@@ -432,6 +433,7 @@ local hl_groups = {
   netrwTreeBar = { link = 'Normal' },
 
   -- snacks
+  SnacksBackdrop         = { bg = '#000000', blend = 100 },
   SnacksIndent           = { fg    = c.sel          },
   SnacksIndentScope      = { link  = 'SnacksIndent' },
   SnacksPickerCursorLine = { link  = 'Normal'       },
