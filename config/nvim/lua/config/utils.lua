@@ -1,11 +1,6 @@
-local M = {}
+local usercmd = vim.api.nvim_create_user_command
 
-function M.map(mode, lhs, rhs, opts)
-  if opts.silent == nil then
-    opts.silent = true
-  end
-  vim.keymap.set(mode, lhs, rhs, opts)
-end
+local M = {}
 
 function M.toggle_autocomplete()
   if vim.o.autocomplete then
@@ -24,6 +19,8 @@ function M.toggle_cursorword()
   print('Cursorword ' .. (vim.g.minicursorword_disable and 'off' or 'on'))
 end
 
+usercmd('ToggleCursorWord', M.toggle_cursorword, {})
+
 function M.toggle_diagnostic()
   local is_enabled = vim.diagnostic.is_enabled()
 
@@ -35,6 +32,8 @@ function M.toggle_diagnostic()
     print('Diagnostic enable')
   end
 end
+
+usercmd('ToggleDiagnostic', M.toggle_diagnostic, {})
 
 function M.toggle_diagnostic_virtual_text()
   local is_signcolumn = vim.wo.signcolumn == 'yes'
@@ -51,6 +50,8 @@ function M.toggle_diagnostic_virtual_text()
   end
 end
 
+usercmd('ToggleDiagnosticVirtualText', M.toggle_diagnostic_virtual_text, {})
+
 function M.toggle_diary()
   M.toggle_number()
   M.toggle_spelllang()
@@ -63,6 +64,8 @@ function M.toggle_diary()
   print('Toggle diary')
 end
 
+usercmd('ToggleDiary', M.toggle_diary, {})
+
 function M.toggle_document_color()
   if vim.lsp.document_color.is_enabled() then
     vim.lsp.document_color.enable(false)
@@ -72,6 +75,8 @@ function M.toggle_document_color()
     print('Enable document color')
   end
 end
+
+usercmd('ToggleDocumentColor', M.toggle_document_color, {})
 
 vim.g.codeium_enabled = false
 
@@ -85,6 +90,8 @@ function M.toggle_ia()
   end
 end
 
+usercmd('ToggleIA', M.toggle_ia, {})
+
 function M.toggle_number()
   if vim.o.number then
     vim.o.number = false
@@ -97,6 +104,8 @@ function M.toggle_number()
   end
 end
 
+usercmd('ToggleNumber', M.toggle_number, {})
+
 function M.toggle_colorcolumn()
   if vim.o.colorcolumn == '' then
     vim.o.colorcolumn = '80'
@@ -107,15 +116,21 @@ function M.toggle_colorcolumn()
   end
 end
 
+usercmd('ToggleColorColumn', M.toggle_colorcolumn, {})
+
 function M.toggle_relativenumber()
   vim.o.relativenumber = not vim.o.relativenumber
   print('Relative number ' .. (vim.o.relativenumber and 'off' or 'on'))
 end
 
+usercmd('ToggleRelativeNumber', M.toggle_relativenumber, {})
+
 function M.toggle_listchars()
   vim.o.list = not vim.o.list
   print('List ' .. (vim.o.list and 'on' or 'off'))
 end
+
+usercmd('ToggleListChars', M.toggle_listchars, {})
 
 vim.g.minipairs_disable = true
 
@@ -123,6 +138,8 @@ function M.toggle_pairs()
   vim.g.minipairs_disable = not vim.g.minipairs_disable
   print('Pairs ' .. (vim.g.minipairs_disable and 'off' or 'on'))
 end
+
+usercmd('TogglePairs', M.toggle_pairs, {})
 
 function M.toggle_spelllang()
   if vim.o.spelllang == 'en' then
@@ -135,6 +152,8 @@ function M.toggle_spelllang()
     print('Disable spellang')
   end
 end
+
+usercmd('ToggleSpellLang', M.toggle_spelllang, {})
 
 function M.toggle_wrap()
   if vim.wo.wrap then
@@ -149,6 +168,8 @@ function M.toggle_wrap()
     print('Wrap enable')
   end
 end
+
+usercmd('ToggleWrap', M.toggle_wrap, {})
 
 function M.is_netrw_open()
   for _, buf in ipairs(vim.api.nvim_list_bufs()) do

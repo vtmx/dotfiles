@@ -461,7 +461,7 @@ map(
 )
 
 map(
-  'n', '<leader>r', '<cmd>w<cr><cmd>restart<cr><cmd>echo "restart"<cr>',
+  'n', '<leader>r', '<cmd>w<cr><cmd>restart<cr>',
   { desc = 'Reload config file' }
 )
 
@@ -506,7 +506,7 @@ map(
 )
 
 map(
-  'n', '<leader>ucw', function() utils.toggle_cursorword() end,
+  'n', '<leader>ucw', '<cmd>ToggleCursorWord<cr>',
   { desc = 'Toggle cursorword' }
 )
 
