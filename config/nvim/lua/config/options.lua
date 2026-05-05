@@ -29,6 +29,7 @@ local opts = {
 }
 
 local globals = {
+  health = { style = 'float' },
   loaded_gzip = 0,
   loaded_node_provider = 0,
   loaded_perl_provider = 0,
