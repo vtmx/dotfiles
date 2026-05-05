@@ -3,19 +3,14 @@ vim.pack.add({
   'https://github.com/neovim/nvim-lspconfig',
 })
 
-require('mason').setup({
-  ui = { border = 'rounded' }
-})
+-- Ativar somente para instalar os LSPs
+-- require('mason').setup()
+-- :Mason
 
 local function lsp(name, config)
   vim.lsp.config(name, config)
   vim.lsp.enable(name)
 end
-
--- Global
-vim.lsp.config('*', {
-  window = { border = 'rounded' },
-})
 
 -- Bash
 lsp('bashls', {
@@ -27,6 +22,12 @@ lsp('bashls', {
       shellcheckArguments = { '-e SC2086' },
     }
   }
+})
+
+-- C
+lsp('clangd', {
+  cmd = { 'clangd' },
+  filetypes = { 'c', 'h' },
 })
 
 -- CSS
@@ -54,7 +55,7 @@ lsp('emmet_ls', {
 -- Go
 lsp('gopls', {
   cmd = { 'gopls' },
-  filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+  filetypes = { 'go', 'gomod' },
 })
 
 -- HTML
@@ -110,3 +111,13 @@ vim.diagnostic.config({
 
 -- Desativa módulo de cores padrão (chato)
 vim.lsp.document_color.enable(false)
+
+-- Ativa auto-complete
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end
+})

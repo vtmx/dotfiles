@@ -408,12 +408,8 @@ local hl_groups = {
   CodeiumAnnotation = { fg = c.fg },
   CodeiumSuggestion = { fg = c.fd },
 
-  -- hop
-  HopNextKey   = { fg = c.red     },
-  HopNextKey1  = { fg = c.blue    },
-  HopNextKey2  = { fg = c.orange  },
-  HopNextKey3  = { fg = c.magenta },
-  HopUnmatched = { fg = c.fd      },
+  -- mason
+  MasonBackdrop     = { bg = '#000000', blend = 100 },
 
   -- mini-cursorword
   MiniCursorword        = { fg = c.yellow },
@@ -424,9 +420,10 @@ local hl_groups = {
   MiniFilesTitleFocused = { fg = c.fg     },
 
   -- mini-jump2d
-  MiniJump2dSpot        = { fg = c.red    },
-  MiniJump2dSpotUnique  = { fg = c.blue   },
-  MiniJump2dSpotAhead   = { fg = c.yellow },
+  MiniJump2dDim         = { link = 'Comment' },
+  MiniJump2dSpotAhead   = { fg = c.yellow    },
+  MiniJump2dSpot        = { fg = c.red       },
+  MiniJump2dSpotUnique  = { fg = c.blue      },
 
   -- mini-statusline
   MiniStatuslineRecording = { fg = c.red },

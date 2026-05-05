@@ -2,7 +2,8 @@ local opts = {
   autochdir = true,
   autocomplete = true,
   clipboard = 'unnamedplus',
-  completeopt = { 'menu', 'menuone' },
+  complete = { 'o' },
+  completeopt = { 'menu', 'menuone', 'noselect' },
   cursorline = true,
   diffopt = 'internal,filler,closeoff,indent-heuristic,linematch:60,algorithm:histogram',
   expandtab = true,
@@ -10,7 +11,9 @@ local opts = {
   lazyredraw = true,
   listchars = { eol = '↲', nbsp = '+', space = '.', tab = '›-', trail = '⋯' },
   number = true,
+  path = { '**' },
   pumborder = 'rounded',
+  pumheight = 5,
   relativenumber = true,
   scrolloff = 8,
   shiftwidth = 2,
@@ -20,8 +23,9 @@ local opts = {
   splitright = true,
   swapfile = false,
   tabstop = 2,
+  wildignore = { 'node_modules/**', 'dist/**', 'public/**' },
   winborder = 'rounded',
-  wrap = false
+  wrap = false,
 }
 
 local globals = {
@@ -40,7 +44,7 @@ local globals = {
   netrw_keepdir = 0,
   netrw_liststyle = 3,
   netrw_winsize = 20,
-  vim_markdown_folding_disabled = true
+  vim_markdown_folding_disabled = true,
 }
 
 -- Set options
@@ -52,12 +56,6 @@ end
 for key, value in pairs(globals) do
   vim.g[key] = value
 end
-
--- Search recursive
-vim.opt.path:append('**')
-
--- Ignore dirs
-vim.opt.wildignore:append { 'node_modules/**', 'dist/**', 'public/**' }
 
 -- Set colorscheme
 vim.cmd.colorscheme('onedarkv')
