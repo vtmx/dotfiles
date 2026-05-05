@@ -1,6 +1,3 @@
-vim.pack.add({ 'https://github.com/phaazon/hop.nvim' })
-require('hop').setup()
-
 vim.pack.add({ 'https://github.com/nvim-mini/mini.align' })
 require('mini.align').setup()
 

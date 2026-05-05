@@ -84,26 +84,16 @@ map(
 )
 
 map(
-  'n', 's', '<cmd>HopChar1<cr>',
+  'n', 's', function()
+    require('mini.jump2d').start(require('mini.jump2d').builtin_opts.single_character)
+  end,
   { desc = 'Char' }
 )
 
 map(
-  'n', 'S', '<cmd>HopAnywhere<cr>',
+  'n', 'S', function() require('mini.jump2d').start() end,
   { desc = 'Char anywhere' }
 )
-
--- map(
---   'n', 's', function()
---     require('mini.jump2d').start(require('mini.jump2d').builtin_opts.single_character)
---   end,
---   { desc = 'Char' }
--- )
---
--- map(
---   'n', 'S', function() require('mini.jump2d').start() end,
---   { desc = 'Char anywhere' }
--- )
 
 map(
   'n', 'U', '<c-r>',
@@ -501,12 +491,12 @@ map(
 )
 
 map(
-  'n', '<leader>t', '<cmd>below term<cr>',
+  'n', '<leader>t', '<cmd>below term<cr>i',
   { desc = 'Open terminal' }
 )
 
 map(
-  'n', '<leader>T', '<cmd>vert term<cr>',
+  'n', '<leader>T', '<cmd>vert term<cr>i',
   { desc = 'Open vertical terminal' }
 )
 
@@ -671,4 +661,3 @@ map(
   'n', '<leader><leader>u', '<cmd>:lua vim.pack.update()<cr>',
   { desc = 'Update plugins' }
 )
-
