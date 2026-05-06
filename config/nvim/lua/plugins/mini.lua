@@ -12,13 +12,11 @@ require('mini.files').setup({
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.jump2d' })
 require('mini.jump2d').setup({
-  opts = {
-    mappings = {
-      start_jumping = '',
-    },
-    view = {
-      dim = true
-    }
+  mappings = {
+    start_jumping = '',
+  },
+  view = {
+    dim = true
   }
 })
 
