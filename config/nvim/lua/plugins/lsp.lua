@@ -4,7 +4,7 @@ vim.pack.add({
 })
 
 -- Ativar somente para instalar os LSPs
--- require('mason').setup()
+require('mason').setup()
 -- :Mason
 
 local function lsp(name, config)
@@ -27,28 +27,20 @@ lsp('bashls', {
 -- C
 lsp('clangd', {
   cmd = { 'clangd' },
-  filetypes = { 'c', 'h' },
+  filetypes = { 'c' },
 })
 
 -- CSS
-lsp('cssls', {
-  cmd = { 'vscode-css-language-server', '--stdio' },
-  filetypes = { 'css', 'scss' },
-  settings = {
-    css = {
-      validate = true,
-      lint = { unknownAtRules = 'warning' },
-    },
-    scss = { validate = true },
-  }
-})
+-- lsp('cssls', {
+--   cmd = { 'vscode-css-language-server', '--stdio' },
+--   filetypes = { 'css', 'scss' },
+-- })
 
-lsp('emmet_ls', {
-  cmd = { 'emmet-ls', '--stdio' },
+lsp('emmet_language_server', {
+  cmd = { 'emmet-language-server', '--stdio' },
   filetypes = { 'css', 'scss', 'html' },
   init_options = {
-    showAbbreviationSuggestions = true,
-    showExpandedAbbreviation = 'always',
+    showSuggestionsAsSnippets = true,
   }
 })
 
@@ -59,25 +51,25 @@ lsp('gopls', {
 })
 
 -- HTML
-lsp('html', {
-  cmd = { 'vscode-html-language-server', '--stdio' },
-  filetypes = { 'html' },
-  settings = {
-    html = {
-      format = {
-        templating = true,
-        wrapAttributes = 'auto',
-      },
-      hover = {
-        documentation = true,
-        references = true,
-      },
-      suggest = {
-        html5 = true,
-      },
-    },
-  },
-})
+-- lsp('html', {
+--   cmd = { 'vscode-html-language-server', '--stdio' },
+--   filetypes = { 'html' },
+--   settings = {
+--     html = {
+--       format = {
+--         templating = true,
+--         wrapAttributes = 'auto',
+--       },
+--       hover = {
+--         documentation = true,
+--         references = true,
+--       },
+--       suggest = {
+--         html5 = true,
+--       },
+--     },
+--   },
+-- })
 
 -- Lua
 lsp('lua_ls', {

@@ -461,7 +461,7 @@ map(
 )
 
 map(
-  'n', '<leader>r', '<cmd>w<cr><cmd>restart<cr>',
+  'n', '<leader>r', '<cmd>restart<cr>',
   { desc = 'Reload config file' }
 )
 

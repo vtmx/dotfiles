@@ -104,9 +104,11 @@ local hl_groups = {
   ColorColumn    = { bg = c.bl },
 
   -- Pmenu
-  Pmenu          = { bg = c.bg },
   Pmenuac        = { bg = c.bl },
+  Pmenu          = { bg = c.bg },
   PmenuBorder    = { fg = c.fg },
+  PmenuExtra     = { link = 'Comment' },
+  PmenuKind      = { link = 'Comment' },
   PmenuSbar      = { bg = c.bd },
   PmenuSel       = { bg = c.bl },
   PmenuThumb     = { bg = c.fg },
@@ -180,11 +182,14 @@ local hl_groups = {
 
   -- css
   cssAtRule          = { link = 'Identifier'  },
+  cssFunction        = { link = 'Function'    },
+  cssFunctionName    = { link = 'Function'    },
   cssBraces          = { link = 'Normal'      },
   cssClassName       = { link = 'Identifier'  },
   cssClassNameDot    = { link = 'Identifier'  },
   cssIdentifier      = { link = 'Identifier'  },
   cssTagName         = { link = 'Identifier'  },
+  cssVendor          = { link = 'Normal'      },
 
   -- dosini
   dosiniHeader       = { link = 'Identifier'  },
@@ -192,23 +197,23 @@ local hl_groups = {
   dosiniValue        = { link = 'Normal'      },
 
   -- html
-  djangoTagBlock     = { link = 'Normal'     },
-  djangoStatement    = { link = 'Normal'     },
-  djangoFilter       = { link = 'Include'    },
-  djangoVarBlock     = { link = 'Include'    },
-  htmlArg            = { link = 'Number'     },
-  htmlH1             = { link = 'Normal'     },
-  htmlH2             = { link = 'Normal'     },
-  htmlH3             = { link = 'Normal'     },
-  htmlH4             = { link = 'Normal'     },
-  htmlH5             = { link = 'Normal'     },
-  htmlH6             = { link = 'Normal'     },
-  htmlSpecialTagName = { link = 'Definition' },
-  htmlTag            = { link = 'Normal'     },
-  htmlEndTag         = { link = 'Normal'     },
-  htmlTagName        = { link = 'Definition' },
-  htmlTitle          = { link = 'Normal'     },
-  htmlLink           = { link = 'Normal'     },
+  djangoTagBlock     = { link = 'Normal'      },
+  djangoStatement    = { link = 'Normal'      },
+  djangoFilter       = { link = 'Include'     },
+  djangoVarBlock     = { link = 'Include'     },
+  htmlArg            = { link = 'Number'      },
+  htmlH1             = { link = 'Normal'      },
+  htmlH2             = { link = 'Normal'      },
+  htmlH3             = { link = 'Normal'      },
+  htmlH4             = { link = 'Normal'      },
+  htmlH5             = { link = 'Normal'      },
+  htmlH6             = { link = 'Normal'      },
+  htmlSpecialTagName = { link = 'htmlTagName' },
+  htmlTag            = { link = 'Normal'      },
+  htmlEndTag         = { link = 'Normal'      },
+  htmlTagName        = { fg = c.red           },
+  htmlTitle          = { link = 'Normal'      },
+  htmlLink           = { link = 'Normal'      },
 
   -- js
   javaScriptBraces   = { link = 'Delimiter'      },
@@ -424,7 +429,7 @@ local hl_groups = {
   MiniJump2dDim         = { link = 'Comment' },
   MiniJump2dSpotAhead   = { fg = c.yellow    },
   MiniJump2dSpot        = { fg = c.red       },
-  MiniJump2dSpotUnique  = { fg = c.blue      },
+  MiniJump2dSpotUnique  = { fg = c.red      },
 
   -- mini-statusline
   MiniStatuslineRecording = { fg = c.red },
