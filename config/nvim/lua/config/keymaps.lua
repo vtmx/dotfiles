@@ -451,16 +451,6 @@ map(
 )
 
 map(
-  'n', '<leader>q', '<cmd>q<cr>',
-  { desc = 'Quit' }
-)
-
-map(
-  'n', '<leader>Q', '<cmd>!q<cr>',
-  { desc = 'Force quit' }
-)
-
-map(
   'n', '<leader>r', '<cmd>restart<cr>',
   { desc = 'Reload config file' }
 )
@@ -568,11 +558,6 @@ map(
 map(
   'n', '<leader>uz', '<cmd>ZenMode<cr>',
   { desc = 'ZenMode' }
-)
-
-map(
-  'n', '<leader>w', '<cmd>w<cr>',
-  { desc = 'Save file' }
 )
 
 map(
