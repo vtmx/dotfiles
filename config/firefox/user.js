@@ -222,6 +222,22 @@ user_pref("browser.download.useDownloadDir", false);
 // Compact mode
 user_pref("browser.compactmode.show", true);
 
-/****************************************************************************
- * END: BETTERFOX                                                           *
-****************************************************************************/
+// Interval save session
+user_pref("browser.sessionstore.interval", 3000000);
+
+// Return blank page if crach
+user_pref("browser.sessionstore.resume_from_crash", false);
+
+// Return blank page if crach
+user_pref("browser.sessionstore.max_resumed_crashes", 0);
+
+// Medium consuming ram
+user_pref("dom.ipc.processCount", 4);
+
+// Image decode
+user_pref("image.mem.decode_bytes_at_a_time", 8192);
+
+// No autoplay
+user_pref("media.autoplay.default", 1);
+
+

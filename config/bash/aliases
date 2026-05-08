@@ -55,7 +55,7 @@ alias cdp="cd $HOME/Dev/projects"
 alias cdt="cd $HOME/Downloads/temp"
 
 # du list size files
-alias dush="du -h --max-depth=1 | sort -hr"
+alias dush="du -h --max-depth=1"
 
 # chmod
 alias chx="chmod +x"
