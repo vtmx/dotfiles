@@ -4,7 +4,7 @@ local map = vim.keymap.set
 -- Normal
 
 map(
-  {'n', 'x'}, 'ç', ':',
+  { 'n', 'x' }, 'ç', ':',
   { desc = 'Enter in command mode' }
 )
 

@@ -181,6 +181,9 @@ alias pstree="pstree -npTC age"
 # rename
 alias rename="perl-rename"
 
+# remove dir
+alias rmr="rm -rf"
+
 # source
 alias so="source"
 

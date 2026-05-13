@@ -1,8 +1,8 @@
 local c = {
   bd      = '#1e2227',
   bg      = '#23272e',
-  bl      = '#2c313c', -- cursorline
-  fd      = '#5f6672', -- comment
+  bl      = '#2c313c',
+  fd      = '#5f6672',
   fg      = '#abb2bf',
   sel     = '#3d4556',
   red     = '#e06c75',
@@ -16,11 +16,16 @@ local c = {
 
 local hl_groups = {
   -- General
-  Normal         = { bg = c.bg, fg = c.fg, ctermbg = 234, ctermfg = 250 },
-  Comment        = { fg = c.fd, ctermfg = 7 },
-  Cursor         = { bg = c.fg, fg = c.bg   },
-  Title          = { link = 'Normal'        },
-  Twilight       = { link = 'Comment'       },
+  Normal         = { bg = c.bg, fg = c.fg },
+  Comment        = { fg = c.fd            },
+  Cursor         = { bg = c.fg, fg = c.bg },
+  CursorLine     = { bg = c.bl            },
+  EndOfBuffer    = { fg = c.bg            },
+  TermCursor     = { fg = c.fg            },
+  Title          = { link = 'Normal'      },
+  Twilight       = { link = 'Comment'     },
+  Visual         = { bg = c.sel           },
+
 
   -- Sintaxy
   Boolean        = { fg = c.orange  },
@@ -60,19 +65,28 @@ local hl_groups = {
   Changed        = { fg = c.blue   },
   Debug          = { fg = c.yellow },
   Directory      = { fg = c.blue   },
-  EndOfBuffer    = { fg = c.bg     }, -- Line tilde blank
   NonText        = { fg = c.fd     },
   SpecialChar    = { fg = c.orange },
   SpecialComment = { fg = c.fd     },
   Special        = { fg = c.fg     },
   SpecialKey     = { fg = c.cyan   },
-  TermCursor     = { fg = c.fg     },
+
+  -- Line number column
+  CursorLineFold = { fg = c.fg  },
+  CursorLineNr   = { fg = c.fg  },
+  CursorLineSign = { fg = c.fg  },
+  LineNr         = { fg = c.sel },
+  LineNrAbove    = { fg = c.sel },
+  LineNrBelow    = { fg = c.sel },
+
+  -- ColorColumn
+  ColorColumn    = { bg = c.bl },
 
   -- Search
-  IncSearch      = { bg = c.sel     },
-  Search         = { bg = c.sel     },
+  Conceal        = { bg = c.sel      },
   CurSearch      = { bg = c.fg, fg = c.bg },
-  Conceal        = { bg = c.sel     },
+  IncSearch      = { bg = c.sel      },
+  Search         = { bg = c.sel      },
   SnippetTabStop = { link = 'Normal' },
 
   -- Messages
@@ -85,23 +99,6 @@ local hl_groups = {
   Ignore         = { fg = c.fg      },
   Error          = { fg = c.red     },
   Todo           = { fg = c.magenta },
-
-  -- Line highlight
-  CursorLine     = { bg = c.bl },
-
-  -- Select text
-  Visual         = { bg = c.sel },
-
-  -- Line number column
-  CursorLineFold = { fg = c.fg  },
-  CursorLineNr   = { fg = c.fg  },
-  CursorLineSign = { fg = c.fg  },
-  LineNr         = { fg = c.sel },
-  LineNrAbove    = { fg = c.sel },
-  LineNrBelow    = { fg = c.sel },
-
-  -- ColorColumn
-  ColorColumn    = { bg = c.bl },
 
   -- Pmenu
   Pmenuac        = { bg = c.bl },
@@ -129,10 +126,10 @@ local hl_groups = {
   StatusLineNC   = { link = 'Normal' },
 
   -- Spell
-  SpellBad   = { sp = c.red, undercurl = true },
-  SpellCap   = { sp = c.blue, undercurl = true },
+  SpellBad   = { sp = c.red, undercurl = true     },
+  SpellCap   = { sp = c.blue, undercurl = true    },
   SpellRare  = { sp = c.magenta, undercurl = true },
-  SpellLocal = { sp = c.cyan, undercurl = true },
+  SpellLocal = { sp = c.cyan, undercurl = true    },
 
   -- Diagnostic
   DiagnosticError            = { fg = c.red     },
@@ -239,17 +236,17 @@ local hl_groups = {
   markdownCodeDelimiter    = { link = 'Normal'   },
   markdownId               = { link = 'Normal'   },
   markdownH1               = { link = 'Normal'   },
-  markdownH1Delimiter      = { link = 'Function' },
+  markdownH1Delimiter      = { link = 'Normal'   },
   markdownH2               = { link = 'Normal'   },
-  markdownH2Delimiter      = { link = 'Function' },
+  markdownH2Delimiter      = { link = 'Normal'   },
   markdownH3               = { link = 'Normal'   },
-  markdownH3Delimiter      = { link = 'Function' },
+  markdownH3Delimiter      = { link = 'Normal'   },
   markdownH4               = { link = 'Normal'   },
-  markdownH4Delimiter      = { link = 'Function' },
+  markdownH4Delimiter      = { link = 'Normal'   },
   markdownH5               = { link = 'Normal'   },
-  markdownH5Delimiter      = { link = 'Function' },
+  markdownH5Delimiter      = { link = 'Normal'   },
   markdownH6               = { link = 'Normal'   },
-  markdownH6Delimiter      = { link = 'Function' },
+  markdownH6Delimiter      = { link = 'Normal'   },
   markdownHeadingDelimiter = { link = 'Normal'   },
   markdownHeadingRule      = { link = 'Normal'   },
   markdownListMarker       = { link = 'Normal'   },
@@ -351,12 +348,12 @@ local hl_groups = {
 
   -- Markup
   ['@label.markdown']            = { link = 'Normal'     },
-  ['@markup.heading.1.markdown'] = { link = 'Function'   },
-  ['@markup.heading.2.markdown'] = { link = 'Function'   },
-  ['@markup.heading.3.markdown'] = { link = 'Function'   },
-  ['@markup.heading.4.markdown'] = { link = 'Function'   },
-  ['@markup.heading.5.markdown'] = { link = 'Function'   },
-  ['@markup.heading.6.markdown'] = { link = 'Function'   },
+  ['@markup.heading.1.markdown'] = { link = 'Normal'     },
+  ['@markup.heading.2.markdown'] = { link = 'Normal'     },
+  ['@markup.heading.3.markdown'] = { link = 'Normal'     },
+  ['@markup.heading.4.markdown'] = { link = 'Normal'     },
+  ['@markup.heading.5.markdown'] = { link = 'Normal'     },
+  ['@markup.heading.6.markdown'] = { link = 'Normal'     },
   ['@markup.heading']            = { link = 'Title'      },
   ['@markup.link.label']         = { link = 'Normal'     },
   ['@markup.link']               = { link = 'Identifier' },
@@ -429,7 +426,7 @@ local hl_groups = {
   MiniJump2dDim         = { link = 'Comment' },
   MiniJump2dSpotAhead   = { fg = c.yellow    },
   MiniJump2dSpot        = { fg = c.red       },
-  MiniJump2dSpotUnique  = { fg = c.red      },
+  MiniJump2dSpotUnique  = { fg = c.red       },
 
   -- mini-statusline
   MiniStatuslineRecording = { fg = c.red },
