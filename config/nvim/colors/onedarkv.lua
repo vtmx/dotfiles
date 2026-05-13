@@ -26,7 +26,6 @@ local hl_groups = {
   Twilight       = { link = 'Comment'     },
   Visual         = { bg = c.sel           },
 
-
   -- Sintaxy
   Boolean        = { fg = c.orange  },
   Character      = { fg = c.green   },
@@ -58,7 +57,7 @@ local hl_groups = {
 
   -- Keys [] {} ()
   Delimiter      = { fg = c.fg     },
-  MatchParen     = { fg = c.yellow }, -- when inner block
+  MatchParen     = { fg = c.yellow },
 
   -- Extras
   Added          = { fg = c.green  },
@@ -194,30 +193,30 @@ local hl_groups = {
   dosiniValue        = { link = 'Normal'      },
 
   -- html
-  djangoTagBlock     = { link = 'Normal'      },
-  djangoStatement    = { link = 'Normal'      },
   djangoFilter       = { link = 'Include'     },
+  djangoStatement    = { link = 'Normal'      },
+  djangoTagBlock     = { link = 'Normal'      },
   djangoVarBlock     = { link = 'Include'     },
   htmlArg            = { link = 'Number'      },
+  htmlEndTag         = { link = 'Normal'      },
   htmlH1             = { link = 'Normal'      },
   htmlH2             = { link = 'Normal'      },
   htmlH3             = { link = 'Normal'      },
   htmlH4             = { link = 'Normal'      },
   htmlH5             = { link = 'Normal'      },
   htmlH6             = { link = 'Normal'      },
+  htmlLink           = { link = 'Normal'      },
   htmlSpecialTagName = { link = 'htmlTagName' },
   htmlTag            = { link = 'Normal'      },
-  htmlEndTag         = { link = 'Normal'      },
   htmlTagName        = { fg = c.red           },
   htmlTitle          = { link = 'Normal'      },
-  htmlLink           = { link = 'Normal'      },
 
   -- js
-  javaScriptBraces   = { link = 'Delimiter'      },
-  javaScriptFunction = { fg = c.fg               },
+  javaScriptBraces   = { link = 'Delimiter'   },
+  javaScriptFunction = { fg = c.fg            },
 
   -- json
-  jsonCommentError   = { link = 'Comment'        },
+  jsonCommentError   = { link = 'Comment'     },
 
   -- kitty
   KittyAction     = { link = 'Normal'     },
@@ -234,21 +233,21 @@ local hl_groups = {
   -- markdown
   markdownBlockquote       = { link = 'Normal'   },
   markdownCodeDelimiter    = { link = 'Normal'   },
-  markdownId               = { link = 'Normal'   },
-  markdownH1               = { link = 'Normal'   },
   markdownH1Delimiter      = { link = 'Normal'   },
-  markdownH2               = { link = 'Normal'   },
+  markdownH1               = { link = 'Normal'   },
   markdownH2Delimiter      = { link = 'Normal'   },
-  markdownH3               = { link = 'Normal'   },
+  markdownH2               = { link = 'Normal'   },
   markdownH3Delimiter      = { link = 'Normal'   },
-  markdownH4               = { link = 'Normal'   },
+  markdownH3               = { link = 'Normal'   },
   markdownH4Delimiter      = { link = 'Normal'   },
-  markdownH5               = { link = 'Normal'   },
+  markdownH4               = { link = 'Normal'   },
   markdownH5Delimiter      = { link = 'Normal'   },
-  markdownH6               = { link = 'Normal'   },
+  markdownH5               = { link = 'Normal'   },
   markdownH6Delimiter      = { link = 'Normal'   },
+  markdownH6               = { link = 'Normal'   },
   markdownHeadingDelimiter = { link = 'Normal'   },
   markdownHeadingRule      = { link = 'Normal'   },
+  markdownId               = { link = 'Normal'   },
   markdownListMarker       = { link = 'Normal'   },
   markdownRule             = { link = 'Normal'   },
   markdownUrl              = { link = 'Normal'   },
@@ -365,9 +364,9 @@ local hl_groups = {
   ['@text.literal']       = { link = 'Comment'         },
   ['@text.reference']     = { link = 'Identifier'      },
   ['@text.title']         = { link = 'Title'           },
-  ['@text.uri']           = { link = 'Underlined'      },
-  ['@text.underline']     = { link = 'Underlined'      },
   ['@text.todo']          = { link = 'Todo'            },
+  ['@text.underline']     = { link = 'Underlined'      },
+  ['@text.uri']           = { link = 'Underlined'      },
 
   -- Languages
 
@@ -383,22 +382,22 @@ local hl_groups = {
   ['@variable.parameter.bash']  = { link = 'Normal'     },
 
   -- css
-  ['@selectors.css'] = { link = 'Identifier' },
   ['@function.css']  = { link = 'Function'   },
   ['@property.css']  = { link = 'Normal'     },
+  ['@selectors.css'] = { link = 'Identifier' },
   ['@value.css']     = { link = 'Number'     },
 
   -- html
-  ['@tag.html']                = { link = 'Identifier' },
   ['@constant.html']           = { link = 'Normal'     },
   ['@string.special.url.html'] = { link = 'String'     },
+  ['@tag.html']                = { link = 'Identifier' },
 
   -- lua
   ['@string.escape.lua']       = { link = 'String'     },
 
   -- vimdoc
   ['@comment.note.vimdoc']     = { link = 'Normal'     },
-  ['@label.vimdoc']            = { link = 'Identifier' },
+  ['@label.vimdoc']            = { link = 'Keyword'    },
   ['@markup.link.vimdoc']      = { link = 'Function'   },
   ['@markup.raw.block.vimdoc'] = { link = 'Normal'     },
   ['@markup.raw.vimdoc']       = { link = 'Normal'     },
