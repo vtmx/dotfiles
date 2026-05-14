@@ -435,9 +435,9 @@ local hl_groups = {
 
   -- snacks
   SnacksBackdrop         = { bg = '#000000', blend = 100 },
-  SnacksIndent           = { fg    = c.sel          },
-  SnacksIndentScope      = { link  = 'SnacksIndent' },
-  SnacksPickerCursorLine = { link  = 'Normal'       },
+  SnacksIndent           = { fg    = c.sel               },
+  SnacksIndentScope      = { link  = 'SnacksIndent'      },
+  SnacksPickerCursorLine = { link  = 'Normal'            },
 }
 
 -- Clear colors
