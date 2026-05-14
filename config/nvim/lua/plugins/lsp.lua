@@ -3,9 +3,7 @@ vim.pack.add({
   'https://github.com/neovim/nvim-lspconfig',
 })
 
--- Ativar somente para instalar os LSPs
--- require('mason').setup()
--- :Mason
+require('mason').setup()
 
 local function lsp(name, config)
   vim.lsp.config(name, config)
@@ -30,12 +28,7 @@ lsp('clangd', {
   filetypes = { 'c' },
 })
 
--- CSS
--- lsp('cssls', {
---   cmd = { 'vscode-css-language-server', '--stdio' },
---   filetypes = { 'css', 'scss' },
--- })
-
+-- Emmet
 lsp('emmet_language_server', {
   cmd = { 'emmet-language-server', '--stdio' },
   filetypes = { 'css', 'scss', 'html' },
@@ -49,27 +42,6 @@ lsp('gopls', {
   cmd = { 'gopls' },
   filetypes = { 'go', 'gomod' },
 })
-
--- HTML
--- lsp('html', {
---   cmd = { 'vscode-html-language-server', '--stdio' },
---   filetypes = { 'html' },
---   settings = {
---     html = {
---       format = {
---         templating = true,
---         wrapAttributes = 'auto',
---       },
---       hover = {
---         documentation = true,
---         references = true,
---       },
---       suggest = {
---         html5 = true,
---       },
---     },
---   },
--- })
 
 -- Lua
 lsp('lua_ls', {
