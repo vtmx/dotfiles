@@ -4,7 +4,7 @@ vim.pack.add({
 })
 
 -- Ativar somente para instalar os LSPs
-require('mason').setup()
+-- require('mason').setup()
 -- :Mason
 
 local function lsp(name, config)
