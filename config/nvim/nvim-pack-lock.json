@@ -4,6 +4,10 @@
       "rev": "3c0a4f8a7be75113a6e19be13b7cc37210d6e26a",
       "src": "https://github.com/Exafunction/codeium.vim"
     },
+    "conform.nvim": {
+      "rev": "18aeab3d63d350dcf44d64c462cc489a3412af40",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "mason.nvim": {
       "rev": "cb8445f8ce85d957416c106b780efd51c6298f89",
       "src": "https://github.com/williamboman/mason.nvim"

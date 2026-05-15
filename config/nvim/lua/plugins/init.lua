@@ -1,6 +1,7 @@
 require('plugins.treesitter')
 require('plugins.mini')
 require('plugins.lsp')
+require('plugins.conform')
 require('plugins.snacks')
 require('plugins.oil')
 require('vim._core.ui2').enable({})
