@@ -1,5 +1,8 @@
 ;; extends
 
+((call_expression) @call_expression
+  (#set! "priority" 110))
+
 ((comment) @comment
  (#set! "priority" 110))
 
@@ -23,7 +26,9 @@
 ;     (plain_value))))
 
 ; Vira isso
-(call_expression
-  (arguments
-    (plain_value) @value)
-  (#set! "priority" 110))
+; (call_expression
+;   (arguments
+;     (plain_value) @value)
+;   (#set! "priority" 110))
+
+;; vim: ft=query

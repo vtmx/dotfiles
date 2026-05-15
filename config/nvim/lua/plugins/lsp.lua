@@ -3,14 +3,25 @@ vim.pack.add({
   'https://github.com/neovim/nvim-lspconfig',
 })
 
-require('mason').setup()
+require('mason').setup({
+  ui = {
+    keymaps = {
+      install_package = 'i',
+      uninstall_package = 'u',
+      update_package = 'I',
+      update_all_packages = 'U',
+      check_package_version = 'c',
+      check_outdated_packages = 'C',
+    }
+  }
+})
 
 local function lsp(name, config)
   vim.lsp.config(name, config)
   vim.lsp.enable(name)
 end
 
--- Bash
+-- bash
 lsp('bashls', {
   cmd = { 'bash-language-server', 'start' },
   filetypes = { 'bash', 'sh' },
@@ -22,13 +33,13 @@ lsp('bashls', {
   }
 })
 
--- C
+-- c
 lsp('clangd', {
   cmd = { 'clangd' },
   filetypes = { 'c' },
 })
 
--- Emmet
+-- emmet
 lsp('emmet_language_server', {
   cmd = { 'emmet-language-server', '--stdio' },
   filetypes = { 'css', 'scss', 'html' },
@@ -37,13 +48,13 @@ lsp('emmet_language_server', {
   }
 })
 
--- Go
+-- go
 lsp('gopls', {
   cmd = { 'gopls' },
   filetypes = { 'go', 'gomod' },
 })
 
--- Lua
+-- lua
 lsp('lua_ls', {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
