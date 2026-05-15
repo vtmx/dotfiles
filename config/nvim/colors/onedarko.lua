@@ -1,3 +1,4 @@
+
 local c = {
   bd      = '#1e2227',
   bg      = '#23272e',
@@ -26,11 +27,11 @@ local hl_groups = {
   Twilight       = { link = 'Comment'     },
   Visual         = { bg = c.sel           },
 
-  -- Syntaxy
-  Boolean        = { fg = c.magenta },
+  -- Sintaxy
+  Boolean        = { fg = c.orange  },
   Character      = { fg = c.green   },
   Conditional    = { fg = c.magenta },
-  Constant       = { fg = c.fg      },
+  Constant       = { fg = c.orange  },
   Define         = { fg = c.magenta },
   ErrorMsg       = { fg = c.red     },
   Exception      = { fg = c.magenta },
@@ -38,26 +39,26 @@ local hl_groups = {
   Function       = { fg = c.blue    },
   Identifier     = { fg = c.red     },
   Include        = { fg = c.magenta },
-  Keyword        = { fg = c.fg      },
-  Label          = { fg = c.fg      },
-  Macro          = { fg = c.fg      },
-  Number         = { fg = c.magenta },
-  Operator       = { fg = '#88909c' },
+  Keyword        = { fg = c.magenta },
+  Label          = { fg = c.red     },
+  Macro          = { fg = c.red     },
+  Number         = { fg = c.orange  },
+  Operator       = { fg = c.fg      },
   PreCondit      = { fg = c.magenta },
-  PreProc        = { fg = c.fg      },
+  PreProc        = { fg = c.red     },
   Repeat         = { fg = c.magenta },
   Statement      = { fg = c.magenta },
   StorageClass   = { fg = c.fg      },
   String         = { fg = c.green   },
   Structure      = { fg = c.magenta },
-  Tag            = { fg = c.blue    },
+  Tag            = { fg = c.red     },
   Typedef        = { fg = c.magenta },
   Type           = { fg = c.magenta },
   Underlined     = { fg = c.blue, underline = true },
 
   -- Keys [] {} ()
-  Delimiter      = { link = 'Operator' },
-  MatchParen     = { fg = c.yellow     },
+  Delimiter      = { fg = c.fg     },
+  MatchParen     = { fg = c.yellow },
 
   -- Extras
   Added          = { fg = c.green  },
@@ -177,28 +178,14 @@ local hl_groups = {
   awkVariables       = { fg = c.red           },
 
   -- css
-  cssAtRule          = { link = 'Function'    },
-  cssAttrRegion      = { link = 'Normal'      },
-  cssBackgroundAttr  = { link = 'Normal'      },
-  cssBoxAttr         = { link = 'Normal'      },
-  cssBorderAttr      = { link = 'Normal'      },
-  cssBraces          = { link = 'Operator'    },
-  cssColor           = { link = 'Number'      },
-  cssClassNameDot    = { link = 'Function'    },
-  cssClassName       = { link = 'Function'    },
-  cssCommonAttr      = { link = 'Normal'      },
-  cssDefinition      = { link = 'Normal'      },
-  cssFlexibleBoxAttr = { link = 'Normal'      },
-  cssFontAttr        = { link = 'Normal'      },
+  cssAtRule          = { link = 'Identifier'  },
   cssFunction        = { link = 'Function'    },
   cssFunctionName    = { link = 'Function'    },
-  cssIdentifier      = { link = 'Function'    },
-  cssNoise           = { link = 'cssBraces'   },
-  cssPositioningAttr = { link = 'Normal'      },
-  cssPseudoClassId   = { link = 'Function'    },
-  cssTagName         = { link = 'Function'    },
-  cssTextAttr        = { link = 'Normal'      },
-  cssUIAttr          = { link = 'Normal'      },
+  cssBraces          = { link = 'Normal'      },
+  cssClassName       = { link = 'Identifier'  },
+  cssClassNameDot    = { link = 'Identifier'  },
+  cssIdentifier      = { link = 'Identifier'  },
+  cssTagName         = { link = 'Identifier'  },
   cssVendor          = { link = 'Normal'      },
 
   -- dosini
@@ -206,21 +193,13 @@ local hl_groups = {
   dosiniLabel        = { link = 'Function'    },
   dosiniValue        = { link = 'Normal'      },
 
-  -- go
-  goBlock            = { link = 'Operator'    },
-  goImport           = { link = 'Normal'      },
-  goPackage          = { link = 'Normal'      },
-  goParen            = { link = 'Operator'    },
-  goStatement        = { link = 'Normal'      },
-  goType             = { link = 'Normal'      },
-
   -- html
   djangoFilter       = { link = 'Include'     },
   djangoStatement    = { link = 'Normal'      },
   djangoTagBlock     = { link = 'Normal'      },
   djangoVarBlock     = { link = 'Include'     },
-  htmlArg            = { link = 'Normal'      },
-  htmlEndTag         = { link = 'htmlTag'     },
+  htmlArg            = { link = 'Number'      },
+  htmlEndTag         = { link = 'Normal'      },
   htmlH1             = { link = 'Normal'      },
   htmlH2             = { link = 'Normal'      },
   htmlH3             = { link = 'Normal'      },
@@ -228,29 +207,17 @@ local hl_groups = {
   htmlH5             = { link = 'Normal'      },
   htmlH6             = { link = 'Normal'      },
   htmlLink           = { link = 'Normal'      },
-  htmlN              = { link = 'Comment'     },
   htmlSpecialTagName = { link = 'htmlTagName' },
-  htmlTag            = { link = 'Operator'    },
-  htmlTagName        = { link = 'Function'    },
-  htmlTagN           = { link = 'htmlTag'     },
+  htmlTag            = { link = 'Normal'      },
+  htmlTagName        = { fg = c.red           },
   htmlTitle          = { link = 'Normal'      },
 
   -- js
-  javaScriptBraces     = { link = 'Operator' },
-  javaScriptOperator   = { link = 'Normal'   },
-  javaScriptType       = { link = 'Normal'   },
-  javaScriptStatement  = { link = 'Normal'   },
-  javaScriptIdentifier = { link = 'Normal'   },
-  javaScriptFunction   = { link = 'Function' },
+  javaScriptBraces   = { link = 'Delimiter'   },
+  javaScriptFunction = { fg = c.fg            },
 
   -- json
-  jsonBraces       = { link = 'Operator' },
-  jsonFold         = { link = 'Operator' },
-  jsonKeyword      = { link = 'Normal'   },
-  jsonKeywordMatch = { link = 'Operator' },
-  jsonNoise        = { link = 'Operator' },
-  jsonQuote        = { link = 'Operator' },
-  jsonCommentError = { link = 'Comment'  },
+  jsonCommentError   = { link = 'Comment'     },
 
   -- kitty
   KittyAction     = { link = 'Normal'     },
@@ -287,32 +254,11 @@ local hl_groups = {
   markdownUrl              = { link = 'Normal'   },
 
   -- sh
-  shArithRegion   = { link = 'Operator'      },
-  shCmdSubRegion  = { link = 'Operator'      },
-  shDeref         = { link = 'Normal'        },
-  shDerefOp       = { link = 'Normal'        },
-  shDerefSimple   = { link = 'Normal'        },
-  shDerefVar      = { link = 'Normal'        },
-  shDerefVarArray = { link = 'Normal'        },
-  shEcho          = { link = 'Normal'        },
-  shLoop          = { link = 'shConditional' },
-  shQuote         = { link = 'String'        },
-  shStatement     = { link = 'Normal'        },
-  shTestOpr       = { link = 'Normal'        },
-  shVarAssign     = { link = 'Operator'      },
-  shVariable      = { link = 'Normal'        },
+  shDeref            = { link = 'Identifier'     },
+  shQuote            = { link = 'String'         },
 
   -- toml
-  tomlKey   = { link = 'Normal'   },
-  tomlTable = { link = 'Function' },
-
-  -- vim
-  vimAutoEvent    = { link = 'Normal'   },
-  vimCommand      = { link = 'Normal'   },
-  vimFunction     = { link = 'Normal'   },
-  vimFunctionName = { link = 'Function' },
-  vimMap          = { link = 'Function' },
-  vimVarScope     = { link = 'Normal'   },
+  tomlTable          = { link = 'Function'       },
 
   -- tree-sitter
 
@@ -426,60 +372,36 @@ local hl_groups = {
   -- Languages
 
   -- bash
-  ['@constant.bash']             = { link = 'Identifier' },
-  ['@function.builtin.bash']     = { link = 'Function'   },
-  ['@function.call.bash']        = { link = 'Normal'     },
-  ['@keyword.directive.bash']    = { link = 'Comment'    },
-  ['@punctuation.special.bash']  = { link = 'Identifier' },
-  ['@string.regexp.bash']        = { link = 'Normal'     },
-  ['@variable.bash']             = { link = 'Identifier' },
-  ['@variable.builtin.bash']     = { link = 'Identifier' },
-  ['@variable.parameter.bash']   = { link = 'Normal'     },
+  ['@constant.bash']            = { link = 'Identifier' },
+  ['@function.builtin.bash']    = { link = 'Function'   },
+  ['@function.call.bash']       = { link = 'Normal'     },
+  ['@keyword.directive.bash']   = { link = 'Comment'    },
+  ['@punctuation.special.bash'] = { link = 'Identifier' },
+  ['@string.regexp.bash']       = { link = 'Normal'     },
+  ['@variable.bash']            = { link = 'Identifier' },
+  ['@variable.builtin.bash']    = { link = 'Identifier' },
+  ['@variable.parameter.bash']  = { link = 'Normal'     },
 
   -- css
-  ['@function.css']              = { link = 'Function'   },
-  ['@property.css']              = { link = 'Normal'     },
-  ['@selectors.css']             = { link = 'Function'   },
-  ['@value.css']                 = { link = 'Number'     },
-
-  -- go
-  ['@string.escape.go']          = { link = 'String'     },
-  ['@function.method.call.go']   = { link = 'Normal'     },
+  ['@function.css']  = { link = 'Function'   },
+  ['@property.css']  = { link = 'Normal'     },
+  ['@selectors.css'] = { link = 'Identifier' },
+  ['@value.css']     = { link = 'Number'     },
 
   -- html
-  ['@constant.html']             = { link = 'Comment'    },
-  ['@string.special.url.html']   = { link = 'String'     },
-  ['@tag.attribute.html']        = { link = 'Normal'     },
-  ['@tag.delimiter.html']        = { link = 'Operator'   },
-  ['@tag.html']                  = { link = 'Function'   },
+  ['@constant.html']           = { link = 'Normal'     },
+  ['@string.special.url.html'] = { link = 'String'     },
+  ['@tag.html']                = { link = 'Identifier' },
 
   -- lua
-  ['@constructor.lua']           = { link = 'Operator' },
-  ['@function.call.lua']         = { link = 'Normal'   },
-  ['@lsp.type.parameter.lua']    = { link = 'Normal'   },
-  ['@lsp.type.property.lua']     = { link = 'Normal'   },
-  ['@property.lua']              = { link = 'Normal'   },
-  ['@punctuation.delimiter.lua'] = { link = 'Operator' },
-  ['@string.escape.lua']         = { link = 'String'   },
-  ['@variable.member.lua']       = { link = 'Normal'   },
-  ['@variable.parameter.lua']    = { link = 'Normal'   },
-
-  -- query
-  ['@nospell.query']             = { link = 'Comment'  },
-  ['@spell.query']               = { link = 'Comment'  },
+  ['@string.escape.lua']       = { link = 'String'     },
 
   -- vimdoc
-  ['@comment.note.vimdoc']       = { link = 'Normal'   },
-  ['@label.vimdoc']              = { link = 'Keyword'  },
-  ['@markup.link.vimdoc']        = { link = 'Function' },
-  ['@string.special.vimdoc']     = { link = 'Function' },
-  ['@string.special.url.vimdoc'] = { link = 'Function' },
-  ['@markup.raw.block.vimdoc']   = { link = 'Normal'   },
-  ['@markup.raw.vimdoc']         = { link = 'Normal'   },
-  ['@variable.parameter.vimdoc'] = { link = 'Number'   },
-
-  --vim
-  ['@function.macro.vim']      = { link = 'Normal'     },
+  ['@comment.note.vimdoc']     = { link = 'Normal'     },
+  ['@label.vimdoc']            = { link = 'Keyword'    },
+  ['@markup.link.vimdoc']      = { link = 'Function'   },
+  ['@markup.raw.block.vimdoc'] = { link = 'Normal'     },
+  ['@markup.raw.vimdoc']       = { link = 'Normal'     },
 
 ------------------------------------------------------------
 -- Plugins
@@ -517,7 +439,6 @@ local hl_groups = {
   SnacksIndent           = { fg    = c.sel               },
   SnacksIndentScope      = { link  = 'SnacksIndent'      },
   SnacksPickerCursorLine = { link  = 'Normal'            },
-  SnacksPickerDir        = { link  = 'Normal'            },
 }
 
 -- Clear colors
@@ -534,5 +455,5 @@ for name, val in pairs(hl_groups) do
 end
 
 -- Load colorscheme
-vim.g.colors_name = 'onedarkv'
+vim.g.colors_name = 'onedarko'
 vim.opt.termguicolors = true

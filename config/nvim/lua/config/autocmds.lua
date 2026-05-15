@@ -12,7 +12,7 @@ autocmd('CursorMoved', {
   end
 })
 
--- Highlight yank
+-- Text Yank Highlight
 autocmd('TextYankPost', {
   callback = function()
     if vim.version().minor >= 11 then

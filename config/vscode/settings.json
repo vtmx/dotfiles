@@ -82,6 +82,7 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.enablePreview": true,
   "workbench.editor.labelFormat": "default",
+  "workbench.editor.useModal": "off",
   "workbench.iconTheme": "vs-minimal",
   "workbench.layoutControl.enabled": false,
   "workbench.settings.editor": "json",
@@ -406,5 +407,5 @@
 
     // Yank to clipboard
     { "before": ["<leader>", "y"], "after": ["\"", "+", "y", "g", "v", "<esc>"] }
-  ]
+  ],
 }
