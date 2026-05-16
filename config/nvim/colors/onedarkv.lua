@@ -1,59 +1,62 @@
 local c = {
-	bd = '#1e2227',
-	bg = '#23272e',
-	bl = '#2c313c',
-	fd = '#5f6672',
-	fg = '#abb2bf',
-	sel = '#3d4556',
-	red = '#e06c75',
-	green = '#98c379',
-	yellow = '#e5c07b',
-	orange = '#d19a66',
-	blue = '#61afef',
+	bg      = '#23272e',
+	bl      = '#2c313c',
+	fg      = '#abb2bf',
+	fd      = '#5f6672',
+  op      = '#88909c',
+	sel     = '#3d4556',
+	-- sel     = '#394349',
+	red     = '#e06c75',
+	green   = '#98c379',
+	yellow  = '#e5c07b',
+	orange  = '#d19a66',
+	blue    = '#61afef',
+	bluel   = '#84a0c6',
 	magenta = '#c678dd',
-	cyan = '#56b6c2',
+	cyan    = '#56b6c2',
 }
 
 local hl_groups = {
+	Foreground = { fg = c.fg },
+
 	-- General
 	Normal = { bg = c.bg, fg = c.fg },
 	Comment = { fg = c.fd },
 	Cursor = { bg = c.fg, fg = c.bg },
 	CursorLine = { bg = c.bl },
 	EndOfBuffer = { fg = c.bg },
-	TermCursor = { fg = c.fg },
-	Title = { link = 'Normal' },
+	TermCursor = { link = 'Foreground' },
+	Title = { link = 'Foreground' },
 	Twilight = { link = 'Comment' },
 	Visual = { bg = c.sel },
 
 	-- Syntaxy
-	Boolean = { fg = c.magenta },
+	Boolean = { fg = c.orange },
 	Character = { fg = c.green },
 	Conditional = { fg = c.magenta },
-	Constant = { fg = c.fg },
+	Constant = { link = 'Foreground' },
 	Define = { fg = c.magenta },
-	ErrorMsg = { fg = c.red },
 	Exception = { fg = c.magenta },
-	Float = { fg = c.orange },
+	Float = { fg = c.magenta },
 	Function = { fg = c.blue },
 	Identifier = { fg = c.red },
 	Include = { fg = c.magenta },
-	Keyword = { fg = c.fg },
-	Label = { fg = c.fg },
-	Macro = { fg = c.fg },
-	Number = { fg = c.magenta },
-	Operator = { fg = '#88909c' },
+	Keyword = { link = 'Foreground' },
+	Label = { link = 'Foreground' },
+	Macro = { link = 'Foreground' },
+	Number = { fg = c.orange },
+	Operator = { fg = c.op },
 	PreCondit = { fg = c.magenta },
-	PreProc = { fg = c.fg },
+	PreProc = { link = 'Foreground' },
 	Repeat = { fg = c.magenta },
 	Statement = { fg = c.magenta },
-	StorageClass = { fg = c.fg },
+	StorageClass = { link = 'Foreground' },
 	String = { fg = c.green },
 	Structure = { fg = c.magenta },
 	Tag = { fg = c.blue },
 	Typedef = { fg = c.magenta },
 	Type = { fg = c.magenta },
-	Underlined = { fg = c.blue, underline = true },
+	Underlined = { fg = c.fg, underline = true },
 
 	-- Keys [] {} ()
 	Delimiter = { link = 'Operator' },
@@ -61,19 +64,22 @@ local hl_groups = {
 
 	-- Extras
 	Added = { fg = c.green },
-	Changed = { fg = c.blue },
+  Changed = { fg = c.blue },
 	Debug = { fg = c.yellow },
 	Directory = { fg = c.blue },
+	FoldColumn = { bg = c.sel, fg = c.cyan },
+	Folder = { fg = c.blue },
 	NonText = { fg = c.fd },
+  Removed = { fg = c.red },
 	SpecialChar = { fg = c.orange },
 	SpecialComment = { fg = c.fd },
-	Special = { fg = c.fg },
+	Special = { link = 'Foreground' },
 	SpecialKey = { fg = c.cyan },
 
 	-- Line number column
-	CursorLineFold = { fg = c.fg },
-	CursorLineNr = { fg = c.fg },
-	CursorLineSign = { fg = c.fg },
+	CursorLineFold = { link = 'Foreground' },
+	CursorLineNr = { link = 'Foreground' },
+	CursorLineSign = { link = 'Foreground' },
 	LineNr = { fg = c.sel },
 	LineNrAbove = { fg = c.sel },
 	LineNrBelow = { fg = c.sel },
@@ -86,26 +92,29 @@ local hl_groups = {
 	CurSearch = { bg = c.fg, fg = c.bg },
 	IncSearch = { bg = c.sel },
 	Search = { bg = c.sel },
-	SnippetTabStop = { link = 'Normal' },
+	SnippetTabStop = { link = 'Foreground' },
 
 	-- Messages
+	ErrorMsg = { fg = c.red },
 	ModeMsg = { fg = c.fd },
 	MoreMsg = { fg = c.fd },
-	Question = { fg = c.fg },
+	OkMsg = { fg = c.green },
+	Question = { link = 'Foreground' },
 	WarningMsg = { fg = c.yellow },
 
 	-- Alerts
-	Ignore = { fg = c.fg },
+	Ignore = { link = 'Foreground' },
 	Error = { fg = c.red },
 	Todo = { fg = c.magenta },
 
 	-- Pmenu
 	Pmenuac = { bg = c.bl },
 	Pmenu = { bg = c.bg },
-	PmenuBorder = { fg = c.fg },
+	PmenuBorder = { link = 'Foreground' },
 	PmenuExtra = { link = 'Comment' },
 	PmenuKind = { link = 'Comment' },
-	PmenuSbar = { bg = c.bd },
+	PmenuMatch = { bg = c.bl },
+	PmenuSbar = { bg = c.bg },
 	PmenuSel = { bg = c.bl },
 	PmenuThumb = { bg = c.fg },
 
@@ -116,13 +125,13 @@ local hl_groups = {
 	FloatShadowThrough = { bg = c.bg },
 
 	-- Tabbar
-	Winbar = { fg = c.fg },
+	Winbar = { link = 'Foreground' },
 	WinbarNC = { fg = c.fd },
 	WinSeparator = { fg = c.sel },
 
 	-- Line win separator split
-	StatusLine = { link = 'Normal' },
-	StatusLineNC = { link = 'Normal' },
+	StatusLine = { link = 'Foreground' },
+	StatusLineNC = { link = 'Foreground' },
 
 	-- Spell
 	SpellBad = { sp = c.red, undercurl = true },
@@ -144,7 +153,12 @@ local hl_groups = {
 	DiagnosticSignHint = { fg = c.cyan },
 	DiagnosticSignOk = { fg = c.green },
 	DiagnosticSignWarn = { fg = c.yellow },
-	DiagnosticUnnecessary = { fg = c.comment },
+	DiagnosticUnderlineError = { sp = c.red, undercurl = true },
+	DiagnosticUnderlineHint = { sp = c.cyan, undercurl = true },
+	DiagnosticUnderlineInfo = { sp = c.blue, undercurl = true },
+	DiagnosticUnderlineOk = { sp = c.green, undercurl = true },
+	DiagnosticUnderlineWarn = { sp = c.yellow, undercurl = true },
+	DiagnosticUnnecessary = { link = 'Comment' },
 	DiagnosticVirtualTextError = { fg = c.red },
 	DiagnosticVirtualTextHint = { fg = c.cyan },
 	DiagnosticVirtualTextInfo = { fg = c.blue },
@@ -159,12 +173,13 @@ local hl_groups = {
 	DiffDelete = { bg = '#382b2c' },
 	DiffText = { bg = '#2c5372' },
 
-	-- Float
-	FoldColumn = { bg = c.sel, fg = c.cyan },
-	Folder = { bg = c.sel, fg = c.cyan },
+  -- Redraw
+	RedrawDebugClear = { link = 'DiffChange' },
+	RedrawDebugComposed = { link = 'DiffAdd' },
+	RedrawDebugRecompose = { link = 'DiffDelete' },
 
 	-- Help
-	healthHeadingChar = { fg = c.fg },
+	healthHeadingChar = { link = 'Foreground' },
 	healthSectionDelim = { fg = c.blue },
 	helpHeader = { fg = c.blue },
 	helpSectionDelim = { fg = c.blue },
@@ -178,86 +193,88 @@ local hl_groups = {
 
 	-- css
 	cssAtRule = { link = 'Function' },
-	cssAttrRegion = { link = 'Normal' },
-	cssBackgroundAttr = { link = 'Normal' },
-	cssBoxAttr = { link = 'Normal' },
-	cssBorderAttr = { link = 'Normal' },
+	cssAttrRegion = { link = 'Foreground' },
+	cssBackgroundAttr = { link = 'Foreground' },
+	cssBorderAttr = { link = 'Foreground' },
+	cssBoxAttr = { link = 'Foreground' },
 	cssBraces = { link = 'Operator' },
-	cssColor = { link = 'Number' },
 	cssClassNameDot = { link = 'Function' },
 	cssClassName = { link = 'Function' },
-	cssCommonAttr = { link = 'Normal' },
-	cssDefinition = { link = 'Normal' },
-	cssFlexibleBoxAttr = { link = 'Normal' },
-	cssFontAttr = { link = 'Normal' },
+	cssColor = { link = 'Number' },
+	cssCommonAttr = { link = 'Foreground' },
+	cssDefinition = { link = 'Definition' },
+	cssFlexibleBoxAttr = { link = 'Foreground' },
+	cssFontAttr = { link = 'Foreground' },
 	cssFunction = { link = 'Function' },
 	cssFunctionName = { link = 'Function' },
 	cssIdentifier = { link = 'Function' },
 	cssNoise = { link = 'cssBraces' },
-	cssPositioningAttr = { link = 'Normal' },
+	cssPositioningAttr = { link = 'Foreground' },
 	cssPseudoClassId = { link = 'Function' },
 	cssTagName = { link = 'Function' },
-	cssTextAttr = { link = 'Normal' },
-	cssUIAttr = { link = 'Normal' },
-	cssVendor = { link = 'Normal' },
+	cssTextAttr = { link = 'Foreground' },
+	cssUIAttr = { link = 'Foreground' },
+	cssUnitDecorators = { link = 'Foreground' },
+	cssValueLength = { link = 'Foreground' },
+	cssVendor = { link = 'Foreground' },
 
 	-- dosini
 	dosiniHeader = { link = 'Identifier' },
 	dosiniLabel = { link = 'Function' },
-	dosiniValue = { link = 'Normal' },
+	dosiniValue = { link = 'Foreground' },
 
 	-- go
 	goBlock = { link = 'Operator' },
-	goImport = { link = 'Normal' },
-	goPackage = { link = 'Normal' },
+	goImport = { link = 'Foreground' },
+	goPackage = { link = 'Foreground' },
 	goParen = { link = 'Operator' },
-	goStatement = { link = 'Normal' },
-	goType = { link = 'Normal' },
+	goStatement = { link = 'Foreground' },
+	goType = { link = 'Foreground' },
 
 	-- html
-	djangoFilter = { link = 'Include' },
-	djangoStatement = { link = 'Normal' },
-	djangoTagBlock = { link = 'Normal' },
-	djangoVarBlock = { link = 'Include' },
-	htmlArg = { link = 'Normal' },
+	djangoFilter = { link = 'Foreground' },
+	djangoStatement = { link = 'Foreground' },
+	djangoTagBlock = { link = 'Foreground' },
+	djangoVarBlock = { link = 'Foreground' },
+	htmlArg = { link = 'Foreground' },
 	htmlEndTag = { link = 'htmlTag' },
-	htmlH1 = { link = 'Normal' },
-	htmlH2 = { link = 'Normal' },
-	htmlH3 = { link = 'Normal' },
-	htmlH4 = { link = 'Normal' },
-	htmlH5 = { link = 'Normal' },
-	htmlH6 = { link = 'Normal' },
-	htmlLink = { link = 'Normal' },
+	htmlH1 = { link = 'Foreground' },
+	htmlH2 = { link = 'Foreground' },
+	htmlH3 = { link = 'Foreground' },
+	htmlH4 = { link = 'Foreground' },
+	htmlH5 = { link = 'Foreground' },
+	htmlH6 = { link = 'Foreground' },
+	htmlLink = { link = 'Foreground' },
 	htmlN = { link = 'Comment' },
 	htmlSpecialTagName = { link = 'htmlTagName' },
 	htmlTag = { link = 'Operator' },
 	htmlTagName = { link = 'Function' },
 	htmlTagN = { link = 'htmlTag' },
-	htmlTitle = { link = 'Normal' },
+	htmlTitle = { link = 'Foreground' },
 
 	-- js
 	javaScriptBraces = { link = 'Operator' },
-	javaScriptOperator = { link = 'Normal' },
-	javaScriptType = { link = 'Normal' },
-	javaScriptStatement = { link = 'Normal' },
-	javaScriptIdentifier = { link = 'Normal' },
+	javaScriptOperator = { link = 'Foreground' },
+	javaScriptType = { link = 'Foreground' },
+	javaScriptStatement = { link = 'Foreground' },
+	javaScriptIdentifier = { link = 'Foreground' },
 	javaScriptFunction = { link = 'Function' },
 
 	-- json
 	jsonBraces = { link = 'Operator' },
 	jsonFold = { link = 'Operator' },
-	jsonKeyword = { link = 'Normal' },
+	jsonKeyword = { link = 'Foreground' },
 	jsonKeywordMatch = { link = 'Operator' },
 	jsonNoise = { link = 'Operator' },
 	jsonQuote = { link = 'Operator' },
 	jsonCommentError = { link = 'Comment' },
 
 	-- kitty
-	KittyAction = { link = 'Normal' },
-	KittyAlt = { link = 'Normal' },
-	KittyOptionName = { link = 'Normal' },
+	KittyAction = { link = 'Foreground' },
+	KittyAlt = { link = 'Foreground' },
+	KittyOptionName = { link = 'Foreground' },
 	KittyColor = { link = 'Number' },
-	KittyCtrl = { link = 'Normal' },
+	KittyCtrl = { link = 'Foreground' },
 	KittyKeybind = { link = 'Function' },
 	KittyKeyword = { link = 'Definition' },
 	KittyMap = { link = 'Keyword' },
@@ -265,54 +282,54 @@ local hl_groups = {
 	KittySt = { link = 'String' },
 
 	-- markdown
-	markdownBlockquote = { link = 'Normal' },
-	markdownCodeDelimiter = { link = 'Normal' },
-	markdownH1Delimiter = { link = 'Normal' },
-	markdownH1 = { link = 'Normal' },
-	markdownH2Delimiter = { link = 'Normal' },
-	markdownH2 = { link = 'Normal' },
-	markdownH3Delimiter = { link = 'Normal' },
-	markdownH3 = { link = 'Normal' },
-	markdownH4Delimiter = { link = 'Normal' },
-	markdownH4 = { link = 'Normal' },
-	markdownH5Delimiter = { link = 'Normal' },
-	markdownH5 = { link = 'Normal' },
-	markdownH6Delimiter = { link = 'Normal' },
-	markdownH6 = { link = 'Normal' },
-	markdownHeadingDelimiter = { link = 'Normal' },
-	markdownHeadingRule = { link = 'Normal' },
-	markdownId = { link = 'Normal' },
-	markdownListMarker = { link = 'Normal' },
-	markdownRule = { link = 'Normal' },
-	markdownUrl = { link = 'Normal' },
+	markdownBlockquote = { link = 'Foreground' },
+	markdownCodeDelimiter = { link = 'Foreground' },
+	markdownH1Delimiter = { link = 'Foreground' },
+	markdownH1 = { link = 'Foreground' },
+	markdownH2Delimiter = { link = 'Foreground' },
+	markdownH2 = { link = 'Foreground' },
+	markdownH3Delimiter = { link = 'Foreground' },
+	markdownH3 = { link = 'Foreground' },
+	markdownH4Delimiter = { link = 'Foreground' },
+	markdownH4 = { link = 'Foreground' },
+	markdownH5Delimiter = { link = 'Foreground' },
+	markdownH5 = { link = 'Foreground' },
+	markdownH6Delimiter = { link = 'Foreground' },
+	markdownH6 = { link = 'Foreground' },
+	markdownHeadingDelimiter = { link = 'Foreground' },
+	markdownHeadingRule = { link = 'Foreground' },
+	markdownId = { link = 'Foreground' },
+	markdownListMarker = { link = 'Foreground' },
+	markdownRule = { link = 'Foreground' },
+	markdownUrl = { link = 'Foreground' },
 
 	-- sh
 	shArithRegion = { link = 'Operator' },
 	shCmdSubRegion = { link = 'Operator' },
-	shDeref = { link = 'Normal' },
-	shDerefOp = { link = 'Normal' },
-	shDerefSimple = { link = 'Normal' },
-	shDerefVar = { link = 'Normal' },
-	shDerefVarArray = { link = 'Normal' },
-	shEcho = { link = 'Normal' },
+	shDeref = { link = 'Foreground' },
+	shDerefOp = { link = 'Foreground' },
+	shDerefSimple = { link = 'Foreground' },
+	shDerefVar = { link = 'Foreground' },
+	shDerefVarArray = { link = 'Foreground' },
+	shEcho = { link = 'Foreground' },
 	shLoop = { link = 'shConditional' },
 	shQuote = { link = 'String' },
-	shStatement = { link = 'Normal' },
-	shTestOpr = { link = 'Normal' },
+	shStatement = { link = 'Foreground' },
+	shTestOpr = { link = 'Foreground' },
 	shVarAssign = { link = 'Operator' },
-	shVariable = { link = 'Normal' },
+	shVariable = { link = 'Foreground' },
 
 	-- toml
-	tomlKey = { link = 'Normal' },
+	tomlKey = { link = 'Foreground' },
 	tomlTable = { link = 'Function' },
 
 	-- vim
-	vimAutoEvent = { link = 'Normal' },
-	vimCommand = { link = 'Normal' },
-	vimFunction = { link = 'Normal' },
+	vimAutoEvent = { link = 'Foreground' },
+	vimCommand = { link = 'Foreground' },
+	vimFunction = { link = 'Foreground' },
 	vimFunctionName = { link = 'Function' },
 	vimMap = { link = 'Function' },
-	vimVarScope = { link = 'Normal' },
+	vimVarScope = { link = 'Foreground' },
 
 	-- tree-sitter
 
@@ -377,10 +394,10 @@ local hl_groups = {
 	['@tag'] = { link = 'Tag' },
 	['@tag.builtin'] = { link = 'Tag' },
 	['@tag.attribute'] = { link = 'Number' },
-	['@tag.delimiter'] = { link = 'Normal' },
+	['@tag.delimiter'] = { link = 'Foreground' },
 	['@type.definition'] = { link = 'Typedef' },
 	['@type'] = { link = 'Type' },
-	['@variable'] = { link = 'Normal' },
+	['@variable'] = { link = 'Foreground' },
 
 	-- LSP semantic tokens
 	['@lsp.type.class'] = { link = 'Structure' },
@@ -400,97 +417,124 @@ local hl_groups = {
 	['@lsp.type.typeParameter'] = { link = 'TypeDef' },
 	['@lsp.type.variable'] = { link = 'Variable' },
 
-	-- Markup
-	['@label.markdown'] = { link = 'Normal' },
-	['@markup.heading.1.markdown'] = { link = 'Normal' },
-	['@markup.heading.2.markdown'] = { link = 'Normal' },
-	['@markup.heading.3.markdown'] = { link = 'Normal' },
-	['@markup.heading.4.markdown'] = { link = 'Normal' },
-	['@markup.heading.5.markdown'] = { link = 'Normal' },
-	['@markup.heading.6.markdown'] = { link = 'Normal' },
-	['@markup.heading'] = { link = 'Title' },
-	['@markup.link.label'] = { link = 'Normal' },
-	['@markup.link'] = { link = 'Identifier' },
-	['@markup.link.url'] = { link = 'Underlined' },
-	['@markup.raw'] = { link = 'Normal' },
-	['@markup.underline'] = { link = 'Underlined' },
-
 	-- Text
 	['@text.literal'] = { link = 'Comment' },
 	['@text.reference'] = { link = 'Identifier' },
 	['@text.title'] = { link = 'Title' },
 	['@text.todo'] = { link = 'Todo' },
 	['@text.underline'] = { link = 'Underlined' },
-	['@text.uri'] = { link = 'Underlined' },
+	['@text.uri'] = { fg = c.blue, underline = true },
 
 	-- Languages
 
 	-- bash
+	['@character.special.bash'] = { link = 'Operator' },
 	['@constant.bash'] = { link = 'Identifier' },
+	['@function.bash'] = { link = 'Foreground' },
 	['@function.builtin.bash'] = { link = 'Function' },
-	['@function.call.bash'] = { link = 'Normal' },
+	['@function.call.bash'] = { link = 'Foreground' },
+	['@keyword.bash'] = { link = 'Foreground' },
 	['@keyword.directive.bash'] = { link = 'Comment' },
-	['@punctuation.special.bash'] = { link = 'Identifier' },
-	['@string.regexp.bash'] = { link = 'Normal' },
-	['@variable.bash'] = { link = 'Identifier' },
-	['@variable.builtin.bash'] = { link = 'Identifier' },
-	['@variable.parameter.bash'] = { link = 'Normal' },
+	['@punctuation.special.bash'] = { link = 'Operator' },
+	['@string.regexp.bash'] = { link = 'Foreground' },
+	['@string.special.path.bash'] = { link = 'Operator' },
+	['@variable.bash'] = { link = 'Foreground' },
+	['@variable.builtin.bash'] = { link = 'Foreground' },
+	['@variable.parameter.bash'] = { link = 'Foreground' },
 
 	-- css
-	['@function.css'] = { link = 'Function' },
-	['@property.css'] = { link = 'Normal' },
+	['@function.css'] = { link = 'Foreground' },
+	['@property.css'] = { link = 'Foreground' },
 	['@selectors.css'] = { link = 'Function' },
-	['@value.css'] = { link = 'Number' },
+	['@value.css'] = { fg = c.orange },
 
 	-- go
 	['@string.escape.go'] = { link = 'String' },
-	['@function.method.call.go'] = { link = 'Normal' },
+	['@function.method.call.go'] = { link = 'Foreground' },
 
 	-- html
 	['@constant.html'] = { link = 'Comment' },
 	['@string.special.url.html'] = { link = 'String' },
-	['@tag.attribute.html'] = { link = 'Normal' },
+	['@tag.attribute.html'] = { link = 'Foreground' },
 	['@tag.delimiter.html'] = { link = 'Operator' },
 	['@tag.html'] = { link = 'Function' },
 
+  -- json
+	['@property.json'] = { link = 'Foreground' },
+
+  -- js
+	['@variable.member.javascript'] = { link = 'Foreground' },
+
 	-- lua
 	['@constructor.lua'] = { link = 'Operator' },
-	['@function.call.lua'] = { link = 'Normal' },
-	['@lsp.type.parameter.lua'] = { link = 'Normal' },
-	['@lsp.type.property.lua'] = { link = 'Normal' },
-	['@property.lua'] = { link = 'Normal' },
+	['@function.call.lua'] = { link = 'Foreground' },
+	['@lsp.type.parameter.lua'] = { link = 'Foreground' },
+	['@lsp.type.property.lua'] = { link = 'Foreground' },
+	['@property.lua'] = { link = 'Foreground' },
 	['@punctuation.delimiter.lua'] = { link = 'Operator' },
 	['@string.escape.lua'] = { link = 'String' },
-	['@variable.member.lua'] = { link = 'Normal' },
-	['@variable.parameter.lua'] = { link = 'Normal' },
+	['@variable.member.lua'] = { link = 'Foreground' },
+	['@variable.parameter.lua'] = { link = 'Foreground' },
+
+	-- markdown
+	['@label.markdown'] = { link = 'Operator' },
+	['@markup.heading.1.markdown'] = { link = 'Operator' },
+	['@markup.heading.2.markdown'] = { link = 'Foreground' },
+	['@markup.heading.3.markdown'] = { link = 'Foreground' },
+	['@markup.heading.4.markdown'] = { link = 'Foreground' },
+	['@markup.heading.5.markdown'] = { link = 'Foreground' },
+	['@markup.heading.6.markdown'] = { link = 'Foreground' },
+	['@markup.heading'] = { link = 'Title' },
+	['@markup.link.label'] = { link = 'Foreground' },
+	['@markup.link'] = { link = 'Identifier' },
+	['@markup.link.url'] = { link = 'Underlined' },
+	['@markup.raw.block'] = { link = 'Operator' },
+	['@markup.raw'] = { link = 'Foreground' },
+	['@markup.underline'] = { link = 'Underlined' },
+	['@spell.markdown'] = { link = 'Foreground' },
 
 	-- query
+	['@document.query'] = { link = 'Function' },
 	['@nospell.query'] = { link = 'Comment' },
 	['@spell.query'] = { link = 'Comment' },
+	['@variable.member.query'] = { link = 'Foreground' },
 
 	-- vimdoc
-	['@comment.note.vimdoc'] = { link = 'Normal' },
+	['@comment.note.vimdoc'] = { link = 'Foreground' },
 	['@label.vimdoc'] = { link = 'Keyword' },
 	['@markup.link.vimdoc'] = { link = 'Function' },
 	['@string.special.vimdoc'] = { link = 'Function' },
 	['@string.special.url.vimdoc'] = { link = 'Function' },
-	['@markup.raw.block.vimdoc'] = { link = 'Normal' },
-	['@markup.raw.vimdoc'] = { link = 'Normal' },
+	['@markup.raw.block.vimdoc'] = { link = 'Foreground' },
+	['@markup.raw.vimdoc'] = { link = 'Foreground' },
 	['@variable.parameter.vimdoc'] = { link = 'Number' },
 
+	-- toml
+	['@key.toml'] = { link = 'Function' },
+	['@number.float.toml'] = { link = 'Number' },
+	['@property.toml'] = { link = 'Foreground' },
+	['@string.number.float.toml'] = { link = 'Number' },
+	['@string.special.toml'] = { link = 'Number' },
+
+	-- tera
+	['@keyword.tera'] = { link = 'Identifier' },
+	['@variable.member.tera'] = { link = 'Foreground' },
+
 	--vim
-	['@function.macro.vim'] = { link = 'Normal' },
+	['@function.macro.vim'] = { link = 'Foreground' },
 
 	------------------------------------------------------------
 	-- Plugins
 	------------------------------------------------------------
 
 	-- codium
-	CodeiumAnnotation = { fg = c.fg },
+	CodeiumAnnotation = { link = 'Foreground' },
 	CodeiumSuggestion = { fg = c.fd },
 
 	-- mason
-	MasonBackdrop = { bg = '#000000', blend = 100 },
+	MasonHeader = { link = 'Foreground' },
+	MasonMutedBlock = { bg = '#88909c', fg = c.bg },
+	MasonBackdrop = { bg = c.bg, blend = 100 },
 
 	-- mini-cursorword
 	MiniCursorword = { fg = c.yellow },
@@ -498,7 +542,7 @@ local hl_groups = {
 
 	-- mini-files
 	MiniFilesTitle = { fg = c.fd },
-	MiniFilesTitleFocused = { fg = c.fg },
+	MiniFilesTitleFocused = { link = 'Foreground' },
 
 	-- mini-jump2d
 	MiniJump2dDim = { link = 'Comment' },
@@ -510,14 +554,14 @@ local hl_groups = {
 	MiniStatuslineRecording = { fg = c.red },
 
 	-- netrw
-	netrwTreeBar = { link = 'Normal' },
+	netrwTreeBar = { link = 'Foreground' },
 
 	-- snacks
-	SnacksBackdrop = { bg = '#000000', blend = 100 },
+	SnacksBackdrop = { bg = c.bg, blend = 100 },
 	SnacksIndent = { fg = c.sel },
 	SnacksIndentScope = { link = 'SnacksIndent' },
-	SnacksPickerCursorLine = { link = 'Normal' },
-	SnacksPickerDir = { link = 'Normal' },
+	SnacksPickerCursorLine = { link = 'Foreground' },
+	SnacksPickerDir = { link = 'Foreground' },
 }
 
 -- Clear colors

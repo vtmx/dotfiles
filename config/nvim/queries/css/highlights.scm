@@ -1,34 +1,26 @@
 ;; extends
 
-((call_expression) @call_expression
+;; selectors
+([(at_keyword) (selectors)] @selectors
   (#set! "priority" 110))
 
-((comment) @comment
- (#set! "priority" 110))
-
-((selectors) @selectors
-  (#set! "priority" 110))
-
+;; properties
 ((property_name) @property
   (#set! "priority" 110))
 
-([(integer_value) (plain_value)] @value
+;; values
+([(float_value) (integer_value)] @value
   (#set! "priority" 110))
+
+(string_value
+  (string_content) @string) @punctuation.delimiter
+
+((arguments
+  (plain_value) @value)
+    (#set! "priority" 110))
 
 (feature_query
   (plain_value) @value
   (#set! "priority" 110))
-
-; Isso
-; (call_expression
-;   (function_name)
-;   (arguments
-;     (plain_value))))
-
-; Vira isso
-; (call_expression
-;   (arguments
-;     (plain_value) @value)
-;   (#set! "priority" 110))
 
 ;; vim: ft=query
