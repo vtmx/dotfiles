@@ -3,7 +3,7 @@ local c = {
 	bl      = '#2c313c',
 	fd      = '#5f6672',
 	fg      = '#abb2bf',
-  fl      = '#88909c',
+  op      = '#88909c',
 	sel     = '#3d4556',
 	-- sel     = '#394349',
 	red     = '#e06c75',
@@ -45,7 +45,7 @@ local hl_groups = {
 	Label = { fg = c.fg },
 	Macro = { fg = c.red  },
 	Number = { fg = c.orange },
-	Operator = { fg = c.fl },
+	Operator = { fg = c.op },
 	PreCondit = { fg = c.magenta },
 	PreProc = { fg = c.fg },
 	Repeat = { fg = c.magenta },
@@ -188,6 +188,20 @@ local hl_groups = {
 	NvimInternalError = { fg = c.red },
 
 	-- awk
+	autoitBuiltin = { fg = c.orange },
+	autoitConst = { fg = c.orange },
+	autoitFunction = { link = 'Function' },
+	autoitIncluded = { link = 'String' },
+	autoitInclude = { link = 'Include' },
+	autoitNumber = { link = 'Number' },
+	autoitParen = { link = 'Operator' },
+	autoitQuote = { link = 'Operator' },
+	autoitString = { link = 'String' },
+	autoitStyle = { fg = c.orange },
+	autoitVariable = { link = 'Identifier' },
+	autoitVarSelector = { link = 'Identifier' },
+
+	-- awk
 	awkBrktRegExp = { link = 'Number' },
 	awkFunction = { link = 'Function' },
 	awkParen = { link = 'Operator' },
@@ -274,12 +288,12 @@ local hl_groups = {
 
 	-- json
 	jsonBraces = { link = 'Operator' },
+	jsonCommentError = { link = 'Comment' },
 	jsonFold = { link = 'Operator' },
 	jsonKeyword = { link = 'Foreground' },
 	jsonKeywordMatch = { link = 'Operator' },
 	jsonNoise = { link = 'Operator' },
 	jsonQuote = { link = 'Operator' },
-	jsonCommentError = { link = 'Comment' },
 
 	-- kitty
 	KittyAction = { link = 'Foreground' },
@@ -315,6 +329,11 @@ local hl_groups = {
 	markdownRule = { link = 'Foreground' },
 	markdownUrl = { link = 'Foreground' },
 
+	-- php
+	phpDefine = { link = 'Foreground' },
+	phpMemberSelector = { link = 'Operator' },
+	phpVarSelector = { link = 'Identifier' },
+
 	-- sh
 	shArithRegion = { link = 'Operator' },
 	shCmdSubRegion = { link = 'Operator' },
@@ -347,6 +366,12 @@ local hl_groups = {
 	vimFunctionName = { link = 'Function' },
 	vimMap = { link = 'Function' },
 	vimVarScope = { link = 'Foreground' },
+
+	-- xml
+	xmlTag = { link = 'htmlTag' },
+	xmlTagName = { link = 'htmlTagName' },
+	xmlAttrib = { link = 'htmlArg' },
+	xmlEqual = { link = 'htmlTag' },
 
 	-- tree-sitter
 
@@ -416,7 +441,7 @@ local hl_groups = {
 	['@type'] = { link = 'Type' },
 	['@variable'] = { link = 'Foreground' },
 
-	-- LSP semantic tokens
+	-- lsp
 	['@lsp.type.class'] = { link = 'Structure' },
 	['@lsp.type.comment'] = { link = 'Comment' },
 	['@lsp.type.decorator'] = { link = 'Function' },
@@ -431,7 +456,7 @@ local hl_groups = {
 	['@lsp.type.property'] = { link = 'Identifier' },
 	['@lsp.type.struct'] = { link = 'Structure' },
 	['@lsp.type.type'] = { link = 'Type' },
-	['@lsp.type.typeParameter'] = { link = 'TypeDef' },
+	['@lsp.type.typeParameter'] = { link = 'Foreground' },
 	['@lsp.type.variable'] = { link = 'Variable' },
 
 	-- Text
@@ -463,13 +488,20 @@ local hl_groups = {
 	['@type.builtin.c'] = { fg = c.red },
 
 	-- css
+	['@character.special.css'] = { link = 'Operator' },
+	['@constant.css'] = { link = 'Function' },
 	['@function.css'] = { link = 'Foreground' },
 	['@keyword.css'] = { link = 'Operator' },
 	['@keyword.directive.css'] = { link = 'Function' },
 	['@keyword.operator.css'] = { link = 'Operator' },
+	['@number.float.css'] = { link = 'Number' },
 	['@property.css'] = { link = 'Foreground' },
 	['@selectors.css'] = { link = 'Function' },
+	['@tag.attribute.css'] = { link = 'Number' },
+	['@tag.css'] = { link = 'Function' },
+	['@type.css'] = { link = 'Function' },
 	['@value.css'] = { link = 'Number' },
+	['@variable.css'] = { link = 'Number' },
 
 	-- go
 	['@string.escape.go'] = { link = 'String' },
@@ -494,6 +526,7 @@ local hl_groups = {
 	['@variable.parameter.javascript'] = { link = 'Foreground' },
 
   -- json
+	['@conceal.json'] = { link = 'Operator' },
 	['@property.json'] = { link = 'Foreground' },
 
 	-- lua
@@ -537,8 +570,11 @@ local hl_groups = {
 	-- query
 	['@document.query'] = { link = 'Function' },
 	['@nospell.query'] = { link = 'Comment' },
+	['@punctuation.special.query'] = { link = 'Operator' },
 	['@spell.query'] = { link = 'Comment' },
+	['@type.query'] = { link = 'Identifier' },
 	['@variable.member.query'] = { link = 'Foreground' },
+	['@variable.query'] = { link = 'Foreground' },
 
 	-- vim
 	-- ['@keyword.vim'] = { link = 'Foreground' },
