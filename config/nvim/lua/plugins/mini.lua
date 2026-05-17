@@ -1,3 +1,12 @@
+-- cmdline center
+vim.pack.add({ 'https://github.com/rachartier/tiny-cmdline.nvim' })
+
+vim.pack.add({ 'https://github.com/nvim-mini/mini.ai' })
+require('mini.ai').setup({
+  n_lines = 0,
+  search_method = 'cover_or_nearest',
+})
+
 vim.pack.add({ 'https://github.com/nvim-mini/mini.align' })
 require('mini.align').setup()
 
@@ -25,7 +34,6 @@ require('mini.pairs').setup()
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.surround' })
 require('mini.surround').setup({
-  search_method = 'cover_or_nearest',
   mappings = {
     add = 'gsa',
     delete = 'ds',
@@ -35,7 +43,9 @@ require('mini.surround').setup({
     highlight = '',
     suffix_last = '',
     suffix_next = ''
-  }
+  },
+  n_lines = 0,
+  search_method = 'cover_or_nearest',
 })
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.statusline' })

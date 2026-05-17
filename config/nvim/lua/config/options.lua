@@ -2,6 +2,7 @@ local opts = {
   autochdir = true,
   autocomplete = true,
   clipboard = 'unnamedplus',
+  cmdheight = 0,
   complete = { 'o' },
   completeopt = { 'menu', 'menuone', 'noinsert', 'noselect' },
   cursorline = true,

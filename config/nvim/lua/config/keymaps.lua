@@ -49,7 +49,7 @@ map(
 )
 
 map(
-  'n', 'J', 'mzJ`z',
+  'n', 'J', 'mzJ`z==',
   { desc = 'Join lines' }
 )
 
@@ -441,13 +441,13 @@ map(
 )
 
 map(
-  { 'n', 'x' }, '<leader>p', '"+gp<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
+  'n', '<leader>p', 'm`o<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in next line", "info", { title = "Clipboard" })<cr>',
+  { desc = 'Paste from clipboard in next line' }
 )
 
 map(
-  'n', '<leader>P', '"+gP<esc><cmd>echo "Paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
+  'n', '<leader>P', 'm`O<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in previous line", "info", { title = "Clipboard" })<cr>',
+  { desc = 'Paste from clipboard in previous line' }
 )
 
 map(
@@ -630,16 +630,6 @@ map(
 map(
   'n', '<leader><leader>s', function() require('snacks').picker.lsp_symbols() end,
   { desc = 'Symbols' }
-)
-
-map(
-  'n', '<leader><leader>p', 'o<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Paste from clipboard in new line' }
-)
-
-map(
-  'n', '<leader><leader>P', 'O<esc>"+gp<esc><cmd>:lua vim.notify("Paste from clipboard in new line", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Paste from clipboard in new line' }
 )
 
 map(

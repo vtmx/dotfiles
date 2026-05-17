@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "block.nvim": {
+      "rev": "6fb969ab12579e58b9379aa51933cad4a466cf75",
+      "src": "https://github.com/HampusHauffman/block.nvim"
+    },
     "codeium.vim": {
       "rev": "3c0a4f8a7be75113a6e19be13b7cc37210d6e26a",
       "src": "https://github.com/Exafunction/codeium.vim"
@@ -11,6 +15,10 @@
     "mason.nvim": {
       "rev": "cb8445f8ce85d957416c106b780efd51c6298f89",
       "src": "https://github.com/williamboman/mason.nvim"
+    },
+    "mini.ai": {
+      "rev": "a783ce6e1a5b3bc90519f20b51f4a5f6702734af",
+      "src": "https://github.com/nvim-mini/mini.ai"
     },
     "mini.align": {
       "rev": "6f3c69cd57134ad8fbf1e85dcdc90cb37a8c75c8",
@@ -55,6 +63,10 @@
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "tiny-cmdline.nvim": {
+      "rev": "ad58747b955d0743ccfd56e97da1a4c1fac89f58",
+      "src": "https://github.com/rachartier/tiny-cmdline.nvim"
     },
     "tree-sitter-sxhkdrc": {
       "rev": "440d5f913d9465c9c776a1bd92334d32febcf065",
