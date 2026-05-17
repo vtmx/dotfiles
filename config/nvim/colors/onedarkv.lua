@@ -538,7 +538,7 @@ local hl_groups = {
 	-- lua
 	['@constructor.lua'] = { link = 'Operator' },
 	['@function.call.lua'] = { link = 'Function' },
-	['@keyword.lua'] = { fg = c.red },
+	['@keyword.lua'] = { link = 'Keyword' },
 	['@keyword.function.lua'] = { link = 'Conditional' },
 	['@keyword.return.lua'] = { link = 'Conditional' },
 	['@lsp.type.parameter.lua'] = { link = 'Foreground' },
