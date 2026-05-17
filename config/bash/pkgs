@@ -27,6 +27,11 @@ if command -v fzf &> /dev/null; then
   fi
 fi
 
+# fd
+if command -v fd &> /dev/null; then
+  export LS_COLORS=''
+fi
+
 # go
 if command -v go &> /dev/null; then
   export GOPATH=$HOME/Dev/go

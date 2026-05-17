@@ -1,9 +1,9 @@
 local c = {
 	bg      = '#23272e',
 	bl      = '#2c313c',
-	fg      = '#abb2bf',
 	fd      = '#5f6672',
-  op      = '#88909c',
+	fg      = '#abb2bf',
+  fl      = '#88909c',
 	sel     = '#3d4556',
 	-- sel     = '#394349',
 	red     = '#e06c75',
@@ -17,12 +17,12 @@ local c = {
 }
 
 local hl_groups = {
-	Foreground = { fg = c.fg },
+	Foreground = { link = 'Foreground' },
 
 	-- General
 	Normal = { bg = c.bg, fg = c.fg },
 	Comment = { fg = c.fd },
-	Cursor = { bg = c.fg, fg = c.bg },
+  Cursor = { bg = c.fg, fg = c.bg },
 	CursorLine = { bg = c.bl },
 	EndOfBuffer = { fg = c.bg },
 	TermCursor = { link = 'Foreground' },
@@ -39,21 +39,21 @@ local hl_groups = {
 	Exception = { fg = c.magenta },
 	Float = { fg = c.magenta },
 	Function = { fg = c.blue },
-	Identifier = { fg = c.red },
+	Identifier = { fg = c.yellow },
 	Include = { fg = c.magenta },
-	Keyword = { link = 'Foreground' },
+	Keyword = { fg = c.magenta },
 	Label = { link = 'Foreground' },
-	Macro = { link = 'Foreground' },
+	Macro = { fg = c.red  },
 	Number = { fg = c.orange },
-	Operator = { fg = c.op },
+	Operator = { fg = c.fl },
 	PreCondit = { fg = c.magenta },
 	PreProc = { link = 'Foreground' },
 	Repeat = { fg = c.magenta },
 	Statement = { fg = c.magenta },
 	StorageClass = { link = 'Foreground' },
 	String = { fg = c.green },
-	Structure = { fg = c.magenta },
-	Tag = { fg = c.blue },
+	Structure = { link = 'Foreground' },
+	Tag = { fg = c.red },
 	Typedef = { fg = c.magenta },
 	Type = { fg = c.magenta },
 	Underlined = { fg = c.fg, underline = true },
@@ -191,6 +191,10 @@ local hl_groups = {
 	awkPatterns = { fg = c.magenta },
 	awkVariables = { fg = c.red },
 
+	-- c
+	cBlock = { link = 'Operator' },
+	cParen = { link = 'Operator' },
+
 	-- css
 	cssAtRule = { link = 'Function' },
 	cssAttrRegion = { link = 'Foreground' },
@@ -218,6 +222,12 @@ local hl_groups = {
 	cssValueLength = { link = 'Foreground' },
 	cssVendor = { link = 'Foreground' },
 
+  -- django
+	djangoFilter = { link = 'Foreground' },
+	djangoStatement = { link = 'Foreground' },
+	djangoTagBlock = { link = 'Foreground' },
+	djangoVarBlock = { link = 'Foreground' },
+
 	-- dosini
 	dosiniHeader = { link = 'Identifier' },
 	dosiniLabel = { link = 'Function' },
@@ -232,12 +242,8 @@ local hl_groups = {
 	goType = { link = 'Foreground' },
 
 	-- html
-	djangoFilter = { link = 'Foreground' },
-	djangoStatement = { link = 'Foreground' },
-	djangoTagBlock = { link = 'Foreground' },
-	djangoVarBlock = { link = 'Foreground' },
 	htmlArg = { link = 'Foreground' },
-	htmlEndTag = { link = 'htmlTag' },
+	htmlEndTag = { link = 'Operator' },
 	htmlH1 = { link = 'Foreground' },
 	htmlH2 = { link = 'Foreground' },
 	htmlH3 = { link = 'Foreground' },
@@ -248,11 +254,11 @@ local hl_groups = {
 	htmlN = { link = 'Comment' },
 	htmlSpecialTagName = { link = 'htmlTagName' },
 	htmlTag = { link = 'Operator' },
-	htmlTagName = { link = 'Function' },
-	htmlTagN = { link = 'htmlTag' },
+	htmlTagN = { link = 'Operator' },
+	htmlTagName = { fg = c.red },
 	htmlTitle = { link = 'Foreground' },
 
-	-- js
+	-- javascript
 	javaScriptBraces = { link = 'Operator' },
 	javaScriptOperator = { link = 'Foreground' },
 	javaScriptType = { link = 'Foreground' },
@@ -306,16 +312,17 @@ local hl_groups = {
 	-- sh
 	shArithRegion = { link = 'Operator' },
 	shCmdSubRegion = { link = 'Operator' },
-	shDeref = { link = 'Foreground' },
+	shDefref = { fg = c.red },
 	shDerefOp = { link = 'Foreground' },
-	shDerefSimple = { link = 'Foreground' },
-	shDerefVar = { link = 'Foreground' },
+	shDerefSimple = { link = 'shDefref' },
 	shDerefVarArray = { link = 'Foreground' },
+	shDerefVar = { link = 'Foreground' },
 	shEcho = { link = 'Foreground' },
 	shLoop = { link = 'shConditional' },
 	shQuote = { link = 'String' },
-	shStatement = { link = 'Foreground' },
-	shTestOpr = { link = 'Foreground' },
+  shIf = { link = 'Operator' },
+	shStatement = { link = 'Function' },
+	shTestOpr = { link = 'Operator' },
 	shVarAssign = { link = 'Operator' },
 	shVariable = { link = 'Foreground' },
 
@@ -429,7 +436,7 @@ local hl_groups = {
 
 	-- bash
 	['@character.special.bash'] = { link = 'Operator' },
-	['@constant.bash'] = { link = 'Identifier' },
+	['@constant.bash'] = { link = 'Foreground' },
 	['@function.bash'] = { link = 'Foreground' },
 	['@function.builtin.bash'] = { link = 'Function' },
 	['@function.call.bash'] = { link = 'Foreground' },
@@ -439,35 +446,45 @@ local hl_groups = {
 	['@string.regexp.bash'] = { link = 'Foreground' },
 	['@string.special.path.bash'] = { link = 'Operator' },
 	['@variable.bash'] = { link = 'Foreground' },
-	['@variable.builtin.bash'] = { link = 'Foreground' },
+	['@variable.builtin.bash'] = { fg = c.red },
 	['@variable.parameter.bash'] = { link = 'Foreground' },
+
+	-- c
+	['@type.builtin.c'] = { fg = c.red },
 
 	-- css
 	['@function.css'] = { link = 'Foreground' },
+	['@keyword.css'] = { link = 'Operator' },
+	['@keyword.directive.css'] = { link = 'Function' },
+	['@keyword.operator.css'] = { link = 'Operator' },
 	['@property.css'] = { link = 'Foreground' },
 	['@selectors.css'] = { link = 'Function' },
-	['@value.css'] = { fg = c.orange },
+	['@value.css'] = { link = 'Number' },
 
 	-- go
 	['@string.escape.go'] = { link = 'String' },
 	['@function.method.call.go'] = { link = 'Foreground' },
 
 	-- html
+	['@none.html'] = { link = 'Operator' },
 	['@constant.html'] = { link = 'Comment' },
 	['@string.special.url.html'] = { link = 'String' },
-	['@tag.attribute.html'] = { link = 'Foreground' },
+	['@tag.attribute.html'] = { link = 'htmlArg' },
 	['@tag.delimiter.html'] = { link = 'Operator' },
-	['@tag.html'] = { link = 'Function' },
+	['@tag.html'] = { link = 'htmlTagName' },
+
+  -- javascript
+	['@variable.member.javascript'] = { link = 'Foreground' },
 
   -- json
 	['@property.json'] = { link = 'Foreground' },
 
-  -- js
-	['@variable.member.javascript'] = { link = 'Foreground' },
-
 	-- lua
 	['@constructor.lua'] = { link = 'Operator' },
-	['@function.call.lua'] = { link = 'Foreground' },
+	['@function.call.lua'] = { link = 'Function' },
+	['@keyword.lua'] = { fg = c.red },
+	['@keyword.function.lua'] = { link = 'Conditional' },
+	['@keyword.return.lua'] = { link = 'Conditional' },
 	['@lsp.type.parameter.lua'] = { link = 'Foreground' },
 	['@lsp.type.property.lua'] = { link = 'Foreground' },
 	['@property.lua'] = { link = 'Foreground' },
@@ -489,15 +506,23 @@ local hl_groups = {
 	['@markup.link'] = { link = 'Identifier' },
 	['@markup.link.url'] = { link = 'Underlined' },
 	['@markup.raw.block'] = { link = 'Operator' },
+	['@markup.link.markdown_inline'] = { link = 'Operator' },
+	['@markup.link.url.markdown_inline'] = { link = 'Foreground' },
 	['@markup.raw'] = { link = 'Foreground' },
-	['@markup.underline'] = { link = 'Underlined' },
+	['@markup.underline'] = { link = 'Foreground' },
 	['@spell.markdown'] = { link = 'Foreground' },
+
+  -- python
+	['@variable.member.python'] = { link = 'Foreground' },
 
 	-- query
 	['@document.query'] = { link = 'Function' },
 	['@nospell.query'] = { link = 'Comment' },
 	['@spell.query'] = { link = 'Comment' },
 	['@variable.member.query'] = { link = 'Foreground' },
+
+	-- vim
+	-- ['@keyword.vim'] = { link = 'Foreground' },
 
 	-- vimdoc
 	['@comment.note.vimdoc'] = { link = 'Foreground' },
@@ -520,7 +545,14 @@ local hl_groups = {
 	['@keyword.tera'] = { link = 'Identifier' },
 	['@variable.member.tera'] = { link = 'Foreground' },
 
-	--vim
+	-- v
+	['@keyword.type.v'] = { link = 'Keyword' },
+	['@module.v'] = { link = 'String' },
+	['@type.v'] = { link = 'Macro' },
+	['@variable.builtin.v'] = { fg = c.orange },
+	['@variable.member.v'] = { link = 'Foreground' },
+
+	-- vim
 	['@function.macro.vim'] = { link = 'Foreground' },
 
 	------------------------------------------------------------

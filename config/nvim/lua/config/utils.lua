@@ -155,6 +155,32 @@ end
 
 usercmd('ToggleSpellLang', M.toggle_spelllang, {})
 
+
+function M.toggle_treesitter()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local ts_highlighter = vim.treesitter.highlighter
+  local is_active = ts_highlighter and ts_highlighter.active[bufnr] ~= nil
+
+  if is_active then
+    vim.treesitter.stop(bufnr)
+    print('Treesitter stop')
+  else
+    local ft = vim.bo[bufnr].filetype
+    if ft and ft ~= "" then
+      local success, _ = pcall(vim.treesitter.start, bufnr, ft)
+      if success then
+        print('Treesitter start')
+      else
+        print('Treesitter error' .. ft)
+      end
+    else
+      print('Treesitter not found file type')
+    end
+  end
+end
+
+usercmd('ToggleTreesitter', M.toggle_treesitter, {})
+
 function M.toggle_wrap()
   if vim.wo.wrap then
     vim.wo.wrap = false
@@ -171,40 +197,44 @@ end
 
 usercmd('ToggleWrap', M.toggle_wrap, {})
 
-function M.is_netrw_open()
-  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-    if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
-      return true
-    end
-  end
-  return false
-end
-
-function M.close_netrw()
-  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-    if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
-      vim.api.nvim_buf_delete(buf, { force = true })
-      print('Netrw has been closed')
-      return
-    end
-  end
-  print('Netrw is not open')
-end
-
-function M.toggle_netrw_ex()
-  if M.is_netrw_open() then
-    M.close_netrw()
-  else
-    vim.cmd('Ex')
-  end
-end
-
-function M.toggle_netrw_lex()
-  if M.is_netrw_open() then
-    M.close_netrw()
-  else
-    vim.cmd('Lex')
-  end
-end
+-- function M.is_netrw_open()
+--   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+--     if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
+--       return true
+--     end
+--   end
+--   return false
+-- end
+--
+-- function M.close_netrw()
+--   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+--     if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
+--       vim.api.nvim_buf_delete(buf, { force = true })
+--       print('Netrw has been closed')
+--       return
+--     end
+--   end
+--   print('Netrw is not open')
+-- end
+--
+-- function M.toggle_ex()
+--   if M.is_netrw_open() then
+--     M.close_netrw()
+--   else
+--     vim.cmd('Ex')
+--   end
+-- end
+--
+-- usercmd('ToggleEx', M.toggle_ex, {})
+--
+-- function M.toggle_lex()
+--   if M.is_netrw_open() then
+--     M.close_netrw()
+--   else
+--     vim.cmd('Lex')
+--   end
+-- end
+--
+-- usercmd('ToggleLex', M.toggle_lex, {})
 
 return M

@@ -536,5 +536,5 @@ for name, val in pairs(hl_groups) do
 end
 
 -- Load colorscheme
-vim.g.colors_name = 'lang'
+vim.g.colors_name = 'accent'
 vim.opt.termguicolors = true
