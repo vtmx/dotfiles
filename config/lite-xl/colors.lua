@@ -7,8 +7,9 @@ local c = {
   bl      = { common.color '#2c313c' },
   fd      = { common.color '#5c6370' },
   fg      = { common.color '#abb2bf' },
+  op      = { common.color '#88909c' },
   sel     = { common.color '#3d4556' },
-  ac      = { common.color '#eeeeee' },
+  ac      = { common.color '#c6ccd7' },
   red     = { common.color '#e06c75' },
   orange  = { common.color '#d19a66' },
   yellow  = { common.color '#e5c07b' },
@@ -51,12 +52,12 @@ style.log['ERROR'] = { icon = 'E', color = c.red }
 style.syntax['normal'] = c.fg
 style.syntax['symbol'] = c.fg
 style.syntax['comment'] = c.fd
-style.syntax['keyword'] = c.magenta
-style.syntax['keyword2'] = c.red
+style.syntax['keyword'] = c.red
+style.syntax['keyword2'] = c.orange
 style.syntax['number'] = c.orange
-style.syntax['literal'] = c.yellow
+style.syntax['literal'] = c.orange
 style.syntax['string'] = c.green
-style.syntax['operator'] = c.cyan
+style.syntax['operator'] = c.op
 style.syntax['function'] = c.blue
 
 -- Plugins
