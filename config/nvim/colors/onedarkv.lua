@@ -41,11 +41,11 @@ local hl_groups = {
 	Function = { fg = c.blue },
 	Identifier = { fg = c.red },
 	Include = { fg = c.magenta },
-	Keyword = { fg = c.red },
+	Keyword = { fg = c.magenta },
 	Label = { fg = c.fg },
 	Macro = { fg = c.red  },
 	Number = { fg = c.orange },
-	Operator = { fg = c.op },
+	Operator = { fg = c.fg },
 	PreCondit = { fg = c.magenta },
 	PreProc = { fg = c.fg },
 	Repeat = { fg = c.magenta },
@@ -215,7 +215,8 @@ local hl_groups = {
 	cParen = { link = 'Operator' },
 
 	-- css
-	cssAtRule = { link = 'Function' },
+	cssAtRule = { link = 'Foreground' },
+  cssAttributeSelector = { link = 'Number' },
 	cssAttrRegion = { link = 'Foreground' },
 	cssBackgroundAttr = { link = 'Foreground' },
 	cssBorderAttr = { link = 'Foreground' },
@@ -225,9 +226,11 @@ local hl_groups = {
 	cssClassName = { link = 'Function' },
 	cssColor = { link = 'Number' },
 	cssCommonAttr = { link = 'Foreground' },
+	cssCustomProp = { link = 'Number' },
 	cssDefinition = { link = 'Definition' },
 	cssFlexibleBoxAttr = { link = 'Foreground' },
 	cssFontAttr = { link = 'Foreground' },
+	cssFunctionComma = { link = 'Foreground' },
 	cssFunction = { link = 'Function' },
 	cssFunctionName = { link = 'Function' },
 	cssIdentifier = { link = 'Function' },
@@ -237,8 +240,9 @@ local hl_groups = {
 	cssTagName = { link = 'Function' },
 	cssTextAttr = { link = 'Foreground' },
 	cssUIAttr = { link = 'Foreground' },
-	cssUnitDecorators = { link = 'Foreground' },
-	cssValueLength = { link = 'Foreground' },
+	cssUnitDecorators = { link = 'Number' },
+	cssValueNumber = { link = 'Function' },
+	cssValueLength = { link = 'Number' },
 	cssVendor = { link = 'Foreground' },
 
   -- django
@@ -477,10 +481,10 @@ local hl_groups = {
 	['@function.call.bash'] = { link = 'Function' },
 	['@keyword.bash'] = { link = 'Keyword' },
 	['@keyword.directive.bash'] = { link = 'Comment' },
-	['@punctuation.special.bash'] = { link = 'Operator' },
+	['@punctuation.special.bash'] = { link = 'Foreground' },
 	['@string.regexp.bash'] = { link = 'Foreground' },
 	['@string.special.path.bash'] = { link = 'Operator' },
-	['@variable.bash'] = { link = 'Foreground' },
+	['@variable.bash'] = { link = 'Identifier' },
 	['@variable.builtin.bash'] = { fg = c.red },
 	['@variable.parameter.bash'] = { link = 'Foreground' },
 
@@ -500,8 +504,10 @@ local hl_groups = {
 	['@tag.attribute.css'] = { link = 'Number' },
 	['@tag.css'] = { link = 'Function' },
 	['@type.css'] = { link = 'Function' },
+	['@attribute.css'] = { link = 'Function' },
 	['@value.css'] = { link = 'Number' },
 	['@variable.css'] = { link = 'Number' },
+
 
 	-- go
 	['@string.escape.go'] = { link = 'String' },
