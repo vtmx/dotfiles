@@ -45,7 +45,7 @@ require('mini.surround').setup({
     suffix_next = ''
   },
   n_lines = 0,
-  search_method = 'cover_or_nearest',
+  search_method = 'cover_or_next',
 })
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.statusline' })

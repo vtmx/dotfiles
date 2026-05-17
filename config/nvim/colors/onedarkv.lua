@@ -34,25 +34,25 @@ local hl_groups = {
 	Boolean = { fg = c.orange },
 	Character = { fg = c.green },
 	Conditional = { fg = c.magenta },
-	Constant = { link = 'Foreground' },
+	Constant = { fg = c.fg },
 	Define = { fg = c.magenta },
 	Exception = { fg = c.magenta },
 	Float = { fg = c.magenta },
 	Function = { fg = c.blue },
-	Identifier = { fg = c.yellow },
+	Identifier = { fg = c.red },
 	Include = { fg = c.magenta },
-	Keyword = { fg = c.magenta },
-	Label = { link = 'Foreground' },
+	Keyword = { fg = c.red },
+	Label = { fg = c.fg },
 	Macro = { fg = c.red  },
 	Number = { fg = c.orange },
 	Operator = { fg = c.fl },
 	PreCondit = { fg = c.magenta },
-	PreProc = { link = 'Foreground' },
+	PreProc = { fg = c.fg },
 	Repeat = { fg = c.magenta },
 	Statement = { fg = c.magenta },
-	StorageClass = { link = 'Foreground' },
+	StorageClass = { fg = c.fg },
 	String = { fg = c.green },
-	Structure = { link = 'Foreground' },
+	Structure = { fg = c.fg },
 	Tag = { fg = c.red },
 	Typedef = { fg = c.magenta },
 	Type = { fg = c.magenta },
@@ -158,7 +158,7 @@ local hl_groups = {
 	DiagnosticUnderlineInfo = { sp = c.blue, undercurl = true },
 	DiagnosticUnderlineOk = { sp = c.green, undercurl = true },
 	DiagnosticUnderlineWarn = { sp = c.yellow, undercurl = true },
-	DiagnosticUnnecessary = { link = 'Comment' },
+	DiagnosticUnnecessary = { link = 'Foreground' },
 	DiagnosticVirtualTextError = { fg = c.red },
 	DiagnosticVirtualTextHint = { fg = c.cyan },
 	DiagnosticVirtualTextInfo = { fg = c.blue },
@@ -188,8 +188,13 @@ local hl_groups = {
 	NvimInternalError = { fg = c.red },
 
 	-- awk
-	awkPatterns = { fg = c.magenta },
-	awkVariables = { fg = c.red },
+	awkBrktRegExp = { link = 'Number' },
+	awkFunction = { link = 'Function' },
+	awkParen = { link = 'Operator' },
+	awkPatterns = { link = 'Function' },
+	awkSearch = { link = 'Foreground' },
+	awkStatement = { link = 'Function' },
+	awkVariables = { link = 'Function' },
 
 	-- c
 	cBlock = { link = 'Operator' },
@@ -255,16 +260,17 @@ local hl_groups = {
 	htmlSpecialTagName = { link = 'htmlTagName' },
 	htmlTag = { link = 'Operator' },
 	htmlTagN = { link = 'Operator' },
-	htmlTagName = { fg = c.red },
+	htmlTagName = { link = 'Keyword' },
 	htmlTitle = { link = 'Foreground' },
 
 	-- javascript
 	javaScriptBraces = { link = 'Operator' },
-	javaScriptOperator = { link = 'Foreground' },
-	javaScriptType = { link = 'Foreground' },
-	javaScriptStatement = { link = 'Foreground' },
-	javaScriptIdentifier = { link = 'Foreground' },
+	javaScriptException = { link = 'Foreground' },
 	javaScriptFunction = { link = 'Function' },
+	javaScriptIdentifier = { link = 'Foreground' },
+	javaScriptOperator = { link = 'Foreground' },
+	javaScriptStatement = { link = 'Foreground' },
+	javaScriptType = { link = 'Foreground' },
 
 	-- json
 	jsonBraces = { link = 'Operator' },
@@ -325,6 +331,10 @@ local hl_groups = {
 	shTestOpr = { link = 'Operator' },
 	shVarAssign = { link = 'Operator' },
 	shVariable = { link = 'Foreground' },
+
+	-- str
+	srtNumber = { link = 'Function' },
+	srtTime = { link = 'Operator' },
 
 	-- toml
 	tomlKey = { link = 'Foreground' },
@@ -437,10 +447,10 @@ local hl_groups = {
 	-- bash
 	['@character.special.bash'] = { link = 'Operator' },
 	['@constant.bash'] = { link = 'Foreground' },
-	['@function.bash'] = { link = 'Foreground' },
+	['@function.bash'] = { link = 'Function' },
 	['@function.builtin.bash'] = { link = 'Function' },
-	['@function.call.bash'] = { link = 'Foreground' },
-	['@keyword.bash'] = { link = 'Foreground' },
+	['@function.call.bash'] = { link = 'Function' },
+	['@keyword.bash'] = { link = 'Keyword' },
 	['@keyword.directive.bash'] = { link = 'Comment' },
 	['@punctuation.special.bash'] = { link = 'Operator' },
 	['@string.regexp.bash'] = { link = 'Foreground' },
@@ -466,15 +476,22 @@ local hl_groups = {
 	['@function.method.call.go'] = { link = 'Foreground' },
 
 	-- html
-	['@none.html'] = { link = 'Operator' },
 	['@constant.html'] = { link = 'Comment' },
+	['@none.html'] = { link = 'Foreground' },
+	['@spell.html'] = { link = 'Foreground' },
 	['@string.special.url.html'] = { link = 'String' },
-	['@tag.attribute.html'] = { link = 'htmlArg' },
+	['@tag.attribute.html'] = { link = 'Foreground' },
 	['@tag.delimiter.html'] = { link = 'Operator' },
-	['@tag.html'] = { link = 'htmlTagName' },
+	['@tag.html'] = { link = 'Keyword' },
 
   -- javascript
+	['@keyword.exception.javascript'] = { link = 'Foreground' },
+	['@keyword.function.javascript'] = { link = 'Foreground' },
+	['@keyword.operator.javascript'] = { link = 'Foreground' },
+	['@type.javascript'] = { link = 'Foreground' },
+	['@variable.javascript'] = { link = 'Foreground' },
 	['@variable.member.javascript'] = { link = 'Foreground' },
+	['@variable.parameter.javascript'] = { link = 'Foreground' },
 
   -- json
 	['@property.json'] = { link = 'Foreground' },
@@ -495,7 +512,7 @@ local hl_groups = {
 
 	-- markdown
 	['@label.markdown'] = { link = 'Operator' },
-	['@markup.heading.1.markdown'] = { link = 'Operator' },
+	['@markup.heading.1.markdown'] = { link = 'Foreground' },
 	['@markup.heading.2.markdown'] = { link = 'Foreground' },
 	['@markup.heading.3.markdown'] = { link = 'Foreground' },
 	['@markup.heading.4.markdown'] = { link = 'Foreground' },
@@ -504,12 +521,14 @@ local hl_groups = {
 	['@markup.heading'] = { link = 'Title' },
 	['@markup.link.label'] = { link = 'Foreground' },
 	['@markup.link'] = { link = 'Identifier' },
-	['@markup.link.url'] = { link = 'Underlined' },
-	['@markup.raw.block'] = { link = 'Operator' },
 	['@markup.link.markdown_inline'] = { link = 'Operator' },
+	['@markup.link.url'] = { link = 'Underlined' },
 	['@markup.link.url.markdown_inline'] = { link = 'Foreground' },
+	['@markup.list.markdown'] = { link = 'Operator' },
+	['@markup.raw.block'] = { link = 'Foreground' },
 	['@markup.raw'] = { link = 'Foreground' },
 	['@markup.underline'] = { link = 'Foreground' },
+	['@nospell.markdown_inline'] = { link = 'Foreground' },
 	['@spell.markdown'] = { link = 'Foreground' },
 
   -- python
