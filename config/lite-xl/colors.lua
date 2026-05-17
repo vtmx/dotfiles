@@ -7,7 +7,6 @@ local c = {
   bl      = { common.color '#2c313c' },
   fd      = { common.color '#5c6370' },
   fg      = { common.color '#abb2bf' },
-  op      = { common.color '#88909c' },
   sel     = { common.color '#3d4556' },
   ac      = { common.color '#c6ccd7' },
   red     = { common.color '#e06c75' },
@@ -57,7 +56,7 @@ style.syntax['keyword2'] = c.orange
 style.syntax['number'] = c.orange
 style.syntax['literal'] = c.orange
 style.syntax['string'] = c.green
-style.syntax['operator'] = c.op
+style.syntax['operator'] = c.fg
 style.syntax['function'] = c.blue
 
 -- Plugins
