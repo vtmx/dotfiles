@@ -596,6 +596,9 @@ local hl_groups = {
 	['@string.number.float.toml'] = { link = 'Number' },
 	['@string.special.toml'] = { link = 'Number' },
 
+  -- sxhkd
+	['@variable.sxhkdrc'] = { link = 'Number' },
+
 	-- tera
 	['@keyword.tera'] = { link = 'Identifier' },
 	['@variable.member.tera'] = { link = 'Foreground' },

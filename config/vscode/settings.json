@@ -98,12 +98,12 @@
     "editor.wordHighlightBorder": "#00000000",
     "editorBracketMatch.background": "#00000000",
     "editorBracketMatch.border": "#00000000",
-    "editorBracketHighlight.foreground1": "#e5c07b",
-    "editorBracketHighlight.foreground2": "#c678dd",
-    "editorBracketHighlight.foreground3": "#61afef",
-    "editorBracketHighlight.foreground4": "#56b6c2",
-    "editorBracketHighlight.foreground5": "#d19a66",
-    "editorBracketHighlight.foreground6": "#abb2bf",
+    "editorBracketHighlight.foreground1": "#88909c",
+    "editorBracketHighlight.foreground2": "#88909c",
+    "editorBracketHighlight.foreground3": "#88909c",
+    "editorBracketHighlight.foreground4": "#88909c",
+    "editorBracketHighlight.foreground5": "#88909c",
+    "editorBracketHighlight.foreground6": "#88909c",
     "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75",
     "editorCursor.foreground": "#abb2bf",
     "editorGroup.border": "#323740",
@@ -208,7 +208,7 @@
   "vim.highlightedyank.duration": 100,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
-  "vim.useSystemClipboard": false,
+  "vim.useSystemClipboard": true,
   "vim.insertModeKeyBindingsNonRecursive": [
     // Go to normal mode
     { "before": ["k", "j"], "after": ["<esc>"] },
@@ -342,11 +342,11 @@
     // Add new line above in normal mode
     { "before": ["<leader>", "O"], "after": ["m", "`", "O", "<esc>", "`", "`"] },
 
-    // Paste clipboard after text
-    { "before": ["<leader>", "p"], "after": ["\"", "+", "g", "p"] },
+    // Paste in new line above
+    { "before": ["<leader>", "p"], "after": ["m", "`", "o", "<esc>", "\"", "+", "p", "`", "`"] },
 
-    // Pasta clipboard before text
-    { "before": ["<leader>", "P"], "after": ["\"", "+", "g", "P"] },
+    // Paste in new line below
+    { "before": ["<leader>", "P"], "after": ["m", "`", "O", "<esc>", "\"", "+", "p", "`", "`"] },
 
     // Quit
     { "before": ["<leader>", "q"], "commands": ["workbench.action.quit"] },
@@ -359,12 +359,6 @@
 
     // Open file
     { "before": ["<leader>", "ctrl+o"], "commands": ["workbench.action.files.openFileFolder"] },
-
-    // Paste in new line above
-    { "before": ["<leader><leader>", "p"], "after": ["o", "<esc>", "\"", "+", "g", "P", "<esc>"] },
-
-    // Paste in new line below
-    { "before": ["<leader><leader>", "P"], "after": ["O", "<esc>", "\"", "+", "g", "P", "<esc>"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Command mode
