@@ -46,7 +46,7 @@ local hl_groups = {
   PreProc = { link = 'Normal' },
   Repeat = { link = 'Statement' },
   SpecialChar = { fg = c.orange },
-  SpecialComment = { fg = c.fd },
+  SpecialComment = { link = 'Comment' },
   SpecialKey = { fg = c.cyan },
   Special = { link = 'Normal' },
   Statement = { fg = c.magenta },
@@ -357,6 +357,7 @@ local hl_groups = {
   srtTime = { fg = c.op },
 
   -- toml
+  tomlDate = { link = 'Number' },
   tomlKey = { link = 'Normal' },
   tomlTable = { link = 'Function' },
 
@@ -590,6 +591,7 @@ local hl_groups = {
   ['@key.toml'] = { link = 'Function' },
   ['@number.float.toml'] = { link = 'Number' },
   ['@property.toml'] = { link = 'Normal' },
+  ['@punctuation.delimiter.toml'] = { link = 'Normal' },
   ['@string.number.float.toml'] = { link = 'Number' },
   ['@string.special.toml'] = { link = 'Number' },
 
@@ -604,7 +606,7 @@ local hl_groups = {
   ['@keyword.type.v'] = { link = 'Keyword' },
   ['@module.v'] = { link = 'String' },
   ['@type.v'] = { link = 'Macro' },
-  ['@variable.builtin.v'] = { fg = c.orange },
+  ['@variable.builtin.v'] = { link = 'Number' },
   ['@variable.member.v'] = { link = 'Normal' },
 
   -- vim
