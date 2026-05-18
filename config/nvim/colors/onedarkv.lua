@@ -265,7 +265,7 @@ local hl_groups = {
 	goType = { link = 'Foreground' },
 
 	-- html
-	htmlArg = { link = 'Foreground' },
+	htmlArg = { link = 'Number' },
 	htmlEndTag = { link = 'Operator' },
 	htmlH1 = { link = 'Foreground' },
 	htmlH2 = { link = 'Foreground' },
@@ -278,7 +278,7 @@ local hl_groups = {
 	htmlSpecialTagName = { link = 'htmlTagName' },
 	htmlTag = { link = 'Operator' },
 	htmlTagN = { link = 'Operator' },
-	htmlTagName = { link = 'Keyword' },
+	htmlTagName = { link = 'Identifier' },
 	htmlTitle = { link = 'Foreground' },
 
 	-- javascript
@@ -509,7 +509,6 @@ local hl_groups = {
 	['@value.css'] = { link = 'Number' },
 	['@variable.css'] = { link = 'Number' },
 
-
 	-- go
 	['@string.escape.go'] = { link = 'String' },
 	['@function.method.call.go'] = { link = 'Foreground' },
@@ -519,9 +518,9 @@ local hl_groups = {
 	['@none.html'] = { link = 'Foreground' },
 	['@spell.html'] = { link = 'Foreground' },
 	['@string.special.url.html'] = { link = 'String' },
-	['@tag.attribute.html'] = { link = 'Foreground' },
+	['@tag.attribute.html'] = { link = 'Number' },
 	['@tag.delimiter.html'] = { link = 'Operator' },
-	['@tag.html'] = { link = 'Keyword' },
+	['@tag.html'] = { link = 'Identifier' },
 
   -- javascript
 	['@keyword.exception.javascript'] = { link = 'Foreground' },
