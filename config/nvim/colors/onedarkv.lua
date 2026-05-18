@@ -17,7 +17,7 @@ local c = {
 }
 
 local hl_groups = {
-	Foreground = { link = 'Foreground' },
+	Foreground = { fg = c.fg },
 
 	-- General
 	Normal = { bg = c.bg, fg = c.fg },
@@ -353,7 +353,7 @@ local hl_groups = {
 	shStatement = { link = 'Function' },
 	shTestOpr = { link = 'Operator' },
 	shVarAssign = { link = 'Operator' },
-	shVariable = { link = 'Foreground' },
+	shVariable = { link = 'Identifier' },
 
 	-- str
 	srtNumber = { link = 'Function' },
@@ -481,11 +481,12 @@ local hl_groups = {
 	['@function.call.bash'] = { link = 'Function' },
 	['@keyword.bash'] = { link = 'Keyword' },
 	['@keyword.directive.bash'] = { link = 'Comment' },
+	['@keyword.function.bash'] = { link = 'Keyword' },
 	['@punctuation.special.bash'] = { link = 'Foreground' },
 	['@string.regexp.bash'] = { link = 'Foreground' },
 	['@string.special.path.bash'] = { link = 'Operator' },
 	['@variable.bash'] = { link = 'Identifier' },
-	['@variable.builtin.bash'] = { fg = c.red },
+	['@variable.builtin.bash'] = { link = 'Identifier' },
 	['@variable.parameter.bash'] = { link = 'Foreground' },
 
 	-- c

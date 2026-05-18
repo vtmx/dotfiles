@@ -51,8 +51,8 @@ style.log['ERROR'] = { icon = 'E', color = c.red }
 style.syntax['normal'] = c.fg
 style.syntax['symbol'] = c.fg
 style.syntax['comment'] = c.fd
-style.syntax['keyword'] = c.red
-style.syntax['keyword2'] = c.orange
+style.syntax['keyword'] = c.magenta
+style.syntax['keyword2'] = c.red
 style.syntax['number'] = c.orange
 style.syntax['literal'] = c.orange
 style.syntax['string'] = c.green

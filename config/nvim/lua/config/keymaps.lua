@@ -551,6 +551,11 @@ map(
 )
 
 map(
+  'n', '<leader>ut', function() utils.toggle_treesitter() end,
+  { desc = 'Toggle treesitter' }
+)
+
+map(
   'n', '<leader>uw', function() utils.toggle_wrap() end,
   { desc = 'Toggle wrap' }
 )

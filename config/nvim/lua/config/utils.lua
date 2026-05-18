@@ -171,7 +171,7 @@ function M.toggle_treesitter()
       if success then
         print('Treesitter start')
       else
-        print('Treesitter error' .. ft)
+        print('Treesitter error ' .. ft)
       end
     else
       print('Treesitter not found file type')
