@@ -60,7 +60,7 @@ local hl_groups = {
 
   -- Keys [] {} ()
   Delimiter = { link = 'Operator' },
-  MatchParen = { fg = c.yellow },
+  MatchParen = { fg = c.orange },
 
   -- Extras
   Added = { fg = c.green },
@@ -202,7 +202,7 @@ local hl_groups = {
   awkPatterns = { link = 'Function' },
   awkSearch = { link = 'Normal' },
   awkStatement = { link = 'Function' },
-  awkVariables = { link = 'Function' },
+  awkVariables = { link = 'Identifier' },
 
   -- c
   cBlock = { link = 'Operator' },
@@ -210,7 +210,7 @@ local hl_groups = {
 
   -- css
   cssAtRule = { link = 'Normal' },
-  cssAttributeSelector = { link = 'Number' },
+  cssAttributeSelector = { link = 'Normal' },
   cssAttrRegion = { link = 'Normal' },
   cssBackgroundAttr = { link = 'Normal' },
   cssBorderAttr = { link = 'Normal' },
@@ -225,8 +225,8 @@ local hl_groups = {
   cssFlexibleBoxAttr = { link = 'Normal' },
   cssFontAttr = { link = 'Normal' },
   cssFunctionComma = { link = 'Normal' },
-  cssFunction = { link = 'Function' },
-  cssFunctionName = { link = 'Function' },
+  cssFunction = { link = 'Normal' },
+  cssFunctionName = { link = 'Normal' },
   cssIdentifier = { link = 'Function' },
   cssNoise = { link = 'cssBraces' },
   cssPositioningAttr = { link = 'Normal' },
@@ -235,7 +235,7 @@ local hl_groups = {
   cssTextAttr = { link = 'Normal' },
   cssUIAttr = { link = 'Normal' },
   cssUnitDecorators = { link = 'Number' },
-  cssValueNumber = { link = 'Function' },
+  cssValueNumber = { link = 'Number' },
   cssValueLength = { link = 'Number' },
   cssVendor = { link = 'Normal' },
 
@@ -484,21 +484,22 @@ local hl_groups = {
   ['@type.builtin.c'] = { fg = c.red },
 
   -- css
+  ['@attribute.css'] = { link = 'Function' },
   ['@character.special.css'] = { link = 'Operator' },
+  ['@conditional.css'] = { link = 'Conditional' },
   ['@constant.css'] = { link = 'Function' },
   ['@function.css'] = { link = 'Normal' },
+  ['@identifier.css'] = { link = 'Identifier' },
   ['@keyword.css'] = { link = 'Operator' },
   ['@keyword.directive.css'] = { link = 'Function' },
   ['@keyword.operator.css'] = { link = 'Operator' },
   ['@number.float.css'] = { link = 'Number' },
   ['@property.css'] = { link = 'Normal' },
-  ['@selectors.css'] = { link = 'Function' },
+  ['@selector.css'] = { link = 'Function' },
   ['@tag.attribute.css'] = { link = 'Number' },
   ['@tag.css'] = { link = 'Function' },
   ['@type.css'] = { link = 'Function' },
-  ['@attribute.css'] = { link = 'Function' },
-  ['@value.css'] = { link = 'Number' },
-  ['@variable.css'] = { link = 'Number' },
+  ['@number.css'] = { link = 'Number' },
 
   -- go
   ['@string.escape.go'] = { link = 'String' },
