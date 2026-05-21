@@ -363,6 +363,9 @@ local hl_groups = {
   tomlKey = { link = 'Normal' },
   tomlTable = { link = 'Function' },
 
+  -- ubo
+  uboSeparator = { link = 'Number' },
+
   -- vim
   vimAutoEvent = { link = 'Normal' },
   vimCommand = { link = 'Normal' },
