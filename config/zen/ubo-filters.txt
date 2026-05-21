@@ -1,6 +1,8 @@
 ! DuckDuckGo
 duckduckgo.com##.header--aside__item--hidden-lg.header--aside__item
+duckduckgo.com##.footer
 duckduckgo.com##.WktWJWUFfihMbuzAEqk2.hUUdRtuaOUx7mcSwc56s.ffON2NH02oMAcqyoh2UU
+duckduckgo.com##.Yy4FVTLlXDKk7XaBX_nT._I0sotAoeGtAJzkzyutg.fIgpqHfKgUmmk5lqmvL5
 
 ! Spotify
 open.spotify.com##._gB1lxCfXeR8_Wze5Cx9
@@ -9,7 +11,7 @@ open.spotify.com##.ZzUvBwE6uj5CAU2pjlQX.NGSgqDuaOH2VDApkzoxN.HkbHLcqgUfXruL5xVi2
 ! Torrent
 www.torrentdofilmeshd.net##.znzfspwtvrvmkjqfkmmvwwkzckzntbjvhztrgfidudgfmvhyutjwyjl.rnjqyfmgurtldmwbbrcmdvxrnvbxtasvtdrugqyujcmdjwyjl
 
-! https://www.twitch.tv
+! Twitch
 www.twitch.tv##div.side-nav-section.dcyYPL.Layout-sc-1xcs6mc-0:nth-of-type(3)
 www.twitch.tv##div.side-nav-section.dcyYPL.Layout-sc-1xcs6mc-0:nth-of-type(4)
 
@@ -73,5 +75,8 @@ www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^
 www.youtube.com##.ytGridShelfViewModelHostHasBottomButton.ytd-item-section-renderer.ytGridShelfViewModelHost
 
 ! References
+! https://github.com/LanikSJ/ubo-filters
 ! https://github.com/gijsdev/ublock-hide-yt-shorts
 ! https://gist.github.com/Robleh/583165b8e3da40ad0f04154aefa75cb2
+!
+! vim:ft=ubo
