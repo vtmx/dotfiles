@@ -246,6 +246,11 @@ map(
 )
 
 map(
+  'x', 'gs', ":sort<cr><cmd>lua vim.notify('Sorted selection')<cr>",
+  { desc = 'Sort selection' }
+)
+
+map(
   'x', 'P', '"+gp<esc><cmd>echo "paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )

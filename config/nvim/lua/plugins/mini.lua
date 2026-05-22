@@ -1,6 +1,10 @@
 -- cmdline center
 vim.pack.add({ 'https://github.com/rachartier/tiny-cmdline.nvim' })
 
+-- numb
+vim.pack.add({ 'https://github.com/nacro90/numb.nvim' })
+require('numb').setup()
+
 vim.pack.add({ 'https://github.com/nvim-mini/mini.ai' })
 require('mini.ai').setup({
   n_lines = 0,
@@ -21,12 +25,8 @@ require('mini.files').setup({
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.jump2d' })
 require('mini.jump2d').setup({
-  mappings = {
-    start_jumping = '',
-  },
-  view = {
-    dim = true
-  }
+  mappings = { start_jumping = '' },
+  view = { dim = true }
 })
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.pairs' })
