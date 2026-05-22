@@ -1,3 +1,8 @@
+# carapace
+if command -v carapace &> /dev/null; then
+  source <(carapace _carapace bash)
+fi
+
 # fzf
 if command -v fzf &> /dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
