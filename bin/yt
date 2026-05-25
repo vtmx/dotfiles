@@ -18,7 +18,7 @@ main() {
   local filename=""
   local clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || echo "")
 
-  if [[ "$clipboard" =~ https?.*youtu.* ]]; then
+  if [[ "$clipboard" =~ https.*youtu.* ]]; then
     url="$clipboard"
   fi
 
