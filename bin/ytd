@@ -21,70 +21,95 @@ clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || 
 if [[ "$clipboard" =~ https?.*youtu.* ]]; then
   url="$clipboard"
 else
-  url='https://youtu.be/6l-t1uoS-lw?si=bdXSpGMumzmDZKLa'
+  url=''
 fi
 
-output=$(yad \
-  --form \
-  --width=350 \
-  --center \
-  --window-icon=headphone \
-  --image=headphone \
-  --separator=' ' \
-  --title 'Youtube Download MP3' \
-  --text='Youtube MP3' \
-  --field='URL' "$url" \
-  --field='Pasta:DIR' "$HOME/Downloads/temp" \
-  --button 'Sair:1' --button 'Download:0' \
-)
+while true; do
+  output=$(yad \
+    --form \
+    --width=350 \
+    --center \
+    --window-icon=headphone \
+    --image=headphone \
+    --separator=' ' \
+    --title 'Youtube Download MP3' \
+    --text='Youtube MP3' \
+    --field='URL' "$url" \
+    --field='Pasta:DIR' "$(xdg-user-dir MUSIC)" \
+    --button 'Sair:1' --button 'Download:0' \
+  )
 
-# Verifica se cancelou ou deu esc
-if [[ $? -eq 1 || $? -eq 252 ]]; then
-  exit 0
-fi
+  # Verifica se cancelou ou deu esc
+  if [[ $? -eq 1 || $? -eq 252 ]]; then
+    exit 0
+  fi
 
-# Recebe valores
-url_chose=$(cut -d' ' -f1 <<< "$output")
-dir_chose=$(cut -d' ' -f2 <<< "$output")
+  # Recebe valores
+  url_chose=$(cut -d' ' -f1 <<< "$output")
+  dir_chose=$(cut -d' ' -f2 <<< "$output")
 
-# Check url
-if [[ ! "$url_chose" =~ https?.*youtu.* ]]; then
+  # Check url
+  if [[ ! "$url_chose" =~ https.*youtu.* ]]; then
+    yad \
+      --error \
+      --text="$url_chose\nURL não é válida." \
+      --button='Sair:1'
+    exit 1
+  fi
+
+  # Verifica diretório
+  if [[ ! -d "$dir_chose" ]]; then
+    yad \
+      --error \
+      --text="$dir_chose\nDiretório não é existe." \
+      --button='Sair:1'
+    exit 1
+  fi
+
+  # Argumentos do yt-dlp
+  yt_args=(
+    --extract-audio
+    --audio-format mp3
+    --add-metadata
+    --embed-thumbnail
+    --quiet
+    --progress
+    --no-warnings
+    --output "$dir_chose/%(title)s.%(ext)s"
+    "$url_chose"
+  )
+
+  # Exibe janela de download
   yad \
-    --error \
-    --text="$url_chose\nURL não é válida." \
-    --button='Sair:1'
-  exit 1
-fi
+    --title 'Baixando...' \
+    --width=350 \
+    --no-buttons \
+    --auto-close \
+    --auto-kill \
+    --progress \
+    --pulsate \
+    --text='Baixando...' & yad_pid=$!
 
-# Verifica diretório
-if [[ ! -d "$dir_chose" ]]; then
-  yad \
-    --error \
-    --text "$dir_chose\nDiretório não é existe." \
-    --button='Sair:1'
-  exit 1
-fi
+  # Executa comando
+  yt_error=$(yt-dlp "${yt_args[@]}" 2>&1 1>/dev/null | grep ERROR)
 
-args=(
-  --extract-audio
-  --audio-format mp3
-  --add-metadata
-  --embed-thumbnail
-  --quiet
-  --progress
-  --no-warnings
-  --output "$dir_chose/%(title)s.%(ext)s"
-  "$url_chose"
-)
+  # Mata janela de download
+  kill "$yad_pid" 2>/dev/null
 
-yt-dlp "${args[@]}" | yad \
-  --title 'Baixando...' \
-  --width=350 \
-  --no-buttons \
-  --auto-close \
-  --auto-kill \
-  --progress \
-  --pulsate \
-  --text='Baixando...'
+  # Exibe mensagem de erro ou sucesso
+  if [[ "$yt_error" ]]; then
+    yad &>/dev/null \
+      --title=Erro \
+      --width=350 \
+      --height=150 \
+      --text-info \
+      --no-markup \
+      --wrap \
+      --button=Ok \
+      <<< "$yt_error"
+  else
+    yad --text='Download completo' --button='Ok'
+  fi
+done
 
 # vim:ft=bash
