@@ -6,9 +6,9 @@
 shopt -s extglob
 
 main() {
-  if ! command -v yt-dlp &>/dev/null ; then 
+  if ! command -v yt-dlp &>/dev/null ; then
     echo 'yt-dlp not found'
-    exit 127
+    exit 1
   fi
 
   local url=""
@@ -18,7 +18,7 @@ main() {
   local filename=""
   local clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || echo "")
 
-  if [[ "$clipboard" =~ youtu ]]; then
+  if [[ "$clipboard" =~ https?.*youtu.* ]]; then
     url="$clipboard"
   fi
 
@@ -58,12 +58,13 @@ main() {
 
   # Download file
   local args=(
-    -x
-    --add-metadata
+    --extract-audio
     --audio-format mp3
+    --restrict-filenames
+    --add-metadata
     --embed-thumbnail
     --no-warnings
-    -o "$filename"
+    --output "$filename"
     "$url"
   )
 

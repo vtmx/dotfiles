@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+# Verifica yad
+if ! command -v yad &>/dev/null ; then
+  echo 'error: command yad not found'
+  exit 1
+fi
+
+# Verifica comando yt-dlp
+if ! command -v yt-dlp &>/dev/null ; then
+  yad \
+    --error \
+    --text='Comando yt-dlp não encontrado.' \
+    --button='Sair:0'
+  exit 1
+fi
+
+# Verifica se há algo no clipboard do youtube
+clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || echo "")
+
+if [[ "$clipboard" =~ https?.*youtu.* ]]; then
+  url="$clipboard"
+else
+  url='https://youtu.be/6l-t1uoS-lw?si=bdXSpGMumzmDZKLa'
+fi
+
+output=$(yad \
+  --form \
+  --width=350 \
+  --center \
+  --window-icon=headphone \
+  --image=headphone \
+  --separator=' ' \
+  --title 'Youtube Download MP3' \
+  --text='Youtube MP3' \
+  --field='URL' "$url" \
+  --field='Pasta:DIR' "$HOME/Downloads/temp" \
+  --button 'Sair:1' --button 'Download:0' \
+)
+
+# Verifica se cancelou ou deu esc
+if [[ $? -eq 1 || $? -eq 252 ]]; then
+  exit 0
+fi
+
+# Recebe valores
+url_chose=$(cut -d' ' -f1 <<< "$output")
+dir_chose=$(cut -d' ' -f2 <<< "$output")
+
+# Check url
+if [[ ! "$url_chose" =~ https?.*youtu.* ]]; then
+  yad \
+    --error \
+    --text="$url_chose\nURL não é válida." \
+    --button='Sair:1'
+  exit 1
+fi
+
+# Verifica diretório
+if [[ ! -d "$dir_chose" ]]; then
+  yad \
+    --error \
+    --text "$dir_chose\nDiretório não é existe." \
+    --button='Sair:1'
+  exit 1
+fi
+
+args=(
+  --extract-audio
+  --audio-format mp3
+  --add-metadata
+  --embed-thumbnail
+  --quiet
+  --progress
+  --no-warnings
+  --output "$dir_chose/%(title)s.%(ext)s"
+  "$url_chose"
+)
+
+yt-dlp "${args[@]}" | yad \
+  --title 'Baixando...' \
+  --width=350 \
+  --no-buttons \
+  --auto-close \
+  --auto-kill \
+  --progress \
+  --pulsate \
+  --text='Baixando...'
+
+# vim:ft=bash
