@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 # Verifica yad
-if ! command -v yad &>/dev/null ; then
-  echo 'error: command yad not found'
+if ! command -v yad &>/dev/null; then
+  echo 'error: comando yad não encontrado.'
   exit 1
 fi
 
 # Verifica comando yt-dlp
-if ! command -v yt-dlp &>/dev/null ; then
+if ! command -v yt-dlp &>/dev/null; then
   yad \
-    --error \
-    --text='Comando yt-dlp não encontrado.' \
-    --button='Sair:0'
+  --error \
+  --text='Comando yt-dlp não encontrado.' \
+  --button='Sair:0'
   exit 1
 fi
 
@@ -20,12 +20,11 @@ clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || 
 
 if [[ "$clipboard" =~ https?.*youtu.* ]]; then
   url="$clipboard"
-else
-  url=''
 fi
 
 while true; do
-  output=$(yad \
+  output=$(
+    yad \
     --form \
     --width=350 \
     --center \
@@ -36,7 +35,7 @@ while true; do
     --text='Youtube MP3' \
     --field='URL' "$url" \
     --field='Pasta:DIR' "$(xdg-user-dir MUSIC)" \
-    --button 'Sair:1' --button 'Download:0' \
+    --button 'Sair:1' --button 'Download:0'
   )
 
   # Verifica se cancelou ou deu esc
@@ -45,24 +44,24 @@ while true; do
   fi
 
   # Recebe valores
-  url_chose=$(cut -d' ' -f1 <<< "$output")
-  dir_chose=$(cut -d' ' -f2 <<< "$output")
+  url_chosen=$(cut -d' ' -f1 <<< "$output")
+  dir_chosen=$(cut -d' ' -f2 <<< "$output")
 
   # Check url
-  if [[ ! "$url_chose" =~ https.*youtu.* ]]; then
+  if [[ ! "$url_chosen" =~ https.*youtu.* ]]; then
     yad \
-      --error \
-      --text="$url_chose\nURL não é válida." \
-      --button='Sair:1'
+    --error \
+    --text="URL não é válida:\n$url_chosen" \
+    --button='Sair:1'
     exit 1
   fi
 
   # Verifica diretório
-  if [[ ! -d "$dir_chose" ]]; then
+  if [[ ! -d "$dir_chosen" ]]; then
     yad \
-      --error \
-      --text="$dir_chose\nDiretório não é existe." \
-      --button='Sair:1'
+    --error \
+    --text="Diretório não é existe:\n$dir_chosen" \
+    --button='Sair:1'
     exit 1
   fi
 
@@ -75,20 +74,20 @@ while true; do
     --quiet
     --progress
     --no-warnings
-    --output "$dir_chose/%(title)s.%(ext)s"
-    "$url_chose"
+    --output "$dir_chosen/%(title)s.%(ext)s"
+    "$url_chosen"
   )
 
   # Exibe janela de download
   yad \
-    --title 'Baixando...' \
-    --width=350 \
-    --no-buttons \
-    --auto-close \
-    --auto-kill \
-    --progress \
-    --pulsate \
-    --text='Baixando...' & yad_pid=$!
+  --title 'Baixando...' \
+  --width=350 \
+  --no-buttons \
+  --auto-close \
+  --auto-kill \
+  --progress \
+  --pulsate \
+  --text='Baixando...' & yad_pid=$!
 
   # Executa comando
   yt_error=$(yt-dlp "${yt_args[@]}" 2>&1 1>/dev/null | grep ERROR)
@@ -99,16 +98,17 @@ while true; do
   # Exibe mensagem de erro ou sucesso
   if [[ "$yt_error" ]]; then
     yad &>/dev/null \
-      --title=Erro \
-      --width=350 \
-      --height=150 \
-      --text-info \
-      --no-markup \
-      --wrap \
-      --button=Ok \
-      <<< "$yt_error"
+    --title=Erro \
+    --width=350 \
+    --height=150 \
+    --text-info \
+    --no-markup \
+    --wrap \
+    --button=Ok <<< "$yt_error"
   else
-    yad --text='Download completo' --button='Ok'
+    yad \
+    --text='Download completo' \
+    --button='Ok'
   fi
 done
 
