@@ -16,13 +16,17 @@ if ! command -v yt-dlp &>/dev/null; then
 fi
 
 # Verifica se há algo no clipboard do youtube
-clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || echo "")
+if ! xclip -v yt-dlp &>/dev/null; then
+  clipboard=$(xclip -o -selection clipboard 2>/dev/null)
 
-if [[ "$clipboard" =~ https?.*youtu.* ]]; then
-  url="$clipboard"
+  if [[ "$clipboard" =~ https?.*youtu.* ]]; then
+    url="$clipboard"
+  fi
+
+  url='https://youtu.be/6l-t1uoS-lw?si=eSYXSE6EA-vUxHyr'
 fi
 
-while true; do
+while :; do
   output=$(
     yad \
     --form \
@@ -71,45 +75,32 @@ while true; do
     --audio-format mp3
     --add-metadata
     --embed-thumbnail
-    --quiet
     --progress
+    --newline
+    --progress-template "%(progress._percent_str)s"
     --no-warnings
+    --ignore-errors
     --output "$dir_chosen/%(title)s.%(ext)s"
     "$url_chosen"
   )
 
   # Exibe janela de download
-  yad \
-  --title 'Baixando...' \
-  --width=350 \
-  --no-buttons \
-  --auto-close \
-  --auto-kill \
-  --progress \
-  --pulsate \
-  --text='Baixando...' & yad_pid=$!
-
-  # Executa comando
-  yt_error=$(yt-dlp "${yt_args[@]}" 2>&1 1>/dev/null | grep ERROR)
-
-  # Mata janela de download
-  kill "$yad_pid" 2>/dev/null
-
-  # Exibe mensagem de erro ou sucesso
-  if [[ "$yt_error" ]]; then
-    yad &>/dev/null \
-    --title=Erro \
-    --width=350 \
-    --height=150 \
+  (
+    (
+      yt-dlp "${yt_args[@]}"
+      echo -e "\nDownload complete!"
+    ) | yad \
     --text-info \
-    --no-markup \
-    --wrap \
-    --button=Ok <<< "$yt_error"
-  else
-    yad \
-    --text='Download completo' \
-    --button='Ok'
-  fi
+    --width=600 \
+    --height=400 \
+    --tail \
+    --auto-scroll \
+    --title='Downloading...' \
+    --button='Fechar:0'
+  ) &>/dev/null # No msg Theme <Empty> not found
+
+  # Limpa campo de url
+  url=''
 done
 
 # vim:ft=bash
