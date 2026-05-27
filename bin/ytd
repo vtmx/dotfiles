@@ -22,8 +22,6 @@ if ! xclip -v yt-dlp &>/dev/null; then
   if [[ "$clipboard" =~ https?.*youtu.* ]]; then
     url="$clipboard"
   fi
-
-  url='https://youtu.be/6l-t1uoS-lw?si=eSYXSE6EA-vUxHyr'
 fi
 
 while :; do
