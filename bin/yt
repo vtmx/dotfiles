@@ -64,6 +64,8 @@ main() {
     --add-metadata
     --embed-thumbnail
     --no-warnings
+    --progress
+    --progress-template "Downloading: %(progress._percent_str)s"
     --output "$filename"
     "$url"
   )
