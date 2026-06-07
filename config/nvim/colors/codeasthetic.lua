@@ -1,17 +1,17 @@
 local c = {
-  bg      = '#23272e',
+  bg      = '#1d1f23',
   bl      = '#2c313c',
   fd      = '#5f6672',
-  fg      = '#abb2bf',
+  fg      = '#c1cacf',
   op      = '#88909c',
   sel     = '#3d4556',
-  red     = '#e06c75',
-  green   = '#98c379',
-  yellow  = '#e5c07b',
-  orange  = '#d19a66',
-  blue    = '#61afef',
-  magenta = '#c678dd',
-  cyan    = '#56b6c2',
+  red     = '#c15b62',
+  green   = '#a0be85',
+  yellow  = '#ead191',
+  orange  = '#ead191',
+  blue    = '#729fbc',
+  magenta = '#b294bc',
+  cyan    = '#82bcbc',
 }
 
 local hl_groups = {

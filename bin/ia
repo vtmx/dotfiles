@@ -43,4 +43,4 @@ curl -s \
     "model": "'"$model"'"
   }' | \
 jq -r '.choices[0].message.content' | \
-glow -s "$HOME/.config/glow/onedark.json"
+glow
