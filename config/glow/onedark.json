@@ -85,10 +85,10 @@
         "background_color": "#23272e"
       },
       "comment": {
-        "color": "#5c6370"
+        "color": "#5f6672"
       },
       "comment_preproc": {
-        "color": "#5c6370"
+        "color": "#5f6672"
       },
       "error": {
         "color": "#e06c75"

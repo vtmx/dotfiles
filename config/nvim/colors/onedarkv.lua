@@ -288,10 +288,11 @@ local hl_groups = {
   jsonBraces = { link = 'Operator' },
   jsonCommentError = { link = 'Comment' },
   jsonFold = { link = 'Operator' },
-  jsonKeyword = { link = 'Normal' },
+  jsonKeyword = { link = 'Identifier' },
   jsonKeywordMatch = { link = 'Operator' },
   jsonNoise = { link = 'Operator' },
   jsonQuote = { link = 'Operator' },
+  jsonEscape = { link = 'Number' },
 
   -- kitty
   KittyAction = { link = 'Normal' },
@@ -531,7 +532,7 @@ local hl_groups = {
 
   -- json
   ['@conceal.json'] = { link = 'Operator' },
-  ['@property.json'] = { link = 'Normal' },
+  ['@property.json'] = { link = 'Identifier' },
 
   -- lua
   ['@constructor.lua'] = { link = 'Operator' },
