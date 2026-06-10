@@ -387,6 +387,7 @@ local hl_groups = {
   tomlDate = { link = 'Number' },
   tomlKey = { link = 'Normal' },
   tomlTable = { link = 'Function' },
+  tomlTableArray = { link = 'Normal' },
 
   -- ubo
   uboSeparator = { link = 'Number' },

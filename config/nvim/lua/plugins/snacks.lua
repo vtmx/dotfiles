@@ -1,9 +1,11 @@
 vim.pack.add({ 'https://github.com/folke/snacks.nvim' })
 
 require('snacks').setup({
-  exclude = { '.git', 'dist', 'node_modules', 'public' },
   indent = { enabled = true },
-  picker = { enable  = true },
+  picker = {
+    enable  = true,
+    exclude = { '.git', 'dist', 'node_modules', 'public' },
+  },
   zen = {
     enable  = true,
     toggles = {
