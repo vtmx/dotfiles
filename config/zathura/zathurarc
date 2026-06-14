@@ -41,8 +41,8 @@ set index-active-bg '#3d4556'
 set index-active-fg '#abb2bf'
 
 # notification
-set notification-bg '#61afef'
-set notification-fg '#23272e'
+set notification-bg '#2c313c'
+set notification-fg '#abb2bf'
 set notification-warning-bg '#e5c07b'
 set notification-warning-fg '#23272e'
 set notification-error-bg '#e06c75'
