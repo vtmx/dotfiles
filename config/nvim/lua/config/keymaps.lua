@@ -337,9 +337,9 @@ map(
 
 map(
   'n', '<leader>f', function()
-    require('snacks').picker.files({
-      cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.loop.cwd()
-    })
+      require('snacks').picker.files({
+        cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.loop.cwd()
+      })
     end,
   { desc = 'Files' }
 )
