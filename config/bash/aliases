@@ -83,6 +83,9 @@ alias dnfu="sudo dnf upgrade --refresh --setopt='skip_if_unavailable=True'"
 # egrep
 alias egrep="egrep --color=auto"
 
+# superfile
+alias f="spf"
+
 # fuzzy finder
 alias ff="fzf \
 --preview 'bat \
