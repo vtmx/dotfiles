@@ -1,0 +1,54 @@
+code_syntax_highlight = 'onedarkv'
+
+#-- Full Screen
+full_screen_fg = '#abb2bf'
+full_screen_bg = '#23272e'
+
+#-- Gradient
+gradient_color = ['#61afef', '#abb2bf']
+
+#-- File Panel
+file_panel_fg = '#abb2bf'
+file_panel_bg = '#23272e'
+file_panel_border = '#abb2bf'
+file_panel_border_active = '#61afef'
+file_panel_top_directory_icon = '#abb2bf'
+file_panel_top_path = '#abb2bf'
+file_panel_item_selected_fg = '#61afef'
+file_panel_item_selected_bg = '#3d4556'
+
+#-- Footer
+footer_fg = '#abb2bf'
+footer_bg = '#23272e'
+footer_border = '#abb2bf'
+footer_border_active = '#61afef'
+
+#-- Sidebar
+sidebar_fg = '#abb2bf'
+sidebar_bg = '#23272e'
+sidebar_title = '#abb2bf'
+sidebar_border = '#abb2bf'
+sidebar_border_active = '#61afef'
+sidebar_item_selected_fg = '#61afef'
+sidebar_item_selected_bg = '#3d4556'
+sidebar_divider = '#abb2bf'
+
+#-- Modals
+modal_fg = '#abb2bf'
+modal_bg = '#23272e'
+modal_border_active = '#abb2bf'
+modal_cancel_fg = '#23272e'
+modal_cancel_bg = '#abb2bf'
+modal_confirm_fg = '#23272e'
+modal_confirm_bg = '#abb2bf'
+
+#-- Help Menu
+help_menu_hotkey = '#61afef'
+help_menu_title = '#abb2bf'
+
+#-- Special
+cursor = '#61afef'
+correct = '#98c379'
+error = '#e06c75'
+hint = '#56b6c2'
+cancel = '#d19a66'
