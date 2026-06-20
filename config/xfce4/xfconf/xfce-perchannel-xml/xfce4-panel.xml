@@ -1,88 +1,107 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
-  <property name="configver" type="int" value="2"/>
-  <property name="panels" type="array">
-    <value type="int" value="1"/>
-    <property name="dark-mode" type="bool" value="true"/>
-    <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=8;x=704;y=1066"/>
-      <property name="length" type="double" value="100"/>
+  <property name="panels" type="uint" value="1">
+    <property name="panel-0" type="empty">
+      <property name="position" type="string" value="p=8;x=720;y=884"/>
+      <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="0"/>
-      <property name="size" type="uint" value="27"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="4"/>
-        <value type="int" value="9"/>
+        <value type="int" value="8"/>
+        <value type="int" value="3"/>
+        <value type="int" value="7"/>
         <value type="int" value="1"/>
-        <value type="int" value="15"/>
+        <value type="int" value="4"/>
+        <value type="int" value="6"/>
+        <value type="int" value="9"/>
         <value type="int" value="5"/>
         <value type="int" value="2"/>
-        <value type="int" value="12"/>
       </property>
-      <property name="mode" type="uint" value="0"/>
-      <property name="enable-struts" type="bool" value="true"/>
-      <property name="nrows" type="uint" value="1"/>
+      <property name="role" type="string" value="xfce4-panel-12965750720"/>
       <property name="length-adjust" type="bool" value="true"/>
-      <property name="background-style" type="uint" value="1"/>
-      <property name="background-rgba" type="array">
-        <value type="double" value="0.11764705882352941"/>
-        <value type="double" value="0.1333333333333333"/>
-        <value type="double" value="0.15294117647058825"/>
-        <value type="double" value="1"/>
-      </property>
-      <property name="enter-opacity" type="uint" value="100"/>
-      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="background-style" type="uint" value="0"/>
+      <property name="size" type="uint" value="36"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="icon-size" type="uint" value="28"/>
+      <property name="enable-struts" type="bool" value="true"/>
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-12" type="string" value="clock">
-      <property name="mode" type="uint" value="2"/>
-      <property name="tooltip-format" type="string" value=""/>
-      <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="Segoe Semibold, Semi-Bold 10"/>
+    <property name="plugin-2" type="string" value="actions">
+      <property name="appearance" type="uint" value="0"/>
+      <property name="invert-orientation" type="bool" value="false"/>
+      <property name="items" type="array">
+        <value type="string" value="-logout-dialog"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-shutdown"/>
+      </property>
     </property>
-    <property name="plugin-15" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-4" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
-      <property name="miniature-view" type="bool" value="false"/>
-      <property name="numbering" type="bool" value="false"/>
-      <property name="workspace-scrolling" type="bool" value="false"/>
-    </property>
-    <property name="plugin-5" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="firefox;zen"/>
-    </property>
-    <property name="plugin-9" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
-      <property name="expand" type="bool" value="true"/>
-    </property>
-    <property name="plugin-1" type="string" value="tasklist">
-      <property name="show-labels" type="bool" value="false"/>
-      <property name="show-handle" type="bool" value="false"/>
-      <property name="show-tooltips" type="bool" value="false"/>
-      <property name="window-scrolling" type="bool" value="false"/>
-      <property name="include-all-monitors" type="bool" value="false"/>
-    </property>
-    <property name="plugin-2" type="string" value="systray">
+    <property name="plugin-4" type="string" value="pager"/>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="names-visible" type="array">
+        <value type="string" value="pnmixer"/>
+        <value type="string" value="manjaro-settings-manager-daemon"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="orage"/>
+        <value type="string" value="pamac-tray"/>
+        <value type="string" value="blueman-applet"/>
+        <value type="string" value="clipman"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="xnoise"/>
+      </property>
+      <property name="show-frame" type="bool" value="false"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="steam"/>
+        <value type="string" value="ethernet network connection “wired connection 1” active"/>
+        <value type="string" value="clipman"/>
         <value type="string" value="pamac-tray"/>
+        <value type="string" value="networkmanager applet"/>
       </property>
-      <property name="known-items" type="array">
-        <value type="string" value="IKhcmsGe_y"/>
-        <value type="string" value="steam"/>
-      </property>
-      <property name="single-row" type="bool" value="false"/>
-      <property name="hide-new-items" type="bool" value="false"/>
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="hidden-legacy-items" type="array">
-        <value type="string" value="pamac-tray"/>
-      </property>
-      <property name="icon-size" type="int" value="16"/>
     </property>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="1"/>
+    </property>
+    <property name="plugin-7" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-9" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+    </property>
+    <property name="plugin-8" type="string" value="whiskermenu">
+      <property name="button-icon" type="string" value="/usr/share/icons/whiskermenu-manjaro.svg"/>
+      <property name="menu-width" type="int" value="400"/>
+      <property name="menu-height" type="int" value="519"/>
+      <property name="command-switchuser" type="string" value="dm-tool switch-to-greeter"/>
+      <property name="show-command-switchuser" type="bool" value="true"/>
+      <property name="favorites" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="xfce4-mail-reader.desktop"/>
+        <value type="string" value="kitty.desktop"/>
+      </property>
+      <property name="recent" type="array">
+        <value type="string" value="bitwarden.desktop"/>
+        <value type="string" value="pcmanfm-qt.desktop"/>
+        <value type="string" value="org.keepassxc.KeePassXC.desktop"/>
+        <value type="string" value="zen.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="kitty.desktop"/>
+        <value type="string" value="org.pulseaudio.pavucontrol.desktop"/>
+        <value type="string" value="pcmanfm.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="org.lite_xl.lite_xl.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-5" type="string" value="clock"/>
+    <property name="plugin-1" type="string" value="showdesktop"/>
   </property>
+  <property name="configver" type="int" value="2"/>
 </channel>

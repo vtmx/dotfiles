@@ -14,7 +14,6 @@ carapace-bin
 cjxl
 cmatrix
 code
-code
 cool-retro-term
 discord
 dolphin
@@ -58,6 +57,7 @@ pandoc
 pastel
 pavucontrol
 pcmanfm
+pcmanfm-qt
 perl-image-exiftool
 perl-io-compress-brotli
 perl-rename
@@ -85,12 +85,14 @@ tesseract
 timeshift
 tmux
 tokei
+transmission-qt
 tree-sitter-cli
 unrar
 veracrypt
 virsh
 virtmanager
 virt-viewr
+vivaldi
 vlc
 wine
 wmctrl

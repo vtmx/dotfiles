@@ -1,0 +1,4 @@
+--adopt
+--target=~/.config
+--ignore=.stowrc
+--ignore=.git
