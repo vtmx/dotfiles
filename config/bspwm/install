@@ -11,11 +11,11 @@ pkgs=(
   picom
   polkit-gnome
   polybar
-  qt5ct
   qt6ct
   rofi
   sxhkd
   xfce4-power-manager
+  xorg-xsetroot
   yad
 )
 

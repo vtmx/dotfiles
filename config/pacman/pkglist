@@ -99,6 +99,7 @@ wmctrl
 xclip
 xdotool
 xev
+xorg-xsetroot
 xprop
 yad
 yay
