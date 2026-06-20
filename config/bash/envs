@@ -8,7 +8,7 @@ export HISTIGNORE='..:...:bg:fg:clear:history:l:ls:pwd:z'
 export HISTSIZE=5000
 export HISTTIMEFORMAT="%F %T "
 export SHELL=/usr/bin/bash
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/Dev/dotfiles/bin"
 
 # Man
 setab() { echo -en "\e[4$1m";   }
