@@ -4,8 +4,8 @@
 configs:
 - level: 0
   monitors:
-  - id: "3027c402c239c3284397eff4a92cd677c7eadd0f"
-    display_name: "LG Electronics LG TV SSCR2 0x01010101 (HDMI-0)"
+  - id: "032525f4785da88f9a9b3a9e4a210236eff86d6d"
+    display_name: "Samsung Electric Company T24C310 (HDMI-1)"
     geometry:
       x: 0
       y: 0
@@ -18,4 +18,13 @@ configs:
       y: 0
       width: 1920
       height: 1080
-  icons: {}
+  icons:
+    "/":
+      row: 1
+      col: 0
+    "trash:///":
+      row: 2
+      col: 0
+    "/home/vitor":
+      row: 0
+      col: 0
