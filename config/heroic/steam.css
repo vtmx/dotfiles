@@ -1,0 +1,102 @@
+body.steam {
+  --text-default: #ddd;
+  --text-secondary: #eee;
+  --text-tertiary: #fff;
+
+  --background: #171d25;
+  --background-darker: #24282f;
+  --background-lighter: #414559;
+  --body-background: #24282f;
+  --gradient-body-background: #24282f;
+  --input-background: #3d4450;
+  --controller-hints-background: transparent;
+  --current-background: #171d25;
+  --modal-background: #232634;
+  --modal-border: #24282f;
+  --osk-background: #171d25;
+  --osk-button-background: #414559;
+  --osk-button-border: #232634;
+  --search-bar-background: #3d4450;
+  --search-bar-border: #3d4450;
+
+  --action-icon: #8f98a0;
+  --action-icon-hover: #eee;
+  --action-icon-active: #fff;
+  --icons-background: #171d25;
+
+  --primary-button: #24282f;
+  --primary-button-overlay: #4582a5;
+  --secondary-button: #1a9fff;
+  --secondary-button-overlay: #f4b8e4;
+  --tertiary-button: #e5c890;
+  --tertiary-button-overlay: #ef9f76;
+  --success-button: #20b449;
+  --disabled-button: #24282f;
+  --disabled-button-overlay: #232634;
+
+  --accent-overlay: #1a9fff;
+
+  --navbar-hover-background: #323a4b;
+  --navbar-active: #fff;
+  --navbar-inactive: var(--text-default);
+  --navbar-active-background: #323a4b;
+  --navbar-accent: #1a9fff;
+  --navbar-background: #24282f;
+  --divider: #24282f;
+
+  --success: #a6d189;
+  --success-hover: #81c8be;
+  --danger: #e5c890;
+  --danger-hover: #ef9f76;
+
+  --primary: #24282f;
+  --secondary: #1a9fff;
+  --accent: #1a9fff;
+
+  --status-success: #a6d189;
+  --status-warning: #e5c890;
+  --status-danger: #e78284;
+  --status-info: #24282f;
+
+  --neutral-01: #232634;
+  --neutral-02: #171d25;
+  --neutral-03: #414559;
+  --neutral-04: #737994;
+  --neutral-05: #a5adce;
+  --neutral-06: #8f98a0;
+}
+
+body.steam select,
+body.steam input {
+  box-shadow: none !important;
+}
+
+/* body.steam { */
+/*   .heroicIcon { */
+/*     filter: grayscale(1); */
+/*   } */
+/**/
+/*   .divider { */
+/*     height: 0; */
+/*     margin: 0; */
+/*   } */
+/**/
+/*   .Sidebar { */
+/*     a { */
+/*       transition: none; */
+/**/
+/*       &:hover { */
+/*         background: var(--navbar-hover-background); */
+/*         padding-inline-start: var(--sidebar-horizontal-padding); */
+/*       } */
+/*     } */
+/**/
+/*     .active:hover { */
+/*       background: #586f96; */
+/*     } */
+/*   } */
+/**/
+/*   .gameCard > .icon { */
+/*     background: #3d4450; */
+/*   } */
+/* } */
