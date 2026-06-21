@@ -86,18 +86,19 @@
         <value type="string" value="xfce4-web-browser.desktop"/>
         <value type="string" value="xfce4-mail-reader.desktop"/>
         <value type="string" value="kitty.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="bitwarden.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="transmission-qt.desktop"/>
         <value type="string" value="pcmanfm-qt.desktop"/>
+        <value type="string" value="bitwarden.desktop"/>
         <value type="string" value="org.keepassxc.KeePassXC.desktop"/>
         <value type="string" value="zen.desktop"/>
         <value type="string" value="firefox.desktop"/>
         <value type="string" value="kitty.desktop"/>
         <value type="string" value="org.pulseaudio.pavucontrol.desktop"/>
-        <value type="string" value="pcmanfm.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="org.lite_xl.lite_xl.desktop"/>
       </property>
     </property>
     <property name="plugin-5" type="string" value="clock"/>
