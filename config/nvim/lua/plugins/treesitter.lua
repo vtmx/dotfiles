@@ -1,7 +1,8 @@
 vim.pack.add({ 'https://github.com/nvim-treesitter/nvim-treesitter' })
 vim.pack.add({ 'https://github.com/baskerville/vim-sxhkdrc' })
 
--- Install
+-- Primeira ativação
+-- Necessário instalação do tree-sitter-cli antes
 -- require('nvim-treesitter').install({
 --   'bash', 'css', 'html', 'javascript', 'json',
 --   'kitty', 'python', 'regex', 'scss', 'sxhkdrc',
