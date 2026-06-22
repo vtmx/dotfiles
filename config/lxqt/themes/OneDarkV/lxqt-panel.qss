@@ -4,7 +4,7 @@
 
 LXQtPanel #BackgroundWidget {
   background: palette(base);
-  border-top: 1px solid #2c313c;
+  /* border-top: 1px solid #2c313c; */
 }
 
 QToolTip {
@@ -104,12 +104,12 @@ QMenu::indicator:non-exclusive:checked {
 }
 
 #MainMenu QLineEdit {
-  background: palette(base);
-  border: 1px solid #9b9b9b;
-  border-radius: 0px;
   padding: 3px;
-  selection-color: #eee;
-  selection-background-color: palette(link);
+  background: palette(base);
+  selection-color: palette(text);
+  selection-background: palette(link);
+  border: 1px solid #2c313c;
+  border-radius: 0;
 }
 
 #MainMenu QLineEdit:focus {
@@ -117,14 +117,14 @@ QMenu::indicator:non-exclusive:checked {
 }
 
 #MainMenu ActionView {
-    background: palette(base);
-    border: 1px solid #9b9b9b;
-    color: palette(text);
+  background: palette(base);
+  border: 1px solid #2c313c;
+  color: palette(text);
 }
 
 #MainMenu ActionView::item {
-    border: 1px solid transparent;
-    color: palette(text);
+  border: 1px solid transparent;
+  color: palette(text);
 }
 
 #MainMenu ActionView::item:hover {
@@ -133,7 +133,7 @@ QMenu::indicator:non-exclusive:checked {
 }
 
 #MainMenu ActionView::item:selected {
-    background: rgba(30, 145, 255, 50%);
+    background: palette(highlight);
     color: palette(text);
 }
 
@@ -153,7 +153,6 @@ QMenu::indicator:non-exclusive:checked {
 LXQtFancyMenuWindow {
   background: palette(window);
   border: 1px solid #2c313c;
-  border-radius: 4px;
   margin-bottom: 4px;
   margin-left: 4px;
 }
@@ -161,21 +160,18 @@ LXQtFancyMenuWindow {
 #FancyMenu QLineEdit {
   background: palette(base);
   border: 1px solid #9b9b9b;
-  border-radius: 0px;
   padding: 3px;
-  selection-color: #eee;
-  selection-background-color: palette(link);
+  selection-color: palette(text);
+  selection-background: palette(link);
 }
 
 #FancyMenu QLineEdit:focus {
   border: 1px solid #2c313c;
-  border-radius: 4px;
 }
 
 #FancyMenu #AppView {
   background: palette(base);
   border: 1px solid #2c313c;
-  border-radius: 4px;
 }
 
 #FancyMenu QListView::item {
@@ -183,13 +179,11 @@ LXQtFancyMenuWindow {
 }
 
 #FancyMenu QListView::item:hover {
-  background: #3d4556;
-  color: palette(text);
+  background: #2c313c;
 }
 
 #FancyMenu QListView::item:selected {
-  background: #3d4556;
-  color: palette(text);
+  background: #2c313c;
 }
 
 #FancyMenu QListView::focus {
@@ -201,12 +195,11 @@ LXQtFancyMenuWindow {
   padding: 4px;
   margin: 3px;
   border-radius: 4px;
-  border: 1px solid #2c313c;
 }
 
 #FancyMenu QToolButton:hover,
 #FancyMenu QToolButton:focus {
-  border: 1px solid palette(link);
+  background: #2c313c;
 }
 
 #FancyMenu QToolButton:pressed {}
@@ -253,27 +246,25 @@ LXQtFancyMenuWindow {
 }
 
 #DirectoryMenu:hover {
-    border-top: 3px solid rgba(30, 145, 255, 50%);
+  border-top: 3px solid #2c313c;
 }
 
 /*
  * Backlight
  */
 #Backlight {
-    margin: 3px;
-    padding-top: 2px;
-    border-top: 3px solid transparent;
+  padding: 4px;
 }
 
 #Backlight:hover {
-    border-top: 3px solid rgba(30, 145, 255, 50%);
+  background: palette(window);
 }
 
 /*
  * Sensors
  */
 #Sensors {
-    margin: 3px;
+  padding: 4px;
 }
 
 /*
@@ -575,7 +566,7 @@ QCalendarWidget QSpinBox {
 
 QCalendarWidget QTableView {
   background: palette(base);
-  selection-background-color: pallete(link);
+  selection-background: pallete(link);
 }
 
 QCalendarWidget #qt_calendar_nextmonth {
