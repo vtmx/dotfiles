@@ -9,3 +9,5 @@ tooltip_base_color=#1e2227
 tooltip_text_color=#abb2bf
 window_color=#23272e
 window_text_color=#abb2bf
+
+# vim:ft=dosini

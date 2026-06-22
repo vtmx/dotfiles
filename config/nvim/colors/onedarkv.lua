@@ -271,7 +271,7 @@ local hl_groups = {
 
   -- dosini
   dosiniHeader = { link = 'Identifier' },
-  dosiniLabel = { link = 'Function' },
+  dosiniLabel = { fg = c.bluel },
   dosiniValue = { link = 'Normal' },
 
   -- go

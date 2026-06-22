@@ -1,29 +1,24 @@
 Notification {
-    color: #313639;
-    border: 1px solid rgba(155, 155, 155, 100%);
-    background: rgba(240, 240, 240, 100%);
-    margin: 0px;
-    border-radius: 5px;
+  background: palette(base);
+  border: 1px solid #2c313c;
 }
 
 QLabel {
-    color: #313639;
+  color: palette(text);
 }
 
 #closeButton {
-    margin: 3px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    padding: 4px;
-    qproperty-icon: url(lxqt-notificationd/window-close.svg);
+  margin: 4px;
+  padding: 4px;
+  qproperty-icon: url(lxqt-notificationd/window-close.svg);
 }
 
 #closeButton:hover {
-    color: rgba(54, 54, 54, 100%);
-    background: rgba(30, 145, 255, 30%);
-    border: 1px solid rgba(30, 145, 255, 100%);
+  background: #2c313c;
 }
 
 #appLabel {
-    font-weight: bold;
+  font-weight: normal;
 }
+
+/* vim:ft=css */
