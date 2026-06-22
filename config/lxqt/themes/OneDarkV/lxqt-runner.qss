@@ -1,96 +1,88 @@
 #panel {
-    background: rgba(240, 240, 240, 100%);
-    border: 1px solid rgba(155, 155, 155, 100%);
+  background: palette(base);
+  /* border: 1px solid #2c313c; */
 }
 
 QToolButton {
-    margin: 3px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    padding: 4px;
-    qproperty-iconSize: 24px;
+  margin: 2px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  qproperty-iconSize: 24px;
 }
 
 QToolButton:hover {
-    color: rgba(54, 54, 54, 100%);
-    background: rgba(30, 145, 255, 30%);
-    border: 1px solid rgba(30, 145, 255, 100%);
+  background: #2c313c;
 }
 
 QToolButton::menu-indicator {
-   image: none;
+ image: none;
 }
 
 #closeButton {
-    qproperty-icon: url(lxqt-runner/window-close.svg);
+  qproperty-icon: url(lxqt-runner/window-close.svg);
 }
 
 #actionButton {
-    qproperty-icon: url(lxqt-runner/application-menu.svg);
+  qproperty-icon: url(lxqt-runner/application-menu.svg);
 }
 
 #commandEd {
-    color: #000000;
-    background: #f0f0f0;
-    border: 1px solid #9b9b9b;
-    border-radius: 0px;
-    padding: 3px;
-    selection-color: #eee;;
-    selection-background-color: #1e91ff;
+  padding: 4px;
+  background: palette(base);
+  selection-color: palette(text);
+  selection-background: palette(highlight);
+  border: 1px solid #2c313c;
+  color: palette(text);
 }
 
 #commandEd:focus {
-    border: 1px solid #1e91ff;
+  border: 1px solid #2c313c;
 }
 
 #commandList {
-    background-color: #f0f0f0;
-    border: 1px solid #9b9b9b;
-    selection-background-color: rgba(30, 145, 255, 50%);
-    selection-color: #313639;
-    alternate-background-color:	#e6e6e6;
-    color: #313639;
+  background: palette(base);
+  border: 1px solid #2c313c;
+  selection-background: palette(highlight);
+  selection-color: palette(text);
+  alternate-background: palette(highlight);
+  color: palette(text);
 }
 
 #commandList::item {
-    background: #f0f0f0;
-    color: #313639;
+  background: palette(base);
 }
 
 #commandList::item:alternate {
-    background: #e6e6e6;
-    color: #313639;
+  background: palette(base);
 }
 
 #commandList::item:hover {
-    background: rgba(30, 145, 255, 10%);
-    color: #313639;
+  background: #2c313c;
 }
 
 #commandList::item:selected {
-    background: rgba(30, 145, 255, 50%);
-    color: #313639;
+  background: #2c313c;
 }
 
 QMenu {
-    border: 1px solid rgba(155, 155, 155, 100%);
-    background: rgba(240, 240, 240, 100%);
-    margin: 0px;
+  background: palette(base);
+  border: 1px solid #2c313c;
+  border-radius: 0;
 }
 
-QMenu::item {
-    color: #313639;
-}
+QMenu::item { }
 
 QMenu::item:selected {
-    background: rgba(30, 145, 255, 50%);
-    color: #313639;
+  background: #2c313c;
 }
 
 QMenu::right-arrow {
-    image: url(right-arrow.svg);
+  image: url(right-arrow.svg);
 }
 
 QMenu::item:disabled {
-    color: rgb(160, 160, 160);
+  color: rgb(160, 160, 160);
 }
+
+/* vim:ft=css */
