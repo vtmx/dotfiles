@@ -59,7 +59,7 @@ www.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))
 www.youtube.com##ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))
 www.youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))
 
-! Hide shorts tab on channel pages`
+! Hide shorts tab on channel pages
 ! Old style
 www.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
 ! New style (2023-10)
@@ -74,9 +74,13 @@ www.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^
 ! Hide shorts search page
 www.youtube.com##.ytGridShelfViewModelHostHasBottomButton.ytd-item-section-renderer.ytGridShelfViewModelHost
 
+! Hide denuncies
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(6)
+
 ! References
 ! https://github.com/LanikSJ/ubo-filters
 ! https://github.com/gijsdev/ublock-hide-yt-shorts
 ! https://gist.github.com/Robleh/583165b8e3da40ad0f04154aefa75cb2
-!
+
 ! vim:ft=ubo
+

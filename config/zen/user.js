@@ -24,10 +24,17 @@ user_pref("sidebar.visibility", "hide-sidebar");
 
 // Use qt portal
 user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
+user_pref("widget.use-xdg-desktop-portal.location", 1);
 user_pref("widget.use-xdg-desktop-portal.mime-handler", 1);
+user_pref("widget.use-xdg-desktop-portal.open-uri", 1);
+user_pref("widget.use-xdg-desktop-portal.settings", 1);
 
 // Zen
 user_pref("zen.tabs.show-newtab-vertical", false);
+user_pref("zen.theme.acrylic-elements", false);
+user_pref("zen.theme.border-radius", 4);
+user_pref("zen.theme.content-element-separation", 8);
+user_pref("zen.theme.gradient.show-custom-colors", false);
 user_pref("zen.urlbar.behavior", "normal");
 user_pref("zen.view.compact.enable-at-startup", false);
 user_pref("zen.view.show-newtab-button-top", false);
