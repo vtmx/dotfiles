@@ -1,0 +1,126 @@
+body.OneDarkV {
+  font-size: 14px;
+  --primary-font-family: system-ui, sans-serif;
+  --secondary-font-family: system-ui, sans-serif;
+  --text-md: 14px;
+
+  --text-default: #abb2bf;
+  --text-secondary: #eee;
+  --text-tertiary: #eee;
+
+  --background: #23272e;
+  --background-darker: #1e2227;
+  --background-lighter: #2c313c;
+  --body-background: var(--background);
+  --current-background: #1e2227;
+  --gradient-body-background: #24282f;
+
+  --input-background: #3d4450;
+  --controller-hints-background: transparent;
+
+  --modal-background: #232634;
+  --modal-border: #24282f;
+
+  --osk-background: #171d25;
+  --osk-button-background: #414559;
+  --osk-button-border: #232634;
+
+  --search-bar-background: #3d4450;
+  --search-bar-border: #3d4450;
+
+  --action-icon: #8f98a0;
+  --action-icon-hover: #eee;
+  --action-icon-active: #fff;
+  --icons-background: var(--background-darker);
+
+  --primary-button: #24282f;
+  --primary-button-overlay: #4582a5;
+  --secondary-button: var(--accent);
+  --secondary-button-overlay: #f4b8e4;
+  --tertiary-button: #e5c890;
+  --tertiary-button-overlay: #ef9f76;
+  --success-button: #20b449;
+  --disabled-button: #24282f;
+  --disabled-button-overlay: #232634;
+
+  --navbar-active-background: var(--background-lighter);
+  --navbar-active: #fff;
+  --navbar-background: var(--background-darker);
+  --navbar-hover-background: #323a4b;
+  --navbar-inactive: var(--text-default);
+  --sidebar-item-inactive-text-color: var(--text-default);
+  --divider: var(--background-lighter);
+  --divider-color: var(--background-lighter);
+
+  --success: #a6d189;
+  --success-hover: #81c8be;
+  --danger: #e5c890;
+  --danger-hover: #ef9f76;
+
+  --accent: #61afef;
+  --primary: #24282f;
+  --secondary: var(--accent);
+  --brand-text-01: var(--accent);
+  --brand-primary: var(--accent);
+  --accent-overlay: var(--accent);
+
+  --status-success: #a6d189;
+  --status-warning: #e5c890;
+  --status-danger: #e78284;
+  --status-info: #24282f;
+
+  --neutral-01: #232634;
+  --neutral-02: #171d25;
+  --neutral-03: #414559;
+  --neutral-04: #737994;
+  --neutral-05: #a5adce;
+  --neutral-06: #8f98a0;
+
+  select, input {
+    box-shadow: none !important;
+  }
+
+  /* Sidebar */
+  .Header, .libraryHeader {
+    background: var(--background-darker);
+  }
+
+  /* Sidebar */
+  .Sidebar .heroicIcon {
+    height: 0;
+    opacity: 0;
+  }
+
+  .Sidebar button {
+    border-radius: 0;
+  }
+
+  .Sidebar { & .Sidebar__item { &:hover { padding-inline-start: 16px } } }
+  [data-tour='sidebar-community'], [data-tour='sidebar-docs'] {
+    display: none;
+  }
+
+  .Sidebar .heroicVersion {
+    color: var(--text-default);
+  }
+
+  .Sidebar svg[data-testid='HelpOutlineIcon'] {
+    display: none;
+    fill: var(--brand-text-01);
+  }
+
+  /* Main */
+  .SearchBar {
+    border-radius: var(--space-3xs);
+  }
+
+  .wineItem {
+    border-color: #5f6672;
+  }
+
+  .WarningMessage {
+    color: #fff;
+  }
+}
+
+/* vim:ft=css */
