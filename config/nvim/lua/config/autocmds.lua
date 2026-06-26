@@ -144,6 +144,7 @@ autocmd('FileType', {
 })
 
 -- markddown
+-- https://guidest.com/markdown/shortcuts
 autocmd('FileType', {
   pattern = 'markdown',
   callback = function()
@@ -151,16 +152,40 @@ autocmd('FileType', {
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
 
-    vim.keymap.set('n', '<leader>`', function()
+    vim.keymap.set('i', '```', function()
       vim.snippet.expand('```\n$0\n```')
     end)
 
+    vim.keymap.set('i', '``b', function()
+      vim.snippet.expand('```bash\n$0\n```')
+    end)
+
+    vim.keymap.set('i', '``h', function()
+      vim.snippet.expand('```html\n$0\n```')
+    end)
+
     vim.keymap.set('i', '<c-b>', function()
-      vim.snippet.expand('```\n$0\n```')
+      vim.snippet.expand('**$0**')
+    end)
+
+    vim.keymap.set('i', '<c-i>', function()
+      vim.snippet.expand('*$0*')
+    end)
+
+    vim.keymap.set('i', '<c-s-i>', function()
+      vim.snippet.expand('![$1]($0)')
     end)
 
     vim.keymap.set('i', '<c-k>', function()
       vim.snippet.expand('[$1]($0)')
+    end)
+
+    vim.keymap.set('i', '<c-t>', function()
+      vim.snippet.expand('|$0|')
+    end)
+
+    vim.keymap.set('i', '<c-s>-', function()
+      vim.snippet.expand('---\n$0')
     end)
   end
 })
