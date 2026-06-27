@@ -234,7 +234,7 @@ map('i', '<c-y>', function()
 )
 
 map(
-  'i', '<m-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
+  'i', '<a-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
   { desc = 'Comment line' }
 )
 
@@ -308,6 +308,11 @@ map(
 
 map(
   'n', '<leader>a', 'G<s-v>gg',
+  { desc = 'Select all text' }
+)
+
+map(
+  'n', '%', 'G<s-v>gg',
   { desc = 'Select all text' }
 )
 
