@@ -2,7 +2,7 @@ local keymap = require 'core.keymap'
 
 local keymaps = {
   -- Treeview
-  ['ctrl+shift+e'] = 'treeview:toggle',
+  ['ctrl+e'] = 'treeview:toggle',
 
   -- Doc
   ['ctrl+shift+z'] = 'doc:redo',
@@ -31,8 +31,12 @@ local keymaps = {
   ['ctrl+alt+k'] = 'doc:move-lines-up',
   
   -- Comment
-  ['ctrl+;'] = 'doc:toggle-line-comments',
+  ['ctrl+/'] = 'doc:toggle-line-comments',
   
+  -- Autocomplete
+  ['ctrl+j'] = "autocomplete:next",
+  ['ctrl+k'] = "autocomplete:previous",
+
   -- Centerdoc
   ['alt+z'] = 'center-doc:toggle',
   ['ctrl+alt+z'] = 'center-doc:zen-mode-toggle',
