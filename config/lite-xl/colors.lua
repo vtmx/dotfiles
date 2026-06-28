@@ -43,9 +43,11 @@ style.good = c.green
 style.warn = c.yellow
 style.error = c.red
 style.modified = c.blue
-style.log['INFO']  = { icon = 'I', color = c.blue }
-style.log['WARN']  = { icon = 'W', color = c.yellow }
-style.log['ERROR'] = { icon = 'E', color = c.red }
+
+-- Não ficou bom
+-- style.log['INFO']  = { icon = 'I', color = c.blue }
+-- style.log['WARN']  = { icon = 'W', color = c.yellow }
+-- style.log['ERROR'] = { icon = 'E', color = c.red }
 
 -- Syntax
 style.syntax['normal'] = c.fg
