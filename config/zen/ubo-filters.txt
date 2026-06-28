@@ -4,6 +4,11 @@ duckduckgo.com##.footer
 duckduckgo.com##.WktWJWUFfihMbuzAEqk2.hUUdRtuaOUx7mcSwc56s.ffON2NH02oMAcqyoh2UU
 duckduckgo.com##.Yy4FVTLlXDKk7XaBX_nT._I0sotAoeGtAJzkzyutg.fIgpqHfKgUmmk5lqmvL5
 
+! Linkedin
+www.linkedin.com##.ad43d1b8._0b24dadc.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f > .ad43d1b8._0b24dadc.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f
+www.linkedin.com##.ad43d1b8.d37f8f7d._2803d149._45a849fd._2c25f0ab._49e45a86._9fb016f4._1a11b4c8.f1d4988a.fe8bcc80._312dec41.a5b50dc1.e40ab1a2.de2f624b._1fd02c96.cc656f19
+www.linkedin.com##.ad43d1b8._94c7ea4d.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f
+
 ! Spotify
 open.spotify.com##._gB1lxCfXeR8_Wze5Cx9
 open.spotify.com##.ZzUvBwE6uj5CAU2pjlQX.NGSgqDuaOH2VDApkzoxN.HkbHLcqgUfXruL5xVi28

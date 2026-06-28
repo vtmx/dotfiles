@@ -4,10 +4,10 @@
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_STYLE_OVERRIDE=Oxygen
 
-# Cursor
-xsetroot -cursor_name left_ptr & # Need: xorg-xsetroot
+# Cursor - need: xorg-xsetroot
+xsetroot -cursor_name left_ptr &
 
-# Power
+# Power - need: xorg-xset
 xset s off     # Disable screen saver
 xset s noblank # Disable black screen
 xset -dpms     # Disable display power management system
