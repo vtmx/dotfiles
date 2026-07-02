@@ -1,6 +1,7 @@
 local opts = {
   autochdir = true,
   autocomplete = true,
+  autoread = true,
   clipboard = 'unnamedplus',
   cmdheight = 0,
   complete = { '.', 'b', 'o', 't', 'u', 'w' },
@@ -8,6 +9,7 @@ local opts = {
   cursorline = true,
   diffopt = 'internal,filler,closeoff,indent-heuristic,linematch:60,algorithm:histogram',
   expandtab = true,
+  fillchars = { eob = ' ' },
   ignorecase = true,
   lazyredraw = true,
   listchars = { eol = '↲', nbsp = '+', space = '.', tab = '›-', trail = '⋯' },

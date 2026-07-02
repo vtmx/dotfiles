@@ -21,7 +21,7 @@ local hl_groups = {
   Comment = { fg = c.fd },
   Cursor = { bg = c.fg, fg = c.bg },
   CursorLine = { bg = c.bl },
-  EndOfBuffer = { fg = c.bg },
+  EndOfBuffer = { fg = c.fd }, -- tilde ~
   TermCursor = { link = 'Normal' },
   Title = { link = 'Normal' },
   Twilight = { link = 'Comment' },
