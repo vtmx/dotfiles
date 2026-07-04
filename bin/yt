@@ -15,7 +15,6 @@ main() {
   local filename=""
   local time_start=""
   local time_end=""
-  local filename=""
   local clipboard=$(xclip -o -selection clipboard 2>/dev/null || pbpaste 2>/dev/null || echo "")
 
   if [[ "$clipboard" =~ https.*youtu.* ]]; then
@@ -50,7 +49,7 @@ main() {
 
   # Get title of video
   if [[ -z "$filename" ]]; then
-    filename=$(yt-dlp --print filename -o "%(title)s" "$url")
+    filename=$(yt-dlp --no-warnings --js-runtimes node --print filename -o "%(title)s" "$url")
   fi
 
   # Transform filename
@@ -64,8 +63,9 @@ main() {
     --add-metadata
     --embed-thumbnail
     --no-warnings
-    --progress
     --progress-template "Downloading: %(progress._percent_str)s"
+    --js-runtimes node
+    --remote-components ejs:github
     --output "$filename"
     "$url"
   )

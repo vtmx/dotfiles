@@ -41,7 +41,7 @@ clone_repository() {
 
 copy_bin() {
   bindir=${HOME}/.local/bin
-  [[ ! -d $bindir ]] && echo Create bin dir...; mkdir -p $bindir
+  [[ ! -d $bindir ]] && echo Create bin dir... && mkdir -p $bindir
   echo Create simolic link of bin...
   if cp -r "$cwd/bin/"* $bindir; then
     pause_success "Bin copied"
@@ -52,7 +52,7 @@ copy_bin() {
 
 copy_fonts() {
   fontdir=${HOME}/.local/share/fonts
-  [[ ! -d $fontdir ]] && echo Create font dir...; mkdir -p $fontdir
+  [[ ! -d $fontdir ]] && echo Create font dir... && mkdir -p $fontdir
   echo Copying fonts...
   if cp -r "$cwd/fonts/"* $fontdir; then
     pause_success "Fonts copied"
