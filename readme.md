@@ -7,7 +7,7 @@
 <table>
   <tr>
     <th align="left" width="180">OS</th>
-    <td width="360"><a href="https://manjaro.org/downloads/official/kde">Manjaro</a></td>
+    <td width="360"><a href="https://manjaro.org">Manjaro</a></td>
   </tr>
   <tr>
     <th align="left">WM</th>
@@ -40,7 +40,7 @@
 <table>
   <tr>
     <th align="left">Colors</th>
-    <td><a href="config/kde/kde.colors">OneDarkV</a></td>
+    <td><a href="config/qt/qt6ct/colors/onedarkv.conf">OneDarkV</a></td>
   </tr>
   <tr>
     <th align="left">GTK Theme</th>

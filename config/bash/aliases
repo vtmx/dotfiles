@@ -161,6 +161,10 @@ alias md="mkdir -p"
 # move
 alias mv="mv -i"
 
+# opencode
+alias oc="opencode"
+alias ocr="opencode run"
+
 # pip
 alias pipi="pip install"
 alias pipr="pip uninstall"
