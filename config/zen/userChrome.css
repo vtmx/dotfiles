@@ -7,7 +7,7 @@ body {
   font: 13px Segoe, system-ui, sans-serif !important;
 }
 
-::-moz-selection {
+::selection, ::search-text:current, ::-moz-selection {
   background: #61afef !important;
   color: #23272e !important;
 }
