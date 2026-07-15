@@ -4,18 +4,21 @@
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_STYLE_OVERRIDE=Oxygen
 
-# Cursor need: xorg-xsetroot
-xsetroot -cursor_name left_ptr &
+# bspwm config dir
+bspdir=$HOME/.config/bspwm
 
-# Power need: xorg-xset
-xset s off noblank -dpms & # Disable DPMS and prevent screen from blanking
+start() {
+  local proc=$(basename "$1")
+  pgrep -x "$proc" >/dev/null || "$@" &
+}
 
 # Apps
-bspdir=$HOME/.config/bspwm
-pgrep -x sxhkd    > /dev/null || sxhkd -c $bspdir/shortcuts &
-pgrep -x numlockx > /dev/null || numlockx & # Need nunlockx
-pgrep -x feh      > /dev/null || feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/ &
-pgrep -x polybar  > /dev/null || polybar bottom -c $bspdir/polybar/config.ini &
-pgrep -x dunst    > /dev/null || dunst -config $bspdir/dunst/dunstrc &
-# pgrep -x picom > /dev/null || picom --config $bspdir/picom/picom.conf &
-pgrep -f /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+xsetroot -cursor_name left_ptr &
+xset s off noblank -dpms &
+start numlockx
+start sxhkd -c $bspdir/shortcuts
+start dunst -config $bspdir/dunst/dunstrc
+start feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/
+start polybar bottom -c $bspdir/polybar/config.ini
+start /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# start picom --config $bspdir/picom/picom.conf
