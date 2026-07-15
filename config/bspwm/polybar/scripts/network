@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ping -c1 8.8.8.8 >/dev/null; then
+if ip route 2>/dev/null | grep -q default; then
   echo 󰍹
 else
   echo 󰶐

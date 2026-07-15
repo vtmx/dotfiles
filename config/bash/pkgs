@@ -1,10 +1,14 @@
+has() {
+  command -v "$1" &> /dev/null
+}
+
 # carapace
-# if command -v carapace &> /dev/null; then
-#   source <(carapace _carapace bash)
-# fi
+if has carapace; then
+  source <(carapace _carapace bash)
+fi
 
 # fzf
-if command -v fzf &> /dev/null; then
+if has fzf; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
     source /usr/share/fzf/completion.bash
   fi
@@ -33,29 +37,34 @@ if command -v fzf &> /dev/null; then
 fi
 
 # fd
-if command -v fd &> /dev/null; then
+if has fd; then
   export LS_COLORS=''
 fi
 
 # go
-if command -v go &> /dev/null; then
+if has go; then
   export GOPATH=$HOME/Dev/go
   export PATH=$PATH:$GOPATH/bin
 fi
 
 # glow
-if command -v glow &> /dev/null; then
+if has glow; then
   export GLOW_STYLE=$HOME/.config/glow/onedark.json
 fi
 
 # nvm
-# if command -v nvm &> /dev/null; then
+# if has nvm; then
 #   export NVM_DIR=$HOME/.nvm
 #   [[ -s $NVM_DIR/nvm.sh ]] && \. $NVM_DIR/nvm.sh
 # fi
 
+# opencode
+if has glow; then
+  export OPENCODE_ENABLE_EXA=1
+fi
+
 # zoxide
-if command -v zoxide &> /dev/null; then
+if has zoxide; then
   eval "$(zoxide init bash)"
 fi
 

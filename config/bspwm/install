@@ -15,6 +15,7 @@ pkgs=(
   rofi
   sxhkd
   xfce4-power-manager
+  xorg-xset
   xorg-xsetroot
   yad
 )

@@ -19,8 +19,8 @@
       "light": "bg"
     },
     "secondary": {
-      "dark": "magenta",
-      "light": "magenta"
+      "dark": "blue",
+      "light": "blue"
     },
     "accent": {
       "dark": "blue",

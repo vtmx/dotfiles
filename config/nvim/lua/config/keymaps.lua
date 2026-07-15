@@ -246,11 +246,6 @@ map(
 )
 
 map(
-  'x', 'gs', ":sort<cr><cmd>lua vim.notify('Sorted selection')<cr>",
-  { desc = 'Sort selection' }
-)
-
-map(
   'x', 'P', '"+gp<esc><cmd>echo "paste from clipboard"<cr>',
   { desc = 'Paste from clipboard' }
 )
@@ -312,11 +307,6 @@ map(
 )
 
 map(
-  'n', '%', 'G<s-v>gg',
-  { desc = 'Select all text' }
-)
-
-map(
   'n', '<leader>b', function() require('snacks').picker.buffers() end,
   { desc = 'Buffers' }
 )
@@ -341,6 +331,11 @@ map(
 )
 
 map(
+  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
+  { desc = 'Oil' }
+)
+
+map(
   'n', '<leader>f', function()
       require('snacks').picker.files({
         cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.loop.cwd()
@@ -352,11 +347,6 @@ map(
 map(
   'n', '<leader>F', function() require('snacks').picker.files({ cwd = vim.fn.expand('%:p:h') }) end,
   { desc = 'Files in current dir' }
-)
-
-map(
-  'n', '<leader>E', '<cmd>lua require("oil").toggle_float()<cr>',
-  { desc = 'Oil' }
 )
 
 map(
@@ -375,7 +365,12 @@ map(
 )
 
 map(
-  'n', '<leader>gs', function() require('snacks').picker.git_status() end,
+  'x', '<leader>gs', ":sort<cr><cmd>lua vim.notify('Sorted selection')<cr>",
+  { desc = 'Sort selection' }
+)
+
+map(
+  'n', '<leader>gS', function() require('snacks').picker.git_status() end,
   { desc = 'Git Status' }
 )
 
