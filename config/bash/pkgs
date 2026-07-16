@@ -53,13 +53,13 @@ if has glow; then
 fi
 
 # nvm
-# if has nvm; then
-#   export NVM_DIR=$HOME/.nvm
-#   [[ -s $NVM_DIR/nvm.sh ]] && \. $NVM_DIR/nvm.sh
-# fi
+if has nvm; then
+  export NVM_DIR=$HOME/.nvm
+  [[ -s $NVM_DIR/nvm.sh ]] && \. $NVM_DIR/nvm.sh
+fi
 
 # opencode
-if has glow; then
+if has opencode; then
   export OPENCODE_ENABLE_EXA=1
 fi
 

@@ -52,7 +52,7 @@ autocmd({ 'WinEnter', 'BufEnter' }, {
 
 -- Show cursorline only active window disable
 autocmd({ 'WinLeave', 'BufLeave' }, {
-  group = 'active_cursorline',
+  group = augroup('active_cursorline', { clear = true }),
   callback = function()
     vim.opt_local.cursorline = false
   end

@@ -64,7 +64,7 @@ statusline.setup({
       local recording = vim.fn.reg_recording()
       local macro_msg = ''
       if recording ~= '' then
-        macro_msg = string.format('⏺')
+        macro_msg = '⏺'
       end
 
       local mode_abb = {

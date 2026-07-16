@@ -595,7 +595,7 @@ map(
 )
 
 map(
-  'n', '<leader>X', '<cmd>.w !bash<cr>',
+  'n', '<leader>x', '<cmd>.w !bash<cr>',
   { desc = 'Execute current line' }
 )
 
