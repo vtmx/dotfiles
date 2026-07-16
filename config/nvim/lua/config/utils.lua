@@ -83,10 +83,10 @@ vim.g.codeium_enabled = false
 function M.toggle_ia()
   if vim.g.codeium_enabled == true then
     vim.cmd('Codeium Disable')
-    print('Enable IA')
+    print('Disable IA')
   else
     vim.cmd('Codeium Enable')
-    print('Disable IA')
+    print('Enable IA')
   end
 end
 
@@ -120,7 +120,7 @@ usercmd('ToggleColorColumn', M.toggle_colorcolumn, {})
 
 function M.toggle_relativenumber()
   vim.o.relativenumber = not vim.o.relativenumber
-  print('Relative number ' .. (vim.o.relativenumber and 'off' or 'on'))
+  print('Relative number ' .. (vim.o.relativenumber and 'on' or 'off'))
 end
 
 usercmd('ToggleRelativeNumber', M.toggle_relativenumber, {})
