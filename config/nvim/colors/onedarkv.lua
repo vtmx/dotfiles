@@ -276,10 +276,11 @@ local hl_groups = {
 
   -- go
   goBlock = { link = 'Normal' },
-  goImport = { link = 'Normal' },
-  goPackage = { link = 'Normal' },
-  goParen = { link = 'Operator' },
-  goStatement = { link = 'Normal' },
+  goFormatSpecifier = { link = 'Number' },
+  goImport = { link = 'Statement' },
+  goPackage = { link = 'Statement' },
+  goParen = { link = 'Normal' },
+  goStatement = { link = 'Statement' },
   goType = { link = 'Normal' },
 
   -- html
@@ -542,8 +543,15 @@ local hl_groups = {
   ['@value.css'] = { link = 'cssValue' },
 
   -- go
-  ['@string.escape.go'] = { link = 'String' },
+  ['@function.call.go'] = { link = 'Normal' },
   ['@function.method.call.go'] = { link = 'Normal' },
+  ['@property.go'] = { link = 'Normal' },
+  ['@spell.go'] = { link = 'String' },
+  ['@string.escape.go'] = { link = 'String' },
+  ['@type.go'] = { link = 'Normal' },
+  ['@type.definition.go'] = { link = 'Normal' },
+  ['@variable.member.go'] = { link = 'Normal' },
+  ['@variable.parameter.go'] = { link = 'Normal' },
 
   -- html
   ['@constant.html'] = { link = 'Comment' },
@@ -693,7 +701,7 @@ local hl_groups = {
   netrwTreeBar = { link = 'Normal' },
 
   -- snacks
-  SnacksBackdrop = { bg = c.bg, blend = 100 },
+  SnacksBackdrop = { bg = c.bg },
   SnacksIndent = { fg = c.sel },
   SnacksIndentScope = { link = 'SnacksIndent' },
   SnacksPickerCursorLine = { link = 'Normal' },
