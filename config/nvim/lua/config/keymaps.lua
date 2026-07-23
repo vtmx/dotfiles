@@ -580,7 +580,7 @@ map(
 )
 
 map(
-  'n', '<leader>uz', '<cmd>ZenMode<cr>',
+  'n', '<leader>uz', function() require('snacks').zen() end,
   { desc = 'ZenMode' }
 )
 
