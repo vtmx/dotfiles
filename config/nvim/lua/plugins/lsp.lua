@@ -1,6 +1,7 @@
 vim.pack.add({
-  'https://github.com/williamboman/mason.nvim',
   'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/williamboman/mason.nvim',
+  'https://github.com/mason-org/mason-lspconfig.nvim'
 })
 
 require('mason').setup({
@@ -15,6 +16,19 @@ require('mason').setup({
     }
   }
 })
+
+local servers = {
+  'bashls',
+  'clangd',
+  'emmet_language_server',
+  'gopls',
+  'lua_ls',
+}
+
+-- Instala caso não tenha sido instalado
+require('mason-lspconfig').setup {
+  ensure_installed = servers,
+}
 
 local function lsp(name, config)
   vim.lsp.config(name, config)
@@ -42,7 +56,7 @@ lsp('clangd', {
 -- emmet
 lsp('emmet_language_server', {
   cmd = { 'emmet-language-server', '--stdio' },
-  filetypes = { 'css', 'scss', 'html' },
+  filetypes = { 'css', 'scss', 'html', 'htmldjango' },
   init_options = {
     showSuggestionsAsSnippets = true,
   }
