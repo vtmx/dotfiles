@@ -5,6 +5,7 @@ require('snacks').setup({
   picker = {
     enable  = true,
     exclude = { '.git', 'dist', 'node_modules', 'public' },
+    layout = { layout = { backdrop = false } }
   },
   zen = {
     enable  = true,
@@ -16,14 +17,8 @@ require('snacks').setup({
     },
     win = {
       width = 0.5,
-      backdrop = { transparent = true, blend = 0 },
+      backdrop = false,
     },
-    on_open = function ()
-      vim.api.nvim_set_hl(0, 'SnacksBackdrop_000000', { bg = '#23272e' })
-    end,
-    zoom = {
-      font_size = 4,
-    }
   }
 })
 

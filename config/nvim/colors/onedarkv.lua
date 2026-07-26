@@ -61,7 +61,7 @@ local hl_groups = {
 
   -- Keys [] {} ()
   Delimiter = { link = 'Operator' },
-  MatchParen = { fg = c.orange },
+  MatchParen = { fg = c.orange }, -- loaded_matchparen = 1
 
   -- Extras
   Added = { fg = c.green },
@@ -286,6 +286,7 @@ local hl_groups = {
   -- html
   htmlArg = { link = 'Number' },
   htmlEndTag = { link = 'htmlTag' },
+  htmlItalic = { link = 'Normal' },
   htmlLink = { link = 'Normal' },
   htmlN = { link = 'Comment' },
   htmlSpecialTagName = { link = 'htmlTagName' },
@@ -598,6 +599,7 @@ local hl_groups = {
 
   -- markdown
   ['@label.markdown'] = { fg = c.op },
+  ['@markup.italic'] = { link = 'Normal' },
   ['@markup.heading.1.markdown'] = { link = 'markdownH1Delimiter' },
   ['@markup.heading.2.markdown'] = { link = 'markdownH1Delimiter' },
   ['@markup.heading.3.markdown'] = { link = 'markdownH1Delimiter' },
