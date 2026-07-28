@@ -1,9 +1,9 @@
--- cmdline center
-vim.pack.add({ 'https://github.com/rachartier/tiny-cmdline.nvim' })
-
 -- numb
 vim.pack.add({ 'https://github.com/nacro90/numb.nvim' })
 require('numb').setup()
+
+-- tiny-cmdline center
+vim.pack.add({ 'https://github.com/rachartier/tiny-cmdline.nvim' })
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.ai' })
 require('mini.ai').setup({
@@ -13,6 +13,9 @@ require('mini.ai').setup({
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.align' })
 require('mini.align').setup()
+
+vim.pack.add({ 'https://github.com/nvim-mini/mini.cmdline' })
+require('mini.cmdline').setup()
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.cursorword' })
 require('mini.cursorword').setup()

@@ -28,6 +28,10 @@
       "rev": "6f3c69cd57134ad8fbf1e85dcdc90cb37a8c75c8",
       "src": "https://github.com/nvim-mini/mini.align"
     },
+    "mini.cmdline": {
+      "rev": "3dcca5e11c819718d250f9a3a61605698ea1f756",
+      "src": "https://github.com/nvim-mini/mini.cmdline"
+    },
     "mini.cursorword": {
       "rev": "a7e606208197ca5d1c5288750d5163429b4c74da",
       "src": "https://github.com/nvim-mini/mini.cursorword"
