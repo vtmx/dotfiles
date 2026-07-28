@@ -15,7 +15,9 @@ vim.pack.add({ 'https://github.com/nvim-mini/mini.align' })
 require('mini.align').setup()
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.cmdline' })
-require('mini.cmdline').setup()
+require('mini.cmdline').setup({
+  autopeek = { enable = false }
+})
 
 vim.pack.add({ 'https://github.com/nvim-mini/mini.cursorword' })
 require('mini.cursorword').setup()
