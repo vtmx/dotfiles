@@ -129,6 +129,9 @@ autocmd('FileType', {
     vim.keymap.set('i', 'var', function()
       vim.snippet.expand('var(--$0)')
     end)
+    vim.keymap.set('i', ':', function()
+      vim.snippet.expand(':$0;')
+    end)
   end
 })
 
