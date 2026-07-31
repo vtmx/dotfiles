@@ -598,6 +598,7 @@ local hl_groups = {
   ['@variable.parameter.lua'] = { link = 'Normal' },
 
   -- markdown
+  ['@keyword.directive.markdown'] = { link = 'Normal' },
   ['@label.markdown'] = { fg = c.op },
   ['@markup.italic'] = { link = 'Normal' },
   ['@markup.heading.1.markdown'] = { link = 'markdownH1Delimiter' },
