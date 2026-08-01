@@ -129,9 +129,6 @@ autocmd('FileType', {
     vim.keymap.set('i', 'var', function()
       vim.snippet.expand('var(--$0)')
     end)
-    vim.keymap.set('i', '{', function()
-      vim.snippet.expand('\n\t:$0\n};')
-    end)
   end
 })
 
@@ -155,16 +152,28 @@ autocmd('FileType', {
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
 
-    vim.keymap.set('i', '```', function()
+    vim.keymap.set('i', '``', function()
       vim.snippet.expand('```\n$0\n```')
     end)
 
-    vim.keymap.set('i', '``b', function()
+    vim.keymap.set('i', '`b', function()
       vim.snippet.expand('```bash\n$0\n```')
     end)
 
-    vim.keymap.set('i', '``h', function()
+    vim.keymap.set('i', '`c', function()
+      vim.snippet.expand('```css\n$0\n```')
+    end)
+
+    vim.keymap.set('i', '`h', function()
       vim.snippet.expand('```html\n$0\n```')
+    end)
+
+    vim.keymap.set('i', '`j', function()
+      vim.snippet.expand('```js\n$0\n```')
+    end)
+
+    vim.keymap.set('i', '`l', function()
+      vim.snippet.expand('```lua\n$0\n```')
     end)
 
     vim.keymap.set('i', '<c-b>', function()
@@ -185,10 +194,6 @@ autocmd('FileType', {
 
     vim.keymap.set('i', '<c-t>', function()
       vim.snippet.expand('|$0|')
-    end)
-
-    vim.keymap.set('i', '<c-s>-', function()
-      vim.snippet.expand('---\n$0')
     end)
   end
 })
