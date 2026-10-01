@@ -2,7 +2,7 @@
 set adjust-open width
 set recolor false
 set selection-clipboard 'clipboard'
-set render-loading true
+set render-loading false
 set window-title-basename 'true'
 
 # Fonts

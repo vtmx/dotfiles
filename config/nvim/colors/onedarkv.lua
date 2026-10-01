@@ -276,6 +276,7 @@ local hl_groups = {
 
   -- go
   goBlock = { link = 'Normal' },
+  goBuiltins = { link = 'Normal' },
   goFormatSpecifier = { link = 'Number' },
   goImport = { link = 'Statement' },
   goPackage = { link = 'Statement' },
@@ -616,6 +617,7 @@ local hl_groups = {
   ['@markup.list.markdown'] = { link = 'Normal' },
   ['@markup.raw'] = { link = 'Normal' },
   ['@markup.raw.block.markdown'] = { link = 'Normal' },
+  ['@markup.strong'] = { link = 'Identifier' },
   ['@markup.underline'] = { link = 'Normal' },
   ['@nospell.markdown_inline'] = { link = 'Normal' },
   ['@spell.markdown'] = { link = 'Normal' },

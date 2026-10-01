@@ -5,6 +5,12 @@
 ;     (atx_h4_marker) (atx_h5_marker) (atx_h6_marker)
 ;   ] @markup.operator)
 ;
+
+; (image
+;   (image_description) @markup.link
+;   (link_destination) @markup.link.url
+;   (#set! "priority" 110))
+
 (((fenced_code_block_delimiter)
   (#set! "priority" 110)) @markup.heading.1)
 

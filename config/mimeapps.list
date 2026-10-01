@@ -8,7 +8,7 @@ application/vnd.ms-publisher=org.lite_xl.lite_xl.desktop;
 application/x-bittorrent=transmission-qt.desktop;transmission-gtk.desktop;org.qbittorrent.qBittorrent.desktop;
 application/x-gdscript=org.lite_xl.lite_xl.desktop;
 application/x-krita=org.kde.krita.desktop;
-application/x-mobipocket-ebook=calibre-ebook-viewer.desktop;
+application/x-mobipocket-ebook=org.pwmt.zathura-pdf-mupdf.desktop;calibre-ebook-viewer.desktop;
 application/x-shellscript=org.lite_xl.lite_xl.desktop;lite-xl.desktop;
 application/x-wine-extension-ini=org.lite_xl.lite_xl.desktop;
 application/x-zerosize=org.lite_xl.lite_xl.desktop;
@@ -53,6 +53,7 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 x-scheme-handler/chrome=zen.desktop;
 image/vnd.microsoft.icon=org.xfce.ristretto.desktop;
+font/otf=com.github.FontManager.FontViewer.desktop;
 
 [Default Applications]
 application/epub+zip=org.kde.okular.desktop;

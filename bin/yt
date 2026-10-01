@@ -87,6 +87,9 @@ transform_filename() {
   # Remove chars
   filename="${filename//[\'\"\“\”\[\]\(\)\/\⧸]/}"
 
+  # Remove punct
+  filename="${filename//[[:punct:]]/}"
+
   # Replace spaces with dashes
   filename="${filename// /-}"
 

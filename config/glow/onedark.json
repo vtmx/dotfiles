@@ -11,7 +11,7 @@
   "document": {
     "block_prefix": "\n",
     "block_suffix": "\n",
-    "color": "default",
+    "color": "7",
     "margin": 2
   },
   "emph": {
@@ -85,10 +85,10 @@
         "background_color": "#23272e"
       },
       "comment": {
-        "color": "#5f6672"
+        "color": "#999"
       },
       "comment_preproc": {
-        "color": "#5f6672"
+        "color": "#999"
       },
       "error": {
         "color": "#e06c75"
