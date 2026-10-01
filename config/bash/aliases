@@ -49,7 +49,7 @@ alias cdc="cd $HOME/Dev/dotfiles/config"
 alias cdd="cd $HOME/Dev/dotfiles"
 alias cddoc="cd $HOME/Documents"
 alias cddow="cd $HOME/Downloads"
-alias cdhd="cd /media/hda1"
+alias cdhd="cd /run/media/hdc/"
 alias cdk="cd $HOME/pkgs"
 alias cdp="cd $HOME/Dev/projects"
 alias cdt="cd $HOME/Downloads/temp"
@@ -256,5 +256,8 @@ alias ytp='yt-dlp \
 # lite-xl
 alias xl="lite-xl"
 alias xc="lite-xl $HOME/.config/lite-xl"
+
+# zathura
+alias zathura="GSK_RENDERER=cairo zathura"
 
 # vim:ft=bash

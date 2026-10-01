@@ -1,6 +1,12 @@
 local utils = require('config.utils')
 local map = vim.keymap.set
 
+-- to 0.13
+-- vla - select all
+-- vli - select line
+-- q   - multi cursor
+-- ZR  - reload conf
+
 -- Normal
 
 map(

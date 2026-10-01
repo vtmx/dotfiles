@@ -30,7 +30,7 @@ api_url="https://api.groq.com/openai/v1/chat/completions"
 auth_header="Bearer $api_key"
 content_type="application/json"
 role="user"
-model="llama-3.3-70b-versatile"
+model="openai/gpt-oss-120b"
 premsg="Escreva sem enrolação o mais resumidamente e direto possível."
 
 # Request
@@ -43,4 +43,4 @@ curl -s \
     "model": "'"$model"'"
   }' | \
 jq -r '.choices[0].message.content' | \
-glow
+leaf --inline
