@@ -127,7 +127,7 @@ alias gog="go get"
 alias gol="go list"
 alias gom="go mod"
 alias got="go test"
-alias gor="go run"
+alias gor="go run main.go"
 alias gov="go version"
 
 # grep
@@ -175,6 +175,7 @@ alias mv="mv -i"
 # opencode
 alias oc="opencode"
 alias ocr="opencode run"
+alias ocl="opencode session list --format json | jq -r '.[].id' | xargs -r -n1 opencode session delete"
 
 # pip
 alias pipi="pip install"

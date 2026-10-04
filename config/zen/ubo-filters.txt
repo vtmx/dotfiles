@@ -1,7 +1,7 @@
 ! DuckDuckGo
 duckduckgo.com##.header--aside__item--hidden-lg.header--aside__item
 duckduckgo.com##.footer
-duckduckgo.com##[data-testid] > span
+duckduckgo.com##[data-testid="feedback-prompt"]
 
 ! Linkedin
 www.linkedin.com##.ad43d1b8._0b24dadc.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f > .ad43d1b8._0b24dadc.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f
