@@ -54,6 +54,7 @@ x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 x-scheme-handler/chrome=zen.desktop;
 image/vnd.microsoft.icon=org.xfce.ristretto.desktop;
 font/otf=com.github.FontManager.FontViewer.desktop;
+application/vnd.microsoft.portable-executable=userapp-wine-XS0ZW3.desktop;
 
 [Default Applications]
 application/epub+zip=org.kde.okular.desktop;
