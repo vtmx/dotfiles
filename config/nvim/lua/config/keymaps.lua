@@ -441,6 +441,11 @@ map(
 )
 
 map(
+  'n', '<leader>lf',function() require('conform').format() end,
+  { desc = 'Format' }
+)
+
+map(
   'n', '<leader>m', function() require('snacks').picker.marks() end,
   { desc = 'Marks' }
 )
