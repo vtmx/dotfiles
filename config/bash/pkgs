@@ -41,6 +41,11 @@ if has fd; then
   export LS_COLORS=''
 fi
 
+# glow
+if has glow; then
+  export GLOW_STYLE=$HOME/.config/glow/onedark.json
+fi
+
 # go
 if has go; then
   export GODEBUG=gotelemetry=0
@@ -48,9 +53,48 @@ if has go; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
-# glow
-if has glow; then
-  export GLOW_STYLE=$HOME/.config/glow/onedark.json
+# gum
+if has gum; then
+  # choose
+  export GUM_CHOOSE_CURSOR='❯ '
+  export GUM_CHOOSE_CURSOR_FOREGROUND=7
+  export GUM_CHOOSE_CURSOR_BACKGROUND='#3d4556'
+  export GUM_CHOOSE_HEADER=''
+  export GUM_CHOOSE_HEADER_FOREGROUND=7
+  export GUM_CHOOSE_HEADER_BACKGROUND=0
+  export GUM_CHOOSE_ITEM_FOREGROUND=7
+  export GUM_CHOOSE_ITEM_BACKGROUND=0
+  export GUM_CHOOSE_SELECTED_FOREGROUND=4
+  export GUM_CHOOSE_SELECTED_BACKGROUND=0
+  export GUM_CHOOSE_PADDING='0'
+
+  # confirm
+  export GUM_CONFIRM_PROMPT_FOREGROUND=7
+  export GUM_CONFIRM_PROMPT_BACKGROUND=0
+  export GUM_CONFIRM_SELECTED_FOREGROUND=0
+  export GUM_CONFIRM_SELECTED_BACKGROUND=4
+  export GUM_CONFIRM_UNSELECTED_FOREGROUND=7
+  export GUM_CONFIRM_UNSELECTED_BACKGROUND=0
+
+  # input
+  export GUM_INPUT_CURSOR_FOREGROUND=7
+  export GUM_INPUT_PROMPT_FOREGROUND=7
+  export GUM_INPUT_PLACEHOLDER=''
+  export GUM_INPUT_PROMPT=''
+  export GUM_INPUT_WIDTH=80
+
+  # pager
+  export GUM_PAGER_FOREGROUND=7
+  export GUM_PAGER_BACKGROUND=red
+  export GUM_PAGER_LINE_NUMBER_FOREGROUND=7
+  export GUM_PAGER_LINE_NUMBER_BACKGROUND=0
+  export GUM_PAGER_MATCH_FOREGROUND=0
+  export GUM_PAGER_MATCH_BACKGROUND=7
+  export GUM_PAGER_MATCH_HIGH_FOREGROUND=0
+  export GUM_PAGER_MATCH_HIGH_BACKGROUND=4
+  export GUM_PAGER_HELP_FOREGROUND=7
+  export GUM_PAGER_HELP_BACKGROUND=0
+  export GUM_PAGER_BORDER='none'
 fi
 
 # nvm

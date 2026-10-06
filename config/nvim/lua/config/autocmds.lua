@@ -61,7 +61,7 @@ autocmd({ 'WinLeave', 'BufLeave' }, {
 -- Disable auto comment
 autocmd('FileType', {
   callback = function()
-    vim.opt.formatoptions = vim.opt.formatoptions - { 'c', 'r', 'o' }
+    vim.opt.formatoptions = vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
   end
 })
 
@@ -118,7 +118,7 @@ autocmd('FileType', {
         [[tmux display-popup -w 50%% -h 50%% -E "bash -c '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
       )
       vim.fn.system(cmd)
-    end)
+    end, { buffer = true })
   end
 })
 
@@ -128,7 +128,7 @@ autocmd('FileType', {
   callback = function()
     vim.keymap.set('i', 'var', function()
       vim.snippet.expand('var(--$0)')
-    end)
+    end, { buffer = true })
   end
 })
 
@@ -139,10 +139,10 @@ autocmd('FileType', {
     vim.bo.omnifunc = 'htmlcomplete#CompleteTags'
     vim.keymap.set('i', '{{', function()
       vim.snippet.expand('{{ $0 }}')
-    end)
+    end, { buffer = true })
     vim.keymap.set('i', '{%', function()
       vim.snippet.expand('{% $0 %}')
-    end)
+    end, { buffer = true })
   end
 })
 
@@ -157,47 +157,47 @@ autocmd('FileType', {
 
     vim.keymap.set('i', '``', function()
       vim.snippet.expand('```\n$0\n```')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '`b', function()
       vim.snippet.expand('```bash\n$0\n```')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '`c', function()
       vim.snippet.expand('```css\n$0\n```')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '`h', function()
       vim.snippet.expand('```html\n$0\n```')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '`j', function()
       vim.snippet.expand('```js\n$0\n```')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '`l', function()
       vim.snippet.expand('```lua\n$0\n```')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '<c-b>', function()
       vim.snippet.expand('**$0**')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '<c-i>', function()
       vim.snippet.expand('*$0*')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '<c-s-i>', function()
       vim.snippet.expand('![$1]($0)')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '<c-k>', function()
       vim.snippet.expand('[$1]($0)')
-    end)
+    end, { buffer = true })
 
     vim.keymap.set('i', '<c-t>', function()
       vim.snippet.expand('|$0|')
-    end)
+    end, { buffer = true })
   end
 })
 
@@ -220,7 +220,7 @@ autocmd('FileType', {
         [[tmux display-popup -w 50%% -h 50%% -E "lua '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
       )
       vim.fn.system(cmd)
-    end)
+    end, { buffer = true })
   end
 })
 
@@ -239,7 +239,7 @@ autocmd('FileType', {
         [[tmux display-popup -w 50%% -h 50%% -E "python '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
       )
       vim.fn.system(cmd)
-    end)
+    end, { buffer = true })
   end
 })
 

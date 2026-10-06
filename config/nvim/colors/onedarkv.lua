@@ -184,6 +184,7 @@ local hl_groups = {
 
   -- awk
   autoitBuiltin = { fg = c.orange },
+  autoitBracket = { link = 'Normal' },
   autoitConst = { fg = c.orange },
   autoitFunction = { link = 'Function' },
   autoitIncluded = { link = 'String' },
