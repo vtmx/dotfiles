@@ -5,10 +5,10 @@ local M = {}
 function M.toggle_autocomplete()
   if vim.o.autocomplete then
     vim.o.autocomplete = false
-    print('Disable auto-complete')
+    vim.notify('Disable auto-complete')
   else
      vim.o.autocomplete = true
-    print('Enable auto-complete')
+    vim.notify('Enable auto-complete')
   end
 end
 
@@ -16,7 +16,7 @@ vim.g.minicursorword_disable = true
 
 function M.toggle_cursorword()
   vim.g.minicursorword_disable = not vim.g.minicursorword_disable
-  print('Cursorword ' .. (vim.g.minicursorword_disable and 'off' or 'on'))
+  vim.notify('Cursorword ' .. (vim.g.minicursorword_disable and 'off' or 'on'))
 end
 
 usercmd('ToggleCursorWord', M.toggle_cursorword, {})
@@ -26,10 +26,10 @@ function M.toggle_diagnostic()
 
   if is_enabled then
     vim.diagnostic.enable(false)
-    print('Diagnostic disable')
+    vim.notify('Diagnostic disable')
   else
     vim.diagnostic.enable(true)
-    print('Diagnostic enable')
+    vim.notify('Diagnostic enable')
   end
 end
 
@@ -41,12 +41,12 @@ function M.toggle_diagnostic_virtual_text()
   if is_signcolumn then
     vim.opt.signcolumn = 'no'
     vim.diagnostic.config({ signs = false, virtual_text = false })
-    print('Diagnostic virtual text disable')
+    vim.notify('Diagnostic virtual text disable')
   else
     vim.opt.signcolumn = 'yes'
     vim.diagnostic.enable(true)
     vim.diagnostic.config({ signs = true, virtual_text = true })
-    print('Diagnostic virtual text enable')
+    vim.notify('Diagnostic virtual text enable')
   end
 end
 
@@ -61,7 +61,7 @@ function M.toggle_diary()
   vim.keymap.set({'v'}, 'k', 'gk')
   vim.keymap.set({'n', 'v'}, 'H', 'g^')
   vim.keymap.set({'n', 'v'}, 'L', 'g$')
-  print('Toggle diary')
+  vim.notify('Toggle diary')
 end
 
 usercmd('ToggleDiary', M.toggle_diary, {})
@@ -69,10 +69,10 @@ usercmd('ToggleDiary', M.toggle_diary, {})
 function M.toggle_document_color()
   if vim.lsp.document_color.is_enabled() then
     vim.lsp.document_color.enable(false)
-    print('Disable document color')
+    vim.notify('Disable document color')
   else
     vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
-    print('Enable document color')
+    vim.notify('Enable document color')
   end
 end
 
@@ -83,10 +83,10 @@ vim.g.codeium_enabled = false
 function M.toggle_ia()
   if vim.g.codeium_enabled == true then
     vim.cmd('Codeium Disable')
-    print('Disable IA')
+    vim.notify('Disable IA')
   else
     vim.cmd('Codeium Enable')
-    print('Enable IA')
+    vim.notify('Enable IA')
   end
 end
 
@@ -96,11 +96,11 @@ function M.toggle_number()
   if vim.o.number then
     vim.o.number = false
     vim.o.relativenumber = false
-    print('Disable number')
+    vim.notify('Disable number')
   else
     vim.o.number = true
     vim.o.relativenumber = true
-    print('Enable number')
+    vim.notify('Enable number')
   end
 end
 
@@ -109,10 +109,10 @@ usercmd('ToggleNumber', M.toggle_number, {})
 function M.toggle_colorcolumn()
   if vim.o.colorcolumn == '' then
     vim.o.colorcolumn = '80'
-    print('Enable colorcolumn')
+    vim.notify('Enable colorcolumn')
   else
     vim.o.colorcolumn = ''
-    print('Disable colorcolumn')
+    vim.notify('Disable colorcolumn')
   end
 end
 
@@ -120,14 +120,14 @@ usercmd('ToggleColorColumn', M.toggle_colorcolumn, {})
 
 function M.toggle_relativenumber()
   vim.o.relativenumber = not vim.o.relativenumber
-  print('Relative number ' .. (vim.o.relativenumber and 'on' or 'off'))
+  vim.notify('Relative number ' .. (vim.o.relativenumber and 'on' or 'off'))
 end
 
 usercmd('ToggleRelativeNumber', M.toggle_relativenumber, {})
 
 function M.toggle_listchars()
   vim.o.list = not vim.o.list
-  print('List ' .. (vim.o.list and 'on' or 'off'))
+  vim.notify('List ' .. (vim.o.list and 'on' or 'off'))
 end
 
 usercmd('ToggleListChars', M.toggle_listchars, {})
@@ -136,7 +136,7 @@ vim.g.minipairs_disable = true
 
 function M.toggle_pairs()
   vim.g.minipairs_disable = not vim.g.minipairs_disable
-  print('Pairs ' .. (vim.g.minipairs_disable and 'off' or 'on'))
+  vim.notify('Pairs ' .. (vim.g.minipairs_disable and 'off' or 'on'))
 end
 
 usercmd('TogglePairs', M.toggle_pairs, {})
@@ -145,11 +145,11 @@ function M.toggle_spelllang()
   if vim.o.spelllang == 'en' then
     vim.o.spelllang = 'pt'
     vim.o.spell = true
-    print('Enable spelllang pt')
+    vim.notify('Enable spelllang pt')
   else
     vim.o.spelllang = 'en'
     vim.o.spell = false
-    print('Disable spellang')
+    vim.notify('Disable spellang')
   end
 end
 
@@ -163,18 +163,18 @@ function M.toggle_treesitter()
 
   if is_active then
     vim.treesitter.stop(bufnr)
-    print('Treesitter stop')
+    vim.notify('Treesitter stop')
   else
     local ft = vim.bo[bufnr].filetype
     if ft and ft ~= "" then
       local success, _ = pcall(vim.treesitter.start, bufnr, ft)
       if success then
-        print('Treesitter start')
+        vim.notify('Treesitter start')
       else
-        print('Treesitter error ' .. ft)
+        vim.notify('Treesitter error ' .. ft)
       end
     else
-      print('Treesitter not found file type')
+      vim.notify('Treesitter not found file type')
     end
   end
 end
@@ -186,12 +186,12 @@ function M.toggle_wrap()
     vim.wo.wrap = false
     vim.wo.linebreak = false
     vim.wo.breakindent = false
-    print('Wrap disable')
+    vim.notify('Wrap disable')
   else
     vim.wo.wrap = true
     vim.wo.linebreak = true
     vim.wo.breakindent = true
-    print('Wrap enable')
+    vim.notify('Wrap enable')
   end
 end
 
@@ -210,11 +210,11 @@ usercmd('ToggleWrap', M.toggle_wrap, {})
 --   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
 --     if vim.api.nvim_buf_get_option(buf, 'filetype') == 'netrw' then
 --       vim.api.nvim_buf_delete(buf, { force = true })
---       print('Netrw has been closed')
+--       vim.notify('Netrw has been closed')
 --       return
 --     end
 --   end
---   print('Netrw is not open')
+--   vim.notify('Netrw is not open')
 -- end
 --
 -- function M.toggle_ex()
