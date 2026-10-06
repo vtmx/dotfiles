@@ -52,7 +52,7 @@ alias cddow="cd $HOME/Downloads"
 alias cdhd="cd /run/media/hdc/"
 alias cdk="cd $HOME/pkgs"
 alias cdp="cd $HOME/Dev/projects"
-alias cdt="cd $HOME/Downloads/temp"
+alias cdt="cd $HOME/Downloads/temp 2>/dev/null || cd $HOME/tmp"
 
 # du list size files
 alias dush="du -h --max-depth=1"
