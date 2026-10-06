@@ -44,7 +44,7 @@ autocmd('VimResized', {
 
 -- Show cursorline only active window enable
 autocmd({ 'WinEnter', 'BufEnter' }, {
-  group = augroup('active_cursorline', { clear = true }),
+  group = augroup('active_cursorline', { clear = false }),
   callback = function()
     vim.opt_local.cursorline = true
   end
@@ -52,7 +52,7 @@ autocmd({ 'WinEnter', 'BufEnter' }, {
 
 -- Show cursorline only active window disable
 autocmd({ 'WinLeave', 'BufLeave' }, {
-  group = augroup('active_cursorline', { clear = true }),
+  group = augroup('active_cursorline', { clear = false }),
   callback = function()
     vim.opt_local.cursorline = false
   end

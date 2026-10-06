@@ -344,7 +344,7 @@ map(
 map(
   'n', '<leader>f', function()
       require('snacks').picker.files({
-        cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.loop.cwd()
+        cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.uv.cwd()
       })
     end,
   { desc = 'Files' }
@@ -392,7 +392,7 @@ map(
 
 map(
   'n', '<leader>gI', function() require('snacks').picker.lsp_implementations() end,
-  { desc = 'References' }
+  { desc = 'Implementations' }
 )
 
 map(
@@ -402,7 +402,7 @@ map(
 
 map(
   'n', '<leader>gy', function() require('snacks').picker.lsp_type_definitions() end,
-  { desc = 'Definitions' }
+  { desc = 'Type definitions' }
 )
 
 map(
@@ -647,7 +647,7 @@ map(
 
 map(
   'n', '<leader>:', function() require('snacks').picker.command_history() end,
-  { desc = 'Buffers' }
+  { desc = 'Command history' }
 )
 
 map(
