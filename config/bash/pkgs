@@ -2,6 +2,26 @@ has() {
   command -v "$1" &> /dev/null
 }
 
+# bat
+if has bat; then
+  export BAT_THEME="ansi"
+  export BAT_STYLE="numbers,changes,header"
+fi
+
+# bemenu
+if has bemenu; then
+  export BEMENU_OPTS="
+    -c -l 10 -W 0.3 -B 1 -p '' \
+    --fn 'BlexMono Nerd Font 11' \
+    --tb  '#1e2227' --tf  '#abb2bf' \
+    --fb  '#1e2227' --ff  '#abb2bf' \
+    --nb  '#1e2227' --nf  '#abb2bf' \
+    --ab  '#1e2227' --af  '#abb2bf' \
+    --hb  '#3d4556' --hf  '#abb2bf' \
+    --sb  '#61afef' --sf  '#3d4556' \
+    --bdr '#2c313c'"
+fi
+
 # carapace
 if has carapace; then
   source <(carapace _carapace bash)
