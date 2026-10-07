@@ -18,24 +18,6 @@ alias bp="$EDITOR $HOME/.config/bash/pkgs"
 alias br="source $HOME/.bashrc; echo Reload bash"
 alias brc="$EDITOR $HOME/.config/bash/bashrc"
 
-# bat
-alias bat="bat \
---theme=ansi \
---style=numbers,changes,header \
---italic-text=always"
-
-# bemenu
-alias bemenu="bemenu \
--c -l 10 -W 0.3 -B 1 -p '' \
---fn 'BlexMono Nerd Font 11' \
---tb  '#1e2227' --tf  '#abb2bf' \
---fb  '#1e2227' --ff  '#abb2bf' \
---nb  '#1e2227' --nf  '#abb2bf' \
---ab  '#1e2227' --af  '#abb2bf' \
---hb  '#3d4556' --hf  '#abb2bf' \
---sb  '#61afef' --sf  '#3d4556' \
---bdr '#2c313c'"
-
 # bun
 alias buni="bun install"
 alias bunr="bun remove"
@@ -54,15 +36,17 @@ alias cdk="cd $HOME/pkgs"
 alias cdp="cd $HOME/Dev/projects"
 alias cdt="cd $HOME/Downloads/temp 2>/dev/null || cd $HOME/tmp"
 
-# du list size files
-alias dush="du -h --max-depth=1"
-
 # chmod
 alias chx="chmod +x"
 
 # copy
 alias cp="cp -i"
 alias cpv="rsync -ah --info=progress2"
+
+# crush
+alias cru="crush"
+alias crus="crush session"
+alias crul="crush session list"
 
 # demenu
 alias dmenu="dmenu \
@@ -79,6 +63,9 @@ alias dnfrepo="sudo dnf repoquery"
 alias dnfr="sudo dnf remove -y"
 alias dnfs="sudo dnf search --setopt='skip_if_unavailable=True'"
 alias dnfu="sudo dnf upgrade --refresh --setopt='skip_if_unavailable=True'"
+
+# du list size files
+alias dush="du -h --max-depth=1"
 
 # egrep
 alias egrep="egrep --color=auto"
@@ -235,14 +222,6 @@ alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
 alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
 alias vp="$EDITOR $HOME/.config/nvim/lua/plugins"
 alias vt="$EDITOR $HOME/.config/nvim/colors/onedarkv.lua"
-
-# vlang
-alias vl="$HOME/.v/vl"
-alias vf="$HOME/.v/vl fmt -w"
-alias vh="$HOME/.v/vl help"
-alias vr="$HOME/.v/vl run"
-alias vu="$HOME/.v/vl up"
-alias vw="$HOME/.v/vl watch run"
 
 # yarn
 alias ya="yarn add"
