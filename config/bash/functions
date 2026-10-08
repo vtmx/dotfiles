@@ -123,7 +123,7 @@ gpa() {
     return 1
   fi
   git add -A
-  git commit -m "${msg^}"
+  git commit -m "$msg"
   git push
 }
 
@@ -134,7 +134,7 @@ gpdf() {
   local dotdir="$HOME/Dev/dotfiles"
 
   git -C "$dotdir" add -A
-  git -C "$dotdir" commit -m "${msg^}"
+  git -C "$dotdir" commit -m "$msg"
   git -C "$dotdir" push
 }
 

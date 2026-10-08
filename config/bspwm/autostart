@@ -14,10 +14,9 @@ start() {
 
 # Apps
 xsetroot -cursor_name left_ptr &
-# xset s off s noblank dpms off
 xset s off
 xset s noblank
-xset dpms off
+xset -dpms
 start numlockx
 start sxhkd -c $bspdir/shortcuts
 start dunst -config $bspdir/dunst/dunstrc
