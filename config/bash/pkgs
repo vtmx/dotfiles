@@ -61,11 +61,6 @@ if has fd; then
   export LS_COLORS=''
 fi
 
-# glow
-if has glow; then
-  export GLOW_STYLE=$HOME/.config/glow/onedark.json
-fi
-
 # go
 if has go; then
   export GODEBUG=gotelemetry=0
@@ -126,6 +121,11 @@ fi
 # opencode
 if has opencode; then
   export OPENCODE_ENABLE_EXA=1
+fi
+
+# zot
+if has zot; then
+  export ZOT_HOME="$HOME/.config/zot"
 fi
 
 # zoxide

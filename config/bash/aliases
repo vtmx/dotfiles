@@ -251,4 +251,7 @@ alias xc="lite-xl $HOME/.config/lite-xl"
 # zathura
 alias zathura="GSK_RENDERER=cairo zathura"
 
+# zot
+alias zot="zot --no-yolo"
+
 # vim:ft=bash

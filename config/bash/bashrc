@@ -11,12 +11,12 @@ if ! shopt -oq posix; then
 fi
 
 # Load config
-if [[ -d $HOME/.config/bash ]]; then
-  source "$HOME/.config/bash/opts"
-  source "$HOME/.config/bash/envs"
-  source "$HOME/.config/bash/aliases"
-  source "$HOME/.config/bash/functions"
-  source "$HOME/.config/bash/pkgs"
+path=$HOME/.config/bash
+if [[ -d "$path" ]]; then
+  configs=(opts envs aliases functions pkgs)
+  for config in "${configs[@]}"; do
+    [[ -f "$path/$config" ]] && source "$path/$config"
+  done
   [[ $- == *i* ]] && bind -f $HOME/.config/bash/inputs
 fi
 
