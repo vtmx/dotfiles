@@ -2,6 +2,9 @@ has() {
   command -v "$1" &> /dev/null
 }
 
+# https://donottrack.sh
+export DO_NOT_TRACK=1
+
 # bat
 if has bat; then
   export BAT_THEME="ansi"
@@ -25,6 +28,10 @@ fi
 # carapace
 if has carapace; then
   source <(carapace _carapace bash)
+fi
+
+if has crush; then
+  export CRUSH_DISABLE_METRICS=1
 fi
 
 # fzf

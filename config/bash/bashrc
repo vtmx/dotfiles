@@ -13,7 +13,7 @@ fi
 # Load config
 path=$HOME/.config/bash
 if [[ -d "$path" ]]; then
-  configs=(opts envs aliases functions pkgs)
+  configs=(opts envs aliases functions pkgs apis)
   for config in "${configs[@]}"; do
     [[ -f "$path/$config" ]] && source "$path/$config"
   done
