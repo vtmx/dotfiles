@@ -43,11 +43,6 @@ alias chx="chmod +x"
 alias cp="cp -i"
 alias cpv="rsync -ah --info=progress2"
 
-# crush
-alias cru="crush"
-alias crus="crush session"
-alias crul="crush session list"
-
 # demenu
 alias dmenu="dmenu \
 -b \
@@ -159,11 +154,6 @@ alias md="mkdir -p"
 # move
 alias mv="mv -i"
 
-# opencode
-alias oc="opencode"
-alias ocr="opencode run"
-alias ocl="opencode session list --format json | jq -r '.[].id' | xargs -r -n1 opencode session delete"
-
 # pip
 alias pipi="pip install"
 alias pipr="pip uninstall"
@@ -250,8 +240,5 @@ alias xc="lite-xl $HOME/.config/lite-xl"
 
 # zathura
 alias zathura="GSK_RENDERER=cairo zathura"
-
-# zot
-alias zot="zot --no-yolo"
 
 # vim:ft=bash

@@ -1,0 +1,11 @@
+# gemini
+if [[ -f $HOME/.GEMINI_API_KEY ]]; then
+  export GEMINI_API_KEY="$(< $HOME/.GEMINI_API_KEY)"
+fi
+
+# groq
+if [[ -f $HOME/.GROQ_API_KEY ]]; then
+  export GROQ_API_KEY="$(< $HOME/.GROQ_API_KEY)"
+fi
+
+# vim:ft=bash
