@@ -1,0 +1,27 @@
+# Global dir
+option data-directory $HOME/.local/share/crush
+
+# Ativa o modo compacto para reduzir o envio de lixo no payload
+option ui compact true
+
+# Não exibr logo ao sair
+option ui exit-banner none
+
+# Providers
+provider add groq \
+  --name "GPT OSS 120B" \
+  --type openai \
+  --base-url "https://api.groq.com/openai/v1" \
+  --api-key "$GROQ_API_KEY"
+
+# Models
+model add groq/openai/gpt-oss-120b \
+  --default-max-tokens 4096
+
+# LSP
+# lsp add css --command 'emmet-language-server' --args '--stdio'
+# lsp add go --command gopls
+# lsp add lua --command lua-language-server
+# lsp add sh --command bashls
+
+# vim:ft=sh

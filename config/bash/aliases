@@ -43,9 +43,14 @@ alias chx="chmod +x"
 alias cp="cp -i"
 alias cpv="rsync -ah --info=progress2"
 
+# crush
+alias cru="crush"
+alias crus="crush session"
+alias crul="crush session list"
+alias crur="crush run"
+
 # demenu
-alias dmenu="dmenu \
--b \
+alias dmenu="dmenu -b \
 -fn 'BlexMono Nerd Font' \
 -nb '#1e2227' -nf '#abb2bf' \
 -sb '#3d4556' -sf '#abb2bf'"
@@ -153,6 +158,11 @@ alias md="mkdir -p"
 
 # move
 alias mv="mv -i"
+
+# opencode
+alias oc="opencode"
+alias ocr="opencode run"
+alias ocl="opencode session list --format json | jq -r '.[].id' | xargs -r -n1 opencode session delete"
 
 # pip
 alias pipi="pip install"

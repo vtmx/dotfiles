@@ -360,7 +360,7 @@ ren() {
 }
 
 # Link simbolic in working dir
-lwd() {
+lnwd() {
   [[ $1 && $2 ]] || {
     echo 'usage: lnwd <file-or-dir> <path>' >&2
     return 1

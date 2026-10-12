@@ -19,7 +19,6 @@ require('mason').setup({
 
 local servers = {
   'bashls',
-  'clangd',
   'emmet_language_server',
   'gopls',
   'lua_ls',
@@ -45,12 +44,6 @@ lsp('bashls', {
       shellcheckArguments = { '-e SC2086' },
     }
   }
-})
-
--- c
-lsp('clangd', {
-  cmd = { 'clangd' },
-  filetypes = { 'c' },
 })
 
 -- emmet

@@ -3,21 +3,26 @@
 pkgs=(
   bspwm
   dunst
+  fd
   feh
+  fzf
   jgmenu
   lxappearance
+  npm
   numlockx
   pavucontrol
   picom
   polkit-gnome
   polybar
   qt6ct
+  rg
   rofi
   sxhkd
   xfce4-power-manager
   xorg-xset
   xorg-xsetroot
   yad
+  zoxide
 )
 
 if command -v apt &>/dev/null; then
