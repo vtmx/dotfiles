@@ -16,7 +16,7 @@ provider add groq \
 
 # Models
 model add groq/openai/gpt-oss-120b \
-  --default-max-tokens 4096
+  --default-max-tokens 2048
 
 # LSP
 # lsp add css --command 'emmet-language-server' --args '--stdio'

@@ -3,6 +3,14 @@ duckduckgo.com##.header--aside__item--hidden-lg.header--aside__item
 duckduckgo.com##.footer
 duckduckgo.com##[data-testid="feedback-prompt"]
 
+! GPT
+chatgpt.com##.pb-2.px-toolbar.min-h-6.select-none.text-codex-description.text-pretty.text-xs.text-center
+chatgpt.com##.text-center.gap-3.items-center.flex-col.flex
+chatgpt.com##.surface-NbxhOL
+chatgpt.com##div.no-drag.items-center.shrink-0.flex.pointer-events-auto > .select-none.gap-1.items-center.flex
+chatgpt.com##.browser\:bg-surface.browser\:rounded-lg.gap-toolbar-action.items-center.flex
+chatgpt.com##.ms-2.pointer-coarse\:min-h-10.font-medium.leading-4.text-xs.py-0.px-2\.5.justify-center.shrink-0.min-h-7.not-disabled\:not-aria-disabled\:active\:opacity-80.data-\[state\=open\]\:bg-button-outline-hover.not-disabled\:not-aria-disabled\:hover\:bg-button-outline-hover.text-button-outline.bg-surface-card.border-button-outline.rounded-full.gap-1.border.flex.whitespace-nowrap.focus-visible\:ring-offset-0.focus-visible\:ring-ring.focus-visible\:ring-2.aria-disabled\:opacity-40.disabled\:opacity-40.focus\:outline-hidden.aria-disabled\:cursor-default.disabled\:cursor-default.select-none.items-center.cursor-interaction.no-drag
+
 ! Linkedin
 www.linkedin.com##.ad43d1b8._0b24dadc.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f > .ad43d1b8._0b24dadc.ff2268f9.e58c72f1.c4463aa5.e524e94b._48bd4083.ad41934f
 www.linkedin.com##.ad43d1b8.d37f8f7d._2803d149._45a849fd._2c25f0ab._49e45a86._9fb016f4._1a11b4c8.f1d4988a.fe8bcc80._312dec41.a5b50dc1.e40ab1a2.de2f624b._1fd02c96.cc656f19

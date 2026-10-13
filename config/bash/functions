@@ -122,8 +122,7 @@ gpa() {
     echo "error: no commit message provided" >&2
     return 1
   fi
-  git add -A
-  git commit -m "$msg"
+  git commit -a -m "$msg"
   git push
 }
 
@@ -380,7 +379,7 @@ o() {
       xdg-open "$file" &
     done
   else
-    xdg-open "$1" &
+    xdg-open "$1"
   fi
 }
 
