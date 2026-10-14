@@ -70,11 +70,8 @@ alias dush="du -h --max-depth=1"
 # egrep
 alias egrep="egrep --color=auto"
 
-# superfile
-alias f="spf"
-
 # fuzzy finder
-alias ff="fzf \
+alias fz="fzf \
 --preview 'bat \
 --theme=ansi \
 --style=numbers,changes,header \

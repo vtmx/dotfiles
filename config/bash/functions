@@ -100,6 +100,11 @@ rmext() {
   [[ $confirm =~ [yY] ]] && rename "s/\.${1}//" *
 }
 
+# Find file
+ff() {
+  find . -type f -iname '*'"$@"'*'
+}
+
 # Font list
 fl() {
   fc-list | awk -F: '{print $2}' | sort | uniq | grep -v Noto
