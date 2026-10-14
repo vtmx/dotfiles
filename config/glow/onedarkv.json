@@ -1,4 +1,10 @@
 {
+  "document": {
+    "block_prefix": "\n",
+    "block_suffix": "\n",
+    "color": "7",
+    "margin": 2
+  },
   "block_quote": {
     "indent": 2,
     "indent_token": "> "
@@ -8,12 +14,6 @@
   },
   "definition_list": {},
   "definition_term": {},
-  "document": {
-    "block_prefix": "\n",
-    "block_suffix": "\n",
-    "color": "7",
-    "margin": 2
-  },
   "emph": {
     "italic": true
   },
@@ -75,7 +75,7 @@
     "color": "7"
   },
   "code_block": {
-    "color": "default",
+    "color": "#23272e",
     "margin": 2,
     "chroma": {
       "text": {
@@ -124,7 +124,7 @@
         "color": "#abb2bf"
       },
       "literal_number": {
-        "color": "#e5c07b"
+        "color": "#d19a66"
       },
       "literal_date": {
         "color": "#abb2bf"
@@ -136,7 +136,7 @@
         "color": "#56b6c2"
       },
       "name": {
-        "color": "#e06c75"
+        "color": "#abb2bf"
       },
       "name_builtin": {
         "color": "#61afef"
@@ -166,10 +166,10 @@
         "color": "#abb2bf"
       },
       "operator": {
-        "color": "#56b6c2"
+        "color": "#abb2bf"
       },
       "punctuation": {
-        "color": "#c678dd"
+        "color": "#abb2bf"
       }
     }
   }

@@ -44,4 +44,4 @@ curl -s \
   }' | \
 jq -r '.choices[0].message.content' | \
 # leaf --inline
-glow -s "$HOME/.config/glow/onedark.json"
+glow -s "$HOME/.config/glow/onedarkv.json"
