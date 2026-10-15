@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" src="assets/logos/vitormelo.png" alt="Vitor Melo logo">
+  <img width="250" src="assets/logos/vitormelo.png" alt="Logo Vitor Melo">
 </p>
 
 ## Configuration
