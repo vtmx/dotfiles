@@ -127,7 +127,7 @@ gpa() {
     echo "error: no commit message provided" >&2
     return 1
   fi
-  git commit -a -m "$msg"
+  git commit -a -m "${msg^}"
   git push
 }
 
@@ -138,7 +138,7 @@ gpdf() {
   local dotdir="$HOME/Dev/dotfiles"
 
   git -C "$dotdir" add -A
-  git -C "$dotdir" commit -m "$msg"
+  git -C "$dotdir" commit -m "${msg^}"
   git -C "$dotdir" push
 }
 
