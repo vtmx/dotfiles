@@ -1,11 +1,12 @@
 local utils = require('config.utils')
 local map = vim.keymap.set
 
--- to 0.13
--- vla - select all
--- vli - select line
+-- news in 0.13
+-- val - motion all
+-- vil - motion line
 -- q   - multi cursor
 -- ZR  - reload conf
+-- {[,]}<space>
 
 -- Normal
 
@@ -14,49 +15,10 @@ map(
   { desc = 'Enter in command mode' }
 )
 
-map(
-  'x', 'c', '"_c',
-  { desc = 'Change text without putting it into register' }
-)
-
-map(
-  'n', 'dl', '"+dd<cmd>:lua vim.notify("Cut line to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Cut current line to clipboard' }
-)
-
-map(
-  'n', 'gca', ':normal GVgggc<esc>',
-  { desc = 'Comment all' }
-)
-
-map(
-  'n', 'gcd', 'yypk:normal gcc<cr>j^',
-  { desc = 'Duplicate line and comment' }
-)
-
-map(
-  'n', 'gco', 'o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
-  { desc = 'Add a comment below current line' }
-)
-
-map(
-  'n', 'gcO', 'O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>',
-  { desc = 'Add a comment above current line' }
-)
-
-map(
-  { 'n', 'v' }, 'H', '^',
-  { desc = 'Go to begin line' }
-)
 
 map(
   'n', 'j', 'v:count == 0 ? "gj" : "j"',
   { expr = true, desc = 'Ignore wordwrap jumpline' }
-)
-
-map(
-  'n', 'J', 'mzJ`z==',
-  { desc = 'Join lines' }
 )
 
 map(
@@ -65,8 +27,18 @@ map(
 )
 
 map(
+  { 'n', 'v' }, 'H', '^',
+  { desc = 'Go to begin line' }
+)
+
+map(
   { 'n', 'v' }, 'L', 'g_',
   { desc = 'Go to end line' }
+)
+
+map(
+  'n', 'J', 'mzJ`z==',
+  { desc = 'Join lines' }
 )
 
 map(
@@ -107,26 +79,6 @@ map(
 )
 
 map(
-  'n', 'vv', '<cmd>vsp<cr><c-w>h<cmd>bp<cr>',
-  { desc = 'Split vertical' }
-)
-
-map(
-  'n', 'yd', 'mtV"+x`t<cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Cut to clipboard' }
-)
-
-map(
-  'n', 'yl', '"+yy<cmd>:lua vim.notify("Copy line to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Yank current line to clipboard' }
-)
-
-map(
-  'n', 'y%', '<cmd>%y+<cr><cmd>:lua vim.notify("Copy all content to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Copy all content to clipboard' }
-)
-
-map(
   'n', '>', '>>',
   { desc = 'Add indent' }
 )
@@ -162,6 +114,11 @@ map(
 )
 
 map(
+  'n', '<c-u>', '<c-u>zz',
+  { desc = 'Page up' }
+)
+
+map(
   'n', '<c-i>', '<c-i>zz',
   { desc = 'Jump forwards' }
 )
@@ -174,11 +131,6 @@ map(
 map(
   { 'n', 'i', 's', 'x' }, '<c-s>', '<cmd>w<cr><esc>',
   { desc = 'Save file' }
-)
-
-map(
-  'n', '<c-u>', '<c-u>zz',
-  { desc = 'Page up' }
 )
 
 map(
@@ -208,26 +160,6 @@ map(
   { desc = 'Return to normal mode' }
 )
 
-map(
-  'i', '<c-a>', '<esc><cmd>normal ^<cr>i',
-  { desc = 'Move to begin line' }
-)
-
-map(
-  'i', '<c-e>', '<esc><cmd>normal $<cr>a',
-  { desc = 'Move to end line' }
-)
-
-map(
-  'i', '<c-h>', '<left>',
-  { desc = 'Move cursor char left' }
-)
-
-map(
-  'i', '<c-l>', '<right>',
-  { desc = 'Move cursor char right' }
-)
-
 -- Força a seleção do primeiro item e confirma
 map('i', '<c-y>', function()
     local info = vim.fn.complete_info({'selected'})
@@ -239,22 +171,7 @@ map('i', '<c-y>', function()
   { expr = true, replace_keycodes = true }
 )
 
-map(
-  'i', '<a-;>', '<esc>mt<cmd>normal gcc<cr><cmd>normal `t<cr>a',
-  { desc = 'Comment line' }
-)
-
 -- Visual
-
-map(
-  'x', 'D', '"+x<cmd>:lua vim.notify("Cut to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Cut to clipboard' }
-)
-
-map(
-  'x', 'P', '"+gp<esc><cmd>echo "paste from clipboard"<cr>',
-  { desc = 'Paste from clipboard' }
-)
 
 map(
   'x', 'y', 'ygv<esc>',
@@ -293,11 +210,6 @@ map(
   { desc = 'Beginner of line' }
 )
 
-map(
-  'c', '<c-e>', '<end>',
-  { desc = 'End of line' }
-)
-
 -- Terminal
 
 map(
@@ -308,23 +220,8 @@ map(
 -- Leader
 
 map(
-  'n', '<leader>a', 'G<s-v>gg',
-  { desc = 'Select all text' }
-)
-
-map(
   'n', '<leader>b', function() require('snacks').picker.buffers() end,
   { desc = 'Buffers' }
-)
-
-map(
-  'n', '<leader>d', 'mtviw"+x`t<cmd>:lua vim.notify("Copy to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Copy to clipboard' }
-)
-
-map(
-  'x', '<leader>d', '"+x<cmd>:lua vim.notify("Cut to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Cut to clipboard' }
 )
 
 map(
@@ -357,17 +254,17 @@ map(
 
 map(
   'n', '<leader>gb', function() require('snacks').picker.git_branches() end,
-  { desc = 'Git Branches' }
+  { desc = 'Git branches' }
 )
 
 map(
   'n', '<leader>gf', function() require('snacks').picker.git_files() end,
-  { desc = 'Git Files' }
+  { desc = 'Git files' }
 )
 
 map(
   'n', '<leader>gl', function() require('snacks').picker.git_log() end,
-  { desc = 'Git Log' }
+  { desc = 'Git log' }
 )
 
 map(
@@ -377,7 +274,7 @@ map(
 
 map(
   'n', '<leader>gS', function() require('snacks').picker.git_status() end,
-  { desc = 'Git Status' }
+  { desc = 'Git status' }
 )
 
 map(
@@ -456,16 +353,6 @@ map(
 )
 
 map(
-  'n', '<leader>o', 'm`o<esc>``',
-  { desc = 'Add new line bottom in normal mode' }
-)
-
-map(
-  'n', '<leader>O', 'm`O<esc>``k',
-  { desc = 'Add new line up in normal mode' }
-)
-
-map(
   'n', '<leader>p', 'm`o<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in next line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in next line' }
 )
@@ -477,7 +364,7 @@ map(
 
 map(
   'n', '<leader>r', '<cmd>restart<cr>',
-  { desc = 'Reload config file' }
+  { desc = 'Restart' }
 )
 
 map(

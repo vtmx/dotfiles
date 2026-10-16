@@ -548,6 +548,7 @@ local hl_groups = {
   -- go
   ['@function.call.go'] = { link = 'Normal' },
   ['@function.method.call.go'] = { link = 'Normal' },
+  ['@keyword.function.go'] = { link = 'Statement' },
   ['@property.go'] = { link = 'Normal' },
   ['@spell.go'] = { link = 'String' },
   ['@string.escape.go'] = { link = 'String' },
