@@ -120,11 +120,7 @@
   </tr>
   <tr>
     <th align="left">Editor</th>
-    <td><a href="https://neovim.io">NeoVim</a></td>
-  </tr>
-  <tr>
-    <th align="left">Jump Dir</th>
-    <td><a href="https://github.com/ajeetdsouza/zoxide">zoxide</a></dd>
+    <td><a href="https://neovim.io">nvim</a></td>
   </tr>
   <tr>
     <th align="left">Search file</th>
@@ -137,6 +133,10 @@
   <tr>
     <th align="left">Watch File</th>
     <td><a href="https://github.com/eradman/entr">entr</a>, <a href="https://linux.die.net/man/1/inotifywait">inotifywait</a></dd>
+  </tr>
+  <tr>
+    <th align="left">Jump Dir</th>
+    <td><a href="https://github.com/ajeetdsouza/zoxide">zoxide</a></dd>
   </tr>
 </table>
 
