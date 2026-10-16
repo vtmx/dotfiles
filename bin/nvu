@@ -5,7 +5,7 @@ url="https://github.com/neovim/neovim/releases/download/nightly/$file"
 install_dir="/opt/nvim-linux-x86_64"
 
 exit_error() {
-  echo -e "\e[0;31m$1\e[0m" >&2
+  echo -e "$1" >&2
   exit 1
 }
 
