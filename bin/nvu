@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+file="nvim-linux-x86_64.tar.gz"
+url="https://github.com/neovim/neovim/releases/download/nightly/$file"
+install_dir="/opt/nvim-linux-x86_64"
+
+exit_error() {
+  echo -e "\e[0;31m$1\e[0m" >&2
+  exit 1
+}
+
+echo "Downloading latest neovim version..."
+if ! curl -LO "$url"; then
+  exit_error "Failed to download lastest neovim"
+fi
+
+echo "Checking previous version..."
+if [[ -d "$install_dir" ]]; then
+  echo "Removing previous version..."
+  if ! sudo rm -rf "$install_dir"; then
+    exit_error "Failed to previous version"
+  fi
+fi
+
+echo "Installing new version..."
+if ! sudo tar -C /opt -xzf  "$file"; then
+  exit_error "Failed to extract new version"
+fi
+
+echo "Cleaning up downloaded file..."
+rm "$file"
+
+echo "Installed: $($install_dir/bin/nvim --version | head -n 1)"
+

@@ -158,6 +158,9 @@ alias md="mkdir -p"
 # move
 alias mv="mv -i"
 
+# nvim nightly
+alias nv="/opt/nvim-linux-x86_64/bin/nvim"
+
 # opencode
 alias oc="opencode"
 alias ocr="opencode run"
