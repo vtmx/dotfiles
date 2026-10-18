@@ -30,7 +30,7 @@ theme = "onedarkv"
 "variable" = { fg = "fg" }
 "variable.builtin" = { fg = "fg" }
 "variable.other.member" = { fg = "fg" }
-"variable.parameter" = { fg = "red" }
+"variable.parameter" = { fg = "fg" }
 
 # Diagnostic
 "diagnostic" = { fg = "default", bg = "bd", modifiers = ["italic"] }

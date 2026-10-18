@@ -1,9 +1,12 @@
 [[language]]
-name = "v"
-file-types = ["v", "vv"]
-indent = { tab-width = 2, unit = "  " }
+name = 'bash'
+file-types = ['bash', 'sh']
+indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
-name = "verilog"
-file-types = ["vh", "sv", "svh"]
-indent = { tab-width = 2, unit = "  " }
+name = 'go'
+indent = { tab-width = 2, unit = '  ' }
+
+[[language]]
+name = 'lua'
+indent = { tab-width = 2, unit = '  ' }
