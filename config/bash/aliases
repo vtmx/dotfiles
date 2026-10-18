@@ -127,6 +127,7 @@ alias hi="history | sort -rn"
 
 # helix
 alias hx="helix"
+alias hc="helix $HOME/.config/helix/config.toml"
 
 # inotify
 alias iwai="inotifywait"
