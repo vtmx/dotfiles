@@ -15,10 +15,10 @@ autocmd('CursorMoved', {
 -- Text Yank Highlight
 autocmd('TextYankPost', {
   callback = function()
-    if vim.version().minor >= 11 then
-      vim.hl.on_yank({ timeout = 100 })
+    if vim.hl and vim.hl.hl_op then -- só funciona >= 0.13
+      vim.hl.hl_op({ timeout = 100 })
     else
-      vim.highlight.on_yank({ timeout = 100 })
+      (vim.hl.on_yank or vim.highlight.on_yank)({ timeout = 100 })
     end
   end
 })

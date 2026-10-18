@@ -1,7 +1,7 @@
 # Environment variables
 export BROWSER="zen-browser"
 export CDPATH=".:..:~"
-export EDITOR="nvim"
+export EDITOR="/opt/nvim-linux-x86_64/bin/nvim"
 export HISTCONTROL="ignoreboth:ignorespace"
 export HISTFILESIZE=5000
 export HISTIGNORE='..:...:bg:fg:clear:history:l:ls:pwd:z'
