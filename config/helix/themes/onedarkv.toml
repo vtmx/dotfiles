@@ -1,0 +1,137 @@
+theme = "onedarkv"
+
+# Syntaxy
+"attribute" = { fg = "orange" }
+"comment" = { fg = "fd" }
+"constant" = { fg = "orange" }
+"constant.builtin" = { fg = "orange" }
+"constant.character.escape" = { fg = "orange" }
+"constant.numeric" = { fg = "orange" }
+"constructor" = { fg = "fg" }
+"function" = { fg = "blue" }
+"function.builtin" = { fg = "fg" }
+"function.macro" = { fg = "fg" }
+"function.method" = { fg = "fg" }
+"function.special" = { fg = "fg" }
+"keyword" = { fg = "magenta" }
+"keyword.control" = { fg = "magenta" }
+"keyword.directive" = { fg = "fg" }
+"keyword.function" = { fg = "fg" }
+"keyword.operator" = { fg = "magenta" }
+"keyword.storage" = { fg = "fg" }
+"label" = { fg = "fg" }
+"namespace" = { fg = "fg" }
+"operator" = { fg = "fg" }
+"special" = { fg = "fg" }
+"string" = { fg = "green" }
+"string.regexp" = { fg = "orange" }
+"tag" = { fg = "red" }
+"type" = { fg = "fg" }
+"variable" = { fg = "fg" }
+"variable.builtin" = { fg = "fg" }
+"variable.other.member" = { fg = "fg" }
+"variable.parameter" = { fg = "red" }
+
+# Diagnostic
+"diagnostic" = { fg = "default", bg = "bd", modifiers = ["italic"] }
+"diagnostic.deprecated" = { fg = "red" }
+"diagnostic.unnecessary" = { bg = "bd" }
+"info" = { fg = "blue" }
+"hint" = { fg = "fd" }
+"warning" = { fg = "yellow" }
+"error" = { fg = "red" }
+
+# Diff
+"diff.delta" = { fg = "cyan" }
+"diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "yellow" }
+
+# Markup
+"markup.heading" = { fg = "fg" }
+"markup.raw.inline" = { fg = "fg" }
+"markup.bold" = { fg = "fg" }
+"markup.italic" = { fg = "fg" }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.list" = { fg = "fg" }
+"markup.quote" = { fg = "fg" }
+"markup.link.url" = { fg = "fg" }
+"markup.link.text" = { fg = "fg" }
+
+# UI
+
+# General
+"ui.background" = { bg = "bg" }
+"ui.background.separator" = { bg = "bg" }
+"ui.text" = { fg = "fg" }
+"ui.text.focus" = { bg = "ac" } # Select item
+
+# Bufferline
+"ui.bufferline" = { fg = "fd" }
+"ui.bufferline.active" = { fg = "fg" }
+
+# Cursor
+"ui.cursor" = { fg = "fg", modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "orange" }
+"ui.cursor.primary" = { fg = "fg", modifiers = ["reversed"] }
+
+# Debug
+"ui.debug" = { fg = "red" }
+
+# Help and popup
+"ui.help" = { fg = "fg" }
+"ui.popup" = { bg = "bg" }
+
+# Hightlight
+"ui.highlight" = { bg = "ac" } # Selct in search
+"ui.highlight.frameline" = { bg = "fd" }
+
+# Line number
+"ui.linenr" = { fg = "ac" }
+"ui.linenr.selected" = { fg = "fg" }
+
+# Menu
+"ui.menu" = { fg = "fg", bg = "bg" }
+"ui.menu.scroll" = { fg = "ac", bg = "bg" }
+"ui.menu.selected" = { fg = "fg", bg = "ac" }
+
+# Picker
+"ui.picker.header" = { fg = "fd" }
+"ui.picker.header.column" = { fg = "fd" }
+"ui.picker.header.column.active" = { fg = "fg" }
+
+# Selction
+"ui.selection" = { bg = "ac" }
+"ui.selection.primary" = { bg = "ac" }
+"ui.cursorline.primary" = { bg = "bl" }
+
+# Statusline
+"ui.statusline" = { bg = "bg" }
+"ui.statusline.inactive" = { fg = "fd" }
+
+# Virtual
+"ui.virtual" = { fg = "fl" }
+"ui.virtual.indent-guide" = { fg = "ac" }
+"ui.virtual.inlay-hint" = { fg = "fd" }
+"ui.virtual.jump-label" = { fg = "red" }
+"ui.virtual.ruler" = { bg = "dl" }
+"ui.virtual.whitespace" = { fg = "fd" }
+
+# Window
+"ui.window" = { fg = "fd" }
+
+[palette]
+bd = "#1e2227"
+bg = "#23272e"
+bl = "#2c313c" # cursorline and sel
+fd = "#5c6370" # comment
+fg = "#abb2bf"
+fl = "#0000ff"
+ac = "#3d4556" # selection and accent
+
+red    = "#e06c75"
+orange = "#d19a66"
+yellow = "#e5c07b"
+green  = "#98c379"
+cyan   = "#56b6c2"
+blue   = "#61afef"
+magenta = "#c678dd"

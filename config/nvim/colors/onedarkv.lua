@@ -546,6 +546,7 @@ local hl_groups = {
   ['@value.css'] = { link = 'cssValue' },
 
   -- go
+  ['@constant.builtin.go'] = { link = 'Number' },
   ['@function.call.go'] = { link = 'Normal' },
   ['@function.method.call.go'] = { link = 'Normal' },
   ['@keyword.function.go'] = { link = 'Statement' },
@@ -554,8 +555,9 @@ local hl_groups = {
   ['@string.escape.go'] = { link = 'String' },
   ['@type.go'] = { link = 'Normal' },
   ['@type.definition.go'] = { link = 'Normal' },
+  ['@variable.go'] = { link = 'Normal' },
   ['@variable.member.go'] = { link = 'Normal' },
-  ['@variable.parameter.go'] = { link = 'Normal' },
+  ['@variable.parameter.go'] = { link = 'Identifier' },
 
   -- html
   ['@constant.html'] = { link = 'Comment' },
@@ -584,7 +586,7 @@ local hl_groups = {
 
   -- lua
   ['@constructor.lua'] = { link = 'Normal' },
-  ['@function.call.lua'] = { link = 'Normal' },
+  ['@function.call.lua'] = { link = 'Function' },
   ['@function.lua'] = { link = 'Normal' },
   ['@keyword.function.lua'] = { link = 'Normal' },
   ['@keyword.lua'] = { link = 'Keyword' },
@@ -592,13 +594,14 @@ local hl_groups = {
   ['@lsp.type.method.lua'] = { link = 'Normal' },
   ['@lsp.type.parameter.lua'] = { link = 'Normal' },
   ['@lsp.type.property.lua'] = { link = 'Normal' },
+  ['@lsp.typemod.parameter.declaration.lua'] = { link = 'Identifier' },
   ['@property.lua'] = { link = 'Normal' },
   ['@punctuation.bracket.lua'] = { link = 'Operator' },
   ['@punctuation.delimiter.lua'] = { link = 'Operator' },
   ['@string.escape.lua'] = { link = 'String' },
   ['@variable.lua'] = { link = 'Normal' },
   ['@variable.member.lua'] = { link = 'Normal' },
-  ['@variable.parameter.lua'] = { link = 'Normal' },
+  ['@variable.parameter.lua'] = { link = 'Identifier' },
 
   -- markdown
   ['@keyword.directive.markdown'] = { link = 'Normal' },
