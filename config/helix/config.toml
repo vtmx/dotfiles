@@ -2,6 +2,7 @@ theme = 'onedarkv'
 
 [editor]
 auto-completion = true
+auto-pairs = true
 bufferline = 'multiple'
 cursorline = true
 default-yank-register = '+'
