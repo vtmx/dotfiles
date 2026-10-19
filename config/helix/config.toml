@@ -4,6 +4,7 @@ theme = 'onedarkv'
 auto-completion = true
 auto-pairs = true
 bufferline = 'multiple'
+color-modes = true
 cursorline = true
 default-yank-register = '+'
 end-of-line-diagnostics = 'hint'
