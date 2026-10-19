@@ -69,7 +69,7 @@ map(
 )
 
 map(
-  'n', 'S', function() require('mini.jump2d').start() end,
+  'n', 'gw', function() require('mini.jump2d').start() end,
   { desc = 'Char anywhere' }
 )
 
