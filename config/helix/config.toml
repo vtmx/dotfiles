@@ -1,6 +1,7 @@
 theme = 'onedarkv'
 
 [editor]
+auto-completion = true
 bufferline = 'multiple'
 cursorline = true
 default-yank-register = '+'
