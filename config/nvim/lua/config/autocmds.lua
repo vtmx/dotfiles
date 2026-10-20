@@ -44,12 +44,21 @@ autocmd('TextYankPost', {
 -- Restore cursor position
 autocmd('BufReadPost', {
   callback = function(args)
+    if vim.b[args.buf].cursor_restored then
+      return
+    end
+
     local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
     local line_count = vim.api.nvim_buf_line_count(args.buf)
+
     if mark[1] > 0 and mark[1] <= line_count then
       vim.api.nvim_win_set_cursor(0, mark)
-      vim.schedule(function() vim.cmd('normal! zz') end)
+      vim.schedule(function()
+        vim.cmd('normal! zz')
+     end)
     end
+
+    vim.b[args.buf].cursor_restored = true
   end
 })
 
