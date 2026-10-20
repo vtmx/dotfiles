@@ -12,6 +12,24 @@ autocmd('CursorMoved', {
   end
 })
 
+-- Jumps always in center
+autocmd('CursorMoved', {
+  callback = function()
+    if vim.bo.buftype == 'terminal' or vim.fn.mode() ~= 'n' then
+      return
+    end
+
+    local current_line = vim.api.nvim_win_get_cursor(0)[1]
+    local last_line = vim.b.last_cursor_line or current_line
+    vim.b.last_cursor_line = current_line
+
+    -- If move more of 5 lines center
+    if math.abs(current_line - last_line) > 5 then
+      vim.cmd('normal! zz')
+    end
+  end
+})
+
 -- Text Yank Highlight
 autocmd('TextYankPost', {
   callback = function()
