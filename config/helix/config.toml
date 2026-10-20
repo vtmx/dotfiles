@@ -33,9 +33,11 @@ right = ['diagnostics', 'position', 'file-encoding']
 
 [keys.normal]
 'ç' = 'command_mode'
-C-r = [':w', ':config-reload']
 X = 'extend_line_above'
+C-r = [':w', ':config-reload']
+space.i = ':tree-sitter-highlight-name'
 
 [keys.insert]
 k = { j = 'normal_mode' }
 C-c = 'normal_mode'
+C-s = [':w', 'normal_mode']
