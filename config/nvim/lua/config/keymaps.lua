@@ -99,6 +99,36 @@ map(
 )
 
 map(
+  'n', 'n', 'nzz',
+  { desc = 'Next search and center' }
+)
+
+map(
+  'n', 'N', 'Nzz',
+  { desc = 'Prev search and center' }
+)
+
+map(
+  'n', '<c-d>', '<c-d>zz',
+  { desc = 'Page down and center' }
+)
+
+map(
+  'n', '<c-u>', '<c-u>zz',
+  { desc = 'Page up and center' }
+)
+
+map(
+  'n', '<c-i>', '<c-i>zz',
+  { desc = 'Jump forwards and center' }
+)
+
+map(
+  'n', '<c-o>', '<c-o>zz',
+  { desc = 'Jump backwards and center' }
+)
+
+map(
   { 'n', 'i', 's', 'x' }, '<c-s>', '<cmd>w<cr><esc>',
   { desc = 'Save file' }
 )
@@ -146,11 +176,6 @@ map('i', '<c-y>', function()
 map(
   'x', 'y', 'ygv<esc>',
   { desc = 'Keep cursor when visual copy' }
-)
-
-map(
-  'x', 'Y', '"+ygv<esc><cmd>echo "copy to clipboard"<cr>',
-  { desc = 'Copy to clipboard' }
 )
 
 map(
