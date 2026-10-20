@@ -39,4 +39,3 @@ X = 'extend_line_above'
 [keys.insert]
 k = { j = 'normal_mode' }
 C-c = 'normal_mode'
-C-s = [':w', 'normal_mode']

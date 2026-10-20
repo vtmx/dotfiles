@@ -52,16 +52,6 @@ map(
 )
 
 map(
-  'n', 'n', 'nzz',
-  { desc = 'Next search and center' }
-)
-
-map(
-  'n', 'N', 'Nzz',
-  { desc = 'Prev search and center' }
-)
-
-map(
   'n', 's', function()
     require('mini.jump2d').start(require('mini.jump2d').builtin_opts.single_character)
   end,
@@ -106,26 +96,6 @@ map(
 map(
   'n', '<a-l>', '<cmd>TmuxNavigateRight<cr>',
   { desc = 'TmuxNavigateRight' }
-)
-
-map(
-  'n', '<c-d>', '<c-d>zz',
-  { desc = 'Page down' }
-)
-
-map(
-  'n', '<c-u>', '<c-u>zz',
-  { desc = 'Page up' }
-)
-
-map(
-  'n', '<c-i>', '<c-i>zz',
-  { desc = 'Jump forwards' }
-)
-
-map(
-  'n', '<c-o>', '<c-o>zz',
-  { desc = 'Jump backwards' }
 )
 
 map(

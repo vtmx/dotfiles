@@ -22,7 +22,6 @@ export LESS_TERMCAP_se=$(sgr0)                  # statusbar space and type
 export LESS_TERMCAP_so=$(setab 7; tput setaf 0) # statusbar and search active
 export LESS_TERMCAP_ue=$(sgr0)                  # end underline effect
 export LESS_TERMCAP_us=$(setaf 5)               # header and attr
-export GROFF_NO_SGR=1                           # for konsole and gnome-terminal
 
 # Prompt
 if [[ -n "$DISPLAY" ]]; then

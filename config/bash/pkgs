@@ -9,6 +9,8 @@ export DO_NOT_TRACK=1
 if has bat; then
   export BAT_THEME="ansi"
   export BAT_STYLE="numbers,changes,header"
+  export MANROFFOPT="-c"
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
 # bemenu

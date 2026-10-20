@@ -33,7 +33,7 @@ theme = 'onedarkv'
 'variable.parameter' = { fg = 'fg' }
 
 # Diagnostic
-'diagnostic' = { bg = 'bd', fg = 'default' }
+'diagnostic' = { bg = 'bd', fg = 'red' }
 'diagnostic.deprecated' = { fg = 'red' }
 'diagnostic.unnecessary' = { bg = 'bd' }
 'info' = { fg = 'blue' }
@@ -113,11 +113,11 @@ theme = 'onedarkv'
 'ui.virtual.indent-guide' = { fg = 'ac' }
 'ui.virtual.inlay-hint' = { fg = 'fd' }
 'ui.virtual.jump-label' = { fg = 'red' }
-'ui.virtual.ruler' = { bg = 'dl' }
+'ui.virtual.ruler' = { bg = 'bl' }
 'ui.virtual.whitespace' = { fg = 'fd' }
 
 # Window
-'ui.window' = { fg = 'fd' }
+'ui.window' = { fg = 'bl' }
 
 [palette]
 bd = '#1e2227'
