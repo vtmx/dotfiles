@@ -19,12 +19,9 @@ insert = 'bar'
 character = '▎'
 render = true
 
-[editor.whitespace.characters]
-space = '·'
-nbsp = '⍽'
-nnbsp = '␣'
-tab = '→'
-newline = '↲'
+[editor.whitespace]
+#render = 'all'
+characters.newline = '↲'
 
 [editor.statusline]
 left = ['mode', 'file-name']
