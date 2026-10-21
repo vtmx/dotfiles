@@ -22,7 +22,6 @@ Option: " option
   echo ""
 
   case "${option}" in
-    b|b) copy_bin         ;;
     c|C) clone_repository ;;
     i|I) install_packages ;;
     f|F) copy_fonts       ;;
@@ -39,24 +38,11 @@ clone_repository() {
   git clone git@github.com:vtmx/dotfiles.git $dir
 }
 
-copy_bin() {
-  bindir=${HOME}/.local/bin
-  [[ ! -d $bindir ]] && echo Create bin dir... && mkdir -p $bindir
-  echo Create simolic link of bin...
-  if cp -r "$cwd/bin/"* $bindir; then
-    pause_success "Bin copied"
-  else
-    pause_error "Bin not copied"
-  fi
-}
-
 copy_fonts() {
   fontdir=${HOME}/.local/share/fonts
   [[ ! -d $fontdir ]] && echo Create font dir... && mkdir -p $fontdir
   echo Copying fonts...
-  if cp -r "$cwd/fonts/"* $fontdir; then
-    pause_success "Fonts copied"
-  else
+  if ! cp -r "$cwd/fonts/"* $fontdir; then
     pause_error "Fonts not copied"
   fi
 }

@@ -318,6 +318,16 @@ map(
 )
 
 map(
+  'n', '<leader>o', ']<space>',
+  { desc = 'Add new line bottom in normal mode', remap = true }
+)
+
+map(
+  'n', '<leader>O', '[<space>',
+  { desc = 'Add new line up in normal mode', remap = true }
+)
+
+map(
   'n', '<leader>p', 'm`o<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in next line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in next line' }
 )
@@ -448,11 +458,6 @@ map(
 )
 
 map(
-  'x', '<leader>x', ":'<,'>w !bash<cr>",
-  { desc = 'Execute selected line(s)' }
-)
-
-map(
   'n', '<leader>x', '<cmd>.w !bash<cr>',
   { desc = 'Execute current line' }
 )
@@ -463,13 +468,8 @@ map(
 )
 
 map(
-  'n', '<leader>y', 'mtviw"+y`t<cmd>:lua vim.notify("copy to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Copy to clipboard' }
-)
-
-map(
-  'x', '<leader>y', '"+ygv<esc><cmd>:lua vim.notify("copy to clipboard", "info", { title = "Clipboard" })<cr>',
-  { desc = 'Copy to clipboard' }
+  'x', '<leader>x', ":'<,'>w !bash<cr>",
+  { desc = 'Execute selected line(s)' }
 )
 
 map(

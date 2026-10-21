@@ -15,7 +15,13 @@ autocmd('CursorMoved', {
 -- Jumps always in center
 autocmd('CursorMoved', {
   callback = function()
+    -- If term or not normal mode
     if vim.bo.buftype == 'terminal' or vim.fn.mode() ~= 'n' then
+      return
+    end
+
+    -- If paste
+    if vim.v.operator == 'p' or vim.v.operator == 'P' then
       return
     end
 
@@ -23,7 +29,7 @@ autocmd('CursorMoved', {
     local last_line = vim.b.last_cursor_line or current_line
     vim.b.last_cursor_line = current_line
 
-    -- If move more of 5 lines center
+    -- If move more of 5 lines go to center
     if math.abs(current_line - last_line) > 5 then
       vim.cmd('normal! zz')
     end
