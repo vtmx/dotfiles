@@ -6,6 +6,9 @@ args = ['--stdio']
 command = 'emmet-language-server'
 args = ['--stdio']
 
+[language-server.go]
+command = 'gopls'
+
 [[language]]
 name = 'bash'
 language-servers = ['bash']
@@ -26,6 +29,7 @@ indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'go'
+language-servers = ['go']
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
