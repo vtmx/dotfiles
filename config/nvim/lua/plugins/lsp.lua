@@ -19,7 +19,9 @@ require('mason').setup({
 
 local servers = {
   'bashls',
+  'css-lsp',
   'emmet_language_server',
+  'html-lsp',
   'gopls',
   'lua_ls',
 }

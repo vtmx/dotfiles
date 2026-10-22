@@ -2,7 +2,6 @@ theme = 'onedarkv'
 
 [editor]
 auto-completion = true
-auto-pairs = true
 bufferline = 'multiple'
 color-modes = true
 cursorline = true

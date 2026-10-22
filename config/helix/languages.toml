@@ -1,17 +1,20 @@
-[language-server.emmet-lsp]
-command = '/home/vitor/.local/share/nvim/mason/bin/emmet-language-server'
-args = ['--stdio']
-
 [[language]]
 name = 'bash'
+language-servers = ['bash']
 file-types = ['bash', 'sh']
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'css'
+language-servers = ['emmet']
 file-types = ['css', 'scss']
 indent = { tab-width = 2, unit = '  ' }
-language-servers = ['emmet-lsp', 'prettier']
+
+[[language]]
+name = 'html'
+language-servers = ['emmet']
+file-types = ['html']
+indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'go'
