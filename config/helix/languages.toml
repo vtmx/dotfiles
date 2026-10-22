@@ -12,7 +12,7 @@ command = 'gopls'
 [[language]]
 name = 'bash'
 language-servers = ['bash']
-file-types = ['bash', 'sh']
+file-types = ['bash', 'sh', { glob = 'tmux.conf' }]
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
