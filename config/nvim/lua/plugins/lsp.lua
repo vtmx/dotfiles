@@ -19,9 +19,9 @@ require('mason').setup({
 
 local servers = {
   'bashls',
-  'css-lsp',
+  'cssls',
   'emmet_language_server',
-  'html-lsp',
+  'html',
   'gopls',
   'lua_ls',
 }
@@ -46,6 +46,18 @@ lsp('bashls', {
       shellcheckArguments = { '-e SC2086' },
     }
   }
+})
+
+-- css
+lsp('cssls', {
+  cmd = { 'vscode-css-language-server', '--stdio' },
+  filetypes = { 'css', 'scss', 'less' },
+})
+
+-- html
+lsp('html', {
+  cmd = { 'vscode-html-language-server', '--stdio' },
+  filetypes = { 'html' },
 })
 
 -- emmet

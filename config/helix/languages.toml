@@ -1,37 +1,34 @@
-[language-server.bash]
-command = 'bash-language-server'
-args = ['--stdio']
-
-[language-server.emmet]
+[language-server.emmet-language-server]
 command = 'emmet-language-server'
 args = ['--stdio']
 
-[language-server.go]
-command = 'gopls'
-
 [[language]]
 name = 'bash'
-language-servers = ['bash']
+language-servers = ['bash-language-server']
 file-types = ['bash', 'sh', { glob = 'tmux.conf' }]
+shebangs = ['bash', 'sh']
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'css'
-language-servers = ['emmet']
+language-servers = ['vscode-css-language-server', 'emmet-language-server']
 file-types = ['css', 'scss']
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'html'
-language-servers = ['emmet']
+language-servers = ['vscode-html-language-server', 'emmet-language-server']
 file-types = ['html']
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'go'
-language-servers = ['go']
+language-servers = ['gopls']
+formatter = { command = 'gofmt' }
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'lua'
+language-servers = ['lua-language-server']
+formatter = { command = 'stylua', args = ['--quote-style', 'AutoPreferSingle'] }
 indent = { tab-width = 2, unit = '  ' }
