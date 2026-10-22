@@ -174,9 +174,9 @@
       <td><code>#98c379</code></td>
     </tr>
     <tr>
-      <td><img src="https://fakeimg.deblan.org/32x32/e5c07b&text=+" alt="Yellow"></td>
+      <td><img src="https://fakeimg.deblan.org/32x32/d19a66&text=+" alt="Yellow"></td>
       <td>Yellow</td>
-      <td><code>#e5c07b</code></td>
+      <td><code>#d19a66</code></td>
     </tr>
     <tr>
       <td><img src="https://fakeimg.deblan.org/32x32/61afef&text=+" alt="Blue"></td>
@@ -205,8 +205,8 @@
 
 <table>
   <tr>
-    <th align="left" colspan="3">Shade</th>
-    <th align="left" colspan="3">Color</th>
+    <th align="left" colspan="3">Shades</th>
+    <th align="left" colspan="3">Colors</th>
   </tr>
   <tr>
     <th align="left">🔍</th>
@@ -298,8 +298,8 @@
   <h3>System</h3>
   <table>
     <tr>
-      <th>Shortcut</th>
-      <th>Action</th>
+      <th>Shortcuts</th>
+      <th>Actions</th>
     </tr>
     <tr>
       <td><kbd>Super</kbd> + {<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>}, {<kbd>⯇</kbd>,<kbd>⯆</kbd>,<kbd>⯅</kbd>,<kbd>⯈</kbd>}</td>
