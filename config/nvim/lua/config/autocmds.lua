@@ -2,9 +2,13 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
+-- Global Augroups
+local general_group = augroup('user_general', { clear = true })
+local filetype_group = augroup('user_filetype', { clear = true })
+
 -- Disable hightlight when move cursor
 autocmd('CursorMoved', {
-  group = augroup('auto-hlsearch', { clear = true }),
+  group = general_group,
   callback = function()
     if vim.v.hlsearch == 1 and vim.fn.searchcount().exact_match == 0 then
       vim.schedule(function () vim.cmd.nohlsearch() end)
@@ -14,6 +18,7 @@ autocmd('CursorMoved', {
 
 -- Jumps always in center
 autocmd('CursorMoved', {
+  group = general_group,
   callback = function()
     -- If term or not normal mode
     if vim.bo.buftype == 'terminal' or vim.fn.mode() ~= 'n' then
@@ -38,6 +43,7 @@ autocmd('CursorMoved', {
 
 -- Text Yank Highlight
 autocmd('TextYankPost', {
+  group = general_group,
   callback = function()
     if vim.hl and vim.hl.hl_op then -- só funciona >= 0.13
       vim.hl.hl_op({ timeout = 100 })
@@ -49,6 +55,7 @@ autocmd('TextYankPost', {
 
 -- Restore cursor position
 autocmd('BufReadPost', {
+  group = general_group,
   callback = function(args)
     if vim.b[args.buf].cursor_restored then
       return
@@ -70,6 +77,7 @@ autocmd('BufReadPost', {
 
 -- Better resize
 autocmd('VimResized', {
+  group = general_group,
   callback = function()
     vim.cmd('wincmd =')
   end
@@ -77,7 +85,7 @@ autocmd('VimResized', {
 
 -- Show cursorline only active window enable
 autocmd({ 'WinEnter', 'BufEnter' }, {
-  group = augroup('active_cursorline', { clear = false }),
+  group = general_group,
   callback = function()
     vim.opt_local.cursorline = true
   end
@@ -85,7 +93,7 @@ autocmd({ 'WinEnter', 'BufEnter' }, {
 
 -- Show cursorline only active window disable
 autocmd({ 'WinLeave', 'BufLeave' }, {
-  group = augroup('active_cursorline', { clear = false }),
+  group = general_group,
   callback = function()
     vim.opt_local.cursorline = false
   end
@@ -93,14 +101,15 @@ autocmd({ 'WinLeave', 'BufLeave' }, {
 
 -- Disable auto comment
 autocmd('FileType', {
+  group = filetype_group,
   callback = function()
-    vim.opt.formatoptions = vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
+    vim.opt_local.formatoptions = vim.opt_local.formatoptions:remove({ 'c', 'r', 'o' })
   end
 })
 
 -- Syntax highlighting for dotenv files
 autocmd('BufRead', {
-  group = augroup('dotenv_ft', { clear = true }),
+  group = filetype_group,
   pattern = { '.conf', '.config', '.env', '.env.*' },
   callback = function()
     vim.bo.filetype = 'dosini'
@@ -109,14 +118,17 @@ autocmd('BufRead', {
 
 -- Trim whitespace when save
 autocmd('BufWritePre', {
-  pattern = '*',
+  group = general_group,
   callback = function()
+    local save_cursor = vim.fn.getpos('.')
     vim.cmd([[%s/\s\+$//e]])
+    vim.fn.setpos('.', save_cursor)
   end
 })
 
 -- Close help with 'q'
 autocmd('FileType', {
+  group = filetype_group,
   pattern = {
     'checkhealth',
     'gitsigns-blame',
@@ -135,6 +147,7 @@ autocmd('FileType', {
 
 -- Close history mode whit 'q'
 autocmd('CmdwinEnter', {
+  group = general_group,
   callback = function()
     vim.keymap.set('n', 'q', '<C-W>c', { buffer = true })
   end
@@ -142,6 +155,7 @@ autocmd('CmdwinEnter', {
 
 -- bash
 autocmd('FileType', {
+  group = filetype_group,
   pattern = { 'bash', 'sh', 'yad' },
   callback = function()
     -- Execute script
@@ -157,6 +171,7 @@ autocmd('FileType', {
 
 -- css
 autocmd('FileType', {
+  group = filetype_group,
   pattern = { 'css', 'scss' },
   callback = function()
     vim.keymap.set('i', 'var', function()
@@ -167,6 +182,7 @@ autocmd('FileType', {
 
 -- html
 autocmd('FileType', {
+  group = filetype_group,
   pattern = 'html',
   callback = function()
     vim.bo.omnifunc = 'htmlcomplete#CompleteTags'
@@ -182,11 +198,12 @@ autocmd('FileType', {
 -- markddown
 -- https://guidest.com/markdown/shortcuts
 autocmd('FileType', {
+  group = filetype_group,
   pattern = 'markdown',
   callback = function()
-    vim.opt.shiftwidth = 2
-    vim.opt.tabstop = 2
-    vim.opt.softtabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
 
     vim.keymap.set('n', '<leader>`', function()
       vim.ui.input({ prompt = 'lang: ' }, function(input)
@@ -244,6 +261,7 @@ autocmd('BufWritePost', {
 })
 
 autocmd('FileType', {
+  group = general_group,
   pattern = 'lua',
   callback = function()
     -- Execute script
@@ -259,11 +277,12 @@ autocmd('FileType', {
 
 -- python
 autocmd('FileType', {
+  group = filetype_group,
   pattern = 'python',
   callback = function()
-    vim.opt.tabstop = 2
-    vim.opt.shiftwidth = 2
-    vim.opt.softtabstop = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
 
     -- Execute script
     vim.keymap.set('n', '<leader><cr>', function()
@@ -278,6 +297,7 @@ autocmd('FileType', {
 
 -- Set opts in terminal, falhou com o fzflua
 autocmd('TermOpen', {
+  group = filetype_group,
   callback = function()
     vim.opt_local.listchars = ''
     vim.opt_local.number = false
