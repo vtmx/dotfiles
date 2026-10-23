@@ -44,7 +44,7 @@ cuta() {
   ffmpeg \
     -i "$file" \
     -ss "$start" \
-    -t "$stop" \
+    -to "$stop" \
     -c copy "$cutfile" && \
     rm "$file" && \
     mv "$cutfile" "$file"
@@ -438,7 +438,8 @@ play() {
       ost)                to_play "$music/ost"                                   ;;
       @(s?(earch)))       to_play "$(ls -t $music/**/*.mp3 | fzf)"               ;;
       @(syn?(th)?(wave))) to_play "https://www.youtube.com/live/4xDzrJKXOOY"     ;;
-      *)                  to_play                                                ;;
+      "")                 mpv $args *.mp3                                        ;;
+      *)                  to_play "$1"                                           ;;
     esac
   fi
 }

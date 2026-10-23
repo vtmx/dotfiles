@@ -188,9 +188,29 @@ autocmd('FileType', {
     vim.opt.tabstop = 2
     vim.opt.softtabstop = 2
 
-    vim.keymap.set('n', '<leader>`',
-      'i<cr>```<cr><cr>```<esc>ki', { buffer = true }
-    )
+    vim.keymap.set('n', '<leader>`', function()
+      vim.ui.input({ prompt = 'lang: ' }, function(input)
+        if not input or input == '' then
+          return
+        end
+
+        local lines = {
+          '```' .. input,
+          '',
+          '```'
+        }
+
+        -- Pega a posição atual do cursor (linha e coluna, base 0)
+        local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+        vim.api.nvim_buf_set_lines(0, row, row, false, lines)
+        vim.api.nvim_win_set_cursor(0, { row + 2, 0 })
+        vim.cmd('startinsert')
+      end)
+    end, { buffer = true })
+
+    vim.keymap.set('i', '```', function()
+      vim.snippet.expand('```\n$0\n```')
+    end, { buffer = true })
 
     vim.keymap.set('i', '<c-b>', function()
       vim.snippet.expand('**$0**')
