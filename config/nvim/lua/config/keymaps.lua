@@ -2,11 +2,7 @@ local utils = require('config.utils')
 local map = vim.keymap.set
 
 -- news in 0.13
--- val - motion all
--- vil - motion line
--- q   - multi cursor
 -- ZR  - reload conf
--- {[,]}<space>
 
 -- Normal
 
@@ -60,7 +56,7 @@ map(
 
 map(
   'n', 'gw', function() require('mini.jump2d').start() end,
-  { desc = 'Char anywhere' }
+  { desc = 'Goto word' }
 )
 
 map(
@@ -132,7 +128,7 @@ map(
 
 -- Força a seleção do primeiro item e confirma
 map('i', '<c-y>', function()
-    local info = vim.fn.complete_info({'selected'})
+    local info = vim.fn.complete_info({ 'selected' })
     if info.selected == -1 then
       return '<c-n><c-y>'
     end
@@ -185,7 +181,9 @@ map(
 -- Leader
 
 map(
-  'n', '<leader>b', function() require('snacks').picker.buffers() end,
+  'n', '<leader>b', function()
+    require('snacks').picker.buffers()
+  end,
   { desc = 'Buffers' }
 )
 
@@ -205,30 +203,38 @@ map(
 
 map(
   'n', '<leader>f', function()
-      require('snacks').picker.files({
-        cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.uv.cwd()
-      })
-    end,
+    require('snacks').picker.files({
+      cwd = vim.fs.root(0, { '.git', 'package.json' }) or vim.uv.cwd()
+    })
+  end,
   { desc = 'Files' }
 )
 
 map(
-  'n', '<leader>F', function() require('snacks').picker.files({ cwd = vim.fn.expand('%:p:h') }) end,
+  'n', '<leader>F', function()
+    require('snacks').picker.files({ cwd = vim.fn.expand('%:p:h') })
+  end,
   { desc = 'Files in current dir' }
 )
 
 map(
-  'n', '<leader>gb', function() require('snacks').picker.git_branches() end,
+  'n', '<leader>gb', function()
+    require('snacks').picker.git_branches()
+  end,
   { desc = 'Git branches' }
 )
 
 map(
-  'n', '<leader>gf', function() require('snacks').picker.git_files() end,
+  'n', '<leader>gf', function()
+    require('snacks').picker.git_files()
+  end,
   { desc = 'Git files' }
 )
 
 map(
-  'n', '<leader>gl', function() require('snacks').picker.git_log() end,
+  'n', '<leader>gl', function()
+    require('snacks').picker.git_log()
+  end,
   { desc = 'Git log' }
 )
 
@@ -238,42 +244,58 @@ map(
 )
 
 map(
-  'n', '<leader>gS', function() require('snacks').picker.git_status() end,
+  'n', '<leader>gS', function()
+    require('snacks').picker.git_status()
+  end,
   { desc = 'Git status' }
 )
 
 map(
-  'n', '<leader>gd', function() require('snacks').picker.lsp_definitions() end,
+  'n', '<leader>gd', function()
+    require('snacks').picker.lsp_definitions()
+  end,
   { desc = 'Definitions' }
 )
 
 map(
-  'n', '<leader>gD', function() require('snacks').picker.lsp_declarations() end,
+  'n', '<leader>gD', function()
+    require('snacks').picker.lsp_declarations()
+  end,
   { desc = 'Declarations' }
 )
 
 map(
-  'n', '<leader>gI', function() require('snacks').picker.lsp_implementations() end,
+  'n', '<leader>gI', function()
+    require('snacks').picker.lsp_implementations()
+  end,
   { desc = 'Implementations' }
 )
 
 map(
-  'n', '<leader>gr', function() require('snacks').picker.lsp_references() end,
+  'n', '<leader>gr', function()
+    require('snacks').picker.lsp_references()
+  end,
   { desc = 'References' }
 )
 
 map(
-  'n', '<leader>gy', function() require('snacks').picker.lsp_type_definitions() end,
+  'n', '<leader>gy', function()
+    require('snacks').picker.lsp_type_definitions()
+  end,
   { desc = 'Type definitions' }
 )
 
 map(
-  'n', '<leader>h', function() require('snacks').picker.highlights() end,
+  'n', '<leader>h', function()
+    require('snacks').picker.highlights()
+  end,
   { desc = 'Highlights' }
 )
 
 map(
-  'n', '<leader>H', function() require('snacks').picker.help() end,
+  'n', '<leader>H', function()
+    require('snacks').picker.help()
+  end,
   { desc = 'Help' }
 )
 
@@ -288,27 +310,37 @@ map(
 )
 
 map(
-  'n', '<leader>j', function() require('snacks').picker.jumps() end,
+  'n', '<leader>j', function()
+    require('snacks').picker.jumps()
+  end,
   { desc = 'Jump list' }
 )
 
 map(
-  'n', '<leader>k', function() require('snacks').picker.keymaps() end,
+  'n', '<leader>k', function()
+    require('snacks').picker.keymaps()
+  end,
   { desc = 'Keymaps' }
 )
 
 map(
-  'n', '<leader>K', function() local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word) end,
+  'n', '<leader>K', function()
+    local word = vim.fn.expand('<cword>') vim.cmd('help ' .. word)
+  end,
   { desc = 'Help for current word' }
 )
 
 map(
-  'n', '<leader>lf',function() require('conform').format() end,
+  'n', '<leader>lf',function()
+    require('conform').format()
+  end,
   { desc = 'Format' }
 )
 
 map(
-  'n', '<leader>m', function() require('snacks').picker.marks() end,
+  'n', '<leader>m', function()
+    require('snacks').picker.marks()
+  end,
   { desc = 'Marks' }
 )
 
@@ -328,12 +360,14 @@ map(
 )
 
 map(
-  'n', '<leader>p', 'm`o<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in next line", "info", { title = "Clipboard" })<cr>',
+  'n', '<leader>p',
+  'm`o<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in next line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in next line' }
 )
 
 map(
-  'n', '<leader>P', 'm`O<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in previous line", "info", { title = "Clipboard" })<cr>',
+  'n', '<leader>P',
+  'm`O<Esc>"+p==``<cmd>:lua vim.notify("Paste from clipboard in previous line", "info", { title = "Clipboard" })<cr>',
   { desc = 'Paste from clipboard in previous line' }
 )
 
@@ -343,7 +377,9 @@ map(
 )
 
 map(
-  'n', '<leader>R', function() require('snacks').picker.registers() end,
+  'n', '<leader>R', function()
+    require('snacks').picker.registers()
+  end,
   { desc = 'Registers' }
 )
 
@@ -373,7 +409,9 @@ map(
 )
 
 map(
-  'n', '<leader>uac', function() utils.toggle_autocomplete() end,
+  'n', '<leader>uac', function()
+    utils.toggle_autocomplete()
+  end,
   { desc = 'Toggle autocomplete' }
 )
 
@@ -383,72 +421,100 @@ map(
 )
 
 map(
-  'n', '<leader>ucc', function() utils.toggle_colorcolumn() end,
+  'n', '<leader>ucc', function()
+    utils.toggle_colorcolumn()
+  end,
   { desc = 'Toggle colorcolumn' }
 )
 
 map(
-  'n', '<leader>udc', function() utils.toggle_document_color() end,
+  'n', '<leader>udc', function()
+    utils.toggle_document_color()
+  end,
   { desc = 'Toggle document color' }
 )
 
 map(
-  'n', '<leader>udg', function() utils.toggle_diagnostic() end,
+  'n', '<leader>udg', function()
+    utils.toggle_diagnostic()
+  end,
   { desc = 'Toggle diagnostic' }
 )
 
 map(
-  'n', '<leader>udv', function() utils.toggle_diagnostic_virtual_text() end,
+  'n', '<leader>udv', function()
+    utils.toggle_diagnostic_virtual_text()
+  end,
   { desc = 'Toggle diagnostic virtual text' }
 )
 
 map(
-  'n', '<leader>ui', function() utils.toggle_ia() end,
+  'n', '<leader>ui', function()
+    utils.toggle_ia()
+  end,
   { desc = 'Toggle ia' }
 )
 
 map(
-  'n', '<leader>ul', function() utils.toggle_listchars() end,
+  'n', '<leader>ul', function()
+    utils.toggle_listchars()
+  end,
   { desc = 'Toggle listchars' }
 )
 
 map(
-  'n', '<leader>un', function() utils.toggle_number() end,
+  'n', '<leader>un', function()
+    utils.toggle_number()
+  end,
   { desc = 'Toggle line number' }
 )
 
 map(
-  'n', '<leader>up', function() utils.toggle_pairs() end,
+  'n', '<leader>up', function()
+    utils.toggle_pairs()
+  end,
   { desc = 'Toggle pairs' }
 )
 
 map(
-  'n', '<leader>ur', function() utils.toggle_relativenumber() end,
+  'n', '<leader>ur', function()
+    utils.toggle_relativenumber()
+  end,
   { desc = 'Toggle relativenumber', }
 )
 
 map(
-  'n', '<leader>us', function() utils.toggle_spelllang() end,
+  'n', '<leader>us', function()
+    utils.toggle_spelllang()
+  end,
   { desc = 'Toggle spelllang' }
 )
 
 map(
-  'n', '<leader>ut', function() utils.toggle_treesitter() end,
+  'n', '<leader>ut', function()
+    utils.toggle_treesitter()
+  end,
   { desc = 'Toggle treesitter' }
 )
 
 map(
-  'n', '<f9>', function() utils.toggle_treesitter() end,
+  'n', '<f9>', function()
+    utils.toggle_treesitter()
+  end,
   { desc = 'Toggle treesitter' }
 )
 
 map(
-  'n', '<leader>uw', function() utils.toggle_wrap() end,
+  'n', '<leader>uw', function()
+    utils.toggle_wrap()
+  end,
   { desc = 'Toggle wrap' }
 )
 
 map(
-  'n', '<leader>uz', function() require('snacks').zen() end,
+  'n', '<leader>uz', function()
+    require('snacks').zen()
+  end,
   { desc = 'ZenMode' }
 )
 
@@ -473,7 +539,10 @@ map(
 )
 
 map(
-  'n', '<leader>z', function() utils.toggle_diary(); require('snacks').zen() end,
+  'n', '<leader>z', function()
+    utils.toggle_diary()
+    require('snacks').zen()
+  end,
   { desc = 'Toggle diary mode' }
 )
 
@@ -488,17 +557,23 @@ map(
 )
 
 map(
-  'n', '<leader>/', function() require('snacks').picker.grep() end,
+  'n', '<leader>/', function()
+    require('snacks').picker.grep()
+  end,
   { desc = 'Fuzzy grep' }
 )
 
 map(
-  'n', '<leader>:', function() require('snacks').picker.command_history() end,
+  'n', '<leader>ç', function()
+    require('snacks').picker.command_history()
+  end,
   { desc = 'Command history' }
 )
 
 map(
-  'n', '<leader>?', function() require('snacks').picker.grep_buffers() end,
+  'n', '<leader>?', function()
+    require('snacks').picker.grep_buffers()
+  end,
   { desc = 'Fuzzy live_grep' }
 )
 
@@ -510,7 +585,9 @@ map(
 )
 
 map(
-  'n', '<leader><leader>s', function() require('snacks').picker.lsp_symbols() end,
+  'n', '<leader><leader>s', function()
+    require('snacks').picker.lsp_symbols()
+  end,
   { desc = 'Symbols' }
 )
 

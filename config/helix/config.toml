@@ -30,7 +30,6 @@ right = ['diagnostics', 'position', 'file-encoding']
 
 [keys.normal]
 'ç' = 'command_mode'
-X = 'extend_line_above'
 C-r = [':w', ':config-reload']
 space.i = ':tree-sitter-highlight-name'
 
