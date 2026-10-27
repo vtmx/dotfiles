@@ -60,6 +60,12 @@ lsp('html', {
   filetypes = { 'html' },
 })
 
+-- js
+lsp('ts', {
+  cmd = { 'typescript-language-server', '--stdio' },
+  filetypes = { 'js', 'ts' },
+})
+
 -- emmet
 lsp('emmet_language_server', {
   cmd = { 'emmet-language-server', '--stdio' },

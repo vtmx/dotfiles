@@ -6,7 +6,7 @@ $br zen               desktop="^1"
 $br vivaldi-stable    desktop="^2"
 $br kitty             desktop="^2" focus=on follow=on
 $br bitwarden-desktop desktop="^4" focus=on
-$br steam             desktop="^4" state=floating center=on
+$br steam             desktop="^4" state=floating top=0 left=0 with=1920 height=1048
 $br qBittorrent       desktop="^5" focus=on follow=on
 $br Yad                            state=floating
 $br java                           state=floating

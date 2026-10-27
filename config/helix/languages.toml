@@ -17,8 +17,20 @@ indent = { tab-width = 2, unit = '  ' }
 
 [[language]]
 name = 'html'
-language-servers = ['vscode-html-language-server', 'emmet-language-server']
+language-servers = ['vscode-html-language-server']
 file-types = ['html']
+indent = { tab-width = 2, unit = '  ' }
+
+[[language]]
+name = 'javascript'
+language-servers = ['typescript-language-server']
+file-types = ['js']
+indent = { tab-width = 2, unit = '  ' }
+
+[[language]]
+name = 'typescript'
+language-servers = ['typescript-language-server']
+file-types = ['ts', 'tsx']
 indent = { tab-width = 2, unit = '  ' }
 
 [[language]]

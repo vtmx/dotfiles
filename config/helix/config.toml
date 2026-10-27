@@ -4,7 +4,6 @@ theme = 'onedarkv'
 auto-completion = true
 auto-pairs = false
 bufferline = 'multiple'
-color-modes = true
 cursorline = true
 default-yank-register = '+'
 end-of-line-diagnostics = 'hint'
@@ -19,8 +18,10 @@ insert = 'bar'
 character = '▎'
 render = true
 
+[editor.lsp]
+display-color-swatches = false
+
 [editor.whitespace]
-#render = 'all'
 characters.newline = '↲'
 
 [editor.statusline]
