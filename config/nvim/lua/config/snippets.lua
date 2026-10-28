@@ -3,19 +3,44 @@ local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 local filetype_group = augroup('user_filetype', { clear = true })
 
+local function map(modes, lhs, rhs, opts)
+  opts = opts or {}
+  opts.buffer = true
+  if type(modes) == 'string' then modes = { modes } end
+  for _, mode in ipairs(modes) do
+    vim.keymap.set(mode, lhs, rhs, opts)
+  end
+end
+
+-- set bash if shebang
+autocmd({ 'BufRead', 'BufNewFile' }, {
+  group = filetype_group,
+  pattern = '*',
+  callback = function(ev)
+    if vim.bo[ev.buf].filetype == '' then
+      local first_line = vim.api.nvim_buf_get_lines(ev.buf, 0, 1, false)[1] or ''
+      if first_line:match('^#!.*bin/(env%s+)?(bash|sh)') then
+        vim.bo[ev.buf].filetype = 'bash'
+      end
+    end
+  end
+})
+
 -- bash
 autocmd('FileType', {
   group = filetype_group,
   pattern = { 'bash', 'sh', 'yad' },
   callback = function()
-    -- Execute script
-    vim.keymap.set('n', '<leader><cr>', function()
+    map('n', '<leader><cr>', function()
       local file = vim.fn.expand('%:p')
       local cmd = string.format(
         [[tmux display-popup -w 50%% -h 50%% -E "bash -c '%s'; echo; read -p 'Press ENTER or type command to continue'"]], file
       )
       vim.fn.system(cmd)
-    end, { buffer = true })
+    end)
+    map('i', '[[', function()
+      vim.snippet.expand('[[ $0 ]]')
+    end)
   end
 })
 
@@ -24,24 +49,24 @@ autocmd('FileType', {
   group = filetype_group,
   pattern = { 'css', 'scss' },
   callback = function()
-    vim.keymap.set('i', 'var', function()
+    map('i', 'var', function()
       vim.snippet.expand('var(--$0)')
-    end, { buffer = true })
+    end)
   end
 })
 
 -- html
 autocmd('FileType', {
   group = filetype_group,
-  pattern = 'html',
+  pattern = { 'html', 'htmldjango' },
   callback = function()
     vim.bo.omnifunc = 'htmlcomplete#CompleteTags'
-    vim.keymap.set('i', '{{', function()
+    map('i', '{{', function()
       vim.snippet.expand('{{ $0 }}')
-    end, { buffer = true })
-    vim.keymap.set('i', '{%', function()
+    end)
+    map('i', '{%', function()
       vim.snippet.expand('{% $0 %}')
-    end, { buffer = true })
+    end)
   end
 })
 
@@ -54,7 +79,7 @@ autocmd('FileType', {
     vim.opt_local.tabstop = 2
     vim.opt_local.softtabstop = 2
 
-    vim.keymap.set('n', '<leader>`', function()
+    map('n', '<leader>`', function()
       vim.ui.input({ prompt = 'lang: ' }, function(input)
         if not input or input == '' then
           return
@@ -72,26 +97,26 @@ autocmd('FileType', {
         vim.api.nvim_win_set_cursor(0, { row + 2, 0 })
         vim.cmd('startinsert')
       end)
-    end, { buffer = true })
+    end)
 
-    vim.keymap.set('i', '``', function()
+    map('i', '``', function()
       vim.snippet.expand('```$1\n$2\n```\n\n$3')
-    end, { buffer = true })
+    end)
 
-    vim.keymap.set('i', '**', function()
+    map('i', '**', function()
       vim.snippet.expand('**$1** $0')
-    end, { buffer = true })
+    end)
 
-    vim.keymap.set('i', '![', function()
+    map('i', '![', function()
       vim.snippet.expand('![$1]($2) $0')
-    end, { buffer = true })
+    end)
 
-    vim.keymap.set('i', '<c-k>', function()
+    map('i', '<c-k>', function()
       vim.snippet.expand('[$1]($0)')
-    end, { buffer = true })
+    end)
 
-    vim.keymap.set('i', '<c-t>', function()
+    map('i', '<c-t>', function()
       vim.snippet.expand('|$0|')
-    end, { buffer = true })
+    end)
   end
 })

@@ -57,7 +57,7 @@ lsp('cssls', {
 -- html
 lsp('html', {
   cmd = { 'vscode-html-language-server', '--stdio' },
-  filetypes = { 'html' },
+  filetypes = { 'html', 'htmldjango' },
 })
 
 -- js
