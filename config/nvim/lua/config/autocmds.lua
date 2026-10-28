@@ -147,14 +147,15 @@ autocmd('FileType', {
 
 -- Close history mode whit 'q'
 autocmd('CmdwinEnter', {
-  group = general_group,
+  group = filetype_group,
   callback = function()
-    vim.keymap.set('n', 'q', '<C-W>c', { buffer = true })
+    vim.keymap.set('n', 'q', '<c-w>c', { buffer = true })
   end
 })
 
 -- lua
 autocmd('BufWritePost', {
+  group = general_group,
   pattern = 'onedarkv.lua',
   callback = function()
     vim.cmd('source %')
@@ -163,7 +164,7 @@ autocmd('BufWritePost', {
 })
 
 autocmd('FileType', {
-  group = general_group,
+  group = filetype_group,
   pattern = 'lua',
   callback = function()
     -- Execute script

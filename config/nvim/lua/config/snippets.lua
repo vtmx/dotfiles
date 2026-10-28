@@ -100,7 +100,7 @@ autocmd('FileType', {
     end)
 
     map('i', '``', function()
-      vim.snippet.expand('```$1\n$2\n```\n\n$3')
+      vim.snippet.expand('```$1\n$2\n```')
     end)
 
     map('i', '**', function()

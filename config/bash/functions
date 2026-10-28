@@ -2,7 +2,7 @@
 shopt -s extglob globstar
 
 # Copy file content to clipboard
-clip() {
+copy() {
   if [[ -f "$1" ]]; then
     xclip -sel clip < "$1"
   else

@@ -10,6 +10,7 @@ end-of-line-diagnostics = 'hint'
 gutters = ['line-numbers', 'spacer']
 line-number = 'relative'
 shell = ['bash', '-c']
+scrolloff = 8
 
 [editor.cursor-shape]
 insert = 'bar'

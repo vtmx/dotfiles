@@ -172,6 +172,9 @@ alias oc="opencode"
 alias ocr="opencode run"
 alias ocl="opencode session list --format json | jq -r '.[].id' | xargs -r -n1 opencode session delete"
 
+# paste
+alias paste="xclip -selection clipboard -o"
+
 # pip
 alias pipi="pip install"
 alias pipr="pip uninstall"
