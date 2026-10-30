@@ -33,9 +33,13 @@ theme = 'onedarkv'
 'variable.parameter' = { fg = 'fg' }
 
 # Diagnostic
-'diagnostic' = { bg = 'bd', fg = 'red' }
-'diagnostic.deprecated' = { fg = 'red' }
-'diagnostic.unnecessary' = { bg = 'bd' }
+'diagnostic' = { bg = 'default', fg = 'default' }
+'diagnostic.info' = { underline = { color = 'blue', style = 'curl'} }
+'diagnostic.hint' = { underline = { color = 'fd', style = 'curl'} }
+'diagnostic.warning' = { underline = { color = 'yellow', style = 'curl'} }
+'diagnostic.error' = { underline = { color = 'red', style = 'curl'} }
+'diagnostic.deprecated' = { underline = { color = 'yellow', style = 'curl'} }
+'diagnostic.unnecessary' = { underline = { color = 'yellow', style = 'curl'} }
 'info' = { fg = 'blue' }
 'hint' = { fg = 'fd' }
 'warning' = { fg = 'yellow' }
@@ -109,7 +113,7 @@ theme = 'onedarkv'
 'ui.statusline.inactive' = { fg = 'fd' }
 
 # Virtual
-'ui.virtual' = { fg = 'fl' }
+'ui.virtual' = { fg = 'fd' }
 'ui.virtual.indent-guide' = { fg = 'ac' }
 'ui.virtual.inlay-hint' = { fg = 'fd' }
 'ui.virtual.jump-label' = { fg = 'red' }
@@ -125,7 +129,6 @@ bg = '#23272e'
 bl = '#2c313c' # cursorline and sel
 fd = '#5c6370' # comment
 fg = '#abb2bf'
-fl = '#0000ff'
 ac = '#3d4556' # selection and accent
 
 red    = '#e06c75'
