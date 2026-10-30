@@ -134,39 +134,45 @@ local hl_groups = {
   SpellRare = { sp = c.magenta, undercurl = true },
   SpellLocal = { sp = c.cyan, undercurl = true },
 
-  -- Diagnostic
-  DiagnosticError = { fg = c.red },
-  DiagnosticFloatingError = { fg = c.red },
-  DiagnosticFloatingHiting = { fg = c.cyan },
-  DiagnosticFloatingInfo = { fg = c.blue },
-  DiagnosticFloatingOk = { fg = c.green },
-  DiagnosticFloatingWarn = { fg = c.yellow },
-  DiagnosticHint = { fg = c.cyan },
-  DiagnosticInfo = { fg = c.blue },
+  -- Diagnostics
   DiagnosticOk = { fg = c.green },
-  DiagnosticSignError = { fg = c.red },
-  DiagnosticSignHint = { fg = c.cyan },
   DiagnosticSignOk = { fg = c.green },
-  DiagnosticSignWarn = { fg = c.yellow },
-  DiagnosticUnderlineError = { sp = c.red, undercurl = true },
-  DiagnosticUnderlineHint = { sp = c.cyan, undercurl = true },
-  DiagnosticUnderlineInfo = { sp = c.blue, undercurl = true },
   DiagnosticUnderlineOk = { sp = c.green, undercurl = true },
-  DiagnosticUnderlineWarn = { sp = c.yellow, undercurl = true },
-  DiagnosticUnnecessary = { link = 'Normal' },
-  DiagnosticVirtualTextError = { bg = '#39343a', fg = c.red },
-  DiagnosticVirtualTextHint = { bg = '#2d333c', fg = c.cyan },
-  DiagnosticVirtualTextInfo = { bg = '#303a46', fg = c.blue },
+  DiagnosticFloatingOk = { fg = c.green },
   DiagnosticVirtualTextOk = { bg = '#303a46', fg = c.green },
-  DiagnosticVirtualTextWarn = { bg = '#3b3c3b', fg = c.yellow },
+
+  DiagnosticHint = { fg = c.cyan },
+  DiagnosticSignHint = { fg = c.cyan },
+  DiagnosticUnderlineHint = { sp = c.cyan, undercurl = true },
+  DiagnosticFloatingHiting = { fg = c.cyan },
+  DiagnosticVirtualTextHint = { bg = '#2d333c', fg = c.cyan },
+
+  DiagnosticInfo = { fg = c.blue },
+  DiagnosticSignInfo = { fg = c.blue },
+  DiagnosticUnderlineInfo = { sp = c.blue, undercurl = true },
+  DiagnosticFloatingInfo = { fg = c.blue },
+  DiagnosticVirtualTextInfo = { bg = '#303a46', fg = c.blue },
+
   DiagnosticWarn = { fg = c.yellow },
+  DiagnosticSignWarn = { fg = c.yellow },
+  DiagnosticUnderlineWarn = { sp = c.yellow, undercurl = true },
+  DiagnosticFloatingWarn = { fg = c.yellow },
+  DiagnosticVirtualTextWarn = { bg = '#3b3c3b', fg = c.yellow },
+
+  DiagnosticError = { fg = c.red },
+  DiagnosticSignError = { fg = c.red },
+  DiagnosticUnderlineError = { sp = c.red, undercurl = true },
+  DiagnosticFloatingError = { fg = c.red },
+  DiagnosticVirtualTextError = { bg = '#39343a', fg = c.red },
+
+  DiagnosticUnnecessary = { link = 'Comments' },
   QuickFixLine = { fg = c.cyan },
 
   -- Diff
+  DiffText = { bg = '#1c3448', fg = 'none' },
   DiffAdd = { bg = '#283636' },
   DiffChange = { bg = '#3b3c3b' },
   DiffDelete = { bg = '#373138' },
-  DiffText = { bg = '#1c3448', fg = 'NONE' },
 
   -- Redraw
   RedrawDebugClear = { link = 'DiffChange' },

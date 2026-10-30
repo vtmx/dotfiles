@@ -35,13 +35,13 @@ theme = 'onedarkv'
 # Diagnostic
 'diagnostic' = { bg = 'default', fg = 'default' }
 'diagnostic.info' = { underline = { color = 'blue', style = 'curl'} }
-'diagnostic.hint' = { underline = { color = 'fd', style = 'curl'} }
+'diagnostic.hint' = { underline = { color = 'cyan', style = 'curl'} }
 'diagnostic.warning' = { underline = { color = 'yellow', style = 'curl'} }
 'diagnostic.error' = { underline = { color = 'red', style = 'curl'} }
 'diagnostic.deprecated' = { underline = { color = 'yellow', style = 'curl'} }
-'diagnostic.unnecessary' = { underline = { color = 'yellow', style = 'curl'} }
+'diagnostic.unnecessary' = { underline = { color = 'fd', style = 'curl'} }
 'info' = { fg = 'blue' }
-'hint' = { fg = 'fd' }
+'hint' = { fg = 'cyan' }
 'warning' = { fg = 'yellow' }
 'error' = { fg = 'red' }
 
