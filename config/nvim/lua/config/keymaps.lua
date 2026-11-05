@@ -1,9 +1,6 @@
 local utils = require('config.utils')
 local map = vim.keymap.set
 
--- news in 0.13
--- ZR  - reload conf
-
 -- Normal
 
 map(

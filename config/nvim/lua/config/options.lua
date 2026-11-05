@@ -4,8 +4,7 @@ local opts = {
   autoread = true,
   clipboard = 'unnamedplus',
   cmdheight = 0,
-  complete = { '.', 'b', 'o', 't', 'u', 'w' },
-  completeopt = { 'menu', 'menuone', 'noinsert', 'noselect' },
+  completeopt = { 'menu', 'menuone', 'noinsert' },
   cursorline = true,
   diffopt = 'internal,filler,closeoff,indent-heuristic,linematch:60,algorithm:histogram',
   expandtab = true,
@@ -26,7 +25,8 @@ local opts = {
   splitright = true,
   swapfile = false,
   tabstop = 2,
-  wildignore = { 'dist/**', 'node_modules/**', 'public/**' },
+  updatetime = 250,
+  wildignore = { 'dist/**', 'node_modules/**', 'public/**', '.git/**' },
   winborder = 'rounded',
   wrap = false,
 }
@@ -46,12 +46,6 @@ local globals = {
   loaded_tutor = 1,
   loaded_zipPlugin = 1,
   mapleader = ' ',
-  netrw_altv = 1,
-  netrw_banner = 0,
-  netrw_hide = 1,
-  netrw_keepdir = 0,
-  netrw_liststyle = 3,
-  netrw_winsize = 20,
   vim_markdown_folding_disabled = true,
 }
 

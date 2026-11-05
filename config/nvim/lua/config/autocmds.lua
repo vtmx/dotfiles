@@ -128,7 +128,7 @@ autocmd('BufWritePre', {
 
 -- Close help with 'q'
 autocmd('FileType', {
-  group = filetype_group,
+  group = general_group,
   pattern = {
     'checkhealth',
     'gitsigns-blame',

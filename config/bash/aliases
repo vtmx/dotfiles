@@ -256,6 +256,7 @@ alias ytp='yt-dlp \
 --audio-format mp3 \
 --replace-in-metadata title " " "-" \
 --output "%(playlist_index|02)s-%(title)s.%(ext)s"'
+alias ytu="yt-dlp -update"
 
 # lite-xl
 alias xl="lite-xl"
