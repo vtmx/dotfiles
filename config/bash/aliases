@@ -67,6 +67,9 @@ alias dnfu="sudo dnf upgrade --refresh --setopt='skip_if_unavailable=True'"
 # du list size files
 alias dush="du -h --max-depth=1"
 
+# editor
+alias e="$EDITOR"
+
 # egrep
 alias egrep="egrep --color=auto"
 

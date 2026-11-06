@@ -121,10 +121,4 @@ ctrl + alt + Delete
 Print
   flameshot gui
 
-# Mouse
-~button3
-  if ! bspc query -N -d focused; then \
-    jgmenu --config-file=$HOME/.config/bspwm/jgmenu/jgmenurc; \
-  fi
-
 # vim:ft=sxhkdrc
