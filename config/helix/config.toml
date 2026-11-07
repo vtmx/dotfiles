@@ -32,10 +32,32 @@ right = ['diagnostics', 'position', 'file-encoding']
 
 [keys.normal]
 'ç' = 'command_mode'
+C = ['extend_to_line_end', 'yank_main_selection_to_clipboard', 'delete_selection', 'insert_mode']
+D = ['extend_to_line_end', 'yank_main_selection_to_clipboard', 'delete_selection']
+G = 'goto_last_line'
+H = 'extend_to_line_start'
+L = 'extend_to_line_end'
+Y = ['save_selection', 'extend_to_line_end', 'yank_main_selection_to_clipboard', 'collapse_selection', 'jump_backward']
 C-r = [':w', ':config-reload']
-space.i = ':tree-sitter-highlight-name'
 
 [keys.insert]
 k = { j = 'normal_mode' }
 C-c = 'normal_mode'
 C-s = [':w', 'normal_mode']
+
+[keys.select]
+'ç' = 'command_mode'
+H = 'goto_line_start'
+L = 'goto_line_end'
+
+[keys.normal.space]
+i = ':tree-sitter-highlight-name'
+o = 'add_newline_below'
+O = 'add_newline_above'
+p = ['save_selection', 'open_below', 'normal_mode', 'paste_before', 'jump_backward']
+P = ['save_selection', 'open_above', 'normal_mode', 'paste_before', 'jump_backward']
+
+[keys.normal.space.u]
+l = ':toggle whitespace.render all none'
+n = ':toggle gutters.layout ["spacer"] ["line-numbers", "spacer"]'
+w = ':toggle soft-wrap.enable'

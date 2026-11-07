@@ -8,39 +8,46 @@ language-servers = ['bash-language-server']
 file-types = ['bash', 'sh', { glob = 'tmux.conf' }]
 shebangs = ['bash', 'sh']
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
 
 [[language]]
 name = 'css'
 language-servers = ['vscode-css-language-server', 'emmet-language-server']
 file-types = ['css', 'scss']
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
 
 [[language]]
 name = 'html'
 language-servers = ['vscode-html-language-server']
 file-types = ['html']
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
 
 [[language]]
 name = 'javascript'
 language-servers = ['typescript-language-server']
 file-types = ['js']
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
 
 [[language]]
 name = 'typescript'
 language-servers = ['typescript-language-server']
 file-types = ['ts', 'tsx']
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
 
 [[language]]
 name = 'go'
 language-servers = ['gopls']
 formatter = { command = 'gofmt' }
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
 
 [[language]]
 name = 'lua'
 language-servers = ['lua-language-server']
 formatter = { command = 'stylua', args = ['--quote-style', 'AutoPreferSingle'] }
 indent = { tab-width = 2, unit = '  ' }
+auto-format = false
