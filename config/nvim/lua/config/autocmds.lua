@@ -101,7 +101,7 @@ autocmd({ 'WinLeave', 'BufLeave' }, {
 
 -- Disable auto comment
 autocmd('FileType', {
-  group = filetype_group,
+  group = general_group,
   callback = function()
     vim.opt_local.formatoptions = vim.opt_local.formatoptions:remove({ 'c', 'r', 'o' })
   end
