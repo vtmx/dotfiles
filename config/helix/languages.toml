@@ -51,3 +51,5 @@ language-servers = ['lua-language-server']
 formatter = { command = 'stylua', args = ['--quote-style', 'AutoPreferSingle'] }
 indent = { tab-width = 2, unit = '  ' }
 auto-format = false
+[language-server.lua-language-server.config.Lua.diagnostics]
+globals = ['vim']

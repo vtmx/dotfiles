@@ -1,5 +1,5 @@
 has() {
-  command -v "$1" &> /dev/null
+  command -v "$1" &>/dev/null
 }
 
 # https://donottrack.sh
@@ -119,6 +119,11 @@ if has gum; then
   export GUM_PAGER_HELP_FOREGROUND=7
   export GUM_PAGER_HELP_BACKGROUND=0
   export GUM_PAGER_BORDER='none'
+fi
+
+# helix
+if ! has hx; then
+  alias hx="helix"
 fi
 
 # nvm

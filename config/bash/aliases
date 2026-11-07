@@ -129,10 +129,9 @@ alias gtk="GTK_DEBUG=interactive"
 alias hi="history | sort -rn"
 
 # helix
-alias hx="helix"
-alias hc="helix $HOME/.config/helix/config.toml"
-alias hl="helix $HOME/.config/helix/languages.toml"
-alias ht="helix $HOME/.config/helix/themes/onedarkv.toml"
+alias hc="(cd "$HOME/.config/helix" && hx config.toml)"
+alias hl="(cd "$HOME/.config/helix" && hx languages.toml)"
+alias ht="(cd "$HOME/.config/helix" && hx themes/onedarkv.toml)"
 
 # inotify
 alias iwai="inotifywait"
@@ -166,9 +165,6 @@ alias md="mkdir -p"
 
 # move
 alias mv="mv -i"
-
-# nvim nightly
-alias nv="/opt/nvim-linux-x86_64/bin/nvim"
 
 # opencode
 alias oc="opencode"
@@ -229,15 +225,15 @@ alias tree="eza -T"
 alias vdir="vdir --color=auto"
 
 # nvim
-alias v="$EDITOR"
-alias va="$EDITOR $HOME/.config/nvim/lua/config/autocmds.lua"
-alias vc="$EDITOR $HOME/.config/nvim/init.lua"
-alias vo="$EDITOR $HOME/.config/nvim/lua/config/options.lua"
-alias vm="$EDITOR $HOME/.config/nvim/lua/config/keymaps.lua"
-alias vp="$EDITOR $HOME/.config/nvim/lua/plugins"
-alias vs="$EDITOR $HOME/.config/nvim/lua/config/snippets.lua"
-alias vt="$EDITOR $HOME/.config/nvim/colors/onedarkv.lua"
-alias vu="$EDITOR $HOME/.config/nvim/lua/config/utils.lua"
+alias v="nvim"
+alias va="(cd $HOME/.config/nvim && $EDITOR lua/config/autocmds.lua)"
+alias vc="(cd $HOME/.confi/nvim && $EDITOR init.lua)"
+alias vo="(cd $HOME/.config/nvim && $EDITOR lua/config/options.lua)"
+alias vm="(cd $HOME/.config/nvim && $EDITOR lua/config/keymaps.lua)"
+alias vp="(cd $HOME/.config/nim && $EDITOR lua/plugins)"
+alias vs="(cd $HOME/.config/nvim && $EDITOR lua/config/snippets.lua)"
+alias vt="(cd $HOME/.config/nvim && $EDITOR colors/onedarkv.lua)"
+alias vu="(cd $HOME/.config/nvim && $EDITOR lua/config/utils.lua)"
 
 # yarn
 alias ya="yarn add"

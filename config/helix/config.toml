@@ -32,7 +32,6 @@ right = ['diagnostics', 'position', 'file-encoding']
 
 [keys.normal]
 'ç' = 'command_mode'
-C = ['extend_to_line_end', 'yank_main_selection_to_clipboard', 'delete_selection', 'insert_mode']
 D = ['extend_to_line_end', 'yank_main_selection_to_clipboard', 'delete_selection']
 G = 'goto_last_line'
 H = 'extend_to_line_start'
