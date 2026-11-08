@@ -577,6 +577,7 @@ local hl_groups = {
   -- javascript
   ['@function.method.javascript'] = { link = 'javaScriptFunction' },
   ['@function.method.call.javascript'] = { link = 'Normal' },
+  ['@keyword.conditional.ternary.javascript'] = { link = 'Normal' },
   ['@keyword.exception.javascript'] = { link = 'Normal' },
   ['@keyword.function.javascript'] = { link = 'Normal' },
   ['@keyword.operator.javascript'] = { link = 'Normal' },

@@ -396,7 +396,7 @@ p() {
 play() {
   if type mpv &> /dev/null; then
     local music="$HOME/Music"
-    local args="--no-video --display-tags=Title,Artist"
+    local args="--no-video --really-quiet --display-tags=Title,Artist"
 
     usage() {
       echo -e "\nrc Recents\nrd Random\ns  Search" >&2; return 1

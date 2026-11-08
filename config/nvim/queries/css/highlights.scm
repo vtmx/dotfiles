@@ -1,23 +1,14 @@
 ;; extends
 
-([
-  (attribute_name)
-  (class_selector)
-  (id_selector)
-  (universal_selector)
-] @selector
+((selectors) @selector
   (#set! "priority" 110))
 
 (declaration
   (property_name) @property
-  [(integer_value) (float_value) (plain_value)] @value
+  (_) @value
   (#set! "priority" 110))
 
-([(keyword_query) (unit)] @value)
-
-(feature_query
-  (feature_name) @value
-  (plain_value) @value)
+((parenthesized_query) @value)
 
 (call_expression
   (function_name)
