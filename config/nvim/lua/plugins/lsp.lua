@@ -61,7 +61,7 @@ lsp('html', {
 })
 
 -- js
-lsp('ts', {
+lsp('ts_ls', {
   cmd = { 'typescript-language-server', '--stdio' },
   filetypes = { 'js', 'ts' },
 })
