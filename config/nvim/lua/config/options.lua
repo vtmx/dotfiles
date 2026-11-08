@@ -1,3 +1,24 @@
+local globals = {
+  health = { style = 'float' },
+  loaded_2html_plugin = 1,
+  loaded_gzip = 1,
+  loaded_netrw = 1,
+  loaded_netrwPlugin = 1,
+  loaded_node_provider = 0,
+  loaded_perl_provider = 0,
+  loaded_python3_provider = 0,
+  loaded_ruby_provider = 0,
+  loaded_tarPlugin = 1,
+  loaded_tutor = 1,
+  loaded_zipPlugin = 1,
+  mapleader = ' ',
+  vim_markdown_folding_disabled = true,
+}
+
+for key, value in pairs(globals) do
+  vim.g[key] = value
+end
+
 local opts = {
   autocomplete = true,
   autoread = true,
@@ -30,42 +51,18 @@ local opts = {
   wrap = false,
 }
 
+for key, value in pairs(opts) do
+  vim.opt[key] = value
+end
+
 local appends = {
   iskeyword = { '-' },
   path = { '**' },
   wildignore = { 'dist/**', 'node_modules/**', 'public/**', '.git/**' },
 }
 
-local globals = {
-  health = { style = 'float' },
-  loaded_2html_plugin = 1,
-  loaded_gzip = 1,
-  loaded_netrw = 1,
-  loaded_netrwPlugin = 1,
-  loaded_node_provider = 0,
-  loaded_perl_provider = 0,
-  loaded_python3_provider = 0,
-  loaded_ruby_provider = 0,
-  loaded_tarPlugin = 1,
-  loaded_tutor = 1,
-  loaded_zipPlugin = 1,
-  mapleader = ' ',
-  vim_markdown_folding_disabled = true,
-}
-
--- Set options
-for key, value in pairs(opts) do
-  vim.opt[key] = value
-end
-
--- Set appends opts
 for key, value in pairs(appends) do
   vim.opt[key]:append(value)
-end
-
--- Set globals vars
-for key, value in pairs(globals) do
-  vim.g[key] = value
 end
 
 -- Set colorscheme
