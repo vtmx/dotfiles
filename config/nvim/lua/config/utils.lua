@@ -2,6 +2,12 @@ local usercmd = vim.api.nvim_create_user_command
 
 local M = {}
 
+function M.format()
+  require('conform').format()
+end
+
+usercmd('Format', M.format, {})
+
 function M.toggle_autocomplete()
   if vim.o.autocomplete then
     vim.o.autocomplete = false

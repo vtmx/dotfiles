@@ -106,16 +106,6 @@ map(
   { desc = 'Move line to up' }
 )
 
-map(
-  'n', '<tab>', '<cmd>bn<cr>',
-  { desc = 'Buffer next' }
-)
-
-map(
-  'n', '<s-tab>', '<cmd>bp<cr>',
-  { desc = 'Buffer prev' }
-)
-
 -- Insert
 
 map(
@@ -182,6 +172,16 @@ map(
     require('snacks').picker.buffers()
   end,
   { desc = 'Buffers' }
+)
+
+map(
+  { 'n', 'x' }, '<leader>c', '"_c',
+  { desc = 'Change without overwriting register' }
+)
+
+map(
+  { 'n', 'x' }, '<leader>d', '"_d',
+  { desc = 'Delete without overwriting register' }
 )
 
 map(
@@ -565,6 +565,13 @@ map(
     require('snacks').picker.command_history()
   end,
   { desc = 'Command history' }
+)
+
+map(
+  'n', "<leader>'", function()
+    require('snacks').picker.resume()
+  end,
+  { desc = 'Open last picker' }
 )
 
 map(

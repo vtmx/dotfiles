@@ -9,9 +9,9 @@ local opts = {
   expandtab = true,
   fillchars = { eob = ' ' },
   ignorecase = true,
+  laststatus = 3,
   listchars = { eol = '↲', nbsp = '+', space = '.', tab = '›-', trail = '⋯' },
   number = true,
-  path = { '**' },
   pumborder = 'rounded',
   pumheight = 10,
   relativenumber = true,
@@ -24,17 +24,22 @@ local opts = {
   splitright = true,
   swapfile = false,
   tabstop = 2,
+  title = true,
   updatetime = 250,
-  wildignore = { 'dist/**', 'node_modules/**', 'public/**', '.git/**' },
   winborder = 'rounded',
   wrap = false,
+}
+
+local appends = {
+  iskeyword = { '-' },
+  path = { '**' },
+  wildignore = { 'dist/**', 'node_modules/**', 'public/**', '.git/**' },
 }
 
 local globals = {
   health = { style = 'float' },
   loaded_2html_plugin = 1,
   loaded_gzip = 1,
-  loaded_matchparen = 1,
   loaded_netrw = 1,
   loaded_netrwPlugin = 1,
   loaded_node_provider = 0,
@@ -53,13 +58,15 @@ for key, value in pairs(opts) do
   vim.opt[key] = value
 end
 
+-- Set appends opts
+for key, value in pairs(appends) do
+  vim.opt[key]:append(value)
+end
+
 -- Set globals vars
 for key, value in pairs(globals) do
   vim.g[key] = value
 end
-
--- Word with hífen is a word
-vim.opt.iskeyword:append('-')
 
 -- Set colorscheme
 vim.cmd.colorscheme('onedarkv')
