@@ -58,5 +58,8 @@ for key, value in pairs(globals) do
   vim.g[key] = value
 end
 
+-- Word with hífen is a word
+vim.opt.iskeyword:append('-')
+
 -- Set colorscheme
 vim.cmd.colorscheme('onedarkv')
