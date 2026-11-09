@@ -225,7 +225,7 @@ alias tree="eza -T"
 alias vdir="vdir --color=auto"
 
 # nvim
-alias v="nvim"
+alias v="$EDITOR"
 alias va="(cd $HOME/.config/nvim && $EDITOR lua/config/autocmds.lua)"
 alias vc="(cd $HOME/.config/nvim && $EDITOR init.lua)"
 alias vo="(cd $HOME/.config/nvim && $EDITOR lua/config/options.lua)"
