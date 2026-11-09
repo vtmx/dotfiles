@@ -581,6 +581,11 @@ map(
   { desc = 'Fuzzy live_grep' }
 )
 
+map(
+  'n', '<leader>*', 'zq*gv',
+  { desc = 'Multicursor in selected word' }
+)
+
 -- Leader leader
 
 map(
