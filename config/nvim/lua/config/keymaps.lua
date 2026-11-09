@@ -386,8 +386,10 @@ map(
 )
 
 map(
-  'n', '<leader>S', ':%s/<C-r><C-w>/<c-r>+/g<Left><Left>',
-  { desc = 'Substitute current word to clipboard' }
+  'n', '<leader>S', function()
+    require('snacks').picker.lsp_symbols()
+  end,
+  { desc = 'Symbols' }
 )
 
 map(
@@ -601,10 +603,8 @@ map(
 )
 
 map(
-  'n', '<leader><leader>s', function()
-    require('snacks').picker.lsp_symbols()
-  end,
-  { desc = 'Symbols' }
+  'n', '<leader><leader>s', ':%s/<C-r><C-w>/<c-r>+/g<Left><Left>',
+  { desc = 'Substitute current word to clipboard' }
 )
 
 map(
