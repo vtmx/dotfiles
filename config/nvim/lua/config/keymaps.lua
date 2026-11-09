@@ -185,6 +185,13 @@ map(
 )
 
 map(
+  'n', '<leader>D', function()
+    require('snacks').picker.diagnostics()
+  end,
+  { desc = 'Diagnostics' }
+)
+
+map(
   'n', '<leader>e', function() -- Close if open a file
     if require('mini.files').open() then
       require('mini.files').close()
