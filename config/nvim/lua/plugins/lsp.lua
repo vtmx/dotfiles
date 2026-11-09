@@ -114,6 +114,9 @@ vim.diagnostic.config({
 -- Desativa módulo de cores padrão (chato)
 vim.lsp.document_color.enable(false)
 
+-- Ativa diagnóstico virtual text
+vim.diagnostic.config({ virtual_text = true })
+
 -- Ativa auto-complete
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)

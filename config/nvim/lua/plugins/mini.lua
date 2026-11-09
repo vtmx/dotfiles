@@ -90,7 +90,7 @@ statusline.setup({
       mode = mode_abb[mode] or mode
 
       return statusline.combine_groups({
-        { hl = 'Normal', strings = { mode } },
+        { hl = 'Comment', strings = { mode } },
         { hl = 'Comment', strings = { git } }, -- to work { 'lewis6991/gitsigns.nvim', config = true },
         '%<', -- Mark general truncate point
         { hl = 'Comment', strings = { '%t' } },

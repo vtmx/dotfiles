@@ -41,15 +41,29 @@ end
 
 usercmd('ToggleDiagnostic', M.toggle_diagnostic, {})
 
-function M.toggle_diagnostic_virtual_text()
+function M.toggle_diagnostic_signcolumn()
   local is_signcolumn = vim.wo.signcolumn == 'yes'
 
   if is_signcolumn then
     vim.opt.signcolumn = 'no'
+    vim.diagnostic.config({ signs = false })
+    vim.notify('Diagnostic sign column disable')
+  else
+    vim.opt.signcolumn = 'yes'
+    vim.diagnostic.config({ signs = true })
+    vim.notify('Diagnostic sign column enable')
+  end
+end
+
+usercmd('ToggleDiagnosticSignColumn', M.toggle_diagnostic_signcolumn, {})
+
+function M.toggle_diagnostic_virtual_text()
+  local is_virtual_text = vim.diagnostic.config().virtual_text
+
+  if is_virtual_text then
     vim.diagnostic.config({ signs = false, virtual_text = false })
     vim.notify('Diagnostic virtual text disable')
   else
-    vim.opt.signcolumn = 'yes'
     vim.diagnostic.enable(true)
     vim.diagnostic.config({ signs = true, virtual_text = true })
     vim.notify('Diagnostic virtual text enable')

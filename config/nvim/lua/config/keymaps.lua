@@ -439,6 +439,13 @@ map(
 )
 
 map(
+  'n', '<leader>uds', function()
+    utils.toggle_diagnostic_signcolumn()
+  end,
+  { desc = 'Toggle diagnostic sign column' }
+)
+
+map(
   'n', '<leader>udv', function()
     utils.toggle_diagnostic_virtual_text()
   end,
