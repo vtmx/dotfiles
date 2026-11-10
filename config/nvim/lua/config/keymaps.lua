@@ -598,8 +598,13 @@ map(
 )
 
 map(
-  'n', '<leader>*', 'zq*gv',
-  { desc = 'Multicursor in selected word' }
+  'n', '<leader>*', 'zq*gvq=',
+  { desc = 'Multicursor in cursor' }
+)
+
+map(
+  'x', '<leader>*', '"zy<esc>zq*gv',
+  { desc = 'Multicursor in selected' }
 )
 
 -- Leader leader
