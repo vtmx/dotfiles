@@ -30,6 +30,7 @@ user_pref("widget.use-xdg-desktop-portal.open-uri", 1);
 user_pref("widget.use-xdg-desktop-portal.settings", 1);
 
 // Zen
+user_pref("zen.library.enabled", false);
 user_pref("zen.tabs.show-newtab-vertical", false);
 user_pref("zen.theme.acrylic-elements", false);
 user_pref("zen.theme.border-radius", 4);
