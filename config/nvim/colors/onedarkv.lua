@@ -336,6 +336,7 @@ local hl_groups = {
 
   -- lua
   luaConstant = { link = 'Number' },
+  luaFunc = { link = 'Normal' },
   luaFunction = { link = 'Normal' },
 
   -- markdown
@@ -598,6 +599,7 @@ local hl_groups = {
   ['@keyword.lua'] = { link = 'Keyword' },
   ['@keyword.return.lua'] = { link = 'Conditional' },
   ['@lsp.type.method.lua'] = { link = 'Function' },
+  ['@lsp.typemod.keyword.documentation.lua'] = { link = 'Comment' },
   ['@lsp.typemod.parameter.declaration.lua'] = { link = 'Normal' },
   ['@lsp.type.parameter.lua'] = { link = 'Normal' },
   ['@lsp.type.property.lua'] = { link = 'Normal' },

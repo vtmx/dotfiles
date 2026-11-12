@@ -2,6 +2,7 @@ local globals = {
   health = { style = 'float' },
   loaded_2html_plugin = 1,
   loaded_gzip = 1,
+  loaded_matchparen = 1,
   loaded_netrw = 1,
   loaded_netrwPlugin = 1,
   loaded_node_provider = 0,
