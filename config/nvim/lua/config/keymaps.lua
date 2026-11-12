@@ -57,6 +57,11 @@ map(
 )
 
 map(
+  'n', '<cr>', function() require('mini.jump2d').start() end,
+  { desc = 'Goto word' }
+)
+
+map(
   'n', 'U', '<c-r>',
   { desc = 'Redo' }
 )

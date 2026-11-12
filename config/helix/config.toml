@@ -39,6 +39,7 @@ L = 'extend_to_line_end'
 V = ['select_mode', 'extend_to_line_bounds']
 Y = ['save_selection', 'extend_to_line_end', 'yank_main_selection_to_clipboard', 'collapse_selection', 'jump_backward']
 C-r = [':w', ':config-reload']
+ret = ['goto_word']
 
 [keys.insert]
 C-c = 'normal_mode'
