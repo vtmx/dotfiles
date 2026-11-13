@@ -25,7 +25,6 @@ set splitbelow splitright
 set termguicolors
 set ttimeout ttimeoutlen=100 updatetime=250
 set wildmenu
-" wildmode=list:longest
 
 " ------------------------------------------------------------------------------
 " Autocmds
@@ -77,7 +76,7 @@ endfunction
 " Get current mode
 function! GetCurrentMode()
 	let l:mode = mode()
-	return 
+	return
     \ l:mode ==# 'c'  ? 'CMD' :
     \ l:mode ==# 'n'  ? 'NOR' :
 		\ l:mode ==# 'i'  ? 'INS' :
@@ -136,7 +135,7 @@ set statusline+=\%l,%c
 set laststatus=2
 
 " ------------------------------------------------------------------------------
-" Mappings 
+" Mappings
 " ------------------------------------------------------------------------------
 
 " Leader
@@ -190,7 +189,7 @@ nnoremap <c-s> <cmd>w!<cr>
 nnoremap <c-l> <cmd>nohlsearch<bar>diffupdate<cr><c-l>
 
 " Move line
-nnoremap <silent> <a-j> <cmd>m+<cr> 
+nnoremap <silent> <a-j> <cmd>m+<cr>
 nnoremap <silent> <a-k> <cmd>m-2<cr>
 vnoremap <silent> <a-j> <cmd>m'>+<cr>`<my`>mzgv`yo`z
 vnoremap <silent> <a-k> <cmd>m'<-2<cr>`>my`<mzgv`yo`z
@@ -269,7 +268,7 @@ nmap <leader>% G<s-v>gg y
 
 " Insert
 
-" Scape 
+" Scape
 inoremap kj <esc>
 
 " Insert mode move

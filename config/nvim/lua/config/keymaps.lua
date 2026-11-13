@@ -77,6 +77,16 @@ map(
 )
 
 map(
+  'n', '<tab>', '<cmd>bn<cr>',
+  { desc = 'Buffer next' }
+)
+
+map(
+  'n', '<s-tab>', '<cmd>bp<cr>',
+  { desc = 'Buffer prev' }
+)
+
+map(
   'n', '<a-h>', '<cmd>TmuxNavigateLeft<cr>',
   { desc = 'TmuxNavigateLeft' }
 )
