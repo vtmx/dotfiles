@@ -23,4 +23,3 @@ start dunst -config $bspdir/dunst/dunstrc
 start feh --no-fehbg --bg-fill --recursive --randomize $bspdir/wall/
 start polybar bottom -c $bspdir/polybar/config.ini
 start /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# start picom --config $bspdir/picom/picom.conf
