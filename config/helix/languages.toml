@@ -19,7 +19,7 @@ auto-format = false
 
 [[language]]
 name = 'html'
-language-servers = ['vscode-html-language-server']
+language-servers = ['vscode-html-language-server', 'emmet-language-server']
 file-types = ['html']
 indent = { tab-width = 2, unit = '  ' }
 auto-format = false

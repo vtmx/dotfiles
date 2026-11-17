@@ -21,9 +21,10 @@ local servers = {
   'bashls',
   'cssls',
   'emmet_language_server',
-  'html',
   'gopls',
+  'html',
   'lua_ls',
+  'ts_ls',
 }
 
 -- Instala caso não tenha sido instalado
@@ -63,7 +64,7 @@ lsp('html', {
 -- js
 lsp('ts_ls', {
   cmd = { 'typescript-language-server', '--stdio' },
-  filetypes = { 'js', 'ts' },
+  filetypes = { 'javascript', 'typescript' },
 })
 
 -- emmet
@@ -72,6 +73,7 @@ lsp('emmet_language_server', {
   filetypes = { 'css', 'scss', 'html', 'htmldjango' },
   init_options = {
     showSuggestionsAsSnippets = true,
+    showAbbreviationSuggestions = true,
   }
 })
 

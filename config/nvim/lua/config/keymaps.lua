@@ -106,6 +106,18 @@ map(
   { desc = 'TmuxNavigateRight' }
 )
 
+map({ 'n', 'x' }, '<a-o>', function()
+    vim.treesitter.select('parent', vim.v.count1)
+  end,
+  { desc = 'Expand syntax selection' }
+)
+
+map({ 'n', 'x' }, '<a-i>', function()
+    vim.treesitter.select('child', vim.v.count1)
+  end,
+  { desc = 'Shrink syntax selection' }
+)
+
 map(
   { 'n', 'i', 's', 'x' }, '<c-s>', '<cmd>w<cr><esc>',
   { desc = 'Save file' }
@@ -144,6 +156,16 @@ map('i', '<c-y>', function()
 map(
   'x', 'y', 'ygv<esc>',
   { desc = 'Keep cursor when visual copy' }
+)
+
+map('x', 's', function()
+    vim.ui.input({ prompt = '' }, function(input)
+      if not input or input == '' then return end
+      vim.fn.setreg('/', '\\V' .. vim.fn.escape(input, '\\'))
+      vim.cmd.normal({ args = { 'gvzqgn' }, bang = true })
+    end)
+  end,
+  { desc = 'Multicursor like helix' }
 )
 
 map(

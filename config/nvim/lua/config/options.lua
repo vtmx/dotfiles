@@ -57,7 +57,6 @@ for key, value in pairs(opts) do
 end
 
 local appends = {
-  iskeyword = { '-' },
   path = { '**' },
   wildignore = { 'dist/**', 'node_modules/**', 'public/**', '.git/**' },
 }
