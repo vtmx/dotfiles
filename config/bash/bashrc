@@ -1,6 +1,11 @@
 # Check interative shell
 [[ $- != *i* ]] && return
 
+# Check if ssh
+if [[ "$SSH_CONNECTION" && -z "$TMUX" ]]; then
+  tmux attach-session -t main || tmux new-session -s main
+fi
+
 # Load auto-completion
 if ! shopt -oq posix; then
   if [[ -f /usr/share/bash-completion/bash_completion ]]; then
