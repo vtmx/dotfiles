@@ -140,6 +140,26 @@ map(
   { desc = 'Return to normal mode' }
 )
 
+map(
+  'i', '<c-a>', '<c-o>^',
+  { desc = 'Home' }
+)
+
+map(
+  'i', '<c-e>', '<end>',
+  { desc = 'End' }
+)
+
+map(
+  'i', '<c-d>', '<del>',
+  { desc = 'Delete next char' }
+)
+
+map(
+  'i', '<c-k>', '<c-o>D',
+  { desc = 'Delete text after cursor' }
+)
+
 -- Força a seleção do primeiro item e confirma
 map('i', '<c-y>', function()
     local info = vim.fn.complete_info({ 'selected' })
