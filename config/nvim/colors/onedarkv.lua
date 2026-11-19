@@ -507,7 +507,7 @@ local hl_groups = {
   ['@text.title'] = { link = 'Title' },
   ['@text.todo'] = { link = 'Todo' },
   ['@text.underline'] = { link = 'Underlined' },
-  ['@text.uri'] = { fg = c.blue, underline = true },
+  ['@text.uri'] = { fg = c.blue },
 
   -- Languages
 
@@ -625,7 +625,7 @@ local hl_groups = {
   ['@markup.link.label'] = { link = 'Normal' },
   ['@markup.link'] = { link = 'Normal' },
   ['@markup.link.markdown_inline'] = { fg = c.op },
-  ['@markup.link.url'] = { link = 'Underlined' },
+  ['@markup.link.url'] = { link = 'Normal' },
   ['@markup.link.url.markdown_inline'] = { link = 'Normal' },
   ['@markup.list.markdown'] = { link = 'Normal' },
   ['@markup.raw'] = { link = 'Normal' },
